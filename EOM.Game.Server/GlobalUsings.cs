@@ -1,0 +1,1 @@
+﻿global using static EOM.Game.Server.Core.NWScript.NWScript;

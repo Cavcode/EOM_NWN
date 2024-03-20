@@ -1,0 +1,11 @@
+{
+  "TlkPath": "../eom_haks/eom_tlk/eom_tlk.tlk",
+  "OutputPath": "../debugserver/",
+  "HakList": [
+    {
+      "Name":  "eom_2da",
+      "Path": "../eom_haks/eom_2da/",
+      "CompileModels": false
+    },
+  ]
+}

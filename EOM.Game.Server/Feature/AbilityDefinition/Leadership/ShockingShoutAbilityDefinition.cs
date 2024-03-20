@@ -1,0 +1,84 @@
+﻿using System.Collections.Generic;
+using EOM.Game.Server.Core.NWScript.Enum;
+using EOM.Game.Server.Core.NWScript.Enum.Creature;
+using EOM.Game.Server.Core.NWScript.Enum.VisualEffect;
+using EOM.Game.Server.Service;
+using EOM.Game.Server.Service.AbilityService;
+using EOM.Game.Server.Service.PerkService;
+using EOM.Game.Server.Service.SkillService;
+
+namespace EOM.Game.Server.Feature.AbilityDefinition.Leadership
+{
+    public class ShockingShoutAbilityDefinition : IAbilityListDefinition
+    {
+        private readonly AbilityBuilder _builder = new();
+
+        public Dictionary<FeatType, AbilityDetail> BuildAbilities()
+        {
+            ShockingShout();
+
+            return _builder.Build();
+        }
+
+        private void ShockingShout()
+        {
+            _builder.Create(FeatType.ShockingShout, PerkType.ShockingShout)
+                .Name("Shocking Shout")
+                .Level(1)
+                .HasRecastDelay(RecastGroup.ShockingShout, 180f)
+                .HasActivationDelay(4f)
+                .UnaffectedByHeavyArmor()
+                .IsCastedAbility()
+                .UsesAnimation(Animation.FireForgetTaunt)
+                .HasImpactAction((activator, target, level, location) =>
+                {
+                    const float RangeMeters = 10f;
+                    const int MaxTargets = 6;
+                    var nth = 1;
+                    var count = 0;
+
+                    ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Fnf_Sound_Burst), activator);
+
+                    var nearest = GetNearestCreature(CreatureType.IsAlive, 1, activator, nth);
+                    while (GetIsObjectValid(nearest))
+                    {
+
+                        if (GetDistanceBetween(activator, nearest) > RangeMeters)
+                        {
+                            break;
+                        }
+
+                        if (GetIsReactionTypeHostile(nearest, activator))
+                        {
+                            count++;
+
+                            var dc = Combat.CalculateSavingThrowDC(activator, SavingThrow.Will, 14);
+                            const float BaseDuration = 2f;
+                            var bonusDuration = GetAbilityModifier(AbilityType.Social, activator) * 0.5f;
+                            var duration = BaseDuration + bonusDuration;
+
+                            var checkResult = WillSave(nearest, dc, SavingThrowType.None, activator);
+                            if (checkResult == SavingThrowResultType.Failed)
+                            {
+                                ApplyEffectToObject(DurationType.Temporary, EffectStunned(), nearest, duration);
+                                Ability.ApplyTemporaryImmunity(target, duration, ImmunityType.Stun);
+                                ApplyEffectToObject(DurationType.Instant, EffectVisualEffect(VisualEffect.Vfx_Imp_Head_Sonic), nearest);
+                            }
+
+                            CombatPoint.AddCombatPoint(activator, nearest, SkillType.Leadership, 3);
+                            Enmity.ModifyEnmity(activator, target, 650);
+                        }
+
+                        if (count > MaxTargets)
+                        {
+                            break;
+                        }
+
+                        nth++;
+                        nearest = GetNearestCreature(CreatureType.IsAlive, 1, activator, nth);
+                    }
+
+                });
+        }
+    }
+}

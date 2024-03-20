@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "EOM.CLI": {
+      "commandName": "Project",
+      "commandLineArgs": "-a"
+    }
+  }
+}

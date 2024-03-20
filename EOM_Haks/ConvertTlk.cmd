@@ -1,0 +1,1 @@
+nwn_tlk -i ./eom_tlk/eom_tlk.tlk -o ./eom_tlk/eom_tlk.tlk.json -p

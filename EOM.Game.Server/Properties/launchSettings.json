@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "EOM.Game.Server": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false
+    }
+  }
+}
