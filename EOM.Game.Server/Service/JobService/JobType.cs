@@ -15,7 +15,15 @@ namespace EOM.Game.Server.Service.JobService
             "Unused in-game.",
             false,
             false)]
-        Invalid = 0
+        Invalid = 0,
+        [Job(JobCategoryType.Combat,
+            "Bard",
+            0,
+            false,
+            "Unused in-game.",
+            false,
+            false)]
+        Bard = 1,
     }
 
     public class JobAttribute : Attribute
