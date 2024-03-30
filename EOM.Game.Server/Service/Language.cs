@@ -7,13 +7,13 @@ using EOM.Game.Server.Core.NWScript.Enum;
 using EOM.Game.Server.Entity;
 using EOM.Game.Server.Service.LanguageService;
 using EOM.Game.Server.Service.StatusEffectService;
-using SkillType = EOM.Game.Server.Service.SkillService.SkillType;
+using JobType = EOM.Game.Server.Service.SkillService.SkillType;
 
 namespace EOM.Game.Server.Service
 {
     public static class Language
     {
-        private static Dictionary<SkillType, ITranslator> _translators = new Dictionary<SkillType, ITranslator>();
+        private static Dictionary<JobType, ITranslator> _translators = new Dictionary<JobType, ITranslator>();
         private static readonly TranslatorGeneric _genericTranslator = new TranslatorGeneric();
 
         /// <summary>
@@ -22,29 +22,29 @@ namespace EOM.Game.Server.Service
         [NWNEventHandler("mod_load")]
         public static void LoadTranslators()
         {
-            _translators = new Dictionary<SkillType, ITranslator>
+            _translators = new Dictionary<JobType, ITranslator>
             {
-                { SkillType.Bothese, new TranslatorBothese() },
-                { SkillType.Catharese, new TranslatorCatharese() },
-                { SkillType.Cheunh, new TranslatorCheunh() },
-                { SkillType.Dosh, new TranslatorDosh() },
-                { SkillType.Droidspeak, new TranslatorDroidspeak() },
-                { SkillType.Huttese, new TranslatorHuttese() },
-                { SkillType.Mandoa,  new TranslatorMandoa() },
-                { SkillType.Shyriiwook, new TranslatorShyriiwook() },
-                { SkillType.Twileki, new TranslatorTwileki() },
-                { SkillType.Zabraki, new TranslatorZabraki() },
-                { SkillType.Togruti, new TranslatorTogruti() },
-                { SkillType.Rodese, new TranslatorRodese() },
-                { SkillType.Mirialan, new TranslatorMirialan() },
-                { SkillType.MonCalamarian, new TranslatorMonCalamarian() },
-                { SkillType.Ugnaught, new TranslatorUgnaught() },
-                { SkillType.KelDor, new TranslatorKelDor() },
-                { SkillType.Nautila, new TranslatorNautila() }
+                { JobType.Bothese, new TranslatorBothese() },
+                { JobType.Catharese, new TranslatorCatharese() },
+                { JobType.Cheunh, new TranslatorCheunh() },
+                { JobType.Dosh, new TranslatorDosh() },
+                { JobType.Droidspeak, new TranslatorDroidspeak() },
+                { JobType.Huttese, new TranslatorHuttese() },
+                { JobType.Mandoa,  new TranslatorMandoa() },
+                { JobType.Shyriiwook, new TranslatorShyriiwook() },
+                { JobType.Twileki, new TranslatorTwileki() },
+                { JobType.Zabraki, new TranslatorZabraki() },
+                { JobType.Togruti, new TranslatorTogruti() },
+                { JobType.Rodese, new TranslatorRodese() },
+                { JobType.Mirialan, new TranslatorMirialan() },
+                { JobType.MonCalamarian, new TranslatorMonCalamarian() },
+                { JobType.Ugnaught, new TranslatorUgnaught() },
+                { JobType.KelDor, new TranslatorKelDor() },
+                { JobType.Nautila, new TranslatorNautila() }
             };
         }
 
-        public static string TranslateSnippetForListener(uint speaker, uint listener, SkillType language, string snippet)
+        public static string TranslateSnippetForListener(uint speaker, uint listener, JobType language, string snippet)
         {
             var translator = _translators.ContainsKey(language) ? _translators[language] : _genericTranslator;
             var languageSkill = Skill.GetSkillDetails(language);
@@ -169,7 +169,7 @@ namespace EOM.Game.Server.Service
 
                 // Grant Force XP if player is concentrating Comprehend Speech.
                 if (grantSenseXP)
-                    Skill.GiveSkillXP(listener, SkillType.Force, amount * 10, false, false);
+                    Skill.GiveSkillXP(listener, JobType.Force, amount * 10, false, false);
 
                 SetLocalInt(listener, "LAST_LANGUAGE_SKILL_INCREASE_LOW", (int)(now & 0xFFFFFFFF));
                 SetLocalInt(listener, "LAST_LANGUAGE_SKILL_INCREASE_HIGH", (int)((now >> 32) & 0xFFFFFFFF));
@@ -178,7 +178,7 @@ namespace EOM.Game.Server.Service
             return textAsForeignLanguage;
         }
 
-        public static (byte, byte, byte) GetColor(SkillType language)
+        public static (byte, byte, byte) GetColor(JobType language)
         {
             byte r = 0;
             byte g = 0;
@@ -186,70 +186,70 @@ namespace EOM.Game.Server.Service
 
             switch (language)
             {
-                case SkillType.Basic: r = 255; g = 255; b = 255; break;
-                case SkillType.Bothese: r = 132; g = 56; b = 18; break;
-                case SkillType.Catharese: r = 235; g = 235; b = 199; break;
-                case SkillType.Cheunh: r = 82; g = 143; b = 174; break;
-                case SkillType.Dosh: r = 166; g = 181; b = 73; break;
-                case SkillType.Droidspeak: r = 192; g = 192; b = 192; break;
-                case SkillType.Huttese: r = 162; g = 74; b = 10; break;
-                case SkillType.KelDor: r = 162; g = 162; b = 0; break;
-                case SkillType.Mandoa: r = 255; g = 215; b = 0; break;
-                case SkillType.Rodese: r = 82; g = 255; b = 82; break;
-                case SkillType.Shyriiwook: r = 149; g = 125; b = 86; break;
-                case SkillType.Togruti: r = 82; g = 82; b = 255; break;
-                case SkillType.Twileki: r = 65; g = 105; b = 225; break;
-                case SkillType.Zabraki: r = 255; g = 102; b = 102; break;
-                case SkillType.Mirialan: r = 77; g = 230; b = 215; break;
-                case SkillType.MonCalamarian: r = 128; g = 128; b = 192; break;
-                case SkillType.Ugnaught: r = 255; g = 193; b = 233; break;
-                case SkillType.Nautila: r = 76; g = 230; b = 104; break;
+                case JobType.Basic: r = 255; g = 255; b = 255; break;
+                case JobType.Bothese: r = 132; g = 56; b = 18; break;
+                case JobType.Catharese: r = 235; g = 235; b = 199; break;
+                case JobType.Cheunh: r = 82; g = 143; b = 174; break;
+                case JobType.Dosh: r = 166; g = 181; b = 73; break;
+                case JobType.Droidspeak: r = 192; g = 192; b = 192; break;
+                case JobType.Huttese: r = 162; g = 74; b = 10; break;
+                case JobType.KelDor: r = 162; g = 162; b = 0; break;
+                case JobType.Mandoa: r = 255; g = 215; b = 0; break;
+                case JobType.Rodese: r = 82; g = 255; b = 82; break;
+                case JobType.Shyriiwook: r = 149; g = 125; b = 86; break;
+                case JobType.Togruti: r = 82; g = 82; b = 255; break;
+                case JobType.Twileki: r = 65; g = 105; b = 225; break;
+                case JobType.Zabraki: r = 255; g = 102; b = 102; break;
+                case JobType.Mirialan: r = 77; g = 230; b = 215; break;
+                case JobType.MonCalamarian: r = 128; g = 128; b = 192; break;
+                case JobType.Ugnaught: r = 255; g = 193; b = 233; break;
+                case JobType.Nautila: r = 76; g = 230; b = 104; break;
             }
 
             return (r, g, b);
         }
 
-        public static string GetName(SkillType language)
+        public static string GetName(JobType language)
         {
             switch (language)
             {
-                case SkillType.Bothese: return "Bothese";
-                case SkillType.Catharese: return "Catharese";
-                case SkillType.Cheunh: return "Cheunh";
-                case SkillType.Dosh: return "Dosh";
-                case SkillType.Droidspeak: return "Droidspeak";
-                case SkillType.Huttese: return "Huttese";
-                case SkillType.KelDor: return "KelDor";
-                case SkillType.Mandoa: return "Mandoa";
-                case SkillType.Rodese: return "Rodese";
-                case SkillType.Shyriiwook: return "Shyriiwook";
-                case SkillType.Togruti: return "Togruti";
-                case SkillType.Twileki: return "Twi'leki";
-                case SkillType.Zabraki: return "Zabraki";
-                case SkillType.Mirialan: return "Mirialan";
-                case SkillType.MonCalamarian: return "Mon Calamarian";
-                case SkillType.Ugnaught: return "Ugnaught";
-                case SkillType.Nautila: return "Nautila";
+                case JobType.Bothese: return "Bothese";
+                case JobType.Catharese: return "Catharese";
+                case JobType.Cheunh: return "Cheunh";
+                case JobType.Dosh: return "Dosh";
+                case JobType.Droidspeak: return "Droidspeak";
+                case JobType.Huttese: return "Huttese";
+                case JobType.KelDor: return "KelDor";
+                case JobType.Mandoa: return "Mandoa";
+                case JobType.Rodese: return "Rodese";
+                case JobType.Shyriiwook: return "Shyriiwook";
+                case JobType.Togruti: return "Togruti";
+                case JobType.Twileki: return "Twi'leki";
+                case JobType.Zabraki: return "Zabraki";
+                case JobType.Mirialan: return "Mirialan";
+                case JobType.MonCalamarian: return "Mon Calamarian";
+                case JobType.Ugnaught: return "Ugnaught";
+                case JobType.Nautila: return "Nautila";
             }
 
             return "Basic";
         }
 
-        public static SkillType GetActiveLanguage(uint obj)
+        public static JobType GetActiveLanguage(uint obj)
         {
             var ret = GetLocalInt(obj, "ACTIVE_LANGUAGE");
 
             if (ret == 0)
             {
-                return SkillType.Basic;
+                return JobType.Basic;
             }
 
-            return (SkillType)ret;
+            return (JobType)ret;
         }
 
-        public static void SetActiveLanguage(uint obj, SkillType language)
+        public static void SetActiveLanguage(uint obj, JobType language)
         {
-            if (language == SkillType.Basic)
+            if (language == JobType.Basic)
             {
                 DeleteLocalInt(obj, "ACTIVE_LANGUAGE");
             }
@@ -269,24 +269,24 @@ namespace EOM.Game.Server.Service
                 {
                     var languages = new List<LanguageCommand>
                     {
-                        new LanguageCommand("Basic", SkillType.Basic, new [] { "basic" }),
-                        new LanguageCommand("Bothese", SkillType.Bothese, new[] {"bothese"}),
-                        new LanguageCommand("Catharese", SkillType.Catharese, new []{"catharese"}),
-                        new LanguageCommand("Cheunh", SkillType.Cheunh, new []{"cheunh"}),
-                        new LanguageCommand("Dosh", SkillType.Dosh, new []{"dosh"}),
-                        new LanguageCommand("Droidspeak", SkillType.Droidspeak, new []{"droidspeak"}),
-                        new LanguageCommand("Huttese", SkillType.Huttese, new []{"huttese"}),
-                        new LanguageCommand("KelDor", SkillType.KelDor, new []{"keldor"}),
-                        new LanguageCommand("Mando'a", SkillType.Mandoa, new []{"mandoa"}),
-                        new LanguageCommand("Mirialan", SkillType.Mirialan, new []{"mirialan"}),
-                        new LanguageCommand("Mon Calamarian", SkillType.MonCalamarian, new []{"moncalamarian", "moncal"}),
-                        new LanguageCommand("Nautila", SkillType.Nautila, new []{ "nautilan" }),
-                        new LanguageCommand("Rodese", SkillType.Rodese, new []{"rodese", "rodian"}),
-                        new LanguageCommand("Shyriiwook", SkillType.Shyriiwook, new []{"shyriiwook", "wookieespeak"}),
-                        new LanguageCommand("Togruti", SkillType.Togruti, new []{"togruti"}),
-                        new LanguageCommand("Twi'leki", SkillType.Twileki, new []{"twileki", "ryl"}),
-                        new LanguageCommand("Ugnaught", SkillType.Ugnaught, new []{"ugnaught"}),
-                        new LanguageCommand("Zabraki", SkillType.Zabraki, new []{"zabraki", "zabrak"}),
+                        new LanguageCommand("Basic", JobType.Basic, new [] { "basic" }),
+                        new LanguageCommand("Bothese", JobType.Bothese, new[] {"bothese"}),
+                        new LanguageCommand("Catharese", JobType.Catharese, new []{"catharese"}),
+                        new LanguageCommand("Cheunh", JobType.Cheunh, new []{"cheunh"}),
+                        new LanguageCommand("Dosh", JobType.Dosh, new []{"dosh"}),
+                        new LanguageCommand("Droidspeak", JobType.Droidspeak, new []{"droidspeak"}),
+                        new LanguageCommand("Huttese", JobType.Huttese, new []{"huttese"}),
+                        new LanguageCommand("KelDor", JobType.KelDor, new []{"keldor"}),
+                        new LanguageCommand("Mando'a", JobType.Mandoa, new []{"mandoa"}),
+                        new LanguageCommand("Mirialan", JobType.Mirialan, new []{"mirialan"}),
+                        new LanguageCommand("Mon Calamarian", JobType.MonCalamarian, new []{"moncalamarian", "moncal"}),
+                        new LanguageCommand("Nautila", JobType.Nautila, new []{ "nautilan" }),
+                        new LanguageCommand("Rodese", JobType.Rodese, new []{"rodese", "rodian"}),
+                        new LanguageCommand("Shyriiwook", JobType.Shyriiwook, new []{"shyriiwook", "wookieespeak"}),
+                        new LanguageCommand("Togruti", JobType.Togruti, new []{"togruti"}),
+                        new LanguageCommand("Twi'leki", JobType.Twileki, new []{"twileki", "ryl"}),
+                        new LanguageCommand("Ugnaught", JobType.Ugnaught, new []{"ugnaught"}),
+                        new LanguageCommand("Zabraki", JobType.Zabraki, new []{"zabraki", "zabrak"}),
                     };
 
                     _languages = languages;

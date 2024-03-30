@@ -1,13 +1,14 @@
 ﻿using System;
 using EOM.Game.Server.Enumeration;
+using EOM.Game.Server.Service.SkillService;
 
-namespace EOM.Game.Server.Service.SkillService
+namespace EOM.Game.Server.Service.JobService
 {
-    // Note: Corresponds to iprp_skill.2da
+    // Note: Corresponds to iprp_Job.2da
     // New additions or changes to this file should also be made to the 2DA.
-    public enum SkillType
+    public enum JobType
     {
-        [Skill(SkillCategoryType.Invalid,
+        [Job(JobCategoryType.Invalid,
             "Invalid",
             0,
             false,
@@ -16,7 +17,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         Invalid = 0,
 
-        [Skill(SkillCategoryType.Combat,
+        [Job(JobCategoryType.Combat,
             "One-Handed",
             50,
             true,
@@ -26,7 +27,7 @@ namespace EOM.Game.Server.Service.SkillService
             CombatPointCategoryType.Weapon)]
         OneHanded = 1,
 
-        [Skill(SkillCategoryType.Combat,
+        [Job(JobCategoryType.Combat,
             "Two-Handed",
             50,
             true,
@@ -36,7 +37,7 @@ namespace EOM.Game.Server.Service.SkillService
             CombatPointCategoryType.Weapon)]
         TwoHanded = 2,
 
-        [Skill(SkillCategoryType.Combat,
+        [Job(JobCategoryType.Combat,
             "Martial Arts", 50,
             true,
             "Ability to fight using katars and staves in combat.",
@@ -45,7 +46,7 @@ namespace EOM.Game.Server.Service.SkillService
             CombatPointCategoryType.Weapon)]
         MartialArts = 3,
 
-        [Skill(SkillCategoryType.Combat,
+        [Job(JobCategoryType.Combat,
             "Ranged",
             50,
             true,
@@ -55,7 +56,7 @@ namespace EOM.Game.Server.Service.SkillService
             CombatPointCategoryType.Weapon)]
         Ranged = 4,
 
-        [Skill(SkillCategoryType.Combat,
+        [Job(JobCategoryType.Combat,
             "Force",
             50,
             true,
@@ -66,7 +67,7 @@ namespace EOM.Game.Server.Service.SkillService
             CharacterType.ForceSensitive)]
         Force = 5,
 
-        [Skill(SkillCategoryType.Combat,
+        [Job(JobCategoryType.Combat,
             "Armor",
             50,
             true,
@@ -75,7 +76,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         Armor = 6,
 
-        [Skill(SkillCategoryType.Utility,
+        [Job(JobCategoryType.Utility,
             "Piloting",
             50,
             true,
@@ -84,7 +85,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         Piloting = 7,
 
-        [Skill(SkillCategoryType.Utility,
+        [Job(JobCategoryType.Utility,
             "First Aid",
             50,
             true,
@@ -93,7 +94,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         FirstAid = 8,
 
-        [Skill(SkillCategoryType.Crafting,
+        [Job(JobCategoryType.Crafting,
             "Smithery",
             50,
             true,
@@ -102,7 +103,7 @@ namespace EOM.Game.Server.Service.SkillService
             true)]
         Smithery = 9,
 
-        [Skill(SkillCategoryType.Crafting,
+        [Job(JobCategoryType.Crafting,
             "Fabrication",
             50,
             true,
@@ -111,7 +112,7 @@ namespace EOM.Game.Server.Service.SkillService
             true)]
         Fabrication = 10,
 
-        [Skill(SkillCategoryType.Crafting,
+        [Job(JobCategoryType.Crafting,
             "Gathering",
             50,
             true,
@@ -120,7 +121,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         Gathering = 11,
 
-        [Skill(SkillCategoryType.Utility,
+        [Job(JobCategoryType.Utility,
             "Leadership",
             50,
             true,
@@ -129,7 +130,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         Leadership = 12,
 
-        [Skill(SkillCategoryType.Combat,
+        [Job(JobCategoryType.Combat,
             "Beast Mastery",
             50,
             true,
@@ -138,7 +139,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         BeastMastery = 13,
 
-        [Skill(SkillCategoryType.Languages,
+        [Job(JobCategoryType.Languages,
             "Mirialan",
             20,
             true,
@@ -147,7 +148,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         Mirialan = 14,
 
-        [Skill(SkillCategoryType.Languages,
+        [Job(JobCategoryType.Languages,
             "Bothese",
             20,
             true,
@@ -156,7 +157,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         Bothese = 15,
 
-        [Skill(SkillCategoryType.Languages,
+        [Job(JobCategoryType.Languages,
             "Cheunh",
             20,
             true,
@@ -166,7 +167,7 @@ namespace EOM.Game.Server.Service.SkillService
         Cheunh = 16,
 
 
-        [Skill(SkillCategoryType.Languages,
+        [Job(JobCategoryType.Languages,
             "Zabraki",
             20,
             true,
@@ -175,7 +176,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         Zabraki = 17,
 
-        [Skill(SkillCategoryType.Languages,
+        [Job(JobCategoryType.Languages,
             "Twi'leki (Ryl)",
             20,
             true,
@@ -184,7 +185,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         Twileki = 18,
 
-        [Skill(SkillCategoryType.Languages,
+        [Job(JobCategoryType.Languages,
             "Catharese", 20,
             true,
             "Ability to speak the Catharese language.",
@@ -192,7 +193,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         Catharese = 19,
 
-        [Skill(SkillCategoryType.Languages,
+        [Job(JobCategoryType.Languages,
             "Dosh",
             20,
             true,
@@ -201,7 +202,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         Dosh = 20,
 
-        [Skill(SkillCategoryType.Languages,
+        [Job(JobCategoryType.Languages,
             "Shyriiwook",
             20,
             true,
@@ -210,7 +211,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         Shyriiwook = 21,
 
-        [Skill(SkillCategoryType.Languages,
+        [Job(JobCategoryType.Languages,
             "Droidspeak",
             20,
             true,
@@ -219,7 +220,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         Droidspeak = 22,
 
-        [Skill(SkillCategoryType.Languages,
+        [Job(JobCategoryType.Languages,
             "Basic",
             20,
             true,
@@ -228,7 +229,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         Basic = 23,
 
-        [Skill(SkillCategoryType.Languages,
+        [Job(JobCategoryType.Languages,
             "Mandoa",
             20,
             true,
@@ -237,7 +238,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         Mandoa = 24,
 
-        [Skill(SkillCategoryType.Languages,
+        [Job(JobCategoryType.Languages,
             "Huttese",
             20,
             true,
@@ -246,7 +247,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         Huttese = 25,
 
-        [Skill(SkillCategoryType.Languages,
+        [Job(JobCategoryType.Languages,
             "Mon Calamarian",
             20,
             true,
@@ -255,7 +256,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         MonCalamarian = 26,
 
-        [Skill(SkillCategoryType.Languages,
+        [Job(JobCategoryType.Languages,
             "Ugnaught",
             20,
             true,
@@ -264,7 +265,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         Ugnaught = 27,
 
-        [Skill(SkillCategoryType.Languages,
+        [Job(JobCategoryType.Languages,
             "Rodese",
             20,
             true,
@@ -273,7 +274,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         Rodese = 28,
 
-        [Skill(SkillCategoryType.Languages,
+        [Job(JobCategoryType.Languages,
             "Togruti",
             20,
             true,
@@ -282,7 +283,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         Togruti = 29,
 
-        [Skill(SkillCategoryType.Languages,
+        [Job(JobCategoryType.Languages,
             "Kel Dor",
             20,
             true,
@@ -291,7 +292,7 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         KelDor = 30,
 
-        [Skill(SkillCategoryType.Crafting,
+        [Job(JobCategoryType.Crafting,
             "Agriculture",
             50,
             true,
@@ -300,7 +301,7 @@ namespace EOM.Game.Server.Service.SkillService
             true)]
         Agriculture = 31,
 
-        [Skill(SkillCategoryType.Crafting,
+        [Job(JobCategoryType.Crafting,
             "Engineering",
             50,
             true,
@@ -309,7 +310,7 @@ namespace EOM.Game.Server.Service.SkillService
             true)]
         Engineering = 32,
 
-        [Skill(SkillCategoryType.Combat,
+        [Job(JobCategoryType.Combat,
             "Devices",
             50,
             true,
@@ -320,7 +321,7 @@ namespace EOM.Game.Server.Service.SkillService
             CharacterType.Standard)]
         Devices = 33,
 
-        [Skill(SkillCategoryType.Languages,
+        [Job(JobCategoryType.Languages,
             "Nautila",
             20,
             true,
@@ -330,26 +331,26 @@ namespace EOM.Game.Server.Service.SkillService
             Nautila = 34,
     }
 
-    public class SkillAttribute : Attribute
+    public class JobAttribute : Attribute
     {
-        public SkillCategoryType Category { get; set; }
+        public JobCategoryType Category { get; set; }
         public string Name { get; set; }
         public int MaxRank { get; set; }
         public bool IsActive { get; set; }
         public string Description { get; set; }
-        public bool ContributesToSkillCap { get; set; }
+        public bool ContributesToJobCap { get; set; }
         public bool IsShownInCraftMenu { get; set; }
         public CharacterType CharacterTypeRestriction { get; set; }
 
         public CombatPointCategoryType CombatPointCategory { get; set; } 
 
-        public SkillAttribute(
-            SkillCategoryType category,
+        public JobAttribute(
+            JobCategoryType category,
             string name,
             int maxRank,
             bool isActive,
             string description,
-            bool contributesToSkillCap,
+            bool contributesToJobCap,
             bool isShownInCraftMenu,
             CombatPointCategoryType combatPointCategory = CombatPointCategoryType.Exempt,
             CharacterType characterTypeRestriction = CharacterType.Invalid)
@@ -359,7 +360,7 @@ namespace EOM.Game.Server.Service.SkillService
             MaxRank = maxRank;
             IsActive = isActive;
             Description = description;
-            ContributesToSkillCap = contributesToSkillCap;
+            ContributesToJobCap = contributesToJobCap;
             IsShownInCraftMenu = isShownInCraftMenu;
             CharacterTypeRestriction = characterTypeRestriction;
             CombatPointCategory = combatPointCategory;

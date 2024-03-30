@@ -193,7 +193,7 @@ namespace EOM.Game.Server.Feature.ChatCommandDefinition
                             commands.Add($"{chatText}: Sets the active language to {language.ProperName}.");
                         }
 
-                        SendMessageToPC(user, commands.Aggregate((a, b) => a + '\n' + b));
+                        SendMessageToPC(user, commands.Aggregate((string a, string b) => a + '\n' + b));
                         return;
                     }
 

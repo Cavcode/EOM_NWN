@@ -10,7 +10,7 @@ using EOM.Game.Server.Core.NWScript.Enum.VisualEffect;
 using EOM.Game.Server.Enumeration;
 using ChatChannel = EOM.Game.Server.Core.NWNX.Enum.ChatChannel;
 using Player = EOM.Game.Server.Entity.Player;
-using SkillType = EOM.Game.Server.Service.SkillService.SkillType;
+using JobType = EOM.Game.Server.Service.SkillService.SkillType;
 
 namespace EOM.Game.Server.Service
 {
@@ -386,10 +386,10 @@ namespace EOM.Game.Server.Service
                 // Wookiees cannot speak any other language (but they can understand them).
                 // Swap their language if they attempt to speak in any other language.
                 var race = GetRacialType(sender);
-                if (race == RacialType.Wookiee && language != SkillType.Shyriiwook)
+                if (race == RacialType.Wookiee && language != JobType.Shyriiwook)
                 {
-                    Language.SetActiveLanguage(sender, SkillType.Shyriiwook);
-                    language = SkillType.Shyriiwook;
+                    Language.SetActiveLanguage(sender, JobType.Shyriiwook);
+                    language = JobType.Shyriiwook;
                 }
 
                 var (r, g, b) = Language.GetColor(language);
@@ -403,7 +403,7 @@ namespace EOM.Game.Server.Service
                     b = dbReceiver.Settings.LanguageChatColors[language].Blue;
                 }
 
-                if (language != SkillType.Basic)
+                if (language != JobType.Basic)
                 {
                     var languageName = Language.GetName(language);
                     finalMessage.Append(ColorToken.Custom($"[{languageName}] ", r, g, b));
@@ -413,7 +413,7 @@ namespace EOM.Game.Server.Service
                 {
                     var text = component.Text;
 
-                    if (component.IsTranslatable && language != SkillType.Basic)
+                    if (component.IsTranslatable && language != JobType.Basic)
                     {
                         text = Language.TranslateSnippetForListener(sender, receiver, language, component.Text);
                     }
