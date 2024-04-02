@@ -5,7 +5,7 @@ namespace EOM.Game.Server.Service.SkillService
 {
     // Note: Corresponds to iprp_skill.2da
     // New additions or changes to this file should also be made to the 2DA.
-    public enum JobType
+    public enum SkillType
     {
         [Skill(SkillCategoryType.Invalid,
             "Invalid",
