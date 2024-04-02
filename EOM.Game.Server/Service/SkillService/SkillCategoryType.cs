@@ -2,7 +2,7 @@
 
 namespace EOM.Game.Server.Service.SkillService
 {
-    public enum JobCategoryType
+    public enum SkillCategoryType
     {
         [SkillCategory("Invalid", false, 0)]
         Invalid = 0,
