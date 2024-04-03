@@ -72,6 +72,7 @@ namespace EOM.Game.Server.Entity
             RoleplayProgress = new RoleplayProgress();
             Skills = new Dictionary<SkillType, PlayerSkill>();
             Jobs = new Dictionary<JobType, PlayerJob>();
+            JobPerks = new Dictionary<PerkType, int>();
             Perks = new Dictionary<PerkType, int>();
             RecastTimes = new Dictionary<RecastGroup, DateTime>();
             Quests = new Dictionary<string, PlayerQuest>();
@@ -165,6 +166,7 @@ namespace EOM.Game.Server.Entity
         public Dictionary<SkillType, PlayerSkill> Skills { get; set; }
         public Dictionary<JobType, PlayerJob> Jobs { get; set; }
         public Dictionary<PerkType, int> Perks { get; set; }
+        public Dictionary<PerkType, int> JobPerks { get; set; }
         public Dictionary<RecastGroup, DateTime> RecastTimes { get; set; }
         public Dictionary<string, PlayerQuest> Quests { get; set; }
         public Dictionary<PerkType, DateTime> UnlockedPerks { get; set; }
