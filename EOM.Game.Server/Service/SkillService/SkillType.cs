@@ -1,6 +1,5 @@
 ﻿using System;
 using EOM.Game.Server.Enumeration;
-using EOM.Game.Server.Service.JobService;
 
 namespace EOM.Game.Server.Service.SkillService
 {
