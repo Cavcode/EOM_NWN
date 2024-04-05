@@ -11,7 +11,6 @@ using EOM.Game.Server.Service.CurrencyService;
 using EOM.Game.Server.Service.FactionService;
 using EOM.Game.Server.Service.GuiService;
 using EOM.Game.Server.Service.GuiService.Component;
-using EOM.Game.Server.Service.JobService;
 using EOM.Game.Server.Service.KeyItemService;
 using EOM.Game.Server.Service.NPCService;
 using EOM.Game.Server.Service.PerkService;
@@ -71,8 +70,6 @@ namespace EOM.Game.Server.Entity
             MapProgressions = new Dictionary<string, string>();
             RoleplayProgress = new RoleplayProgress();
             Skills = new Dictionary<SkillType, PlayerSkill>();
-            Jobs = new Dictionary<JobType, PlayerJob>();
-            JobPerks = new Dictionary<PerkType, int>();
             Perks = new Dictionary<PerkType, int>();
             RecastTimes = new Dictionary<RecastGroup, DateTime>();
             Quests = new Dictionary<string, PlayerQuest>();
@@ -164,9 +161,7 @@ namespace EOM.Game.Server.Entity
         public Dictionary<string, List<MapPin>> MapPins { get; set; }
         public Dictionary<string, string> MapProgressions { get; set; }
         public Dictionary<SkillType, PlayerSkill> Skills { get; set; }
-        public Dictionary<JobType, PlayerJob> Jobs { get; set; }
         public Dictionary<PerkType, int> Perks { get; set; }
-        public Dictionary<PerkType, int> JobPerks { get; set; }
         public Dictionary<RecastGroup, DateTime> RecastTimes { get; set; }
         public Dictionary<string, PlayerQuest> Quests { get; set; }
         public Dictionary<PerkType, DateTime> UnlockedPerks { get; set; }
