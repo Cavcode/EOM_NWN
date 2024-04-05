@@ -146,35 +146,35 @@ namespace EOM.Game.Server.Service.PerkService
         JobDarkKnight = 46,
 
         [PerkCategory("Job - Black Mage", true)]
-        BlackMage = 47,
+        JobBlackMage = 47,
 
         [PerkCategory("Job - Gunbreaker", true)]
-        Gunbreaker = 48,
+        JobGunbreaker = 48,
 
         [PerkCategory("Job - Gunslinger", true)]
-        Gunslinger = 49,
+        JobGunslinger = 49,
 
 
         [PerkCategory("Job - Monk", true)]
-        Monk = 50,
+        JobMonk = 50,
 
         [PerkCategory("Job - Ninja", true)]
-        Ninja = 51,
+        JobNinja = 51,
 
         [PerkCategory("Job - Warrior", true)]
-        Warrior = 52,
+        JobWarrior = 52,
 
         [PerkCategory("Job - White Mage", true)]
-        WhiteMage = 53,
+        JobWhiteMage = 53,
 
         [PerkCategory("Job - Paladin", true)]
-        Paladin = 54,
+        JobPaladin = 54,
 
         [PerkCategory("Job - Reaper", true)]
-        Reaper = 55,
+        JobReaper = 55,
 
         [PerkCategory("Job - Summoner", true)]
-        Summoner = 56,
+        JobSummoner = 56,
     }
 
     public class PerkCategoryAttribute : Attribute

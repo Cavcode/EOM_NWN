@@ -1962,5 +1962,8 @@ namespace EOM.Game.Server.Core.NWScript.Enum
         ForceLink2 = 1993,
         ForceLink3 = 1994,
         ZenMarksmanship = 1995,
+
+        SeraphHymn = 1996,
+        MelodyOfLife = 1997,
     }
 }

@@ -12,8 +12,8 @@ namespace EOM.Game.Server.Service.SkillService
         Crafting = 2,
         [SkillCategory("Utility", true, 6)]
         Utility = 3,
-        [SkillCategory("Languages", true, 8)]
-        Languages = 4,
+        [SkillCategory("Jobs", true, 8)]
+        Jobs = 4,
     }
 
     public class SkillCategoryAttribute : Attribute

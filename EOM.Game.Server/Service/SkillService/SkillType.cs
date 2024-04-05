@@ -1,5 +1,6 @@
 ﻿using System;
 using EOM.Game.Server.Enumeration;
+using EOM.Game.Server.Service.JobService;
 
 namespace EOM.Game.Server.Service.SkillService
 {
@@ -138,196 +139,105 @@ namespace EOM.Game.Server.Service.SkillService
             false)]
         BeastMastery = 13,
 
-        [Skill(SkillCategoryType.Languages,
-            "Mirialan",
-            20,
-            true,
-            "Ability to speak the Mirialan language.",
-            false,
-            false)]
-        Mirialan = 14,
-
-        [Skill(SkillCategoryType.Languages,
-            "Bothese",
-            20,
-            true,
-            "Ability to speak the Bothese language.",
-            false,
-            false)]
-        Bothese = 15,
-
-        [Skill(SkillCategoryType.Languages,
-            "Cheunh",
-            20,
-            true,
-            "Ability to speak the Cheunh language.",
-            false,
-            false)]
-        Cheunh = 16,
-
-
-        [Skill(SkillCategoryType.Languages,
-            "Zabraki",
-            20,
-            true,
-            "Ability to speak the Zabraki language.",
-            false,
-            false)]
-        Zabraki = 17,
-
-        [Skill(SkillCategoryType.Languages,
-            "Twi'leki (Ryl)",
-            20,
-            true,
-            "Ability to speak the Twi'leki (Ryl) language.",
-            false,
-            false)]
-        Twileki = 18,
-
-        [Skill(SkillCategoryType.Languages,
-            "Catharese", 20,
-            true,
-            "Ability to speak the Catharese language.",
-            false,
-            false)]
-        Catharese = 19,
-
-        [Skill(SkillCategoryType.Languages,
-            "Dosh",
-            20,
-            true,
-            "Ability to speak the Dosh language.",
-            false,
-            false)]
-        Dosh = 20,
-
-        [Skill(SkillCategoryType.Languages,
-            "Shyriiwook",
-            20,
-            true,
-            "Ability to speak the Shyriiwook (Wookieespeak) language.",
-            false,
-            false)]
-        Shyriiwook = 21,
-
-        [Skill(SkillCategoryType.Languages,
-            "Droidspeak",
-            20,
-            true,
-            "Ability to speak the Droidspeak language.",
-            false,
-            false)]
-        Droidspeak = 22,
-
-        [Skill(SkillCategoryType.Languages,
-            "Basic",
-            20,
-            true,
-            "Ability to speak the Galactic Basic language.",
-            false,
-            false)]
-        Basic = 23,
-
-        [Skill(SkillCategoryType.Languages,
-            "Mandoa",
-            20,
-            true,
-            "Ability to speak the Mandoa language.",
-            false,
-            false)]
-        Mandoa = 24,
-
-        [Skill(SkillCategoryType.Languages,
-            "Huttese",
-            20,
-            true,
-            "Ability to speak the Huttese language.",
-            false,
-            false)]
-        Huttese = 25,
-
-        [Skill(SkillCategoryType.Languages,
-            "Mon Calamarian",
-            20,
-            true,
-            "Ability to speak the Mon Calamarian language.",
-            false,
-            false)]
-        MonCalamarian = 26,
-
-        [Skill(SkillCategoryType.Languages,
-            "Ugnaught",
-            20,
-            true,
-            "Ability to speak the Ugnaught language.",
-            false,
-            false)]
-        Ugnaught = 27,
-
-        [Skill(SkillCategoryType.Languages,
-            "Rodese",
-            20,
-            true,
-            "Ability to speak the Rodese language.",
-            false,
-            false)]
-        Rodese = 28,
-
-        [Skill(SkillCategoryType.Languages,
-            "Togruti",
-            20,
-            true,
-            "Ability to speak the Togruti language.",
-            false,
-            false)]
-        Togruti = 29,
-
-        [Skill(SkillCategoryType.Languages,
-            "Kel Dor",
-            20,
-            true,
-            "Ability to speak the Kel Dor language.",
-            false,
-            false)]
-        KelDor = 30,
-
-        [Skill(SkillCategoryType.Crafting,
-            "Agriculture",
+        [Skill(SkillCategoryType.Jobs,
+            "Bard",
             50,
             true,
-            "Ability to farm, fish, and cook.",
+            "Singer homie.",
             true,
             true)]
-        Agriculture = 31,
+        Bard = 14,
 
-        [Skill(SkillCategoryType.Crafting,
-            "Engineering",
+        [Skill(SkillCategoryType.Jobs,
+          "Dark Knight",
             50,
             true,
-            "Ability to create starships, modules, droids, and other electronic & mechanical items.",
+            "Saviour in a shroud of shadows.",
             true,
             true)]
-        Engineering = 32,
+        DarkKnight = 15,
 
-        [Skill(SkillCategoryType.Combat,
-            "Devices",
+        [Skill(SkillCategoryType.Jobs,
+            "Black Mage",
             50,
             true,
-            "Ability to use grenades, bombs, and other electronics.",
+            "Michael Bay's wet dream.",
             true,
-            false,
-            CombatPointCategoryType.Utility,
-            CharacterType.Standard)]
-        Devices = 33,
+            true)]
+        BlackMage = 16,
 
-        [Skill(SkillCategoryType.Languages,
-            "Nautila",
-            20,
+        [Skill(SkillCategoryType.Jobs,
+            "Gunbreaker",
+            50,
             true,
-            "Ability to speak the Nautila language.",
-            false,
-            false)]
-            Nautila = 34,
+            "Heedless hero of the people.",
+            true,
+            true)]
+        Gunbreaker = 17,
+
+        [Skill(SkillCategoryType.Jobs,
+             "Ninja",
+             50,
+             true,
+             "Sneaky boi.",
+             true,
+             true)]
+        Ninja = 18,
+
+        [Skill(SkillCategoryType.Jobs,
+             "Gunslinger",
+             50,
+             true,
+             "Do ya, punk?",
+             true,
+             true)]
+        Gunslinger = 19,
+
+        [Skill(SkillCategoryType.Jobs,
+            "White Mage",
+            50,
+            true,
+            "Caretakers of Life",
+            true,
+            true)]
+        WhiteMage = 20,
+
+        [Skill(SkillCategoryType.Jobs,
+            "Monk",
+            50,
+            true,
+            "A master of balance.",
+            true,
+            true)]
+        Monk = 21,
+
+        [Skill(SkillCategoryType.Jobs,
+            "Reaper",
+            50,
+            true,
+            "A champion of the Void.",
+            true,
+            true)]
+        Reaper = 22,
+
+        [Skill(SkillCategoryType.Jobs,
+            "Paladin",
+            50,
+            true,
+            "Saints of the Sword",
+            true,
+            true)]
+        Paladin = 23,
+
+        [Skill(SkillCategoryType.Jobs,
+            "Summoner",
+            50,
+            true,
+            "Yuna wannabes.",
+            true,
+            true)]
+        Summoner = 24,
+
     }
 
     public class SkillAttribute : Attribute
