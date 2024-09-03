@@ -51,9 +51,9 @@ namespace EOM.Game.Server.Feature.MigrationDefinition
                 dbPlayer.FPRegen = 0;
 
                 // STM
-                dbPlayer.MaxStamina = Stat.BaseSTM;
-                dbPlayer.Stamina = Stat.GetMaxStamina(player, dbPlayer);
-                dbPlayer.STMRegen = 0;
+                dbPlayer.MaxMagickPoints = Stat.BaseSTM;
+                dbPlayer.Magick = Stat.GetMaxStamina(player, dbPlayer);
+                dbPlayer.MPRegen = 0;
 
                 // Crafting
                 foreach (var (type, _) in Skill.GetActiveCraftingSkills())
@@ -65,7 +65,7 @@ namespace EOM.Game.Server.Feature.MigrationDefinition
 
                 // Attack
                 dbPlayer.Attack = 0;
-                dbPlayer.ForceAttack = 0;
+                dbPlayer.MagicAttack = 0;
 
                 // Defenses
                 foreach (var defense in Combat.GetAllDamageTypes())

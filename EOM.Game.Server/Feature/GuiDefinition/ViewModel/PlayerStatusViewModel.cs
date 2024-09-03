@@ -205,7 +205,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
         {
             var playerId = GetObjectUUID(Player);
             var dbPlayer = DB.Get<Player>(playerId);
-            var currentSTM = dbPlayer.Stamina;
+            var currentSTM = dbPlayer.Magick;
             var maxSTM = Stat.GetMaxStamina(Player, dbPlayer);
 
             Bar2Value = $"{currentSTM} / {maxSTM}";

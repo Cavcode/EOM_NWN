@@ -40,7 +40,7 @@ namespace EOM.Game.Server.Entity
             {
                 {AbilityType.Vitality, 0},
                 {AbilityType.Might, 0},
-                {AbilityType.Social, 0},
+                {AbilityType.Intellect, 0},
                 {AbilityType.Perception, 0},
                 {AbilityType.Agility, 0},
                 {AbilityType.Willpower, 0}
@@ -49,7 +49,7 @@ namespace EOM.Game.Server.Entity
             {
                 {AbilityType.Vitality, 0},
                 {AbilityType.Might, 0},
-                {AbilityType.Social, 0},
+                {AbilityType.Intellect, 0},
                 {AbilityType.Perception, 0},
                 {AbilityType.Agility, 0},
                 {AbilityType.Willpower, 0}
@@ -97,11 +97,9 @@ namespace EOM.Game.Server.Entity
         [Indexed]
         public string Name { get; set; }
         public int MaxHP { get; set; }
-        public int MaxFP { get; set; }
-        public int MaxStamina { get; set; }
+        public int MaxMagickPoints { get; set; }
         public int HP { get; set; }
-        public int FP { get; set; }
-        public int Stamina { get; set; }
+        public int Magick { get; set; }
         public int TemporaryFoodHP { get; set; }
         public int BAB { get; set; }
 
@@ -124,8 +122,7 @@ namespace EOM.Game.Server.Entity
         public int TotalAPAcquired { get; set; }
         public int RegenerationTick { get; set; }
         public int HPRegen { get; set; }
-        public int FPRegen { get; set; }
-        public int STMRegen { get; set; }
+        public int MPRegen { get; set; }
         public int XPDebt { get; set; }
         public int DMXPBonus { get; set; }
         [Indexed]
@@ -145,7 +142,7 @@ namespace EOM.Game.Server.Entity
         public string CitizenPropertyId { get; set; }
         public int PropertyOwedTaxes { get; set; }
         public int Attack { get; set; }
-        public int ForceAttack { get; set; }
+        public int MagicAttack { get; set; }
         public int Evasion { get; set; }
         public bool RebuildComplete { get; set; }
         public string ActiveBeastId { get; set; }

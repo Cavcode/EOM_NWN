@@ -363,7 +363,7 @@ namespace EOM.Game.Server.Service
                     return ItemPropertyCustom(ItemPropertyType.HPBonus, -1, amount);
                 case 9: // FP
                     return ItemPropertyCustom(ItemPropertyType.FP, -1, amount);
-                case 10: // Stamina
+                case 10: // Magick
                     return ItemPropertyCustom(ItemPropertyType.Stamina, -1, amount);
                 case 11: // Vitality
                     return ItemPropertyAbilityBonus(AbilityType.Vitality, amount);

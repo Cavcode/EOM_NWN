@@ -135,7 +135,7 @@ namespace EOM.Game.Server.Service
                     dbPlayer = DB.Get<Player>(playerId);
                 }
 
-                baseStamina = dbPlayer.MaxStamina;
+                baseStamina = dbPlayer.MaxMagickPoints;
 
             }
             // NPCs
@@ -170,7 +170,7 @@ namespace EOM.Game.Server.Service
                     dbPlayer = DB.Get<Player>(playerId);
                 }
 
-                return dbPlayer.Stamina;
+                return dbPlayer.Magick;
             }
             // NPCs
             else
@@ -262,10 +262,10 @@ namespace EOM.Game.Server.Service
         }
 
         /// <summary>
-        /// Restores an entity's Stamina by a specified amount.
+        /// Restores an entity's Magick by a specified amount.
         /// </summary>
         /// <param name="creature">The creature to modify.</param>
-        /// <param name="amount">The amount of Stamina to restore.</param>
+        /// <param name="amount">The amount of Magick to restore.</param>
         /// <param name="dbPlayer">The player entity to modify. If this is not set, a DB call will be made. Leave null for NPCs.</param>
         public static void RestoreStamina(uint creature, int amount, Player dbPlayer = null)
         {
@@ -282,10 +282,10 @@ namespace EOM.Game.Server.Service
                     dbPlayer = DB.Get<Player>(playerId);
                 }
 
-                dbPlayer.Stamina += amount;
+                dbPlayer.Magick += amount;
 
-                if (dbPlayer.Stamina > maxSTM)
-                    dbPlayer.Stamina = maxSTM;
+                if (dbPlayer.Magick > maxSTM)
+                    dbPlayer.Magick = maxSTM;
 
                 DB.Set(dbPlayer);
             }
@@ -305,11 +305,11 @@ namespace EOM.Game.Server.Service
         }
 
         /// <summary>
-        /// Reduces an entity's Stamina by a specified amount.
+        /// Reduces an entity's Magick by a specified amount.
         /// If creature would fall below 0 stamina, they will be reduced to 0 instead.
         /// </summary>
         /// <param name="creature">The creature to modify.</param>
-        /// <param name="reduceBy">The amount of Stamina to reduce by.</param>
+        /// <param name="reduceBy">The amount of Magick to reduce by.</param>
         /// <param name="dbPlayer">The entity to modify</param>
         public static void ReduceStamina(uint creature, int reduceBy, Player dbPlayer = null)
         {
@@ -323,10 +323,10 @@ namespace EOM.Game.Server.Service
                     dbPlayer = DB.Get<Player>(playerId);
                 }
 
-                dbPlayer.Stamina -= reduceBy;
+                dbPlayer.Magick -= reduceBy;
 
-                if (dbPlayer.Stamina < 0)
-                    dbPlayer.Stamina = 0;
+                if (dbPlayer.Magick < 0)
+                    dbPlayer.Magick = 0;
 
                 DB.Set(dbPlayer);
             }
@@ -454,15 +454,15 @@ namespace EOM.Game.Server.Service
         {
             // Note: It's possible for Max STM to drop to a negative number. This is expected to ensure calculations stay in sync.
             // If there are any visual indicators (GUI elements for example) be sure to account for this scenario.
-            entity.MaxStamina += adjustBy;
+            entity.MaxMagickPoints += adjustBy;
 
             // Note - must call GetMaxFP here to account for ability-based increase to STM cap. 
-            if (entity.Stamina > GetMaxStamina(player))
-                entity.Stamina = GetMaxStamina(player);
+            if (entity.Magick > GetMaxStamina(player))
+                entity.Magick = GetMaxStamina(player);
 
             // Current STM, however, should never drop below zero.
-            if (entity.Stamina < 0)
-                entity.Stamina = 0;
+            if (entity.Magick < 0)
+                entity.Magick = 0;
         }
         
         public static void ApplyPlayerMovementRate(uint player)
@@ -563,7 +563,7 @@ namespace EOM.Game.Server.Service
         {
             // Note: It's possible for STM Regen to drop to a negative number. This is expected to ensure calculations stay in sync.
             // If there are any visual indicators (GUI elements for example) be sure to account for this scenario.
-            entity.STMRegen += adjustBy;
+            entity.MPRegen += adjustBy;
         }
 
         /// <summary>
@@ -608,7 +608,7 @@ namespace EOM.Game.Server.Service
         /// <param name="adjustBy">The amount to adjust by</param>
         public static void AdjustForceAttack(Player entity, int adjustBy)
         {
-            entity.ForceAttack += adjustBy;
+            entity.MagicAttack += adjustBy;
         }
 
         /// <summary>
@@ -802,7 +802,7 @@ namespace EOM.Game.Server.Service
                 if (attackBonusOverride <= 0)
                 {
                     if (skillType == SkillType.Force)
-                        attackBonus += dbPlayer.ForceAttack;
+                        attackBonus += dbPlayer.MagicAttack;
                     else
                         attackBonus += dbPlayer.Attack;
                 }
@@ -850,7 +850,7 @@ namespace EOM.Game.Server.Service
                         skillLevel = dbPlayer.Skills[skillType].Rank;
 
                     if (skillType == SkillType.Force)
-                        attackBonus += dbPlayer.ForceAttack;
+                        attackBonus += dbPlayer.MagicAttack;
                     else
                         attackBonus += dbPlayer.Attack;
                 }

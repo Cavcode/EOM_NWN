@@ -68,7 +68,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition
                                         .SetVerticalAlign(NuiVerticalAlign.Top)
                                         .SetHorizontalAlign(NuiHorizontalAlign.Left)
                                         .SetColor(GuiColor.STMColor)
-                                        .SetTooltip("Stamina - Resource used to activate non-force abilities.");
+                                        .SetTooltip("Magick - Resource used to activate non-force abilities.");
                                 });
                                 col.AddRow(row =>
                                 {

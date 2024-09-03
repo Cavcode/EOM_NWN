@@ -28,7 +28,7 @@ namespace EOM.Game.Server.Feature
                 var dbPlayer = DB.Get<Player>(playerId);
                 var hpRegen = dbPlayer.HPRegen + vitalityBonus * 4;
                 var fpRegen = 1 + dbPlayer.FPRegen + vitalityBonus / 2;
-                var stmRegen = 1 + dbPlayer.STMRegen + vitalityBonus / 2;
+                var stmRegen = 1 + dbPlayer.MPRegen + vitalityBonus / 2;
 
                 if (hpRegen > 0 && GetCurrentHitPoints(player) < GetMaxHitPoints(player))
                 {
