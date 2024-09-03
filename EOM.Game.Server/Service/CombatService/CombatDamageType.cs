@@ -8,13 +8,11 @@
         Physical = 1,
         Force = 2,
         Fire = 3,
-        Poison = 4,
         Electrical = 5,
         Ice = 6,
-
-        // Ships
-        Thermal = 20,
-        Explosive = 21,
-        EM = 22,
+        Water = 7,
+        Light = 8,
+        Darkness = 9,
+        Wind = 10,
     }
 }
