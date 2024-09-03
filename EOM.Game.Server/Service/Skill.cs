@@ -56,7 +56,7 @@ namespace EOM.Game.Server.Service
             if (!ignoreBonuses)
             {
                 // Bonus for positive Social modifier.
-                var social = GetAbilityScore(player, AbilityType.Social);
+                var social = GetAbilityScore(player, AbilityType.Intellect);
                 if (social > 0)
                     bonusPercentage += social * 0.025f;
 
@@ -71,7 +71,7 @@ namespace EOM.Game.Server.Service
                     if (GetIsObjectValid(source))
                     {
                         var effectiveLevel = Perk.GetPerkLevel(source, PerkType.Dedication);
-                        social = GetAbilityScore(source, AbilityType.Social);
+                        social = GetAbilityScore(source, AbilityType.Intellect);
                         bonusPercentage += (10 + effectiveLevel * social) * 0.01f;
                     }
                 }
