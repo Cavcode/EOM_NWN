@@ -64,6 +64,7 @@ namespace EOM.Game.Server.Entity
 
             ActiveShipId = Guid.Empty.ToString();
             IsUsingDualPistolMode = false;
+            IsOnOverworld = false;
             EmoteStyle = EmoteStyle.Regular;
             MovementRate = 1.0f;
             MapPins = new Dictionary<string, List<MapPin>>();
@@ -128,6 +129,7 @@ namespace EOM.Game.Server.Entity
         [Indexed]
         public bool IsDeleted { get; set; }
         public bool IsUsingDualPistolMode { get; set; }
+        public bool IsOnOverworld { get; set; }
         public DateTime? DatePerkRefundAvailable { get; set; }
         [Indexed]
         public CharacterType CharacterType { get; set; }
