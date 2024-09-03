@@ -18,7 +18,7 @@ namespace EOM.Game.Server.Feature
 
         private static void OverrideAttributeNames()
         {
-            SetTlkOverride(131, "Social"); // Charisma
+            SetTlkOverride(131, "Intellect"); // Charisma
             SetTlkOverride(132, "Vitality"); // Constitution
             SetTlkOverride(133, "Perception"); // Dexterity
             SetTlkOverride(134, "Agility"); // Intelligence
@@ -30,14 +30,14 @@ namespace EOM.Game.Server.Feature
             SetTlkOverride(330, "Agility"); // Intelligence
             SetTlkOverride(331, "Increased Vitality By"); // Constitution
             SetTlkOverride(332, "Increased Willpower By"); // Wisdom
-            SetTlkOverride(333, "Increased Social By"); // Charisma
+            SetTlkOverride(333, "Increased Intellect By"); // Charisma
 
             SetTlkOverride(473, "Might Information"); // Strength
             SetTlkOverride(474, "Perception Information"); // Dexterity
             SetTlkOverride(475, "Vitality Information"); // Constitution
             SetTlkOverride(476, "Willpower Information"); // Wisdom
             SetTlkOverride(477, "Agility"); // Intelligence
-            SetTlkOverride(479, "Social Information"); // Charisma
+            SetTlkOverride(479, "Intellect Information"); // Charisma
 
             SetTlkOverride(457, BuildRecommendedButtonText());
 
@@ -89,7 +89,7 @@ namespace EOM.Game.Server.Feature
                 "Improves effectiveness of ship combat modules.\n" +
                 "Reduces critical hit chance against you.");
             SetTlkOverride(478,
-                "Social improves your XP gain and leadership capabilities.\n\n" +
+                "Intellect improves your XP gain and leadership capabilities.\n\n" +
                 "Primary Skills: Leadership, Agriculture\n\n" +
                 "Other Notes:\n\n" + 
                 "Improves guild point acquisition.\n" +
@@ -129,8 +129,8 @@ namespace EOM.Game.Server.Feature
             SetTlkOverride(58376, "Agility Decreased");
             SetTlkOverride(58377, "Willpower Increased");
             SetTlkOverride(58378, "Willpower Decreased");
-            SetTlkOverride(58379, "Social Increased");
-            SetTlkOverride(58380, "Social Decreased");
+            SetTlkOverride(58379, "Intellect Increased");
+            SetTlkOverride(58380, "Intellect Decreased");
 
             SetTlkOverride(61619, "Sell <CUSTOM0> for <CUSTOM1>cr");
             SetTlkOverride(61620, "Buy <CUSTOM0> for <CUSTOM1>cr");
@@ -147,13 +147,13 @@ namespace EOM.Game.Server.Feature
 
         private static string BuildRecommendedButtonText()
         {
-            return "Your character is guided by six core attributes: Might, Vitality, Perception, Willpower, Agility, and Social.\n\n" +
+            return "Your character is guided by six core attributes: Might, Vitality, Perception, Willpower, Agility, and Intellect.\n\n" +
                    "Might: Improves damage dealt by melee weapons and increases carrying capacity.\n" +
                    "Vitality: Improves your max hit points and reduces damage received.\n" +
                    "Perception: Improves damage dealt by ranged and finesse weapons and increases physical accuracy.\n" +
                    "Willpower: Improves your force attack, force defense, and max force points.\n" +
                    "Agility: Improves ranged accuracy, evasion, and max stamina.\n" +
-                   "Social: Improves your XP gain and leadership capabilities.\n\n";
+                   "Intellect: Improves your XP gain and leadership capabilities.\n\n";
         }
 
         private static void OverrideMenuNames()

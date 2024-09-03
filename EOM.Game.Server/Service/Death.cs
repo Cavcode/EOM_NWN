@@ -179,7 +179,7 @@ namespace EOM.Game.Server.Service
             else
                 multiplier = 15;
 
-            var social = GetAbilityScore(player, AbilityType.Social);
+            var social = GetAbilityScore(player, AbilityType.Intellect);
             var newDebt = dbPlayer.TotalSPAcquired * multiplier;
             var reductionBonus = 0f;
             reductionBonus += Property.GetEffectiveUpgradeLevel(dbPlayer.CitizenPropertyId, PropertyUpgradeType.MedicalCenterLevel) * 0.05f; // -5% per Medical Center level

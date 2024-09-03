@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Numerics;
 using EOM.Game.Server.Core;
 using EOM.Game.Server.Core.NWScript.Enum;
-using EOM.Game.Server.Feature.StatusEffectDefinition.StatusEffectData;
 using EOM.Game.Server.Service;
 using EOM.Game.Server.Service.ActivityService;
 using EOM.Game.Server.Service.StatusEffectService;
@@ -103,15 +102,6 @@ namespace EOM.Game.Server.Feature.StatusEffectDefinition
                         stmAmount = 1;
                     if (fpAmount < 1)
                         fpAmount = 1;
-
-                    var foodEffect = StatusEffect.GetEffectData<FoodEffectData>(target, StatusEffectType.Food);
-
-                    if (foodEffect != null)
-                    {
-                        hpAmount += foodEffect.RestRegen * 5;
-                        fpAmount += foodEffect.RestRegen * 2;
-                        stmAmount += foodEffect.RestRegen * 2;
-                    }
 
                     ApplyEffectToObject(DurationType.Instant, EffectHeal(hpAmount), target);
                     Stat.RestoreStamina(target, stmAmount);

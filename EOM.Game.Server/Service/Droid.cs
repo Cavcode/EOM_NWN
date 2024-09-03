@@ -600,7 +600,7 @@ namespace EOM.Game.Server.Service
             CreaturePlugin.SetRawAbilityScore(droid, AbilityType.Vitality, details.VIT);
             CreaturePlugin.SetRawAbilityScore(droid, AbilityType.Willpower, details.WIL);
             CreaturePlugin.SetRawAbilityScore(droid, AbilityType.Agility, details.AGI);
-            CreaturePlugin.SetRawAbilityScore(droid, AbilityType.Social, details.SOC);
+            CreaturePlugin.SetRawAbilityScore(droid, AbilityType.Intellect, details.SOC);
             CreaturePlugin.SetBaseAC(droid, 10);
             CreaturePlugin.SetBaseAttackBonus(droid, 1);
 

@@ -9,6 +9,6 @@ namespace EOM.Game.Server.Core.NWScript.Enum
         Vitality = 2,
         Agility = 3,
         Willpower = 4,
-        Social = 5
+        Intellect = 5
     }
 }

@@ -367,8 +367,8 @@ namespace EOM.Game.Server.Service
                     return ItemPropertyCustom(ItemPropertyType.Stamina, -1, amount);
                 case 11: // Vitality
                     return ItemPropertyAbilityBonus(AbilityType.Vitality, amount);
-                case 12: // Social
-                    return ItemPropertyAbilityBonus(AbilityType.Social, amount);
+                case 12: // Intellect
+                    return ItemPropertyAbilityBonus(AbilityType.Intellect, amount);
                 case 13: // Willpower
                     return ItemPropertyAbilityBonus(AbilityType.Willpower, amount);
                 case 14: // Control - Smithery
@@ -506,7 +506,7 @@ namespace EOM.Game.Server.Service
                     return ItemPropertyCustom(ItemPropertyType.FoodBonus, (int)FoodItemPropertySubType.Willpower, amount);
                 case 81: // Food Bonus - Agility
                     return ItemPropertyCustom(ItemPropertyType.FoodBonus, (int)FoodItemPropertySubType.Agility, amount);
-                case 82: // Food Bonus - Social
+                case 82: // Food Bonus - Intellect
                     return ItemPropertyCustom(ItemPropertyType.FoodBonus, (int)FoodItemPropertySubType.Social, amount);
                 case 83: // Attack
                     return ItemPropertyCustom(ItemPropertyType.Attack, -1, amount);

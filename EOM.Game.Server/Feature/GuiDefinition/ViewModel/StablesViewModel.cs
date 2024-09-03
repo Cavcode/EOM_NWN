@@ -453,11 +453,11 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             XPTooltip = $"XP: {dbBeast.XP} / {BeastMastery.GetRequiredXP(dbBeast.Level)}";
 
             var hp = level.HP + 40 * ((level.Stats[AbilityType.Vitality] - 10) / 2);
-            var fp = Stat.GetMaxFP(level.FP, (level.Stats[AbilityType.Willpower] - 10) / 2, 0);
+            var fp = Stat.GetMaxFP(level.FP, (level.Stats[AbilityType.Willpower] - 10) / 2);
             if (fp < 0)
                 fp = 0;
 
-            var stm= Stat.GetMaxStamina(level.STM, (level.Stats[AbilityType.Agility]-10) / 2, 0);
+            var stm= Stat.GetMaxStamina(level.STM, (level.Stats[AbilityType.Agility]-10) / 2);
             if (stm < 0)
                 stm = 0;
 
@@ -471,7 +471,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             Vitality = $"{level.Stats[AbilityType.Vitality]}";
             Willpower = $"{level.Stats[AbilityType.Willpower]}";
             Agility = $"{level.Stats[AbilityType.Agility]}";
-            Social = $"{level.Stats[AbilityType.Social]}";
+            Social = $"{level.Stats[AbilityType.Intellect]}";
 
             MainHand = "-";
             OffHand = "-";

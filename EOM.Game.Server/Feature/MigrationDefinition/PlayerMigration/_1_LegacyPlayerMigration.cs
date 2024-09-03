@@ -54,7 +54,7 @@ namespace EOM.Game.Server.Feature.MigrationDefinition.PlayerMigration
             CreaturePlugin.SetRawAbilityScore(player, AbilityType.Perception, 10);
             CreaturePlugin.SetRawAbilityScore(player, AbilityType.Agility, 10);
             CreaturePlugin.SetRawAbilityScore(player, AbilityType.Willpower, 10);
-            CreaturePlugin.SetRawAbilityScore(player, AbilityType.Social, 10);
+            CreaturePlugin.SetRawAbilityScore(player, AbilityType.Intellect, 10);
         }
 
         private void ResetFeats(uint player)
@@ -89,7 +89,7 @@ namespace EOM.Game.Server.Feature.MigrationDefinition.PlayerMigration
             dbPlayer.BaseStats[AbilityType.Vitality] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Vitality);
             dbPlayer.BaseStats[AbilityType.Willpower] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Willpower);
             dbPlayer.BaseStats[AbilityType.Agility] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Agility);
-            dbPlayer.BaseStats[AbilityType.Social] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Social);
+            dbPlayer.BaseStats[AbilityType.Intellect] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Intellect);
         }
 
         private void ResetHotBar(uint player)

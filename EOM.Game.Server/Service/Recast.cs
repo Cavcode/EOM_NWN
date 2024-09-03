@@ -5,7 +5,6 @@ using System.Linq;
 using EOM.Game.Server.Core;
 using EOM.Game.Server.Entity;
 using EOM.Game.Server.Extension;
-using EOM.Game.Server.Feature.StatusEffectDefinition.StatusEffectData;
 using EOM.Game.Server.Service.AbilityService;
 using EOM.Game.Server.Service.StatusEffectService;
 
@@ -115,12 +114,7 @@ namespace EOM.Game.Server.Service
 
                 if (!ignoreRecastReduction)
                 {
-                    var foodEffect = StatusEffect.GetEffectData<FoodEffectData>(activator, StatusEffectType.Food);
                     var recastReduction = dbPlayer.AbilityRecastReduction;
-                    if (foodEffect != null)
-                    {
-                        recastReduction += foodEffect.RecastReductionPercent;
-                    }
 
                     var recastPercentage = recastReduction * 0.01f;
                     if (recastPercentage > 0.5f)

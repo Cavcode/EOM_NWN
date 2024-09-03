@@ -6,14 +6,14 @@ namespace EOM.Game.Server.Service.SkillService
     {
         [SkillCategory("Invalid", false, 0)]
         Invalid = 0,
-        [SkillCategory("Combat", true, 1)]
+        [SkillCategory("Weapons", true, 1)]
         Combat = 1,
         [SkillCategory("Crafting", true, 4)]
         Crafting = 2,
         [SkillCategory("Utility", true, 6)]
         Utility = 3,
-        [SkillCategory("Jobs", true, 8)]
-        Jobs = 4,
+        [SkillCategory("Magic", true, 8)]
+        Roleplay = 4,
     }
 
     public class SkillCategoryAttribute : Attribute

@@ -54,7 +54,7 @@ namespace EOM.Game.Server.Feature.AbilityDefinition.Leadership
 
                             var dc = Combat.CalculateSavingThrowDC(activator, SavingThrow.Will, 14);
                             const float BaseDuration = 2f;
-                            var bonusDuration = GetAbilityModifier(AbilityType.Social, activator) * 0.5f;
+                            var bonusDuration = GetAbilityModifier(AbilityType.Intellect, activator) * 0.5f;
                             var duration = BaseDuration + bonusDuration;
 
                             var checkResult = WillSave(nearest, dc, SavingThrowType.None, activator);

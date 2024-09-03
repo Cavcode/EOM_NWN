@@ -29,7 +29,6 @@ namespace EOM.Game.Server.Feature.ItemDefinition
             SkillType.MartialArts,
             SkillType.Ranged,
             SkillType.Force,
-            SkillType.Devices,
             SkillType.FirstAid
         };
 

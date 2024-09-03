@@ -219,7 +219,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             var agility = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Agility);
             var vitality = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Vitality);
             var willpower = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Willpower);
-            var social = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Social);
+            var social = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Intellect);
 
             CanDistribute = dbPlayer.Perks.Count == 0
                             && dbPlayer.Skills
@@ -234,7 +234,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                             && agility <= 10 + (racialStat == AbilityType.Agility ? 1 : 0)
                             && vitality <= 10 + (racialStat == AbilityType.Vitality ? 1 : 0)
                             && willpower <= 10 + (racialStat == AbilityType.Willpower ? 1 : 0)
-                            && social <= 10 + (racialStat == AbilityType.Social ? 1 : 0);
+                            && social <= 10 + (racialStat == AbilityType.Intellect ? 1 : 0);
 
             RecalculateAvailableSkillPoints();
         }
@@ -368,7 +368,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 CreaturePlugin.SetRawAbilityScore(Player, AbilityType.Vitality, 10);
                 CreaturePlugin.SetRawAbilityScore(Player, AbilityType.Willpower, 10);
                 CreaturePlugin.SetRawAbilityScore(Player, AbilityType.Agility, 10);
-                CreaturePlugin.SetRawAbilityScore(Player, AbilityType.Social, 10);
+                CreaturePlugin.SetRawAbilityScore(Player, AbilityType.Intellect, 10);
                 CreaturePlugin.SetBaseAttackBonus(Player, 1);
 
                 CreaturePlugin.SetBaseSavingThrow(Player, SavingThrow.Fortitude, 0);
@@ -380,14 +380,14 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 dbPlayer.BaseStats[AbilityType.Vitality] = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Vitality);
                 dbPlayer.BaseStats[AbilityType.Willpower] = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Willpower);
                 dbPlayer.BaseStats[AbilityType.Agility] = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Agility);
-                dbPlayer.BaseStats[AbilityType.Social] = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Social);
+                dbPlayer.BaseStats[AbilityType.Intellect] = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Intellect);
 
                 dbPlayer.UpgradedStats[AbilityType.Might] = 0;
                 dbPlayer.UpgradedStats[AbilityType.Perception] = 0;
                 dbPlayer.UpgradedStats[AbilityType.Vitality] = 0;
                 dbPlayer.UpgradedStats[AbilityType.Willpower] = 0;
                 dbPlayer.UpgradedStats[AbilityType.Agility] = 0;
-                dbPlayer.UpgradedStats[AbilityType.Social] = 0;
+                dbPlayer.UpgradedStats[AbilityType.Intellect] = 0;
 
                 dbPlayer.UnallocatedAP = dbPlayer.TotalAPAcquired;
                 dbPlayer.RebuildComplete = false;
@@ -636,17 +636,10 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 }
 
                 var forceIndex = _skills.IndexOf(SkillType.Force);
-                var devicesIndex = _skills.IndexOf(SkillType.Devices);
 
                 if (_skillDistributionPoints[forceIndex] > 0 && CharacterType == 0)
                 {
                     FloatingTextStringOnCreature("Standard characters cannot gain ranks in the Force skill.", Player, false);
-                    return;
-                }
-
-                if (_skillDistributionPoints[devicesIndex] > 0 && CharacterType == 1)
-                {
-                    FloatingTextStringOnCreature("Force characters cannot gain ranks in the Devices skill.", Player, false);
                     return;
                 }
 
@@ -664,14 +657,14 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 CreaturePlugin.ModifyRawAbilityScore(Player, AbilityType.Vitality, _vitality);
                 CreaturePlugin.ModifyRawAbilityScore(Player, AbilityType.Willpower, _willpower);
                 CreaturePlugin.ModifyRawAbilityScore(Player, AbilityType.Agility, _agility);
-                CreaturePlugin.ModifyRawAbilityScore(Player, AbilityType.Social, _social);
+                CreaturePlugin.ModifyRawAbilityScore(Player, AbilityType.Intellect, _social);
 
                 dbPlayer.BaseStats[AbilityType.Might] = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Might);
                 dbPlayer.BaseStats[AbilityType.Perception] = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Perception);
                 dbPlayer.BaseStats[AbilityType.Vitality] = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Vitality);
                 dbPlayer.BaseStats[AbilityType.Willpower] = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Willpower);
                 dbPlayer.BaseStats[AbilityType.Agility] = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Agility);
-                dbPlayer.BaseStats[AbilityType.Social] = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Social);
+                dbPlayer.BaseStats[AbilityType.Intellect] = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Intellect);
 
                 if (CharacterType == 0)
                 {

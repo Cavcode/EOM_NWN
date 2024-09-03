@@ -496,7 +496,7 @@ namespace EOM.Game.Server.Service
         public static int CalculateQuestGoldReward(uint player, bool isGuildQuest, int baseAmount)
         {
             // 5% credit bonus per social modifier.
-            var social = GetAbilityModifier(AbilityType.Social, player) * 0.05f;
+            var social = GetAbilityModifier(AbilityType.Intellect, player) * 0.05f;
 
             // 5% credit bonus per Guild Relations perk level, if quest is associated with a guild.
             var guildRelations = 0f;

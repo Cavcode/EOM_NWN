@@ -156,7 +156,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             var playerId = GetObjectUUID(Player);
             var dbPlayer = DB.Get<Player>(playerId);
             var colorSettings = dbPlayer.Settings.LanguageChatColors;
-            var languages = Skill.GetActiveSkillsByCategory(SkillCategoryType.Languages);
 
             _languages = new List<SkillType>();
             var chatColorNames = new GuiBindingList<string>();
@@ -202,25 +201,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                     dbPlayer.Settings.EmoteChatColor.Blue));
             }
 
-            // Language colors
-            foreach (var (type, skill) in languages)
-            {
-                _languages.Add(type);
-                chatColorNames.Add(skill.Name);
-                chatToggles.Add(false);
-
-                if (colorSettings != null &&
-                    colorSettings.ContainsKey(type))
-                {
-                    var playerSetting = colorSettings[type];
-                    chatColors.Add(new GuiColor(playerSetting.Red, playerSetting.Green, playerSetting.Blue));
-                }
-                else
-                {
-                    var (red, green, blue) = Language.GetColor(type);
-                    chatColors.Add(new GuiColor(red, green, blue));
-                }
-            }
 
             ChatColorNames = chatColorNames;
             ChatColors = chatColors;
@@ -347,12 +327,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                         Communication.EmoteChatColor.Item1,
                         Communication.EmoteChatColor.Item2,
                         Communication.EmoteChatColor.Item3);
-                }
-                else
-                {
-                    var type = _languages[index - NumberOfSystemColors];
-                    var (red, green, blue) = Language.GetColor(type);
-                    ChatColors[index] = new GuiColor(red, green, blue);
                 }
 
                 ChangePartialView(SettingsView, ChatPartial);

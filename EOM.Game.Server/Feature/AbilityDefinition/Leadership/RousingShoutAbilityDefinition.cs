@@ -44,7 +44,7 @@ namespace EOM.Game.Server.Feature.AbilityDefinition.Leadership
                 })
                 .HasImpactAction((activator, target, _, _) =>
                 {
-                    var social = GetAbilityScore(activator, AbilityType.Social);
+                    var social = GetAbilityScore(activator, AbilityType.Intellect);
                     var targetMaxHP = GetMaxHitPoints(target);
                     int hp;
                     var perkLevel = Perk.GetPerkLevel(activator, PerkType.RousingShout);

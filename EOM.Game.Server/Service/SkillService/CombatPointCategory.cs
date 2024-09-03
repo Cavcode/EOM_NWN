@@ -6,7 +6,7 @@ namespace EOM.Game.Server.Service.SkillService
     {
         Exempt = 0,
         Utility = 1,
-        Weapon = 2
+        Weapon = 2,
     }
 
 }

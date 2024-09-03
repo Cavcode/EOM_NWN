@@ -17,226 +17,159 @@ namespace EOM.Game.Server.Service.SkillService
         Invalid = 0,
 
         [Skill(SkillCategoryType.Combat,
-            "One-Handed",
+            "Axes",
             50,
             true,
-            "Ability to use one-handed weapons like vibroblades, finesse vibroblades, and lightsabers.",
+            "Ability to use axes.",
             true,
             false,
             CombatPointCategoryType.Weapon)]
-        OneHanded = 1,
+        Axes = 1,
 
         [Skill(SkillCategoryType.Combat,
-            "Two-Handed",
+            "Gunblades",
             50,
             true,
-            "Ability to use heavy weapons like heavy vibroblades, polearms, and saberstaffs in combat.",
+            "Ability to use gunblades.",
             true,
             false,
             CombatPointCategoryType.Weapon)]
-        TwoHanded = 2,
+        Gunblades = 2,
+
 
         [Skill(SkillCategoryType.Combat,
-            "Martial Arts", 50,
+            "Martial Arts",
+            50,
             true,
-            "Ability to fight using katars and staves in combat.",
+            "Ability to use FIST",
             true,
             false,
             CombatPointCategoryType.Weapon)]
         MartialArts = 3,
 
         [Skill(SkillCategoryType.Combat,
-            "Ranged",
+            "Staves",
             50,
             true,
-            "Ability to use ranged weapons like pistols, shurikens, and rifles in combat.",
+            "Ability to use staves.",
             true,
             false,
             CombatPointCategoryType.Weapon)]
-        Ranged = 4,
+        Staves = 4,
+
 
         [Skill(SkillCategoryType.Combat,
-            "Force",
+            "White Magic",
             50,
             true,
-            "Ability to use Force abilities.",
+            "Ability to use White magic.",
             true,
             false,
-            CombatPointCategoryType.Utility,
-            CharacterType.ForceSensitive)]
-        Force = 5,
+            CombatPointCategoryType.Weapon)]
+        WhiteMagic = 5,
 
         [Skill(SkillCategoryType.Combat,
-            "Armor",
+            "Black Magic",
             50,
             true,
-            "Ability to effectively wear and defend against attacks with armor.",
+            "Ability to use Black magic.",
             true,
-            false)]
-        Armor = 6,
+            false,
+            CombatPointCategoryType.Weapon)]
+        BlackMagic = 6,
 
-        [Skill(SkillCategoryType.Utility,
-            "Piloting",
+        [Skill(SkillCategoryType.Combat,
+              "Summoning",
+              50,
+              true,
+              "Ability to summon Guardian Forces.",
+              true,
+              false,
+              CombatPointCategoryType.Weapon)]
+        Summoning = 7,
+
+        [Skill(SkillCategoryType.Crafting,
+            "Blacksmithing",
             50,
             true,
-            "Ability to pilot starships, follow navigation charts, and control starship systems.",
+            "Ability to Blacksmithing.",
             true,
-            false)]
-        Piloting = 7,
+            true,
+            CombatPointCategoryType.Exempt)]
+        Blacksmithing = 8,
 
-        [Skill(SkillCategoryType.Utility,
+
+        [Skill(SkillCategoryType.Crafting,
+            "Armorsmith",
+            50,
+            true,
+            "Ability to Armorsmith.",
+            true,
+            true,
+            CombatPointCategoryType.Exempt)]
+        Armorsmith = 9,
+
+
+        [Skill(SkillCategoryType.Crafting,
+            "Cooking",
+            50,
+            true,
+            "Ability to Cooking.",
+            true,
+            true,
+            CombatPointCategoryType.Exempt)]
+        Cooking = 10,
+
+        [Skill(SkillCategoryType.Crafting,
+            "Fishing",
+            50,
+            true,
+            "Ability to Fishing.",
+            true,
+            true,
+            CombatPointCategoryType.Exempt)]
+        Fishing = 11,
+
+        [Skill(SkillCategoryType.Crafting,
+            "Survivalism",
+            50,
+            true,
+            "Ability to Survive.",
+            true,
+            true,
+            CombatPointCategoryType.Exempt)]
+        Survivalism = 12,
+
+        [Skill(SkillCategoryType.Crafting,
             "First Aid",
             50,
             true,
-            "Ability to treat bodily injuries in the field with healing kits and stim packs.",
+            "Ability to First Aid.",
             true,
-            false)]
-        FirstAid = 8,
+            true,
+            CombatPointCategoryType.Exempt)]
+        FirstAid = 13,
+
 
         [Skill(SkillCategoryType.Crafting,
-            "Smithery",
+            "Animal Handling",
             50,
             true,
-            "Ability to create weapons and armor like vibroblades, blasters, and helmets.",
+            "Ability to Animal Handling.",
             true,
-            true)]
-        Smithery = 9,
+            true,
+            CombatPointCategoryType.Exempt)]
+        AnimalHandling = 14,
 
         [Skill(SkillCategoryType.Crafting,
-            "Fabrication",
+            "Stealth",
             50,
             true,
-            "Ability to create base structures and furniture.",
+            "Ability to Stealth.",
             true,
-            true)]
-        Fabrication = 10,
-
-        [Skill(SkillCategoryType.Crafting,
-            "Gathering",
-            50,
             true,
-            "Ability to harvest raw materials and scavenge for supplies.",
-            true,
-            false)]
-        Gathering = 11,
-
-        [Skill(SkillCategoryType.Utility,
-            "Leadership",
-            50,
-            true,
-            "Ability to handle people, negotiate, and manage relations.",
-            true,
-            false)]
-        Leadership = 12,
-
-        [Skill(SkillCategoryType.Combat,
-            "Beast Mastery",
-            50,
-            true,
-            "Ability to tame wild animals, raise them, and train them.",
-            true,
-            false)]
-        BeastMastery = 13,
-
-        [Skill(SkillCategoryType.Jobs,
-            "Bard",
-            50,
-            true,
-            "Singer homie.",
-            true,
-            true)]
-        Bard = 14,
-
-        [Skill(SkillCategoryType.Jobs,
-          "Dark Knight",
-            50,
-            true,
-            "Saviour in a shroud of shadows.",
-            true,
-            true)]
-        DarkKnight = 15,
-
-        [Skill(SkillCategoryType.Jobs,
-            "Black Mage",
-            50,
-            true,
-            "Michael Bay's wet dream.",
-            true,
-            true)]
-        BlackMage = 16,
-
-        [Skill(SkillCategoryType.Jobs,
-            "Gunbreaker",
-            50,
-            true,
-            "Heedless hero of the people.",
-            true,
-            true)]
-        Gunbreaker = 17,
-
-        [Skill(SkillCategoryType.Jobs,
-             "Ninja",
-             50,
-             true,
-             "Sneaky boi.",
-             true,
-             true)]
-        Ninja = 18,
-
-        [Skill(SkillCategoryType.Jobs,
-             "Gunslinger",
-             50,
-             true,
-             "Do ya, punk?",
-             true,
-             true)]
-        Gunslinger = 19,
-
-        [Skill(SkillCategoryType.Jobs,
-            "White Mage",
-            50,
-            true,
-            "Caretakers of Life",
-            true,
-            true)]
-        WhiteMage = 20,
-
-        [Skill(SkillCategoryType.Jobs,
-            "Monk",
-            50,
-            true,
-            "A master of balance.",
-            true,
-            true)]
-        Monk = 21,
-
-        [Skill(SkillCategoryType.Jobs,
-            "Reaper",
-            50,
-            true,
-            "A champion of the Void.",
-            true,
-            true)]
-        Reaper = 22,
-
-        [Skill(SkillCategoryType.Jobs,
-            "Paladin",
-            50,
-            true,
-            "Saints of the Sword",
-            true,
-            true)]
-        Paladin = 23,
-
-        [Skill(SkillCategoryType.Jobs,
-            "Summoner",
-            50,
-            true,
-            "Yuna wannabes.",
-            true,
-            true)]
-        Summoner = 24,
-
+            CombatPointCategoryType.Exempt)]
+        Stealth = 15,
     }
 
     public class SkillAttribute : Attribute

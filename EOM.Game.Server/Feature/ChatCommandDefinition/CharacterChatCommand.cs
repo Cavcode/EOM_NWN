@@ -32,7 +32,6 @@ namespace EOM.Game.Server.Feature.ChatCommandDefinition
             Recipes();
             Perks();
             DeleteCommand();
-            LanguageCommand();
             ToggleEmoteStyle();
             ChangeItemDescription();
             ConcentrationAbility();
@@ -151,74 +150,6 @@ namespace EOM.Game.Server.Feature.ChatCommandDefinition
                     Gui.TogglePlayerWindow(user, GuiWindowType.Perks);
                 });
 
-        }
-
-        private void LanguageCommand()
-        {
-            _builder.Create("language")
-                .Description("Switches the active language. Use /language help for more information.")
-                .Permissions(AuthorizationLevel.All)
-                .Validate((user, args) =>
-                {
-                    if (args.Length < 1)
-                    {
-                        return ColorToken.Red("Please enter /language help for more information on how to use this command.");
-                    }
-
-                    return string.Empty;
-                })
-                .Action((user, target, location, args) =>
-                {
-                    var command = args[0].ToLower();
-                    var race = GetRacialType(user);
-                    var languages = Language.Languages;
-
-                    if (command == "help")
-                    {
-                        var commands = new List<string>
-                        {
-                            "help: Displays this help text."
-                        };
-
-                        foreach (var language in languages)
-                        {
-                            var chatText = language.ChatNames.ElementAt(0);
-                            var count = language.ChatNames.Count();
-
-                            for (var x = 1; x < count; x++)
-                            {
-                                chatText += ", " + language.ChatNames.ElementAt(x);
-                            }
-
-                            commands.Add($"{chatText}: Sets the active language to {language.ProperName}.");
-                        }
-
-                        SendMessageToPC(user, commands.Aggregate((string a, string b) => a + '\n' + b));
-                        return;
-                    }
-
-                    // Wookiees cannot speak any language besides Shyriiwook.
-                    if (race == RacialType.Wookiee &&
-                        command != SkillType.Shyriiwook.ToString().ToLower())
-                    {
-                        Language.SetActiveLanguage(user, SkillType.Shyriiwook);
-                        SendMessageToPC(user, ColorToken.Red("Wookiees can only speak Shyriiwook."));
-                        return;
-                    }
-
-
-                    foreach (var language in Language.Languages)
-                    {
-                        if (language.ChatNames.Contains(command))
-                        {
-                            Language.SetActiveLanguage(user, language.Skill);
-                            SendMessageToPC(user, $"Set active language to {language.ProperName}.");
-                            return;
-                        }
-                    }
-
-                    SendMessageToPC(user, ColorToken.Red($"Unknown language {command}."));
-                });
         }
 
         private void DeleteCommand()

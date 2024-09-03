@@ -129,10 +129,10 @@ namespace EOM.Game.Server.Feature.GuiDefinition
                                 col.AddRow(row =>
                                 {
                                     row.AddLabel()
-                                        .SetText("Social")
+                                        .SetText("Intellect")
                                         .SetVerticalAlign(NuiVerticalAlign.Top)
                                         .SetHorizontalAlign(NuiHorizontalAlign.Left)
-                                        .SetTooltip("Social - Improves your XP gain and leadership capabilities.");
+                                        .SetTooltip("Intellect - Improves your XP gain and leadership capabilities.");
                                 });
                             });
                             rowRoot.AddColumn(col =>

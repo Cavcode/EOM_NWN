@@ -164,7 +164,7 @@ namespace EOM.CLI
                 case "AGI":
                     return AbilityType.Agility.ToString();
                 case "SOC":
-                    return AbilityType.Social.ToString();
+                    return AbilityType.Intellect.ToString();
             }
 
             return AbilityType.Invalid.ToString();

@@ -188,7 +188,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition
 
                                 row.AddLabel()
                                     .BindText(model => model.Social)
-                                    .SetTooltip("Social - Improves your XP gain and leadership capabilities.")
+                                    .SetTooltip("Intellect - Improves your XP gain and leadership capabilities.")
                                     .SetHeight(32f)
                                     .SetWidth(500f);
 

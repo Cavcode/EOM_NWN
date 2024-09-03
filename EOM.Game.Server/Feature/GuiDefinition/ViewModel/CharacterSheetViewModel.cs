@@ -5,7 +5,6 @@ using EOM.Game.Server.Entity;
 using EOM.Game.Server.Feature.DialogDefinition;
 using EOM.Game.Server.Feature.GuiDefinition.Payload;
 using EOM.Game.Server.Feature.GuiDefinition.RefreshEvent;
-using EOM.Game.Server.Feature.StatusEffectDefinition.StatusEffectData;
 using EOM.Game.Server.Service;
 using EOM.Game.Server.Service.AbilityService;
 using EOM.Game.Server.Service.BeastMasteryService;
@@ -424,7 +423,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
 
         public Action OnClickUpgradeSocial() => () =>
         {
-            UpgradeAttribute(AbilityType.Social, "Social");
+            UpgradeAttribute(AbilityType.Intellect, "Intellect");
         };
 
 
@@ -462,7 +461,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             Vitality = GetAbilityScore(_target, AbilityType.Vitality);
             Willpower = GetAbilityScore(_target, AbilityType.Willpower);
             Agility = GetAbilityScore(_target, AbilityType.Agility);
-            Social = GetAbilityScore(_target, AbilityType.Social);
+            Social = GetAbilityScore(_target, AbilityType.Intellect);
             SavingThrows = GetFortitudeSavingThrow(_target) + "/" +
                            GetReflexSavingThrow(_target) + "/" +
                            GetWillSavingThrow(_target);
@@ -478,7 +477,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 IsVitalityUpgradeAvailable = (dbPlayer.UnallocatedAP > 0 && dbPlayer.UpgradedStats[AbilityType.Vitality] < MaxUpgrades) || isRacialBonusAvailable;
                 IsWillpowerUpgradeAvailable = (dbPlayer.UnallocatedAP > 0 && dbPlayer.UpgradedStats[AbilityType.Willpower] < MaxUpgrades) || isRacialBonusAvailable;
                 IsAgilityUpgradeAvailable = (dbPlayer.UnallocatedAP > 0 && dbPlayer.UpgradedStats[AbilityType.Agility] < MaxUpgrades) || isRacialBonusAvailable;
-                IsSocialUpgradeAvailable = (dbPlayer.UnallocatedAP > 0 && dbPlayer.UpgradedStats[AbilityType.Social] < MaxUpgrades) || isRacialBonusAvailable;
+                IsSocialUpgradeAvailable = (dbPlayer.UnallocatedAP > 0 && dbPlayer.UpgradedStats[AbilityType.Intellect] < MaxUpgrades) || isRacialBonusAvailable;
             }
         }
 
@@ -515,7 +514,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 return (dmgText, tooltip);
             }
 
-            var food = StatusEffect.GetEffectData<FoodEffectData>(Player, StatusEffectType.Food) ?? new FoodEffectData();
             var mainHand = GetItemInSlot(InventorySlot.RightHand, _target);
             var offHand = GetItemInSlot(InventorySlot.LeftHand, _target);
             var mainHandType = GetBaseItemType(mainHand);
@@ -594,10 +592,10 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 var playerId = GetObjectUUID(_target);
                 var dbPlayer = DB.Get<Player>(playerId);
 
-                var fireDefense = (dbPlayer.Defenses[CombatDamageType.Fire] + food.DefenseFire).ToString();
-                var poisonDefense = (dbPlayer.Defenses[CombatDamageType.Poison] + food.DefensePoison).ToString();
-                var electricalDefense = (dbPlayer.Defenses[CombatDamageType.Electrical + food.DefenseElectrical]).ToString();
-                var iceDefense = (dbPlayer.Defenses[CombatDamageType.Ice] + food.DefenseIce).ToString();
+                var fireDefense = (dbPlayer.Defenses[CombatDamageType.Fire]).ToString();
+                var poisonDefense = (dbPlayer.Defenses[CombatDamageType.Poison]).ToString();
+                var electricalDefense = (dbPlayer.Defenses[CombatDamageType.Electrical]).ToString();
+                var iceDefense = (dbPlayer.Defenses[CombatDamageType.Ice]).ToString();
 
                 DefenseElemental = $"{fireDefense}/{poisonDefense}/{electricalDefense}/{iceDefense}";
             }
@@ -616,17 +614,11 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             Evasion = Stat.GetEvasion(_target, SkillType.Invalid);
 
             var smithery = Stat.CalculateControl(_target, SkillType.Smithery);
-            var engineering = Stat.CalculateControl(_target, SkillType.Engineering);
             var fabrication = Stat.CalculateControl(_target, SkillType.Fabrication);
-            var agriculture = Stat.CalculateControl(_target, SkillType.Agriculture);
 
-            Control = $"{smithery}/{engineering}/{fabrication}/{agriculture}";
 
             smithery = Stat.CalculateCraftsmanship(_target, SkillType.Smithery);
-            engineering = Stat.CalculateCraftsmanship(_target, SkillType.Engineering);
             fabrication = Stat.CalculateCraftsmanship(_target, SkillType.Fabrication);
-            agriculture = Stat.CalculateCraftsmanship(_target, SkillType.Agriculture);
-            Craftsmanship = $"{smithery}/{engineering}/{fabrication}/{agriculture}";
         }
 
         private void RefreshAttributes()

@@ -466,7 +466,7 @@ namespace EOM.Game.Server.Service
 
         private static int GetMaxNumberOfAuras(uint activator)
         {
-            var social = GetAbilityScore(activator, AbilityType.Social);
+            var social = GetAbilityScore(activator, AbilityType.Intellect);
             var count = 1 + (social - 10) / 5;
 
             if (count > MaxNumberOfAuras)

@@ -36,8 +36,8 @@ namespace EOM.Game.Server.Service
             { EffectIconType.AbilityDecreaseINT, AbilityType.Agility },
             { EffectIconType.AbilityIncreaseWIS, AbilityType.Willpower },
             { EffectIconType.AbilityDecreaseWIS, AbilityType.Willpower },
-            { EffectIconType.AbilityIncreaseCHA, AbilityType.Social },
-            { EffectIconType.AbilityDecreaseCHA, AbilityType.Social },
+            { EffectIconType.AbilityIncreaseCHA, AbilityType.Intellect },
+            { EffectIconType.AbilityDecreaseCHA, AbilityType.Intellect },
 
         };
 

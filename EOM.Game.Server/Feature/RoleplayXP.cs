@@ -48,7 +48,7 @@ namespace EOM.Game.Server.Feature
 
             if (dbPlayer.RoleplayProgress.RPPoints >= 50)
             {
-                var socialModifier = GetAbilityModifier(AbilityType.Social, player);
+                var socialModifier = GetAbilityModifier(AbilityType.Intellect, player);
                 const int BaseXP = 1500;
                 var delta = dbPlayer.RoleplayProgress.RPPoints - 50;
                 var bonusXP = delta * 25;

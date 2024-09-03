@@ -90,7 +90,7 @@ namespace EOM.Game.Server.Entity
             AbilityToggles = new Dictionary<AbilityToggleType, bool>();
             Currencies = new Dictionary<CurrencyType, int>();
         }
-
+        
 
         [Indexed]
         public int Version { get; set; }

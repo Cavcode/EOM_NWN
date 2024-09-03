@@ -398,7 +398,7 @@ namespace EOM.Game.Server.Service
 
             var playerId = GetObjectUUID(player);
             var dbPlayer = DB.Get<Player>(playerId);
-            var skill = dbPlayer.Skills[SkillType.Agriculture].Rank;
+            var skill = dbPlayer.Skills[SkillType.Fishing].Rank;
 
             const int BaseChance = 40;
             var delta = skill - fish.Level;
@@ -439,7 +439,7 @@ namespace EOM.Game.Server.Service
             }
 
             var xp = Skill.GetDeltaXP(fish.Level - skill);
-            Skill.GiveSkillXP(player, SkillType.Agriculture, xp, false, false);
+            //Skill.GiveSkillXP(player, SkillType.Agriculture, xp, false, false);
         }
 
         private static void ClearFishingAttempt(uint player)

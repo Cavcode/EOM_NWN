@@ -129,7 +129,7 @@ namespace EOM.Game.Server.Service
             var dbBeast = DB.Get<Beast>(beastId);
             var maxBeastLevel = Perk.GetPerkLevel(player, PerkType.Tame) * 10;
             var bonusPercentage = 0f;
-            var social = GetAbilityScore(beast, AbilityType.Social);
+            var social = GetAbilityScore(beast, AbilityType.Intellect);
 
             if (!ignoreBonuses)
             {
@@ -149,12 +149,12 @@ namespace EOM.Game.Server.Service
                     if (GetIsObjectValid(source))
                     {
                         var effectiveLevel = Perk.GetPerkLevel(source, PerkType.Dedication);
-                        var sourceSocial = GetAbilityScore(source, AbilityType.Social);
+                        var sourceSocial = GetAbilityScore(source, AbilityType.Intellect);
                         bonusPercentage += (10 + effectiveLevel * sourceSocial) * 0.01f;
                     }
                 }
 
-                // Social bonus
+                // Intellect bonus
                 if (social > 0)
                     bonusPercentage += social * 0.025f;
 
@@ -316,7 +316,7 @@ namespace EOM.Game.Server.Service
             CreaturePlugin.SetRawAbilityScore(beast, AbilityType.Vitality, level.Stats[AbilityType.Vitality]);
             CreaturePlugin.SetRawAbilityScore(beast, AbilityType.Willpower, level.Stats[AbilityType.Willpower]);
             CreaturePlugin.SetRawAbilityScore(beast, AbilityType.Agility, level.Stats[AbilityType.Agility]);
-            CreaturePlugin.SetRawAbilityScore(beast, AbilityType.Social, level.Stats[AbilityType.Social]);
+            CreaturePlugin.SetRawAbilityScore(beast, AbilityType.Intellect, level.Stats[AbilityType.Intellect]);
 
             var attackBonus = (int)(level.MaxAttackBonus * (dbBeast.AttackPurity * 0.01f));
             var accuracyBonus = (int)(level.MaxAccuracyBonus * (dbBeast.AccuracyPurity * 0.01f));

@@ -4,7 +4,6 @@ using EOM.Game.Server.Core;
 using EOM.Game.Server.Core.NWNX;
 using EOM.Game.Server.Core.NWScript.Enum;
 using EOM.Game.Server.Core.NWScript.Enum.Item;
-using EOM.Game.Server.Feature.StatusEffectDefinition.StatusEffectData;
 using EOM.Game.Server.Service.AbilityService;
 using EOM.Game.Server.Service.CombatService;
 using EOM.Game.Server.Service.LogService;
@@ -59,14 +58,8 @@ namespace EOM.Game.Server.Service
         public static int GetMaxFP(uint creature, Player dbPlayer = null)
         {
             var modifier = GetAbilityModifier(AbilityType.Willpower, creature);
-            var foodEffect = StatusEffect.GetEffectData<FoodEffectData>(creature, StatusEffectType.Food);
-            var foodBonus = 0;
             int baseFP;
 
-            if (foodEffect != null)
-            {
-                foodBonus = foodEffect.FP;
-            }
 
             // Players
             if (GetIsPC(creature) && !GetIsDM(creature))
@@ -86,12 +79,12 @@ namespace EOM.Game.Server.Service
                 baseFP = npcStats.FP;
             }
 
-            return GetMaxFP(baseFP, modifier, foodBonus);
+            return GetMaxFP(baseFP, modifier);
         }
 
-        public static int GetMaxFP(int baseFP, int modifier, int bonus)
+        public static int GetMaxFP(int baseFP, int modifier)
         {
-            return baseFP + modifier * 10 + bonus;
+            return baseFP + modifier * 10;
         }
 
         /// <summary>
@@ -130,14 +123,8 @@ namespace EOM.Game.Server.Service
         public static int GetMaxStamina(uint creature, Player dbPlayer = null)
         {
             var modifier = GetAbilityModifier(AbilityType.Agility, creature);
-            var foodEffect = StatusEffect.GetEffectData<FoodEffectData>(creature, StatusEffectType.Food);
-            var foodBonus = 0;
             int baseStamina;
 
-            if (foodEffect != null)
-            {
-                foodBonus = foodEffect.STM;
-            }
 
             // Players
             if (GetIsPC(creature) && !GetIsDM(creature))
@@ -158,12 +145,12 @@ namespace EOM.Game.Server.Service
                 baseStamina = npcStats.Stamina;
             }
 
-            return GetMaxStamina(baseStamina, modifier, foodBonus);
+            return GetMaxStamina(baseStamina, modifier);
         }
 
-        public static int GetMaxStamina(int baseFP, int modifier, int bonus)
+        public static int GetMaxStamina(int baseFP, int modifier)
         {
-            return baseFP + modifier * 5 + bonus;
+            return baseFP + modifier * 5;
         }
 
         /// <summary>
@@ -678,7 +665,6 @@ namespace EOM.Game.Server.Service
         /// <returns>A modified defense value.</returns>
         private static int CalculateEffectDefense(uint creature, int defense, CombatDamageType type)
         {
-            var foodEffect = StatusEffect.GetEffectData<FoodEffectData>(creature, StatusEffectType.Food);
 
             if (type == CombatDamageType.Physical)
             {
@@ -720,7 +706,7 @@ namespace EOM.Game.Server.Service
                     var source = StatusEffect.GetEffectData<uint>(creature, StatusEffectType.FrenziedShout);
                     if (GetIsObjectValid(source))
                     {
-                        var sourceSOC = GetAbilityScore(source, AbilityType.Social);
+                        var sourceSOC = GetAbilityScore(source, AbilityType.Intellect);
                         var perkLevel = Perk.GetPerkLevel(source, PerkType.FrenziedShout);
                         switch (perkLevel)
                         {
@@ -736,37 +722,8 @@ namespace EOM.Game.Server.Service
                         }
                     }
                 }
-
-                // Food Effects
-                if(foodEffect != null)
-                    defense += foodEffect.DefensePhysical;
             }
-            else if (type == CombatDamageType.Force)
-            {
-                if (foodEffect != null)
-                    defense += foodEffect.DefenseForce;
-            }
-            else if (type == CombatDamageType.Poison)
-            {
-                if (foodEffect != null)
-                    defense += foodEffect.DefensePoison;
-            }
-            else if (type == CombatDamageType.Fire)
-            {
-                if (foodEffect != null)
-                    defense += foodEffect.DefenseFire;
-            }
-            else if (type == CombatDamageType.Ice)
-            {
-                if (foodEffect != null)
-                    defense += foodEffect.DefenseIce;
-            }
-            else if (type == CombatDamageType.Electrical)
-            {
-                if (foodEffect != null)
-                    defense += foodEffect.DefenseElectrical;
-            }
-
+            
             return defense;
         }
 
@@ -785,7 +742,7 @@ namespace EOM.Game.Server.Service
                 if (GetIsObjectValid(source))
                 {
                     var perkLevel = Perk.GetPerkLevel(source, PerkType.SoldiersStrike);
-                    var sourceSOC = GetAbilityScore(source, AbilityType.Social);
+                    var sourceSOC = GetAbilityScore(source, AbilityType.Intellect);
 
                     switch (perkLevel)
                     {
@@ -800,13 +757,6 @@ namespace EOM.Game.Server.Service
                             break;
                     }
                 }
-            }
-
-            // Food Effects
-            var foodEffect = StatusEffect.GetEffectData<FoodEffectData>(creature, StatusEffectType.Food);
-            if (foodEffect != null)
-            {
-                attack += foodEffect.Attack;
             }
 
             // Bolster Attack
@@ -1035,7 +985,7 @@ namespace EOM.Game.Server.Service
                 case AbilityType.Agility:
                     stat = creature.m_pStats.GetINTStat();
                     break;
-                case AbilityType.Social:
+                case AbilityType.Intellect:
                     stat = creature.m_pStats.GetCHAStat();
                     break;
                 default:
@@ -1260,12 +1210,6 @@ namespace EOM.Game.Server.Service
                 }
             }
 
-            var foodEffect = StatusEffect.GetEffectData<FoodEffectData>(creature, StatusEffectType.Food);
-            if (foodEffect != null)
-            {
-                accuracy += foodEffect.Accuracy;
-            }
-
             accuracy += GetSoldierPrecisionAccuracyBonus(creature);
 
             Log.Write(LogGroup.Attack, $"Effect Accuracy: {accuracy}");
@@ -1286,13 +1230,6 @@ namespace EOM.Game.Server.Service
                     accuracy -= 5 * effect.GetInteger(0);
                 }
             }
-
-            var foodEffect = StatusEffect.GetEffectData<FoodEffectData>(creature.m_idSelf, StatusEffectType.Food);
-            if (foodEffect != null)
-            {
-                accuracy += foodEffect.Accuracy;
-            }
-
             accuracy += GetSoldierPrecisionAccuracyBonus(creature.m_idSelf);
 
             Log.Write(LogGroup.Attack, $"Native Effect Accuracy: {accuracy}");
@@ -1303,7 +1240,6 @@ namespace EOM.Game.Server.Service
         private static int CalculateEffectEvasion(uint creature)
         {
             var evasionBonus = 0;
-            var foodEffect = StatusEffect.GetEffectData<FoodEffectData>(creature, StatusEffectType.Food);
 
             // Soldiers Speed
             if (StatusEffect.HasStatusEffect(creature, StatusEffectType.SoldiersSpeed))
@@ -1311,7 +1247,7 @@ namespace EOM.Game.Server.Service
                 var source = StatusEffect.GetEffectData<uint>(creature, StatusEffectType.SoldiersSpeed);
                 if (GetIsObjectValid(source))
                 {
-                    var sourceSOC = GetAbilityScore(creature, AbilityType.Social);
+                    var sourceSOC = GetAbilityScore(creature, AbilityType.Intellect);
                     var perkLevel = Perk.GetPerkLevel(creature, PerkType.SoldiersSpeed);
 
                     switch (perkLevel)
@@ -1328,12 +1264,6 @@ namespace EOM.Game.Server.Service
                     }
 
                 }
-            }
-
-            // Food Effects
-            if (foodEffect != null)
-            {
-                evasionBonus += foodEffect.Evasion;
             }
 
             // Evasive Maneuver
@@ -1363,7 +1293,7 @@ namespace EOM.Game.Server.Service
 
                 if (GetIsObjectValid(source))
                 {
-                    var sourceSOC = GetAbilityScore(source, AbilityType.Social);
+                    var sourceSOC = GetAbilityScore(source, AbilityType.Intellect);
                     var perkLevel = Perk.GetPerkLevel(source, PerkType.SoldiersPrecision);
 
                     switch (perkLevel)
@@ -1768,7 +1698,7 @@ namespace EOM.Game.Server.Service
                     return "AGI";
                 case AbilityType.Willpower:
                     return "WIL";
-                case AbilityType.Social:
+                case AbilityType.Intellect:
                     return "SOC";
             }
         }
@@ -1795,11 +1725,6 @@ namespace EOM.Game.Server.Service
             var control = dbPlayer.Control.ContainsKey(craftingSkillType)
                 ? dbPlayer.Control[craftingSkillType]
                 : 0;
-            var foodEffect = StatusEffect.GetEffectData<FoodEffectData>(player, StatusEffectType.Food);
-            if (foodEffect != null)
-            {
-                control += foodEffect.Control[craftingSkillType];
-            }
 
             return control;
         }
@@ -1825,12 +1750,7 @@ namespace EOM.Game.Server.Service
             var control = dbPlayer.Craftsmanship.ContainsKey(craftingSkillType)
                 ? dbPlayer.Craftsmanship[craftingSkillType]
                 : 0;
-            var foodEffect = StatusEffect.GetEffectData<FoodEffectData>(player, StatusEffectType.Food);
-            if (foodEffect != null)
-            {
-                control += foodEffect.Craftsmanship[craftingSkillType];
-            }
-
+   
             return control;
         }
 

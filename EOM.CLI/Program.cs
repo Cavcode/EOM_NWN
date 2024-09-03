@@ -93,66 +93,10 @@ namespace EOM.CLI
 
             app.OnExecute(() =>
             {
-                if (placeableOption.HasValue())
-                {
-                    _placeableBuilder.Process();
-                }
-
-                if (enhancementOption.HasValue())
-                {
-                    _enhancementItemBuilder.Process();
-                }
-
-                if (droidItemOption.HasValue())
-                {
-                    _droidItemBuilder.Process();
-                }
-
-                if (hakBuilderOption.HasValue())
-                {
-                    _hakBuilder.Process();
-                }
-
-                if (languageBuilderOption.HasValue())
-                {
-                    _languageBuilder.Process();
-                }
-
-                if (modulePackerOption.HasValue())
-                {
-                    _modulePacker.PackModule(modulePackerOption.Value());
-                }
-
-                if (moduleUnpackOption.HasValue())
-                {
-                    _modulePacker.UnpackModule(moduleUnpackOption.Value());
-                }
-
-                if (recipeOption.HasValue())
-                {
-                    _recipeCodeBuilder.Process();
-                }
-
-                if (structureOption.HasValue())
-                {
-                    _structureItemCreator.Process();
-                }
-
-                if (adHocToolOption.HasValue())
-                {
-                    _adHocTool.Process();
-                }
-
                 if (deployOption.HasValue())
                 {
                     _deployBuild.Process();
                 }
-
-                if (beastBuilderOption.HasValue())
-                {
-                    _beastBuilder.Process();
-                }
-
                 return 0;
             });
 

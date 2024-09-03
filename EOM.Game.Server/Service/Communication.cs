@@ -381,42 +381,14 @@ namespace EOM.Game.Server.Service
                     sender = HoloCom.GetHoloGramOwner(sender);
                 }
 
-                var language = Language.GetActiveLanguage(sender);
-
-                // Wookiees cannot speak any other language (but they can understand them).
-                // Swap their language if they attempt to speak in any other language.
-                var race = GetRacialType(sender);
-                if (race == RacialType.Wookiee && language != JobType.Shyriiwook)
-                {
-                    Language.SetActiveLanguage(sender, JobType.Shyriiwook);
-                    language = JobType.Shyriiwook;
-                }
-
-                var (r, g, b) = Language.GetColor(language);
-
-                if (dbReceiver != null &&
-                    dbReceiver.Settings.LanguageChatColors != null &&
-                    dbReceiver.Settings.LanguageChatColors.ContainsKey(language))
-                {
-                    r = dbReceiver.Settings.LanguageChatColors[language].Red;
-                    g = dbReceiver.Settings.LanguageChatColors[language].Green;
-                    b = dbReceiver.Settings.LanguageChatColors[language].Blue;
-                }
-
-                if (language != JobType.Basic)
-                {
-                    var languageName = Language.GetName(language);
-                    finalMessage.Append(ColorToken.Custom($"[{languageName}] ", r, g, b));
-                }
+                var r = dbReceiver.Settings.OOCChatColor.Red;
+                var g = dbReceiver.Settings.OOCChatColor.Green;
+                var b = dbReceiver.Settings.OOCChatColor.Blue;
 
                 foreach (var component in chatComponents)
                 {
                     var text = component.Text;
 
-                    if (component.IsTranslatable && language != JobType.Basic)
-                    {
-                        text = Language.TranslateSnippetForListener(sender, receiver, language, component.Text);
-                    }
 
                     if (component.IsOOC)
                     {

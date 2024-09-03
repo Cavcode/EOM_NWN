@@ -577,14 +577,8 @@ namespace EOM.Game.Server.Feature
                     case 1:
                         skillType = SkillType.Smithery;
                         break;
-                    case 2:
-                        skillType = SkillType.Engineering;
-                        break;
                     case 3:
                         skillType = SkillType.Fabrication;
-                        break;
-                    case 4:
-                        skillType = SkillType.Agriculture;
                         break;
                 }
 
@@ -633,14 +627,8 @@ namespace EOM.Game.Server.Feature
                     case 1:
                         skillType = SkillType.Smithery;
                         break;
-                    case 2:
-                        skillType = SkillType.Engineering;
-                        break;
                     case 3:
                         skillType = SkillType.Fabrication;
-                        break;
-                    case 4:
-                        skillType = SkillType.Agriculture;
                         break;
                 }
                 if (isAdding)
@@ -682,14 +670,8 @@ namespace EOM.Game.Server.Feature
                     case 1:
                         skillType = SkillType.Smithery;
                         break;
-                    case 2:
-                        skillType = SkillType.Engineering;
-                        break;
                     case 3:
                         skillType = SkillType.Fabrication;
-                        break;
-                    case 4:
-                        skillType = SkillType.Agriculture;
                         break;
                 }
                 if (isAdding)

@@ -7,7 +7,6 @@ using EOM.Game.Server.Core.NWScript.Enum;
 using EOM.Game.Server.Core.NWScript.Enum.Item;
 using EOM.Game.Server.Core.NWScript.Enum.VisualEffect;
 using EOM.Game.Server.Enumeration;
-using EOM.Game.Server.Feature.StatusEffectDefinition.StatusEffectData;
 using EOM.Game.Server.Service;
 using EOM.Game.Server.Service.AbilityService;
 using EOM.Game.Server.Service.ActivityService;

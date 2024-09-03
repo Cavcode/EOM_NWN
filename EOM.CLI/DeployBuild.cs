@@ -5,11 +5,11 @@ namespace EOM.CLI
 {
     internal class DeployBuild
     {
-        private const string DebugServerPath = "../debugserver/";
-        private const string DotnetPath = DebugServerPath + "dotnet";
-        private const string HakPath = DebugServerPath + "hak";
-        private const string ModulesPath = DebugServerPath + "modules";
-        private const string TlkPath = DebugServerPath + "tlk";
+        private const string DebugServerPath = "I:/Github/EOM_NWN/EOM.Game.Server";
+        private string DotnetPath = DebugServerPath + "dotnet";
+        private string HakPath = DebugServerPath + "hak";
+        private string ModulesPath = DebugServerPath + "modules";
+        private string TlkPath = DebugServerPath + "tlk";
 
         private readonly HakBuilder _hakBuilder = new();
 
@@ -17,8 +17,6 @@ namespace EOM.CLI
         {
             CreateDebugServerDirectory();
             CopyBinaries();
-            BuildHaks();
-            BuildModule();
         }
 
         private void CreateDebugServerDirectory()
@@ -29,7 +27,7 @@ namespace EOM.CLI
             Directory.CreateDirectory(ModulesPath);
             Directory.CreateDirectory(TlkPath);
 
-            var source = new DirectoryInfo("../EOM.Game.Server/Docker");
+            var source = new DirectoryInfo("I:/Github/EOM_NWN/EOM.Game.Server/Docker");
             var target = new DirectoryInfo(DebugServerPath);
 
             CopyAll(source, target, "EOM.env");
@@ -37,7 +35,7 @@ namespace EOM.CLI
 
         private void CopyBinaries()
         {
-            var binPath = "../EOM.Game.Server/bin/Debug/net7.0/";
+            var binPath = "I:/Github/EOM_NWN/EOM.Game.Server/bin/Debug/net7.0/";
 
             var source = new DirectoryInfo(binPath);
             var target = new DirectoryInfo(DotnetPath);
@@ -45,16 +43,6 @@ namespace EOM.CLI
             CopyAll(source, target, string.Empty);
         }
 
-        private void BuildHaks()
-        {
-            _hakBuilder.Process();
-        }
-
-        private void BuildModule()
-        {
-            var modulePath = "../Module/eom.mod";
-            File.Copy(modulePath, ModulesPath + "/eom", true);
-        }
 
         private static void CopyAll(DirectoryInfo source, DirectoryInfo target, string excludeFile)
         {

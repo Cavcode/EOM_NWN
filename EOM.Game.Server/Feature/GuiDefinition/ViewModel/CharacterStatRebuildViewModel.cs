@@ -309,21 +309,21 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 CreaturePlugin.SetRawAbilityScore(Player, AbilityType.Vitality, 10 + _vitality);
                 CreaturePlugin.SetRawAbilityScore(Player, AbilityType.Willpower, 10 + _willpower);
                 CreaturePlugin.SetRawAbilityScore(Player, AbilityType.Agility, 10 + _agility);
-                CreaturePlugin.SetRawAbilityScore(Player, AbilityType.Social, 10 + _social);
+                CreaturePlugin.SetRawAbilityScore(Player, AbilityType.Intellect, 10 + _social);
 
                 dbPlayer.BaseStats[AbilityType.Might] = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Might);
                 dbPlayer.BaseStats[AbilityType.Perception] = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Perception);
                 dbPlayer.BaseStats[AbilityType.Vitality] = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Vitality);
                 dbPlayer.BaseStats[AbilityType.Willpower] = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Willpower);
                 dbPlayer.BaseStats[AbilityType.Agility] = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Agility);
-                dbPlayer.BaseStats[AbilityType.Social] = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Social);
+                dbPlayer.BaseStats[AbilityType.Intellect] = CreaturePlugin.GetRawAbilityScore(Player, AbilityType.Intellect);
 
                 dbPlayer.UpgradedStats[AbilityType.Might] = 0;
                 dbPlayer.UpgradedStats[AbilityType.Perception] = 0;
                 dbPlayer.UpgradedStats[AbilityType.Vitality] = 0;
                 dbPlayer.UpgradedStats[AbilityType.Willpower] = 0;
                 dbPlayer.UpgradedStats[AbilityType.Agility] = 0;
-                dbPlayer.UpgradedStats[AbilityType.Social] = 0;
+                dbPlayer.UpgradedStats[AbilityType.Intellect] = 0;
 
                 dbPlayer.UnallocatedAP = dbPlayer.TotalAPAcquired;
                 dbPlayer.RacialStat = AbilityType.Invalid;

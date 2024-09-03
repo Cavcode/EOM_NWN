@@ -490,7 +490,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             var hullDiff = ship.Status.MaxHull - ship.Status.Hull;
             var price = shieldDiff * 50 + hullDiff * 100;
             var starportBonus = Property.GetEffectiveUpgradeLevel(dbPlayer.CitizenPropertyId, PropertyUpgradeType.StarportLevel) * 0.05f;
-            var socialBonus = (GetAbilityScore(Player, AbilityType.Social) - 10) * 0.02f;
+            var socialBonus = (GetAbilityScore(Player, AbilityType.Intellect) - 10) * 0.02f;
             if (socialBonus > 0.20f)
                 socialBonus = 0.20f;
             else if (socialBonus < 0f)

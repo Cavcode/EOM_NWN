@@ -457,42 +457,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                     _venerationPerk = PerkType.VenerationFabrication;
                     _wasteNotPerk = PerkType.WasteNotFabrication;
                     break;
-                case SkillType.Agriculture:
-                    _primaryAbility = AbilityType.Social;
-                    _secondaryAbility = AbilityType.Willpower;
-
-                    _rapidSynthesisPerk = PerkType.RapidSynthesisCooking;
-                    _carefulSynthesisPerk = PerkType.CarefulSynthesisCooking;
-
-                    _basicTouchPerk = PerkType.BasicTouchCooking;
-                    _standardTouchPerk = PerkType.StandardTouchCooking;
-                    _preciseTouchPerk = PerkType.PreciseTouchCooking;
-
-                    _mastersMendPerk = PerkType.MastersMendCooking;
-                    _steadyHandPerk = PerkType.SteadyHandCooking;
-                    _muscleMemoryPerk = PerkType.MuscleMemoryCooking;
-
-                    _venerationPerk = PerkType.VenerationCooking;
-                    _wasteNotPerk = PerkType.WasteNotCooking;
-                    break;
-                case SkillType.Engineering:
-                    _primaryAbility = AbilityType.Vitality;
-                    _secondaryAbility = AbilityType.Agility;
-
-                    _rapidSynthesisPerk = PerkType.RapidSynthesisEngineering;
-                    _carefulSynthesisPerk = PerkType.CarefulSynthesisEngineering;
-
-                    _basicTouchPerk = PerkType.BasicTouchEngineering;
-                    _standardTouchPerk = PerkType.StandardTouchEngineering;
-                    _preciseTouchPerk = PerkType.PreciseTouchEngineering;
-
-                    _mastersMendPerk = PerkType.MastersMendEngineering;
-                    _steadyHandPerk = PerkType.SteadyHandEngineering;
-                    _muscleMemoryPerk = PerkType.MuscleMemoryEngineering;
-
-                    _venerationPerk = PerkType.VenerationEngineering;
-                    _wasteNotPerk = PerkType.WasteNotEngineering;
-                    break;
             }
         }
 

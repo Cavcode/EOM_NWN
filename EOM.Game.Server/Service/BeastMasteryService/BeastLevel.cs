@@ -27,7 +27,7 @@ namespace EOM.Game.Server.Service.BeastMasteryService
                 {AbilityType.Vitality, 0},
                 {AbilityType.Willpower, 0},
                 {AbilityType.Agility, 0},
-                {AbilityType.Social, 0}
+                {AbilityType.Intellect, 0}
             };
 
             MaxDefenseBonuses = new Dictionary<CombatDamageType, int>

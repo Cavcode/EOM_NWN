@@ -29,7 +29,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Feature\AbilityDefinition\Force\" />
     <Folder Include="Feature\BeastDefinition\" />
+    <Folder Include="Feature\PerkDefinition\Jobs\" />
+    <Folder Include="Feature\StatusEffectDefinition\StatusEffectData\" />
   </ItemGroup>
 
   <Target Name="NWN" AfterTargets="Build">

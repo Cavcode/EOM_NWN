@@ -1,7 +1,6 @@
 ﻿using EOM.Game.Server.Core;
 using EOM.Game.Server.Core.NWScript.Enum;
 using EOM.Game.Server.Entity;
-using EOM.Game.Server.Feature.StatusEffectDefinition.StatusEffectData;
 using EOM.Game.Server.Service;
 using EOM.Game.Server.Service.StatusEffectService;
 
@@ -30,14 +29,6 @@ namespace EOM.Game.Server.Feature
                 var hpRegen = dbPlayer.HPRegen + vitalityBonus * 4;
                 var fpRegen = 1 + dbPlayer.FPRegen + vitalityBonus / 2;
                 var stmRegen = 1 + dbPlayer.STMRegen + vitalityBonus / 2;
-                var foodEffect = StatusEffect.GetEffectData<FoodEffectData>(player, StatusEffectType.Food);
-
-                if (foodEffect != null)
-                {
-                    hpRegen += foodEffect.HPRegen;
-                    fpRegen += foodEffect.FPRegen;
-                    stmRegen += foodEffect.STMRegen;
-                }
 
                 if (hpRegen > 0 && GetCurrentHitPoints(player) < GetMaxHitPoints(player))
                 {
