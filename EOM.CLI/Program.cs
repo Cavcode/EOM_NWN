@@ -14,7 +14,6 @@ namespace EOM.CLI
         private static readonly AdHocTool _adHocTool = new();
         private static readonly DroidItemBuilder _droidItemBuilder = new();
         private static readonly DeployBuild _deployBuild = new();
-        private static readonly BeastCodeBuilder _beastBuilder = new();
 
         static void Main(string[] args)
         {

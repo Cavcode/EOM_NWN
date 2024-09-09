@@ -6,7 +6,6 @@ using EOM.Game.Server.Core.NWScript.Enum.Item;
 using EOM.Game.Server.Core.NWScript.Enum.Item.Property;
 using EOM.Game.Server.Entity;
 using EOM.Game.Server.Service;
-using EOM.Game.Server.Service.BeastMasteryService;
 using EOM.Game.Server.Service.CurrencyService;
 using EOM.Game.Server.Service.ItemService;
 using EOM.Game.Server.Service.SkillService;

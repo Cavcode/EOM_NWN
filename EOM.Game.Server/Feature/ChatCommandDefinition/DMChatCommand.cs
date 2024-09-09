@@ -16,7 +16,6 @@ using EOM.Game.Server.Core.NWNX;
 using System.Threading.Tasks;
 using Discord;
 using Discord.Webhook;
-using EOM.Game.Server.Service.BeastMasteryService;
 
 namespace EOM.Game.Server.Feature.ChatCommandDefinition
 {
@@ -580,17 +579,7 @@ namespace EOM.Game.Server.Feature.ChatCommandDefinition
                         SendMessageToPC(target, $"A DM has awarded you with {amount} roleplay XP.");
                         Gui.PublishRefreshEvent(target, new RPXPRefreshEvent());
                     }
-                    else if (BeastMastery.IsPlayerBeast(target))
-                    {
-                        var player = GetMaster(target);
-                        BeastMastery.GiveBeastXP(target, amount, true);
 
-                        SendMessageToPC(player, $"A DM has awarded your beast with {amount} XP.");
-                    }
-                    else
-                    {
-                        SendMessageToPC(user, "Only players or beasts may be targeted with this command.");
-                    }
 
                 });
         }

@@ -7,7 +7,6 @@ using EOM.Game.Server.Feature.GuiDefinition.Payload;
 using EOM.Game.Server.Feature.GuiDefinition.RefreshEvent;
 using EOM.Game.Server.Service;
 using EOM.Game.Server.Service.AbilityService;
-using EOM.Game.Server.Service.BeastMasteryService;
 using EOM.Game.Server.Service.CombatService;
 using EOM.Game.Server.Service.GuiService;
 using EOM.Game.Server.Service.SkillService;
@@ -22,8 +21,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
         IGuiRefreshable<EquipItemRefreshEvent>,
         IGuiRefreshable<UnequipItemRefreshEvent>,
         IGuiRefreshable<StatusEffectReceivedRefreshEvent>,
-        IGuiRefreshable<StatusEffectRemovedRefreshEvent>,
-        IGuiRefreshable<BeastGainXPRefreshEvent>
+        IGuiRefreshable<StatusEffectRemovedRefreshEvent>
     {
         private const int MaxUpgrades = 10;
         private uint _target;
@@ -545,16 +543,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             AbilityType damageStat;
             AbilityType accuracyStatOverride;
 
-            if (BeastMastery.IsPlayerBeast(_target))
-            {
-                var beastType = BeastMastery.GetBeastType(_target);
-                var beastDetails = BeastMastery.GetBeastDetail(beastType);
-                damageStat = beastDetails.DamageStat;
-                accuracyStatOverride = beastDetails.AccuracyStat;
-                mainHand = GetItemInSlot(InventorySlot.CreatureArmor, _target);
-            }
-            else
-            {
                 damageStat = Item.GetWeaponDamageAbilityType(mainHandType);
                 accuracyStatOverride = AbilityType.Invalid;
 
@@ -580,9 +568,8 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                     damageStat = AbilityType.Perception;
                     accuracyStatOverride = AbilityType.Agility;
                 }
-            }
-            
-            var mainHandSkill = Skill.GetSkillTypeByBaseItem(mainHandType);
+
+                var mainHandSkill = Skill.GetSkillTypeByBaseItem(mainHandType);
             Attack = Stat.GetAttack(_target, damageStat, mainHandSkill);
             DefensePhysical = Stat.GetDefense(_target, CombatDamageType.Physical, AbilityType.Vitality);
             DefenseForce = Stat.GetDefense(_target, CombatDamageType.Force, AbilityType.Willpower);
@@ -593,32 +580,32 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 var dbPlayer = DB.Get<Player>(playerId);
 
                 var fireDefense = (dbPlayer.Defenses[CombatDamageType.Fire]).ToString();
-                var poisonDefense = (dbPlayer.Defenses[CombatDamageType.Poison]).ToString();
+                var waterDefense = (dbPlayer.Defenses[CombatDamageType.Water]).ToString();
                 var electricalDefense = (dbPlayer.Defenses[CombatDamageType.Electrical]).ToString();
                 var iceDefense = (dbPlayer.Defenses[CombatDamageType.Ice]).ToString();
 
-                DefenseElemental = $"{fireDefense}/{poisonDefense}/{electricalDefense}/{iceDefense}";
+                DefenseElemental = $"{fireDefense}/{waterDefense}/{electricalDefense}/{iceDefense}";
             }
             else
             {
                 var npcStats = Stat.GetNPCStats(_target);
                 var fireDefense = npcStats.Defenses.ContainsKey(CombatDamageType.Fire) ? npcStats.Defenses[CombatDamageType.Fire] : 0;
-                var poisonDefense = npcStats.Defenses.ContainsKey(CombatDamageType.Poison) ? npcStats.Defenses[CombatDamageType.Poison] : 0;
+                var waterDefense = npcStats.Defenses.ContainsKey(CombatDamageType.Water) ? npcStats.Defenses[CombatDamageType.Water] : 0;
                 var electricalDefense = npcStats.Defenses.ContainsKey(CombatDamageType.Electrical) ? npcStats.Defenses[CombatDamageType.Electrical] : 0;
                 var iceDefense = npcStats.Defenses.ContainsKey(CombatDamageType.Ice) ? npcStats.Defenses[CombatDamageType.Ice] : 0;
 
-                DefenseElemental = $"{fireDefense}/{poisonDefense}/{electricalDefense}/{iceDefense}";
+                DefenseElemental = $"{fireDefense}/{waterDefense}/{electricalDefense}/{iceDefense}";
             }
 
             Accuracy = Stat.GetAccuracy(_target, mainHand, accuracyStatOverride, SkillType.Invalid);
             Evasion = Stat.GetEvasion(_target, SkillType.Invalid);
 
-            var smithery = Stat.CalculateControl(_target, SkillType.Smithery);
-            var fabrication = Stat.CalculateControl(_target, SkillType.Fabrication);
+            ///var smithery = Stat.CalculateControl(_target, SkillType.Smithery);
+            //var fabrication = Stat.CalculateControl(_target, SkillType.Fabrication);
 
 
-            smithery = Stat.CalculateCraftsmanship(_target, SkillType.Smithery);
-            fabrication = Stat.CalculateCraftsmanship(_target, SkillType.Fabrication);
+            //smithery = Stat.CalculateCraftsmanship(_target, SkillType.Smithery);
+            //fabrication = Stat.CalculateCraftsmanship(_target, SkillType.Fabrication);
         }
 
         private void RefreshAttributes()
@@ -630,15 +617,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
 
                 SP = $"{dbPlayer.TotalSPAcquired} / {Skill.SkillCap} ({dbPlayer.UnallocatedSP})";
                 APOrLevel = $"{dbPlayer.TotalAPAcquired} / {Skill.APCap} ({dbPlayer.UnallocatedAP})";
-            }
-            else if (BeastMastery.IsPlayerBeast(_target))
-            {
-                var beastId = BeastMastery.GetBeastId(_target);
-                var dbBeast = DB.Get<Beast>(beastId);
-
-                SP = $"{dbBeast.Level} / {BeastMastery.MaxLevel} ({dbBeast.UnallocatedSP})";
-                APOrLevel = $"{dbBeast.Level} / {BeastMastery.MaxLevel}";
-                APOrLevelTooltip = $"XP: {dbBeast.XP} / {BeastMastery.GetRequiredXP(dbBeast.Level)}";
             }
         }
 
@@ -673,7 +651,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
         {
             _target = GetIsObjectValid(initialPayload.Target) ? initialPayload.Target : Player;
             IsPlayerMode = initialPayload.IsPlayerMode;
-            ShowSP = IsPlayerMode || BeastMastery.IsPlayerBeast(_target);
+            ShowSP = IsPlayerMode;
             ShowAPOrLevel = ShowSP;
 
             LoadData();
@@ -698,18 +676,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             RefreshStats();
         }
 
-        public void Refresh(BeastGainXPRefreshEvent payload)
-        {
-            if (!BeastMastery.IsPlayerBeast(_target))
-                return;
 
-            var beastId = BeastMastery.GetBeastId(_target);
-            var dbBeast = DB.Get<Beast>(beastId);
-
-            SP = $"{dbBeast.Level} / {BeastMastery.MaxLevel} ({dbBeast.UnallocatedSP})";
-            APOrLevel = $"{dbBeast.Level} / {BeastMastery.MaxLevel}";
-            APOrLevelTooltip = $"XP: {dbBeast.XP} / {BeastMastery.GetRequiredXP(dbBeast.Level)}";
-        }
 
         public void Refresh(EquipItemRefreshEvent payload)
         {
