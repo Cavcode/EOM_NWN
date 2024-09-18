@@ -352,7 +352,7 @@ namespace EOM.Game.Server.Service
                 case 3: // Defense - Fire
                     return ItemPropertyCustom(ItemPropertyType.Defense, (int)CombatDamageType.Fire, amount);
                 case 4: // Defense - Poison
-                    return ItemPropertyCustom(ItemPropertyType.Defense, (int)CombatDamageType.Poison, amount);
+                    return ItemPropertyCustom(ItemPropertyType.Defense, (int)CombatDamageType.Wind, amount);
                 case 5: // Defense - Electrical
                     return ItemPropertyCustom(ItemPropertyType.Defense, (int)CombatDamageType.Electrical, amount);
                 case 6: // Defense - Ice
@@ -385,7 +385,7 @@ namespace EOM.Game.Server.Service
                 case 20: // DMG - Fire
                     return ItemPropertyCustom(ItemPropertyType.DMG, (int)CombatDamageType.Fire, amount);
                 case 21: // DMG - Poison
-                    return ItemPropertyCustom(ItemPropertyType.DMG, (int)CombatDamageType.Poison, amount);
+                    return ItemPropertyCustom(ItemPropertyType.DMG, (int)CombatDamageType.Wind, amount);
                 case 22: // DMG - Electrical
                     return ItemPropertyCustom(ItemPropertyType.DMG, (int)CombatDamageType.Electrical, amount);
                 case 23: // DMG - Ice

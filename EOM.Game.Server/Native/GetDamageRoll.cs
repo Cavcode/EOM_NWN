@@ -315,7 +315,7 @@ namespace EOM.Game.Server.Native
                 {
                     pAttackData.AddDamage((ushort)DamageType.Fire, damage);
                 }
-                else if (damageType == CombatDamageType.Poison && damage > 0)
+                else if (damageType == CombatDamageType.Water && damage > 0)
                 {
                     pAttackData.AddDamage((ushort)DamageType.Acid, damage);
                 }
@@ -326,6 +326,10 @@ namespace EOM.Game.Server.Native
                 else if (damageType == CombatDamageType.Ice && damage > 0)
                 {
                     pAttackData.AddDamage((ushort)DamageType.Cold, damage);
+                }
+                else if (damageType == CombatDamageType.Wind && damage > 0)
+                {
+                    pAttackData.AddDamage((ushort)DamageType.Exotic, damage);
                 }
             }
 

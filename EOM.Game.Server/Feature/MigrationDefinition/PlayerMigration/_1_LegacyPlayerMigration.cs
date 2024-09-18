@@ -77,12 +77,10 @@ namespace EOM.Game.Server.Feature.MigrationDefinition.PlayerMigration
         {
             dbPlayer.BAB = 1;
             Stat.AdjustPlayerMaxHP(dbPlayer, player, 70);
-            Stat.AdjustPlayerMaxFP(dbPlayer, 10, player);
-            Stat.AdjustPlayerMaxSTM(dbPlayer, 10, player);
+            Stat.AdjustPlayerMaxMP(dbPlayer, 10, player);
             CreaturePlugin.SetBaseAttackBonus(player, 1);
             dbPlayer.HP = GetCurrentHitPoints(player);
-            dbPlayer.FP = Stat.GetMaxFP(player, dbPlayer);
-            dbPlayer.Magick = Stat.GetMaxStamina(player, dbPlayer);
+            dbPlayer.Magick = Stat.GetMaxMagick(player, dbPlayer);
 
             dbPlayer.BaseStats[AbilityType.Might] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Might);
             dbPlayer.BaseStats[AbilityType.Perception] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Perception);

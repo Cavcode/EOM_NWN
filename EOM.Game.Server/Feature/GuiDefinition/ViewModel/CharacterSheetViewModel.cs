@@ -445,8 +445,8 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 FP = $"{currentFP} / {maxFP}";
             }
 
-            var currentSTM = Stat.GetCurrentStamina(_target);
-            var maxSTM = Stat.GetMaxStamina(_target);
+            var currentSTM = Stat.GetCurrentMagick(_target);
+            var maxSTM = Stat.GetMaxMagick(_target);
             if (currentSTM < 0)
                 currentSTM = 0;
             if (maxSTM < 0)

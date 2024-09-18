@@ -27,7 +27,6 @@ namespace EOM.Game.Server.Feature
                 var playerId = GetObjectUUID(player);
                 var dbPlayer = DB.Get<Player>(playerId);
                 var hpRegen = dbPlayer.HPRegen + vitalityBonus * 4;
-                var fpRegen = 1 + dbPlayer.FPRegen + vitalityBonus / 2;
                 var stmRegen = 1 + dbPlayer.MPRegen + vitalityBonus / 2;
 
                 if (hpRegen > 0 && GetCurrentHitPoints(player) < GetMaxHitPoints(player))
@@ -35,14 +34,10 @@ namespace EOM.Game.Server.Feature
                     ApplyEffectToObject(DurationType.Instant, EffectHeal(hpRegen), player);
                 }
 
-                if (fpRegen > 0)
-                {
-                    Stat.RestoreFP(player, fpRegen, dbPlayer);
-                }
 
                 if (stmRegen > 0)
                 {
-                    Stat.RestoreStamina(player, stmRegen, dbPlayer);
+                    Stat.RestoreMagick(player, stmRegen, dbPlayer);
                 }
 
                 tick = 0;

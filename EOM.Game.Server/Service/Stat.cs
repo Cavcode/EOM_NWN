@@ -23,7 +23,7 @@ namespace EOM.Game.Server.Service
     {
         public const int BaseHP = 70;
         public const int BaseFP = 10;
-        public const int BaseSTM = 10;
+        public const int BaseMP = 10;
 
         /// <summary>
         /// When a player enters the server, reapply HP and temporary stats.
@@ -46,81 +46,13 @@ namespace EOM.Game.Server.Service
         }
 
         /// <summary>
-        /// Retrieves the maximum FP on a creature.
-        /// For players:
-        /// Each Vitality modifier grants +2 to max FP.
-        /// For NPCs:
-        /// FP is read from their skin.
-        /// </summary>
-        /// <param name="creature">The creature object</param>
-        /// <param name="dbPlayer">The player entity. If this is not set, a call to the DB will be made. Leave null for NPCs.</param>
-        /// <returns>The max amount of FP</returns>
-        public static int GetMaxFP(uint creature, Player dbPlayer = null)
-        {
-            var modifier = GetAbilityModifier(AbilityType.Willpower, creature);
-            int baseFP;
-
-
-            // Players
-            if (GetIsPC(creature) && !GetIsDM(creature))
-            {
-                if (dbPlayer == null)
-                {
-                    var playerId = GetObjectUUID(creature);
-                    dbPlayer = DB.Get<Player>(playerId);
-                }
-                baseFP = dbPlayer.MaxFP;
-
-            }
-            // NPCs
-            else
-            {
-                var npcStats = GetNPCStats(creature);
-                baseFP = npcStats.FP;
-            }
-
-            return GetMaxFP(baseFP, modifier);
-        }
-
-        public static int GetMaxFP(int baseFP, int modifier)
-        {
-            return baseFP + modifier * 10;
-        }
-
-        /// <summary>
-        /// Retrieves the current FP on a creature.
-        /// </summary>
-        /// <param name="creature">The creature to retrieve FP from.</param>
-        /// <param name="dbPlayer">The player entity. If this is not set, a call to the DB will be made. Leave null for NPCs.</param>
-        /// <returns>The current amount of FP.</returns>
-        public static int GetCurrentFP(uint creature, Player dbPlayer = null)
-        {
-            // Players
-            if (GetIsPC(creature) && !GetIsDM(creature))
-            {
-                if (dbPlayer == null)
-                {
-                    var playerId = GetObjectUUID(creature);
-                    dbPlayer = DB.Get<Player>(playerId);
-                }
-
-                return dbPlayer.FP;
-            }
-            // NPCs
-            else
-            {
-                return GetLocalInt(creature, "FP");
-            }
-        }
-
-        /// <summary>
         /// Retrieves the maximum STM on a creature.
         /// CON modifier will be checked. Each modifier grants +2 to max STM.
         /// </summary>
         /// <param name="creature">The creature object</param>
         /// <param name="dbPlayer">The player entity. If this is not set, a call to the DB will be made. Leave null for NPCs.</param>
         /// <returns>The max amount of STM</returns>
-        public static int GetMaxStamina(uint creature, Player dbPlayer = null)
+        public static int GetMaxMagick(uint creature, Player dbPlayer = null)
         {
             var modifier = GetAbilityModifier(AbilityType.Agility, creature);
             int baseStamina;
@@ -145,10 +77,10 @@ namespace EOM.Game.Server.Service
                 baseStamina = npcStats.Stamina;
             }
 
-            return GetMaxStamina(baseStamina, modifier);
+            return GetMaxMagick(baseStamina, modifier);
         }
 
-        public static int GetMaxStamina(int baseFP, int modifier)
+        public static int GetMaxMagick(int baseFP, int modifier)
         {
             return baseFP + modifier * 5;
         }
@@ -159,7 +91,7 @@ namespace EOM.Game.Server.Service
         /// <param name="creature">The creature to retrieve STM from.</param>
         /// <param name="dbPlayer">The player entity. If this is not set, a call to the DB will be made. Leave null for NPCs.</param>
         /// <returns>The current amount of STM.</returns>
-        public static int GetCurrentStamina(uint creature, Player dbPlayer = null)
+        public static int GetCurrentMagick(uint creature, Player dbPlayer = null)
         {
             // Players
             if (GetIsPC(creature) && !GetIsDM(creature))
@@ -179,87 +111,7 @@ namespace EOM.Game.Server.Service
             }
         }
 
-        /// <summary>
-        /// Restores a creature's FP by a specified amount.
-        /// </summary>
-        /// <param name="creature">The creature to modify.</param>
-        /// <param name="amount">The amount of FP to restore.</param>
-        /// <param name="dbPlayer">The player entity to modify. If this is not set, a call to the DB will be made. Leave null for NPCs.</param>
-        public static void RestoreFP(uint creature, int amount, Player dbPlayer = null)
-        {
-            if (amount <= 0) return;
-
-            var maxFP = GetMaxFP(creature);
-            
-            // Players
-            if (GetIsPC(creature) && !GetIsDM(creature))
-            {
-                var playerId = GetObjectUUID(creature);
-                if (dbPlayer == null)
-                {
-                    dbPlayer = DB.Get<Player>(playerId);
-                }
-                
-                dbPlayer.FP += amount;
-
-                if (dbPlayer.FP > maxFP)
-                    dbPlayer.FP = maxFP;
-                
-                DB.Set(dbPlayer);
-            }
-            // NPCs
-            else
-            {
-                var fp = GetLocalInt(creature, "FP");
-                fp += amount;
-
-                if (fp > maxFP)
-                    fp = maxFP;
-
-                SetLocalInt(creature, "FP", fp);
-            }
-            
-            ExecuteScript("pc_fp_adjusted", creature);
-        }
-
-        /// <summary>
-        /// Reduces a creature's FP by a specified amount.
-        /// If creature would fall below 0 FP, they will be reduced to 0 instead.
-        /// </summary>
-        /// <param name="creature">The creature whose FP will be reduced.</param>
-        /// <param name="reduceBy">The amount of FP to reduce by.</param>
-        /// <param name="dbPlayer">The player entity to modify. If this is not set, a DB call will be made. Leave null for NPCs.</param>
-        public static void ReduceFP(uint creature, int reduceBy, Player dbPlayer = null)
-        {
-            if (reduceBy <= 0) return;
-
-            if (GetIsPC(creature) && !GetIsDM(creature))
-            {
-                var playerId = GetObjectUUID(creature);
-                if (dbPlayer == null)
-                {
-                    dbPlayer = DB.Get<Player>(playerId);
-                }
-
-                dbPlayer.FP -= reduceBy;
-
-                if (dbPlayer.FP < 0)
-                    dbPlayer.FP = 0;
-                
-                DB.Set(dbPlayer);
-            }
-            else
-            {
-                var fp = GetLocalInt(creature, "FP");
-                fp -= reduceBy;
-                if (fp < 0)
-                    fp = 0;
-                
-                SetLocalInt(creature, "FP", fp);
-            }
-
-            ExecuteScript("pc_fp_adjusted", creature);
-        }
+        
 
         /// <summary>
         /// Restores an entity's Magick by a specified amount.
@@ -267,11 +119,11 @@ namespace EOM.Game.Server.Service
         /// <param name="creature">The creature to modify.</param>
         /// <param name="amount">The amount of Magick to restore.</param>
         /// <param name="dbPlayer">The player entity to modify. If this is not set, a DB call will be made. Leave null for NPCs.</param>
-        public static void RestoreStamina(uint creature, int amount, Player dbPlayer = null)
+        public static void RestoreMagick(uint creature, int amount, Player dbPlayer = null)
         {
             if (amount <= 0) return;
 
-            var maxSTM = GetMaxStamina(creature);
+            var maxSTM = GetMaxMagick(creature);
 
             // Players
             if (GetIsPC(creature) && !GetIsDM(creature))
@@ -311,7 +163,7 @@ namespace EOM.Game.Server.Service
         /// <param name="creature">The creature to modify.</param>
         /// <param name="reduceBy">The amount of Magick to reduce by.</param>
         /// <param name="dbPlayer">The entity to modify</param>
-        public static void ReduceStamina(uint creature, int reduceBy, Player dbPlayer = null)
+        public static void ReduceMagick(uint creature, int reduceBy, Player dbPlayer = null)
         {
             if (reduceBy <= 0) return;
 
@@ -424,41 +276,20 @@ namespace EOM.Game.Server.Service
         }
 
         /// <summary>
-        /// Modifies a player's maximum FP by a certain amount.
-        /// This method will not persist the changes so be sure you call DB.Set after calling this.
-        /// </summary>
-        /// <param name="entity">The entity to modify</param>
-        /// <param name="adjustBy">The amount to adjust by</param>
-        public static void AdjustPlayerMaxFP(Player entity, int adjustBy, uint player)
-        {
-            // Note: It's possible for Max FP to drop to a negative number. This is expected to ensure calculations stay in sync.
-            // If there are any visual indicators (GUI elements for example) be sure to account for this scenario.
-            entity.MaxFP += adjustBy;
-
-            // Note - must call GetMaxFP here to account for ability-based increase to FP cap. 
-            if (entity.FP > GetMaxFP(player))
-                entity.FP = GetMaxFP(player);
-
-            // Current FP, however, should never drop below zero.
-            if (entity.FP < 0)
-                entity.FP = 0;
-        }
-
-        /// <summary>
         /// Modifies a player's maximum STM by a certain amount.
         /// This method will not persist the changes so be sure you call DB.Set after calling this.
         /// </summary>
         /// <param name="entity">The entity to modify</param>
         /// <param name="adjustBy">The amount to adjust by</param>
-        public static void AdjustPlayerMaxSTM(Player entity, int adjustBy, uint player)
+        public static void AdjustPlayerMaxMP(Player entity, int adjustBy, uint player)
         {
             // Note: It's possible for Max STM to drop to a negative number. This is expected to ensure calculations stay in sync.
             // If there are any visual indicators (GUI elements for example) be sure to account for this scenario.
             entity.MaxMagickPoints += adjustBy;
 
             // Note - must call GetMaxFP here to account for ability-based increase to STM cap. 
-            if (entity.Magick > GetMaxStamina(player))
-                entity.Magick = GetMaxStamina(player);
+            if (entity.Magick > GetMaxMagick(player))
+                entity.Magick = GetMaxMagick(player);
 
             // Current STM, however, should never drop below zero.
             if (entity.Magick < 0)
@@ -540,18 +371,6 @@ namespace EOM.Game.Server.Service
             entity.HPRegen += adjustBy;
         }
 
-        /// <summary>
-        /// Modifies a player's FP Regen by a certain amount.
-        /// This method will not persist the changes so be sure you call DB.Set after calling this.
-        /// </summary>
-        /// <param name="entity">The entity to modify</param>
-        /// <param name="adjustBy">The amount to adjust by</param>
-        public static void AdjustFPRegen(Player entity, int adjustBy)
-        {
-            // Note: It's possible for FP Regen to drop to a negative number. This is expected to ensure calculations stay in sync.
-            // If there are any visual indicators (GUI elements for example) be sure to account for this scenario.
-            entity.FPRegen += adjustBy;
-        }
 
         /// <summary>
         /// Modifies a player's STM Regen by a certain amount.
@@ -801,9 +620,9 @@ namespace EOM.Game.Server.Service
 
                 if (attackBonusOverride <= 0)
                 {
-                    if (skillType == SkillType.Force)
-                        attackBonus += dbPlayer.MagicAttack;
-                    else
+                    //if (skillType == SkillType.Force)
+                        //attackBonus += dbPlayer.MagicAttack;
+                    //else
                         attackBonus += dbPlayer.Attack;
                 }
             }
@@ -819,9 +638,9 @@ namespace EOM.Game.Server.Service
 
                 if (attackBonusOverride <= 0)
                 {
-                    if (skillType == SkillType.Force)
-                        attackBonus += npcStats.ForceAttack;
-                    else
+                   // if (skillType == SkillType.Force)
+                        //attackBonus += npcStats.ForceAttack;
+                   // else
                         attackBonus += npcStats.Attack;
                 }
             }
@@ -849,9 +668,9 @@ namespace EOM.Game.Server.Service
                     if(skillType != SkillType.Invalid)
                         skillLevel = dbPlayer.Skills[skillType].Rank;
 
-                    if (skillType == SkillType.Force)
-                        attackBonus += dbPlayer.MagicAttack;
-                    else
+                    //if (skillType == SkillType.Force)
+                        //attackBonus += dbPlayer.MagicAttack;
+                    //else
                         attackBonus += dbPlayer.Attack;
                 }
             }
@@ -865,9 +684,9 @@ namespace EOM.Game.Server.Service
                     ? npcStats.Skills[skillType] 
                     : npcStats.Level;
 
-                if (skillType == SkillType.Force)
-                    attackBonus += npcStats.ForceAttack;
-                else
+                //if (skillType == SkillType.Force)
+                    //attackBonus += npcStats.ForceAttack;
+                //else
                     attackBonus += npcStats.Attack;
             }
 
@@ -915,7 +734,7 @@ namespace EOM.Game.Server.Service
                 var dbPlayer = DB.Get<Player>(playerId);
 
                 if (type == CombatDamageType.Fire ||
-                    type == CombatDamageType.Poison ||
+                    type == CombatDamageType.Wind ||
                     type == CombatDamageType.Electrical ||
                     type == CombatDamageType.Ice)
                 {
@@ -932,7 +751,7 @@ namespace EOM.Game.Server.Service
                 var npcStats = GetNPCStats(creature);
 
                 if (type == CombatDamageType.Fire ||
-                    type == CombatDamageType.Poison ||
+                    type == CombatDamageType.Wind ||
                     type == CombatDamageType.Electrical ||
                     type == CombatDamageType.Ice)
                 {
@@ -1023,7 +842,7 @@ namespace EOM.Game.Server.Service
                 if (dbPlayer != null)
                 {
                     if (type == CombatDamageType.Fire ||
-                        type == CombatDamageType.Poison ||
+                        type == CombatDamageType.Wind ||
                         type == CombatDamageType.Electrical ||
                         type == CombatDamageType.Ice)
                     {
@@ -1038,7 +857,7 @@ namespace EOM.Game.Server.Service
             {
                 var npcStats = GetNPCStatsNative(creature);
                 if (type == CombatDamageType.Fire ||
-                    type == CombatDamageType.Poison ||
+                    type == CombatDamageType.Wind ||
                     type == CombatDamageType.Electrical ||
                     type == CombatDamageType.Ice)
                 {
@@ -1805,8 +1624,8 @@ namespace EOM.Game.Server.Service
                 ObjectPlugin.SetCurrentHitPoints(self, maxHP);
             }
 
-            SetLocalInt(self, "FP", GetMaxFP(self));
-            SetLocalInt(self, "STAMINA", GetMaxStamina(self));
+            //SetLocalInt(self, "FP", GetMaxFP(self));
+            SetLocalInt(self, "MAGICK", GetMaxMagick(self));
         }
 
         /// <summary>
@@ -1815,13 +1634,10 @@ namespace EOM.Game.Server.Service
         public static void RestoreNPCStats(bool outOfCombatRegen)
         {
             var self = OBJECT_SELF;
-            var maxFP = GetMaxFP(self);
-            var maxSTM = GetMaxStamina(self);
-            var fp = GetLocalInt(self, "FP") + 1;
-            var stm = GetLocalInt(self, "STAMINA") + 1;
+            var maxSTM = GetMaxMagick(self);
+            var fp = GetLocalInt(self, "MP") + 1;
+            var stm = GetLocalInt(self, "MAGICK") + 1;
 
-            if (fp > maxFP)
-                fp = maxFP;
             if (stm > maxSTM)
                 stm = maxSTM;
 

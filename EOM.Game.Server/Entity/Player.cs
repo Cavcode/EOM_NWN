@@ -119,8 +119,10 @@ namespace EOM.Game.Server.Entity
         public int UnallocatedXP { get; set; }
         public int UnallocatedSP { get; set; }
         public int UnallocatedAP { get; set; }
+        public int UnallocatedJP { get; set; }
         public int TotalSPAcquired { get; set; }
         public int TotalAPAcquired { get; set; }
+        public int TotalJPAcquired { get; set; }
         public int RegenerationTick { get; set; }
         public int HPRegen { get; set; }
         public int MPRegen { get; set; }

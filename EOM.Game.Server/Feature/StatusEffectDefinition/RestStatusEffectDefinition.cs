@@ -104,7 +104,7 @@ namespace EOM.Game.Server.Feature.StatusEffectDefinition
                         fpAmount = 1;
 
                     ApplyEffectToObject(DurationType.Instant, EffectHeal(hpAmount), target);
-                    Stat.RestoreStamina(target, stmAmount);
+                    Stat.RestoreMagick(target, stmAmount);
                     Stat.RestoreFP(target, fpAmount);
                 })
                 .RemoveAction((target, effectData) =>

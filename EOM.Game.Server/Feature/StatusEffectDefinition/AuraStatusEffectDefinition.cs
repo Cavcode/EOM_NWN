@@ -78,7 +78,7 @@ namespace EOM.Game.Server.Feature.StatusEffectDefinition
                 .TickAction((source, target, data) =>
                 {
                     var level = Perk.GetPerkLevel(source, PerkType.Rejuvenation);
-                    Stat.RestoreStamina(target, level);
+                    Stat.RestoreMagick(target, level);
                 });
         }
 

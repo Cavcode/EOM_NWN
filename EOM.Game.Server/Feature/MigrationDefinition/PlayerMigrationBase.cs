@@ -52,7 +52,7 @@ namespace EOM.Game.Server.Feature.MigrationDefinition
 
                 // STM
                 dbPlayer.MaxMagickPoints = Stat.BaseSTM;
-                dbPlayer.Magick = Stat.GetMaxStamina(player, dbPlayer);
+                dbPlayer.Magick = Stat.GetMaxMagick(player, dbPlayer);
                 dbPlayer.MPRegen = 0;
 
                 // Crafting

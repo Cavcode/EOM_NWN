@@ -33,7 +33,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
 
             ApplyEffectToObject(DurationType.Instant, EffectHeal(GetMaxHitPoints(player)), player);
             Stat.RestoreFP(player, Stat.GetMaxFP(player));
-            Stat.RestoreStamina(player, Stat.GetMaxStamina(player));
+            Stat.RestoreMagick(player, Stat.GetMaxMagick(player));
             Gui.TogglePlayerWindow(player, GuiWindowType.CharacterMigration, null, OBJECT_SELF);
         }
 

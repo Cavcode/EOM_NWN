@@ -286,11 +286,11 @@ namespace EOM.Game.Server.Feature
 
                 if (isAdding)
                 {
-                    Stat.AdjustPlayerMaxSTM(dbPlayer, amount, creature);
+                    Stat.AdjustPlayerMaxMP(dbPlayer, amount, creature);
                 }
                 else
                 {
-                    Stat.AdjustPlayerMaxSTM(dbPlayer, -amount, creature);
+                    Stat.AdjustPlayerMaxMP(dbPlayer, -amount, creature);
                 }
 
                 DB.Set(dbPlayer);

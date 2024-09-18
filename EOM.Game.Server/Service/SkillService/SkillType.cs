@@ -170,6 +170,15 @@ namespace EOM.Game.Server.Service.SkillService
             true,
             CombatPointCategoryType.Exempt)]
         Stealth = 15,
+        [Skill(SkillCategoryType.Combat,
+            "Armor",
+            50,
+            true,
+            "Ability to use armor.",
+            true,
+            true,
+            CombatPointCategoryType.Utility)]
+        Armor = 16,
     }
 
     public class SkillAttribute : Attribute

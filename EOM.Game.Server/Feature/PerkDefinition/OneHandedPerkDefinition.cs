@@ -333,7 +333,7 @@ namespace EOM.Game.Server.Feature.PerkDefinition
                 {
                     if (Perk.GetPerkLevel(defender, PerkType.Alacrity) > 0)
                     {
-                        Stat.RestoreStamina(defender, 4);
+                        Stat.RestoreMagick(defender, 4);
                     }
                     else if (Perk.GetPerkLevel(defender, PerkType.Clarity) > 0)
                     {

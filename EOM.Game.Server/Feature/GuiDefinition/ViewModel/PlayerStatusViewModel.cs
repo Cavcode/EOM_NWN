@@ -190,23 +190,13 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             Bar1Progress = maxHP <= 0 ? 0 : (float)currentHP / (float)maxHP > 1.0f ? 1.0f : (float)currentHP / (float)maxHP;
         }
 
-        private void UpdateFP()
-        {
-            var playerId = GetObjectUUID(Player);
-            var dbPlayer = DB.Get<Player>(playerId);
-            var currentFP = dbPlayer.FP;
-            var maxFP = Stat.GetMaxFP(Player, dbPlayer);
-            var isStandard = dbPlayer.CharacterType == CharacterType.Standard;
-            Bar3Value = isStandard ? "0 / 0" : $"{currentFP} / {maxFP}";
-            Bar3Progress = maxFP <= 0 || isStandard ? 0 : (float)currentFP / (float)maxFP > 1.0f ? 1.0f : (float)currentFP / (float)maxFP;
-        }
 
-        private void UpdateSTM()
+        private void UpdateMP()
         {
             var playerId = GetObjectUUID(Player);
             var dbPlayer = DB.Get<Player>(playerId);
             var currentSTM = dbPlayer.Magick;
-            var maxSTM = Stat.GetMaxStamina(Player, dbPlayer);
+            var maxSTM = Stat.GetMaxMagick(Player, dbPlayer);
 
             Bar2Value = $"{currentSTM} / {maxSTM}";
             Bar2Progress = maxSTM <= 0 ? 0 : (float)currentSTM / (float)maxSTM > 1.0f ? 1.0f : (float)currentSTM / (float)maxSTM;
@@ -247,13 +237,9 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 {
                     UpdateHP();
                 }
-                else if (type == PlayerStatusRefreshEvent.StatType.FP)
-                {
-                    UpdateFP();
-                }
                 else if (type == PlayerStatusRefreshEvent.StatType.STM)
                 {
-                    UpdateSTM();
+                    UpdateMP();
                 }
             }
         }
@@ -278,8 +264,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 Bar2Color = _stmColor;
                 Bar3Color = _fpColor;
                 UpdateHP();
-                UpdateFP();
-                UpdateSTM();
+                UpdateMP();
             }
         }
 
