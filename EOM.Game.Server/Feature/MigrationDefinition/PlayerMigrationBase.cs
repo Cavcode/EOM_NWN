@@ -45,13 +45,8 @@ namespace EOM.Game.Server.Feature.MigrationDefinition
                 dbPlayer.HP = GetMaxHitPoints(player);
                 dbPlayer.HPRegen = 0;
 
-                // FP
-                dbPlayer.MaxFP = Stat.BaseFP;
-                dbPlayer.FP = Stat.GetMaxFP(player, dbPlayer);
-                dbPlayer.FPRegen = 0;
-
-                // STM
-                dbPlayer.MaxMagickPoints = Stat.BaseSTM;
+                // MP
+                dbPlayer.MaxMagickPoints = Stat.BaseMP;
                 dbPlayer.Magick = Stat.GetMaxMagick(player, dbPlayer);
                 dbPlayer.MPRegen = 0;
 

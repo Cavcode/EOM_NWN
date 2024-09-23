@@ -24,11 +24,8 @@ namespace EOM.Game.Server.Feature.ItemDefinition
 
         private static readonly SkillType[] _skillsUsedForAverages =
         {
-            SkillType.OneHanded,
-            SkillType.TwoHanded,
+
             SkillType.MartialArts,
-            SkillType.Ranged,
-            SkillType.Force,
             SkillType.FirstAid
         };
 

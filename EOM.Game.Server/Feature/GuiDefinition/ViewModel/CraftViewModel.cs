@@ -419,45 +419,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
         private void LoadRequiredPerks()
         {
             var detail = Craft.GetRecipe(_recipe);
-            switch (detail.Skill)
-            {
-                case SkillType.Smithery:
-                    _primaryAbility = AbilityType.Might;
-                    _secondaryAbility = AbilityType.Vitality;
-
-                    _rapidSynthesisPerk = PerkType.RapidSynthesisSmithery;
-                    _carefulSynthesisPerk = PerkType.CarefulSynthesisSmithery;
-                    
-                    _basicTouchPerk = PerkType.BasicTouchSmithery;
-                    _standardTouchPerk = PerkType.StandardTouchSmithery;
-                    _preciseTouchPerk = PerkType.PreciseTouchSmithery;
-
-                    _mastersMendPerk = PerkType.MastersMendSmithery;
-                    _steadyHandPerk = PerkType.SteadyHandSmithery;
-                    _muscleMemoryPerk = PerkType.MuscleMemorySmithery;
-
-                    _venerationPerk = PerkType.VenerationSmithery;
-                    _wasteNotPerk = PerkType.WasteNotSmithery;
-                    break;
-                case SkillType.Fabrication:
-                    _primaryAbility = AbilityType.Perception;
-                    _secondaryAbility = AbilityType.Willpower;
-
-                    _rapidSynthesisPerk = PerkType.RapidSynthesisFabrication;
-                    _carefulSynthesisPerk = PerkType.CarefulSynthesisFabrication;
-
-                    _basicTouchPerk = PerkType.BasicTouchFabrication;
-                    _standardTouchPerk = PerkType.StandardTouchFabrication;
-                    _preciseTouchPerk = PerkType.PreciseTouchFabrication;
-
-                    _mastersMendPerk = PerkType.MastersMendFabrication;
-                    _steadyHandPerk = PerkType.SteadyHandFabrication;
-                    _muscleMemoryPerk = PerkType.MuscleMemoryFabrication;
-
-                    _venerationPerk = PerkType.VenerationFabrication;
-                    _wasteNotPerk = PerkType.WasteNotFabrication;
-                    break;
-            }
+   
         }
 
         private void LoadCraftingState()

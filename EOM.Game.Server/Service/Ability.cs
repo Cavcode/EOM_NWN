@@ -439,30 +439,7 @@ namespace EOM.Game.Server.Service
             return false;
         }
 
-        /// <summary>
-        /// Whenever a weapon's OnHit event is fired, add a Leadership combat point if an Aura is active.
-        /// </summary>
-        [NWNEventHandler("item_on_hit")]
-        public static void AddLeadershipCombatPoint()
-        {
-            var player = OBJECT_SELF;
-            var target = GetSpellTargetObject();
-            if (!GetIsPC(player) || GetIsDM(player) || !GetIsObjectValid(player))
-                return;
 
-            if (GetIsPC(target) || GetIsDM(target))
-                return;
-
-            if (!_playerAuras.ContainsKey(player))
-                return;
-
-            var aura = _playerAuras[player];
-
-            if (aura.Auras.Count <= 0)
-                return;
-
-            CombatPoint.AddCombatPoint(player, target, SkillType.Leadership);
-        }
 
         private static int GetMaxNumberOfAuras(uint activator)
         {

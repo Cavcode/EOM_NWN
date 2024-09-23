@@ -112,8 +112,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             if (isCharacter)
             {
                 Bar1Label = "HP:";
-                Bar2Label = "STM:";
-                Bar3Label = "FP:";
+                Bar3Label = "MP:";
             }
             else
             {

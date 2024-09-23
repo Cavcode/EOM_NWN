@@ -32,7 +32,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             }
 
             ApplyEffectToObject(DurationType.Instant, EffectHeal(GetMaxHitPoints(player)), player);
-            Stat.RestoreFP(player, Stat.GetMaxFP(player));
             Stat.RestoreMagick(player, Stat.GetMaxMagick(player));
             Gui.TogglePlayerWindow(player, GuiWindowType.CharacterMigration, null, OBJECT_SELF);
         }
@@ -635,19 +634,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                     return;
                 }
 
-                var forceIndex = _skills.IndexOf(SkillType.Force);
-
-                if (_skillDistributionPoints[forceIndex] > 0 && CharacterType == 0)
-                {
-                    FloatingTextStringOnCreature("Standard characters cannot gain ranks in the Force skill.", Player, false);
-                    return;
-                }
-
-                if (race == RacialType.Droid && CharacterType == 1)
-                {
-                    FloatingTextStringOnCreature("Droids may not be Force Sensitive.", Player, false);
-                    return;
-                }
 
                 var playerId = GetObjectUUID(Player);
                 var dbPlayer = DB.Get<Player>(playerId);

@@ -179,6 +179,15 @@ namespace EOM.Game.Server.Service.SkillService
             true,
             CombatPointCategoryType.Utility)]
         Armor = 16,
+        [Skill(SkillCategoryType.Utility,
+            "Gathering",
+            50,
+            true,
+            "Ability to gather resources.",
+            true,
+            true,
+            CombatPointCategoryType.Utility)]
+        Gathering = 17,
     }
 
     public class SkillAttribute : Attribute

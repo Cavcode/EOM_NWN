@@ -25,8 +25,6 @@ namespace EOM.Game.Server.Feature
         public static void RegisterStatActions()
         {
             _statChangeActions[ItemPropertyType.HPBonus] = ApplyHPBonus;
-            _statChangeActions[ItemPropertyType.FP] = ApplyFPBonus;
-            _statChangeActions[ItemPropertyType.FPRegen] = ApplyFPRegenBonus;
             _statChangeActions[ItemPropertyType.Stamina] = ApplySTMBonus;
             _statChangeActions[ItemPropertyType.STMRegen] = ApplySTMRegenBonus;
             _statChangeActions[ItemPropertyType.AbilityRecastReduction] = ApplyAbilityRecastReduction;
@@ -34,9 +32,6 @@ namespace EOM.Game.Server.Feature
             _statChangeActions[ItemPropertyType.ForceAttack] = ApplyForceAttack;
             _statChangeActions[ItemPropertyType.Defense] = ApplyDefense;
             _statChangeActions[ItemPropertyType.Evasion] = ApplyEvasion;
-            _statChangeActions[ItemPropertyType.Control] = ApplyControl;
-            _statChangeActions[ItemPropertyType.Craftsmanship] = ApplyCraftsmanship;
-            _statChangeActions[ItemPropertyType.CPBonus] = ApplyCPBonus;
         }
 
         private static void ReapplyNPCStat(uint npc, ItemPropertyType ipType, int amount, bool isAdding)
@@ -193,77 +188,8 @@ namespace EOM.Game.Server.Feature
             }
         }
 
-        /// <summary>
-        /// Applies or removes an FP bonus on a creature.
-        /// </summary>
-        /// <param name="creature">The creature to adjust</param>
-        /// <param name="item">The item being equipped or unequipped</param>
-        /// <param name="ip">The item property associated with this change</param>
-        /// <param name="isAdding">If true, we're adding the FP, if false we're removing it</param>
-        private static void ApplyFPBonus(uint creature, uint item, ItemProperty ip, bool isAdding)
-        {
-            if (GetIsDM(creature) || GetIsDMPossessed(creature))
-                return;
 
-            var amount = GetItemPropertyCostTableValue(ip);
 
-            if (GetIsPC(creature))
-            {
-                var playerId = GetObjectUUID(creature);
-                var dbPlayer = DB.Get<Player>(playerId);
-
-                if (isAdding)
-                {
-                    Stat.AdjustPlayerMaxFP(dbPlayer, amount, creature);
-                }
-                else
-                {
-                    Stat.AdjustPlayerMaxFP(dbPlayer, -amount, creature);
-                }
-
-                DB.Set(dbPlayer);
-            }
-            else
-            {
-                ReapplyNPCStat(creature, ItemPropertyType.FP, amount, isAdding);
-            }
-        }
-
-        /// <summary>
-        /// Applies or removes an FP Regen bonus on a creature.
-        /// </summary>
-        /// <param name="creature">The creature to adjust</param>
-        /// <param name="item">The item being equipped or unequipped</param>
-        /// <param name="ip">The item property associated with this change</param>
-        /// <param name="isAdding">If true, we're adding the FP Regen, if false we're removing it</param>
-        private static void ApplyFPRegenBonus(uint creature, uint item, ItemProperty ip, bool isAdding)
-        {
-            if (GetIsDM(creature) || GetIsDMPossessed(creature))
-                return;
-
-            var amount = GetItemPropertyCostTableValue(ip);
-
-            if (GetIsPC(creature))
-            {
-                var playerId = GetObjectUUID(creature);
-                var dbPlayer = DB.Get<Player>(playerId);
-
-                if (isAdding)
-                {
-                    Stat.AdjustFPRegen(dbPlayer, amount);
-                }
-                else
-                {
-                    Stat.AdjustFPRegen(dbPlayer, -amount);
-                }
-
-                DB.Set(dbPlayer);
-            }
-            else
-            {
-                ReapplyNPCStat(creature, ItemPropertyType.FPRegen, amount, isAdding);
-            }
-        }
 
         /// <summary>
         /// Applies or removes a STM bonus on a creature.
@@ -550,141 +476,5 @@ namespace EOM.Game.Server.Feature
             }
         }
 
-        /// <summary>
-        /// Applies or removes control on a creature.
-        /// </summary>
-        /// <param name="creature">The creature to adjust</param>
-        /// <param name="item">The item being equipped or unequipped</param>
-        /// <param name="ip">The item property associated with this change</param>
-        /// <param name="isAdding">If true, we're adding control, if false we're removing it.</param>
-        private static void ApplyControl(uint creature, uint item, ItemProperty ip, bool isAdding)
-        {
-            if (GetIsDM(creature) || GetIsDMPossessed(creature))
-                return;
-
-            var amount = GetItemPropertyCostTableValue(ip);
-
-            if (GetIsPC(creature))
-            {
-                var playerId = GetObjectUUID(creature);
-                var dbPlayer = DB.Get<Player>(playerId);
-                var subType = GetItemPropertySubType(ip);
-                var skillType = SkillType.Invalid;
-
-                // Types are defined in iprp_crafttype.2da
-                switch (subType)
-                {
-                    case 1:
-                        skillType = SkillType.Smithery;
-                        break;
-                    case 3:
-                        skillType = SkillType.Fabrication;
-                        break;
-                }
-
-                if (skillType == SkillType.Invalid)
-                {
-                    throw new Exception($"Unable to determine skill type for {nameof(ApplyControl)}");
-                }
-
-                if (isAdding)
-                {
-                    Stat.AdjustControl(dbPlayer, skillType, amount);
-                }
-                else
-                {
-                    Stat.AdjustControl(dbPlayer, skillType, -amount);
-                }
-
-                DB.Set(dbPlayer);
-            }
-        }
-
-        /// <summary>
-        /// Applies or removes craftsmanship on a creature.
-        /// </summary>
-        /// <param name="creature">The creature to adjust</param>
-        /// <param name="item">The item being equipped or unequipped</param>
-        /// <param name="ip">The item property associated with this change</param>
-        /// <param name="isAdding">If true, we're adding craftsmanship, if false we're removing it.</param>
-        private static void ApplyCraftsmanship(uint creature, uint item, ItemProperty ip, bool isAdding)
-        {
-            if (GetIsDM(creature) || GetIsDMPossessed(creature))
-                return;
-
-            var amount = GetItemPropertyCostTableValue(ip);
-
-            if (GetIsPC(creature))
-            {
-                var playerId = GetObjectUUID(creature);
-                var dbPlayer = DB.Get<Player>(playerId);
-                var subType = GetItemPropertySubType(ip);
-                var skillType = SkillType.Invalid;
-
-                // Types are defined in iprp_crafttype.2da
-                switch (subType)
-                {
-                    case 1:
-                        skillType = SkillType.Smithery;
-                        break;
-                    case 3:
-                        skillType = SkillType.Fabrication;
-                        break;
-                }
-                if (isAdding)
-                {
-                    Stat.AdjustCraftsmanship(dbPlayer, skillType, amount);
-                }
-                else
-                {
-                    Stat.AdjustCraftsmanship(dbPlayer, skillType, -amount);
-                }
-
-                DB.Set(dbPlayer);
-            }
-        }
-        /// <summary>
-        /// Applies or removes CP bonuses on a player.
-        /// </summary>
-        /// <param name="creature">The creature to adjust</param>
-        /// <param name="item">The item being equipped or unequipped</param>
-        /// <param name="ip">The item property associated with this change</param>
-        /// <param name="isAdding">If true, we're adding the CP bonus, if false we're removing it.</param>
-        private static void ApplyCPBonus(uint creature, uint item, ItemProperty ip, bool isAdding)
-        {
-            if (GetIsDM(creature) || GetIsDMPossessed(creature))
-                return;
-
-            var amount = GetItemPropertyCostTableValue(ip);
-
-            if (GetIsPC(creature))
-            {
-                var playerId = GetObjectUUID(creature);
-                var dbPlayer = DB.Get<Player>(playerId);
-                var subType = GetItemPropertySubType(ip);
-                var skillType = SkillType.Invalid;
-
-                // Types are defined in iprp_crafttype.2da
-                switch (subType)
-                {
-                    case 1:
-                        skillType = SkillType.Smithery;
-                        break;
-                    case 3:
-                        skillType = SkillType.Fabrication;
-                        break;
-                }
-                if (isAdding)
-                {
-                    Stat.AdjustCPBonus(dbPlayer, skillType, amount);
-                }
-                else
-                {
-                    Stat.AdjustCPBonus(dbPlayer, skillType, -amount);
-                }
-
-                DB.Set(dbPlayer);
-            }
-        }
     }
 }
