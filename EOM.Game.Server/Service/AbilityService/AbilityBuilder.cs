@@ -230,19 +230,6 @@ namespace EOM.Game.Server.Service.AbilityService
         }
 
         /// <summary>
-        /// Adds an FP requirement to use the ability at this level.
-        /// </summary>
-        /// <param name="requiredFP">The amount of FP needed to use this ability at this level.</param>
-        /// <returns>An ability builder with the configured options</returns>
-        public AbilityBuilder RequirementFP(int requiredFP)
-        {
-            var requirement = new AbilityRequirementFP(requiredFP);
-            _activeAbility.Requirements.Add(requirement);
-
-            return this;
-        }
-
-        /// <summary>
         /// Updates the max range of this ability (default is 5.0, i.e. melee range).
         /// </summary>
         /// <param name="maxRange">The maximum range of the ability.</param>
@@ -258,9 +245,9 @@ namespace EOM.Game.Server.Service.AbilityService
         /// </summary>
         /// <param name="requiredSTM">The amount of STM needed to use this ability at this level.</param>
         /// <returns>An ability builder with the configured options</returns>
-        public AbilityBuilder RequirementStamina(int requiredSTM)
+        public AbilityBuilder RequirementMagick(int requiredMP)
         {
-            var requirement = new AbilityRequirementStamina(requiredSTM);
+            var requirement = new AbilityRequirementMagick(requiredMP);
             _activeAbility.Requirements.Add(requirement);
 
             return this;

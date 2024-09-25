@@ -12,7 +12,6 @@ namespace EOM.CLI
         private static readonly EnhancementItemBuilder _enhancementItemBuilder = new();
         private static readonly RecipeCodeBuilder _recipeCodeBuilder = new();
         private static readonly AdHocTool _adHocTool = new();
-        private static readonly DroidItemBuilder _droidItemBuilder = new();
         private static readonly DeployBuild _deployBuild = new();
 
         static void Main(string[] args)

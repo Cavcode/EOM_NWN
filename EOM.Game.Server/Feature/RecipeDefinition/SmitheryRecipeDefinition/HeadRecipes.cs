@@ -23,7 +23,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier1()
         {
             // Battlemaster Helmet
-            _builder.Create(RecipeType.BattlemasterHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.BattlemasterHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Helmet)
                 .Resref("bm_helmet")
                 .Level(4)
@@ -34,7 +34,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_ruined", 2);
 
             // Spiritmaster Cap
-            _builder.Create(RecipeType.SpiritmasterCap, SkillType.Smithery)
+            _builder.Create(RecipeType.SpiritmasterCap, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("sm_cap")
                 .Level(4)
@@ -45,7 +45,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_ruined", 2);
 
             // Combat Cap
-            _builder.Create(RecipeType.CombatCap, SkillType.Smithery)
+            _builder.Create(RecipeType.CombatCap, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("com_cap")
                 .Level(4)
@@ -56,7 +56,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_ruined", 2);
 
             // Advent Helmet
-            _builder.Create(RecipeType.AdventHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.AdventHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("advent_helmet")
                 .Level(10)
@@ -69,7 +69,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 3);
 
             // Amateur Helmet
-            _builder.Create(RecipeType.AmateurHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.AmateurHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("engi_helmet_1")
                 .Level(10)
@@ -81,7 +81,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 3);
 
             // Cloth Helmet
-            _builder.Create(RecipeType.ClothHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.ClothHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("fabr_helmet_1")
                 .Level(10)
@@ -93,7 +93,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 3);
 
             // Chef Helmet
-            _builder.Create(RecipeType.ChefHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.ChefHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("chef_helmet_1")
                 .Level(10)
@@ -108,7 +108,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier2()
         {
             // Titan Helmet
-            _builder.Create(RecipeType.TitanHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.TitanHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Helmet)
                 .Resref("tit_helmet")
                 .Level(14)
@@ -119,7 +119,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_flawed", 2);
 
             // Vivid Cap
-            _builder.Create(RecipeType.VividCap, SkillType.Smithery)
+            _builder.Create(RecipeType.VividCap, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("viv_cap")
                 .Level(14)
@@ -130,7 +130,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_flawed", 2);
 
             // Valor Cap
-            _builder.Create(RecipeType.ValorCap, SkillType.Smithery)
+            _builder.Create(RecipeType.ValorCap, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("val_cap")
                 .Level(14)
@@ -141,7 +141,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_flawed", 2);
 
             // Frontier Helmet
-            _builder.Create(RecipeType.FrontierHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.FrontierHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("frontier_helmet")
                 .Level(20)
@@ -153,7 +153,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 3);
 
             // Worker Helmet
-            _builder.Create(RecipeType.WorkerHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.WorkerHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("engi_helmet_2")
                 .Level(20)
@@ -165,7 +165,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 3);
 
             // Linen Helmet
-            _builder.Create(RecipeType.LinenHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.LinenHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("fabr_helmet_2")
                 .Level(20)
@@ -177,7 +177,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 3);
 
             // Velveteen Helmet
-            _builder.Create(RecipeType.VelveteenHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.VelveteenHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("chef_helmet_2")
                 .Level(20)
@@ -192,7 +192,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier3()
         {
             // Quark Helmet
-            _builder.Create(RecipeType.QuarkHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.QuarkHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Helmet)
                 .Resref("qk_helmet")
                 .Level(24)
@@ -203,7 +203,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_good", 2);
 
             // Reginal Cap
-            _builder.Create(RecipeType.ReginalCap, SkillType.Smithery)
+            _builder.Create(RecipeType.ReginalCap, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("reg_cap")
                 .Level(24)
@@ -214,7 +214,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_good", 2);
 
             // Forza Cap
-            _builder.Create(RecipeType.ForzaCap, SkillType.Smithery)
+            _builder.Create(RecipeType.ForzaCap, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("for_cap")
                 .Level(24)
@@ -225,7 +225,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_good", 2);
 
             // Majestic Helmet
-            _builder.Create(RecipeType.MajesticHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.MajesticHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("majestic_helmet")
                 .Level(30)
@@ -237,7 +237,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 3);
 
             // Mechanic Helmet
-            _builder.Create(RecipeType.MechanicHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.MechanicHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("engi_helmet_3")
                 .Level(30)
@@ -249,7 +249,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 3);
 
             // Designer Helmet
-            _builder.Create(RecipeType.DesignerHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.DesignerHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("fabr_helmet_3")
                 .Level(30)
@@ -261,7 +261,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 3);
 
             // Silk Helmet
-            _builder.Create(RecipeType.SilkHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.SilkHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("chef_helmet_3")
                 .Level(30)
@@ -276,7 +276,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier4()
         {
             // Argos Helmet
-            _builder.Create(RecipeType.ArgosHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.ArgosHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Helmet)
                 .Resref("ar_helmet")
                 .Level(34)
@@ -287,7 +287,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_imperfect", 2);
 
             // Grenada Cap
-            _builder.Create(RecipeType.GrenadaCap, SkillType.Smithery)
+            _builder.Create(RecipeType.GrenadaCap, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("gr_cap")
                 .Level(34)
@@ -298,7 +298,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_imperfect", 2);
 
             // Survival Cap
-            _builder.Create(RecipeType.SurvivalCap, SkillType.Smithery)
+            _builder.Create(RecipeType.SurvivalCap, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("sur_cap")
                 .Level(34)
@@ -309,7 +309,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_imperfect", 2);
 
             // Dream Helmet
-            _builder.Create(RecipeType.DreamHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.DreamHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("dream_helmet")
                 .Level(40)
@@ -321,7 +321,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 3);
 
             // Devotion Helmet
-            _builder.Create(RecipeType.DevotionHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.DevotionHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("engi_helmet_4")
                 .Level(40)
@@ -333,7 +333,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 3);
 
             // Oasis Helmet
-            _builder.Create(RecipeType.OasisHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.OasisHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("fabr_helmet_4")
                 .Level(40)
@@ -345,7 +345,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 3);
 
             // Vintage Helmet
-            _builder.Create(RecipeType.VintageHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.VintageHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("chef_helmet_4")
                 .Level(40)
@@ -360,7 +360,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier5()
         {
             // Eclipse Helmet
-            _builder.Create(RecipeType.EclipseHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.EclipseHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Helmet)
                 .Resref("ec_helmet")
                 .Level(44)
@@ -371,7 +371,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_high", 2);
 
             // Transcendent Cap
-            _builder.Create(RecipeType.TranscendentCap, SkillType.Smithery)
+            _builder.Create(RecipeType.TranscendentCap, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("tran_cap")
                 .Level(44)
@@ -382,7 +382,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_high", 2);
 
             // Supreme Cap
-            _builder.Create(RecipeType.SupremeCap, SkillType.Smithery)
+            _builder.Create(RecipeType.SupremeCap, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("sup_cap")
                 .Level(44)
@@ -393,7 +393,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_high", 2);
 
             // Eternal Helmet
-            _builder.Create(RecipeType.EternalHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.EternalHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("eternal_helmet")
                 .Level(50)
@@ -405,7 +405,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Skysteel Helmet
-            _builder.Create(RecipeType.SkysteelHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.SkysteelHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("engi_helmet_5")
                 .Level(50)
@@ -417,7 +417,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Rose Helmet
-            _builder.Create(RecipeType.RoseHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.RoseHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("fabr_helmet_5")
                 .Level(50)
@@ -429,7 +429,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Moonflame Helmet
-            _builder.Create(RecipeType.MoonflameHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.MoonflameHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("chef_helmet_5")
                 .Level(50)
@@ -441,7 +441,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Chaos Helmet
-            _builder.Create(RecipeType.ChaosHelmet, SkillType.Smithery)
+            _builder.Create(RecipeType.ChaosHelmet, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Helmet)
                 .Resref("ch_helmet")
                 .Level(52)
@@ -459,7 +459,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ref_keromber", 5);
 
             // Magus Cap
-            _builder.Create(RecipeType.MagusCap, SkillType.Smithery)
+            _builder.Create(RecipeType.MagusCap, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("mag_cap")
                 .Level(52)
@@ -477,7 +477,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ref_keromber", 5);
 
             // Immortal Cap
-            _builder.Create(RecipeType.ImmortalCap, SkillType.Smithery)
+            _builder.Create(RecipeType.ImmortalCap, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Cap)
                 .Resref("imm_cap")
                 .Level(52)

@@ -21,7 +21,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Pistols()
         {
             // Basic Pistol
-            _builder.Create(RecipeType.BasicPistol, SkillType.Smithery)
+            _builder.Create(RecipeType.BasicPistol, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Pistol)
                 .Resref("b_pistol")
                 .Level(6)
@@ -32,7 +32,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("elec_ruined", 2);
 
             // Titan Pistol
-            _builder.Create(RecipeType.TitanPistol, SkillType.Smithery)
+            _builder.Create(RecipeType.TitanPistol, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Pistol)
                 .Resref("tit_pistol")
                 .Level(16)
@@ -43,7 +43,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("elec_flawed", 2);
 
             // Sith Pistol
-            _builder.Create(RecipeType.SithPistol, SkillType.Smithery)
+            _builder.Create(RecipeType.SithPistol, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Pistol)
                 .Resref("sith_pistol")
                 .Level(19)
@@ -54,7 +54,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("elec_flawed", 3);
 
             // Delta Pistol
-            _builder.Create(RecipeType.DeltaPistol, SkillType.Smithery)
+            _builder.Create(RecipeType.DeltaPistol, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Pistol)
                 .Resref("del_pistol")
                 .Level(26)
@@ -65,7 +65,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("elec_good", 2);
 
             // Proto Pistol
-            _builder.Create(RecipeType.ProtoPistol, SkillType.Smithery)
+            _builder.Create(RecipeType.ProtoPistol, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Pistol)
                 .Resref("proto_pistol")
                 .Level(36)
@@ -76,7 +76,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("elec_imperfect", 2);
 
             // Ophidian Pistol
-            _builder.Create(RecipeType.OphidianPistol, SkillType.Smithery)
+            _builder.Create(RecipeType.OphidianPistol, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Pistol)
                 .Resref("oph_pistol")
                 .Level(46)
@@ -87,7 +87,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("elec_high", 2);
 
             // Chiro Pistol
-            _builder.Create(RecipeType.ChiroPistol, SkillType.Smithery)
+            _builder.Create(RecipeType.ChiroPistol, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Pistol)
                 .Resref("chi_pistol")
                 .Level(52)
@@ -108,7 +108,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Shurikens()
         {
             // Basic Shuriken
-            _builder.Create(RecipeType.BasicShuriken, SkillType.Smithery)
+            _builder.Create(RecipeType.BasicShuriken, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Shuriken)
                 .Resref("b_shuriken")
                 .Level(2)
@@ -119,7 +119,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("wood", 1);
 
             // Titan Shuriken
-            _builder.Create(RecipeType.TitanShuriken, SkillType.Smithery)
+            _builder.Create(RecipeType.TitanShuriken, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Shuriken)
                 .Resref("tit_shuriken")
                 .Level(12)
@@ -130,7 +130,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fine_wood", 1);
 
             // Sith Shuriken
-            _builder.Create(RecipeType.SithShuriken, SkillType.Smithery)
+            _builder.Create(RecipeType.SithShuriken, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Shuriken)
                 .Resref("sith_shuriken")
                 .Level(18)
@@ -141,7 +141,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fine_wood", 2);
 
             // Delta Shuriken
-            _builder.Create(RecipeType.DeltaShuriken, SkillType.Smithery)
+            _builder.Create(RecipeType.DeltaShuriken, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Shuriken)
                 .Resref("del_shuriken")
                 .Level(22)
@@ -152,7 +152,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ancient_wood", 1);
 
             // Proto Shuriken
-            _builder.Create(RecipeType.ProtoShuriken, SkillType.Smithery)
+            _builder.Create(RecipeType.ProtoShuriken, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Shuriken)
                 .Resref("proto_shuriken")
                 .Level(32)
@@ -163,7 +163,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("aracia_wood", 1);
 
             // Ophidian Shuriken
-            _builder.Create(RecipeType.OphidianShuriken, SkillType.Smithery)
+            _builder.Create(RecipeType.OphidianShuriken, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Shuriken)
                 .Resref("oph_shuriken")
                 .Level(42)
@@ -174,7 +174,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("hyphae_wood", 1);
 
             // Chiro Shuriken
-            _builder.Create(RecipeType.ChiroShuriken, SkillType.Smithery)
+            _builder.Create(RecipeType.ChiroShuriken, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Shuriken)
                 .Resref("chi_shuriken")
                 .Level(52)
@@ -195,7 +195,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Rifles()
         {
             // Basic Rifle
-            _builder.Create(RecipeType.BasicRifle, SkillType.Smithery)
+            _builder.Create(RecipeType.BasicRifle, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Rifle)
                 .Resref("b_rifle")
                 .Level(9)
@@ -206,7 +206,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("elec_ruined", 3);
 
             // Titan Rifle
-            _builder.Create(RecipeType.TitanRifle, SkillType.Smithery)
+            _builder.Create(RecipeType.TitanRifle, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Rifle)
                 .Resref("tit_rifle")
                 .Level(19)
@@ -217,7 +217,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("elec_flawed", 3);
 
             // Sith Rifle
-            _builder.Create(RecipeType.SithRifle, SkillType.Smithery)
+            _builder.Create(RecipeType.SithRifle, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Rifle)
                 .Resref("sith_rifle")
                 .Level(15)
@@ -228,7 +228,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("elec_flawed", 2);
 
             // Delta Rifle
-            _builder.Create(RecipeType.DeltaRifle, SkillType.Smithery)
+            _builder.Create(RecipeType.DeltaRifle, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Rifle)
                 .Resref("del_rifle")
                 .Level(29)
@@ -239,7 +239,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("elec_good", 3);
 
             // Proto Rifle
-            _builder.Create(RecipeType.ProtoRifle, SkillType.Smithery)
+            _builder.Create(RecipeType.ProtoRifle, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Rifle)
                 .Resref("proto_rifle")
                 .Level(39)
@@ -250,7 +250,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("elec_imperfect", 3);
 
             // Ophidian Rifle
-            _builder.Create(RecipeType.OphidianRifle, SkillType.Smithery)
+            _builder.Create(RecipeType.OphidianRifle, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Rifle)
                 .Resref("oph_rifle")
                 .Level(49)
@@ -261,7 +261,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("elec_high", 3);
 
             // Chiro Rifle
-            _builder.Create(RecipeType.ChiroRifle, SkillType.Smithery)
+            _builder.Create(RecipeType.ChiroRifle, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Rifle)
                 .Resref("chi_rifle")
                 .Level(52)
@@ -279,7 +279,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ref_keromber", 5);
 
             // Bol Rifle
-            _builder.Create(RecipeType.BolRifle, SkillType.Smithery)
+            _builder.Create(RecipeType.BolRifle, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Rifle)
                 .Resref("bol_rifle")
                 .Level(52)

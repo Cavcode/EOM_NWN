@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using EOM.Game.Server.Service.SpaceService;
 
 namespace EOM.Game.Server.Entity
 {
@@ -15,7 +14,6 @@ namespace EOM.Game.Server.Entity
         [Indexed]
         public string PropertyId { get; set; }
         public string SerializedItem { get; set; }
-        public ShipStatus Status { get; set; }
         public Dictionary<string, string> PlayerHotBars { get; set; }
     }
 }

@@ -188,6 +188,15 @@ namespace EOM.Game.Server.Service.SkillService
             true,
             CombatPointCategoryType.Utility)]
         Gathering = 17,
+        [Skill(SkillCategoryType.Combat,
+            "Sword and Shield",
+            50,
+            true,
+            "Ability to use swords and shields.",
+            true,
+            false,
+            CombatPointCategoryType.Weapon)]
+        SwordAndShield = 18,
     }
 
     public class SkillAttribute : Attribute

@@ -24,7 +24,7 @@ namespace EOM.Game.Server.Feature.StatusEffectDefinition
                     .EffectIcon(EffectIconType.Regenerate)
                     .TickAction((source, target, effectData) =>
                     {
-                        Stat.RestoreFP(target, amount);
+                        Stat.RestoreMagick(target, amount);
                     });
             }
 

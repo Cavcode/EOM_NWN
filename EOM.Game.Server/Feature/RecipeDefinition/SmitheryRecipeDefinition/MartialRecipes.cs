@@ -20,7 +20,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Katars()
         {
             // Basic Katar
-            _builder.Create(RecipeType.BasicKatar, SkillType.Smithery)
+            _builder.Create(RecipeType.BasicKatar, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Katar)
                 .Resref("b_katar")
                 .Level(3)
@@ -31,7 +31,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("wood", 1);
 
             // Titan Katar
-            _builder.Create(RecipeType.TitanKatar, SkillType.Smithery)
+            _builder.Create(RecipeType.TitanKatar, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Katar)
                 .Resref("tit_katar")
                 .Level(13)
@@ -42,7 +42,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fine_wood", 1);
 
             // Sith Katar
-            _builder.Create(RecipeType.SithKatar, SkillType.Smithery)
+            _builder.Create(RecipeType.SithKatar, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Katar)
                 .Resref("sith_katar")
                 .Level(18)
@@ -53,7 +53,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fine_wood", 2);
 
             // Delta Katar
-            _builder.Create(RecipeType.DeltaKatar, SkillType.Smithery)
+            _builder.Create(RecipeType.DeltaKatar, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Katar)
                 .Resref("del_katar")
                 .Level(23)
@@ -64,7 +64,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ancient_wood", 1);
 
             // Proto Katar
-            _builder.Create(RecipeType.ProtoKatar, SkillType.Smithery)
+            _builder.Create(RecipeType.ProtoKatar, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Katar)
                 .Resref("proto_katar")
                 .Level(33)
@@ -75,7 +75,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("aracia_wood", 1);
 
             // Ophidian Katar
-            _builder.Create(RecipeType.OphidianKatar, SkillType.Smithery)
+            _builder.Create(RecipeType.OphidianKatar, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Katar)
                 .Resref("oph_katar")
                 .Level(43)
@@ -86,7 +86,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("hyphae_wood", 1);
 
             // Chiro Katar
-            _builder.Create(RecipeType.ChiroKatar, SkillType.Smithery)
+            _builder.Create(RecipeType.ChiroKatar, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Katar)
                 .Resref("chi_katar")
                 .Level(52)
@@ -107,7 +107,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Staffs()
         {
             // Basic Staff
-            _builder.Create(RecipeType.BasicStaff, SkillType.Smithery)
+            _builder.Create(RecipeType.BasicStaff, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Staff)
                 .Resref("b_staff")
                 .Level(5)
@@ -118,7 +118,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("wood", 2);
 
             // Titan Staff
-            _builder.Create(RecipeType.TitanStaff, SkillType.Smithery)
+            _builder.Create(RecipeType.TitanStaff, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Staff)
                 .Resref("tit_staff")
                 .Level(15)
@@ -129,7 +129,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fine_wood", 2);
 
             // Sith Staff
-            _builder.Create(RecipeType.SithStaff, SkillType.Smithery)
+            _builder.Create(RecipeType.SithStaff, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Staff)
                 .Resref("sith_staff")
                 .Level(12)
@@ -140,7 +140,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fine_wood", 1);
 
             // Delta Staff
-            _builder.Create(RecipeType.DeltaStaff, SkillType.Smithery)
+            _builder.Create(RecipeType.DeltaStaff, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Staff)
                 .Resref("del_staff")
                 .Level(25)
@@ -151,7 +151,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ancient_wood", 2);
 
             // Proto Staff
-            _builder.Create(RecipeType.ProtoStaff, SkillType.Smithery)
+            _builder.Create(RecipeType.ProtoStaff, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Staff)
                 .Resref("proto_staff")
                 .Level(35)
@@ -162,7 +162,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("aracia_wood", 2);
 
             // Ophidian Staff
-            _builder.Create(RecipeType.OphidianStaff, SkillType.Smithery)
+            _builder.Create(RecipeType.OphidianStaff, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Staff)
                 .Resref("oph_staff")
                 .Level(45)
@@ -173,7 +173,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("hyphae_wood", 2);
 
             // Chiro Staff
-            _builder.Create(RecipeType.ChiroStaff, SkillType.Smithery)
+            _builder.Create(RecipeType.ChiroStaff, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Staff)
                 .Resref("chi_staff")
                 .Level(52)

@@ -25,62 +25,62 @@ namespace EOM.Game.Server.Service
         private static void LoadItemToSkillMapping()
         {
             // One-Handed Skills
-            _itemToSkillMapping[BaseItem.BastardSword] = SkillType.OneHanded;
-            _itemToSkillMapping[BaseItem.BattleAxe] = SkillType.OneHanded;
-            _itemToSkillMapping[BaseItem.Dagger] = SkillType.OneHanded;
-            _itemToSkillMapping[BaseItem.HandAxe] = SkillType.OneHanded;
-            _itemToSkillMapping[BaseItem.Kama] = SkillType.OneHanded;
-            _itemToSkillMapping[BaseItem.Katana] = SkillType.OneHanded;
-            _itemToSkillMapping[BaseItem.Kukri] = SkillType.OneHanded;
-            _itemToSkillMapping[BaseItem.LightFlail] = SkillType.OneHanded;
-            _itemToSkillMapping[BaseItem.LightHammer] = SkillType.OneHanded;
-            _itemToSkillMapping[BaseItem.LightMace] = SkillType.OneHanded;
-            _itemToSkillMapping[BaseItem.Longsword] = SkillType.OneHanded;
-            _itemToSkillMapping[BaseItem.MorningStar] = SkillType.OneHanded;
-            _itemToSkillMapping[BaseItem.Rapier] = SkillType.OneHanded;
-            _itemToSkillMapping[BaseItem.Scimitar] = SkillType.OneHanded;
-            _itemToSkillMapping[BaseItem.ShortSword] = SkillType.OneHanded;
-            _itemToSkillMapping[BaseItem.Sickle] = SkillType.OneHanded;
-            _itemToSkillMapping[BaseItem.Whip] = SkillType.OneHanded;
-            _itemToSkillMapping[BaseItem.Lightsaber] = SkillType.OneHanded;
-            _itemToSkillMapping[BaseItem.Electroblade] = SkillType.OneHanded;
+            //_itemToSkillMapping[BaseItem.BastardSword] = SkillType.OneHanded;
+            _itemToSkillMapping[BaseItem.BattleAxe] = SkillType.Axes;
+            //_itemToSkillMapping[BaseItem.Dagger] = SkillType.OneHanded;
+            //_itemToSkillMapping[BaseItem.HandAxe] = SkillType.OneHanded;
+            //_itemToSkillMapping[BaseItem.Kama] = SkillType.OneHanded;
+            //_itemToSkillMapping[BaseItem.Katana] = SkillType.OneHanded;
+            //_itemToSkillMapping[BaseItem.Kukri] = SkillType.OneHanded;
+            //_itemToSkillMapping[BaseItem.LightFlail] = SkillType.OneHanded;
+            //_itemToSkillMapping[BaseItem.LightHammer] = SkillType.OneHanded;
+            //_itemToSkillMapping[BaseItem.LightMace] = SkillType.OneHanded;
+            _itemToSkillMapping[BaseItem.Longsword] = SkillType.Gunblades;
+            //_itemToSkillMapping[BaseItem.MorningStar] = SkillType.OneHanded;
+            //_itemToSkillMapping[BaseItem.Rapier] = SkillType.OneHanded;
+            //_itemToSkillMapping[BaseItem.Scimitar] = SkillType.OneHanded;
+            _itemToSkillMapping[BaseItem.ShortSword] = SkillType.SwordAndShield;
+            //_itemToSkillMapping[BaseItem.Sickle] = SkillType.OneHanded;
+            //_itemToSkillMapping[BaseItem.Whip] = SkillType.OneHanded;
+            //_itemToSkillMapping[BaseItem.Lightsaber] = SkillType.OneHanded;
+            //_itemToSkillMapping[BaseItem.Electroblade] = SkillType.OneHanded;
 
             // Two-Handed Skills
-            _itemToSkillMapping[BaseItem.DireMace] = SkillType.TwoHanded;
-            _itemToSkillMapping[BaseItem.DwarvenWarAxe] = SkillType.TwoHanded;
-            _itemToSkillMapping[BaseItem.GreatAxe] = SkillType.TwoHanded;
-            _itemToSkillMapping[BaseItem.GreatSword] = SkillType.TwoHanded;
-            _itemToSkillMapping[BaseItem.Halberd] = SkillType.TwoHanded;
-            _itemToSkillMapping[BaseItem.HeavyFlail] = SkillType.TwoHanded;
-            _itemToSkillMapping[BaseItem.Scythe] = SkillType.TwoHanded;
-            _itemToSkillMapping[BaseItem.Trident] = SkillType.TwoHanded;
-            _itemToSkillMapping[BaseItem.WarHammer] = SkillType.TwoHanded;
-            _itemToSkillMapping[BaseItem.ShortSpear] = SkillType.TwoHanded;
-            _itemToSkillMapping[BaseItem.TwoBladedSword] = SkillType.TwoHanded;
-            _itemToSkillMapping[BaseItem.DoubleAxe] = SkillType.TwoHanded;
-            _itemToSkillMapping[BaseItem.Saberstaff] = SkillType.TwoHanded;
-            _itemToSkillMapping[BaseItem.TwinElectroBlade] = SkillType.TwoHanded;
+            //_itemToSkillMapping[BaseItem.DireMace] = SkillType.TwoHanded;
+            //_itemToSkillMapping[BaseItem.DwarvenWarAxe] = SkillType.TwoHanded;
+            _itemToSkillMapping[BaseItem.GreatAxe] = SkillType.Axes;
+            //_itemToSkillMapping[BaseItem.GreatSword] = SkillType.TwoHanded;
+            //_itemToSkillMapping[BaseItem.Halberd] = SkillType.TwoHanded;
+            //_itemToSkillMapping[BaseItem.HeavyFlail] = SkillType.TwoHanded;
+            //_itemToSkillMapping[BaseItem.Scythe] = SkillType.TwoHanded;
+            //_itemToSkillMapping[BaseItem.Trident] = SkillType.TwoHanded;
+            //_itemToSkillMapping[BaseItem.WarHammer] = SkillType.TwoHanded;
+            //_itemToSkillMapping[BaseItem.ShortSpear] = SkillType.TwoHanded;
+            //_itemToSkillMapping[BaseItem.TwoBladedSword] = SkillType.TwoHanded;
+            //_itemToSkillMapping[BaseItem.DoubleAxe] = SkillType.TwoHanded;
+            //_itemToSkillMapping[BaseItem.Saberstaff] = SkillType.TwoHanded;
+            //_itemToSkillMapping[BaseItem.TwinElectroBlade] = SkillType.TwoHanded;
 
             // Martial Arts Skills
-            _itemToSkillMapping[BaseItem.Club] = SkillType.MartialArts;
-            _itemToSkillMapping[BaseItem.Bracer] = SkillType.MartialArts;
+            //_itemToSkillMapping[BaseItem.Club] = SkillType.MartialArts;
+            //_itemToSkillMapping[BaseItem.Bracer] = SkillType.MartialArts;
             _itemToSkillMapping[BaseItem.Gloves] = SkillType.MartialArts;
-            _itemToSkillMapping[BaseItem.QuarterStaff] = SkillType.MartialArts;
-            _itemToSkillMapping[BaseItem.Katar] = SkillType.MartialArts;
+            _itemToSkillMapping[BaseItem.QuarterStaff] = SkillType.Staves;
+            //_itemToSkillMapping[BaseItem.Katar] = SkillType.MartialArts;
 
             // Ranged Skills
-            _itemToSkillMapping[BaseItem.Cannon] = SkillType.Ranged;
-            _itemToSkillMapping[BaseItem.Rifle] = SkillType.Ranged;
-            _itemToSkillMapping[BaseItem.Longbow] = SkillType.Ranged;
-            _itemToSkillMapping[BaseItem.Pistol] = SkillType.Ranged;
-            _itemToSkillMapping[BaseItem.Arrow] = SkillType.Ranged;
-            _itemToSkillMapping[BaseItem.Bolt] = SkillType.Ranged;
-            _itemToSkillMapping[BaseItem.Bullet] = SkillType.Ranged;
-            _itemToSkillMapping[BaseItem.Sling] = SkillType.Ranged;
-            _itemToSkillMapping[BaseItem.Grenade] = SkillType.Ranged;
-            _itemToSkillMapping[BaseItem.Shuriken] = SkillType.Ranged;
-            _itemToSkillMapping[BaseItem.ThrowingAxe] = SkillType.Ranged;
-            _itemToSkillMapping[BaseItem.Dart] = SkillType.Ranged;
+            //_itemToSkillMapping[BaseItem.Cannon] = SkillType.Ranged;
+            //_itemToSkillMapping[BaseItem.Rifle] = SkillType.;
+            //_itemToSkillMapping[BaseItem.Longbow] = SkillType.Ranged;
+            //_itemToSkillMapping[BaseItem.Pistol] = SkillType.Ranged;
+            //_itemToSkillMapping[BaseItem.Arrow] = SkillType.Ranged;
+            //_itemToSkillMapping[BaseItem.Bolt] = SkillType.Ranged;
+            //_itemToSkillMapping[BaseItem.Bullet] = SkillType.Ranged;
+            //_itemToSkillMapping[BaseItem.Sling] = SkillType.Ranged;
+            //_itemToSkillMapping[BaseItem.Grenade] = SkillType.Ranged;
+            //_itemToSkillMapping[BaseItem.Shuriken] = SkillType.Ranged;
+            //_itemToSkillMapping[BaseItem.ThrowingAxe] = SkillType.Ranged;
+            //_itemToSkillMapping[BaseItem.Dart] = SkillType.Ranged;
 
             Console.WriteLine($"Loaded {_itemToSkillMapping.Count} item to skill mappings.");
         }

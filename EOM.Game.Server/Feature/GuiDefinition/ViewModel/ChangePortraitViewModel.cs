@@ -111,15 +111,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             var portraitId = Cache.GetPortraitByInternalId(_activePortraitInternalId);
             SetPortraitId(_target, portraitId);
 
-            if (Droid.IsDroid(_target))
-            {
-                var controller = Droid.GetControllerItem(_target);
-                var constructedDroid = Droid.LoadConstructedDroid(controller);
-
-                constructedDroid.PortraitId = portraitId;
-
-                Droid.SaveConstructedDroid(controller, constructedDroid);
-            }
             
             Gui.PublishRefreshEvent(Player, new ChangePortraitRefreshEvent());
         };

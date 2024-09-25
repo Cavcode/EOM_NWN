@@ -29,9 +29,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Feature\AbilityDefinition\Force\" />
+    <Folder Include="Feature\AbilityDefinition\" />
     <Folder Include="Feature\PerkDefinition\Jobs\" />
+    <Folder Include="Feature\ShipDefinition\" />
+    <Folder Include="Feature\SpaceObjectDefinition\" />
     <Folder Include="Feature\StatusEffectDefinition\StatusEffectData\" />
+    <Folder Include="Service\DroidService\" />
+    <Folder Include="Service\SpaceService\" />
   </ItemGroup>
 
   <Target Name="NWN" AfterTargets="Build">

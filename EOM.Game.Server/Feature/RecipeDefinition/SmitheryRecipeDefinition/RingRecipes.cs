@@ -23,7 +23,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier1()
         {
             // Battlemaster Ring
-            _builder.Create(RecipeType.BattlemasterRing, SkillType.Smithery)
+            _builder.Create(RecipeType.BattlemasterRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("bm_ring")
                 .Level(1)
@@ -34,7 +34,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 1);
 
             // Spiritmaster Ring
-            _builder.Create(RecipeType.SpiritmasterRing, SkillType.Smithery)
+            _builder.Create(RecipeType.SpiritmasterRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("sm_ring")
                 .Level(1)
@@ -45,7 +45,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 1);
 
             // Combat Ring
-            _builder.Create(RecipeType.CombatRing, SkillType.Smithery)
+            _builder.Create(RecipeType.CombatRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("com_ring")
                 .Level(1)
@@ -56,7 +56,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 1);
 
             // Advent Ring
-            _builder.Create(RecipeType.AdventRing, SkillType.Smithery)
+            _builder.Create(RecipeType.AdventRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("advent_ring")
                 .Level(10)
@@ -68,7 +68,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 3);
 
             // Amateur Ring
-            _builder.Create(RecipeType.AmateurRing, SkillType.Smithery)
+            _builder.Create(RecipeType.AmateurRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("engi_ring_1")
                 .Level(10)
@@ -80,7 +80,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 3);
 
             // Cloth Ring
-            _builder.Create(RecipeType.ClothRing, SkillType.Smithery)
+            _builder.Create(RecipeType.ClothRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("fabr_ring_1")
                 .Level(10)
@@ -92,7 +92,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 3);
 
             // Chef Ring
-            _builder.Create(RecipeType.ChefRing, SkillType.Smithery)
+            _builder.Create(RecipeType.ChefRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("chef_ring_1")
                 .Level(10)
@@ -107,7 +107,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier2()
         {
             // Titan Ring
-            _builder.Create(RecipeType.TitanRing, SkillType.Smithery)
+            _builder.Create(RecipeType.TitanRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("tit_ring")
                 .Level(11)
@@ -118,7 +118,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 1);
 
             // Vivid Ring
-            _builder.Create(RecipeType.VividRing, SkillType.Smithery)
+            _builder.Create(RecipeType.VividRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("viv_ring")
                 .Level(11)
@@ -129,7 +129,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 1);
 
             // Valor Ring
-            _builder.Create(RecipeType.ValorRing, SkillType.Smithery)
+            _builder.Create(RecipeType.ValorRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("val_ring")
                 .Level(11)
@@ -140,7 +140,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 1);
 
             // Frontier Ring
-            _builder.Create(RecipeType.FrontierRing, SkillType.Smithery)
+            _builder.Create(RecipeType.FrontierRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("frontier_ring")
                 .Level(20)
@@ -152,7 +152,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 3);
 
             // Worker Ring
-            _builder.Create(RecipeType.WorkerRing, SkillType.Smithery)
+            _builder.Create(RecipeType.WorkerRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("engi_ring_2")
                 .Level(20)
@@ -164,7 +164,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 3);
 
             // Linen Ring
-            _builder.Create(RecipeType.LinenRing, SkillType.Smithery)
+            _builder.Create(RecipeType.LinenRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("fabr_ring_2")
                 .Level(20)
@@ -176,7 +176,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 3);
 
             // Velveteen Ring
-            _builder.Create(RecipeType.VelveteenRing, SkillType.Smithery)
+            _builder.Create(RecipeType.VelveteenRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("chef_ring_2")
                 .Level(20)
@@ -191,7 +191,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier3()
         {
             // Quark Ring
-            _builder.Create(RecipeType.QuarkRing, SkillType.Smithery)
+            _builder.Create(RecipeType.QuarkRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("qk_ring")
                 .Level(21)
@@ -202,7 +202,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 1);
 
             // Reginal Ring
-            _builder.Create(RecipeType.ReginalRing, SkillType.Smithery)
+            _builder.Create(RecipeType.ReginalRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("reg_ring")
                 .Level(21)
@@ -213,7 +213,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 1);
 
             // Forza Ring
-            _builder.Create(RecipeType.ForzaRing, SkillType.Smithery)
+            _builder.Create(RecipeType.ForzaRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("for_ring")
                 .Level(21)
@@ -224,7 +224,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 1);
 
             // Majestic Ring
-            _builder.Create(RecipeType.MajesticRing, SkillType.Smithery)
+            _builder.Create(RecipeType.MajesticRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("majestic_ring")
                 .Level(30)
@@ -236,7 +236,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 3);
 
             // Mechanic Ring
-            _builder.Create(RecipeType.MechanicRing, SkillType.Smithery)
+            _builder.Create(RecipeType.MechanicRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("engi_ring_3")
                 .Level(30)
@@ -248,7 +248,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 3);
 
             // Designer Ring
-            _builder.Create(RecipeType.DesignerRing, SkillType.Smithery)
+            _builder.Create(RecipeType.DesignerRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("fabr_ring_3")
                 .Level(30)
@@ -260,7 +260,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 3);
 
             // Silk Ring
-            _builder.Create(RecipeType.SilkRing, SkillType.Smithery)
+            _builder.Create(RecipeType.SilkRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("chef_ring_3")
                 .Level(30)
@@ -275,7 +275,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier4()
         {
             // Argos Ring
-            _builder.Create(RecipeType.ArgosRing, SkillType.Smithery)
+            _builder.Create(RecipeType.ArgosRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("ar_ring")
                 .Level(31)
@@ -286,7 +286,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 1);
 
             // Grenada Ring
-            _builder.Create(RecipeType.GrenadaRing, SkillType.Smithery)
+            _builder.Create(RecipeType.GrenadaRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("gr_ring")
                 .Level(31)
@@ -297,7 +297,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 1);
 
             // Survival Ring
-            _builder.Create(RecipeType.SurvivalRing, SkillType.Smithery)
+            _builder.Create(RecipeType.SurvivalRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("sur_ring")
                 .Level(31)
@@ -308,7 +308,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 1);
 
             // Dream Ring
-            _builder.Create(RecipeType.DreamRing, SkillType.Smithery)
+            _builder.Create(RecipeType.DreamRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("majestic_ring001")
                 .Level(40)
@@ -320,7 +320,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 3);
 
             // Devotion Ring
-            _builder.Create(RecipeType.DevotionRing, SkillType.Smithery)
+            _builder.Create(RecipeType.DevotionRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("engi_ring_4")
                 .Level(40)
@@ -332,7 +332,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 3);
 
             // Oasis Ring
-            _builder.Create(RecipeType.OasisRing, SkillType.Smithery)
+            _builder.Create(RecipeType.OasisRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("fabr_ring_4")
                 .Level(40)
@@ -344,7 +344,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 3);
 
             // Vintage Ring
-            _builder.Create(RecipeType.VintageRing, SkillType.Smithery)
+            _builder.Create(RecipeType.VintageRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("chef_ring_4")
                 .Level(40)
@@ -359,7 +359,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier5()
         {
             // Eclipse Ring
-            _builder.Create(RecipeType.EclipseRing, SkillType.Smithery)
+            _builder.Create(RecipeType.EclipseRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("ec_ring")
                 .Level(41)
@@ -370,7 +370,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 1);
 
             // Transcendent Ring
-            _builder.Create(RecipeType.TranscendentRing, SkillType.Smithery)
+            _builder.Create(RecipeType.TranscendentRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("tran_ring")
                 .Level(41)
@@ -381,7 +381,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 1);
 
             // Supreme Ring
-            _builder.Create(RecipeType.SupremeRing, SkillType.Smithery)
+            _builder.Create(RecipeType.SupremeRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("sup_ring")
                 .Level(41)
@@ -392,7 +392,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 1);
 
             // Eternal Ring
-            _builder.Create(RecipeType.EternalRing, SkillType.Smithery)
+            _builder.Create(RecipeType.EternalRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("eterenal_ring")
                 .Level(50)
@@ -404,7 +404,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Skysteel Ring
-            _builder.Create(RecipeType.SkysteelRing, SkillType.Smithery)
+            _builder.Create(RecipeType.SkysteelRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("engi_ring_5")
                 .Level(50)
@@ -416,7 +416,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Rose Ring
-            _builder.Create(RecipeType.RoseRing, SkillType.Smithery)
+            _builder.Create(RecipeType.RoseRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("fabr_ring_5")
                 .Level(50)
@@ -428,7 +428,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Moonflame Ring
-            _builder.Create(RecipeType.MoonflameRing, SkillType.Smithery)
+            _builder.Create(RecipeType.MoonflameRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("chef_ring_5")
                 .Level(50)
@@ -440,7 +440,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Chaos Ring
-            _builder.Create(RecipeType.ChaosRing, SkillType.Smithery)
+            _builder.Create(RecipeType.ChaosRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("ch_ring")
                 .Level(52)
@@ -458,7 +458,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ref_keromber", 5);
 
             // Magus Ring
-            _builder.Create(RecipeType.MagusRing, SkillType.Smithery)
+            _builder.Create(RecipeType.MagusRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("mag_ring")
                 .Level(52)
@@ -476,7 +476,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ref_keromber", 5);
 
             // Immortal Ring
-            _builder.Create(RecipeType.ImmortalRing, SkillType.Smithery)
+            _builder.Create(RecipeType.ImmortalRing, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Ring)
                 .Resref("imm_ring")
                 .Level(52)

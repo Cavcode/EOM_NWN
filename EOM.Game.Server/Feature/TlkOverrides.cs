@@ -205,15 +205,11 @@ namespace EOM.Game.Server.Feature
 
                         foreach (var requirement in abilityDetail.Requirements)
                         {
-                            if (requirement.GetType() == typeof(AbilityRequirementFP))
+
+                            if (requirement.GetType() == typeof(AbilityRequirementMagick))
                             {
-                                var req = (AbilityRequirementFP)requirement;
-                                fp = req.RequiredFP;
-                            }
-                            else if (requirement.GetType() == typeof(AbilityRequirementStamina))
-                            {
-                                var req = (AbilityRequirementStamina)requirement;
-                                stm = req.RequiredSTM;
+                                var req = (AbilityRequirementMagick)requirement;
+                                stm = req.RequiredMP;
                             }
                         }
 

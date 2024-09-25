@@ -6,7 +6,7 @@ using EOM.Game.Server.Feature.GuiDefinition.RefreshEvent;
 using EOM.Game.Server.Service;
 using EOM.Game.Server.Service.GuiService;
 using EOM.Game.Server.Service.GuiService.Component;
-using EOM.Game.Server.Service.SpaceService;
+
 
 namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
 {
@@ -156,30 +156,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             }
         }
 
-        private void UpdateShield(ShipStatus shipStatus)
-        {
-            var currentShields = shipStatus.Shield;
-            var maxShields = shipStatus.MaxShield;
-            Bar1Value = $"{currentShields} / {maxShields}";
-            Bar1Progress = maxShields <= 0 ? 0 : (float)currentShields / (float)maxShields > 1.0f ? 1.0f : (float)currentShields / (float)maxShields;
-        }
-
-        private void UpdateHull(ShipStatus shipStatus)
-        {
-            var currentHull = shipStatus.Hull;
-            var maxHull = shipStatus.MaxHull;
-            Bar2Value = $"{currentHull} / {maxHull}";
-            Bar2Progress = maxHull <= 0 ? 0 : (float)currentHull / (float)maxHull > 1.0f ? 1.0f : (float)currentHull / (float)maxHull;
-        }
-
-        private void UpdateCapacitor(ShipStatus shipStatus)
-        {
-            var currentCapacitor = shipStatus.Capacitor;
-            var maxCapacitor = shipStatus.MaxCapacitor;
-            Bar3Value = $"{currentCapacitor} / {maxCapacitor}";
-            Bar3Progress = maxCapacitor <= 0 ? 0 : (float)currentCapacitor / (float)maxCapacitor > 1.0f ? 1.0f : (float)currentCapacitor / (float)maxCapacitor;
-        }
-
         private void UpdateHP()
         {
             var currentHP = GetCurrentHitPoints(Player);
@@ -203,30 +179,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
 
         private void UpdateSingleData(PlayerStatusRefreshEvent.StatType type)
         {
-            if (Space.IsPlayerInSpaceMode(Player))
-            {
-                ToggleLabels(false);
-                Bar1Color = _shieldColor;
-                Bar2Color = _hullColor;
-                Bar3Color = _capacitorColor;
-
-                var shipStatus = Space.GetShipStatus(Player);
-
-                if (type == PlayerStatusRefreshEvent.StatType.Shield)
-                {
-                    UpdateShield(shipStatus);
-                }
-                else if (type == PlayerStatusRefreshEvent.StatType.Hull)
-                {
-                    UpdateHull(shipStatus);
-                }
-                else if (type == PlayerStatusRefreshEvent.StatType.Capacitor)
-                {
-                    UpdateCapacitor(shipStatus);
-                }
-            }
-            else
-            {
                 ToggleLabels(true);
                 Bar1Color = _hpColor;
                 Bar2Color = _stmColor;
@@ -240,31 +192,16 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 {
                     UpdateMP();
                 }
-            }
         }
 
         private void UpdateAllData()
         {
-            if (Space.IsPlayerInSpaceMode(Player))
-            {
-                ToggleLabels(false);
-                Bar1Color = _shieldColor;
-                Bar2Color = _hullColor;
-                Bar3Color = _capacitorColor;
-                var shipStatus = Space.GetShipStatus(Player);
-                UpdateShield(shipStatus);
-                UpdateHull(shipStatus);
-                UpdateCapacitor(shipStatus);
-            }
-            else
-            {
                 ToggleLabels(true);
                 Bar1Color = _hpColor;
                 Bar2Color = _stmColor;
                 Bar3Color = _fpColor;
                 UpdateHP();
                 UpdateMP();
-            }
         }
 
         public void Refresh(PlayerStatusRefreshEvent payload)

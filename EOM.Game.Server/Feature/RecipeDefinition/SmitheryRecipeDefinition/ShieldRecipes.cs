@@ -19,7 +19,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Shields()
         {
             // Battlemaster Shield
-            _builder.Create(RecipeType.BattlemasterShield, SkillType.Smithery)
+            _builder.Create(RecipeType.BattlemasterShield, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Shield)
                 .Resref("bm_shield")
                 .Level(6)
@@ -30,7 +30,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("wood", 2);
 
             // Titan Shield
-            _builder.Create(RecipeType.TitanShield, SkillType.Smithery)
+            _builder.Create(RecipeType.TitanShield, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Shield)
                 .Resref("tit_shield")
                 .Level(16)
@@ -41,7 +41,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fine_wood", 2);
 
             // Quark Shield
-            _builder.Create(RecipeType.QuarkShield, SkillType.Smithery)
+            _builder.Create(RecipeType.QuarkShield, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Shield)
                 .Resref("qk_shield")
                 .Level(26)
@@ -52,7 +52,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ancient_wood", 2);
 
             // Argos Shield
-            _builder.Create(RecipeType.ArgosShield, SkillType.Smithery)
+            _builder.Create(RecipeType.ArgosShield, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Shield)
                 .Resref("ar_shield")
                 .Level(36)
@@ -63,7 +63,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("aracia_wood", 2);
 
             // Eclipse Shield
-            _builder.Create(RecipeType.EclipseShield, SkillType.Smithery)
+            _builder.Create(RecipeType.EclipseShield, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Shield)
                 .Resref("ec_shield")
                 .Level(46)
@@ -74,7 +74,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("hyphae_wood", 2);
 
             // Chaos Shield
-            _builder.Create(RecipeType.ChaosShield, SkillType.Smithery)
+            _builder.Create(RecipeType.ChaosShield, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Shield)
                 .Resref("ch_shield")
                 .Level(52)

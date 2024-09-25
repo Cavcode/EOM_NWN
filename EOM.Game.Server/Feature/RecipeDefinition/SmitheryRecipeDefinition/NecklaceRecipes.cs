@@ -23,7 +23,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier1()
         {
             // Battlemaster Necklace
-            _builder.Create(RecipeType.BattlemasterNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.BattlemasterNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("bm_necklace")
                 .Level(2)
@@ -34,7 +34,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 1);
 
             // Spiritmaster Necklace
-            _builder.Create(RecipeType.SpiritmasterNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.SpiritmasterNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("sm_necklace")
                 .Level(2)
@@ -45,7 +45,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 1);
 
             // Combat Necklace
-            _builder.Create(RecipeType.CombatNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.CombatNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("com_necklace")
                 .Level(2)
@@ -56,7 +56,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 1);
 
             // Advent Necklace
-            _builder.Create(RecipeType.AdventNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.AdventNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("advent_necklace")
                 .Level(10)
@@ -68,7 +68,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 3);
 
             // Amateur Necklace
-            _builder.Create(RecipeType.AmateurNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.AmateurNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("engi_necklace_1")
                 .Level(10)
@@ -80,7 +80,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 3);
 
             // Cloth Necklace
-            _builder.Create(RecipeType.ClothNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.ClothNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("fabr_necklace_1")
                 .Level(10)
@@ -92,7 +92,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 3);
 
             // Chef Necklace
-            _builder.Create(RecipeType.ChefNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.ChefNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("chef_necklace_1")
                 .Level(10)
@@ -107,7 +107,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier2()
         {
             // Titan Necklace
-            _builder.Create(RecipeType.TitanNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.TitanNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("tit_necklace")
                 .Level(12)
@@ -118,7 +118,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 1);
 
             // Vivid Necklace
-            _builder.Create(RecipeType.VividNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.VividNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("viv_necklace")
                 .Level(12)
@@ -129,7 +129,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 1);
 
             // Valor Necklace
-            _builder.Create(RecipeType.ValorNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.ValorNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("val_necklace")
                 .Level(12)
@@ -140,7 +140,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 1);
 
             // Frontier Necklace
-            _builder.Create(RecipeType.FrontierNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.FrontierNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("frontier_necklace")
                 .Level(20)
@@ -152,7 +152,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 3);
 
             // Worker Necklace
-            _builder.Create(RecipeType.WorkerNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.WorkerNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("engi_necklace_2")
                 .Level(20)
@@ -164,7 +164,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 3);
 
             // Linen Necklace
-            _builder.Create(RecipeType.LinenNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.LinenNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("fabr_necklace_2")
                 .Level(20)
@@ -176,7 +176,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 3);
 
             // Velveteen Necklace
-            _builder.Create(RecipeType.VelveteenNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.VelveteenNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("chef_necklace_2")
                 .Level(20)
@@ -191,7 +191,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier3()
         {
             // Quark Necklace
-            _builder.Create(RecipeType.QuarkNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.QuarkNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("qk_necklace")
                 .Level(22)
@@ -202,7 +202,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 1);
 
             // Reginal Necklace
-            _builder.Create(RecipeType.ReginalNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.ReginalNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("reg_necklace")
                 .Level(22)
@@ -213,7 +213,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 1);
 
             // Forza Necklace
-            _builder.Create(RecipeType.ForzaNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.ForzaNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("for_necklace")
                 .Level(22)
@@ -224,7 +224,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 1);
 
             // Majestic Necklace
-            _builder.Create(RecipeType.MajesticNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.MajesticNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("majestic_necklac")
                 .Level(30)
@@ -236,7 +236,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 3);
 
             // Mechanic Necklace
-            _builder.Create(RecipeType.MechanicNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.MechanicNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("engi_necklace_3")
                 .Level(30)
@@ -248,7 +248,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 3);
 
             // Designer Necklace
-            _builder.Create(RecipeType.DesignerNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.DesignerNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("fabr_necklace_3")
                 .Level(30)
@@ -260,7 +260,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 3);
 
             // Silk Necklace
-            _builder.Create(RecipeType.SilkNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.SilkNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("chef_necklace_3")
                 .Level(30)
@@ -275,7 +275,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier4()
         {
             // Argos Necklace
-            _builder.Create(RecipeType.ArgosNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.ArgosNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("ar_necklace")
                 .Level(32)
@@ -286,7 +286,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 1);
 
             // Grenada Necklace
-            _builder.Create(RecipeType.GrenadaNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.GrenadaNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("gr_necklace")
                 .Level(32)
@@ -297,7 +297,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 1);
 
             // Survival Necklace
-            _builder.Create(RecipeType.SurvivalNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.SurvivalNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("sur_necklace")
                 .Level(32)
@@ -308,7 +308,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 1);
 
             // Dream Necklace
-            _builder.Create(RecipeType.DreamNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.DreamNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("dream_necklace")
                 .Level(40)
@@ -320,7 +320,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 3);
 
             // Devotion Necklace
-            _builder.Create(RecipeType.DevotionNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.DevotionNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("engi_necklace_4")
                 .Level(40)
@@ -332,7 +332,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 3);
 
             // Oasis Necklace
-            _builder.Create(RecipeType.OasisNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.OasisNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("fabr_necklace_4")
                 .Level(40)
@@ -344,7 +344,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 3);
 
             // Vintage Necklace
-            _builder.Create(RecipeType.VintageNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.VintageNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("chef_necklace_4")
                 .Level(40)
@@ -359,7 +359,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier5()
         {
             // Eclipse Necklace
-            _builder.Create(RecipeType.EclipseNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.EclipseNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("ec_necklace")
                 .Level(42)
@@ -370,7 +370,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 1);
 
             // Transcendent Necklace
-            _builder.Create(RecipeType.TranscendentNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.TranscendentNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("tran_necklace")
                 .Level(42)
@@ -381,7 +381,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 1);
 
             // Supreme Necklace
-            _builder.Create(RecipeType.SupremeNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.SupremeNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("sup_necklace")
                 .Level(42)
@@ -392,7 +392,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 1);
 
             // Eternal Necklace
-            _builder.Create(RecipeType.EternalNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.EternalNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("eternal_necklace")
                 .Level(50)
@@ -404,7 +404,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Skysteel Necklace
-            _builder.Create(RecipeType.SkysteelNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.SkysteelNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("engi_necklace_5")
                 .Level(50)
@@ -416,7 +416,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Rose Necklace
-            _builder.Create(RecipeType.RoseNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.RoseNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("fabr_necklace_5")
                 .Level(50)
@@ -428,7 +428,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Moonflame Necklace
-            _builder.Create(RecipeType.MoonflameNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.MoonflameNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("chef_necklace_5")
                 .Level(50)
@@ -440,7 +440,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Chaos Necklace
-            _builder.Create(RecipeType.ChaosNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.ChaosNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("ch_necklace")
                 .Level(52)
@@ -458,7 +458,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ref_keromber", 5);
 
             // Magus Necklace
-            _builder.Create(RecipeType.MagusNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.MagusNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("mag_necklace")
                 .Level(52)
@@ -476,7 +476,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ref_keromber", 5);
 
             // Immortal Necklace
-            _builder.Create(RecipeType.ImmortalNecklace, SkillType.Smithery)
+            _builder.Create(RecipeType.ImmortalNecklace, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Necklace)
                 .Resref("imm_necklace")
                 .Level(52)

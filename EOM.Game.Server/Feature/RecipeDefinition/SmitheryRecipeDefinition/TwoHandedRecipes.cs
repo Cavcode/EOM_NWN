@@ -22,7 +22,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void GreatSwords()
         {
             // Basic Great Sword
-            _builder.Create(RecipeType.BasicGreatSword, SkillType.Smithery)
+            _builder.Create(RecipeType.BasicGreatSword, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.GreatSword)
                 .Resref("b_greatsword")
                 .Level(8)
@@ -33,7 +33,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("wood", 3);
 
             // Titan Great Sword
-            _builder.Create(RecipeType.TitanGreatSword, SkillType.Smithery)
+            _builder.Create(RecipeType.TitanGreatSword, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.GreatSword)
                 .Resref("tit_greatsword")
                 .Level(18)
@@ -44,7 +44,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fine_wood", 3);
 
             // Sith Great Sword
-            _builder.Create(RecipeType.SithGreatSword, SkillType.Smithery)
+            _builder.Create(RecipeType.SithGreatSword, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.GreatSword)
                 .Resref("sith_gswd")
                 .Level(14)
@@ -55,7 +55,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fine_wood", 2);
 
             // Delta Great Sword
-            _builder.Create(RecipeType.DeltaGreatSword, SkillType.Smithery)
+            _builder.Create(RecipeType.DeltaGreatSword, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.GreatSword)
                 .Resref("del_greatsword")
                 .Level(28)
@@ -66,7 +66,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ancient_wood", 3);
 
             // Proto Great Sword
-            _builder.Create(RecipeType.ProtoGreatSword, SkillType.Smithery)
+            _builder.Create(RecipeType.ProtoGreatSword, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.GreatSword)
                 .Resref("proto_greatsword")
                 .Level(38)
@@ -77,7 +77,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("aracia_wood", 3);
 
             // Ophidian Great Sword
-            _builder.Create(RecipeType.OphidianGreatSword, SkillType.Smithery)
+            _builder.Create(RecipeType.OphidianGreatSword, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.GreatSword)
                 .Resref("oph_greatsword")
                 .Level(48)
@@ -88,7 +88,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("hyphae_wood", 3);
 
             // Chiro Great Sword
-            _builder.Create(RecipeType.ChiroGreatSword, SkillType.Smithery)
+            _builder.Create(RecipeType.ChiroGreatSword, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.GreatSword)
                 .Resref("chi_greatsword")
                 .Level(52)
@@ -109,7 +109,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Spears()
         {
             // Basic Spear
-            _builder.Create(RecipeType.BasicSpear, SkillType.Smithery)
+            _builder.Create(RecipeType.BasicSpear, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Spear)
                 .Resref("b_spear")
                 .Level(7)
@@ -120,7 +120,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("wood", 2);
 
             // Titan Spear
-            _builder.Create(RecipeType.TitanSpear, SkillType.Smithery)
+            _builder.Create(RecipeType.TitanSpear, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Spear)
                 .Resref("tit_spear")
                 .Level(17)
@@ -131,7 +131,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fine_wood", 2);
 
             // Sith Spear
-            _builder.Create(RecipeType.SithSpear, SkillType.Smithery)
+            _builder.Create(RecipeType.SithSpear, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Spear)
                 .Resref("sith_spear")
                 .Level(13)
@@ -142,7 +142,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fine_wood", 2);
 
             // Delta Spear
-            _builder.Create(RecipeType.DeltaSpear, SkillType.Smithery)
+            _builder.Create(RecipeType.DeltaSpear, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Spear)
                 .Resref("del_spear")
                 .Level(27)
@@ -153,7 +153,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ancient_wood", 2);
 
             // Proto Spear
-            _builder.Create(RecipeType.ProtoSpear, SkillType.Smithery)
+            _builder.Create(RecipeType.ProtoSpear, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Spear)
                 .Resref("proto_spear")
                 .Level(37)
@@ -164,7 +164,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("aracia_wood", 2);
 
             // Ophidian Spear
-            _builder.Create(RecipeType.OphidianSpear, SkillType.Smithery)
+            _builder.Create(RecipeType.OphidianSpear, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Spear)
                 .Resref("oph_spear")
                 .Level(47)
@@ -175,7 +175,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("hyphae_wood", 2);
 
             // Chiro Spear
-            _builder.Create(RecipeType.ChiroSpear, SkillType.Smithery)
+            _builder.Create(RecipeType.ChiroSpear, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Spear)
                 .Resref("chi_spear")
                 .Level(52)
@@ -196,7 +196,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void TwinBlades()
         {
             // Basic Twin Blade
-            _builder.Create(RecipeType.BasicTwinBlade, SkillType.Smithery)
+            _builder.Create(RecipeType.BasicTwinBlade, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.TwinBlade)
                 .Resref("b_twinblade")
                 .Level(8)
@@ -207,7 +207,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("wood", 2);
 
             // Titan Twin Blade
-            _builder.Create(RecipeType.TitanTwinBlade, SkillType.Smithery)
+            _builder.Create(RecipeType.TitanTwinBlade, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.TwinBlade)
                 .Resref("tit_twinblade")
                 .Level(18)
@@ -218,7 +218,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fine_wood", 2);
 
             // Sith Twin Blade
-            _builder.Create(RecipeType.SithTwinBlade, SkillType.Smithery)
+            _builder.Create(RecipeType.SithTwinBlade, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.TwinBlade)
                 .Resref("sith_twinblade")
                 .Level(16)
@@ -229,7 +229,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fine_wood", 2);
 
             // Delta Twin Blade
-            _builder.Create(RecipeType.DeltaTwinBlade, SkillType.Smithery)
+            _builder.Create(RecipeType.DeltaTwinBlade, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.TwinBlade)
                 .Resref("del_twinblade")
                 .Level(28)
@@ -240,7 +240,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ancient_wood", 2);
 
             // Proto Twin Blade
-            _builder.Create(RecipeType.ProtoTwinBlade, SkillType.Smithery)
+            _builder.Create(RecipeType.ProtoTwinBlade, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.TwinBlade)
                 .Resref("proto_twinblade")
                 .Level(38)
@@ -251,7 +251,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("aracia_wood", 2);
 
             // Ophidian Twin Blade
-            _builder.Create(RecipeType.OphidianTwinBlade, SkillType.Smithery)
+            _builder.Create(RecipeType.OphidianTwinBlade, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.TwinBlade)
                 .Resref("oph_twinblade")
                 .Level(48)
@@ -262,7 +262,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("hyphae_wood", 2);
 
             // Chiro Twin Blade
-            _builder.Create(RecipeType.ChiroTwinBlade, SkillType.Smithery)
+            _builder.Create(RecipeType.ChiroTwinBlade, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.TwinBlade)
                 .Resref("chi_twinblade")
                 .Level(52)
@@ -283,7 +283,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Saberstaffs()
         {
             // Twin Electroblade I
-            _builder.Create(RecipeType.TwinElectroblade1, SkillType.Smithery)
+            _builder.Create(RecipeType.TwinElectroblade1, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Saberstaff)
                 .Resref("twin_elec_1")
                 .Level(7)
@@ -294,7 +294,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ref_veldite", 3);
 
             // Twin Electroblade II
-            _builder.Create(RecipeType.TwinElectroblade2, SkillType.Smithery)
+            _builder.Create(RecipeType.TwinElectroblade2, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Saberstaff)
                 .Resref("twin_elec_2")
                 .Level(17)
@@ -305,7 +305,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ref_scordspar", 3);
 
             // Twin Electroblade III
-            _builder.Create(RecipeType.TwinElectroblade3, SkillType.Smithery)
+            _builder.Create(RecipeType.TwinElectroblade3, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Saberstaff)
                 .Resref("twin_elec_3")
                 .Level(27)
@@ -316,7 +316,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ref_plagionite", 3);
 
             // Twin Electroblade IV
-            _builder.Create(RecipeType.TwinElectroblade4, SkillType.Smithery)
+            _builder.Create(RecipeType.TwinElectroblade4, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Saberstaff)
                 .Resref("twin_elec_4")
                 .Level(37)
@@ -327,7 +327,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ref_keromber", 3);
 
             // Twin Electroblade V
-            _builder.Create(RecipeType.TwinElectroblade5, SkillType.Smithery)
+            _builder.Create(RecipeType.TwinElectroblade5, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Saberstaff)
                 .Resref("twin_elec_5")
                 .Level(47)
@@ -338,7 +338,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ref_jasioclase", 3);
 
             // Chiro Twin Electroblade
-            _builder.Create(RecipeType.ChiroTwinElectroblade, SkillType.Smithery)
+            _builder.Create(RecipeType.ChiroTwinElectroblade, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Saberstaff)
                 .Resref("chi_twinelec")
                 .Level(52)
@@ -356,7 +356,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ref_keromber", 5);
 
             // Training Saberstaff I
-            _builder.Create(RecipeType.TrainingSaberstaff1, SkillType.Smithery)
+            _builder.Create(RecipeType.TrainingSaberstaff1, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Saberstaff)
                 .Resref("trn_saberstaff_1")
                 .Level(9)
@@ -369,7 +369,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("elec_ruined", 4);
 
             // Training Saberstaff II
-            _builder.Create(RecipeType.TrainingSaberstaff2, SkillType.Smithery)
+            _builder.Create(RecipeType.TrainingSaberstaff2, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Saberstaff)
                 .Resref("trn_saberstaff_2")
                 .Level(19)
@@ -382,7 +382,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("elec_flawed", 4);
 
             // Training Saberstaff III
-            _builder.Create(RecipeType.TrainingSaberstaff3, SkillType.Smithery)
+            _builder.Create(RecipeType.TrainingSaberstaff3, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Saberstaff)
                 .Resref("trn_saberstaff_3")
                 .Level(29)
@@ -395,7 +395,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("elec_good", 4);
 
             // Training Saberstaff IV
-            _builder.Create(RecipeType.TrainingSaberstaff4, SkillType.Smithery)
+            _builder.Create(RecipeType.TrainingSaberstaff4, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Saberstaff)
                 .Resref("trn_saberstaff_4")
                 .Level(39)
@@ -408,7 +408,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("elec_imperfect", 4);
 
             // Training Saberstaff V
-            _builder.Create(RecipeType.TrainingSaberstaff5, SkillType.Smithery)
+            _builder.Create(RecipeType.TrainingSaberstaff5, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Saberstaff)
                 .Resref("trn_saberstaff_5")
                 .Level(49)
@@ -421,7 +421,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("elec_high", 4);
 
             // Saberstaff Upgrade I
-            _builder.Create(RecipeType.SaberstaffUpgradeKit1, SkillType.Smithery)
+            _builder.Create(RecipeType.SaberstaffUpgradeKit1, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Saberstaff)
                 .Resref("saberstaff_upg1")
                 .Level(52)

@@ -23,7 +23,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier1()
         {
             // Battlemaster Cloak
-            _builder.Create(RecipeType.BattlemasterCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.BattlemasterCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("bm_cloak")
                 .Level(8)
@@ -34,7 +34,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_ruined", 3);
 
             // Spiritmaster Cloak
-            _builder.Create(RecipeType.SpiritmasterCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.SpiritmasterCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("sm_cloak")
                 .Level(8)
@@ -45,7 +45,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_ruined", 3);
 
             // Combat Cloak
-            _builder.Create(RecipeType.CombatCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.CombatCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("com_cloak")
                 .Level(8)
@@ -56,7 +56,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_ruined", 3);
 
             // Advent Cloak
-            _builder.Create(RecipeType.AdventCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.AdventCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("advent_cloak")
                 .Level(10)
@@ -68,7 +68,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 3);
 
             // Amateur Cloak
-            _builder.Create(RecipeType.AmateurCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.AmateurCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("engi_cloak_1")
                 .Level(10)
@@ -80,7 +80,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 3);
 
             // Cloth Cloak
-            _builder.Create(RecipeType.ClothCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.ClothCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("fabr_belt_1")
                 .Level(10)
@@ -92,7 +92,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 3);
 
             // Chef Cloak
-            _builder.Create(RecipeType.ChefCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.ChefCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("chef_cloak_1")
                 .Level(10)
@@ -107,7 +107,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier2()
         {
             // Titan Cloak
-            _builder.Create(RecipeType.TitanCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.TitanCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("tit_cloak")
                 .Level(18)
@@ -118,7 +118,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_flawed", 3);
 
             // Vivid Cloak
-            _builder.Create(RecipeType.VividCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.VividCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("viv_cloak")
                 .Level(18)
@@ -129,7 +129,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_flawed", 3);
 
             // Valor Cloak
-            _builder.Create(RecipeType.ValorCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.ValorCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("val_cloak")
                 .Level(18)
@@ -140,7 +140,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_flawed", 3);
 
             // Frontier Cloak
-            _builder.Create(RecipeType.FrontierCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.FrontierCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("frontier_cloak")
                 .Level(20)
@@ -152,7 +152,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 3);
 
             // Worker Cloak
-            _builder.Create(RecipeType.WorkerCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.WorkerCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("engi_cloak_2")
                 .Level(20)
@@ -164,7 +164,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 3);
 
             // Linen Cloak
-            _builder.Create(RecipeType.LinenCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.LinenCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("fabr_cloak_2")
                 .Level(20)
@@ -176,7 +176,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 3);
 
             // Velveteen Cloak
-            _builder.Create(RecipeType.VelveteenCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.VelveteenCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("chef_cloak_2")
                 .Level(20)
@@ -191,7 +191,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier3()
         {
             // Quark Cloak
-            _builder.Create(RecipeType.QuarkCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.QuarkCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("qk_cloak")
                 .Level(28)
@@ -202,7 +202,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_good", 3);
 
             // Reginal Cloak
-            _builder.Create(RecipeType.ReginalCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.ReginalCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("reg_cloak")
                 .Level(28)
@@ -213,7 +213,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_good", 3);
 
             // Forza Cloak
-            _builder.Create(RecipeType.ForzaCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.ForzaCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("for_cloak")
                 .Level(28)
@@ -224,7 +224,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_good", 3);
 
             // Majestic Cloak
-            _builder.Create(RecipeType.MajesticCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.MajesticCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("majestic_cloak")
                 .Level(30)
@@ -236,7 +236,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 3);
 
             // Mechanic Cloak
-            _builder.Create(RecipeType.MechanicCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.MechanicCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("engi_cloak_3")
                 .Level(30)
@@ -248,7 +248,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 3);
 
             // Designer Cloak
-            _builder.Create(RecipeType.DesignerCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.DesignerCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("fabr_cloak_3")
                 .Level(30)
@@ -260,7 +260,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 3);
 
             // Silk Cloak
-            _builder.Create(RecipeType.SilkCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.SilkCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("chef_cloak_3")
                 .Level(30)
@@ -276,7 +276,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier4()
         {
             // Argos Cloak
-            _builder.Create(RecipeType.ArgosCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.ArgosCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("ar_cloak")
                 .Level(38)
@@ -287,7 +287,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_imperfect", 3);
 
             // Grenada Cloak
-            _builder.Create(RecipeType.GrenadaCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.GrenadaCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("gre_cloak")
                 .Level(38)
@@ -298,7 +298,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_imperfect", 3);
 
             // Survival Cloak
-            _builder.Create(RecipeType.SurvivalCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.SurvivalCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("sur_cloak")
                 .Level(38)
@@ -309,7 +309,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_imperfect", 3);
 
             // Dream Cloak
-            _builder.Create(RecipeType.DreamCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.DreamCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("dream_cloak")
                 .Level(40)
@@ -321,7 +321,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 3);
 
             // Devotion Cloak
-            _builder.Create(RecipeType.DevotionCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.DevotionCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("engi_cloak_4")
                 .Level(40)
@@ -333,7 +333,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 3);
 
             // Oasis Cloak
-            _builder.Create(RecipeType.OasisCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.OasisCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("fabr_cloak_4")
                 .Level(40)
@@ -345,7 +345,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 3);
 
             // Vintage Cloak
-            _builder.Create(RecipeType.VintageCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.VintageCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("chef_cloak_4")
                 .Level(40)
@@ -360,7 +360,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier5()
         {
             // Eclipse Cloak
-            _builder.Create(RecipeType.EclipseCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.EclipseCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("ec_cloak")
                 .Level(48)
@@ -371,7 +371,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_high", 3);
 
             // Transcendent Cloak
-            _builder.Create(RecipeType.TranscendentCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.TranscendentCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("tran_cloak")
                 .Level(48)
@@ -382,7 +382,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_high", 3);
 
             // Supreme Cloak
-            _builder.Create(RecipeType.SupremeCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.SupremeCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("sup_cloak")
                 .Level(48)
@@ -393,7 +393,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_high", 3);
 
             // Eternal Cloak
-            _builder.Create(RecipeType.EternalCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.EternalCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("eternal_cloak")
                 .Level(50)
@@ -405,7 +405,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Skysteel Cloak
-            _builder.Create(RecipeType.SkysteelCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.SkysteelCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("engi_cloak_5")
                 .Level(50)
@@ -417,7 +417,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Rose Cloak
-            _builder.Create(RecipeType.RoseCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.RoseCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("fabr_cloak_5")
                 .Level(50)
@@ -429,7 +429,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Moonflame Cloak
-            _builder.Create(RecipeType.MoonflameCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.MoonflameCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("chef_cloak_5")
                 .Level(50)
@@ -441,7 +441,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Chaos Cloak
-            _builder.Create(RecipeType.ChaosCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.ChaosCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("ch_cloak")
                 .Level(52)
@@ -459,7 +459,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ref_keromber", 5);
 
             // Magus Cloak
-            _builder.Create(RecipeType.MagusCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.MagusCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("mag_cloak")
                 .Level(52)
@@ -477,7 +477,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ref_keromber", 5);
 
             // Immortal Cloak
-            _builder.Create(RecipeType.ImmortalCloak, SkillType.Smithery)
+            _builder.Create(RecipeType.ImmortalCloak, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Cloak)
                 .Resref("imm_cloak")
                 .Level(52)

@@ -105,7 +105,6 @@ namespace EOM.Game.Server.Feature.StatusEffectDefinition
 
                     ApplyEffectToObject(DurationType.Instant, EffectHeal(hpAmount), target);
                     Stat.RestoreMagick(target, stmAmount);
-                    Stat.RestoreFP(target, fpAmount);
                 })
                 .RemoveAction((target, effectData) =>
                 {

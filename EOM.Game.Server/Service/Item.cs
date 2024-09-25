@@ -945,7 +945,7 @@ namespace EOM.Game.Server.Service
         public static string CanBePersistentlyStored(uint player, uint item)
         {
             var resref = GetResRef(item);
-            string[] disallowedResrefs = { Droid.DroidControlItemResref };
+            string[] disallowedResrefs = { };
 
             if (GetItemPossessor(item) != player)
             {

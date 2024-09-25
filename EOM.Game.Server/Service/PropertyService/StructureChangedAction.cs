@@ -192,7 +192,6 @@ namespace EOM.Game.Server.Service.PropertyService
                 var instance = Property.GetRegisteredInstance(interiorId);
                 var dockPoint = GetLandingWaypoint(instance.Area);
 
-                Space.RemoveLandingPoint(dockPoint, cityArea);
             };
         }
 

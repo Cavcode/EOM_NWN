@@ -23,7 +23,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier1()
         {
             // Battlemaster Breastplate
-            _builder.Create(RecipeType.BattlemasterBreastplate, SkillType.Smithery)
+            _builder.Create(RecipeType.BattlemasterBreastplate, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Breastplate)
                 .Resref("bm_armor")
                 .Level(7)
@@ -34,7 +34,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_ruined", 2);
 
             // Spiritmaster Tunic
-            _builder.Create(RecipeType.SpiritmasterTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.SpiritmasterTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("sm_tunic")
                 .Level(7)
@@ -45,7 +45,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_ruined", 2);
 
             // Combat Tunic
-            _builder.Create(RecipeType.CombatTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.CombatTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("com_tunic")
                 .Level(7)
@@ -56,7 +56,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_ruined", 2);
 
             // Advent Tunic
-            _builder.Create(RecipeType.AdventTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.AdventTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("smth_armor_1")
                 .Level(10)
@@ -68,7 +68,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 3);
 
             // Amateur Tunic
-            _builder.Create(RecipeType.AmateurTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.AmateurTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("engi_armor_1")
                 .Level(10)
@@ -80,7 +80,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 3);
 
             // Cloth Tunic
-            _builder.Create(RecipeType.ClothTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.ClothTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("fabr_armor_1")
                 .Level(10)
@@ -92,7 +92,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 3);
 
             // Chef Tunic
-            _builder.Create(RecipeType.ChefTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.ChefTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("cook_armor_1")
                 .Level(10)
@@ -107,7 +107,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier2()
         {
             // Titan Breastplate
-            _builder.Create(RecipeType.TitanBreastplate, SkillType.Smithery)
+            _builder.Create(RecipeType.TitanBreastplate, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Breastplate)
                 .Resref("tit_armor")
                 .Level(17)
@@ -118,7 +118,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_flawed", 2);
 
             // Vivid Tunic
-            _builder.Create(RecipeType.VividTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.VividTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("viv_tunic")
                 .Level(17)
@@ -129,7 +129,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_flawed", 2);
 
             // Valor Tunic
-            _builder.Create(RecipeType.ValorTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.ValorTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("val_tunic")
                 .Level(17)
@@ -140,7 +140,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_flawed", 2);
 
             // Frontier Tunic
-            _builder.Create(RecipeType.FrontierTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.FrontierTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("smth_armor_2")
                 .Level(20)
@@ -152,7 +152,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 3);
 
             // Worker Tunic
-            _builder.Create(RecipeType.WorkerTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.WorkerTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("engi_armor_2")
                 .Level(20)
@@ -164,7 +164,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 3);
 
             // Linen Tunic
-            _builder.Create(RecipeType.LinenTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.LinenTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("fabr_armor_2")
                 .Level(20)
@@ -176,7 +176,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 3);
 
             // Velveteen Tunic
-            _builder.Create(RecipeType.VelveteenTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.VelveteenTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("cook_armor_2")
                 .Level(20)
@@ -191,7 +191,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier3()
         {
             // Quark Breastplate
-            _builder.Create(RecipeType.QuarkBreastplate, SkillType.Smithery)
+            _builder.Create(RecipeType.QuarkBreastplate, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Breastplate)
                 .Resref("qk_armor")
                 .Level(27)
@@ -202,7 +202,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_good", 2);
 
             // Reginal Tunic
-            _builder.Create(RecipeType.ReginalTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.ReginalTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("reg_tunic")
                 .Level(27)
@@ -213,7 +213,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_good", 2);
 
             // Forza Tunic
-            _builder.Create(RecipeType.ForzaTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.ForzaTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("for_tunic")
                 .Level(27)
@@ -224,7 +224,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_good", 2);
 
             // Majestic Tunic
-            _builder.Create(RecipeType.MajesticTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.MajesticTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("smth_armor_3")
                 .Level(30)
@@ -236,7 +236,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 3);
 
             // Mechanic Tunic
-            _builder.Create(RecipeType.MechanicTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.MechanicTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("engi_armor_3")
                 .Level(30)
@@ -248,7 +248,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 3);
 
             // Designer Tunic
-            _builder.Create(RecipeType.DesignerTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.DesignerTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("fabr_armor_3")
                 .Level(30)
@@ -260,7 +260,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 3);
 
             // Silk Tunic
-            _builder.Create(RecipeType.SilkTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.SilkTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("cook_armor_3")
                 .Level(30)
@@ -275,7 +275,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier4()
         {
             // Argos Breastplate
-            _builder.Create(RecipeType.ArgosBreastplate, SkillType.Smithery)
+            _builder.Create(RecipeType.ArgosBreastplate, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Breastplate)
                 .Resref("ar_armor")
                 .Level(37)
@@ -286,7 +286,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_imperfect", 2);
 
             // Grenada Tunic
-            _builder.Create(RecipeType.GrenadaTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.GrenadaTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("gr_tunic")
                 .Level(37)
@@ -297,7 +297,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_imperfect", 2);
 
             // Survival Tunic
-            _builder.Create(RecipeType.SurvivalTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.SurvivalTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("sur_tunic")
                 .Level(37)
@@ -308,7 +308,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_imperfect", 2);
 
             // Dream Tunic
-            _builder.Create(RecipeType.DreamTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.DreamTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("smth_armor_4")
                 .Level(40)
@@ -320,7 +320,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 3);
 
             // DevotionTunic
-            _builder.Create(RecipeType.DevotionTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.DevotionTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("engi_armor_4")
                 .Level(40)
@@ -332,7 +332,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 3);
 
             // Oasis Tunic
-            _builder.Create(RecipeType.OasisTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.OasisTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("fabr_armor_4")
                 .Level(40)
@@ -344,7 +344,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 3);
 
             // Vintage Tunic
-            _builder.Create(RecipeType.VintageTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.VintageTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("cook_armor_4")
                 .Level(40)
@@ -359,7 +359,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier5()
         {
             // Eclipse Breastplate
-            _builder.Create(RecipeType.EclipseBreastplate, SkillType.Smithery)
+            _builder.Create(RecipeType.EclipseBreastplate, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Breastplate)
                 .Resref("ec_armor")
                 .Level(47)
@@ -370,7 +370,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_high", 2);
 
             // Transcendent Tunic
-            _builder.Create(RecipeType.TranscendentTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.TranscendentTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("tran_tunic")
                 .Level(47)
@@ -381,7 +381,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_high", 2);
 
             // Supreme Tunic
-            _builder.Create(RecipeType.SupremeTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.SupremeTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("sup_tunic")
                 .Level(47)
@@ -392,7 +392,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_high", 2);
 
             // Eternal Tunic
-            _builder.Create(RecipeType.EternalTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.EternalTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("smth_armor_5")
                 .Level(50)
@@ -404,7 +404,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Skysteel Tunic
-            _builder.Create(RecipeType.SkysteelTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.SkysteelTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("engi_armor_5")
                 .Level(50)
@@ -416,7 +416,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Rose Tunic
-            _builder.Create(RecipeType.RoseTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.RoseTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("fabr_armor_5")
                 .Level(50)
@@ -428,7 +428,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Moonflame Tunic
-            _builder.Create(RecipeType.MoonflameTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.MoonflameTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("cook_armor_5")
                 .Level(50)
@@ -440,7 +440,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Chaos Breastplate
-            _builder.Create(RecipeType.ChaosBreastplate, SkillType.Smithery)
+            _builder.Create(RecipeType.ChaosBreastplate, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Breastplate)
                 .Resref("ch_armor")
                 .Level(52)
@@ -458,7 +458,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ref_keromber", 5);
 
             // Magus Tunic
-            _builder.Create(RecipeType.MagusTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.MagusTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("mag_tunic")
                 .Level(52)
@@ -476,7 +476,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ref_keromber", 5);
 
             // Immortal Tunic
-            _builder.Create(RecipeType.ImmortalTunic, SkillType.Smithery)
+            _builder.Create(RecipeType.ImmortalTunic, SkillType.Blacksmithing)
                 .Category(RecipeCategoryType.Tunic)
                 .Resref("imm_tunic")
                 .Level(52)

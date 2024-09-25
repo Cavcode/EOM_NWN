@@ -23,7 +23,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier1()
         {
             // Battlemaster Bracer
-            _builder.Create(RecipeType.BattlemasterBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.BattlemasterBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Bracer)
                 .Resref("bm_bracer")
                 .Level(3)
@@ -34,7 +34,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_ruined", 1);
 
             // Spiritmaster Gloves
-            _builder.Create(RecipeType.SpiritmasterGloves, SkillType.Smithery)
+            _builder.Create(RecipeType.SpiritmasterGloves, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("sm_gloves")
                 .Level(3)
@@ -45,7 +45,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_ruined", 1);
 
             // Combat Gloves
-            _builder.Create(RecipeType.CombatGloves, SkillType.Smithery)
+            _builder.Create(RecipeType.CombatGloves, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("com_gloves")
                 .Level(3)
@@ -56,7 +56,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_ruined", 1);
 
             // Advent Bracer
-            _builder.Create(RecipeType.AdventBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.AdventBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("advent_bracer")
                 .Level(10)
@@ -68,7 +68,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 3);
 
             // Amateur Bracer
-            _builder.Create(RecipeType.AmateurBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.AmateurBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("engi_bracer_1")
                 .Level(10)
@@ -80,7 +80,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 3);
 
             // Cloth Bracer
-            _builder.Create(RecipeType.ClothBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.ClothBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("fabr_bracer_1")
                 .Level(10)
@@ -92,7 +92,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("jade", 3);
 
             // Chef Bracer
-            _builder.Create(RecipeType.ChefBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.ChefBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("chef_bracer_1")
                 .Level(10)
@@ -107,7 +107,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier2()
         {
             // Titan Bracer
-            _builder.Create(RecipeType.TitanBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.TitanBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Bracer)
                 .Resref("tit_bracer")
                 .Level(13)
@@ -118,7 +118,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_flawed", 1);
 
             // Vivid Gloves
-            _builder.Create(RecipeType.VividGloves, SkillType.Smithery)
+            _builder.Create(RecipeType.VividGloves, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("viv_gloves")
                 .Level(13)
@@ -129,7 +129,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_flawed", 1);
 
             // Valor Gloves
-            _builder.Create(RecipeType.ValorGloves, SkillType.Smithery)
+            _builder.Create(RecipeType.ValorGloves, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("val_gloves")
                 .Level(13)
@@ -140,7 +140,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_flawed", 1);
 
             // Frontier Bracer
-            _builder.Create(RecipeType.FrontierBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.FrontierBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("frontier_bracer")
                 .Level(20)
@@ -152,7 +152,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 3);
 
             // Worker Bracer
-            _builder.Create(RecipeType.WorkerBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.WorkerBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("engi_bracer_2")
                 .Level(20)
@@ -164,7 +164,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 3);
 
             // Linen Bracer
-            _builder.Create(RecipeType.LinenBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.LinenBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("fabr_bracer_2")
                 .Level(20)
@@ -176,7 +176,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("agate", 3);
 
             // Velveteen Bracer
-            _builder.Create(RecipeType.VelveteenBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.VelveteenBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("chef_bracer_2")
                 .Level(20)
@@ -191,7 +191,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier3()
         {
             // Quark Bracer
-            _builder.Create(RecipeType.QuarkBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.QuarkBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Bracer)
                 .Resref("qk_bracer")
                 .Level(23)
@@ -202,7 +202,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_good", 1);
 
             // Reginal Gloves
-            _builder.Create(RecipeType.ReginalGloves, SkillType.Smithery)
+            _builder.Create(RecipeType.ReginalGloves, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("reg_gloves")
                 .Level(23)
@@ -213,7 +213,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_good", 1);
 
             // Forza Gloves
-            _builder.Create(RecipeType.ForzaGloves, SkillType.Smithery)
+            _builder.Create(RecipeType.ForzaGloves, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("for_gloves")
                 .Level(23)
@@ -224,7 +224,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_good", 1);
 
             // Majestic Bracer
-            _builder.Create(RecipeType.MajesticBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.MajesticBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("majestic_bracer")
                 .Level(30)
@@ -236,7 +236,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 3);
 
             // Mechanic Bracer
-            _builder.Create(RecipeType.MechanicBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.MechanicBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("engi_bracer_3")
                 .Level(30)
@@ -248,7 +248,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 3);
 
             // Designer Bracer
-            _builder.Create(RecipeType.DesignerBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.DesignerBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("fabr_bracer_3")
                 .Level(30)
@@ -260,7 +260,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("citrine", 3);
 
             // Silk Bracer
-            _builder.Create(RecipeType.SilkBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.SilkBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("chef_bracer_3")
                 .Level(30)
@@ -275,7 +275,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier4()
         {
             // Argos Bracer
-            _builder.Create(RecipeType.ArgosBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.ArgosBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Bracer)
                 .Resref("ar_bracer")
                 .Level(33)
@@ -286,7 +286,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_imperfect", 1);
 
             // Grenada Gloves
-            _builder.Create(RecipeType.GrenadaGloves, SkillType.Smithery)
+            _builder.Create(RecipeType.GrenadaGloves, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("gr_gloves")
                 .Level(33)
@@ -297,7 +297,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_imperfect", 1);
 
             // Survival Gloves
-            _builder.Create(RecipeType.SurvivalGloves, SkillType.Smithery)
+            _builder.Create(RecipeType.SurvivalGloves, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("sur_gloves")
                 .Level(33)
@@ -308,7 +308,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_imperfect", 1);
 
             // Dream Bracer
-            _builder.Create(RecipeType.DreamBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.DreamBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("dream_bracer")
                 .Level(40)
@@ -320,7 +320,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 3);
 
             // Devotion Bracer
-            _builder.Create(RecipeType.DevotionBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.DevotionBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("engi_bracer_4")
                 .Level(40)
@@ -332,7 +332,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 3);
 
             // Oasis Bracer
-            _builder.Create(RecipeType.OasisBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.OasisBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("fabr_bracer_4")
                 .Level(40)
@@ -344,7 +344,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ruby", 3);
 
             // Vintage Bracer
-            _builder.Create(RecipeType.VintageBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.VintageBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("chef_bracer_4")
                 .Level(40)
@@ -359,7 +359,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
         private void Tier5()
         {
             // Eclipse Bracer
-            _builder.Create(RecipeType.EclipseBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.EclipseBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Bracer)
                 .Resref("ec_bracer")
                 .Level(43)
@@ -370,7 +370,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_high", 1);
 
             // Transcendent Gloves
-            _builder.Create(RecipeType.TranscendentGloves, SkillType.Smithery)
+            _builder.Create(RecipeType.TranscendentGloves, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("tran_gloves")
                 .Level(43)
@@ -381,7 +381,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_high", 1);
 
             // Supreme Gloves
-            _builder.Create(RecipeType.SupremeGloves, SkillType.Smithery)
+            _builder.Create(RecipeType.SupremeGloves, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("sup_gloves")
                 .Level(43)
@@ -392,7 +392,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("fiberp_high", 1);
 
             // Eternal Bracer
-            _builder.Create(RecipeType.EternalBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.EternalBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("eternal_bracer")
                 .Level(50)
@@ -404,7 +404,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Skysteel Bracer
-            _builder.Create(RecipeType.SkysteelBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.SkysteelBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("engi_bracer_5")
                 .Level(50)
@@ -416,7 +416,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Rose Bracer
-            _builder.Create(RecipeType.RoseBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.RoseBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("fabr_bracer_5")
                 .Level(50)
@@ -428,7 +428,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Moonflame Bracer
-            _builder.Create(RecipeType.MoonflameBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.MoonflameBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("chef_bracer_5")
                 .Level(50)
@@ -440,7 +440,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("emerald", 3);
 
             // Chaos Bracer
-            _builder.Create(RecipeType.ChaosBracer, SkillType.Smithery)
+            _builder.Create(RecipeType.ChaosBracer, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Bracer)
                 .Resref("ch_bracer")
                 .Level(52)
@@ -458,7 +458,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ref_keromber", 5);
 
             // Magus Gloves
-            _builder.Create(RecipeType.MagusGloves, SkillType.Smithery)
+            _builder.Create(RecipeType.MagusGloves, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("mag_gloves")
                 .Level(52)
@@ -476,7 +476,7 @@ namespace EOM.Game.Server.Feature.RecipeDefinition.SmitheryRecipeDefinition
                 .Component("ref_keromber", 5);
 
             // Immortal Gloves
-            _builder.Create(RecipeType.ImmortalGloves, SkillType.Smithery)
+            _builder.Create(RecipeType.ImmortalGloves, SkillType.Armorsmith)
                 .Category(RecipeCategoryType.Glove)
                 .Resref("imm_gloves")
                 .Level(52)

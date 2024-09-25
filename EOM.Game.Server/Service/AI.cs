@@ -17,7 +17,6 @@ namespace EOM.Game.Server.Service
         public static void CacheAIData()
         {
             _aiDefinitions[AIDefinitionType.Generic] = new GenericAIDefinition();
-            _aiDefinitions[AIDefinitionType.Droid] = new DroidAIDefinition();
         }
 
         /// <summary>

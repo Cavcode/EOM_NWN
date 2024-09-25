@@ -107,7 +107,6 @@ namespace EOM.Game.Server.Feature
             if (!GetIsPC(player) || GetIsDM(player) || GetIsDMPossessed(player))
                 return;
 
-            Gui.PublishRefreshEvent(player, new TargetStatusRefreshEvent());
         }
 
         [NWNEventHandler("mod_enter")]

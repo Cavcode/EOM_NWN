@@ -44,10 +44,7 @@ namespace EOM.Game.Server.Feature
             if (!string.IsNullOrWhiteSpace(canUseItem))
             {
                 var messageTarget = creature;
-                if (Droid.IsDroid(creature))
-                {
-                    messageTarget = GetMaster(creature);
-                }
+     
                 SendMessageToPC(messageTarget, ColorToken.Red(canUseItem));
             }
             
@@ -149,9 +146,9 @@ namespace EOM.Game.Server.Feature
         private static string CanItemBeUsed(uint creature, uint item)
         {
             var isPlayer = GetIsPC(creature);
-            var isDroid = Droid.IsDroid(creature);
 
-            if ((!isPlayer && !isDroid) || GetIsDM(creature) || GetIsDMPossessed(creature)) 
+
+            if ((!isPlayer || GetIsDM(creature) || GetIsDMPossessed(creature)))
                 return string.Empty;
 
             if (Gui.IsWindowOpen(creature, GuiWindowType.Craft))
@@ -169,19 +166,11 @@ namespace EOM.Game.Server.Feature
             var itemHasDroidIP = false;
             Dictionary<PerkType, int> creaturePerks;
 
-            if (isPlayer)
-            {
-                var playerId = GetObjectUUID(creature);
-                var dbPlayer = DB.Get<Player>(playerId);
-                creaturePerks = dbPlayer.Perks;
-            }
-            // Droids
-            else
-            {
-                var controller = Droid.GetControllerItem(creature);
-                var droidDetails = Droid.LoadDroidItemPropertyDetails(controller);
-                creaturePerks = droidDetails.Perks;
-            }
+
+            var playerId = GetObjectUUID(creature);
+            var dbPlayer = DB.Get<Player>(playerId);
+            creaturePerks = dbPlayer.Perks;
+ 
 
             // Check for required perk levels.
             for (var ip = GetFirstItemProperty(item); GetIsItemPropertyValid(ip); ip = GetNextItemProperty(item))

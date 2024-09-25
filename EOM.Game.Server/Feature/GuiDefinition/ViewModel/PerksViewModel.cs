@@ -249,12 +249,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 AvailableSP = $"Available SP: {dbPlayer.UnallocatedSP}";
                 TotalSP = $"Total SP: {dbPlayer.TotalSPAcquired} / {Skill.SkillCap}";
             }
-            else if (IsInBeastPerksMode)
-            {
-                var dbBeast = DB.Get<Beast>(dbPlayer.ActiveBeastId);
-                AvailableSP = $"Available SP: {dbBeast.UnallocatedSP}";
-                TotalSP = $"Total SP: {dbBeast.Level} / {BeastMastery.MaxLevel}";
-            }
 
             var dateRefundAvailable = dbPlayer.DatePerkRefundAvailable ?? now;
             var isRefundAvailable = dateRefundAvailable <= now;
@@ -312,26 +306,11 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             {
                 int rank;
 
-                if (IsInMyPerksMode)
-                {
                     rank = dbPlayer.Perks.ContainsKey(type)
                         ? dbPlayer.Perks[type]
                         : 0;
-                }
-                else
-                {
-                    var dbBeast = DB.Get<Beast>(dbPlayer.ActiveBeastId);
-                    if (dbBeast == null)
-                    {
-                        rank = 0;
-                    }
-                    else
-                    {
-                        rank = dbBeast.Perks.ContainsKey(type)
-                            ? dbBeast.Perks[type]
-                            : 0;
-                    }
-                }
+                
+
 
                 var nextUpgrade = detail.PerkLevels.ContainsKey(rank + 1)
                     ? detail.PerkLevels[rank + 1]
@@ -451,26 +430,12 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             int rank;
 
             // Build the strings used for the details and requirements list.
-            if (IsInMyPerksMode)
-            {
                 rank = dbPlayer.Perks.ContainsKey(selectedPerk)
                     ? dbPlayer.Perks[selectedPerk]
                     : 0;
 
                 unallocatedSP = dbPlayer.UnallocatedSP;
-            }
-            else
-            {
-                var dbBeast = DB.Get<Beast>(dbPlayer.ActiveBeastId);
-                if (dbBeast == null)
-                    return;
-
-                rank = dbBeast.Perks.ContainsKey(selectedPerk)
-                    ? dbBeast.Perks[selectedPerk]
-                    : 0;
-
-                unallocatedSP = dbBeast.UnallocatedSP;
-            }
+            
 
             var currentUpgrade = detail.PerkLevels.ContainsKey(rank)
                 ? detail.PerkLevels[rank]
@@ -577,22 +542,10 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
 
             var playerId = GetObjectUUID(Player);
             var dbPlayer = DB.Get<Player>(playerId);
-            if (IsInMyPerksMode)
-            {
                 rank = dbPlayer.Perks.ContainsKey(selectedPerk)
                     ? dbPlayer.Perks[selectedPerk]
                     : 0;
-            }
-            else
-            {
-                var dbBeast = DB.Get<Beast>(dbPlayer.ActiveBeastId);
-                if (dbBeast == null)
-                    return;
 
-                rank = dbBeast.Perks.ContainsKey(selectedPerk)
-                    ? dbBeast.Perks[selectedPerk]
-                    : 0;
-            }
             
             var detail = Perk.GetPerkDetails(selectedPerk);
             
@@ -615,24 +568,11 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                     detail = Perk.GetPerkDetails(selectedPerk);
                     int unallocatedSP;
 
-                    if (IsInMyPerksMode)
-                    {
                         rank = dbPlayer.Perks.ContainsKey(selectedPerk)
                             ? dbPlayer.Perks[selectedPerk]
                             : 0;
                         unallocatedSP = dbPlayer.UnallocatedSP;
-                    }
-                    else
-                    {
-                        var dbBeast = DB.Get<Beast>(dbPlayer.ActiveBeastId);
-                        if (dbBeast == null)
-                            return;
-
-                        rank = dbBeast.Perks.ContainsKey(selectedPerk)
-                            ? dbBeast.Perks[selectedPerk]
-                            : 0;
-                        unallocatedSP = dbBeast.UnallocatedSP;
-                    }
+ 
 
                     nextUpgrade = detail.PerkLevels.ContainsKey(rank + 1)
                         ? detail.PerkLevels[rank + 1]
@@ -668,26 +608,11 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                     }
 
                     // All validation passes. Perform the upgrade.
-                    if (IsInMyPerksMode)
-                    {
                         dbPlayer.Perks[selectedPerk] = rank + 1;
                         dbPlayer.UnallocatedSP -= nextUpgrade.Price;
                         DB.Set(dbPlayer);
 
                         unallocatedSP = dbPlayer.UnallocatedSP;
-                    }
-                    else
-                    {
-                        var dbBeast = DB.Get<Beast>(dbPlayer.ActiveBeastId);
-                        if (dbBeast == null)
-                            return;
-
-                        dbBeast.Perks[selectedPerk] = rank + 1;
-                        dbBeast.UnallocatedSP -= nextUpgrade.Price;
-                        DB.Set(dbBeast);
-
-                        unallocatedSP = dbBeast.UnallocatedSP;
-                    }
 
                     var newRank = rank + 1;
                     GrantFeats(nextUpgrade);
@@ -760,9 +685,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                         FloatingTextStringOnCreature(canRefund, Player, false);
                         return;
                     }
-
-                    if (IsInMyPerksMode)
-                    {
                         var perkLevel = dbPlayer.Perks[selectedPerk];
                         var refundAmount = perkDetail.PerkLevels
                             .Where(x => x.Key <= perkLevel)
@@ -773,26 +695,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
 
                         Log.Write(LogGroup.PerkRefund, $"REFUND - {playerId} - Refunded Date {DateTime.UtcNow} - Level {perkLevel} - PerkID {selectedPerk}");
                         FloatingTextStringOnCreature($"Perk refunded! You reclaimed {refundAmount} SP.", Player, false);
-                    }
-                    else
-                    {
-                        var dbBeast = DB.Get<Beast>(dbPlayer.ActiveBeastId);
-                        if (dbBeast == null)
-                            return;
 
-                        var perkLevel = dbBeast.Perks[selectedPerk];
-                        var refundAmount = perkDetail.PerkLevels
-                            .Where(x => x.Key <= perkLevel)
-                            .Sum(x => x.Value.Price);
-
-                        dbBeast.UnallocatedSP += refundAmount;
-                        dbBeast.Perks.Remove(selectedPerk);
-
-                        DB.Set(dbBeast);
-
-                        Log.Write(LogGroup.PerkRefund, $"REFUND Beast - {dbBeast.Id} (Owner: {dbPlayer.Id}) - Refunded Date {DateTime.UtcNow} - Level {perkLevel} - PerkID {selectedPerk}");
-                        FloatingTextStringOnCreature($"Perk refunded! Your beast reclaimed {refundAmount} SP.", Player, false);
-                    }
 
                     dbPlayer.DatePerkRefundAvailable = DateTime.UtcNow.AddHours(1);
                     DB.Set(dbPlayer);

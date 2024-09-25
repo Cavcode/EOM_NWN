@@ -293,12 +293,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
 
         public Action OnClickHoloCom() => () =>
         {
-            if (Space.IsPlayerInSpaceMode(Player))
-            {
-                SendMessageToPC(Player, ColorToken.Red("Holocom cannot be used in space."));
-                return;
-            }
-
             Dialog.StartConversation(Player, Player, nameof(HoloComDialog));
         };
 
@@ -432,17 +426,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             if (GetClassByPosition(1, _target) == ClassType.Standard)
             {
                 FP = $"0 / 0";
-            }
-            else
-            {
-                var currentFP = Stat.GetCurrentFP(_target);
-                var maxFP = Stat.GetMaxFP(_target);
-                if (currentFP < 0)
-                    currentFP = 0;
-                if (maxFP < 0)
-                    maxFP = 0;
-
-                FP = $"{currentFP} / {maxFP}";
             }
 
             var currentSTM = Stat.GetCurrentMagick(_target);
@@ -629,7 +612,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
         {
             CharacterType = GetClassByPosition(1, _target) == ClassType.Standard ? "Standard" : "Force Sensitive";
             Race = GetStringByStrRef(Convert.ToInt32(Get2DAString("racialtypes", "Name", (int)GetRacialType(_target))), GetGender(_target));
-            IsHolocomEnabled = !Space.IsPlayerInSpaceMode(_target);
 
             if (IsPlayerMode)
             {

@@ -118,7 +118,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             _racialAppearances[AppearanceType.Wookiee] = new WookieeRacialAppearanceDefinition();
             _racialAppearances[AppearanceType.MonCalamari] = new MonCalamariRacialAppearanceDefinition();
             _racialAppearances[AppearanceType.Ugnaught] = new UgnaughtRacialAppearanceDefinition();
-            _racialAppearances[AppearanceType.Droid] = new DroidRacialAppearanceDefinition();
             _racialAppearances[AppearanceType.Nautolan] = new NautolanRacialAppearanceDefinition();
         }
 
@@ -140,7 +139,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             _armorAppearances[AppearanceType.Wookiee] = new GeneralArmorAppearanceDefinition();
             _armorAppearances[AppearanceType.MonCalamari] = new GeneralArmorAppearanceDefinition();
             _armorAppearances[AppearanceType.Ugnaught] = new GeneralArmorAppearanceDefinition();
-            _armorAppearances[AppearanceType.Droid] = new DroidArmorAppearanceDefinition();
             _armorAppearances[AppearanceType.Nautolan] = new GeneralArmorAppearanceDefinition();
         }
 
