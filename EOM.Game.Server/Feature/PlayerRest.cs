@@ -11,7 +11,7 @@ namespace EOM.Game.Server.Feature
     {
         /// <summary>
         /// When a player rests, cancel the NWN resting mechanic and apply our custom Rest status effect
-        /// which handles recovery of HP, FP, and STM.
+        /// which handles recovery of HP, FP, and MP.
         /// </summary>
         [NWNEventHandler("mod_rest")]
         public static void HandleRest()

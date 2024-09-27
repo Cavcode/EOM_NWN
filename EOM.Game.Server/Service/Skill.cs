@@ -55,7 +55,7 @@ namespace EOM.Game.Server.Service
 
             if (!ignoreBonuses)
             {
-                // Bonus for positive Social modifier.
+                // Bonus for positive Intellect modifier.
                 var social = GetAbilityScore(player, AbilityType.Intellect);
                 if (social > 0)
                     bonusPercentage += social * 0.025f;

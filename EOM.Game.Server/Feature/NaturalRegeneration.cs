@@ -9,7 +9,7 @@ namespace EOM.Game.Server.Feature
     public static class NaturalRegeneration
     {
         /// <summary>
-        /// On module heartbeat, process a player's HP/FP/STM regeneration.
+        /// On module heartbeat, process a player's HP/FP/MP regeneration.
         /// </summary>
         [NWNEventHandler("pc_heartbeat")]
         public static void ProcessRegeneration()

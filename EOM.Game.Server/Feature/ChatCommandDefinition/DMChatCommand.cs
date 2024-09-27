@@ -132,7 +132,7 @@ namespace EOM.Game.Server.Feature.ChatCommandDefinition
         private void Resurrect()
         {
             _builder.Create("rez")
-                .Description("Revives you, heals you to full, and restores all FP/STM.")
+                .Description("Revives you, heals you to full, and restores all FP/MP.")
                 .Permissions(AuthorizationLevel.DM, AuthorizationLevel.Admin)
                 .AvailableToAllOnTestEnvironment()
                 .RequiresTarget(ObjectType.Creature)

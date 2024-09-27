@@ -834,25 +834,25 @@ namespace EOM.Game.Server.Service.PropertyService
             true,
             1)]
         CotWithTable = 150,
-        [Structure("Desk, Control Board Inlay",
+        [Structure("Desk, Ingenuity Board Inlay",
             "_mdrn_pl_df_dscb",
             "",
             true,
             1)]
         DeskControlBoardInlay = 151,
-        [Structure("Desk, Control Center",
+        [Structure("Desk, Ingenuity Center",
             "_mdrn_pl_conso03",
             "",
             true,
             1)]
         DeskControlCenter = 152,
-        [Structure("Desk, Control Center, Large Screen",
+        [Structure("Desk, Ingenuity Center, Large Screen",
             "_mdrn_pl_conso27",
             "",
             true,
             1)]
         DeskControlCenterLargeScreen = 153,
-        [Structure("Desk, Control Center, Wide",
+        [Structure("Desk, Ingenuity Center, Wide",
             "_mdrn_pl_conso19",
             "",
             true,
@@ -864,7 +864,7 @@ namespace EOM.Game.Server.Service.PropertyService
             true,
             1)]
         DeskCornerWithTerminal = 155,
-        [Structure("Desk, Information/Control Center",
+        [Structure("Desk, Information/Ingenuity Center",
             "_mdrn_pl_df_dicc",
             "",
             true,

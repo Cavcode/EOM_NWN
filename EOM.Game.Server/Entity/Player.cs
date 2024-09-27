@@ -92,7 +92,7 @@ namespace EOM.Game.Server.Entity
             Currencies = new Dictionary<CurrencyType, int>();
         }
         
-
+  
         [Indexed]
         public int Version { get; set; }
         [Indexed]

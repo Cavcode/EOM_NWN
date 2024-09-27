@@ -192,7 +192,7 @@ namespace EOM.Game.Server.Feature
 
 
         /// <summary>
-        /// Applies or removes a STM bonus on a creature.
+        /// Applies or removes a MP bonus on a creature.
         /// </summary>
         /// <param name="creature">The creature to adjust</param>
         /// <param name="item">The item being equipped or unequipped</param>
@@ -228,7 +228,7 @@ namespace EOM.Game.Server.Feature
         }
 
         /// <summary>
-        /// Applies or removes a STM Regen bonus on a creature.
+        /// Applies or removes a MP Regen bonus on a creature.
         /// </summary>
         /// <param name="creature">The creature to adjust</param>
         /// <param name="item">The item being equipped or unequipped</param>

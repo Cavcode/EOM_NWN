@@ -55,13 +55,8 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             get => Get<string>();
             set => Set(value);
         }
-        public string FP
-        {
-            get => Get<string>();
-            set => Set(value);
-        }
 
-        public string STM
+        public string MP
         {
             get => Get<string>();
             set => Set(value);
@@ -103,7 +98,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             set => Set(value);
         }
 
-        public int Social
+        public int Intellect
         {
             get => Get<int>();
             set => Set(value);
@@ -211,7 +206,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             set => Set(value);
         }
 
-        public string Control
+        public string Ingenuity
         {
             get => Get<string>();
             set => Set(value);
@@ -423,10 +418,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
         {
             HP = GetCurrentHitPoints(_target) + " / " + GetMaxHitPoints(_target);
 
-            if (GetClassByPosition(1, _target) == ClassType.Standard)
-            {
-                FP = $"0 / 0";
-            }
 
             var currentSTM = Stat.GetCurrentMagick(_target);
             var maxSTM = Stat.GetMaxMagick(_target);
@@ -435,14 +426,14 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             if (maxSTM < 0)
                 maxSTM = 0;
 
-            STM = $"{currentSTM} / {maxSTM}";
+            MP = $"{currentSTM} / {maxSTM}";
             Name = GetName(_target);
             Might = GetAbilityScore(_target, AbilityType.Might);
             Perception = GetAbilityScore(_target, AbilityType.Perception);
             Vitality = GetAbilityScore(_target, AbilityType.Vitality);
             Willpower = GetAbilityScore(_target, AbilityType.Willpower);
             Agility = GetAbilityScore(_target, AbilityType.Agility);
-            Social = GetAbilityScore(_target, AbilityType.Intellect);
+            Intellect = GetAbilityScore(_target, AbilityType.Intellect);
             SavingThrows = GetFortitudeSavingThrow(_target) + "/" +
                            GetReflexSavingThrow(_target) + "/" +
                            GetWillSavingThrow(_target);
@@ -461,7 +452,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 IsSocialUpgradeAvailable = (dbPlayer.UnallocatedAP > 0 && dbPlayer.UpgradedStats[AbilityType.Intellect] < MaxUpgrades) || isRacialBonusAvailable;
             }
         }
-
+        
         private void RefreshEquipmentStats()
         {
             // Builds a damage estimate using the player's stats as a baseline.
@@ -555,7 +546,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 var mainHandSkill = Skill.GetSkillTypeByBaseItem(mainHandType);
             Attack = Stat.GetAttack(_target, damageStat, mainHandSkill);
             DefensePhysical = Stat.GetDefense(_target, CombatDamageType.Physical, AbilityType.Vitality);
-            DefenseForce = Stat.GetDefense(_target, CombatDamageType.Force, AbilityType.Willpower);
             
             if (GetIsPC(_target))
             {
@@ -567,7 +557,11 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 var electricalDefense = (dbPlayer.Defenses[CombatDamageType.Electrical]).ToString();
                 var iceDefense = (dbPlayer.Defenses[CombatDamageType.Ice]).ToString();
 
-                DefenseElemental = $"{fireDefense}/{waterDefense}/{electricalDefense}/{iceDefense}";
+                var lightDefense = (dbPlayer.Defenses[CombatDamageType.Light]).ToString();
+                var darknessDefense = (dbPlayer.Defenses[CombatDamageType.Darkness]).ToString();
+                var windDefense = (dbPlayer.Defenses[CombatDamageType.Wind]).ToString();
+
+                DefenseElemental = $"{fireDefense}/{waterDefense}/{electricalDefense}/{iceDefense}/{windDefense}/{lightDefense}/{darknessDefense}";
             }
             else
             {

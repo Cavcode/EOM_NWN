@@ -87,36 +87,14 @@ namespace EOM.Game.Server.Feature.GuiDefinition
                     col.AddRow(row =>
                     {
                         row.AddLabel()
-                            .SetText("FP")
-                            .SetColor(GuiColor.FPColor)
-                            .SetVerticalAlign(NuiVerticalAlign.Top)
-                            .SetHorizontalAlign(NuiHorizontalAlign.Left)
-                            .SetTooltip("Force Points - Resource used to activate force abilities. Force sensitive characters only.");
-
-                        row.AddLabel()
-                            .BindText(model => model.FP)
-                            .SetColor(GuiColor.FPColor)
-                            .SetVerticalAlign(NuiVerticalAlign.Top)
-                            .SetHorizontalAlign(NuiHorizontalAlign.Left);
-
-                        row.AddButton()
-                            .SetWidth(IncreaseButtonSize)
-                            .SetHeight(IncreaseButtonSize)
-                            .SetText("+")
-                            .SetIsVisible(false);
-                    });
-
-                    col.AddRow(row =>
-                    {
-                        row.AddLabel()
-                            .SetText("STM")
+                            .SetText("MP")
                             .SetColor(GuiColor.STMColor)
                             .SetVerticalAlign(NuiVerticalAlign.Top)
                             .SetHorizontalAlign(NuiHorizontalAlign.Left)
                             .SetTooltip("Magick - Resource used to activate non-force abilities.");
 
                         row.AddLabel()
-                            .BindText(model => model.STM)
+                            .BindText(model => model.MP)
                             .SetColor(GuiColor.STMColor)
                             .SetVerticalAlign(NuiVerticalAlign.Top)
                             .SetHorizontalAlign(NuiHorizontalAlign.Left);
@@ -284,10 +262,10 @@ namespace EOM.Game.Server.Feature.GuiDefinition
                             .SetText("Intellect")
                             .SetVerticalAlign(NuiVerticalAlign.Top)
                             .SetHorizontalAlign(NuiHorizontalAlign.Left)
-                            .SetTooltip("Intellect - Improves your XP gain and leadership capabilities.");
+                            .SetTooltip("Intellect - Improves your magic effectiveness.");
 
                         row.AddLabel()
-                            .BindText(model => model.Social)
+                            .BindText(model => model.Intellect)
                             .SetVerticalAlign(NuiVerticalAlign.Top)
                             .SetHorizontalAlign(NuiHorizontalAlign.Left);
 
@@ -396,19 +374,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition
                             .SetHorizontalAlign(NuiHorizontalAlign.Left);
                     });
 
-                    col.AddRow(row =>
-                    {
-                        row.AddLabel()
-                            .SetText("Force DEF")
-                            .SetVerticalAlign(NuiVerticalAlign.Top)
-                            .SetHorizontalAlign(NuiHorizontalAlign.Left)
-                            .SetTooltip("Force Defense - Reduces the amount of damage taken by force attacks.");
-
-                        row.AddLabel()
-                            .BindText(model => model.DefenseForce)
-                            .SetVerticalAlign(NuiVerticalAlign.Top)
-                            .SetHorizontalAlign(NuiHorizontalAlign.Left);
-                    });
 
                     col.AddRow(row =>
                     {
@@ -416,7 +381,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition
                             .SetText("Elem. DEF")
                             .SetVerticalAlign(NuiVerticalAlign.Top)
                             .SetHorizontalAlign(NuiHorizontalAlign.Left)
-                            .SetTooltip("Elemental Defenses - Reduces the amount of damage taken by elemental damage. (Order: Fire/Poison/Electrical/Ice)");
+                            .SetTooltip("Elemental Defenses - Reduces the amount of damage taken by elemental damage. (Order: Fire/Poison/Electrical/Ice/Wind/Light/Darkness)");
 
                         row.AddLabel()
                             .BindText(model => model.DefenseElemental)
@@ -427,13 +392,13 @@ namespace EOM.Game.Server.Feature.GuiDefinition
                     col.AddRow(row =>
                     {
                         row.AddLabel()
-                            .SetText("Control")
+                            .SetText("Ingenuity")
                             .SetVerticalAlign(NuiVerticalAlign.Top)
                             .SetHorizontalAlign(NuiHorizontalAlign.Left)
-                            .SetTooltip("Control - Improves quality of crafted items. Also improves chance to auto-craft items. (Order: Smithery/Engineering/Fabrication/Agriculture)");
+                            .SetTooltip("Ingenuity - Improves quality of crafted items. Also improves chance to auto-craft items.");
 
                         row.AddLabel()
-                            .BindText(model => model.Control)
+                            .BindText(model => model.Ingenuity)
                             .SetVerticalAlign(NuiVerticalAlign.Top)
                             .SetHorizontalAlign(NuiHorizontalAlign.Left);
                     });
@@ -444,7 +409,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition
                             .SetText("Craftsmanship")
                             .SetVerticalAlign(NuiVerticalAlign.Top)
                             .SetHorizontalAlign(NuiHorizontalAlign.Left)
-                            .SetTooltip("Craftsmanship - Improves progress of crafted items. Also improves chance to auto-craft items. (Order: Smithery/Engineering/Fabrication/Agriculture)");
+                            .SetTooltip("Craftsmanship - Improves progress of crafted items. Also improves chance to auto-craft items.");
 
                         row.AddLabel()
                             .BindText(model => model.Craftsmanship)
@@ -518,7 +483,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition
                                 col2.AddRow(row2 =>
                                 {
                                     row2.AddButton()
-                                        .SetText("HoloCom")
+                                        .SetText("MogCom")
                                         .SetHeight(32f)
                                         .SetWidth(100f)
                                         .BindOnClicked(model => model.OnClickHoloCom())

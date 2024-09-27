@@ -371,7 +371,7 @@ namespace EOM.Game.Server.Service
                     return ItemPropertyAbilityBonus(AbilityType.Intellect, amount);
                 case 13: // Willpower
                     return ItemPropertyAbilityBonus(AbilityType.Willpower, amount);
-                case 14: // Control - Smithery
+                case 14: // Ingenuity - Smithery
                     return ItemPropertyCustom(ItemPropertyType.Control, 1, amount);
                 case 15: // Craftsmanship - Smithery
                     return ItemPropertyCustom(ItemPropertyType.Craftsmanship, 1, amount);
@@ -404,7 +404,7 @@ namespace EOM.Game.Server.Service
                     return ItemPropertyCustom(ItemPropertyType.FoodBonus, (int)FoodItemPropertySubType.HPRegen, amount);
                 case 30: // Food Bonus - FP Regen
                     return ItemPropertyCustom(ItemPropertyType.FoodBonus, (int)FoodItemPropertySubType.FPRegen, amount);
-                case 31: // Food Bonus - STM Regen
+                case 31: // Food Bonus - MP Regen
                     return ItemPropertyCustom(ItemPropertyType.FoodBonus, (int)FoodItemPropertySubType.STMRegen, amount);
                 case 32: // Food Bonus - Rest Regen
                     return ItemPropertyCustom(ItemPropertyType.FoodBonus, (int)FoodItemPropertySubType.RestRegen, amount);
@@ -418,17 +418,17 @@ namespace EOM.Game.Server.Service
                     return ItemPropertyCustom(ItemPropertyType.FoodBonus, (int)FoodItemPropertySubType.HP, amount);
                 case 37: // Food Bonus - FP
                     return ItemPropertyCustom(ItemPropertyType.FoodBonus, (int)FoodItemPropertySubType.FP, amount);
-                case 38: // Food Bonus - STM
+                case 38: // Food Bonus - MP
                     return ItemPropertyCustom(ItemPropertyType.FoodBonus, (int)FoodItemPropertySubType.STM, amount);
-                case 39: // Control - Engineering
+                case 39: // Ingenuity - Engineering
                     return ItemPropertyCustom(ItemPropertyType.Control, 2, amount);
                 case 40: // Craftsmanship - Engineering
                     return ItemPropertyCustom(ItemPropertyType.Craftsmanship, 2, amount);
-                case 41: // Control - Fabrication
+                case 41: // Ingenuity - Fabrication
                     return ItemPropertyCustom(ItemPropertyType.Control, 3, amount);
                 case 42: // Craftsmanship - Fabrication
                     return ItemPropertyCustom(ItemPropertyType.Craftsmanship, 3, amount);
-                case 43: // Control - Agriculture
+                case 43: // Ingenuity - Agriculture
                     return ItemPropertyCustom(ItemPropertyType.Control, 4, amount);
                 case 44: // Craftsmanship - Agriculture
                     return ItemPropertyCustom(ItemPropertyType.Craftsmanship, 4, amount);
@@ -480,19 +480,19 @@ namespace EOM.Game.Server.Service
                     return ItemPropertyCustom(ItemPropertyType.FoodBonus, (int)FoodItemPropertySubType.DefenseElectrical, amount);
                 case 68: // Food Bonus - Evasion
                     return ItemPropertyCustom(ItemPropertyType.FoodBonus, (int)FoodItemPropertySubType.Evasion, amount);
-                case 69: // Food Bonus - Control Smithery
+                case 69: // Food Bonus - Ingenuity Smithery
                     return ItemPropertyCustom(ItemPropertyType.FoodBonus, (int)FoodItemPropertySubType.ControlSmithery, amount);
                 case 70: // Food Bonus - Craftsmanship Smithery
                     return ItemPropertyCustom(ItemPropertyType.FoodBonus, (int)FoodItemPropertySubType.CraftsmanshipSmithery, amount);
-                case 71: // Food Bonus - Control Fabrication
+                case 71: // Food Bonus - Ingenuity Fabrication
                     return ItemPropertyCustom(ItemPropertyType.FoodBonus, (int)FoodItemPropertySubType.ControlFabrication, amount);
                 case 72: // Food Bonus - Craftsmanship Fabrication
                     return ItemPropertyCustom(ItemPropertyType.FoodBonus, (int)FoodItemPropertySubType.CraftsmanshipFabrication, amount);
-                case 73: // Food Bonus - Control Engineering
+                case 73: // Food Bonus - Ingenuity Engineering
                     return ItemPropertyCustom(ItemPropertyType.FoodBonus, (int)FoodItemPropertySubType.ControlEngineering, amount);
                 case 74: // Food Bonus - Craftsmanship Engineering
                     return ItemPropertyCustom(ItemPropertyType.FoodBonus, (int)FoodItemPropertySubType.CraftsmanshipEngineering, amount);
-                case 75: // Food Bonus - Control Agriculture
+                case 75: // Food Bonus - Ingenuity Agriculture
                     return ItemPropertyCustom(ItemPropertyType.FoodBonus, (int)FoodItemPropertySubType.ControlAgriculture, amount);
                 case 76: // Food Bonus - Craftsmanship Agriculture
                     return ItemPropertyCustom(ItemPropertyType.FoodBonus, (int)FoodItemPropertySubType.CraftsmanshipAgriculture, amount);
@@ -519,7 +519,7 @@ namespace EOM.Game.Server.Service
                     return ItemPropertyCustom(ItemPropertyType.DroidStat, 3, amount);
                 case 103: // Droid: HP
                     return ItemPropertyCustom(ItemPropertyType.DroidStat, 4, amount);
-                case 104: // Droid: STM
+                case 104: // Droid: MP
                     return ItemPropertyCustom(ItemPropertyType.DroidStat, 5, amount);
                 case 105: // Droid: MGT
                     return ItemPropertyCustom(ItemPropertyType.DroidStat, 6, amount);

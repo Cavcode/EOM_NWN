@@ -95,7 +95,7 @@ namespace EOM.Game.Server.Feature.StatusEffectDefinition
                     var stmAmount = 1 + vitalityBonus * 3;
                     var fpAmount = 1 + vitalityBonus * 3;
 
-                    // Guard against negative ability modifiers - always give at least 1 HP/FP/STM recovery per tick.
+                    // Guard against negative ability modifiers - always give at least 1 HP/FP/MP recovery per tick.
                     if (hpAmount < 1)
                         hpAmount = 1;
                     if (stmAmount < 1)

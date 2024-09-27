@@ -62,7 +62,7 @@ namespace EOM.Game.Server.Service
         }
 
         /// <summary>
-        /// Handles setting player's HP, FP, and STM to half of maximum,
+        /// Handles setting player's HP, FP, and MP to half of maximum,
         /// applies penalties for death, and teleports him or her to their home point.
         /// </summary>
         [NWNEventHandler("mod_respawn")]

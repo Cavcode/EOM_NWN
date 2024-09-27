@@ -243,7 +243,7 @@ namespace EOM.Game.Server.Service.AbilityService
         /// <summary>
         /// Adds a stamina requirement to use the ability at this level.
         /// </summary>
-        /// <param name="requiredSTM">The amount of STM needed to use this ability at this level.</param>
+        /// <param name="requiredSTM">The amount of MP needed to use this ability at this level.</param>
         /// <returns>An ability builder with the configured options</returns>
         public AbilityBuilder RequirementMagick(int requiredMP)
         {
