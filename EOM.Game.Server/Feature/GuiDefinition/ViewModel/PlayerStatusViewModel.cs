@@ -100,7 +100,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 _screenScale != screenScale)
             {
                 const float WidgetWidth = 200f;
-                const float WidgetHeight = 105f;
+                const float WidgetHeight = 75f;
                 const float XOffset = 255f;
                 const float YOffset = 165f;
 
