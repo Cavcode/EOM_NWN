@@ -18,13 +18,8 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
         private int _screenScale;
 
         private static readonly GuiColor _hpColor = new GuiColor(139, 0, 0);
-        private static readonly GuiColor _stmColor = new GuiColor(0, 104, 0);
-        private static readonly GuiColor _fpColor = new GuiColor(3, 87, 152);
-
-        private static readonly GuiColor _shieldColor = new GuiColor(3, 87, 152);
-        private static readonly GuiColor _hullColor = new GuiColor(139, 0, 0);
-        private static readonly GuiColor _capacitorColor = new GuiColor(166, 111, 0);
-
+        private static readonly GuiColor _mpColor = new GuiColor(0, 0, 255);
+        
         public GuiColor Bar1Color
         {
             get => Get<GuiColor>();
@@ -32,12 +27,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
         }
         
         public GuiColor Bar2Color
-        {
-            get => Get<GuiColor>();
-            set => Set(value);
-        }
-
-        public GuiColor Bar3Color
         {
             get => Get<GuiColor>();
             set => Set(value);
@@ -53,11 +42,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             get => Get<string>();
             set => Set(value);
         }
-        public string Bar3Label
-        {
-            get => Get<string>();
-            set => Set(value);
-        }
 
         public string Bar1Value
         {
@@ -69,11 +53,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             get => Get<string>();
             set => Set(value);
         }
-        public string Bar3Value
-        {
-            get => Get<string>();
-            set => Set(value);
-        }
+
 
         public float Bar1Progress
         {
@@ -85,11 +65,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             get => Get<float>();
             set => Set(value);
         }
-        public float Bar3Progress
-        {
-            get => Get<float>();
-            set => Set(value);
-        }
+
 
         public GuiRectangle RelativeValuePosition
         {
@@ -109,17 +85,8 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
 
         private void ToggleLabels(bool isCharacter)
         {
-            if (isCharacter)
-            {
                 Bar1Label = "HP:";
-                Bar3Label = "MP:";
-            }
-            else
-            {
-                Bar1Label = "SH:";
-                Bar2Label = "HL:";
-                Bar3Label = "CAP:";
-            }
+                Bar2Label = "MP:";
         }
 
         private void UpdateWidget()
@@ -181,14 +148,13 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
         {
                 ToggleLabels(true);
                 Bar1Color = _hpColor;
-                Bar2Color = _stmColor;
-                Bar3Color = _fpColor;
+                Bar2Color = _mpColor;
 
                 if (type == PlayerStatusRefreshEvent.StatType.HP)
                 {
                     UpdateHP();
                 }
-                else if (type == PlayerStatusRefreshEvent.StatType.STM)
+                else if (type == PlayerStatusRefreshEvent.StatType.MP)
                 {
                     UpdateMP();
                 }
@@ -198,8 +164,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
         {
                 ToggleLabels(true);
                 Bar1Color = _hpColor;
-                Bar2Color = _stmColor;
-                Bar3Color = _fpColor;
+                Bar2Color = _mpColor;
                 UpdateHP();
                 UpdateMP();
         }
