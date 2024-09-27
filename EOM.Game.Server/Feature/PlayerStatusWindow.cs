@@ -17,8 +17,7 @@ namespace EOM.Game.Server.Feature
                 return;
 
             Gui.PublishRefreshEvent(player, new PlayerStatusRefreshEvent(PlayerStatusRefreshEvent.StatType.HP));
-            Gui.PublishRefreshEvent(player, new PlayerStatusRefreshEvent(PlayerStatusRefreshEvent.StatType.FP));
-            Gui.PublishRefreshEvent(player, new PlayerStatusRefreshEvent(PlayerStatusRefreshEvent.StatType.STM));
+            Gui.PublishRefreshEvent(player, new PlayerStatusRefreshEvent(PlayerStatusRefreshEvent.StatType.MP));
         }
 
         [NWNEventHandler("item_uneqp_bef")]
@@ -29,8 +28,7 @@ namespace EOM.Game.Server.Feature
                 return;
 
             Gui.PublishRefreshEvent(player, new PlayerStatusRefreshEvent(PlayerStatusRefreshEvent.StatType.HP));
-            Gui.PublishRefreshEvent(player, new PlayerStatusRefreshEvent(PlayerStatusRefreshEvent.StatType.FP));
-            Gui.PublishRefreshEvent(player, new PlayerStatusRefreshEvent(PlayerStatusRefreshEvent.StatType.STM));
+            Gui.PublishRefreshEvent(player, new PlayerStatusRefreshEvent(PlayerStatusRefreshEvent.StatType.MP));
         }
 
         [NWNEventHandler("pc_damaged")]
@@ -43,16 +41,6 @@ namespace EOM.Game.Server.Feature
             Gui.PublishRefreshEvent(player, new PlayerStatusRefreshEvent(PlayerStatusRefreshEvent.StatType.HP));
         }
 
-        [NWNEventHandler("pc_fp_adjusted")]
-        public static void PlayerFPAdjusted()
-        {
-            var player = OBJECT_SELF;
-            if (!GetIsPC(player) || GetIsDM(player) || GetIsDMPossessed(player))
-                return;
-
-            Gui.PublishRefreshEvent(player, new PlayerStatusRefreshEvent(PlayerStatusRefreshEvent.StatType.FP));
-        }
-
         [NWNEventHandler("pc_stm_adjusted")]
         public static void PlayerSTMAdjusted()
         {
@@ -60,7 +48,7 @@ namespace EOM.Game.Server.Feature
             if (!GetIsPC(player) || GetIsDM(player) || GetIsDMPossessed(player))
                 return;
 
-            Gui.PublishRefreshEvent(player, new PlayerStatusRefreshEvent(PlayerStatusRefreshEvent.StatType.STM));
+            Gui.PublishRefreshEvent(player, new PlayerStatusRefreshEvent(PlayerStatusRefreshEvent.StatType.MP));
         }
 
         [NWNEventHandler("heal_aft")]
@@ -70,35 +58,6 @@ namespace EOM.Game.Server.Feature
             Gui.PublishRefreshEvent(target, new PlayerStatusRefreshEvent(PlayerStatusRefreshEvent.StatType.HP));
         }
 
-        [NWNEventHandler("pc_shld_adjusted")]
-        public static void PlayerShieldAdjusted()
-        {
-            var player = OBJECT_SELF;
-            if (!GetIsPC(player) || GetIsDM(player) || GetIsDMPossessed(player))
-                return;
-
-            Gui.PublishRefreshEvent(player, new PlayerStatusRefreshEvent(PlayerStatusRefreshEvent.StatType.Shield));
-        }
-
-        [NWNEventHandler("pc_hull_adjusted")]
-        public static void PlayerHullAdjusted()
-        {
-            var player = OBJECT_SELF;
-            if (!GetIsPC(player) || GetIsDM(player) || GetIsDMPossessed(player))
-                return;
-
-            Gui.PublishRefreshEvent(player, new PlayerStatusRefreshEvent(PlayerStatusRefreshEvent.StatType.Hull));
-        }
-
-        [NWNEventHandler("pc_cap_adjusted")]
-        public static void PlayerCapacitorAdjusted()
-        {
-            var player = OBJECT_SELF;
-            if (!GetIsPC(player) || GetIsDM(player) || GetIsDMPossessed(player))
-                return;
-
-            Gui.PublishRefreshEvent(player, new PlayerStatusRefreshEvent(PlayerStatusRefreshEvent.StatType.Capacitor));
-        }
 
         [NWNEventHandler("pc_target_upd")]
         public static void PlayerSpaceTargetAdjusted()

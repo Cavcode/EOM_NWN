@@ -7,12 +7,8 @@ namespace EOM.Game.Server.Feature.GuiDefinition.RefreshEvent
         internal enum StatType
         {
             HP = 1,
-            FP = 2,
-            STM = 3,
+            MP = 2,
 
-            Shield = 4,
-            Hull = 5,
-            Capacitor = 6,
         }
 
         public StatType Type { get; set; }

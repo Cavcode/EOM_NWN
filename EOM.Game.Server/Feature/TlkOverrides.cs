@@ -98,14 +98,14 @@ namespace EOM.Game.Server.Feature
                 "Reduces XP debt on death.\n" + 
                 "Reduces ship repair bills.");
 
-            SetTlkOverride(535, "Credit"); // Gold Piece
+            SetTlkOverride(535, "Gil"); // Gold Piece
 
             SetTlkOverride(1027, "Poison"); // Acid
 
-            SetTlkOverride(3593, "Give credits."); // GP
-            SetTlkOverride(5025, "The Galactic Credit Standard, or simply the 'credit', is the main form of currency throughout the galaxy."); // GP desc
-            SetTlkOverride(6407, "Credits"); // GP
-            SetTlkOverride(7059, "Drop or give credits, etc.");
+            SetTlkOverride(3593, "Give gil."); // GP
+            SetTlkOverride(5025, "Gil is earned as the salary paid to SeeD operatives. It can be used to buy various things across the land."); // GP desc
+            SetTlkOverride(6407, "Gil"); // GP
+            SetTlkOverride(7059, "Drop or give gil, etc.");
 
             SetTlkOverride(7099, "Evasion");
 
@@ -132,14 +132,14 @@ namespace EOM.Game.Server.Feature
             SetTlkOverride(58379, "Intellect Increased");
             SetTlkOverride(58380, "Intellect Decreased");
 
-            SetTlkOverride(61619, "Sell <CUSTOM0> for <CUSTOM1>cr");
-            SetTlkOverride(61620, "Buy <CUSTOM0> for <CUSTOM1>cr");
-            SetTlkOverride(62489, "Acquired <CUSTOM0> credits");
-            SetTlkOverride(62490, "Lost <CUSTOM0> credits");
+            SetTlkOverride(61619, "Sell <CUSTOM0> for <CUSTOM1>gil");
+            SetTlkOverride(61620, "Buy <CUSTOM0> for <CUSTOM1>gil");
+            SetTlkOverride(62489, "Acquired <CUSTOM0> gil");
+            SetTlkOverride(62490, "Lost <CUSTOM0> gil");
 
             SetTlkOverride(66129, "Premonition");
 
-            SetTlkOverride(66751, "Holonet");
+            SetTlkOverride(66751, "Board");
             SetTlkOverride(66755, "Comms");
 
             SetTlkOverride(83393, "Poison"); // Acid
