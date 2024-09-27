@@ -168,8 +168,7 @@ namespace EOM.Game.Server.Feature
         private static void OverrideFeatDescriptions()
         {
             var template = "Name: {0}\n" +
-                           "FP: {1}\n" +
-                           "STM: {2}\n" +
+                           "MP: {2}\n" +
                            "Recast: {3}s\n" +
                            "Description: {4}\n";
 
