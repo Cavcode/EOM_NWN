@@ -69,29 +69,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition
                             });
                     });
 
-                    col.AddRow(row =>
-                    {
-                        row.AddProgressBar()
-                            .BindValue(model => model.Bar3Progress)
-                            .BindColor(model => model.Bar3Color)
-                            .SetHeight(20f)
-                            .AddDrawList(drawList =>
-                            {
-                                drawList.AddText(text =>
-                                {
-                                    text.BindText(model => model.Bar3Label);
-                                    text.SetBounds(5, 2, 110f, 50f);
-                                    text.SetColor(255, 255, 255);
-                                });
-
-                                drawList.AddText(text =>
-                                {
-                                    text.BindText(model => model.Bar3Value);
-                                    text.BindBounds(model => model.RelativeValuePosition);
-                                    text.SetColor(255, 255, 255);
-                                });
-                            });
-                    });
                 });
 
             return _builder.Build();
