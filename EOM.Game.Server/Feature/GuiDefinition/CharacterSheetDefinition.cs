@@ -460,6 +460,22 @@ namespace EOM.Game.Server.Feature.GuiDefinition
                                 col2.AddRow(row2 =>
                                 {
                                     row2.AddButton()
+                                        .SetText("Jobs")
+                                        .SetHeight(32f)
+                                        .SetWidth(100f)
+                                        .BindOnClicked(model => model.OnClickPerks());
+                                });
+                                col2.AddRow(row2 =>
+                                {
+                                    row2.AddButton()
+                                        .SetText("Guardian Force")
+                                        .SetHeight(32f)
+                                        .SetWidth(100f)
+                                        .BindOnClicked(model => model.OnClickPerks());
+                                });
+                                col2.AddRow(row2 =>
+                                {
+                                    row2.AddButton()
                                         .SetText("Quests")
                                         .SetHeight(32f)
                                         .SetWidth(100f)
