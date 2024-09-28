@@ -88,14 +88,14 @@ namespace EOM.Game.Server.Feature.GuiDefinition
                     {
                         row.AddLabel()
                             .SetText("MP")
-                            .SetColor(GuiColor.STMColor)
+                            .SetColor(GuiColor.MPColor)
                             .SetVerticalAlign(NuiVerticalAlign.Top)
                             .SetHorizontalAlign(NuiHorizontalAlign.Left)
                             .SetTooltip("Magick - Resource used to activate non-force abilities.");
 
                         row.AddLabel()
                             .BindText(model => model.MP)
-                            .SetColor(GuiColor.STMColor)
+                            .SetColor(GuiColor.MPColor)
                             .SetVerticalAlign(NuiVerticalAlign.Top)
                             .SetHorizontalAlign(NuiHorizontalAlign.Left);
 
@@ -127,6 +127,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition
                         
                         row.BindIsVisible(model => model.ShowSP);
                     });
+
 
                     col.AddRow(row =>
                     {

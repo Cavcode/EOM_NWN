@@ -45,7 +45,6 @@ namespace EOM.Game.Server.Service.GuiService.Component
         public static GuiColor Grey => new(169, 169, 169);
 
         public static GuiColor HPColor = new(139, 0, 0);
-        public static GuiColor FPColor = new(0, 138, 250);
-        public static GuiColor STMColor = new(0, 139, 0);
+        public static GuiColor MPColor = new(0, 150, 255);
     }
 }

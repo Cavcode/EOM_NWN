@@ -65,7 +65,7 @@ namespace EOM.Game.Server.Feature
                 "Other Notes:\n\n" +
                 "Increases maximum HP.\n" +
                 "Improves physical defense (reducing damage taken).\n" +
-                "Improves natural HP/FP/STM regen.\n" +
+                "Improves natural HP/FP/MP regen.\n" +
                 "Improves rest recovery.");
             SetTlkOverride(462,
                 "Willpower improves your force attack, force defense, max force points, and first aid capabilities.\n\n" +

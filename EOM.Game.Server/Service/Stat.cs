@@ -46,12 +46,12 @@ namespace EOM.Game.Server.Service
         }
 
         /// <summary>
-        /// Retrieves the maximum STM on a creature.
-        /// CON modifier will be checked. Each modifier grants +2 to max STM.
+        /// Retrieves the maximum MP on a creature.
+        /// CON modifier will be checked. Each modifier grants +2 to max MP.
         /// </summary>
         /// <param name="creature">The creature object</param>
         /// <param name="dbPlayer">The player entity. If this is not set, a call to the DB will be made. Leave null for NPCs.</param>
-        /// <returns>The max amount of STM</returns>
+        /// <returns>The max amount of MP</returns>
         public static int GetMaxMagick(uint creature, Player dbPlayer = null)
         {
             var modifier = GetAbilityModifier(AbilityType.Agility, creature);
@@ -86,11 +86,11 @@ namespace EOM.Game.Server.Service
         }
 
         /// <summary>
-        /// Retrieves the current STM on a creature.
+        /// Retrieves the current MP on a creature.
         /// </summary>
-        /// <param name="creature">The creature to retrieve STM from.</param>
+        /// <param name="creature">The creature to retrieve MP from.</param>
         /// <param name="dbPlayer">The player entity. If this is not set, a call to the DB will be made. Leave null for NPCs.</param>
-        /// <returns>The current amount of STM.</returns>
+        /// <returns>The current amount of MP.</returns>
         public static int GetCurrentMagick(uint creature, Player dbPlayer = null)
         {
             // Players
@@ -276,22 +276,22 @@ namespace EOM.Game.Server.Service
         }
 
         /// <summary>
-        /// Modifies a player's maximum STM by a certain amount.
+        /// Modifies a player's maximum MP by a certain amount.
         /// This method will not persist the changes so be sure you call DB.Set after calling this.
         /// </summary>
         /// <param name="entity">The entity to modify</param>
         /// <param name="adjustBy">The amount to adjust by</param>
         public static void AdjustPlayerMaxMP(Player entity, int adjustBy, uint player)
         {
-            // Note: It's possible for Max STM to drop to a negative number. This is expected to ensure calculations stay in sync.
+            // Note: It's possible for Max MP to drop to a negative number. This is expected to ensure calculations stay in sync.
             // If there are any visual indicators (GUI elements for example) be sure to account for this scenario.
             entity.MaxMagickPoints += adjustBy;
 
-            // Note - must call GetMaxFP here to account for ability-based increase to STM cap. 
+            // Note - must call GetMaxFP here to account for ability-based increase to MP cap. 
             if (entity.Magick > GetMaxMagick(player))
                 entity.Magick = GetMaxMagick(player);
 
-            // Current STM, however, should never drop below zero.
+            // Current MP, however, should never drop below zero.
             if (entity.Magick < 0)
                 entity.Magick = 0;
         }
@@ -373,14 +373,14 @@ namespace EOM.Game.Server.Service
 
 
         /// <summary>
-        /// Modifies a player's STM Regen by a certain amount.
+        /// Modifies a player's MP Regen by a certain amount.
         /// This method will not persist the changes so be sure you call DB.Set after calling this.
         /// </summary>
         /// <param name="entity">The entity to modify</param>
         /// <param name="adjustBy">The amount to adjust by</param>
         public static void AdjustSTMRegen(Player entity, int adjustBy)
         {
-            // Note: It's possible for STM Regen to drop to a negative number. This is expected to ensure calculations stay in sync.
+            // Note: It's possible for MP Regen to drop to a negative number. This is expected to ensure calculations stay in sync.
             // If there are any visual indicators (GUI elements for example) be sure to account for this scenario.
             entity.MPRegen += adjustBy;
         }
@@ -1523,7 +1523,7 @@ namespace EOM.Game.Server.Service
         }
 
         /// <summary>
-        /// Calculates the total Control for a player in a given crafting skill.
+        /// Calculates the total Ingenuity for a player in a given crafting skill.
         /// </summary>
         /// <param name="player">The player to check</param>
         /// <param name="craftingSkillType">The skill to check</param>
@@ -1533,7 +1533,7 @@ namespace EOM.Game.Server.Service
         {
             var skillDetail = Skill.GetSkillDetails(craftingSkillType);
             if (!skillDetail.IsShownInCraftMenu)
-                throw new ArgumentException($"Unable to calculate Control because {craftingSkillType} is not a crafting skill.");
+                throw new ArgumentException($"Unable to calculate Ingenuity because {craftingSkillType} is not a crafting skill.");
 
             if (!GetIsPC(player) || GetIsDM(player) || GetIsDMPossessed(player))
                 return 0;
@@ -1598,7 +1598,7 @@ namespace EOM.Game.Server.Service
         }
 
         /// <summary>
-        /// Stores an NPC's STM and FP as local variables.
+        /// Stores an NPC's MP and FP as local variables.
         /// Also load their HP per their skin, if specified.
         /// </summary>
         public static void LoadNPCStats()
@@ -1629,7 +1629,7 @@ namespace EOM.Game.Server.Service
         }
 
         /// <summary>
-        /// Restores an NPC's STM and FP.
+        /// Restores an NPC's MP and FP.
         /// </summary>
         public static void RestoreNPCStats(bool outOfCombatRegen)
         {

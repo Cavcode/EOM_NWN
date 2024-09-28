@@ -38,6 +38,11 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             set => Set(value);
         }
 
+        public bool ShowJP
+        {
+            get => Get<bool>();
+            set => Set(value);
+        }
         public bool ShowAPOrLevel
         {
             get => Get<bool>();
@@ -189,6 +194,11 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
         }
 
         public string SP
+        {
+            get => Get<string>();
+            set => Set(value);
+        }
+        public string JP
         {
             get => Get<string>();
             set => Set(value);
@@ -593,6 +603,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 var dbPlayer = DB.Get<Player>(playerId);
 
                 SP = $"{dbPlayer.TotalSPAcquired} / {Skill.SkillCap} ({dbPlayer.UnallocatedSP})";
+                JP = $"{dbPlayer.TotalJPAcquired}";
                 APOrLevel = $"{dbPlayer.TotalAPAcquired} / {Skill.APCap} ({dbPlayer.UnallocatedAP})";
             }
         }
@@ -604,7 +615,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
 
         private void LoadData()
         {
-            CharacterType = GetClassByPosition(1, _target) == ClassType.Standard ? "Standard" : "Force Sensitive";
+            CharacterType =  "Standard";
             Race = GetStringByStrRef(Convert.ToInt32(Get2DAString("racialtypes", "Name", (int)GetRacialType(_target))), GetGender(_target));
 
             if (IsPlayerMode)
@@ -646,7 +657,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             var playerId = GetObjectUUID(_target);
             var dbPlayer = DB.Get<Player>(playerId);
 
-            SP = $"{dbPlayer.TotalSPAcquired} / {Skill.SkillCap} ({dbPlayer.UnallocatedSP})";
+            SP = $"{dbPlayer.TotalSPAcquired}";
             APOrLevel = $"{dbPlayer.TotalAPAcquired} / {Skill.APCap} ({dbPlayer.UnallocatedAP})";
             
             RefreshStats();
