@@ -279,7 +279,10 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
         {
             Gui.TogglePlayerWindow(Player, GuiWindowType.Perks);
         };
-
+        public Action OnClickJobs() => () =>
+        {
+            Gui.TogglePlayerWindow(Player, GuiWindowType.Jobs);
+        };
         public Action OnClickChangePortrait() => () =>
         {
             var payload = new ChangePortraitPayload(_target);

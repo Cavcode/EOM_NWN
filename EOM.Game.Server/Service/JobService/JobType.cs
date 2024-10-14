@@ -5,11 +5,6 @@ namespace EOM.Game.Server.Service.JobService
 {
     public enum JobType
     {
-        [Job("Invalid",
-            Job.JobCap,
-            "Not used.")]
-        Invalid = 0,
-
         [Job("Warrior",
             Job.JobCap,
             "Cool guys with big axes.")]

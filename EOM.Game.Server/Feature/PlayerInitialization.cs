@@ -180,6 +180,7 @@ namespace EOM.Game.Server.Feature
         private static void AdjustStats(uint player, Player dbPlayer)
         {
             dbPlayer.UnallocatedSP = 10;
+            dbPlayer.UnallocatedJP = 1;
             dbPlayer.Version = Migration.GetLatestPlayerVersion();
             dbPlayer.Name = GetName(player);
             dbPlayer.BAB = 1;

@@ -55,6 +55,8 @@
         Stables = 50,
         TrainingStore = 51,
 
+        Jobs = 52,
+
         DebugEnmity = 900,
     }
 }

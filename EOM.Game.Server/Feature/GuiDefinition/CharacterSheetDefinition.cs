@@ -463,7 +463,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition
                                         .SetText("Jobs")
                                         .SetHeight(32f)
                                         .SetWidth(100f)
-                                        .BindOnClicked(model => model.OnClickPerks());
+                                        .BindOnClicked(model => model.OnClickJobs());
                                 });
                                 col2.AddRow(row2 =>
                                 {

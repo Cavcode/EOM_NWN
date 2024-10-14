@@ -149,7 +149,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 }
 
                 var playerSkill = dbPlayer.Skills[type];
-
                 _viewableSkills.Add(type);
                 skillNames.Add(skill.Name);
                 levels.Add(playerSkill.Rank);
