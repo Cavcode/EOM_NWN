@@ -190,6 +190,12 @@ namespace EOM.Game.Server.Feature
             dbPlayer.HP = GetCurrentHitPoints(player);
             dbPlayer.Magick = Stat.GetMaxMagick(player, dbPlayer);
 
+            dbPlayer.WarriorRank = 0;
+            dbPlayer.MonkRank = 0;
+            dbPlayer.GunbreakerRank = 0;
+            dbPlayer.WhiteMageRank = 0;
+            dbPlayer.BlackMageRank = 0;
+
             dbPlayer.BaseStats[AbilityType.Might] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Might);
             dbPlayer.BaseStats[AbilityType.Perception] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Perception);
             dbPlayer.BaseStats[AbilityType.Vitality] = CreaturePlugin.GetRawAbilityScore(player, AbilityType.Vitality);

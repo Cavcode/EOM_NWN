@@ -89,6 +89,11 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             get => Get<bool>();
             set => Set(value);
         }
+        public string SelectedJobRank
+        {
+            get => Get<string>();
+            set => Set(value);
+        }
         public bool IsBlackMageSelected
         {
             get => Get<bool>();
@@ -130,6 +135,8 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
 
         public Action OnSelectJob() => () =>
         {
+            var playerId = GetObjectUUID(Player);
+            var dbPlayer = DB.Get<Player>(playerId);
             Console.WriteLine("Before index OnSelectJob");
             var index = NuiGetEventArrayIndex();
             Console.WriteLine("After index OnSelectJob");
@@ -139,18 +146,24 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             {
                 case 0:
                     SelectedJob = "Warrior";
+                    SelectedJobRank = dbPlayer.WarriorRank.ToString();
+                    Console.WriteLine(SelectedJobRank);
                     break;
                 case 1:
                     SelectedJob = "Monk";
+                    SelectedJobRank = dbPlayer.MonkRank.ToString();
                     break;
                 case 2:
                     SelectedJob = "White Mage";
+                    SelectedJobRank = dbPlayer.WhiteMageRank.ToString();
                     break;
                 case 3:
                     SelectedJob = "Black Mage";
+                    SelectedJobRank = dbPlayer.BlackMageRank.ToString();
                     break;
                 case 4:
                     SelectedJob = "Gunbreaker";
+                    SelectedJobRank = dbPlayer.GunbreakerRank.ToString();
                     break;
             }
 

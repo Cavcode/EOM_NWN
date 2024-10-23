@@ -123,6 +123,11 @@ namespace EOM.Game.Server.Entity
         public int TotalSPAcquired { get; set; }
         public int TotalAPAcquired { get; set; }
         public int TotalJPAcquired { get; set; }
+        public int WarriorRank { get; set; }
+        public int MonkRank { get; set; }
+        public int GunbreakerRank { get; set; }
+        public int BlackMageRank { get; set; }
+        public int WhiteMageRank { get; set; }
         public int RegenerationTick { get; set; }
         public int HPRegen { get; set; }
         public int MPRegen { get; set; }

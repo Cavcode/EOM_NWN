@@ -51,29 +51,47 @@ namespace EOM.Game.Server.Feature.GuiDefinition
                         {
                             row2.AddLabel()
                                 .BindText(model => model.SelectedJob)
-                                .SetHeight(50.0f);
+                                .SetVerticalAlign(NuiVerticalAlign.Top)
+                                .SetHorizontalAlign(NuiHorizontalAlign.Center)
+                                .SetHeight(25.0f);
                         });
                         column2.AddRow(row3 =>
                         {
+                            row3.AddLabel()
+                                .SetText("Job Rank: ")
+                                .SetVerticalAlign(NuiVerticalAlign.Top)
+                                .SetHorizontalAlign(NuiHorizontalAlign.Left)
+                                .SetHeight(25.0f);
+
                               row3.AddLabel()
-                                .SetText("Job Rank: 1")
-                                .SetHeight(50.0f);
+                                  .BindText(model => model.SelectedJobRank)
+                                  .SetVerticalAlign(NuiVerticalAlign.Top)
+                                  .SetHorizontalAlign(NuiHorizontalAlign.Left)
+                                  .SetWidth(25.0f);
+
                         });
                         column2.AddRow(row4 =>
                         {
                             row4.AddLabel()
-                                .SetText("Available Job Points:")
-                                .SetHeight(50.0f);
+                                .SetText("Available Job Points: ")
+                                .SetVerticalAlign(NuiVerticalAlign.Top)
+                                .SetHorizontalAlign(NuiHorizontalAlign.Left)
+                                .SetHeight(25.0f);
 
                             row4.AddLabel()
                                 .BindText(model => model.JobPoints)
-                                .SetHeight(50.0f);
+                                .SetVerticalAlign(NuiVerticalAlign.Top)
+                                .SetHorizontalAlign(NuiHorizontalAlign.Left)
+                                .SetHeight(25.0f)
+                                .SetWidth(25.0f);
                         });
                         column2.AddRow(row5 =>
                         {
                             row5.AddLabel()
                                 .SetText("Perk Name: Lorem Deez Nuts")
-                                .SetHeight(50.0f);
+                                .SetVerticalAlign(NuiVerticalAlign.Top)
+                                .SetHorizontalAlign(NuiHorizontalAlign.Left)
+                                .SetHeight(25.0f);
                         });
                         column2.AddRow(row5 =>
                         {
