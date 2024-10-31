@@ -88,7 +88,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition
                         column2.AddRow(row5 =>
                         {
                             row5.AddLabel()
-                                .SetText("Perk Name: Lorem Deez Nuts")
+                                .BindText(model => model.SelectedPerkName)
                                 .SetVerticalAlign(NuiVerticalAlign.Top)
                                 .SetHorizontalAlign(NuiHorizontalAlign.Left)
                                 .SetHeight(25.0f);
@@ -96,8 +96,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition
                         column2.AddRow(row5 =>
                         {
                             row5.AddText()
-                                .SetText(
-                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+                                .BindText(model => model.SelectedPerkDetails);
                         });
                         column2.AddRow(row6 =>
                         {
