@@ -300,6 +300,17 @@
         Innervate = 294,
         ForceLink = 295,
 
-        PowerfulGrip = 296
+        // Axe perks
+        PowerfulGrip = 296,
+        WeaponExpertiseAxes = 297,
+        Stoke = 298,
+        ImprovedCriticalAxes = 299,
+        MightyCriticalAxes = 300,
+        ACleave = 301,
+        ACharge = 302,
+        Overhead = 303,
+        MightySwings = 304
+
+
     }
 }

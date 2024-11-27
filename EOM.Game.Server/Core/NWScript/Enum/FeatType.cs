@@ -1965,6 +1965,16 @@ namespace EOM.Game.Server.Core.NWScript.Enum
 
         SeraphHymn = 1996,
         MelodyOfLife = 1997,
+
+        // Axe feats
         PowerfulGrip = 1996,
+        WeaponExpertiseAxes = 1997,
+        Stoke = 1998,
+        ImprovedCriticalAxes = 1999,
+        MightyCriticalAxes = 2000,
+        ACleave = 2001,
+        ACharge = 2002,
+        Overhead = 2003,
+        MightySwings = 2004
     }
 }

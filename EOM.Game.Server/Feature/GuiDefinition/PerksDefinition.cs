@@ -27,12 +27,6 @@ namespace EOM.Game.Server.Feature.GuiDefinition
                             .BindOnClicked(model => model.OnClickMyPerks())
                             .BindIsToggled(model => model.IsInMyPerksMode);
 
-                        row.AddToggleButton()
-                            .SetText("Beast Perks")
-                            .SetHeight(32f)
-                            .BindOnClicked(model => model.OnClickBeastPerks())
-                            .BindIsEnabled(model => model.HasBeast)
-                            .BindIsToggled(model => model.IsInBeastPerksMode);
                         row.AddSpacer();
                     });
 
