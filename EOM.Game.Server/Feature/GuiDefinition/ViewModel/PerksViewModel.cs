@@ -773,3 +773,4 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
         };
     }
 }
+  

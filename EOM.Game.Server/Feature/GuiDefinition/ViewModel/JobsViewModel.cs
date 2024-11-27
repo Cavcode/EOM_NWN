@@ -94,6 +94,16 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             get => Get<string>();
             set => Set(value);
         }
+        public string SelectedPerkName
+        {
+            get => Get<string>();
+            set => Set(value);
+        }
+        public string SelectedPerkDetails
+        {
+            get => Get<string>();
+            set => Set(value);
+        }
         public bool IsBlackMageSelected
         {
             get => Get<bool>();

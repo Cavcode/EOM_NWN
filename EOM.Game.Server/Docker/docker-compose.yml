@@ -22,7 +22,7 @@ services:
     EOM-server:
         hostname: nwnx-server
         stop_signal: SIGINT
-        image: nwnxee/unified:latest
+        image: nwnxee/unified:89b5a9a
         env_file: ${PWD-.}/EOM.env
         links:
             - "redis:redis"

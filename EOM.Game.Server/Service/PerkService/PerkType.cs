@@ -300,7 +300,6 @@
         Innervate = 294,
         ForceLink = 295,
 
-        SeraphHymn = 296,
-        MelodyOfLife = 297,
+        PowerfulGrip = 296
     }
 }

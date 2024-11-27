@@ -1965,5 +1965,6 @@ namespace EOM.Game.Server.Core.NWScript.Enum
 
         SeraphHymn = 1996,
         MelodyOfLife = 1997,
+        PowerfulGrip = 1996,
     }
 }
