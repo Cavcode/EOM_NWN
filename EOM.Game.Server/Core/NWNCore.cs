@@ -59,7 +59,8 @@ namespace EOM.Game.Server.Core
             _eventHandles.MainLoop = eventHandler.OnMainLoop;
             _eventHandles.RunScript = eventHandler.OnRunScript;
             _eventHandles.Closure = eventHandler.OnClosure;
-            _eventHandles.Signal = eventHandler.OnSignal;
+            _eventHandles.AssertFail = eventHandler.OnAssertFail;
+            _eventHandles.Crash = eventHandler.OnCrash;
 
             int size = Marshal.SizeOf(typeof(NativeEventHandles));
             IntPtr ptr = Marshal.AllocHGlobal(size);

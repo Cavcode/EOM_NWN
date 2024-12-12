@@ -70,7 +70,8 @@ namespace EOM.Game.Server.Service
         /// <summary>
         /// When the module loads, cache all relevant data into memory.
         /// </summary>
-        [NWNEventHandler("mod_cache")]
+        
+
         public static void CacheData()
         {
             CachePropertyTypes();
@@ -84,13 +85,13 @@ namespace EOM.Game.Server.Service
         /// <summary>
         /// When the module loads, clean up any deleted data, refreshes permissions and then load properties.
         /// </summary>
-        [NWNEventHandler("mod_load")]
+        //[NWNEventHandler("mod_load")]
         public static void OnModuleLoad()
         {
-            RefreshPermissions();
-            ProcessCities();
-            CleanUpData();
-            LoadProperties();
+            //RefreshPermissions();
+            //ProcessCities();
+            //CleanUpData();
+            //LoadProperties();
         }
 
         private static void CachePropertyTypes()
@@ -1234,79 +1235,7 @@ namespace EOM.Game.Server.Service
             });
         }
 
-        /// <summary>
-        /// Creates a new starship in the database for a given player and returns the world property.
-        /// </summary>
-        /// <param name="player">The player to associate the starship with.</param>
-        /// <param name="layout">The layout to use.</param>
-        /// <param name="planetType">The planet where this starship is being created.</param>
-        /// <param name="spaceLocation">Location of the space transfer point (when a player is converted to a ship)</param>
-        /// <param name="landingLocation">Location of the ground transfer point (when a player is converted back to normal)</param>
-        /// <returns>The new world property.</returns>
-        public static WorldProperty CreateStarship(
-            uint player, 
-            PropertyLayoutType layout, 
-            PlanetType planetType,
-            Location spaceLocation, 
-            Location landingLocation)
-        {
-            var spacePosition = GetPositionFromLocation(spaceLocation);
-            var spaceOrientation = GetFacingFromLocation(spaceLocation);
-            var spaceArea = GetAreaFromLocation(spaceLocation);
-            var spaceAreaResref = GetResRef(spaceArea);
-
-            var landingPosition = GetPositionFromLocation(landingLocation);
-            var landingOrientation = GetFacingFromLocation(landingLocation);
-            var landingArea = GetAreaFromLocation(landingLocation);
-            var landingAreaResref = GetResRef(landingArea);
-            var landingPropertyId = GetPropertyId(landingArea);
-
-            // In the event the starport a ship is located at is destroyed or otherwise disappears,
-            // we need to know the location of the planet's NPC starport so the ship can be returned there.
-            // If we don't capture this correctly, the ship will be lost in limbo and the players won't be 
-            // able to access it.
-            var planet = Planet.GetPlanetByType(planetType);
-            var npcLandingWaypoint = GetWaypointByTag(planet.LandingWaypointTag);
-            var npcLandingPosition = GetPosition(npcLandingWaypoint);
-            var npcLandingOrientation = GetFacing(npcLandingWaypoint);
-            var npcLandingArea = GetArea(npcLandingWaypoint);
-            var npcLandingResref = GetResRef(npcLandingArea);
-
-            var playerId = GetObjectUUID(player);
-            var propertyName = $"{GetName(player)}'s Starship";
-
-            return CreateProperty(player, playerId, propertyName, PropertyType.Starship, layout, OBJECT_INVALID, property =>
-            {
-                property.Positions[PropertyLocationType.LastNPCDockPosition] = new PropertyLocation
-                {
-                    X = npcLandingPosition.X,
-                    Y = npcLandingPosition.Y,
-                    Z = npcLandingPosition.Z,
-                    Orientation = npcLandingOrientation,
-                    AreaResref = npcLandingResref
-                };
-
-                property.Positions[PropertyLocationType.DockPosition] = new PropertyLocation
-                {
-                    X = landingPosition.X,
-                    Y = landingPosition.Y,
-                    Z = landingPosition.Z,
-                    Orientation = landingOrientation,
-                    AreaResref = string.IsNullOrWhiteSpace(landingPropertyId) ? landingAreaResref : string.Empty,
-                    InstancePropertyId = !string.IsNullOrWhiteSpace(landingPropertyId) ? landingPropertyId : string.Empty
-                };
-
-                property.Positions[PropertyLocationType.SpacePosition] = new PropertyLocation
-                {
-                    X = spacePosition.X,
-                    Y = spacePosition.Y,
-                    Z = spacePosition.Z,
-                    Orientation = spaceOrientation,
-                    AreaResref = spaceAreaResref
-                };
-            });
-        }
-
+        
         /// <summary>
         /// Creates a new city in the specified area and assigns the specified player to become the owner.
         /// A city hall structure and interior will also be spawned at the specified location.

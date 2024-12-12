@@ -66,11 +66,7 @@ namespace EOM.Game.Server.Feature.ChatCommandDefinition
                     var daysOldMessage = daysOld == 1 ? "day old" : "days old";
                     var statRebuild = "Now";
 
-                    var (isOnDelay, timeToWait) = Recast.IsOnRecastDelay(user, RecastGroup.StatRebuild);
-                    if (isOnDelay)
-                    {
-                        statRebuild = timeToWait;
-                    }
+
 
                     var message = $"{ColorToken.Green("Character Info:")}\n" +
                                   $"{ColorToken.Green("Public CD Key:")} {ColorToken.White(cdKey)}\n" +

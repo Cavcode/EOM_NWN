@@ -19,6 +19,16 @@ namespace EOM.Game.Server.Core
         /// <inheritdoc cref="ICoreEventHandler.OnSignal"/>
         public event SignalEvent? OnSignal;
 
+        public delegate void AssertFailEvent(string message, string stackTrace);
+
+        /// <inheritdoc cref="ICoreEventHandler.OnAssertFail"/>
+        public event AssertFailEvent? OnAssertFail;
+
+        public delegate void CrashEvent(int code, string message);
+
+        /// <inheritdoc cref="ICoreEventHandler.OnCrash"/>
+        public event CrashEvent? OnCrash;
+
         public delegate void RunScriptEvent(string scriptName, uint objectSelf, out int scriptHandleResult);
 
         /// <inheritdoc cref="ICoreEventHandler.OnRunScript"/>
@@ -44,6 +54,12 @@ namespace EOM.Game.Server.Core
 
         void ICoreEventHandler.OnSignal(string signal)
             => OnSignal?.Invoke(signal);
+        void ICoreEventHandler.OnAssertFail(string message, string stackTrace)
+        {
+        }
+        void ICoreEventHandler.OnCrash(int code, string message)
+        {
+        }
 
         int ICoreEventHandler.OnRunScript(string script, uint oidSelf)
         {

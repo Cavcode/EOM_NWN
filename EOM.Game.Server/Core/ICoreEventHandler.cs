@@ -1,4 +1,6 @@
-﻿namespace EOM.Game.Server.Core
+﻿using System.Data;
+
+namespace EOM.Game.Server.Core
 {
     public interface ICoreEventHandler
     {
@@ -30,5 +32,12 @@
         /// <param name="signal">"ON_MODULE_LOAD_FINISH" - Called just before the OnModuleLoad event. Perform any init requiring NWScript usage here.<br/>
         /// "ON_DESTROY_SERVER" - Called just before the server will be shutdown. Perform any cleanup/flushing here.</param>
         void OnSignal(string signal);
+
+        /// <summary>
+        /// Called on assertion failure.
+        /// </summary>
+
+        void OnAssertFail(string message, string stackTrace);
+        void OnCrash(int code, string message);
     }
 }

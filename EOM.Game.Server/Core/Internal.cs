@@ -44,6 +44,8 @@ namespace EOM.Game.Server.Core
             Environment.SetEnvironmentVariable("GAME_SERVER_CONTEXT", "true");
 
             var retVal = NWNCore.Init(nativeHandlesPtr, nativeHandlesLength, out CoreGameManager coreGameManager);
+            coreGameManager.OnCrash += OnCrash;
+            coreGameManager.OnAssertFail += OnAssertFail;
             coreGameManager.OnSignal += OnSignal;
             coreGameManager.OnServerLoop += OnServerLoop;
             coreGameManager.OnRunScript += OnRunScript;
@@ -89,6 +91,14 @@ namespace EOM.Game.Server.Core
 
         }
 
+        private static void OnAssertFail(string message, string stackTrace)
+        {
+
+        }
+        private static void OnCrash(int code, string stackTrace)
+        {
+
+        }
         private static void OnServerLoop(ulong frame)
         {
             OnScriptContextBegin?.Invoke();

@@ -30,7 +30,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 return;
             }
 
-            var (isOnDelay, timeToWait) = Recast.IsOnRecastDelay(player, RecastGroup.StatRebuild);
+            var (isOnDelay, timeToWait) = Recast.IsOnRecastDelay(player, RecastGroup.Invalid);
             if (isOnDelay)
             {
                 FloatingTextStringOnCreature(ColorToken.Red($"Another stat rebuild can be performed in {timeToWait}."), player, false);
@@ -292,7 +292,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                     return;
                 }
 
-                var (isOnDelay, timeToWait) = Recast.IsOnRecastDelay(Player, RecastGroup.StatRebuild);
+                var (isOnDelay, timeToWait) = Recast.IsOnRecastDelay(Player, RecastGroup.Invalid);
                 if (isOnDelay)
                 {
                     FloatingTextStringOnCreature(ColorToken.Red($"Another stat rebuild can be performed in {timeToWait}."), Player, false);
@@ -337,7 +337,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 Currency.TakeCurrency(Player, CurrencyType.StatRefundToken, 1);
 
                 const int DelaySeconds = CooldownDays * 86400;
-                Recast.ApplyRecastDelay(Player, RecastGroup.StatRebuild, DelaySeconds, true);
+                Recast.ApplyRecastDelay(Player, RecastGroup.Invalid, DelaySeconds, true);
             });
         };
     }

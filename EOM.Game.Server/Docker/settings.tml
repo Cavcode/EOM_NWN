@@ -104,12 +104,12 @@
 		[server.log.rotation]
 			enabled = true
 	[server.login]
-		admin-password = ""
+		admin-password = "r"
 		dm-password = ""
 		max-players = 6
 		player-password = ""
 		[server.login.player-dm]
-			enabled = false
+			enabled = true
 	[server.net]
 		accept-relayed-connections = true
 		port = 5121

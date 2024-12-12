@@ -12,6 +12,9 @@ namespace EOM.Game.Server.Core
 
         public delegate void SignalHandlerDelegate(string signal);
 
+        public delegate void AssertHandlerDelegate(string message, string stackTrace);
+        public delegate void CrashHandlerDelegate(int code, string message);
+
         [StructLayout(LayoutKind.Sequential)]
         public struct NativeEventHandles
         {
@@ -19,6 +22,8 @@ namespace EOM.Game.Server.Core
             public RunScriptHandlerDelegate RunScript;
             public ClosureHandlerDelegate Closure;
             public SignalHandlerDelegate Signal;
+            public AssertHandlerDelegate AssertFail;
+            public CrashHandlerDelegate Crash;
         }
     }
 }

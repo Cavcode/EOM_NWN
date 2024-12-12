@@ -1,10 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using EOM.Game.Server.Core;
 using EOM.Game.Server.Core.NWScript.Enum;
 using EOM.Game.Server.Core.NWScript.Enum.VisualEffect;
+using EOM.Game.Server.Entity;
 using EOM.Game.Server.Feature.AIDefinition;
 using EOM.Game.Server.Service.AIService;
+using static NWN.Native.API.CVirtualMachineScript.JmpData;
 
 namespace EOM.Game.Server.Service
 {
@@ -19,7 +22,7 @@ namespace EOM.Game.Server.Service
             _aiDefinitions[AIDefinitionType.Generic] = new GenericAIDefinition();
         }
 
-        /// <summary>
+        /// <summary> 
         /// Entry point for creature heartbeat logic.
         /// </summary>
         [NWNEventHandler("crea_hb_aft")]
@@ -30,7 +33,10 @@ namespace EOM.Game.Server.Service
 
             Stat.RestoreNPCStats(true);
             ProcessFlags();
+            var creature = OBJECT_SELF;
             Enmity.AttackHighestEnmityTarget(OBJECT_SELF);
+
+
         }
 
         /// <summary>
@@ -115,7 +121,7 @@ namespace EOM.Game.Server.Service
         [NWNEventHandler("crea_spawn_aft")]
         public static void CreatureSpawn()
         {
-            SetLocalString(OBJECT_SELF, "X2_SPECIAL_COMBAT_AI_SCRIPT", "xxx");
+            SetLocalString(OBJECT_SELF, "X2_SPECIAL_COMBAT_AI_SCRIPT", "boss_entry");
 
             Stat.LoadNPCStats();
             LoadAggroEffect();

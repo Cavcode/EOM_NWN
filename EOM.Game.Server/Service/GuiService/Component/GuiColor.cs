@@ -40,6 +40,7 @@ namespace EOM.Game.Server.Service.GuiService.Component
 
         public static GuiColor Green => new(0, 255, 0);
         public static GuiColor Red => new(255, 0, 0);
+        public static GuiColor RedDiff => new(255, 117, 24);
         public static GuiColor Cyan => new(0, 255, 255);
         public static GuiColor White => new(255, 255, 255);
         public static GuiColor Grey => new(169, 169, 169);

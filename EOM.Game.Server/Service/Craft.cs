@@ -39,8 +39,8 @@ namespace EOM.Game.Server.Service
         [NWNEventHandler("EOM_skl_cache")]
         public static void CacheData()
         {
-            CacheCategories();
-            CacheRecipes();
+            //CacheCategories();
+            //CacheRecipes();
 
             Console.WriteLine($"Loaded {_recipes.Count} recipes.");
         }

@@ -333,7 +333,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 perkButtonIcons.Add(detail.IconResref);
                 perkButtonTexts.Add($"{detail.Name} ({rank} / {detail.PerkLevels.Count})");
                 perkDetailSelected.Add(false);
-                perkButtonColors.Add(meetsRequirements ? GuiColor.Green : GuiColor.Red);
+                perkButtonColors.Add(meetsRequirements ? GuiColor.Green : GuiColor.RedDiff);
             }
 
             PerkButtonColors = perkButtonColors;
