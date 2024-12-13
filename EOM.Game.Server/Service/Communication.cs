@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using EOM.Game.Server.Core.NWNX;
+using EOM.Game.Server.Core.NWScript.Enum.VisualEffect;
+using EOM.Game.Server.Core.NWScript.Enum;
+using EOM.Game.Server.Core;
+using EOM.Game.Server.Enumeration;
+using EOM.Game.Server.Service;
 using EOM.Game.Server.Core;
 using EOM.Game.Server.Core.NWNX;
 using EOM.Game.Server.Core.NWScript.Enum;
@@ -10,7 +16,7 @@ using EOM.Game.Server.Core.NWScript.Enum.VisualEffect;
 using EOM.Game.Server.Enumeration;
 using ChatChannel = EOM.Game.Server.Core.NWNX.Enum.ChatChannel;
 using Player = EOM.Game.Server.Entity.Player;
-using JobType = EOM.Game.Server.Service.SkillService.SkillType;
+using SkillType = EOM.Game.Server.Service.SkillService.SkillType;
 
 namespace EOM.Game.Server.Service
 {
@@ -30,7 +36,7 @@ namespace EOM.Game.Server.Service
             public bool IsOOC { get; set; }
             public bool IsEmote { get; set; }
         }
-        
+
         private enum WorkingOnEmoteStyle
         {
             None,
@@ -50,7 +56,7 @@ namespace EOM.Game.Server.Service
         {
             var dm = OBJECT_SELF;
             var target = StringToObject(EventsPlugin.GetEventData("TARGET"));
-            
+
             // Unpossession - Remove the variable
             if (!GetIsObjectValid(target))
             {
@@ -76,7 +82,7 @@ namespace EOM.Game.Server.Service
 
             var playerId = GetObjectUUID(player);
             var dbPlayer = DB.Get<Player>(playerId) ?? new Player(playerId);
-            
+
             SetLocalBool(player, "DISPLAY_HOLONET", dbPlayer.Settings.IsHolonetEnabled);
         }
 
@@ -92,11 +98,12 @@ namespace EOM.Game.Server.Service
             var type = GetLastGuiEventType();
             if (!GetIsPC(player)) return;
 
-            if(type == GuiEventType.ChatBarFocus)
+            if (type == GuiEventType.ChatBarFocus)
             {
                 var chatIndicator = TagEffect(EffectVisualEffect(VisualEffect.Vfx_Dur_Chat_Bubble, false, 0.5f), "typingindicator");
                 ApplyEffectToObject(DurationType.Temporary, chatIndicator, player, 120.0f);
-            } else if (type == GuiEventType.ChatBarUnfocus)
+            }
+            else if (type == GuiEventType.ChatBarUnfocus)
             {
                 RemoveEffectByTag(player, "typingindicator");
             }
@@ -126,7 +133,7 @@ namespace EOM.Game.Server.Service
                 channel == ChatChannel.PlayerWhisper ||
                 channel == ChatChannel.PlayerParty ||
                 channel == ChatChannel.PlayerShout;
-            
+
             var messageToDm = channel == ChatChannel.PlayerDM;
 
             var sender = ChatPlugin.GetSender();
@@ -134,7 +141,7 @@ namespace EOM.Game.Server.Service
 
             // if this is a DMFI chat command, exit as ProcessNativeChatMessage has already handled via mod_chat event.
             if (GetIsDM(sender) && message.Length >= 1 && message.Substring(0, 1) == ".")
-            {                
+            {
                 return;
             }
 
@@ -175,7 +182,7 @@ namespace EOM.Game.Server.Service
                     IsTranslatable = false
                 };
                 chatComponents.Add(component);
-                
+
                 if (channel == ChatChannel.PlayerShout)
                 {
                     SendMessageToPC(sender, "Out-of-character messages cannot be sent on the Holonet.");
@@ -194,8 +201,8 @@ namespace EOM.Game.Server.Service
             }
             else
             {
-                chatComponents = GetEmoteStyle(sender) == EmoteStyle.Regular 
-                    ? SplitMessageIntoComponents_Regular(message) 
+                chatComponents = GetEmoteStyle(sender) == EmoteStyle.Regular
+                    ? SplitMessageIntoComponents_Regular(message)
                     : SplitMessageIntoComponents_Novel(message);
 
                 // For any components with color, set the emote color.
@@ -252,7 +259,7 @@ namespace EOM.Game.Server.Service
             for (var player = GetFirstPC(); GetIsObjectValid(player); player = GetNextPC())
             {
                 allPlayersAndDMs.Add(player);
-                
+
                 if (GetIsDM(player) || GetIsDMPossessed(player))
                 {
                     allDMs.Add(player);
@@ -309,7 +316,7 @@ namespace EOM.Game.Server.Service
                     {
                         target = possessedNPC;
                     }
-                    
+
                     var distance = GetDistanceBetween(sender, target);
 
                     if (GetArea(target) == GetArea(sender) &&
@@ -381,14 +388,15 @@ namespace EOM.Game.Server.Service
                     sender = HoloCom.GetHoloGramOwner(sender);
                 }
 
-                var r = dbReceiver.Settings.OOCChatColor.Red;
-                var g = dbReceiver.Settings.OOCChatColor.Green;
-                var b = dbReceiver.Settings.OOCChatColor.Blue;
+
+                var r = 255;
+                var g = 255;
+                var b = 255;
+
 
                 foreach (var component in chatComponents)
                 {
                     var text = component.Text;
-
 
                     if (component.IsOOC)
                     {
@@ -428,7 +436,7 @@ namespace EOM.Game.Server.Service
                     }
                     else
                     {
-                        text = ColorToken.Custom(text, r, g, b);
+                        text = ColorToken.Custom(text, 255, 255, 255);
                     }
 
                     finalMessage.Append(text);

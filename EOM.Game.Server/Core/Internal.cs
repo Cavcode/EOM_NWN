@@ -1,12 +1,15 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using EOM.Game.Server.Core.Async;
 using EOM.Game.Server.Core.NWNX;
 using EOM.Game.Server.Extension;
 using EOM.Game.Server.Service;
 using EOM.Game.Server.Service.LogService;
+using static EOM.Game.Server.Core.NWNCore;
 
 namespace EOM.Game.Server.Core
 {
@@ -43,15 +46,16 @@ namespace EOM.Game.Server.Core
 
             Environment.SetEnvironmentVariable("GAME_SERVER_CONTEXT", "true");
 
+            int size = Marshal.SizeOf(typeof(NativeEventHandles));
+            Console.WriteLine("         size: " + size);
+
             var retVal = NWNCore.Init(nativeHandlesPtr, nativeHandlesLength, out CoreGameManager coreGameManager);
-            coreGameManager.OnCrash += OnCrash;
-            coreGameManager.OnAssertFail += OnAssertFail;
             coreGameManager.OnSignal += OnSignal;
             coreGameManager.OnServerLoop += OnServerLoop;
             coreGameManager.OnRunScript += OnRunScript;
             _coreGameManager = coreGameManager;
 
-            Console.WriteLine("Registering loggers...");
+            Console.WriteLine("Registering loggers... BIG HONKING LOGGERS HONKEsSRS");
             Log.Register();
             Console.WriteLine("Loggers registered successfully.");
 

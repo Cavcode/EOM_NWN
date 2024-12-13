@@ -22,7 +22,7 @@ namespace EOM.Game.Server.Core
             public RunScriptHandlerDelegate RunScript;
             public ClosureHandlerDelegate Closure;
             public SignalHandlerDelegate Signal;
-            public AssertHandlerDelegate AssertFail;
+            public AssertHandlerDelegate Assert;
             public CrashHandlerDelegate Crash;
         }
     }

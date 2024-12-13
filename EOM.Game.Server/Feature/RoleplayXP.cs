@@ -69,7 +69,7 @@ namespace EOM.Game.Server.Feature
         /// Adds RP points to a player's RP progression.
         /// If messages are sent too quickly, the message will be treated as spam and RP point will not be granted.
         /// </summary>
-        [NWNEventHandler("on_nwnx_chat")]
+        //[NWNEventHandler("on_nwnx_chat")]
         public static void ProcessRPMessage()
         {
             var channel = ChatPlugin.GetChannel();

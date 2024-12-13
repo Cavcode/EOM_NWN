@@ -37,7 +37,7 @@ namespace EOM.CLI
 
         private void CopyBinaries()
         {
-            var binPath = "../EOM.Game.Server/bin/Debug/net7.0/";
+            var binPath = "../EOM.Game.Server/bin/Debug/net8.0/";
 
             var source = new DirectoryInfo(binPath);
             var target = new DirectoryInfo(DotnetPath);

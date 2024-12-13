@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection.Metadata;
 using System.Runtime.InteropServices;
 
 namespace EOM.Game.Server.Core
@@ -18,7 +19,7 @@ namespace EOM.Game.Server.Core
                 RegisterEventHandles(eventHandler);
             }
 
-            return result;
+            return 0;
         }
 
         public static int Init(IntPtr nativeHandlesPtr, int nativeHandlesLength, ICoreFunctionHandler functionHandler)
@@ -59,12 +60,13 @@ namespace EOM.Game.Server.Core
             _eventHandles.MainLoop = eventHandler.OnMainLoop;
             _eventHandles.RunScript = eventHandler.OnRunScript;
             _eventHandles.Closure = eventHandler.OnClosure;
-            _eventHandles.AssertFail = eventHandler.OnAssertFail;
+            _eventHandles.Assert = eventHandler.OnAssertFail;
             _eventHandles.Crash = eventHandler.OnCrash;
 
             int size = Marshal.SizeOf(typeof(NativeEventHandles));
             IntPtr ptr = Marshal.AllocHGlobal(size);
             Marshal.StructureToPtr(_eventHandles, ptr, false);
+            Console.WriteLine("         size: " + size);
             NativeFunctions.RegisterHandlers(ptr, (uint)size);
             Marshal.FreeHGlobal(ptr);
         }
