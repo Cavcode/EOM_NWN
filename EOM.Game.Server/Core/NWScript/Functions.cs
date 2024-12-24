@@ -35,7 +35,8 @@ namespace EOM.Game.Server.Core.NWScript
         /// <summary>
         ///   Delay aActionToDelay by fSeconds.
         ///   * No return value, but if an error occurs, the log file will contain
-        ///   "DelayCommand failed.".
+        ///   "
+        ///   failed.".
         ///   It is suggested that functions which create effects should not be used
         ///   as parameters to delayed actions.  Instead, the effect should be created in the
         ///   script and then passed into the action.  For example:

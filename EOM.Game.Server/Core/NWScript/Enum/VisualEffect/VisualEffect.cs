@@ -561,6 +561,8 @@ namespace EOM.Game.Server.Core.NWScript.Enum.VisualEffect
         Vfx_Imp_Mirv_Rock3 = 840,
         Vfx_Dur_Chat_Bubble = 841,
         Vfx_Imp_Crack = 842,
-        Vfx_Imp_Charge = 843
+        Vfx_Imp_Charge = 843,
+
+        Vfx_Monster_Death = 844
     }
 }

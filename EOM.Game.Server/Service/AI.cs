@@ -5,8 +5,10 @@ using EOM.Game.Server.Core;
 using EOM.Game.Server.Core.NWScript.Enum;
 using EOM.Game.Server.Core.NWScript.Enum.VisualEffect;
 using EOM.Game.Server.Entity;
+using EOM.Game.Server.Feature.AIBossDefinition.Bosses;
 using EOM.Game.Server.Feature.AIDefinition;
 using EOM.Game.Server.Service.AIService;
+using static EOM.Game.Server.Feature.Healthbar;
 using static NWN.Native.API.CVirtualMachineScript.JmpData;
 
 namespace EOM.Game.Server.Service
@@ -31,11 +33,20 @@ namespace EOM.Game.Server.Service
             if (GetAILevel(OBJECT_SELF) == AILevel.VeryLow)
                 return;
 
-            Stat.RestoreNPCStats(true);
-            ProcessFlags();
-            var creature = OBJECT_SELF;
-            Enmity.AttackHighestEnmityTarget(OBJECT_SELF);
-
+            var hasMechanics = GetLocalInt(OBJECT_SELF,"HAS_MECHANICS");
+            var bossIndex = GetLocalInt(OBJECT_SELF, "BOSS_INDEX");
+            if (hasMechanics == 1)
+            {
+                BossScript.BossHook(bossIndex, OBJECT_SELF);
+                RefreshHealthbar(OBJECT_SELF);
+            }
+            else
+            {
+                Stat.RestoreNPCStats(true);
+                ProcessFlags();
+                var creature = OBJECT_SELF;
+                Enmity.AttackHighestEnmityTarget(OBJECT_SELF);
+            }
 
         }
 
@@ -61,8 +72,8 @@ namespace EOM.Game.Server.Service
             {
                 ProcessPerkAI(AIDefinitionType.Generic, creature, true);
             }
-
-            Enmity.AttackHighestEnmityTarget(creature);
+            RefreshHealthbar(OBJECT_SELF);
+            //Enmity.AttackHighestEnmityTarget(creature);
         }
 
         /// <summary>
@@ -85,7 +96,8 @@ namespace EOM.Game.Server.Service
         [NWNEventHandler("crea_attack_aft")]
         public static void CreaturePhysicalAttacked()
         {
-            Enmity.AttackHighestEnmityTarget(OBJECT_SELF);
+            RefreshHealthbar(OBJECT_SELF);
+            //Enmity.AttackHighestEnmityTarget(OBJECT_SELF);
         }
 
         /// <summary>
@@ -94,7 +106,8 @@ namespace EOM.Game.Server.Service
         [NWNEventHandler("crea_damaged_aft")]
         public static void CreatureDamaged()
         {
-            Enmity.AttackHighestEnmityTarget(OBJECT_SELF);
+            //Enmity.AttackHighestEnmityTarget(OBJECT_SELF);
+            RefreshHealthbar(OBJECT_SELF);
         }
 
         /// <summary>
@@ -112,7 +125,8 @@ namespace EOM.Game.Server.Service
         [NWNEventHandler("crea_disturb_aft")]
         public static void CreatureDisturbed()
         {
-            Enmity.AttackHighestEnmityTarget(OBJECT_SELF);
+            //Enmity.AttackHighestEnmityTarget(OBJECT_SELF);
+            RefreshHealthbar(OBJECT_SELF);
         }
 
         /// <summary>

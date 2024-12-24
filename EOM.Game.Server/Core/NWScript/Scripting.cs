@@ -32,7 +32,8 @@ namespace EOM.Game.Server.Core.NWScript
 
         /// <summary>
         ///  Returns the currently executing event (EVENT_SCRIPT_*) or 0 if not determinable.
-        /// Note: Will return 0 in DelayCommand/AssignCommand.
+        /// Note: Will return 0 in 
+        /// /AssignCommand.
         /// * bInheritParent: If TRUE, ExecuteScript(Chunk) will inherit their event ID from their parent event.
         ///                   If FALSE, it will return the event ID of the current script, which may be 0.
         ///
