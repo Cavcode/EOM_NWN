@@ -1,9 +1,14 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using EOM.Game.Server.Core;
 using EOM.Game.Server.Core.Bioware;
 using EOM.Game.Server.Core.NWScript.Enum;
 using EOM.Game.Server.Core.NWScript.Enum.Item;
 using EOM.Game.Server.Core.NWScript.Enum.Item.Property;
+using EOM.Game.Server.Extension;
+using EOM.Game.Server.Service;
+using EOM.Game.Server.Service.PlayerMarketService;
+using EOM.Game.Server.Service.PropertyService;
 
 namespace EOM.Game.Server.Feature
 {
@@ -96,6 +101,37 @@ namespace EOM.Game.Server.Feature
             ApplyOnHitProperty(arrows);
             ApplyOnHitProperty(bolts);
             ApplyOnHitProperty(bullets);
+        }
+
+        [NWNEventHandler("mod_equip")]
+        public static void SwitchPhenoEquip()
+        {
+            var player = GetPCItemLastEquippedBy();
+            if (!GetIsPC(player) || GetIsDM(player)) return;
+            var itemPlayer = GetPCItemLastEquipped();
+
+            var baseItemType = GetBaseItemType(itemPlayer);
+            if (!_validItemTypes.Contains(baseItemType)) return;
+
+            var items = Enum.GetValues(typeof(BaseItem)).Cast<BaseItem>();
+            foreach (var item in items)
+            {
+                if (item == baseItemType)
+                {
+                    var attribute = item.GetAttribute<BaseItem, ItemAttribute>();
+                    SetPhenoType(attribute.PhenoType, player);
+                }
+            }
+        }
+
+        [NWNEventHandler("mod_unequip")]
+        public static void SwitchPhenoUnequip()
+        {
+            var player = GetPCItemLastEquippedBy();
+            if (!GetIsPC(player) || GetIsDM(player)) return;
+            var itemPlayer = GetPCItemLastEquipped();
+
+            SetPhenoType(PhenoType.Normal,player);
         }
 
         /// <summary>

@@ -1,3 +1,6 @@
+using EOM.Game.Server.Service.SkillService;
+using System;
+
 namespace EOM.Game.Server.Core.NWScript.Enum.Item
 {
     public enum BaseItem
@@ -9,7 +12,7 @@ namespace EOM.Game.Server.Core.NWScript.Enum.Item
         BastardSword = 3,
         LightFlail = 4,
         WarHammer = 5,
-        Cannon = 6, 
+        Cannon = 6,
         Rifle = 7,
         Longbow = 8,
         LightMace = 9,
@@ -21,6 +24,8 @@ namespace EOM.Game.Server.Core.NWScript.Enum.Item
         Torch = 15,
         Armor = 16,
         Helmet = 17,
+        [Item("Axes",
+            PhenoType.Large)]
         GreatAxe = 18,
         Amulet = 19,
         Arrow = 20,
@@ -130,5 +135,20 @@ namespace EOM.Game.Server.Core.NWScript.Enum.Item
         TwinElectroBlade = 537,
         MiscellaneousThinStackable = 538,
 
+    }
+    public class ItemAttribute : Attribute
+    {
+        public string Name { get; set; }
+        public PhenoType PhenoType { get; set; }
+
+
+        public ItemAttribute(
+            string name,
+            PhenoType phenoType)
+
+        {
+            Name = name;
+            PhenoType = phenoType;
+        }
     }
 }

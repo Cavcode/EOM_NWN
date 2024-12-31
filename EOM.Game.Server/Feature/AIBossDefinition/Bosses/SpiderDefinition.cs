@@ -24,7 +24,7 @@ namespace EOM.Game.Server.Feature.AIBossDefinition.Bosses
             if (GetLocalInt(boss, "SHADOW_COMBAT_RUNNING") == 1)
                 return;
 
-            if (GetCurrentHitPoints(boss) == 1)
+            if (GetLocalInt(boss, "BOSS_CUR_HP") <= 0)
             {
                 SetLocalInt(GetArea(boss), "StopMechanics", 1);
                 SetLocalInt(boss, "SHADOW_COMBAT_RUNNING", 1);
@@ -47,9 +47,10 @@ namespace EOM.Game.Server.Feature.AIBossDefinition.Bosses
                 SetLocalInt(boss, "SHADOW_COMBAT_RUNNING", 1);
 
 
-                var nRoundDelay = Random(2);
-                var fDelay = IntToFloat(nRoundDelay);
-                var index = Random(6);
+                
+                System.Random random = new System.Random();
+
+                var index = random.Next(0,2);
 
                 SendMessageToPC(oEnemy, IntToString(index));
 
@@ -57,51 +58,20 @@ namespace EOM.Game.Server.Feature.AIBossDefinition.Bosses
                 {
                     case 0:
                     {
-                        DelayCommand(fDelay, () => Enmity.AttackHighestEnmityTarget(boss));
-                        DelayCommand(fDelay + 1.5f, () => ClearAllActions());
+                        Enmity.AttackHighestEnmityTarget(boss);
                         break;
                     }
                     case 1:
                     {
-                        DelayCommand(fDelay, () => CastStinkyStuff(boss, oEnemy));
-                        DelayCommand(fDelay + 0.5f, () => ActionWait(1.5f));
+                        ClearAllActions();
+                        CastStinkyStuff(boss, oEnemy);
                         break;
                     }
-                    case 2:
-                    {
-                        DelayCommand(fDelay, () => CastStinkyStuff(boss, oEnemy));
-                        DelayCommand(fDelay + 0.5f, () => ActionWait(1.5f));
-                        break;
-                    }
-                    case 3:
-                    {
-                        DelayCommand(fDelay, () => CastStinkyStuff(boss, oEnemy));
-                        DelayCommand(fDelay + 0.5f, () => ActionWait(1.5f));
-                        break;
-                    }
-                    case 4:
-                    {
-                        DelayCommand(fDelay, () => CastStinkyStuff(boss, oEnemy));
-                        DelayCommand(fDelay + 0.5f, () => ActionWait(1.5f));
-                        break;
-                        }
-                    case 5:
-                    {
-                        DelayCommand(fDelay, () => CastStinkyStuff(boss, oEnemy));
-                        DelayCommand(fDelay + 0.5f, () => ActionWait(1.5f));
-                        break;
-                        }
-                    case 6:
-                    {
-                        DelayCommand(fDelay, () => CastStinkyStuff(boss, oEnemy));
-                        DelayCommand(fDelay + 0.5f, () => ActionWait(1.5f));
-                        break;
-                        }
 
 
                     default:
-                        DelayCommand(fDelay, () => SpeakString("hoobla schmoobla!"));
-                        DelayCommand(fDelay + 1.5f, () => ClearAllActions());
+                        ClearAllActions();
+                        SpeakString("hoobla schmoobla!");
                         break;
                 }
             }

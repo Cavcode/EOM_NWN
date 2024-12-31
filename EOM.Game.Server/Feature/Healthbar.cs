@@ -17,7 +17,7 @@ namespace EOM.Game.Server.Feature
                 return;
 
 
-            float percentage = IntToFloat(GetCurrentHitPoints(target)) / IntToFloat(GetMaxHitPoints(target)) * 100;
+            float percentage = IntToFloat(GetLocalInt(target, "BOSS_CUR_HP")) / IntToFloat(GetLocalInt(target,"BOSS_MAX_HP")) * 100;
             var nColourGrey = -1;
             var nColourRed = -1671191;
             var bar = "";

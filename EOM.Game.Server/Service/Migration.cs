@@ -73,6 +73,7 @@ namespace EOM.Game.Server.Service
             if (!GetIsPC(player) || GetIsDM(player))
                 return;
 
+
             var sw = new Stopwatch();
             var playerId = GetObjectUUID(player);
             var dbPlayer = DB.Get<Player>(playerId) ?? new Player(playerId);

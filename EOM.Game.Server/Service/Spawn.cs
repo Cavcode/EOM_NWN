@@ -534,7 +534,7 @@ namespace EOM.Game.Server.Service
             if (GetIsPC(spawn) || GetIsDM(spawn) || GetIsDMPossessed(spawn))
                 return;
 
-            if (!GetPlotFlag(spawn) && !GetImmortal(spawn))
+            if (!GetPlotFlag(spawn))
                 return;
 
             CreaturePlugin.SetBaseAC(spawn, 100);

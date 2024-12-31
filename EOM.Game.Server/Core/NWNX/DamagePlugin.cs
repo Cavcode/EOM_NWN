@@ -21,7 +21,7 @@ namespace EOM.Game.Server.Core.NWNX
 
         // Get Damage Event Data (to use only on Damage Event Script)
         public static DamageEventData GetDamageEventData()
-        {
+        {   
             NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "GetDamageEventData");
             NWNCore.NativeFunctions.nwnxCallFunction();
 

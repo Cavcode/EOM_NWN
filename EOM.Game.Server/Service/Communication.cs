@@ -55,8 +55,7 @@ namespace EOM.Game.Server.Service
         public static void OnDMPossess()
         {
             var dm = OBJECT_SELF;
-            var target = StringToObject(EventsPlugin.
-                ("TARGET"));
+            var target = StringToObject(EventsPlugin.GetEventData("TARGET"));
 
             // Unpossession - Remove the variable
             if (!GetIsObjectValid(target))

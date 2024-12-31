@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using EOM.Game.Server.Core;
 using EOM.Game.Server.Core.NWNX;
 using EOM.Game.Server.Core.NWScript.Enum;
@@ -25,10 +26,11 @@ namespace EOM.Game.Server.Feature
             if (!GetIsPC(player) || GetIsDM(player)) return;
 
             var playerId = GetObjectUUID(player);
+            Console.WriteLine("UUID: " + playerId);
             var dbPlayer = DB.Get<Player>(playerId) ?? new Player(playerId);
-
+            Console.WriteLine("dbPlayer ID: "+ dbPlayer);
             // Already been initialized. Don't do it again.
-            if (dbPlayer.Version >= 1 || dbPlayer.Version == -1) // Note: -1 signifies legacy characters. The Migration service handles upgrading legacy characters.
+            if (dbPlayer.Version >= 1) // Note: -1 signifies legacy characters. The Migration service handles upgrading legacy characters.
             {
                 ExecuteScript("char_init_after", OBJECT_SELF);
                 return;

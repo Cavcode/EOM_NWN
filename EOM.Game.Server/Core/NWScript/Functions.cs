@@ -332,7 +332,8 @@ namespace EOM.Game.Server.Core.NWScript
         ///   Top Down: Distance = 5-20, Pitch = 1-50
         ///   Driving camera: Distance = 6 (can't be changed), Pitch = 1-62
         ///   Chase: Distance = 5-20, Pitch = 1-50
-        ///   *** NOTE *** In NWN:Hordes of the Underdark the camera limits have been relaxed to the following:
+        ///   *** NOTE *** In NWN:Hordes of the Underdark the camera limits have been rel
+        /// d to the following:
         ///   Distance 1-25
         ///   Pitch 1-89
         /// </summary>

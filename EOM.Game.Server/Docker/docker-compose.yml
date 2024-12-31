@@ -19,11 +19,11 @@ services:
         ports:
             - "8081:8081"
 
-    EOM-server:
+    eom-server:
         hostname: nwnx-server
         stop_signal: SIGINT
         image: nwnxee/unified:latest
-        env_file: ${PWD-.}/EOM.env
+        env_file: ${PWD-.}/eom.env
         links:
             - "redis:redis"
         stdin_open: true
