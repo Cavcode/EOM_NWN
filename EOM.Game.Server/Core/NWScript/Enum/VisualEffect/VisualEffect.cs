@@ -563,6 +563,12 @@ namespace EOM.Game.Server.Core.NWScript.Enum.VisualEffect
         Vfx_Imp_Crack = 842,
         Vfx_Imp_Charge = 843,
 
-        Vfx_Monster_Death = 844
+        Vfx_Monster_Death = 844,
+        Vfx_Dur_Scan = 845,
+        Vfx_Spawner = 846,
+        Vfx_ThunderRing = 847,
+        Vfx_Tidal_Wave = 848,
+        Vfx_Mechanic_Marker = 849,
+        Vfx_Dur_Warning = 850
     }
 }

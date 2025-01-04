@@ -575,6 +575,7 @@ namespace EOM.Game.Server.Feature
             };
 
             EventsPlugin.SubscribeEvent("TELEGRAPH_HOOK", "inc_tele_e");
+            //EventsPlugin.SubscribeEvent("TELEGRAPH_HOOK", "inc_tele_e");
             EventsPlugin.SubscribeEvent("EOM_ITEM_EQUIP_VALID_BEFORE", "item_eqp_bef");
             EventsPlugin.SubscribeEvent("EOM_BUY_PERK", "EOM_buy_perk");
             EventsPlugin.SubscribeEvent("EOM_GAIN_SKILL_POINT", "EOM_gain_skill");

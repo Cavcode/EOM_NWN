@@ -21,9 +21,11 @@ namespace EOM.Game.Server.Feature
         public string OnStart { get; set; }
         public string OnUpdate { get; set; }
         public string OnFinish { get; set; }
+        public int HitEffect { get; set; }
 
-
-        public TelegraphData(int shape, float x, float y, float z, float rotation, float sizeX, float sizeY, float duration, string onStart, string onUpdate, string onFinish)
+        public int ImpEffect { get; set; }
+        public int Damage { get; set; }
+        public TelegraphData(int shape, float x, float y, float z, float rotation, float sizeX, float sizeY, float duration, string onStart, string onUpdate, string onFinish, int hitEffect, int impEffect, int damage)
         {
             Shape = shape;
             X = x;
@@ -36,6 +38,9 @@ namespace EOM.Game.Server.Feature
             OnStart = onStart;
             OnUpdate = onUpdate;
             OnFinish = onFinish;
+            HitEffect = hitEffect;
+            ImpEffect = impEffect;
+            Damage = damage;
         }
     };
 
@@ -43,10 +48,10 @@ namespace EOM.Game.Server.Feature
     public class Telegraph
     {
         const string _TELEGRAPH_NULL = "<null>";
-        const int TELEGRAPH_SHAPE_NONE = 0;
-        const int TELEGRAPH_SHAPE_SPHERE = 1;
-        const int TELEGRAPH_SHAPE_CONE = 2;
-        const int TARGET_FPS = 30;
+        public const int TELEGRAPH_SHAPE_NONE = 0;
+        public const int TELEGRAPH_SHAPE_SPHERE = 1;
+        public const int TELEGRAPH_SHAPE_CONE = 2;
+        public const int TARGET_FPS = 30;
 
 
         public static Effect TelegraphCreate(int shape,
@@ -60,10 +65,27 @@ namespace EOM.Game.Server.Feature
             string onStart,
             string onUpdate,
             string onFinish,
-            float updateInterval)
+            float updateInterval,
+            int hitEffect,
+            int impEffect,
+            int damage)
         {
             var telegraph = TelegraphStruct(shape, x, y, z, rotation, sizeX, sizeY, duration, onStart, onUpdate,
-                onFinish);
+                onFinish, hitEffect, impEffect,damage);
+
+            Console.WriteLine(telegraph.Shape);
+            Console.WriteLine(telegraph.X);
+            Console.WriteLine(telegraph.Y);
+            Console.WriteLine(telegraph.Z);
+            Console.WriteLine(telegraph.Rotation);
+            Console.WriteLine(telegraph.SizeX);
+            Console.WriteLine(telegraph.SizeY);
+            Console.WriteLine(telegraph.Duration);
+            Console.WriteLine(telegraph.OnStart);
+            Console.WriteLine(telegraph.OnUpdate);
+            Console.WriteLine(telegraph.OnFinish);
+
+     
 
             // TODO: Perhaps it would be faster to store the serialized telegraph as a JSON instead of a packed string, and only put the effect link ID in the string.
             //       Another option: Local variable cache in format "{linkID}.{fieldname}" stored on the module.
@@ -81,7 +103,10 @@ namespace EOM.Game.Server.Feature
             float duration,
             string onStart,
             string onUpdate,
-            string onFinish)
+            string onFinish,
+            int hitEffect,
+            int impEffect,
+            int damage)
         {
             TelegraphData telegraph = new TelegraphData(shape,
                  x,
@@ -93,39 +118,129 @@ namespace EOM.Game.Server.Feature
                  duration,
                  onStart,
                  onUpdate,
-                 onFinish);
+                 onFinish,
+                 hitEffect,
+                 impEffect,
+                 damage);
             return telegraph;
         }
         public static string TelegraphPack(TelegraphData unpacked)
         {
-            return IntToString(unpacked.Shape) + " " + 
-                   FloatToString(unpacked.X) + " " +
-                   FloatToString(unpacked.Y) + " " +
-                   FloatToString(unpacked.Z) + " " +
-                   FloatToString(unpacked.Rotation) + " " + 
-                   FloatToString(unpacked.SizeX) + " " + 
-                   FloatToString(unpacked.SizeY) + " " + 
-                   FloatToString(unpacked.Duration) + " " +
-                   unpacked.OnStart + " " +
-                   unpacked.OnUpdate + " " +
-                   unpacked.OnFinish;
+           var packedTelegraph = IntToString(unpacked.Shape) + " " +
+                FloatToString(unpacked.X) + " " +
+                FloatToString(unpacked.Y) + " " +
+                FloatToString(unpacked.Z) + " " +
+                FloatToString(unpacked.Rotation) + " " +
+                FloatToString(unpacked.SizeX) + " " +
+                FloatToString(unpacked.SizeY) + " " +
+                FloatToString(unpacked.Duration) + " " +
+                unpacked.OnStart + " " +
+                unpacked.OnUpdate + " " +
+                unpacked.OnFinish + " " + 
+                unpacked.HitEffect + " " +
+                unpacked.ImpEffect + " " + 
+                unpacked.Damage;
+           Console.WriteLine("Packed telegraph: " + packedTelegraph);
+
+           return packedTelegraph;
+        }
+
+        public static string StringParse(string sSource, string sDelimiter = " ", int bRightToLeft = 0)
+        {
+            // Find the first delimiter.
+            int nDelimIndex = FindSubString(sSource, sDelimiter);
+            if (nDelimIndex < 0)
+                // Delimiter not found; return the whole source string.
+                return sSource;
+
+            // For left-to-right, we're basically done.
+            if (bRightToLeft == 0)
+                return GetStringLeft(sSource, nDelimIndex);
+
+            // For right-to-left, we need to find the last delimiter.
+            int nLastDelim = 0;
+            while (nDelimIndex >= 0)
+            {
+                nLastDelim = nDelimIndex;
+                nDelimIndex = FindSubString(sSource, sDelimiter, nLastDelim + 1);
+            }
+            // Return everything after the last delimiter.
+            int nRetLength = GetStringLength(sSource) - nLastDelim - GetStringLength(sDelimiter);
+            return GetStringRight(sSource, nRetLength);
+        }
+
+       public static string StringRemoveParsed(string sSource, string sParsed, string sDelimiter = " ", int bRightToLeft = 0)
+        {
+            int nDelimLength = GetStringLength(sDelimiter);
+
+            if (bRightToLeft == 0)
+            {
+                // Start after a string the length of sParsed.
+                int nStart = GetStringLength(sParsed);
+                if (nDelimLength > 0)
+                    // Locate excess delimiters.
+                    while (GetSubString(sSource, nStart, nDelimLength) == sDelimiter)
+                        nStart += nDelimLength;
+                // Remove the delimiters and the string the length of sParsed.
+                return GetStringRight(sSource, GetStringLength(sSource) - nStart);
+            }
+            else
+            {
+                // Stop before a string the length of sParsed.
+                int nEnd = GetStringLength(sSource) - GetStringLength(sParsed);
+                if (nDelimLength > 0)
+                    // Locate excess delimiters.
+                    while (GetSubString(sSource, nEnd - nDelimLength, nDelimLength) == sDelimiter)
+                        nEnd -= nDelimLength;
+                // Remove the delimiters and the string the length of sParsed.
+                return GetStringLeft(sSource, nEnd);
+            }
         }
 
         public static TelegraphData TelegraphUnpack(string packed)
         {
-            string[] unpackedTelegraph = packed.Split(" ");
 
-            string shape = unpackedTelegraph[0];
-            string x = unpackedTelegraph[1];
-            string y = unpackedTelegraph[2];
-            string z = unpackedTelegraph[3];
-            string rotation = unpackedTelegraph[4];
-            string sizeX = unpackedTelegraph[5];
-            string sizeY = unpackedTelegraph[6];
-            string duration = unpackedTelegraph[7];
-            string onStart = unpackedTelegraph[8];
-            string onUpdate = unpackedTelegraph[9];
-            string onFinish = unpackedTelegraph[10];
+            string shape = StringParse(packed);
+            packed = StringRemoveParsed(packed, shape);
+
+            string x = StringParse(packed);
+            packed = StringRemoveParsed(packed, x);
+
+            string y = StringParse(packed);
+            packed = StringRemoveParsed(packed, y);
+
+            string z = StringParse(packed);
+            packed = StringRemoveParsed(packed, z);
+
+            string rotation = StringParse(packed);
+            packed = StringRemoveParsed(packed, rotation);
+
+            string sizeX = StringParse(packed);
+            packed = StringRemoveParsed(packed, sizeX);
+
+            string sizeY = StringParse(packed);
+            packed = StringRemoveParsed(packed, sizeY);
+
+            string duration = StringParse(packed);
+            packed = StringRemoveParsed(packed, duration);
+
+            string onStart = StringParse(packed);
+            packed = StringRemoveParsed(packed, onStart);
+
+            string onUpdate = StringParse(packed);
+            packed = StringRemoveParsed(packed, onUpdate);
+
+            string onFinish = StringParse(packed);
+            packed = StringRemoveParsed(packed, onFinish);
+
+            string hitEffect = StringParse(packed);
+            packed = StringRemoveParsed(packed, hitEffect);
+
+            string impEffect = StringParse(packed);
+            packed = StringRemoveParsed(packed, impEffect);
+
+            string damage = StringParse(packed);
+;
 
             return TelegraphStruct(
                 StringToInt(shape),
@@ -138,13 +253,17 @@ namespace EOM.Game.Server.Feature
                 StringToFloat(duration),
                 onStart == _TELEGRAPH_NULL ? "" : onStart,
                 onUpdate == _TELEGRAPH_NULL ? "" : onUpdate,
-                onFinish == _TELEGRAPH_NULL ? "" : onFinish);
+                onFinish == _TELEGRAPH_NULL ? "" : onFinish,
+                StringToInt(hitEffect),
+                StringToInt(impEffect),
+                StringToInt(damage));
         }
         public static string OnApply(uint area, uint telegrapher, Effect telegraphEff)
         {
             string telegraphId = GetEffectLinkId(telegraphEff);
             string packed = GetEffectString(telegraphEff, 0);
-        TelegraphData unpacked = TelegraphUnpack(packed);
+            Console.WriteLine("only apply after geteffectstring: " + packed);
+            TelegraphData unpacked = TelegraphUnpack(packed);
 
         int start = GetMicrosecondCounter();
         int end = start + FloatToInt(unpacked.Duration * 1000 * 1000);
@@ -162,7 +281,8 @@ namespace EOM.Game.Server.Feature
         SetLocalJson(area, telegraphId, telegraphData);
         SetLocalJson(area, "TELEGRAPHS", telegraphIds);
 
-        return unpacked.OnStart;
+        Console.WriteLine("only apply after geteffectstring: before sendoff");
+            return unpacked.OnStart;
         }
 
         public static string OnUpdate(uint area, uint telegrapher, Effect telegraphEff)
@@ -179,21 +299,21 @@ namespace EOM.Game.Server.Feature
             string packed = JsonGetString(JsonObjectGet(telegraphData, "packed"));
             TelegraphData unpacked = TelegraphUnpack(packed);
 
-        Json telegraphIds = GetLocalJson(area, "TELEGRAPHS");
-        telegraphIds = JsonArrayDel(telegraphIds, JsonGetInt(JsonFind(telegraphIds, JsonString(telegraphId))));
+            Json telegraphIds = GetLocalJson(area, "TELEGRAPHS");
+            telegraphIds = JsonArrayDel(telegraphIds, JsonGetInt(JsonFind(telegraphIds, JsonString(telegraphId))));
 
-        DeleteLocalString(area, telegraphId);
-        DeleteLocalJson(area, telegraphId);
-        SetLocalJson(area, "TELEGRAPHS", telegraphIds);
+            DeleteLocalString(area, telegraphId);
+            DeleteLocalJson(area, telegraphId);
+            SetLocalJson(area, "TELEGRAPHS", telegraphIds);
 
 
-        return unpacked.OnFinish;
+            return unpacked.OnFinish;
         }
 
         public static void UpdateShaderForAllPcs()
         {
             uint pc = GetFirstPC();
-            while (pc != OBJECT_INVALID)
+           while (pc != OBJECT_INVALID)
             {
                 // TODO: This updates all telegraphs for all PCs when one of them starts or finished.
                 // It's PROBABLY fine, but might be worth visiting in a profiler.
@@ -235,50 +355,19 @@ namespace EOM.Game.Server.Feature
             }
         }
 
-        [NWNEventHandler("mod_load")]
-        public void UpdateShaderLerpTimer()
+        public static void UpdateShaderLerpTimer()
         {
             var counter = GetMicrosecondCounter();
 
             var pc = GetFirstPC();
-            while (pc != OBJECT_INVALID)
+           while (pc != OBJECT_INVALID)
             {
                 SetShaderUniformInt(pc, ShaderUniformType.Type16, counter);
                 pc = GetNextPC();
             }
 
-            DelayCommand(1.0f, () => UpdateShaderLerpTimer());
+            DelayCommand(1.0f / 30, () => UpdateShaderLerpTimer());
         }
-        [NWNEventHandler("TELEGRAPH_HOOK")]
-        public void TelegraphHook()
-        {
-            Effect eff = GetLastRunScriptEffect();
-            var evt = GetLastRunScriptEffectScriptType();
 
-            var telegrapher = OBJECT_SELF;
-            var area = GetArea(telegrapher);
-
-            var script = "";
-
-            if (evt == (int)RunScriptEffectScriptType.OnApplied)
-            {
-                script = OnApply(area, telegrapher, eff);
-                UpdateShaderForAllPcs();
-            }
-            else if (evt == (int)RunScriptEffectScriptType.OnInterval)
-            {
-                script = OnUpdate(area, telegrapher, eff);
-            }
-            else if (evt == (int)RunScriptEffectScriptType.OnRemoved)
-            {
-                script = OnRemove(area, telegrapher, eff);
-                UpdateShaderForAllPcs();
-            }
-
-            if (script != "")
-            {
-                ExecuteScript(script, telegrapher);
-            }
-        }
     }
 }

@@ -12,6 +12,8 @@ using EOM.Game.Server.Service.AIService;
 using EOM.Game.Server.Service;
 using EOM.Game.Server.Feature.AIBossDefinition;
 using EOM.Game.Server.Feature.AIBossDefinition;
+using EOM.Game.Server.Service.SpawnService;
+using static EOM.Game.Server.Feature.Telegraph;
 using static NWN.Native.API.CVirtualMachineScript.JmpData;
 
 namespace EOM.Game.Server.Feature.AIBossDefinition.Bosses
@@ -64,6 +66,7 @@ namespace EOM.Game.Server.Feature.AIBossDefinition.Bosses
                     case 1:
                     {
                         ClearAllActions();
+                        SpawnAngryOrbs(boss, 5);
                         CastStinkyStuff(boss, oEnemy);
                         break;
                     }
@@ -80,7 +83,37 @@ namespace EOM.Game.Server.Feature.AIBossDefinition.Bosses
 
             //SetCreatureOverrideAIScriptFinished(boss);
         }
+       public static void SpawnAngryOrbs(uint pc, int count)
+        {
+            var pos = GetPosition(pc);
 
+            int i;
+            for (i = 0; i < count; ++i)
+            {
+                float telegraphRadius = 2.0f;
+                float telegraphDuration = 5.0f;
+
+                float x = pos.X + Random(150) / 10.0f - 7.5f;
+                float y = pos.Y + Random(150) / 10.0f - 7.5f;
+
+                Effect telegraph = TelegraphCreate(TELEGRAPH_SHAPE_SPHERE, 
+                    x, 
+                    y, 
+                    pos.Z, 
+                    0.0f, 
+                    telegraphRadius, 
+                    0.0f, 
+                    telegraphDuration,
+                    "inc_tele_e",
+                    "inc_tele_e",
+                    "inc_tele_e", 
+                    0.0f,
+                    (int)VisualEffect.Vfx_Com_Hit_Acid, 
+                    (int)VisualEffect.Vfx_Imp_Pulse_Nature,
+                    5);
+                ApplyEffectToObject(DurationType.Temporary, telegraph, pc, telegraphDuration);
+            }
+        }
         public static void CastStinkyStuff(uint boss, uint target)
         {
 
