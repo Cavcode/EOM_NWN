@@ -127,7 +127,7 @@ namespace EOM.Game.Server.Feature.AIBossDefinition.Bosses
                 ActionPlayAnimation(Animation.LoopingConjure1, 0.8f, 10.0f);
 
                 ApplyEffectAtLocation(DurationType.Instant, eVis, GetLocation(target));
-                DoAOE(target, 12);
+                DoAOE(target,boss, 12);
         });
 
             float fDist1 = GetDistanceBetween(boss, target);
@@ -136,7 +136,7 @@ namespace EOM.Game.Server.Feature.AIBossDefinition.Bosses
 
         }
 
-        public static void DoAOE(uint target, int nDamage)
+        public static void DoAOE(uint target, uint boss, int nDamage)
         {
             //effect eVisual = EffectVisualEffect(987);  //VFX_FLAME_TOSS
             // ApplyEffectAtLocation(DURATION_TYPE_INSTANT, eVisual, lPoint);
@@ -146,11 +146,13 @@ namespace EOM.Game.Server.Feature.AIBossDefinition.Bosses
             uint oTarget1 = GetFirstObjectInShape(Shape.Sphere, 6.0f, lWhere, false, ObjectType.Creature);
             while (GetIsObjectValid(oTarget1))
             {
-
+                if (oTarget1 != boss)
+                {
                     eDamage = EffectDamage(nDamage + d2(1), DamageType.Acid, DamagePower.PlusSix);
                     ApplyEffectToObject(DurationType.Instant, eDamage, oTarget1);
                     ApplyEffectToObject(DurationType.Temporary, eDZ, oTarget1, 4.0f);
-                
+                }
+
                 oTarget1 = GetNextObjectInShape(Shape.Sphere, 6.0f, lWhere, false, ObjectType.Creature);
             }
         }
