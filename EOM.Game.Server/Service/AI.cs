@@ -116,7 +116,15 @@ namespace EOM.Game.Server.Service
         [NWNEventHandler("crea_death_aft")]
         public static void CreatureDeath()
         {
+            var creature = OBJECT_SELF;
+            var area = GetArea(creature);
             RemoveFromAlliesCache();
+
+            if (GetLocalInt(creature, "IS_BOSS") == 1)
+            {
+                var chestTag = GetLocalString(creature, "BOSS_CHEST_TAG");
+                var chest = CreateObject(ObjectType.Placeable, chestTag, GetLocation(GetWaypointByTag("BOSS_CHEST")));
+            }
         }
 
         /// <summary>

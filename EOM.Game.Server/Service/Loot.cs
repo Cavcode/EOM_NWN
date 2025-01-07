@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Discord;
 using EOM.Game.Server.Core;
 using EOM.Game.Server.Core.NWScript.Enum;
+using EOM.Game.Server.Entity;
 using EOM.Game.Server.Service.LogService;
 using EOM.Game.Server.Service.LootService;
 using EOM.Game.Server.Service.PerkService;
+using EOM.Game.Server.Service.QuestService;
+using EOM.Game.Server.Service.SkillService;
 
 namespace EOM.Game.Server.Service
 {
@@ -30,13 +34,15 @@ namespace EOM.Game.Server.Service
                 {
                     if (string.IsNullOrWhiteSpace(table.Key))
                     {
-                        Log.Write(LogGroup.Error, $"Loot table {table.Key} has an invalid key. Values must not be null or white space.");
+                        Log.Write(LogGroup.Error,
+                            $"Loot table {table.Key} has an invalid key. Values must not be null or white space.");
                         continue;
                     }
 
                     if (_lootTables.ContainsKey(table.Key))
                     {
-                        Log.Write(LogGroup.Error, $"Loot table {table.Key} has already been registered. Please make sure all spawn tables use a unique ID.");
+                        Log.Write(LogGroup.Error,
+                            $"Loot table {table.Key} has already been registered. Please make sure all spawn tables use a unique ID.");
                         continue;
                     }
 
@@ -88,7 +94,8 @@ namespace EOM.Game.Server.Service
                 data[1] = data[1].Trim();
                 if (!int.TryParse(data[1], out chance))
                 {
-                    Log.Write(LogGroup.Error, $"Loot Table with arguments '{delimitedString}', 'Chance' variable could not be processed. Must be an integer.");
+                    Log.Write(LogGroup.Error,
+                        $"Loot Table with arguments '{delimitedString}', 'Chance' variable could not be processed. Must be an integer.");
                 }
             }
 
@@ -98,7 +105,8 @@ namespace EOM.Game.Server.Service
                 data[2] = data[2].Trim();
                 if (!int.TryParse(data[2], out attempts))
                 {
-                    Log.Write(LogGroup.Error, $"Loot Table with arguments '{delimitedString}', 'Attempts' variable could not be processed. Must be an integer.");
+                    Log.Write(LogGroup.Error,
+                        $"Loot Table with arguments '{delimitedString}', 'Attempts' variable could not be processed. Must be an integer.");
                 }
             }
 
@@ -116,7 +124,7 @@ namespace EOM.Game.Server.Service
         {
             var creditFinderLevel = GetLocalInt(creature, "CREDITFINDER_LEVEL");
             var creditPercentIncrease = creditFinderLevel * 0.2f;
-            var rareBonusChance = GetLocalInt(creature, "RARE_BONUS_CHANCE");
+            var rareBonusChance = GetLocalInt(creature, "SpawnLoot");
 
             var lootList = new List<uint>();
             var table = GetLootTableByName(lootTableName);
@@ -124,6 +132,7 @@ namespace EOM.Game.Server.Service
             {
                 chance += rareBonusChance;
             }
+
             for (int x = 1; x <= attempts; x++)
             {
                 if (Random.D100(1) > chance) continue;
@@ -144,7 +153,50 @@ namespace EOM.Game.Server.Service
             return lootList;
         }
 
-        /// <summary>
+        [NWNEventHandler("boss_chst_open")]
+        public static void OpenBossChest()
+        {
+            var player = GetLastOpenedBy();
+            var playerId = GetObjectUUID(player);
+            var chest = OBJECT_SELF;
+            var lootTableName = GetLocalString(chest, "BOSS_CHEST_LOOT_TABLE");
+
+            // Loot table doesn't exist.
+            if (!Loot.LootTableExists(lootTableName))
+            {
+                SendMessageToPC(player, $"The assigned loot table '{lootTableName}' does not exist.");
+                return;
+            }
+
+            if (GetLocalString(player, "BOSS_CHEST_FLAG") == GetObjectUUID(OBJECT_SELF))
+            {
+                SendMessageToPC(player, "You've already looted the chest! Greedy bastard.");
+                return;
+            }
+
+            var lootTable = Loot.GetLootTableByName(lootTableName);
+            var collector = CreateObject(ObjectType.Placeable, "boss_chest", GetLocation(player));
+
+            for (var attempt = 1; attempt <= 4; attempt++)
+            {
+                var item = lootTable.GetRandomItem(0);
+                var quantity = Random.Next(item.MaxQuantity) + 1;
+
+                if (item.Resref == "nw_it_gold001")
+                {
+                    quantity += (int)(quantity);
+                }
+                CreateItemOnObject(item.Resref, collector, quantity);
+            }
+
+
+            AssignCommand(collector, () => SetFacingPoint(GetPosition(player)));
+            AssignCommand(player, () => ActionInteractObject(collector));
+
+            SetLocalString(player,"BOSS_CHEST_FLAG", GetObjectUUID(OBJECT_SELF));
+        }
+
+    /// <summary>
         /// When a creature dies, loot tables are spawned based on local variables.
         /// </summary>
         [NWNEventHandler("crea_death_bef")]
@@ -352,7 +404,7 @@ namespace EOM.Game.Server.Service
             var container = OBJECT_SELF;
             var firstItem = GetFirstItemInInventory(container);
             var corpseOwner = GetLocalObject(container, "CORPSE_BODY");
-
+            
             if (!GetIsObjectValid(firstItem))
             {
                 DestroyObject(container);
