@@ -9,7 +9,9 @@ using EOM.Game.Server.Feature.AIBossDefinition.Bosses;
 using static EOM.Game.Server.Feature.Telegraph;
 using Pipelines.Sockets.Unofficial.Arenas;
 using EOM.Game.Server.Service;
+using DamageType = EOM.Game.Server.Core.NWScript.Enum.DamageType;
 using ObjectType = EOM.Game.Server.Core.NWScript.Enum.ObjectType;
+using static NWN.Native.API.CVirtualMachineScript.JmpData;
 
 
 namespace EOM.Game.Server.Feature
@@ -74,9 +76,12 @@ namespace EOM.Game.Server.Feature
             var overlapped = GetFirstObjectInShape(Shape.Sphere, unpacked.SizeX, loc);
             while (GetIsObjectValid(overlapped))
             {
-                ApplyEffectToObject(DurationType.Instant, EffectVisualEffect((VisualEffect)unpacked.HitEffect), overlapped);
-                //DelayCommand(0.0f,
-                //ApplyEffectToObject(DurationType.Instant, EffectDamage(1, DAMAGE), overlapped));
+
+                if (overlapped != telegrapher)
+                {
+                    ApplyEffectToObject(DurationType.Instant, EffectVisualEffect((VisualEffect)unpacked.HitEffect), overlapped);
+                    ApplyEffectToObject(DurationType.Instant, EffectDamage(unpacked.Damage, DamageType.Acid), overlapped);
+                }
                 overlapped = GetNextObjectInShape(Shape.Sphere, unpacked.SizeX, loc);
             }
         }

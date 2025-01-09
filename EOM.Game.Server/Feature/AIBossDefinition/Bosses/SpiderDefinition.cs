@@ -90,11 +90,11 @@ namespace EOM.Game.Server.Feature.AIBossDefinition.Bosses
             int i;
             for (i = 0; i < count; ++i)
             {
-                float telegraphRadius = 2.0f;
+                float telegraphRadius = 4.0f;
                 float telegraphDuration = 5.0f;
 
-                float x = pos.X + Random(150) / 10.0f - 7.5f;
-                float y = pos.Y + Random(150) / 10.0f - 7.5f;
+                float x = pos.X + Random(50) / 10.0f - 7.5f;
+                float y = pos.Y + Random(50) / 10.0f - 7.5f;
 
                 Effect telegraph = TelegraphCreate(TELEGRAPH_SHAPE_SPHERE, 
                     x, 
