@@ -383,8 +383,11 @@ namespace EOM.Game.Server.Core.NWScript
         /// </summary>
         public static void ActionCastSpellAtObject(Spell nSpell, uint oTarget, MetaMagic nMetaMagic = MetaMagic.Any,
             bool nCheat = false, int nDomainLevel = 0,
-            ProjectilePathType nProjectilePathType = ProjectilePathType.Default, bool bInstantSpell = false)
+            ProjectilePathType nProjectilePathType = ProjectilePathType.Default, bool bInstantSpell = false,
+            int nClass = -1, bool bSpontaneousCast = false)
         {
+            VM.StackPush(bSpontaneousCast ? 1 : 0);
+            VM.StackPush(nClass);
             VM.StackPush(bInstantSpell ? 1 : 0);
             VM.StackPush((int)nProjectilePathType);
             VM.StackPush(nDomainLevel);
@@ -880,7 +883,7 @@ namespace EOM.Game.Server.Core.NWScript
         ///   Cause the caller to face vTarget
         /// </summary>
         public static void SetFacingPoint(Vector3 vTarget)
-        {
+        {;
             VM.StackPush(vTarget);
             VM.Call(143);
         }
@@ -1738,8 +1741,9 @@ namespace EOM.Game.Server.Core.NWScript
         ///   - nFeat: FEAT_*
         ///   - oCreature
         /// </summary>
-        public static bool GetHasFeat(FeatType nFeat, uint oCreature = OBJECT_INVALID)
+        public static bool GetHasFeat(FeatType nFeat, uint oCreature = OBJECT_INVALID, bool bIgnoreUses = false)
         {
+            VM.StackPush(bIgnoreUses ? 1 : 0);
             VM.StackPush(oCreature);
             VM.StackPush((int)nFeat);
             VM.Call(285);
@@ -2548,8 +2552,9 @@ namespace EOM.Game.Server.Core.NWScript
         ///   will see the floaty text, and only if they are within range (30 metres).
         /// </summary>
         public static void FloatingTextStringOnCreature(string sStringToDisplay, uint oCreatureToFloatAbove,
-            bool bBroadcastToFaction = true)
+            bool bBroadcastToFaction = true, bool bChatWindow = true)
         {
+            VM.StackPush(bChatWindow ? 1 : 0);
             VM.StackPush(bBroadcastToFaction ? 1 : 0);
             VM.StackPush(oCreatureToFloatAbove);
             VM.StackPush(sStringToDisplay);

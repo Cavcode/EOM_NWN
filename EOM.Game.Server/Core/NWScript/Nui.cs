@@ -14,8 +14,9 @@ namespace EOM.Game.Server.Core.NWScript
         /// * See nw_inc_nui.nss for full documentation.
         /// Returns the window token on success (>0), or 0 on error.
         /// </summary>
-        public static int NuiCreateFromResRef(uint oPlayer, string sResRef, string sWindowId = "")
+        public static int NuiCreateFromResRef(uint oPlayer, string sResRef, string sWindowId = "", string sEventScript = "")
         {
+            VM.StackPush(sEventScript);
             VM.StackPush(sWindowId);
             VM.StackPush(sResRef);
             VM.StackPush(oPlayer);
@@ -32,8 +33,9 @@ namespace EOM.Game.Server.Core.NWScript
         /// * See nw_inc_nui.nss for full documentation.
         /// Returns the window token on success (>0), or 0 on error.
         /// </summary>
-        public static int NuiCreate(uint oPlayer, Json jNui, string sWindowId = "")
+        public static int NuiCreate(uint oPlayer, Json jNui, string sWindowId = "", string sEventScript = "")
         {
+            VM.StackPush(sEventScript);
             VM.StackPush(sWindowId);
             VM.StackPush((int)EngineStructure.Json, jNui);
             VM.StackPush(oPlayer);

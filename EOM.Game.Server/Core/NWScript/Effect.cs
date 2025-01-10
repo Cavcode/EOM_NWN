@@ -330,8 +330,9 @@ namespace EOM.Game.Server.Core.NWScript
         ///   - nLimit: How much damage the effect can absorb before disappearing.
         ///   Set to zero for infinite
         /// </summary>
-        public static Effect EffectDamageReduction(int nAmount, DamagePower nDamagePower, int nLimit = 0)
+        public static Effect EffectDamageReduction(int nAmount, DamagePower nDamagePower, int nLimit = 0, bool bRangedOnly = false)
         {
+            VM.StackPush(bRangedOnly ? 1 : 0);
             VM.StackPush(nLimit);
             VM.StackPush((int)nDamagePower);
             VM.StackPush(nAmount);
@@ -529,9 +530,11 @@ namespace EOM.Game.Server.Core.NWScript
         ///   - nDamageType: DAMAGE_TYPE_*
         ///   - nAmount
         ///   - nLimit
+        ///   - bRangedOnly: Set to TRUE to have this resistance only apply to ranged attacks.
         /// </summary>
-        public static Effect EffectDamageResistance(DamageType nDamageType, int nAmount, int nLimit = 0)
+        public static Effect EffectDamageResistance(DamageType nDamageType, int nAmount, int nLimit = 0, bool bRangedOnly = false)
         {
+            VM.StackPush(bRangedOnly ? 1 : 0);
             VM.StackPush(nLimit);
             VM.StackPush(nAmount);
             VM.StackPush((int)nDamageType);
@@ -560,8 +563,12 @@ namespace EOM.Game.Server.Core.NWScript
         ///   it will use the appear animation, and if it's 2 it will use appear2 (which doesn't exist for most creatures)
         /// </summary>
         public static Effect EffectSummonCreature(string sCreatureResref, VisualEffect nVisualEffectId = VisualEffect.Vfx_Com_Sparks_Parry,
-            float fDelaySeconds = 0.0f, bool nUseAppearAnimation = false)
+            float fDelaySeconds = 0.0f, bool nUseAppearAnimation = false,
+            int nUnsummonVisualEffectId = (int)VisualEffect.Vfx_Imp_Unsummon, 
+            uint oSummonToAdd = OBJECT_INVALID)
         {
+            VM.StackPush(oSummonToAdd);
+            VM.StackPush(nUnsummonVisualEffectId);
             VM.StackPush(nUseAppearAnimation ? 1 : 0);
             VM.StackPush(fDelaySeconds);
             VM.StackPush((int)nVisualEffectId);
@@ -1329,8 +1336,9 @@ namespace EOM.Game.Server.Core.NWScript
         ///   Get the effect type (EFFECT_TYPE_*) of eEffect.
         ///   * Return value if eEffect is invalid: EFFECT_INVALIDEFFECT
         /// </summary>
-        public static EffectTypeScript GetEffectType(Effect eEffect)
+        public static EffectTypeScript GetEffectType(Effect eEffect, bool bAllTypes = false)
         {
+            VM.StackPush(bAllTypes ? 1 : 0);
             VM.StackPush((int)EngineStructure.Effect, eEffect);
             VM.Call(170);
             return (EffectTypeScript)VM.StackPopInt();

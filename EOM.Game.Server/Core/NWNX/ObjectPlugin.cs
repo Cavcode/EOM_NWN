@@ -162,9 +162,7 @@ namespace EOM.Game.Server.Core.NWNX
         public static void AddToArea(uint obj, uint area, Vector3 pos)
         {
             NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "AddToArea");
-            NWNCore.NativeFunctions.nwnxPushFloat(pos.Z);
-            NWNCore.NativeFunctions.nwnxPushFloat(pos.Y);
-            NWNCore.NativeFunctions.nwnxPushFloat(pos.X);
+            NWNCore.NativeFunctions.nwnxPushVector(pos);
             NWNCore.NativeFunctions.nwnxPushObject(area);
             NWNCore.NativeFunctions.nwnxPushObject(obj);
             NWNCore.NativeFunctions.nwnxCallFunction();

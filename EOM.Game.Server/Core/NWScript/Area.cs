@@ -4,6 +4,8 @@ using NWN.Native.API;
 using EOM.Game.Server.Core.NWScript.Enum;
 using EOM.Game.Server.Core.NWScript.Enum.Area;
 using ObjectType = EOM.Game.Server.Core.NWScript.Enum.ObjectType;
+using System.Runtime.Intrinsics;
+using Discord;
 
 namespace EOM.Game.Server.Core.NWScript
 {
@@ -993,6 +995,71 @@ namespace EOM.Game.Server.Core.NWScript
             VM.StackPush(vDirection);
             VM.StackPush((int)nLightType);
             VM.Call(1083);
+        }
+
+        /// <summary>
+        /// Sets a grass override for nMaterialId in oArea.
+        /// * You can have multiple grass types per area by using different materials.
+        /// * You can add grass to areas that normally do not have grass, for example by calling this on the
+        ///   wood surface material(5) for an inn area.
+        ///
+        ///   - nMaterialId: a surface material, see surfacemat.2da. 3 is the default grass material.
+        ///   - sTexture: the grass texture, cannot be empty.
+        ///   - fDensity: the density of the grass.
+        ///   - fHeight: the height of the grass.
+        ///   - vAmbientColor: the ambient color of the grass, xyz as RGB clamped to 0.0-1.0f per value.
+        ///   - vDiffuseColor: the diffuse color of the grass, xyz as RGB clamped to 0.0-1.0f per value.
+        /// </summary>
+        public static void SetAreaGrassOverride(uint oArea, int nMaterialId, string sTexture, float fDensity, float fHeight, Vector3 vAmbientColor, Vector3 vDiffuseColor)
+        {
+            VM.StackPush(vDiffuseColor);
+            VM.StackPush(vAmbientColor);
+            VM.StackPush(fHeight);
+            VM.StackPush(fDensity);
+            VM.StackPush(sTexture);
+            VM.StackPush(nMaterialId);
+            VM.StackPush(oArea);
+            VM.Call(1139);
+        }
+
+        /// <summary>
+        /// Remove a grass override from oArea for nMaterialId.
+        /// </summary>
+        public static void RemoveAreaGrassOverride(uint oArea, int nMaterialId)
+        {
+            VM.StackPush(nMaterialId);
+            VM.StackPush(oArea);
+            VM.Call(1140);
+        }
+
+        /// <summary>
+        /// Set to TRUE to disable the default grass of oArea.
+        /// </summary>
+        public static void SetAreaDefaultGrassDisabled(uint oArea, bool bDisabled)
+        {
+            VM.StackPush(bDisabled ? 1 : 0);
+            VM.StackPush(oArea);
+            VM.Call(1141);
+        }
+
+        // Gets the NoRest area flag.
+        // Returns TRUE if resting is not allowed in the area.
+        // Passing in OBJECT_INVALID to parameter oArea will result in operating on the area of the caller.
+        public static int GetAreaNoRestFlag(uint oArea = OBJECT_INVALID)
+        {
+            VM.StackPush(oArea);
+            VM.Call(1142);
+
+            return VM.StackPopInt();
+        }
+
+        // Sets the NoRest flag on an area.
+        // Passing in OBJECT_INVALID to parameter oArea will result in operating on the area of the caller.
+        public static void SetAreaNoRestFlag(bool bNoRestFlag, uint oArea = OBJECT_INVALID)
+        {
+            VM.StackPush(oArea);
+            VM.StackPush(bNoRestFlag ? 1 : 0);
+            VM.Call(1143);
         }
 
     }

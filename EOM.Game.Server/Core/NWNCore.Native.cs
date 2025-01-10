@@ -125,6 +125,10 @@ namespace EOM.Game.Server.Core
 
         [SuppressUnmanagedCodeSecurity]
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        public delegate void NWNXPushVectorDelegate(Vector3 f);
+
+        [SuppressUnmanagedCodeSecurity]
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         public delegate void NWNXPushObjectDelegate(uint o);
 
         [SuppressUnmanagedCodeSecurity]
@@ -150,6 +154,9 @@ namespace EOM.Game.Server.Core
         [SuppressUnmanagedCodeSecurity]
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         public delegate float NWNXPopFloatDelegate();
+        [SuppressUnmanagedCodeSecurity]
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        public delegate void NWNXPopVectorDelegate(Vector3 f);
 
         [SuppressUnmanagedCodeSecurity]
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
@@ -226,6 +233,7 @@ namespace EOM.Game.Server.Core
             public readonly NWNXSetFunctionDelegate nwnxSetFunction;
             public readonly NWNXPushIntDelegate nwnxPushInt;
             public readonly NWNXPushFloatDelegate nwnxPushFloat;
+            public readonly NWNXPushVectorDelegate nwnxPushVector;
             public readonly NWNXPushObjectDelegate nwnxPushObject;
             public readonly NWNXPushStringDelegate nwnxPushString;
             public readonly NWNXPushStringUTF8Delegate nwnxPushStringUTF8;
@@ -233,6 +241,7 @@ namespace EOM.Game.Server.Core
             public readonly NWNXPushItemPropertyDelegate nwnxPushItemProperty;
             public readonly NWNXPopIntDelegate nwnxPopInt;
             public readonly NWNXPopFloatDelegate nwnxPopFloat;
+            public readonly NWNXPopVectorDelegate nwnxPopVector;
             public readonly NWNXPopObjectDelegate nwnxPopObject;
             public readonly NWNXPopStringDelegate nwnxPopString;
             public readonly NWNXPopStringUTF8Delegate nwnxPopStringUTF8;

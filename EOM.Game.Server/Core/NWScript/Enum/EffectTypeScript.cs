@@ -96,5 +96,23 @@ namespace EOM.Game.Server.Core.NWScript.Enum
         CutsceneImmobilize = 84,
         RunScript = 85,
         Icon = 86,
+        Pacify = 87,
+        BonusFeat = 88,
+        TimeStopImmunity = 89,
+        ForceWalk = 90,
+        // The below values are used only if GetEffectType parameter bAllTypes is TRUE
+        Appear = 91,
+        CutsceneDominated = 92,
+        Damage = 93,
+        Death = 94,
+        Disappear = 95,
+        Heal = 96,
+        HitPointChangeWhenDying = 97,
+        Knockdown = 98,
+        ModifyAttacks = 99,
+        SummonCreature = 100,
+        Taunt = 101,
+        Wounding = 102,
+        // End of valued returned by bAllTypes being TRUE
     }
 }

@@ -27,5 +27,8 @@
         ExamineObject = 23,
         OptionsOpen = 24,
         OptionsClose = 25,
+        RadialOpen = 26,
+        ChatlogPortraitClick = 27,
+        PlayerlistPlayerYell = 28,
     }
 }
