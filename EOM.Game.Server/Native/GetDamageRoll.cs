@@ -452,14 +452,12 @@ namespace EOM.Game.Server.Native
         private static bool HasImprovedMultiplier(CNWSCreature attacker, CNWSItem weapon)
         {
             if (weapon == null) return false;
-            if (attacker.m_pStats.HasFeat((ushort)FeatType.IncreaseMultiplier) == 0) return false;
+            if (attacker.m_pStats.HasFeat((ushort)FeatType.MightyCriticalAxes) == 0) return false;
 
             var baseItemType = (BaseItem)weapon.m_nBaseItem;
 
-            if (Item.SaberstaffBaseItemTypes.Contains(baseItemType)) return true;
-            if (Item.TwinBladeBaseItemTypes.Contains(baseItemType)) return true;
-            if (Item.PolearmBaseItemTypes.Contains(baseItemType)) return true;
-            if (Item.HeavyVibrobladeBaseItemTypes.Contains(baseItemType)) return true;
+            if (baseItemType == BaseItem.GreatAxe) return true;
+
 
             return false;
         }
