@@ -490,90 +490,14 @@ namespace EOM.Game.Server.Native
                 return 1;
             }
 
-            // Creature weapons
-            if (Item.CreatureBaseItemTypes.Contains(baseItemType) &&
-                attacker.m_pStats.HasFeat((ushort)FeatType.ImprovedCritical_Creature) == 1)
+            // Axes
+            if (baseItemType == BaseItem.GreatAxe &&
+                attacker.m_pStats.HasFeat((ushort)FeatType.ImprovedCriticalAxes) == 1)
             {
                 return 1;
             }
 
-            // Vibroblades
-            if (Item.VibrobladeBaseItemTypes.Contains(baseItemType) &&
-                attacker.m_pStats.HasFeat((ushort)FeatType.ImprovedCriticalVibroblades) == 1)
-            {
-                return 1;
-            }
-
-            // Finesse Vibroblades
-            if (Item.FinesseVibrobladeBaseItemTypes.Contains(baseItemType) &&
-                attacker.m_pStats.HasFeat((ushort)FeatType.ImprovedCriticalFinesseVibroblades) == 1)
-            {
-                return 1;
-            }
-
-            // Lightsabers
-            if (Item.LightsaberBaseItemTypes.Contains(baseItemType) &&
-                attacker.m_pStats.HasFeat((ushort)FeatType.ImprovedCriticalLightsabers) == 1)
-            {
-                return 1;
-            }
-
-            // Heavy Vibroblades
-            if (Item.HeavyVibrobladeBaseItemTypes.Contains(baseItemType) &&
-                attacker.m_pStats.HasFeat((ushort)FeatType.ImprovedCriticalHeavyVibroblades) == 1)
-            {
-                return 1;
-            }
-
-            // Polearms
-            if (Item.PolearmBaseItemTypes.Contains(baseItemType) &&
-                attacker.m_pStats.HasFeat((ushort)FeatType.ImprovedCriticalPolearms) == 1)
-            {
-                return 1;
-            }
-
-            // Twin Blades
-            if (Item.TwinBladeBaseItemTypes.Contains(baseItemType) &&
-                attacker.m_pStats.HasFeat((ushort)FeatType.ImprovedCriticalTwinBlades) == 1)
-            {
-                return 1;
-            }
-
-            // Saberstaffs
-            if (Item.SaberstaffBaseItemTypes.Contains(baseItemType) &&
-                attacker.m_pStats.HasFeat((ushort)FeatType.ImprovedCriticalSaberstaffs) == 1)
-            {
-                return 1;
-            }
-
-            // Katars
-            if (Item.KatarBaseItemTypes.Contains(baseItemType) &&
-                attacker.m_pStats.HasFeat((ushort)FeatType.ImprovedCriticalKatars) == 1)
-            {
-                return 1;
-            }
-
-            // Staves
-            if (Item.StaffBaseItemTypes.Contains(baseItemType) &&
-                attacker.m_pStats.HasFeat((ushort)FeatType.ImprovedCritical_Staff) == 1)
-            {
-                return 1;
-            }
-
-            // Pistols
-            if (Item.PistolBaseItemTypes.Contains(baseItemType) &&
-                attacker.m_pStats.HasFeat((ushort)FeatType.ImprovedCriticalPistol) == 1)
-            {
-                return 1;
-            }
-
-            // Throwing Weapons
-            if (Item.ThrowingWeaponBaseItemTypes.Contains(baseItemType) &&
-                attacker.m_pStats.HasFeat((ushort)FeatType.ImprovedCriticalThrowingWeapons) == 1)
-            {
-                return 1;
-            }
-
+            
             // Rifles
             if (Item.RifleBaseItemTypes.Contains(baseItemType) &&
                 attacker.m_pStats.HasFeat((ushort)FeatType.ImprovedCriticalRifles) == 1)
