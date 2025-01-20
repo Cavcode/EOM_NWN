@@ -185,15 +185,16 @@ namespace EOM.Game.Server.Native
             {
                 if (attacker.m_pInventory.GetItemInSlot((uint)EquipmentSlot.LeftHand) == null)
                 {
-                    var weaponType = (BaseItem)weapon.m_nBaseItem;
+                    // For one handed if needed.
+                }
 
-                    if (Item.OneHandedMeleeItemTypes.Contains(weaponType) ||
-                        Item.ThrowingWeaponBaseItemTypes.Contains(weaponType))
-                    {
-                        var doublehandDMGBonus = Combat.GetDoublehandDMGBonusNative(attacker);
-                        Log.Write(LogGroup.Attack, $"DAMAGE: Applying doublehand damage bonus. (+{doublehandDMGBonus})");
-                        dmgValues[CombatDamageType.Physical] += doublehandDMGBonus;
-                    }
+                var weaponType = (BaseItem)weapon.m_nBaseItem;
+
+                if (weaponType == BaseItem.GreatAxe)
+                {
+                    var powerfulGripDMGBonus = Combat.GetPowerfulGripDMGBonusNative(attacker);
+                    Log.Write(LogGroup.Attack, $"DAMAGE: Applying Powerful Grip damage bonus. (+{powerfulGripDMGBonus})");
+                    dmgValues[CombatDamageType.Physical] += powerfulGripDMGBonus;
                 }
 
                 if (Item.StaffBaseItemTypes.Contains((BaseItem)weapon.m_nBaseItem))
