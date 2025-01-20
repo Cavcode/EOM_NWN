@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Numerics;
 using EOM.Game.Server.Core;
 using EOM.Game.Server.Core.NWScript.Enum;
 using EOM.Game.Server.Core.NWScript.Enum.VisualEffect;
@@ -52,8 +53,17 @@ namespace EOM.Game.Server.Feature.AIBossDefinition.Bosses
             Effect ePara = EffectCutsceneParalyze();
             Effect eParaPC = EffectCutsceneImmobilize();
             Effect eParaPC2 = EffectSilence();
+            
 
             Location lThis = GetLocation(boss);
+
+            Vector3 bossPosition = GetPosition(boss);
+            bossPosition.Z += 2.0f;
+            Location placeableLoc = Location(GetArea(boss),bossPosition,GetFacing(boss));
+
+
+            CombatPoint.DistributeSkillXPBoss(boss);
+            CombatPoint.CleanUpCombatPointsBoss(boss);
 
             uint oTarget = GetFirstObjectInShape(Shape.Sphere, 80.0f, lThis, false, ObjectType.Creature);
             while (GetIsObjectValid(oTarget))
@@ -69,12 +79,19 @@ namespace EOM.Game.Server.Feature.AIBossDefinition.Bosses
                 }
                 oTarget = GetNextObjectInShape(Shape.Sphere, 60.0f, lThis, false, ObjectType.Creature);
             }
-
-            DelayCommand(2.0f, () => ApplyEffectToObject(DurationType.Temporary, eRedFlash, boss, 3.0f));
-            //DelayCommand(4.5f, PlayAnimation(ANIMATION_LOOPING_CONJURE1, 1.3f, 120.0f));
-            DelayCommand(3.5f, () => ApplyEffectToObject(DurationType.Permanent, eRed, boss));
+            var chestTag = GetLocalString(boss, "BOSS_CHEST_TAG");
+            
+            
+            uint invisPlaceable = CreateObject(ObjectType.Placeable, "invisplaceholder", placeableLoc);
+            
+            DelayCommand(2.5f, () => ApplyEffectToObject(DurationType.Temporary, eRedFlash, invisPlaceable, 5.0f));
+            DelayCommand(2.5f, () => ApplyEffectToObject(DurationType.Permanent, eRed, boss));
             DelayCommand(4.5f, () => SetImmortal(boss, false));
-            DelayCommand(5.0f, () => ApplyEffectToObject(DurationType.Instant, eDeath, boss));
+            DelayCommand(4.5f, () => CreateObject(ObjectType.Placeable, chestTag, GetLocation(GetWaypointByTag("BOSS_CHEST"))));
+
+            DelayCommand(5.0f, () => DestroyObject(boss));
+
+            //DelayCommand(5.0f, () => ApplyEffectToObject(DurationType.Instant, eDeath, boss));
         }
 
         [NWNEventHandler("dam_hook")]

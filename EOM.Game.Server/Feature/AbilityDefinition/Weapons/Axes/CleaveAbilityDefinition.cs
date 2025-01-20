@@ -66,7 +66,7 @@ namespace EOM.Game.Server.Feature.AbilityDefinition.Weapons.Axes
                         defense,
                         defenderStat,
                         0);
-                    Console.Write(damage.ToString() + " damage");
+                    Console.Write(damage.ToString() + " damages");
 
                     var dTarget = creature;
                     DelayCommand(0.1f,

@@ -569,6 +569,14 @@ namespace EOM.Game.Server.Core.NWScript.Enum.VisualEffect
         Vfx_ThunderRing = 847,
         Vfx_Tidal_Wave = 848,
         Vfx_Mechanic_Marker = 849,
-        Vfx_Dur_Warning = 850
+        Vfx_Dur_Warning = 850,
+        Vfx_Dur_Overhead = 851,
+        Vfx_Dur_Slashr = 852,
+        Vfx_Dur_Slashl = 853,
+        Vfx_Dur_OverheadSound = 854,
+        Vfx_Imp_MightySwings = 855,
+        Vfx_Sf_ShockWave = 856,
+        Vfx_Sf_Elec = 857,
+        Vfx_Sf_AxeSwing2 = 858,
     }
 }
