@@ -56,7 +56,7 @@ namespace EOM.Game.Server.Feature.StatusEffectDefinition
                     Math.Abs(position.Z - originalPosition.Z) > 0.1f)
                 {
                     StatusEffect.Remove(target, StatusEffectType.Rest);
-                }
+                } 
 
                 DelayCommand(0.5f, () => CheckMovement(target));
             }

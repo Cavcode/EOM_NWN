@@ -8,6 +8,7 @@ using EOM.Game.Server.Service.AbilityService;
 using EOM.Game.Server.Service.CombatService;
 using EOM.Game.Server.Service.PerkService;
 using EOM.Game.Server.Service.SkillService;
+using EOM.Game.Server.Service.StatusEffectService;
 using static NWN.Native.API.CVirtualMachineScript.JmpData;
 
 namespace EOM.Game.Server.Feature.AbilityDefinition.Weapons.Axes
@@ -82,9 +83,17 @@ namespace EOM.Game.Server.Feature.AbilityDefinition.Weapons.Axes
                 creature = GetNextObjectInShape(Shape.SpellCone, RadiusSize.Large, targetLocation, true, ObjectType.Creature, GetPosition(activator));
             }
 
-            
 
-
+            if (StatusEffect.HasStatusEffect(activator, StatusEffectType.Ember1))
+                StatusEffect.Apply(target, activator, StatusEffectType.Ember2, 12f);
+            else if (StatusEffect.HasStatusEffect(activator, StatusEffectType.Ember2))
+                StatusEffect.Apply(target, activator, StatusEffectType.Ember3, 12f);
+            else if (StatusEffect.HasStatusEffect(activator, StatusEffectType.Ember3))
+                StatusEffect.Apply(target, activator, StatusEffectType.Ember4, 12f);
+            else if (StatusEffect.HasStatusEffect(activator, StatusEffectType.Ember4))
+                StatusEffect.Apply(target, activator, StatusEffectType.Ember5, 12f);
+            else
+                StatusEffect.Apply(target, activator, StatusEffectType.Ember1, 12f);
 
 
             CombatPoint.AddCombatPoint(activator, target, SkillType.Axes, 3);

@@ -17,6 +17,8 @@ using EquipmentSlot = NWN.Native.API.EquipmentSlot;
 using ObjectType = NWN.Native.API.ObjectType;
 using RacialType = EOM.Game.Server.Core.NWScript.Enum.RacialType;
 using DamageType = NWN.Native.API.DamageType;
+using EOM.Game.Server.Service.StatusEffectService;
+using EOM.Game.Server.Entity;
 
 namespace EOM.Game.Server.Native
 {
