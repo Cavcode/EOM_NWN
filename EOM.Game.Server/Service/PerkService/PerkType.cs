@@ -309,7 +309,18 @@
         ACleave = 301,
         ACharge = 302,
         Overhead = 303,
-        MightySwings = 304
+        MightySwings = 304,
+
+        // Gunblade Perks
+        SwiftSlashes = 305,
+        WeaponExpertiseGunblade = 306,
+        WeaponExpertiseGunbladeII = 307,
+        ImprovedCriticalGunblade = 308,
+        GrievingWoundsGunblade = 309,
+        Trigger = 310,
+        SonicSlash = 311,
+        AethericalAmmo = 312,
+        AethericalBulletSlug = 313
 
 
     }

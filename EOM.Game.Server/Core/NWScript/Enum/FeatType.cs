@@ -1975,6 +1975,18 @@ namespace EOM.Game.Server.Core.NWScript.Enum
         ACleave = 2001,
         ACharge = 2002,
         Overhead = 2003,
-        MightySwings = 2004
+        MightySwings = 2004,
+
+        // Gunblade feats
+        SwiftSlashes = 2005,
+        WeaponExpertiseGunblade = 2006,
+        WeaponExpertiseGunbladeII = 2007,
+        ImprovedCriticalGunblade = 2008,
+        GrievingWoundsGunblade = 2009,
+        Trigger = 2010,
+        SonicSlash = 2011,
+        AethericalAmmo = 2012,
+        AethericalBulletSlug = 2013
+
     }
 }
