@@ -933,6 +933,10 @@ namespace EOM.Game.Server.Service
             // Accuracy increases granted by effects
             accuracyBonus = CalculateEffectAccuracy(creature, accuracyBonus);
 
+            // Gunblade Swift Slashes
+            if (Perk.GetPlayerEffectivePerkLevel(creature, PerkType.SwiftSlashes) == 1)
+                accuracyBonus -= 5;
+
             // Power Attack to-hit penalty
             if (GetActionMode(creature, ActionMode.PowerAttack))
                 accuracyBonus -= 5;
@@ -1455,6 +1459,12 @@ namespace EOM.Game.Server.Service
             {
                 perkType = PerkType.SaberstaffMastery;
             }
+            // Gunblades
+            else if (itemType == BaseItem.Longsword)
+            {
+                perkType = PerkType.SwiftSlashes;
+            }
+
 
             if (Item.ShieldBaseItemTypes.Contains(offHandType)) 
                 numberOfAttacks += GetShieldBonus(creature);

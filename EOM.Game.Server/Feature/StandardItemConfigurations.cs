@@ -120,6 +120,7 @@ namespace EOM.Game.Server.Feature
                 {
                     var attribute = item.GetAttribute<BaseItem, ItemAttribute>();
                     SetPhenoType(attribute.PhenoType, player);
+                    Stat.ApplyAttacksPerRound(player, GetPCItemLastEquipped());
                 }
             }
         }
