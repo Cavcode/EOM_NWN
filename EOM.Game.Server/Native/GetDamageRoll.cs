@@ -454,12 +454,18 @@ namespace EOM.Game.Server.Native
         private static bool HasImprovedMultiplier(CNWSCreature attacker, CNWSItem weapon)
         {
             if (weapon == null) return false;
-            if (attacker.m_pStats.HasFeat((ushort)FeatType.MightyCriticalAxes) == 0) return false;
 
             var baseItemType = (BaseItem)weapon.m_nBaseItem;
-
-            if (baseItemType == BaseItem.GreatAxe) return true;
-
+            if (baseItemType == BaseItem.GreatAxe)
+            {
+                if (attacker.m_pStats.HasFeat((ushort)FeatType.MightyCriticalAxes) == 1)
+                    return true;
+            }
+            else if (baseItemType == BaseItem.Longsword)
+            {
+                if (attacker.m_pStats.HasFeat((ushort)FeatType.ImprovedCriticalGunblade) == 1)
+                    return true;
+            }
 
             return false;
         }

@@ -298,7 +298,6 @@ namespace EOM.Game.Server.Native
             var attackRoll = Random.Next(1, 100);
             var hitRate = Combat.CalculateHitRate(attackerAccuracy + accuracyModifiers, defenderEvasion, percentageModifier);
             var isHit = attackRoll <= hitRate;
-
             Log.Write(LogGroup.Attack, $"attackerAccuracy = {attackerAccuracy}, modifiers = {accuracyModifiers}, defenderEvasion = {defenderEvasion}");
             Log.Write(LogGroup.Attack, $"Hit Rate: {hitRate}, Roll = {attackRoll}");
 
@@ -462,13 +461,26 @@ namespace EOM.Game.Server.Native
                 return 1;
             }
 
-            // Vibroblades
+            // Axes
             if (baseItemType == BaseItem.GreatAxe &&
                 attacker.m_pStats.HasFeat((ushort)FeatType.WeaponExpertiseAxes) == 1)
             {
                 return 1;
             }
-
+            // Gunblades
+            if (baseItemType == BaseItem.Longsword &&
+                attacker.m_pStats.HasFeat((ushort)FeatType.WeaponExpertiseGunblade) == 1)
+            {
+                if (baseItemType == BaseItem.Longsword &&
+                    attacker.m_pStats.HasFeat((ushort)FeatType.WeaponExpertiseGunbladeII) == 1)
+                {
+                    return 2;
+                }
+                else
+                {
+                    return 1;
+                }
+            }
 
             Log.Write(LogGroup.Attack, "No weapon focus feat found.");
             return 0;
