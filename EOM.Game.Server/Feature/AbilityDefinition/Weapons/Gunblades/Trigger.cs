@@ -51,8 +51,9 @@ namespace EOM.Game.Server.Feature.AbilityDefinition.Weapons.Gunblades
             //AddItemProperty(DurationType.Temporary,ItemPropertyDamageBonus(ItemPropertyDamageType.Fire,DamageBonus.DAMAGEBONUS_2d6), weapon,30.0f);
             var prop = ItemPropertyCustom(ItemPropertyType.DMG, (int)CombatDamageType.Fire, 5);
             BiowareXP2.IPSafeAddItemProperty(weapon, prop, 30.0f, AddItemPropertyPolicy.ReplaceExisting, false, false);
+            StatusEffect.Apply(activator, activator, StatusEffectType.Trigger, 30.0f);
 
-            AssignCommand(activator, () => ActionPlayAnimation(Animation.PointForward));
+            AssignCommand(activator, () => ActionPlayAnimation(Animation.LayOnBackUpright));
 
         }
 

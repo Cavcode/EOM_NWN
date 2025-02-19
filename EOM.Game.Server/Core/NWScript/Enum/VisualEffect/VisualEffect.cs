@@ -578,5 +578,6 @@ namespace EOM.Game.Server.Core.NWScript.Enum.VisualEffect
         Vfx_Sf_ShockWave = 856,
         Vfx_Sf_Elec = 857,
         Vfx_Sf_AxeSwing2 = 858,
+        Vfx_sf_gunblade_bang = 859,
     }
 }

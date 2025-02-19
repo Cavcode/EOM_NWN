@@ -83,6 +83,7 @@
         Ember2 = 78,
         Ember3 = 79,
         Ember4 = 80,
-        Ember5 = 81
+        Ember5 = 81,
+        Trigger = 82
     }
 }

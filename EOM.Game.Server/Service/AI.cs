@@ -108,7 +108,7 @@ namespace EOM.Game.Server.Service
         public static void CreatureDamaged()
         {
             //Enmity.AttackHighestEnmityTarget(OBJECT_SELF);
-            AttackEffect.GreviousWounds(OBJECT_SELF);
+            AttackEffect.PlayEffect(OBJECT_SELF);
             RefreshHealthbar(OBJECT_SELF);
         }
 
