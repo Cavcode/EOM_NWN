@@ -49,7 +49,12 @@ namespace EOM.Game.Server.Feature.AbilityDefinition.Weapons.Gunblades
                 0);
             var delay = GetDistanceBetweenLocations(GetLocation(activator), targetLocation) / 25.0f;
 
-            AssignCommand(activator, () => DoSonicSlash(target, level));
+            AssignCommand(activator, () =>
+            {
+                ActionPlayAnimation(Animation.LayOnBackUpright);
+                DoSonicSlash(target, level);
+            });
+
 
             var eDMG = EffectDamage(damage, DamageType.Force);
             var eVFX = EffectVisualEffect(VisualEffect.Vfx_Fnf_Electric_Explosion);
@@ -69,13 +74,13 @@ namespace EOM.Game.Server.Feature.AbilityDefinition.Weapons.Gunblades
             builder.Create(FeatType.SonicSlash, PerkType.SonicSlash)
                 .Name("Sonic Slash")
                 .Level(1)
-                .HasActivationDelay(2f)
+                ///.HasActivationDelay(2f)
                 .HasMaxRange(30.0f)
                 .RequirementMagick(1)
-                .IsCastedAbility()
+                //.IsCastedAbility()
                 .IsHostileAbility()
-                .DisplaysVisualEffectWhenActivating(VisualEffect.None)
-                .UsesAnimation(Animation.CastOutAnimation)
+                //.DisplaysVisualEffectWhenActivating(VisualEffect.None)
+                //.UsesAnimation(Animation.CastOutAnimation)
                 .HasImpactAction(ImpactAction);
         }
         private static void DoSonicSlash(uint target, int level)
