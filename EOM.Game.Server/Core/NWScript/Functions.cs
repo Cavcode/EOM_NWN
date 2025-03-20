@@ -4431,5 +4431,565 @@ namespace EOM.Game.Server.Core.NWScript
             VM.Call(1116);
             return VM.StackPopInt();
         }
+        ///  Assign one of the available audio streams to play a specific file. This mechanism can be used<br/>
+        ///  to replace regular music playback, and synchronize it between clients.<br/>
+        ///  * There is currently no way to get playback state from clients.<br/>
+        ///  * Audio streams play in the streams channel which has its own volume setting in the client.<br/>
+        ///  * nStreamIdentifier is one of AUDIOSTREAM_IDENTIFIER_*.<br/>
+        ///  * Currently, only MP3 CBR files are supported and properly seekable.<br/>
+        ///  * Unlike regular music, audio streams do not pause on load screens.<br/>
+        ///  * If fSeekOffset is at or beyond the end of the stream, the seek offset will wrap around, even if the file is configured not to loop.<br/>
+        ///  * fFadeTime is in seconds to gradually fade in the audio instead of starting directly.<br/>
+        ///  * Only one type of fading can be active at once, for example:<br/>
+        ///    If you call StartAudioStream() with fFadeTime = 10.0f, any other audio stream functions with a fade time &amp;gt;0.0f will have no effect<br/>
+        ///    until StartAudioStream() is done fading.
+        public static void StartAudioStream(uint oPlayer, int nStreamIdentifier, string sResRef, int bLooping = 1, float fFadeTime = 0.0f, float fSeekOffset = -1.0f, float fVolume = 1.0f)
+        {
+            VM.StackPush(fVolume);
+            VM.StackPush(fSeekOffset);
+            VM.StackPush(fFadeTime);
+            VM.StackPush(bLooping);
+            VM.StackPush(sResRef);
+            VM.StackPush(nStreamIdentifier);
+            VM.StackPush(oPlayer);
+            VM.Call(1118);
+        }
+
+        ///  Stops the given audio stream.<br/>
+        ///  * fFadeTime is in seconds to gradually fade out the audio instead of stopping directly.<br/>
+        ///  * Only one type of fading can be active at once, for example:<br/>
+        ///    If you call StartAudioStream() with fFadeInTime = 10.0f, any other audio stream functions with a fade time &amp;gt;0.0f will have no effect<br/>
+        ///    until StartAudioStream() is done fading.<br/>
+        ///  * Will do nothing if the stream is currently not in use.
+        public static void StopAudioStream(uint oPlayer, int nStreamIdentifier, float fFadeTime = 0.0f)
+        {
+            VM.StackPush(fFadeTime);
+            VM.StackPush(nStreamIdentifier);
+            VM.StackPush(oPlayer);
+            VM.Call(1119);
+        }
+
+        ///  Un/pauses the given audio stream.<br/>
+        ///  * fFadeTime is in seconds to gradually fade the audio out/in instead of pausing/resuming directly.<br/>
+        ///  * Only one type of fading can be active at once, for example:<br/>
+        ///    If you call StartAudioStream() with fFadeInTime = 10.0f, any other audio stream functions with a fade time &amp;gt;0.0f will have no effect<br/>
+        ///    until StartAudioStream() is done fading.<br/>
+        ///  * Will do nothing if the stream is currently not in use.
+        public static void SetAudioStreamPaused(uint oPlayer, int nStreamIdentifier, int bPaused, float fFadeTime = 0.0f)
+        {
+            VM.StackPush(fFadeTime);
+            VM.StackPush(bPaused);
+            VM.StackPush(nStreamIdentifier);
+            VM.StackPush(oPlayer);
+            VM.Call(1120);
+        }
+
+        ///  Change volume of audio stream.<br/>
+        ///  * Volume is from 0.0 to 1.0.<br/>
+        ///  * fFadeTime is in seconds to gradually change the volume.<br/>
+        ///  * Only one type of fading can be active at once, for example:<br/>
+        ///    If you call StartAudioStream() with fFadeInTime = 10.0f, any other audio stream functions with a fade time &amp;gt;0.0f will have no effect<br/>
+        ///    until StartAudioStream() is done fading.<br/>
+        ///  * Subsequent calls to this function with fFadeTime &amp;gt;0.0f while already fading the volume<br/>
+        ///    will start the new fade with the previous&amp;apos; fade&amp;apos;s progress as starting point.<br/>
+        ///  * Will do nothing if the stream is currently not in use.
+        public static void SetAudioStreamVolume(uint oPlayer, int nStreamIdentifier, float fVolume = 1.0f, float fFadeTime = 0.0f)
+        {
+            VM.StackPush(fFadeTime);
+            VM.StackPush(fVolume);
+            VM.StackPush(nStreamIdentifier);
+            VM.StackPush(oPlayer);
+            VM.Call(1121);
+        }
+
+        ///  Seek the audio stream to the given offset.<br/>
+        ///  * When seeking at or beyond the end of a stream, the seek offset will wrap around, even if the file is configured not to loop.<br/>
+        ///  * Will do nothing if the stream is currently not in use.<br/>
+        ///  * Will do nothing if the stream is in ended state (reached end of file and looping is off). In this<br/>
+        ///    case, you need to restart the stream.
+        public static void SeekAudioStream(uint oPlayer, int nStreamIdentifier, float fSeconds)
+        {
+            VM.StackPush(fSeconds);
+            VM.StackPush(nStreamIdentifier);
+            VM.StackPush(oPlayer);
+            VM.Call(1122);
+        }
+
+    
+        ///  Gets the total number of spell abilities a creature has.
+        public static int GetSpellAbilityCount(uint oCreature)
+        {
+            VM.StackPush(oCreature);
+            VM.Call(1128);
+            return VM.StackPopInt();
+        }
+
+        ///  Gets the spell Id of the spell ability at the given index.<br/>
+        ///  - nIndex: the index of the spell ability. Bounds: 0 &amp;lt;= nIndex &amp;lt; GetSpellAbilityCount()<br/>
+        ///  Returns: a SPELL_* constant or -1 if the slot is not set.
+        public static int GetSpellAbilitySpell(uint oCreature, int nIndex)
+        {
+            VM.StackPush(nIndex);
+            VM.StackPush(oCreature);
+            VM.Call(1129);
+            return VM.StackPopInt();
+        }
+
+        ///  Gets the caster level of the spell ability in the given slot. Returns 0 by default.<br/>
+        ///  - nIndex: the index of the spell ability. Bounds: 0 &amp;lt;= nIndex &amp;lt; GetSpellAbilityCount()<br/>
+        ///  Returns: the caster level or -1 if the slot is not set.
+        public static int GetSpellAbilityCasterLevel(uint oCreature, int nIndex)
+        {
+            VM.StackPush(nIndex);
+            VM.StackPush(oCreature);
+            VM.Call(1130);
+            return VM.StackPopInt();
+        }
+
+        ///  Gets the ready state of a spell ability.<br/>
+        ///  - nIndex: the index of the spell ability. Bounds: 0 &amp;lt;= nIndex &amp;lt; GetSpellAbilityCount()<br/>
+        ///  Returns: TRUE/FALSE or -1 if the slot is not set.
+        public static int GetSpellAbilityReady(uint oCreature, int nIndex)
+        {
+            VM.StackPush(nIndex);
+            VM.StackPush(oCreature);
+            VM.Call(1131);
+            return VM.StackPopInt();
+        }
+
+        ///  Set the ready state of a spell ability slot.<br/>
+        ///  - nIndex: the index of the spell ability. Bounds: 0 &amp;lt;= nIndex &amp;lt; GetSpellAbilityCount()<br/>
+        ///  - bReady: TRUE to mark the slot ready.
+        public static void SetSpellAbilityReady(uint oCreature, int nIndex, int bReady = 1)
+        {
+            VM.StackPush(bReady);
+            VM.StackPush(nIndex);
+            VM.StackPush(oCreature);
+            VM.Call(1132);
+        }
+
+ 
+        ///  Sets a grass override for nMaterialId in oArea.<br/>
+        ///  * You can have multiple grass types per area by using different materials.<br/>
+        ///  * You can add grass to areas that normally do not have grass, for example by calling this on the<br/>
+        ///    wood surface material(5) for an inn area.<br/>
+        /// <br/>
+        ///    - nMaterialId: a surface material, see surfacemat.2da. 3 is the default grass material.<br/>
+        ///    - sTexture: the grass texture, cannot be empty.<br/>
+        ///    - fDensity: the density of the grass.<br/>
+        ///    - fHeight: the height of the grass.<br/>
+        ///    - vAmbientColor: the ambient color of the grass, xyz as RGB clamped to 0.0-1.0f per value.<br/>
+        ///    - vDiffuseColor: the diffuse color of the grass, xyz as RGB clamped to 0.0-1.0f per value.
+        public static void SetAreaGrassOverride(uint oArea, int nMaterialId, string sTexture, float fDensity, float fHeight, System.Numerics.Vector3 vAmbientColor, System.Numerics.Vector3 vDiffuseColor)
+        {
+            VM.StackPush(vDiffuseColor);
+            VM.StackPush(vAmbientColor);
+            VM.StackPush(fHeight);
+            VM.StackPush(fDensity);
+            VM.StackPush(sTexture);
+            VM.StackPush(nMaterialId);
+            VM.StackPush(oArea);
+            VM.Call(1139);
+        }
+
+        ///  Remove a grass override from oArea for nMaterialId.
+        public static void RemoveAreaGrassOverride(uint oArea, int nMaterialId)
+        {
+            VM.StackPush(nMaterialId);
+            VM.StackPush(oArea);
+            VM.Call(1140);
+        }
+
+        ///  Set to TRUE to disable the default grass of oArea.
+        public static void SetAreaDefaultGrassDisabled(uint oArea, int bDisabled)
+        {
+            VM.StackPush(bDisabled);
+            VM.StackPush(oArea);
+            VM.Call(1141);
+        }
+
+        ///  Gets the NoRest area flag.<br/>
+        ///  Returns TRUE if resting is not allowed in the area.<br/>
+        ///  Passing in OBJECT_INVALID to parameter oArea will result in operating on the area of the caller.
+        public static int GetAreaNoRestFlag(uint oArea = OBJECT_INVALID)
+        {
+            VM.StackPush(oArea);
+            VM.Call(1142);
+            return VM.StackPopInt();
+        }
+
+        ///  Sets the NoRest flag on an area.<br/>
+        ///  Passing in OBJECT_INVALID to parameter oArea will result in operating on the area of the caller.
+        public static void SetAreaNoRestFlag(int bNoRestFlag, uint oArea = OBJECT_INVALID)
+        {
+            VM.StackPush(oArea);
+            VM.StackPush(bNoRestFlag);
+            VM.Call(1143);
+        }
+
+        ///  Sets the age of oCreature.
+        public static void SetAge(uint oCreature, int nAge)
+        {
+            VM.StackPush(nAge);
+            VM.StackPush(oCreature);
+            VM.Call(1144);
+        }
+
+        ///  Gets the base number of attacks oCreature can make every round<br/>
+        ///  Excludes additional effects such as haste, slow, spells, circle kick, attack modes, etc.<br/>
+        ///  * bCheckOverridenValue - Checks for SetBaseAttackBonus() on the creature, if FALSE will return the non-overriden version
+        public static int GetAttacksPerRound(uint oCreature, int bCheckOverridenValue = 1)
+        {
+            VM.StackPush(bCheckOverridenValue);
+            VM.StackPush(oCreature);
+            VM.Call(1145);
+            return VM.StackPopInt();
+        }
+
+        ///  Set to TRUE to disable the inaccessible tile border of oArea. Requires a client area reload to take effect.
+        public static void SetAreaTileBorderDisabled(uint oArea, int bDisabled)
+        {
+            VM.StackPush(bDisabled);
+            VM.StackPush(oArea);
+            VM.Call(1147);
+        }
+
+        ///  Checks if a object is destroyable (toggle this state with SetIsDestroyable)<br/>
+        ///  Returns TRUE if they can be destroyed, FALSE otherwise or in error
+        public static int GetIsDestroyable(uint oObject)
+        {
+            VM.StackPush(oObject);
+            VM.Call(1148);
+            return VM.StackPopInt();
+        }
+
+        ///  Checks if a creature is able to be raised with EffectResurrection (toggle this state with SetIsDestroyable)<br/>
+        ///  Returns TRUE if they can be raised, FALSE otherwise or in error
+        public static int GetIsRaiseable(uint oCreature)
+        {
+            VM.StackPush(oCreature);
+            VM.Call(1149);
+            return VM.StackPopInt();
+        }
+
+        ///  Checks if a creature is able to be selected when dead (toggle this state with SetIsDestroyable)<br/>
+        ///  Returns TRUE if they can be selected, FALSE otherwise or in error
+        public static int GetIsSelectableWhenDead(uint oCreature)
+        {
+            VM.StackPush(oCreature);
+            VM.Call(1150);
+            return VM.StackPopInt();
+        }
+
+        ///  Check if NWNX is currently running.<br/>
+        ///  Returns TRUE if NWNX is available, FALSE if not.
+        public static int NWNXGetIsAvailable()
+        {
+            VM.Call(1151);
+            return VM.StackPopInt();
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static void NWNXCall(string sArg1, string sArg2)
+        {
+            VM.StackPush(sArg2);
+            VM.StackPush(sArg1);
+            VM.Call(1152);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static void NWNXPushInt(int nValue)
+        {
+            VM.StackPush(nValue);
+            VM.Call(1153);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static void NWNXPushFloat(float fValue)
+        {
+            VM.StackPush(fValue);
+            VM.Call(1154);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static void NWNXPushObject(uint oValue)
+        {
+            VM.StackPush(oValue);
+            VM.Call(1155);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static void NWNXPushString(string sValue)
+        {
+            VM.StackPush(sValue);
+            VM.Call(1156);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static void NWNXPushVector(System.Numerics.Vector3 vValue)
+        {
+            VM.StackPush(vValue);
+            VM.Call(1157);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static void NWNXPushLocation(System.IntPtr locValue)
+        {
+            VM.StackPush(ENGINE_STRUCTURE_LOCATION, locValue);
+
+            VM.Call(1158);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static void NWNXPushEffect(System.IntPtr eValue)
+        {
+           VM.StackPush(ENGINE_STRUCTURE_EFFECT, eValue);
+            VM.Call(1159);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static void NWNXPushItemProperty(System.IntPtr ipValue)
+        {
+           VM.StackPush(ENGINE_STRUCTURE_ITEMPROPERTY, ipValue);
+            VM.Call(1160);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static void NWNXPushJson(System.IntPtr jValue)
+        {
+           VM.StackPush(ENGINE_STRUCTURE_JSON, jValue);
+            VM.Call(1161);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static void NWNXPushAction(System.Action aValue)
+        {
+            ;
+            VM.Call(1162);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static void NWNXPushEvent(System.IntPtr eValue)
+        {
+           VM.StackPush(ENGINE_STRUCTURE_EVENT, eValue);
+            VM.Call(1163);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static void NWNXPushTalent(System.IntPtr tValue)
+        {
+           VM.StackPush(ENGINE_STRUCTURE_TALENT, tValue);
+            VM.Call(1164);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static void NWNXPushSqlquery(System.IntPtr sqlValue)
+        {
+           VM.StackPush(ENGINE_STRUCTURE_SQLQUERY, sqlValue);
+            VM.Call(1165);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static void NWNXPushCassowary(System.IntPtr cValue)
+        {
+           VM.StackPush(ENGINE_STRUCTURE_CASSOWARY, cValue);
+            VM.Call(1166);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static int NWNXPopInt()
+        {
+            VM.Call(1167);
+            return VM.StackPopInt();
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static float NWNXPopFloat()
+        {
+            VM.Call(1168);
+            return global::NWNX.NET.NWNXAPI.StackPopFloat();
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static uint NWNXPopObject()
+        {
+            VM.Call(1169);
+            return VM.StackPopObject();
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static string NWNXPopString()
+        {
+            VM.Call(1170);
+            return global::NWNX.NET.NWNXAPI.StackPopString();
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static System.Numerics.Vector3 NWNXPopVector()
+        {
+            VM.Call(1171);
+            return global::NWNX.NET.NWNXAPI.StackPopVector();
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static System.IntPtr NWNXPopLocation()
+        {
+            VM.Call(1172);
+            return global::NWNX.NET.NWNXAPI.StackPopGameDefinedStructure(ENGINE_STRUCTURE_LOCATION);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static System.IntPtr NWNXPopEffect()
+        {
+            VM.Call(1173);
+            return global::NWNX.NET.NWNXAPI.StackPopGameDefinedStructure(ENGINE_STRUCTURE_EFFECT);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static System.IntPtr NWNXPopItemProperty()
+        {
+            VM.Call(1174);
+            return global::NWNX.NET.NWNXAPI.StackPopGameDefinedStructure(ENGINE_STRUCTURE_ITEMPROPERTY);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static System.IntPtr NWNXPopJson()
+        {
+            VM.Call(1175);
+            return global::NWNX.NET.NWNXAPI.StackPopGameDefinedStructure(ENGINE_STRUCTURE_JSON);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static System.IntPtr NWNXPopEvent()
+        {
+            VM.Call(1176);
+            return global::NWNX.NET.NWNXAPI.StackPopGameDefinedStructure(ENGINE_STRUCTURE_EVENT);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static System.IntPtr NWNXPopTalent()
+        {
+            VM.Call(1177);
+            return global::NWNX.NET.NWNXAPI.StackPopGameDefinedStructure(ENGINE_STRUCTURE_TALENT);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static System.IntPtr NWNXPopSqlquery()
+        {
+            VM.Call(1178);
+            return global::NWNX.NET.NWNXAPI.StackPopGameDefinedStructure(ENGINE_STRUCTURE_SQLQUERY);
+        }
+
+        ///  This is an internal function for NWNX, it will abort the script if called without NWNX running.
+        public static System.IntPtr NWNXPopCassowary()
+        {
+            VM.Call(1179);
+            return global::NWNX.NET.NWNXAPI.StackPopGameDefinedStructure(ENGINE_STRUCTURE_CASSOWARY);
+        }
+
+        ///  Does a spell resistance check. The roll is 1d20 + nCasterLevel + nCasterBonus vs. nSpellResistance<br/>
+        ///  - nSpellId         - The spell ID to use if other variables are not set. If -1 it will attempt to be auto-detected.<br/>
+        ///  - nCasterLevel     - The caster level. If -1 it attempts to find it automatically from oCaster.<br/>
+        ///  - nSpellResistance - The spell resistance to penetrate. If -1 it will use the spell resistance of oTarget.<br/>
+        ///  - bFeedback        - If TRUE displays feedback automatically, FALSE it suppresses it.<br/>
+        ///  Returns: TRUE if the target resists oCasters spell resistance roll, FALSE if failed or an error occured
+        public static int SpellResistanceCheck(uint oTarget, uint oCaster, int nSpellId = -1, int nCasterLevel = -1, int nSpellResistance = -1, int bFeedback = 1)
+        {
+            VM.StackPush(bFeedback);
+            VM.StackPush(nSpellResistance);
+            VM.StackPush(nCasterLevel);
+            VM.StackPush(nSpellId);
+            VM.StackPush(oCaster);
+            VM.StackPush(oTarget);
+            VM.Call(1180);
+            return VM.StackPopInt();
+        }
+
+        ///  Does a spell immunity check. This checks for EFfectSpellImmunity and related item properties.<br/>
+        ///  - nSpellId  - The spell ID to check immunity of. If -1 it will attempt to be auto-detected.<br/>
+        ///  - bFeedback - If TRUE displays feedback automatically, FALSE it suppresses it.<br/>
+        ///  Returns: TRUE if the target is immune to nSpellId, FALSE if failed or an error occured
+        public static int SpellImmunityCheck(uint oTarget, uint oCaster, int nSpellId = -1, int bFeedback = 1)
+        {
+            VM.StackPush(bFeedback);
+            VM.StackPush(nSpellId);
+            VM.StackPush(oCaster);
+            VM.StackPush(oTarget);
+            VM.Call(1181);
+            return VM.StackPopInt();
+        }
+
+        ///  Does a spell absorption check that checks limited (eg Spell Mantle)<br/>
+        ///  - nSpellId      - The Spell Id. If -1 it will attempt to be auto-detected.<br/>
+        ///  - nSpellSchool  - The spell school to check for. If -1 uses nSpellId&amp;apos;s spell school.<br/>
+        ///  - nSpellLevel   - The spell level. If -1 uses nSpellId&amp;apos;s spell level (given the casters last spell cast class)<br/>
+        ///  - bRemoveLevels - If TRUE this removes spell levels from the effect that would stop it (and remove it if 0 or less remain), but if FALSE they will not be removed.<br/>
+        ///  - bFeedback     - If TRUE displays feedback automatically, FALSE it suppresses it.<br/>
+        ///  Returns: TRUE if the target absorbs oCasters spell, FALSE if failed or an error occured
+        public static int SpellAbsorptionLimitedCheck(uint oTarget, uint oCaster, int nSpellId = -1, int nSpellSchool = -1, int nSpellLevel = -1, int bRemoveLevels = 1, int bFeedback = 1)
+        {
+            VM.StackPush(bFeedback);
+            VM.StackPush(bRemoveLevels);
+            VM.StackPush(nSpellLevel);
+            VM.StackPush(nSpellSchool);
+            VM.StackPush(nSpellId);
+            VM.StackPush(oCaster);
+            VM.StackPush(oTarget);
+            VM.Call(1182);
+            return VM.StackPopInt();
+        }
+
+        ///  Does a spell absorption check that checks unlimited spell absorption effects (eg; Globes)<br/>
+        ///  - nSpellId     - The Spell Id. If -1 it will attempt to be auto-detected.<br/>
+        ///  - nSpellSchool - The spell school to check for. If -1 uses nSpellId&amp;apos;s spell school.<br/>
+        ///  - nSpellLevel  - The spell level. If -1 uses nSpellId&amp;apos;s spell level (given the casters last spell cast class)<br/>
+        ///  - bFeedback    - If TRUE displays feedback automatically, FALSE it suppresses it. As per existing ResistSpell convention it defaults to FALSE.<br/>
+        ///  Returns: TRUE if the target absorbs oCasters spell, FALSE if failed or an error occured
+        public static int SpellAbsorptionUnlimitedCheck(uint oTarget, uint oCaster, int nSpellId = -1, int nSpellSchool = -1, int nSpellLevel = -1, int bFeedback = 0)
+        {
+            VM.StackPush(bFeedback);
+            VM.StackPush(nSpellLevel);
+            VM.StackPush(nSpellSchool);
+            VM.StackPush(nSpellId);
+            VM.StackPush(oCaster);
+            VM.StackPush(oTarget);
+            VM.Call(1183);
+            return VM.StackPopInt();
+        }
+
+        ///  Returns the network latency of this player device.<br/>
+        ///  The value is a round trip time (server-&amp;gt;player-&amp;gt;server) in milliseconds.<br/>
+        ///  * Players are pinged every 6000 milliseconds.<br/>
+        ///  * When bSmoothed is TRUE, returns a moving average over a longer timeframe.<br/>
+        ///    This average calculation is not strictly specified and subject to change,<br/>
+        ///    but intended to provide a reasonable average to rely on.<br/>
+        ///  * When bSmoothed is FALSE, returns the current/last received value.<br/>
+        ///  * Returns 0 if the client failed to respond to latency requests or no data is available.<br/>
+        ///    This is currently the case for clients that do not support this functionality (build &amp;lt;37).
+        public static int GetPlayerNetworkLatency(uint oPlayer, int bSmoothed = 1)
+        {
+            VM.StackPush(bSmoothed);
+            VM.StackPush(oPlayer);
+            VM.Call(1184);
+            return VM.StackPopInt();
+        }
+
+        ///  Gets the creature or placeable body bag type (bodybag.2da entry)<br/>
+        ///  Returns -1 on error.
+        public static int GetBodyBag(uint oObject)
+        {
+            VM.StackPush(oObject);
+            VM.Call(1185);
+            return VM.StackPopInt();
+        }
+
+        ///  Sets the creature or placeable body bag type (bodybag.2da entry)
+        public static void SetBodyBag(uint oObject, int nBodyBag)
+        {
+            VM.StackPush(nBodyBag);
+            VM.StackPush(oObject);
+            VM.Call(1186);
+        }
+
     }
 }

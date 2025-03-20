@@ -38,5 +38,16 @@ namespace EOM.Game.Server.Core.NWScript
         public const int EVENT_ATTACKED = 1005;
         public const int EVENT_DAMAGED = 1006;
         public const int EVENT_DISTURBED = 1008;
+
+        // NWNX
+        public const int ENGINE_NUM_STRUCTURES = 8;
+        public const int ENGINE_STRUCTURE_EFFECT = 0;
+        public const int ENGINE_STRUCTURE_EVENT = 1;
+        public const int ENGINE_STRUCTURE_LOCATION = 2;
+        public const int ENGINE_STRUCTURE_TALENT = 3;
+        public const int ENGINE_STRUCTURE_ITEMPROPERTY = 4;
+        public const int ENGINE_STRUCTURE_SQLQUERY = 5;
+        public const int ENGINE_STRUCTURE_CASSOWARY = 6;
+        public const int ENGINE_STRUCTURE_JSON = 7;
     }
 }
