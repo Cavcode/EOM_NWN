@@ -1449,7 +1449,7 @@ namespace EOM.Game.Server.Core.NWNX
         /// <returns>A safe location as vector, will return vPosition if one wasn&apos;t found. Returns {0.0, 0.0, 0.0} on error.</returns>
         public static System.Numerics.Vector3 ComputeSafeLocation(uint oCreature, System.Numerics.Vector3 vPosition, float fRadius = 20.0f, int bWalkStraightLineRequired = 1)
         {
-            NWNXPushInt(bWalkStraightLineRequired);
+            NWNXPushInt(bWalkStraightLineRequired);     
             NWNXPushFloat(fRadius);
             NWNXPushVector(vPosition);
             NWNXPushObject(oCreature);
