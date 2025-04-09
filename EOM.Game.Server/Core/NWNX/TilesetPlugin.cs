@@ -3,272 +3,300 @@ using static EOM.Game.Server.Core.NWNX.NWNXCore;
 
 namespace EOM.Game.Server.Core.NWNX
 {
-    public static class TilesetPlugin
+
+    public class TilesetPlugin
     {
-        private const string NWNX_Tileset = "NWNX_Tileset";
+        /// @addtogroup tileset Tileset
+        /// An advanced plugin that exposes additional tileset and tile properties and allows builders to override the tiles of an area created with CreateArea().
+        /// @{
+        /// @file nwnx_tileset.nss
+        public const string NWNX_Tileset = "NWNX_Tileset";
 
-        /// <summary>
+        ///&lt; @private
+        /// A structure containing general tileset data.
+        /// A structure containing the group data for a tileset.
+        /// A structure containing the edge and corner types of a tile.
+        /// A structure containing the door data for a tile.
+        /// A structure containing custom tile data,
         /// Get general data of sTileset.
-        /// </summary>
-        /// <param name="tileset">The tileset</param>
-        /// <returns>A tileset data object</returns>
-        public static TilesetData GetTilesetData(string tileset)
+        /// <param name="sTileset">The tileset.</param>
+        /// <returns>A NWNX_Tileset_TilesetData struct.</returns>
+        public static TilesetData GetTilesetData(string sTileset)
         {
-            NWNX_PushArgumentString(tileset);
-            NWNX_CallFunction(NWNX_Tileset, "GetTilesetData");
-
-            return new TilesetData
-            {
-                HasHeightTransition = NWNX_GetReturnValueInt(),
-                IsInterior = NWNX_GetReturnValueInt() == 1,
-                UnlocalizedName = NWNX_GetReturnValueString(),
-                DisplayNameStringRef = NWNX_GetReturnValueInt(),
-                FloorTerrain = NWNX_GetReturnValueString(),
-                DefaultTerrain = NWNX_GetReturnValueString(),
-                BorderTerrain = NWNX_GetReturnValueString(),
-                GroupCount = NWNX_GetReturnValueInt(),
-                CrosserCount = NWNX_GetReturnValueInt(),
-                TerrainCount = NWNX_GetReturnValueInt(),
-                HeightTransition = NWNX_GetReturnValueInt(),
-                TileCount = NWNX_GetReturnValueInt(),
-            };
+            NWNXPushString(sTileset);
+            NWNXCall(NWNX_Tileset, "GetTilesetData");
+            TilesetData str = default;
+            str.bHasHeightTransition = NWNXPopInt();
+            str.bInterior = NWNXPopInt();
+            str.sUnlocalizedName = NWNXPopString();
+            str.nDisplayNameStrRef = NWNXPopInt();
+            str.sFloorTerrain = NWNXPopString();
+            str.sDefaultTerrain = NWNXPopString();
+            str.sBorderTerrain = NWNXPopString();
+            str.nNumGroups = NWNXPopInt();
+            str.nNumCrossers = NWNXPopInt();
+            str.nNumTerrain = NWNXPopInt();
+            str.fHeightTransition = NWNXPopFloat();
+            str.nNumTileData = NWNXPopInt();
+            return str;
         }
 
-        /// <summary>
-        /// Get the name of tileset's terrain at index.
-        /// </summary>
-        /// <param name="tileset">The tileset</param>
-        /// <param name="index">The index of the terrain. Range: TilesetData.NumTerrain > index >= 0</param>
-        /// <returns>The terrain name or empty string on error.</returns>
-        public static string GetTilesetTerrain(string tileset, int index)
+        /// Get the name of sTileset&apos;s terrain at nIndex.
+        /// <param name="sTileset">The tileset.</param>
+        /// <param name="nIndex">The index of the terrain. Range: NWNX_Tileset_TilesetData.nNumTerrain &gt; nIndex &gt;= 0</param>
+        /// <returns>The terrain name or &quot;&quot; on error.</returns>
+        public static string GetTilesetTerrain(string sTileset, int nIndex)
         {
-            NWNX_PushArgumentInt(index);
-            NWNX_PushArgumentString(tileset);
-            NWNX_CallFunction(NWNX_Tileset, "GetTilesetTerrain");
-
-            return NWNX_GetReturnValueString();
+            NWNXPushInt(nIndex);
+            NWNXPushString(sTileset);
+            NWNXCall(NWNX_Tileset, "GetTilesetTerrain");
+            return NWNXPopString();
         }
 
-        /// <summary>
-        /// Get the name of tileset's crosser at index.
-        /// </summary>
-        /// <param name="tileset">The tileset</param>
-        /// <param name="index">The index of the crosser. Range: TilesetData.NumCrossers > index >= 0</param>
-        /// <returns></returns>
-        public static string GetTilesetCrosser(string tileset, int index)
+        /// Get the name of sTileset&apos;s crosser at nIndex.
+        /// <param name="sTileset">The tileset.</param>
+        /// <param name="nIndex">The index of the crosser. Range: NWNX_Tileset_TilesetData.nNumCrossers &gt; nIndex &gt;= 0</param>
+        /// <returns>The crosser name or &quot;&quot; on error.</returns>
+        public static string GetTilesetCrosser(string sTileset, int nIndex)
         {
-            NWNX_PushArgumentInt(index);
-            NWNX_PushArgumentString(tileset);
-            NWNX_CallFunction(NWNX_Tileset, "GetTilesetCrosser");
-
-            return NWNX_GetReturnValueString();
+            NWNXPushInt(nIndex);
+            NWNXPushString(sTileset);
+            NWNXCall(NWNX_Tileset, "GetTilesetCrosser");
+            return NWNXPopString();
         }
 
-        /// <summary>
-        /// Get general data of the group at index in tileset.
-        /// </summary>
-        /// <param name="tileset">The tileset</param>
-        /// <param name="index">The index of the group. Range: TilesetData.NumGroups > index >= 0</param>
-        /// <returns>A TilesetGroupData object</returns>
-        public static TilesetGroupData GetTilesetGroupData(string tileset, int index)
+        /// Get general data of the group at nIndex in sTileset.
+        /// <param name="sTileset">The tileset.</param>
+        /// <param name="nIndex">The index of the group. Range: NWNX_Tileset_TilesetData.nNumGroups &gt; nIndex &gt;= 0</param>
+        /// <returns>A NWNX_Tileset_TilesetGroupData struct.</returns>
+        public static TilesetGroupData GetTilesetGroupData(string sTileset, int nIndex)
         {
-            NWNX_PushArgumentInt(index);
-            NWNX_PushArgumentString(tileset);
-            NWNX_CallFunction(NWNX_Tileset, "GetTilesetGroupData");
-
-            return new TilesetGroupData
-            {
-                Columns = NWNX_GetReturnValueInt(),
-                Rows = NWNX_GetReturnValueInt(),
-                StringRef = NWNX_GetReturnValueInt(),
-                Name = NWNX_GetReturnValueString()
-            };
+            NWNXPushInt(nIndex);
+            NWNXPushString(sTileset);
+            NWNXCall(NWNX_Tileset, "GetTilesetGroupData");
+            TilesetGroupData str = default;
+            str.nColumns = NWNXPopInt();
+            str.nRows = NWNXPopInt();
+            str.nStrRef = NWNXPopInt();
+            str.sName = NWNXPopString();
+            return str;
         }
 
-        /// <summary>
-        /// Get the tile ID at tileIndex in groupIndex of tileset.
-        /// </summary>
-        /// <param name="tileset">The tileset</param>
-        /// <param name="groupIndex">The index of the group. Range: TilesetData.NumGroups > groupIndex >= 0</param>
-        /// <param name="tileIndex">The index of the tile. Range: (TilesetGroupData.Rows * TilesetGroupData.Columns) > tileIndex >= 0</param>
-        /// <returns></returns>
-        public static int GetTilesetGroupTile(string tileset, int groupIndex, int tileIndex)
+        /// Get the tile ID at nTileIndex in nGroupIndex of sTileset.
+        /// <param name="sTileset">The tileset.</param>
+        /// <param name="nGroupIndex">The index of the group. Range: NWNX_Tileset_TilesetData.nNumGroups &gt; nGroupIndex &gt;= 0</param>
+        /// <param name="nTileIndex">The index of the tile. Range: (NWNX_Tileset_TilesetGroupData.nRows * NWNX_Tileset_TilesetGroupData.nColumns) &gt; nTileIndex &gt;= 0</param>
+        /// <returns>The tile ID or 0 on error.</returns>
+        public static int GetTilesetGroupTile(string sTileset, int nGroupIndex, int nTileIndex)
         {
-            NWNX_PushArgumentInt(tileIndex);
-            NWNX_PushArgumentInt(groupIndex);
-            NWNX_PushArgumentString(tileset);
-            NWNX_CallFunction(NWNX_Tileset, "GetTilesetGroupTile");
-
-            return NWNX_GetReturnValueInt();
+            NWNXPushInt(nTileIndex);
+            NWNXPushInt(nGroupIndex);
+            NWNXPushString(sTileset);
+            NWNXCall(NWNX_Tileset, "GetTilesetGroupTile");
+            return NWNXPopInt();
         }
 
-        /// <summary>
-        /// Get the model name of a tile in tileset.
-        /// </summary>
-        /// <param name="tileset">The tileset</param>
-        /// <param name="tileId">The tile ID</param>
-        /// <returns>The model name or empty string on error</returns>
-        public static string GetTileModel(string tileset, int tileId)
+        /// Get the model name of a tile in sTileset.
+        /// <param name="sTileset">The tileset.</param>
+        /// <param name="nTileID">The tile ID.</param>
+        /// <returns>The model name or &quot;&quot; on error.</returns>
+        public static string GetTileModel(string sTileset, int nTileID)
         {
-            NWNX_PushArgumentInt(tileId);
-            NWNX_PushArgumentString(tileset);
-            NWNX_CallFunction(NWNX_Tileset, "GetTileModel");
-
-            return NWNX_GetReturnValueString();
+            NWNXPushInt(nTileID);
+            NWNXPushString(sTileset);
+            NWNXCall(NWNX_Tileset, "GetTileModel");
+            return NWNXPopString();
         }
 
-        /// <summary>
-        /// Get the minimap texture name of a tile in tileset.
-        /// </summary>
-        /// <param name="tileset">The tileset</param>
-        /// <param name="tileId">The tile ID</param>
-        /// <returns>The minimap texture name or empty string on error.</returns>
-        public static string GetTileMinimapTexture(string tileset, int tileId)
+        /// Get the minimap texture name of a tile in sTileset.
+        /// <param name="sTileset">The tileset.</param>
+        /// <param name="nTileID">The tile ID.</param>
+        /// <returns>The minimap texture name or &quot;&quot; on error.</returns>
+        public static string GetTileMinimapTexture(string sTileset, int nTileID)
         {
-            NWNX_PushArgumentInt(tileId);
-            NWNX_PushArgumentString(tileset);
-            NWNX_CallFunction(NWNX_Tileset, "GetTileMinimapTexture");
-
-            return NWNX_GetReturnValueString();
+            NWNXPushInt(nTileID);
+            NWNXPushString(sTileset);
+            NWNXCall(NWNX_Tileset, "GetTileMinimapTexture");
+            return NWNXPopString();
         }
 
-        /// <summary>
-        /// Get the edges and corners of a tile in tileset.
-        /// </summary>
-        /// <param name="tileset">The tileset</param>
-        /// <param name="tileId">The tile ID</param>
-        /// <returns>A TileEdgesAndCorners object.</returns>
-        public static TileEdgesAndCorners GetTileEdgesAndCorners(string tileset, int tileId)
+        /// Get the edges and corners of a tile in sTileset.
+        /// <param name="sTileset">The tileset.</param>
+        /// <param name="nTileID">The tile ID.</param>
+        /// <returns>A NWNX_Tileset_TileEdgesAndCorners struct.</returns>
+        public static TileEdgesAndCorners GetTileEdgesAndCorners(string sTileset, int nTileID)
         {
-            NWNX_PushArgumentInt(tileId);
-            NWNX_PushArgumentString(tileset);
-            NWNX_CallFunction(NWNX_Tileset, "GetTileEdgesAndCorners");
-
-            return new TileEdgesAndCorners
-            {
-                Left = NWNX_GetReturnValueString(),
-                BottomLeft = NWNX_GetReturnValueString(),
-                Bottom = NWNX_GetReturnValueString(),
-                BottomRight = NWNX_GetReturnValueString(),
-                Right = NWNX_GetReturnValueString(),
-                TopRight = NWNX_GetReturnValueString(),
-                Top = NWNX_GetReturnValueString(),
-                TopLeft = NWNX_GetReturnValueString(),
-            };
+            NWNXPushInt(nTileID);
+            NWNXPushString(sTileset);
+            NWNXCall(NWNX_Tileset, "GetTileEdgesAndCorners");
+            TileEdgesAndCorners str = default;
+            str.sLeft = NWNXPopString();
+            str.sBottomLeft = NWNXPopString();
+            str.sBottom = NWNXPopString();
+            str.sBottomRight = NWNXPopString();
+            str.sRight = NWNXPopString();
+            str.sTopRight = NWNXPopString();
+            str.sTop = NWNXPopString();
+            str.sTopLeft = NWNXPopString();
+            return str;
         }
 
-        /// <summary>
-        /// Get the number of doors of a tile in tileset.
-        /// </summary>
-        /// <param name="tileset">The tileset</param>
-        /// <param name="tileId">The tile ID</param>
-        /// <returns>The amount of doors</returns>
-        public static int GetTileNumDoors(string tileset, int tileId)
+        /// Get the number of doors of a tile in sTileset.
+        /// <param name="sTileset">The tileset.</param>
+        /// <param name="nTileID">The tile ID.</param>
+        /// <returns>The amount of doors.</returns>
+        public static int GetTileNumDoors(string sTileset, int nTileID)
         {
-            NWNX_PushArgumentInt(tileId);
-            NWNX_PushArgumentString(tileset);
-            NWNX_CallFunction(NWNX_Tileset, "GetTileNumDoors");
-
-            return NWNX_GetReturnValueInt();
+            NWNXPushInt(nTileID);
+            NWNXPushString(sTileset);
+            NWNXCall(NWNX_Tileset, "GetTileNumDoors");
+            return NWNXPopInt();
         }
 
-        /// <summary>
-        /// Get the door data of a tile in tileset.
-        /// </summary>
-        /// <param name="tileset">The tileset</param>
-        /// <param name="tileId">The tile ID</param>
-        /// <param name="index">The index of the door. Range: GetTileNumDoors() > index >= 0</param>
-        /// <returns></returns>
-        public static TileDoorData GetTileDoorData(string tileset, int tileId, int index = 0)
+        /// Get the door data of a tile in sTileset.
+        /// <param name="sTileset">The tileset.</param>
+        /// <param name="nTileID">The tile ID.</param>
+        /// <param name="nIndex">The index of the door. Range: NWNX_Tileset_GetTileNumDoors() &gt; nIndex &gt;= 0</param>
+        /// <returns>A NWNX_Tileset_TileDoorData struct.</returns>
+        public static TileDoorData GetTileDoorData(string sTileset, int nTileID, int nIndex = 0)
         {
-            NWNX_PushArgumentInt(index);
-            NWNX_PushArgumentInt(tileId);
-            NWNX_PushArgumentString(tileset);
-            NWNX_CallFunction(NWNX_Tileset, "GetTileDoorData");
-
-            return new TileDoorData
-            {
-                Orientation = NWNX_GetReturnValueFloat(),
-                Z = NWNX_GetReturnValueFloat(),
-                Y = NWNX_GetReturnValueFloat(),
-                X = NWNX_GetReturnValueFloat(),
-                Type = NWNX_GetReturnValueInt()
-            };
+            NWNXPushInt(nIndex);
+            NWNXPushInt(nTileID);
+            NWNXPushString(sTileset);
+            NWNXCall(NWNX_Tileset, "GetTileDoorData");
+            TileDoorData str = default;
+            str.fOrientation = NWNXPopFloat();
+            str.fZ = NWNXPopFloat();
+            str.fY = NWNXPopFloat();
+            str.fX = NWNXPopFloat();
+            str.nType = NWNXPopInt();
+            return str;
         }
 
-        /// <summary>
-        /// Override the tiles of areaResref with data in overrideName.
-        /// </summary>
-        /// <param name="areaResref">The resref of the area to override.</param>
-        /// <param name="overrideName">The name of the override cotnaining the custom tile data or empty string to remove the override.</param>
-        public static void SetAreaTileOverride(string areaResref, string overrideName)
+        /// Override the tiles of sAreaResRef with data in sOverrideName.
+        /// <param name="sAreaResRef">The resref of the area to override.</param>
+        /// <param name="sOverrideName">The name of the override containing the custom tile data or &quot;&quot; to remove the override.</param>
+        public static void SetAreaTileOverride(string sAreaResRef, string sOverrideName)
         {
-            NWNX_PushArgumentString(overrideName);
-            NWNX_PushArgumentString(areaResref);
-            NWNX_CallFunction(NWNX_Tileset, "SetAreaTileOverride");
+            NWNXPushString(sOverrideName);
+            NWNXPushString(sAreaResRef);
+            NWNXCall(NWNX_Tileset, "SetAreaTileOverride");
         }
 
-        /// <summary>
-        /// Create a tile override named overrideName.
-        /// </summary>
-        /// <param name="overrideName">The name of the override.</param>
-        /// <param name="tileset">The tileset the override should use.</param>
-        /// <param name="width">The width of the area. Valid values: 1-32</param>
-        /// <param name="height">The height of the area. Valid values: 1-32</param>
-        public static void CreateTileOverride(string overrideName, string tileset, int width, int height)
+        /// Create a tile override named sOverrideName.
+        /// <param name="sOverrideName">The name of the override.</param>
+        /// <param name="sTileSet">The tileset the override should use.</param>
+        /// <param name="nWidth">The width of the area. Valid values: 1-32.</param>
+        /// <param name="nHeight">The height of the area. Valid values: 1-32.</param>
+        public static void CreateTileOverride(string sOverrideName, string sTileSet, int nWidth, int nHeight)
         {
-            NWNX_PushArgumentInt(height);
-            NWNX_PushArgumentInt(width);
-            NWNX_PushArgumentString(tileset);
-            NWNX_PushArgumentString(overrideName);
-            NWNX_CallFunction(NWNX_Tileset, "CreateTileOverride");
+            NWNXPushInt(nHeight);
+            NWNXPushInt(nWidth);
+            NWNXPushString(sTileSet);
+            NWNXPushString(sOverrideName);
+            NWNXCall(NWNX_Tileset, "CreateTileOverride");
         }
 
-        /// <summary>
-        /// Delete a tile override named overrideName.
-        /// This will also delete all custom tile data associated with overrideName.
-        /// </summary>
-        /// <param name="overrideName">The name of the override.</param>
-        public static void DeleteTileOverride(string overrideName)
+        /// Delete a tile override named sOverrideName.
+        /// @note This will also delete all custom tile data associated with sOverrideName.
+        /// <param name="sOverrideName">The name of the override.</param>
+        public static void DeleteTileOverride(string sOverrideName)
         {
-            NWNX_PushArgumentString(overrideName);
-            NWNX_CallFunction(NWNX_Tileset, "DeleteTileOverride");
+            NWNXPushString(sOverrideName);
+            NWNXCall(NWNX_Tileset, "DeleteTileOverride");
         }
 
-        /// <summary>
-        /// Set custom tile data for the tile at index in overrideName.
-        /// An override must first be created with CreateTileOverride().
-        /// </summary>
-        /// <param name="overrideName">The name of the override.</param>
-        /// <param name="index">The index of the tile.</param>
-        /// <param name="customTileData">The custom tile data.</param>
-        public static void SetOverrideTileData(string overrideName, int index, CustomTileData customTileData)
+        /// Set custom tile data for the tile at nIndex in sOverrideName.
+        /// @note An override must first be created with NWNX_Tileset_CreateTileOverride().
+        /// <param name="sOverrideName">The name of the override.</param>
+        /// <param name="nIndex">The index of the tile.</param>
+        /// <param name="strCustomTileData">A NWNX_Tileset_CustomTileData struct.</param>
+        public static void SetOverrideTileData(string sOverrideName, int nIndex, CustomTileData strCustomTileData)
         {
-            NWNX_PushArgumentInt(customTileData.AnimationLoop3 ? 1 : 0);
-            NWNX_PushArgumentInt(customTileData.AnimationLoop2 ? 1 : 0);
-            NWNX_PushArgumentInt(customTileData.AnimationLoop1 ? 1 : 0);
-            NWNX_PushArgumentInt(customTileData.SourceLightColor2);
-            NWNX_PushArgumentInt(customTileData.SourceLightColor1);
-            NWNX_PushArgumentInt(customTileData.MainLightColor2);
-            NWNX_PushArgumentInt(customTileData.MainLightColor1);
-            NWNX_PushArgumentInt(customTileData.Height);
-            NWNX_PushArgumentInt(customTileData.Orientation);
-            NWNX_PushArgumentInt(customTileData.TileId);
-            NWNX_PushArgumentInt(index);
-            NWNX_PushArgumentString(overrideName);
-            NWNX_CallFunction(NWNX_Tileset, "SetOverrideTileData");
+            NWNXPushInt(strCustomTileData.bAnimLoop3);
+            NWNXPushInt(strCustomTileData.bAnimLoop2);
+            NWNXPushInt(strCustomTileData.bAnimLoop1);
+            NWNXPushInt(strCustomTileData.nSourceLightColor2);
+            NWNXPushInt(strCustomTileData.nSourceLightColor1);
+            NWNXPushInt(strCustomTileData.nMainLightColor2);
+            NWNXPushInt(strCustomTileData.nMainLightColor1);
+            NWNXPushInt(strCustomTileData.nHeight);
+            NWNXPushInt(strCustomTileData.nOrientation);
+            NWNXPushInt(strCustomTileData.nTileID);
+            NWNXPushInt(nIndex);
+            NWNXPushString(sOverrideName);
+            NWNXCall(NWNX_Tileset, "SetOverrideTileData");
         }
 
-        /// <summary>
-        /// Delete custom tile data of the tile at index in overrideName.
-        /// </summary>
-        /// <param name="overrideName">The name of the override.</param>
-        /// <param name="index">The tile's index of -1 to remove all custom tile data.</param>
-        public static void DeleteOverrideTileData(string overrideName, int index)
+        /// Delete custom tile data of the tile at nIndex in sOverrideName.
+        /// <param name="sOverrideName">The name of the override.</param>
+        /// <param name="nIndex">The tile&apos;s index or -1 to remove all custom tile data.</param>
+        public static void DeleteOverrideTileData(string sOverrideName, int nIndex)
         {
-            NWNX_PushArgumentInt(index);
-            NWNX_PushArgumentString(overrideName);
-            NWNX_CallFunction(NWNX_Tileset, "DeleteOverrideTileData");
+            NWNXPushInt(nIndex);
+            NWNXPushString(sOverrideName);
+            NWNXCall(NWNX_Tileset, "DeleteOverrideTileData");
         }
+
+        // @}
+    }
+
+    public struct TilesetData
+    {
+        public int nNumTileData;
+        public float fHeightTransition;
+        public int nNumTerrain;
+        public int nNumCrossers;
+        public int nNumGroups;
+        public string sBorderTerrain;
+        public string sDefaultTerrain;
+        public string sFloorTerrain;
+        public int nDisplayNameStrRef;
+        public string sUnlocalizedName;
+        public int bInterior;
+        public int bHasHeightTransition;
+    }
+
+    public struct TilesetGroupData
+    {
+        public string sName;
+        public int nStrRef;
+        public int nRows;
+        public int nColumns;
+    }
+
+    public struct TileEdgesAndCorners
+    {
+        public string sTopLeft;
+        public string sTop;
+        public string sTopRight;
+        public string sRight;
+        public string sBottomRight;
+        public string sBottom;
+        public string sBottomLeft;
+        public string sLeft;
+    }
+
+    public struct TileDoorData
+    {
+        public int nType;
+        public float fX;
+        public float fY;
+        public float fZ;
+        public float fOrientation;
+    }
+
+    public struct CustomTileData
+    {
+        public int nTileID;
+        public int nOrientation;
+        public int nHeight;
+        public int nMainLightColor1;
+        public int nMainLightColor2;
+        public int nSourceLightColor1;
+        public int nSourceLightColor2;
+        public int bAnimLoop1;
+        public int bAnimLoop2;
+        public int bAnimLoop3;
     }
 }
