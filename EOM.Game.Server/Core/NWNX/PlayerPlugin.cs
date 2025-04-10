@@ -132,19 +132,19 @@ namespace EOM.Game.Server.Core.NWNX
             NWNXPushInt(slot);
             NWNXPushObject(player);
             NWNXCall(NWNX_Player, "GetQuickBarSlot");
-            qbs.oAssociate = NWNXPopObject();
-            qbs.nAssociateType = NWNXPopInt();
-            qbs.nDomainLevel = NWNXPopInt();
-            qbs.nMetaType = NWNXPopInt();
-            qbs.nINTParam1 = NWNXPopInt();
-            qbs.sToolTip = NWNXPopString();
-            qbs.sCommandLine = NWNXPopString();
-            qbs.sCommandLabel = NWNXPopString();
-            qbs.sResRef = NWNXPopString();
-            qbs.nMultiClass = NWNXPopInt();
-            qbs.nObjectType = NWNXPopInt();
-            qbs.oSecondaryItem = NWNXPopObject();
-            qbs.oItem = NWNXPopObject();
+            qbs.Associate = NWNXPopObject();
+            qbs.AssociateType = NWNXPopInt();
+            qbs.DomainLevel = NWNXPopInt();
+            qbs.MetaType = NWNXPopInt();
+            qbs.INTParam1 = NWNXPopInt();
+            qbs.ToolTip = NWNXPopString();
+            qbs.CommandLine = NWNXPopString();
+            qbs.CommandLabel = NWNXPopString();
+            qbs.Resref = NWNXPopString();
+            qbs.MultiClass = NWNXPopInt();
+            qbs.ObjectType = (QuickBarSlotType)NWNXPopInt();
+            qbs.SecondaryItem = NWNXPopObject();
+            qbs.Item = NWNXPopObject();
             return qbs;
         }
 
@@ -154,19 +154,19 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="qbs">An NWNX_Player_QuickBarSlot struct.</param>
         public static void SetQuickBarSlot(uint player, int slot, QuickBarSlot qbs)
         {
-            NWNXPushObject(qbs.oItem);
-            NWNXPushObject(qbs.oSecondaryItem);
-            NWNXPushInt(qbs.nObjectType);
-            NWNXPushInt(qbs.nMultiClass);
-            NWNXPushString(qbs.sResRef);
-            NWNXPushString(qbs.sCommandLabel);
-            NWNXPushString(qbs.sCommandLine);
-            NWNXPushString(qbs.sToolTip);
-            NWNXPushInt(qbs.nINTParam1);
-            NWNXPushInt(qbs.nMetaType);
-            NWNXPushInt(qbs.nDomainLevel);
-            NWNXPushInt(qbs.nAssociateType);
-            NWNXPushObject(qbs.oAssociate);
+            NWNXPushObject(qbs.Item);
+            NWNXPushObject(qbs.SecondaryItem);
+            NWNXPushInt((int)qbs.ObjectType);
+            NWNXPushInt(qbs.MultiClass);
+            NWNXPushString(qbs.Resref);
+            NWNXPushString(qbs.CommandLabel);
+            NWNXPushString(qbs.CommandLine);
+            NWNXPushString(qbs.ToolTip);
+            NWNXPushInt(qbs.INTParam1);
+            NWNXPushInt(qbs.MetaType);
+            NWNXPushInt(qbs.DomainLevel);
+            NWNXPushInt(qbs.AssociateType);
+            NWNXPushObject(qbs.Associate);
             NWNXPushInt(slot);
             NWNXPushObject(player);
             NWNXCall(NWNX_Player, "SetQuickBarSlot");
@@ -401,9 +401,9 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="visualeffect">A VFX_DUR_*. Calling again will remove an applied effect. -1 to remove all effects</param>
         /// @note Only really works with looping effects: VFX_DUR_*. Other types *kind* of work, they&apos;ll play when
         /// reentering the area and the object is in view or when they come back in view range.
-        public static void ApplyLoopingVisualEffectToObject(uint player, uint target, int visualeffect)
+        public static void ApplyLoopingVisualEffectToObject(uint player, uint target, VisualEffect visualeffect)
         {
-            NWNXPushInt(visualeffect);
+            NWNXPushInt((int)visualeffect);
             NWNXPushObject(target);
             NWNXPushObject(player);
             NWNXCall(NWNX_Player, "ApplyLoopingVisualEffectToObject");
@@ -639,16 +639,16 @@ namespace EOM.Game.Server.Core.NWNX
         public static int AddCustomJournalEntry(uint oPlayer, JournalEntry journalEntry, int nSilentUpdate = 0)
         {
             NWNXPushInt(nSilentUpdate);
-            NWNXPushInt(journalEntry.nTimeOfDay);
-            NWNXPushInt(journalEntry.nCalendarDay);
-            NWNXPushInt(journalEntry.nUpdated);
-            NWNXPushInt(journalEntry.nQuestDisplayed);
-            NWNXPushInt(journalEntry.nQuestCompleted);
-            NWNXPushInt(journalEntry.nPriority);
-            NWNXPushInt(journalEntry.nState);
-            NWNXPushString(journalEntry.sTag);
-            NWNXPushString(journalEntry.sText);
-            NWNXPushString(journalEntry.sName);
+            NWNXPushInt(journalEntry.TimeOfDay);
+            NWNXPushInt(journalEntry.CalendarDay);
+            NWNXPushInt(journalEntry.Updated);
+            NWNXPushInt(journalEntry.IsQuestDisplayed);
+            NWNXPushInt(journalEntry.IsQuestCompleted);
+            NWNXPushInt(journalEntry.Priority);
+            NWNXPushInt(journalEntry.State);
+            NWNXPushString(journalEntry.Tag);
+            NWNXPushString(journalEntry.Text);
+            NWNXPushString(journalEntry.Name);
             NWNXPushObject(oPlayer);
             NWNXCall(NWNX_Player, "AddCustomJournalEntry");
             return NWNXPopInt();
@@ -663,24 +663,24 @@ namespace EOM.Game.Server.Core.NWNX
         /// that is the active one that the player currently sees.
         public static JournalEntry GetJournalEntry(uint oPlayer, string questTag)
         {
-            JournalEntry entry = default;
+            var entry = new JournalEntry();
             NWNXPushString(questTag);
             NWNXPushObject(oPlayer);
             NWNXCall(NWNX_Player, "GetJournalEntry");
-            entry.nUpdated = NWNXPopInt();
-            if (entry.nUpdated == -1)
+            entry.Updated = NWNXPopInt();
+            if (entry.Updated == -1)
             {
                 return entry;
             }
-            entry.nQuestDisplayed = NWNXPopInt();
-            entry.nQuestCompleted = NWNXPopInt();
-            entry.nPriority = NWNXPopInt();
-            entry.nState = NWNXPopInt();
-            entry.nTimeOfDay = NWNXPopInt();
-            entry.nCalendarDay = NWNXPopInt();
-            entry.sName = NWNXPopString();
-            entry.sText = NWNXPopString();
-            entry.sTag = questTag;
+            entry.IsQuestDisplayed = NWNXPopInt();
+            entry.IsQuestCompleted = NWNXPopInt();
+            entry.Priority = NWNXPopInt();
+            entry.State = NWNXPopInt();
+            entry.TimeOfDay = NWNXPopInt();
+            entry.CalendarDay = NWNXPopInt();
+            entry.Name = NWNXPopString();
+            entry.Text = NWNXPopString();
+            entry.Tag = questTag;
             return entry;
         }
 
@@ -848,34 +848,4 @@ namespace EOM.Game.Server.Core.NWNX
 
     }
 
-    public struct QuickBarSlot
-    {
-        public uint oItem;
-        public uint oSecondaryItem;
-        public int nObjectType;
-        public int nMultiClass;
-        public string sResRef;
-        public string sCommandLabel;
-        public string sCommandLine;
-        public string sToolTip;
-        public int nINTParam1;
-        public int nMetaType;
-        public int nDomainLevel;
-        public int nAssociateType;
-        public uint oAssociate;
-    }
-
-    public struct JournalEntry
-    {
-        public string sName;
-        public string sText;
-        public string sTag;
-        public int nState;
-        public int nPriority;
-        public int nQuestCompleted;
-        public int nQuestDisplayed;
-        public int nUpdated;
-        public int nCalendarDay;
-        public int nTimeOfDay;
-    }
 }

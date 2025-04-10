@@ -62,8 +62,8 @@ namespace EOM.Game.Server.Feature
 
         private static void ConfigureServerSettings()
         {
-            AdministrationPlugin.SetPlayOption(AdministrationOption.ExamineChallengeRating, false);
-            AdministrationPlugin.SetPlayOption(AdministrationOption.UseMaxHitpoints, true);
+            AdministrationPlugin.SetPlayOption((int)AdministrationOption.ExamineChallengeRating, 0);
+            AdministrationPlugin.SetPlayOption((int)AdministrationOption.UseMaxHitpoints, 1);
         }
 
         private static void ApplyBans()

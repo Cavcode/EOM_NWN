@@ -63,9 +63,9 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="oPlayer">The PC Object or OBJECT_INVALID.</param>
         /// <param name="oTarget">The object for which we&apos;re altering the visibility.</param>
         /// <param name="nOverride">The visibility type from @ref vis_types &quot;Visibility Types&quot;.</param>
-        public static void SetVisibilityOverride(uint oPlayer, uint oTarget, int nOverride)
+        public static void SetVisibilityOverride(uint oPlayer, uint oTarget, VisibilityType nOverride)
         {
-            NWNXPushInt(nOverride);
+            NWNXPushInt((int)nOverride);
             NWNXPushObject(oTarget);
             NWNXPushObject(oPlayer);
             NWNXCall(NWNX_Visibility, "SetVisibilityOverride");

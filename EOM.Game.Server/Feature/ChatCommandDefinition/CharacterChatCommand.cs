@@ -206,7 +206,7 @@ namespace EOM.Game.Server.Feature.ChatCommandDefinition
 
                         var playerName = GetPCPlayerName(user);
                         var characterName = GetName(user);
-                        AdministrationPlugin.DeletePlayerCharacter(user, true, "Your character has been deleted.");
+                        AdministrationPlugin.DeletePlayerCharacter(user, 1, "Your character has been deleted.");
                         AdministrationPlugin.DeleteTURD(playerName, characterName);
                     }
                 });
@@ -311,7 +311,7 @@ namespace EOM.Game.Server.Feature.ChatCommandDefinition
                 .Action((user, _, _, _) =>
                 {
                     var wasWalking = GetLocalInt(user, "WALK_TOGGLE") == 1;
-                    PlayerPlugin.SetAlwaysWalk(user, !wasWalking);
+                    PlayerPlugin.SetAlwaysWalk(user, Convert.ToInt32(!wasWalking)); // Check here if broke walking.
 
                     if (wasWalking)
                     {

@@ -56,10 +56,10 @@ namespace EOM.Game.Server.Native
             var attacker = CNWSCreature.FromPointer(thisPtr);
             var area = attacker.GetArea();
 
-            ProfilerPlugin.PushPerfScope("RunScript",
-                "Script", $"NATIVE:{nameof(OnResolveAttackRoll)}",
-                "Area", area.m_sTag.ToString(),
-                "ObjectType", "Creature");
+            //ProfilerPlugin.PushPerfScope("RunScript",
+               // "Script", $"NATIVE:{nameof(OnResolveAttackRoll)}",
+                //"Area", area.m_sTag.ToString(),
+                //"ObjectType", "Creature");
 
             Log.Write(LogGroup.Attack, "Running OnResolveAttackRoll");
             var targetObject = CNWSObject.FromPointer(pTarget);

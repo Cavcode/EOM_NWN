@@ -35,13 +35,13 @@ namespace EOM.Game.Server.Feature
 
             // Module has changed since last run.
             // Run procedures dependent on the module file changing.
-            if (UtilPlugin.GetModuleMTime() != serverConfig.LastModuleMTime)
+            if (UtilPlugin.GetModuleMtime() != serverConfig.LastModuleMTime)
             {
                 Console.WriteLine("Module has changed since last boot. Running module changed event.");
 
                 // DB record must be updated before the event fires, as some
                 // events use the server configuration record.
-                serverConfig.LastModuleMTime = UtilPlugin.GetModuleMTime();
+                serverConfig.LastModuleMTime = UtilPlugin.GetModuleMtime();
                 DB.Set(serverConfig);
 
                 ExecuteScript("mod_content_chg", GetModule());

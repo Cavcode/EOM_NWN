@@ -54,14 +54,14 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="iFeat">The Feat constant or value in feat.2da.</param>
         /// <param name="iMod">The @ref feat_modifiers &quot;feat modifier&quot; to set.</param>
         /// <param name="iParam1,">iParam2, iParam3, iParam4 The parameters for this feat modifier.</param>
-        public static void SetFeatModifier(int iFeat, int iMod, int iParam1 = -559038737, int iParam2 = -559038737, int iParam3 = -559038737, int iParam4 = -559038737)
+        public static void SetFeatModifier(FeatType iFeat, FeatModifierType iMod, int iParam1 = -559038737, int iParam2 = -559038737, int iParam3 = -559038737, int iParam4 = -559038737)
         {
             NWNXPushInt(iParam4);
             NWNXPushInt(iParam3);
             NWNXPushInt(iParam2);
             NWNXPushInt(iParam1);
-            NWNXPushInt(iMod);
-            NWNXPushInt(iFeat);
+            NWNXPushInt((int)iMod);
+            NWNXPushInt((int)iFeat);
             NWNXCall(NWNX_Feat, "SetFeatModifier");
         }
 

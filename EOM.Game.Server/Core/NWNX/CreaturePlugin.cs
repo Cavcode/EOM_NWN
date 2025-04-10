@@ -4,6 +4,7 @@ using EOM.Game.Server.Core.NWNX.Enum;
 using EOM.Game.Server.Core.NWScript.Enum;
 using EOM.Game.Server.Core.NWScript.Enum.Creature;
 using EOM.Game.Server.Core.NWScript.Enum.Item;
+using EOM.Game.Server.Service.SkillService;
 
 
 namespace EOM.Game.Server.Core.NWNX
@@ -84,9 +85,9 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="creature">The creature object.</param>
         /// <param name="feat">The feat id.</param>
         /// @remark Consider also using NWNX_Creature_AddFeatByLevel() to properly allocate the feat to a level
-        public static void AddFeat(uint creature, int feat)
+        public static void AddFeat(uint creature, FeatType feat)
         {
-            NWNXPushInt(feat);
+            NWNXPushInt((int)feat);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "AddFeat");
         }
@@ -96,10 +97,10 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="feat">The feat id.</param>
         /// <param name="level">The level they gained the feat.</param>
         /// @remark Adds the feat to the stat list at the provided level.
-        public static void AddFeatByLevel(uint creature, int feat, int level)
+        public static void AddFeatByLevel(uint creature, FeatType feat, int level)
         {
             NWNXPushInt(level);
-            NWNXPushInt(feat);
+            NWNXPushInt((int)feat);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "AddFeatByLevel");
         }
@@ -107,9 +108,9 @@ namespace EOM.Game.Server.Core.NWNX
         /// Removes a feat from a creature.
         /// <param name="creature">The creature object.</param>
         /// <param name="feat">The feat id.</param>
-        public static void RemoveFeat(uint creature, int feat)
+        public static void RemoveFeat(uint creature, FeatType feat)
         {
-            NWNXPushInt(feat);
+            NWNXPushInt((int)feat);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "RemoveFeat");
         }
@@ -120,10 +121,10 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="level">The level they gained the feat.</param>
         /// @remark Removes the feat from the stat list at the provided level. Does not remove the feat from the creature, use
         /// NWNX_Creature_RemoveFeat for this.
-        public static void RemoveFeatByLevel(uint creature, int feat, int level)
+        public static void RemoveFeatByLevel(uint creature, FeatType feat, int level)
         {
             NWNXPushInt(level);
-            NWNXPushInt(feat);
+            NWNXPushInt((int)feat);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "RemoveFeatByLevel");
         }
@@ -133,9 +134,9 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="creature">The creature object.</param>
         /// <param name="feat">The feat id.</param>
         /// <returns>TRUE if the creature has the feat, regardless if they have any usages left or not.</returns>
-        public static int GetKnowsFeat(uint creature, int feat)
+        public static int GetKnowsFeat(uint creature, FeatType feat)
         {
-            NWNXPushInt(feat);
+            NWNXPushInt((int)feat);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "GetKnowsFeat");
             return NWNXPopInt();
@@ -171,9 +172,9 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="creature">The creature object.</param>
         /// <param name="feat">The feat id.</param>
         /// <returns>The character level that the specified feat was granted, otherwise 0 if the creature does not have this feat.</returns>
-        public static int GetFeatGrantLevel(uint creature, int feat)
+        public static int GetFeatGrantLevel(uint creature, FeatType feat)
         {
-            NWNXPushInt(feat);
+            NWNXPushInt((int)feat);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "GetFeatGrantLevel");
             return NWNXPopInt();
@@ -205,9 +206,9 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="creature">The creature object.</param>
         /// <param name="feat">The feat id.</param>
         /// <returns>TRUE if creature meets all requirements to take given feat</returns>
-        public static int GetMeetsFeatRequirements(uint creature, int feat)
+        public static int GetMeetsFeatRequirements(uint creature, FeatType feat)
         {
-            NWNXPushInt(feat);
+            NWNXPushInt((int)feat);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "GetMeetsFeatRequirements");
             return NWNXPopInt();
@@ -312,10 +313,10 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="creature">The creature object.</param>
         /// <param name="ability">The ability constant.</param>
         /// <param name="value">The value to set.</param>
-        public static void SetRawAbilityScore(uint creature, int ability, int value)
+        public static void SetRawAbilityScore(uint creature, AbilityType ability, int value)
         {
             NWNXPushInt(value);
-            NWNXPushInt(ability);
+            NWNXPushInt((int)ability);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "SetRawAbilityScore");
         }
@@ -325,9 +326,9 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="creature">The creature object.</param>
         /// <param name="ability">The ability constant.</param>
         /// <returns>The ability score.</returns>
-        public static int GetRawAbilityScore(uint creature, int ability)
+        public static int GetRawAbilityScore(uint creature, AbilityType ability)
         {
-            NWNXPushInt(ability);
+            NWNXPushInt((int)ability);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "GetRawAbilityScore");
             return NWNXPopInt();
@@ -338,10 +339,10 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="creature">The creature object.</param>
         /// <param name="ability">The ability constant.</param>
         /// <param name="modifier">The modifier value.</param>
-        public static void ModifyRawAbilityScore(uint creature, int ability, int modifier)
+        public static void ModifyRawAbilityScore(uint creature, AbilityType ability, int modifier)
         {
             NWNXPushInt(modifier);
-            NWNXPushInt(ability);
+            NWNXPushInt((int)ability);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "ModifyRawAbilityScore");
         }
@@ -351,9 +352,9 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="creature">The creature object.</param>
         /// <param name="ability">The ability constant.</param>
         /// <returns>The raw ability score.</returns>
-        public static int GetPrePolymorphAbilityScore(uint creature, int ability)
+        public static int GetPrePolymorphAbilityScore(uint creature, AbilityType ability)
         {
-            NWNXPushInt(ability);
+            NWNXPushInt((int)ability);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "GetPrePolymorphAbilityScore");
             return NWNXPopInt();
@@ -420,11 +421,11 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="class">The class id from classes.2da. (Not class index 0-2)</param>
         /// <param name="level">The spell level.</param>
         /// <param name="spellId">The spell to remove.</param>
-        public static void RemoveKnownSpell(uint creature, int @class, int level, int spellId)
+        public static void RemoveKnownSpell(uint creature, ClassType @class, int level, int spellId)
         {
             NWNXPushInt(spellId);
             NWNXPushInt(level);
-            NWNXPushInt(@class);
+            NWNXPushInt((int)@class);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "RemoveKnownSpell");
         }
@@ -456,9 +457,9 @@ namespace EOM.Game.Server.Core.NWNX
         /// Set creature&apos;s movement rate.
         /// <param name="creature">The creature object.</param>
         /// <param name="rate">The movement rate.</param>
-        public static void SetMovementRate(uint creature, int rate)
+        public static void SetMovementRate(uint creature, MovementRate rate)
         {
-            NWNXPushInt(rate);
+            NWNXPushInt((int)rate);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "SetMovementRate");
         }
@@ -553,10 +554,10 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="creature">The creature object.</param>
         /// <param name="skill">The skill id.</param>
         /// <param name="rank">The value to set as the skill rank.</param>
-        public static void SetSkillRank(uint creature, int skill, int rank)
+        public static void SetSkillRank(uint creature, NWNSkillType skill, int rank)
         {
             NWNXPushInt(rank);
-            NWNXPushInt(skill);
+            NWNXPushInt((int)skill);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "SetSkillRank");
         }
@@ -566,10 +567,10 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="skill">The skill id.</param>
         /// <param name="level">The level they gained skill ranks.</param>
         /// <returns>The rank in a skill assigned at a level (-1 on error).</returns>
-        public static int GetSkillRankByLevel(uint creature, int skill, int level)
+        public static int GetSkillRankByLevel(uint creature, NWNSkillType skill, int level)
         {
             NWNXPushInt(level);
-            NWNXPushInt(skill);
+            NWNXPushInt((int)skill);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "GetSkillRankByLevel");
             return NWNXPopInt();
@@ -581,11 +582,11 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="skill">The skill id.</param>
         /// <param name="level">The level they gained skill ranks.</param>
         /// <param name="rank">The value to set as the skill rank.</param>
-        public static void SetSkillRankByLevel(uint creature, int skill, int rank, int level)
+        public static void SetSkillRankByLevel(uint creature, NWNSkillType skill, int rank, int level)
         {
             NWNXPushInt(level);
             NWNXPushInt(rank);
-            NWNXPushInt(skill);
+            NWNXPushInt((int)skill);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "SetSkillRankByLevel");
         }
@@ -597,10 +598,10 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="classID">A valid ID number in classes.2da and between 0 and 255.</param>
         /// <param name="bUpdateLevels">determines whether the method will replace all occurrences</param>
         /// of the old class in CNWLevelStats with the new classID.
-        public static void SetClassByPosition(uint creature, int position, int classID, int bUpdateLevels = 1)
+        public static void SetClassByPosition(uint creature, int position, ClassType classID, int bUpdateLevels = 1)
         {
             NWNXPushInt(bUpdateLevels);
-            NWNXPushInt(classID);
+            NWNXPushInt((int)classID);
             NWNXPushInt(position);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "SetClassByPosition");
@@ -696,9 +697,9 @@ namespace EOM.Game.Server.Core.NWNX
         /// Sets the creature&apos;s remaining unspent skill points.
         /// <param name="creature">The creature object.</param>
         /// <param name="skillpoints">The value to set.</param>
-        public static void SetSkillPointsRemaining(uint creature, int skillpoints)
+        public static void SetSkillPointsRemaining(uint creature, NWNSkillType skillpoints)
         {
-            NWNXPushInt(skillpoints);
+            NWNXPushInt((int)skillpoints);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "SetSkillPointsRemaining");
         }
@@ -730,9 +731,9 @@ namespace EOM.Game.Server.Core.NWNX
         /// Sets the creature&apos;s racial type
         /// <param name="creature">The creature object.</param>
         /// <param name="racialtype">The racial type to set.</param>
-        public static void SetRacialType(uint creature, int racialtype)
+        public static void SetRacialType(uint creature, RacialType racialtype)
         {
-            NWNXPushInt(racialtype);
+            NWNXPushInt((int)racialtype);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "SetRacialType");
         }
@@ -774,10 +775,10 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="creature">The creature object.</param>
         /// <param name="which">One of SAVING_THROW_FORT, SAVING_THROW_REFLEX or SAVING_THROW_WILL</param>
         /// <param name="value">The base save value.</param>
-        public static void SetBaseSavingThrow(uint creature, int which, int value)
+        public static void SetBaseSavingThrow(uint creature, SavingThrow which, int value)
         {
             NWNXPushInt(value);
-            NWNXPushInt(which);
+            NWNXPushInt((int)which);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "SetBaseSavingThrow");
         }
@@ -858,9 +859,9 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="creature">The creature object.</param>
         /// <param name="feat">The feat id.</param>
         /// <returns>The highest level version of the feat.</returns>
-        public static int GetHighestLevelOfFeat(uint creature, int feat)
+        public static int GetHighestLevelOfFeat(uint creature, FeatType feat)
         {
-            NWNXPushInt(feat);
+            NWNXPushInt((int)feat);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "GetHighestLevelOfFeat");
             return NWNXPopInt();
@@ -870,9 +871,9 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="creature">The creature object.</param>
         /// <param name="feat">The feat id.</param>
         /// <returns>The amount of remaining uses.</returns>
-        public static int GetFeatRemainingUses(uint creature, int feat)
+        public static int GetFeatRemainingUses(uint creature, FeatType feat)
         {
-            NWNXPushInt(feat);
+            NWNXPushInt((int)feat);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "GetFeatRemainingUses");
             return NWNXPopInt();
@@ -882,9 +883,9 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="creature">The creature object.</param>
         /// <param name="feat">The feat id.</param>
         /// <returns>The total uses.</returns>
-        public static int GetFeatTotalUses(uint creature, int feat)
+        public static int GetFeatTotalUses(uint creature, FeatType feat)
         {
-            NWNXPushInt(feat);
+            NWNXPushInt((int)feat);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "GetFeatTotalUses");
             return NWNXPopInt();
@@ -894,10 +895,10 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="creature">The creature object.</param>
         /// <param name="feat">The feat id.</param>
         /// <param name="uses">The amount of remaining uses.</param>
-        public static void SetFeatRemainingUses(uint creature, int feat, int uses)
+        public static void SetFeatRemainingUses(uint creature, FeatType feat, int uses)
         {
             NWNXPushInt(uses);
-            NWNXPushInt(feat);
+            NWNXPushInt((int)feat);
             NWNXPushObject(creature);
             NWNXCall(NWNX_Creature, "SetFeatRemainingUses");
         }
@@ -916,11 +917,11 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="abilityScore">An ABILITY_* constant.</param>
         /// <param name="isOffhand">Whether the attack is an offhand attack.</param>
         /// <returns>The bonus value.</returns>
-        public static int GetTotalEffectBonus(uint creature, int bonusType = NWNX_CREATURE_BONUS_TYPE_ATTACK, uint target = OBJECT_INVALID, int isElemental = 0, int isForceMax = 0, int savetype = -1, int saveSpecificType = -1, int skill = -1, int abilityScore = -1, int isOffhand = 0)
+        public static int GetTotalEffectBonus(uint creature, int bonusType = NWNX_CREATURE_BONUS_TYPE_ATTACK, uint target = OBJECT_INVALID, int isElemental = 0, int isForceMax = 0, int savetype = -1, int saveSpecificType = -1, NWNSkillType skill = NWNSkillType.Invalid, AbilityType abilityScore = AbilityType.Invalid, int isOffhand = 0)
         {
             NWNXPushInt(isOffhand);
-            NWNXPushInt(abilityScore);
-            NWNXPushInt(skill);
+            NWNXPushInt((int)abilityScore);
+            NWNXPushInt((int)skill);
             NWNXPushInt(saveSpecificType);
             NWNXPushInt(savetype);
             NWNXPushInt(isForceMax);
@@ -1235,10 +1236,10 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="bPersist">Whether the modifier should persist to .bic file if applicable</param>
         /// <param name="nBaseItem">Applies the.modifier only when the attack used this baseitem. BASE_ITEM_GLOVES for Unarmed, &apos;-1&apos; for all</param>
         /// @note Persistence is activated each server reset by the first use of either &apos;SetCriticalRange*&apos; functions. Recommended to trigger on a dummy target OnModuleLoad to enable persistence.
-        public static void SetCriticalRangeModifier(uint oCreature, int nModifier, int nHand = 0, int bPersist = 0, int nBaseItem = -1)
+        public static void SetCriticalRangeModifier(uint oCreature, int nModifier, int nHand = 0, bool bPersist = false, BaseItem nBaseItem = BaseItem.Invalid)
         {
-            NWNXPushInt(nBaseItem);
-            NWNXPushInt(bPersist);
+            NWNXPushInt((int)nBaseItem);
+            NWNXPushInt(Convert.ToInt32(bPersist));
             NWNXPushInt(nHand);
             NWNXPushInt(nModifier);
             NWNXPushObject(oCreature);

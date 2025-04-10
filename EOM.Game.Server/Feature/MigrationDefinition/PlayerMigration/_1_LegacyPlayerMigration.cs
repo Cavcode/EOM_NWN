@@ -10,7 +10,7 @@ using EOM.Game.Server.Service.MigrationService;
 
 namespace EOM.Game.Server.Feature.MigrationDefinition.PlayerMigration
 {
-    public class _1_LegacyPlayerMigration: LegacyMigrationBase, IPlayerMigration
+    public class _1_LegacyPlayerMigration:  IPlayerMigration
     {
         private static readonly CatharRacialAppearanceDefinition _catharAppearance = new();
 
@@ -138,11 +138,11 @@ namespace EOM.Game.Server.Feature.MigrationDefinition.PlayerMigration
             // Inventory Items
             for (var item = GetFirstItemInInventory(player); GetIsObjectValid(item); item = GetNextItemInInventory(player))
             {
-                WipeItemProperties(item);
+                //WipeItemProperties(item);
                 Item.MarkLegacyItem(item);
-                WipeDescription(item);
-                WipeVariables(item);
-                CleanItemName(item);
+                //WipeDescription(item);
+                //WipeVariables(item);
+                //CleanItemName(item);
                 RemoveItems(item);
             }
 
@@ -165,10 +165,10 @@ namespace EOM.Game.Server.Feature.MigrationDefinition.PlayerMigration
                     continue;
                 }
 
-                WipeItemProperties(item);
+                //WipeItemProperties(item);
                 Item.MarkLegacyItem(item);
-                WipeDescription(item);
-                WipeVariables(item);
+                //WipeDescription(item);
+                //WipeVariables(item);
                 RemoveItems(item);
 
                 AssignCommand(player, () => ActionUnequipItem(item));

@@ -167,11 +167,11 @@ namespace EOM.Game.Server.Core.NWNX
         /// when using the NSS resref type.
         /// <param name="bModuleResourcesOnly">If TRUE only custom resources will be returned.</param>
         /// <returns>The first resref found or &quot;&quot; if none is found.</returns>
-        public static string GetFirstResRef(int nType, string sRegexFilter = "", int bModuleResourcesOnly = 1)
+        public static string GetFirstResRef(ResRefType nType, string sRegexFilter = "", int bModuleResourcesOnly = 1)
         {
             NWNXPushInt(bModuleResourcesOnly);
             NWNXPushString(sRegexFilter);
-            NWNXPushInt(nType);
+            NWNXPushInt((int)nType);
             NWNXCall(NWNX_Util, "GetFirstResRef");
             return NWNXPopString();
         }

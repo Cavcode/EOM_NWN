@@ -1,3 +1,4 @@
+using System;
 using EOM.Game.Server.Core.NWNX.Enum;
 
 namespace EOM.Game.Server.Core.NWNX
@@ -414,10 +415,10 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="oPC">The PC or OBJECT_INVALID for a global setting.</param>
         /// @note Personal state overrides the global state which means if a global state is set
         /// to TRUE but the personal state is set to FALSE, the message will be shown to the PC.
-        public static void SetFeedbackMessageHidden(int nMessage, int isHidden, uint oPC = OBJECT_INVALID)
+        public static void SetFeedbackMessageHidden(FeedbackMessageTypes nMessage, bool isHidden, uint oPC = OBJECT_INVALID)
         {
-            NWNXPushInt(isHidden);
-            NWNXPushInt(nMessage);
+            NWNXPushInt(Convert.ToInt32(isHidden));
+            NWNXPushInt((int)nMessage);
             NWNXPushInt(0);
             NWNXPushObject(oPC);
             NWNXCall(NWNX_Feedback, "SetMessageHidden");
@@ -442,10 +443,10 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="oPC">The PC or OBJECT_INVALID for a global setting.</param>
         /// @note Personal state overrides the global state which means if a global state is set
         /// to TRUE but the personal state is set to FALSE, the message will be shown to the PC.
-        public static void SetCombatLogMessageHidden(int nMessage, int isHidden, uint oPC = OBJECT_INVALID)
+        public static void SetCombatLogMessageHidden(CombatLogMessageType nMessage, bool isHidden, uint oPC = OBJECT_INVALID)
         {
-            NWNXPushInt(isHidden);
-            NWNXPushInt(nMessage);
+            NWNXPushInt(Convert.ToInt32(isHidden));
+            NWNXPushInt((int)nMessage);
             NWNXPushInt(1);
             NWNXPushObject(oPC);
             NWNXCall(NWNX_Feedback, "SetMessageHidden");

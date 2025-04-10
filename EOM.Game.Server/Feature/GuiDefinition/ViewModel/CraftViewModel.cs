@@ -1289,9 +1289,9 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 }
             }
 
-            var unpacked = ItemPropertyPlugin.UnpackIP(ip);
+            var unpacked = ItempropPlugin.UnpackIP(ip);
             unpacked.CostTableValue = amount;
-            ip = ItemPropertyPlugin.PackIP(unpacked);
+            ip = ItempropPlugin.PackIP(unpacked);
             
             BiowareXP2.IPSafeAddItemProperty(item, ip, 0.0f, AddItemPropertyPolicy.IgnoreExisting, false, false);
         }

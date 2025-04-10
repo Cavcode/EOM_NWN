@@ -46,10 +46,10 @@ namespace EOM.Game.Server.Native
             var attacker = CNWSCreature.FromPointer(attackerStats.m_pBaseCreature);
 
             var area = attacker.GetArea();
-            ProfilerPlugin.PushPerfScope("RunScript",
-                "Script", $"NATIVE:{nameof(OnGetDamageRoll)}",
-                "Area", area.m_sTag.ToString(),
-                "ObjectType", "Creature");
+            //ProfilerPlugin.PushPerfScope("RunScript",
+                //"Script", $"NATIVE:{nameof(OnGetDamageRoll)}",
+                //"Area", area.m_sTag.ToString(),
+                //"ObjectType", "Creature");
 
             var targetObject = CNWSObject.FromPointer(pTarget);
             var damageFlags = attackerStats.m_pBaseCreature.GetDamageFlags();
@@ -61,7 +61,7 @@ namespace EOM.Game.Server.Native
             // subsequent times.  Bail out early.
             if (targetObject == null || targetObject.m_idSelf == OBJECT_INVALID)
             {
-                ProfilerPlugin.PopPerfScope();
+                //ProfilerPlugin.PopPerfScope();
                 return 0;
             }
 

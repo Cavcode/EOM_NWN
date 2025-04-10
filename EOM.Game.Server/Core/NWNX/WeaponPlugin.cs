@@ -39,137 +39,137 @@ namespace EOM.Game.Server.Core.NWNX
         /// Set nFeat as weapon focus feat for a base item.
         /// <param name="nBaseItem">The base item id.</param>
         /// <param name="nFeat">The feat to set.</param>
-        public static void SetWeaponFocusFeat(int nBaseItem, int nFeat)
+        public static void SetWeaponFocusFeat(BaseItem nBaseItem, FeatType nFeat)
         {
-            NWNXPushInt(nFeat);
-            NWNXPushInt(nBaseItem);
+            NWNXPushInt((int)nFeat);
+            NWNXPushInt((int)nBaseItem);
             NWNXCall(NWNX_Weapon, "SetWeaponFocusFeat");
         }
 
         /// Set required creature size for a weapon base item to be finessable.
         /// <param name="nBaseItem">The base item id.</param>
         /// <param name="nSize">The creature size minimum to consider this weapon finessable.</param>
-        public static void SetWeaponFinesseSize(int nBaseItem, int nSize)
+        public static void SetWeaponFinesseSize(BaseItem nBaseItem, int nSize)
         {
             NWNXPushInt(nSize);
-            NWNXPushInt(nBaseItem);
+            NWNXPushInt((int)nBaseItem);
             NWNXCall(NWNX_Weapon, "SetWeaponFinesseSize");
         }
 
         /// Get required creature size for a weapon base item to be finessable.
         /// <param name="nBaseItem">The base item id.</param>
-        public static int GetWeaponFinesseSize(int nBaseItem)
+        public static int GetWeaponFinesseSize(BaseItem nBaseItem)
         {
-            NWNXPushInt(nBaseItem);
+            NWNXPushInt((int)nBaseItem);
             NWNXCall(NWNX_Weapon, "GetWeaponFinesseSize");
             return NWNXPopInt();
         }
 
         /// Set weapon base item to be considered as unarmed for weapon finesse feat.
         /// <param name="nBaseItem">The base item id.</param>
-        public static void SetWeaponUnarmed(int nBaseItem)
+        public static void SetWeaponUnarmed(BaseItem nBaseItem)
         {
-            NWNXPushInt(nBaseItem);
+            NWNXPushInt((int)nBaseItem);
             NWNXCall(NWNX_Weapon, "SetWeaponUnarmed");
         }
 
         /// Set a feat as weapon improved critical for a base item.
         /// <param name="nBaseItem">The base item id.</param>
         /// <param name="nFeat">The feat to set.</param>
-        public static void SetWeaponImprovedCriticalFeat(int nBaseItem, int nFeat)
+        public static void SetWeaponImprovedCriticalFeat(BaseItem nBaseItem, FeatType nFeat)
         {
-            NWNXPushInt(nFeat);
-            NWNXPushInt(nBaseItem);
+            NWNXPushInt((int)nFeat);
+            NWNXPushInt((int)nBaseItem);
             NWNXCall(NWNX_Weapon, "SetWeaponImprovedCriticalFeat");
         }
 
         /// Set a feat as weapon specialization for a base item.
         /// <param name="nBaseItem">The base item id.</param>
         /// <param name="nFeat">The feat to set.</param>
-        public static void SetWeaponSpecializationFeat(int nBaseItem, int nFeat)
+        public static void SetWeaponSpecializationFeat(BaseItem nBaseItem, FeatType nFeat)
         {
-            NWNXPushInt(nFeat);
-            NWNXPushInt(nBaseItem);
+            NWNXPushInt((int)nFeat);
+            NWNXPushInt((int)nBaseItem);
             NWNXCall(NWNX_Weapon, "SetWeaponSpecializationFeat");
         }
 
         /// Set a feat as epic weapon focus for a base item.
         /// <param name="nBaseItem">The base item id.</param>
         /// <param name="nFeat">The feat to set.</param>
-        public static void SetEpicWeaponFocusFeat(int nBaseItem, int nFeat)
+        public static void SetEpicWeaponFocusFeat(BaseItem nBaseItem, FeatType nFeat)
         {
-            NWNXPushInt(nFeat);
-            NWNXPushInt(nBaseItem);
+            NWNXPushInt((int)nFeat);
+            NWNXPushInt((int)nBaseItem);
             NWNXCall(NWNX_Weapon, "SetEpicWeaponFocusFeat");
         }
 
         /// Set a feat as epic weapon specialization for a base item.
         /// <param name="nBaseItem">The base item id.</param>
         /// <param name="nFeat">The feat to set.</param>
-        public static void SetEpicWeaponSpecializationFeat(int nBaseItem, int nFeat)
+        public static void SetEpicWeaponSpecializationFeat(BaseItem nBaseItem, FeatType nFeat)
         {
-            NWNXPushInt(nFeat);
-            NWNXPushInt(nBaseItem);
+            NWNXPushInt((int)nFeat);
+            NWNXPushInt((int)nBaseItem);
             NWNXCall(NWNX_Weapon, "SetEpicWeaponSpecializationFeat");
         }
 
         /// Set a feat as epic weapon overwhelming critical for a base item.
         /// <param name="nBaseItem">The base item id.</param>
         /// <param name="nFeat">The feat to set.</param>
-        public static void SetEpicWeaponOverwhelmingCriticalFeat(int nBaseItem, int nFeat)
+        public static void SetEpicWeaponOverwhelmingCriticalFeat(BaseItem nBaseItem, FeatType nFeat)
         {
-            NWNXPushInt(nFeat);
-            NWNXPushInt(nBaseItem);
+            NWNXPushInt((int)nFeat);
+            NWNXPushInt((int)nBaseItem);
             NWNXCall(NWNX_Weapon, "SetEpicWeaponOverwhelmingCriticalFeat");
         }
 
         /// Set a feat as epic weapon devastating critical for a base item.
         /// <param name="nBaseItem">The base item id.</param>
         /// <param name="nFeat">The feat to set.</param>
-        public static void SetEpicWeaponDevastatingCriticalFeat(int nBaseItem, int nFeat)
+        public static void SetEpicWeaponDevastatingCriticalFeat(BaseItem nBaseItem, FeatType nFeat)
         {
-            NWNXPushInt(nFeat);
-            NWNXPushInt(nBaseItem);
+            NWNXPushInt((int)nFeat);
+            NWNXPushInt((int)nBaseItem);
             NWNXCall(NWNX_Weapon, "SetEpicWeaponDevastatingCriticalFeat");
         }
 
         /// Set a feat as weapon of choice for a base item.
         /// <param name="nBaseItem">The base item id.</param>
         /// <param name="nFeat">The feat to set.</param>
-        public static void SetWeaponOfChoiceFeat(int nBaseItem, int nFeat)
+        public static void SetWeaponOfChoiceFeat(BaseItem nBaseItem, FeatType nFeat)
         {
-            NWNXPushInt(nFeat);
-            NWNXPushInt(nBaseItem);
+            NWNXPushInt((int)nFeat);
+            NWNXPushInt((int)nBaseItem);
             NWNXCall(NWNX_Weapon, "SetWeaponOfChoiceFeat");
         }
 
         /// Set a feat as greater weapon specialization for a base item.
         /// <param name="nBaseItem">The base item id.</param>
         /// <param name="nFeat">The feat to set.</param>
-        public static void SetGreaterWeaponSpecializationFeat(int nBaseItem, int nFeat)
+        public static void SetGreaterWeaponSpecializationFeat(BaseItem nBaseItem, FeatType nFeat)
         {
-            NWNXPushInt(nFeat);
-            NWNXPushInt(nBaseItem);
+            NWNXPushInt((int)nFeat);
+            NWNXPushInt((int)nBaseItem);
             NWNXCall(NWNX_Weapon, "SetGreaterWeaponSpecializationFeat");
         }
 
         /// Set a feat as greater weapon focus for a base item.
         /// <param name="nBaseItem">The base item id.</param>
         /// <param name="nFeat">The feat to set.</param>
-        public static void SetGreaterWeaponFocusFeat(int nBaseItem, int nFeat)
+        public static void SetGreaterWeaponFocusFeat(BaseItem nBaseItem, FeatType nFeat)
         {
-            NWNXPushInt(nFeat);
-            NWNXPushInt(nBaseItem);
+            NWNXPushInt((int)nFeat);
+            NWNXPushInt((int)nBaseItem);
             NWNXCall(NWNX_Weapon, "SetGreaterWeaponFocusFeat");
         }
 
         /// Set base item as monk weapon.
         /// <param name="nBaseItem">The base item id.</param>
         /// @deprecated Use baseitems.2da. This will be removed in future NWNX releases.
-        public static void SetWeaponIsMonkWeapon(int nBaseItem)
+        public static void SetWeaponIsMonkWeapon(BaseItem nBaseItem)
         {
             WriteTimestampedLogEntry("NWNX_Weapon_SetWeaponIsMonkWeapon() is deprecated. Please use baseitems.2da instead.");
-            NWNXPushInt(nBaseItem);
+            NWNXPushInt((int)nBaseItem);
             NWNXCall(NWNX_Weapon, "SetWeaponIsMonkWeapon");
         }
 

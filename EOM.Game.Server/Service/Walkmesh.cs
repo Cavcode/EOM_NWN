@@ -113,7 +113,7 @@ namespace EOM.Game.Server.Service
                     {
                         foreach (var trigger in _noSpawnZoneTriggers[area])
                         {
-                            if (ObjectPlugin.GetPositionIsInTrigger(trigger, checkPosition))
+                            if (Convert.ToBoolean(ObjectPlugin.GetPositionIsInTrigger(trigger, checkPosition)))
                             {
                                 isWalkable = false;
                                 break;

@@ -42,12 +42,12 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="sender">The sender of the message.</param>
         /// <param name="target">The receiver of the message.</param>
         /// <returns>TRUE if successful, FALSE otherwise.</returns>
-        public static int SendMessage(int channel, string message, uint sender = OBJECT_INVALID, uint target = OBJECT_INVALID)
+        public static int SendMessage(Enum.ChatChannel channel, string message, uint sender = OBJECT_INVALID, uint target = OBJECT_INVALID)
         {
             NWNXPushObject(target);
             NWNXPushObject(sender);
             NWNXPushString(message);
-            NWNXPushInt(channel);
+            NWNXPushInt((int)channel);
             NWNXCall(NWNX_Chat, "SendMessage");
             return NWNXPopInt();
         }
@@ -71,10 +71,10 @@ namespace EOM.Game.Server.Core.NWNX
         /// Gets the chat @ref chat_channels &quot;channel&quot;.
         /// @note Must be called from a chat or system script handler.
         /// <returns>The @ref chat_channels &quot;channel&quot; the message is sent.</returns>
-        public static int GetChannel()
+        public static Enum.ChatChannel GetChannel()
         {
             NWNXCall(NWNX_Chat, "GetChannel");
-            return NWNXPopInt();
+            return (Enum.ChatChannel)NWNXPopInt();
         }
 
         /// Gets the message.
@@ -109,9 +109,9 @@ namespace EOM.Game.Server.Core.NWNX
         /// <param name="distance">The distance in meters.</param>
         /// <param name="listener">The listener, if OBJECT_INVALID then it will be set server wide.</param>
         /// <param name="channel">The @ref chat_channels &quot;channel&quot; to modify the distance heard. Only applicable for talk and whisper.</param>
-        public static void SetChatHearingDistance(float distance, uint listener = OBJECT_INVALID, int channel = NWNX_CHAT_CHANNEL_PLAYER_TALK)
+        public static void SetChatHearingDistance(float distance, uint listener = OBJECT_INVALID, ChatChannel channel = ChatChannel.PlayerTalk)
         {
-            NWNXPushInt(channel);
+            NWNXPushInt((int)channel);
             NWNXPushObject(listener);
             NWNXPushFloat(distance);
             NWNXCall(NWNX_Chat, "SetChatHearingDistance");
@@ -120,9 +120,9 @@ namespace EOM.Game.Server.Core.NWNX
         /// Gets the distance with which the player hears talks or whisper
         /// <param name="listener">The listener, if OBJECT_INVALID then will return server wide setting.</param>
         /// <param name="channel">The @ref chat_channels &quot;channel&quot;. Only applicable for talk and whisper.</param>
-        public static float GetChatHearingDistance(uint listener = OBJECT_INVALID, int channel = NWNX_CHAT_CHANNEL_PLAYER_TALK)
+        public static float GetChatHearingDistance(uint listener = OBJECT_INVALID, ChatChannel channel = ChatChannel.PlayerTalk)
         {
-            NWNXPushInt(channel);
+            NWNXPushInt((int)channel);
             NWNXPushObject(listener);
             NWNXCall(NWNX_Chat, "GetChatHearingDistance");
             return NWNXPopFloat();
