@@ -122,8 +122,8 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
             {
                 var dmName = GetName(Player);
                 var oldName = GetName(_target);
-                CreaturePlugin.SetOriginalName(_target, NewFirstName, false);
-                CreaturePlugin.SetOriginalName(_target, NewLastName, true);
+                CreaturePlugin.SetOriginalName(_target, NewFirstName, 0);
+                CreaturePlugin.SetOriginalName(_target, NewLastName, 1);
 
                 var newFullName = NewFirstName;
                 if (!string.IsNullOrWhiteSpace(NewLastName))

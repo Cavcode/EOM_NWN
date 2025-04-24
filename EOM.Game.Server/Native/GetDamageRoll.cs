@@ -17,6 +17,8 @@ using EquipmentSlot = NWN.Native.API.EquipmentSlot;
 using ObjectType = NWN.Native.API.ObjectType;
 using RacialType = EOM.Game.Server.Core.NWScript.Enum.RacialType;
 using DamageType = NWN.Native.API.DamageType;
+using EOM.Game.Server.Service.StatusEffectService;
+using EOM.Game.Server.Entity;
 
 namespace EOM.Game.Server.Native
 {
@@ -44,10 +46,10 @@ namespace EOM.Game.Server.Native
             var attacker = CNWSCreature.FromPointer(attackerStats.m_pBaseCreature);
 
             var area = attacker.GetArea();
-            ProfilerPlugin.PushPerfScope("RunScript",
-                "Script", $"NATIVE:{nameof(OnGetDamageRoll)}",
-                "Area", area.m_sTag.ToString(),
-                "ObjectType", "Creature");
+            //ProfilerPlugin.PushPerfScope("RunScript",
+                //"Script", $"NATIVE:{nameof(OnGetDamageRoll)}",
+                //"Area", area.m_sTag.ToString(),
+                //"ObjectType", "Creature");
 
             var targetObject = CNWSObject.FromPointer(pTarget);
             var damageFlags = attackerStats.m_pBaseCreature.GetDamageFlags();
@@ -59,7 +61,7 @@ namespace EOM.Game.Server.Native
             // subsequent times.  Bail out early.
             if (targetObject == null || targetObject.m_idSelf == OBJECT_INVALID)
             {
-                ProfilerPlugin.PopPerfScope();
+                //ProfilerPlugin.PopPerfScope();
                 return 0;
             }
 
@@ -185,15 +187,16 @@ namespace EOM.Game.Server.Native
             {
                 if (attacker.m_pInventory.GetItemInSlot((uint)EquipmentSlot.LeftHand) == null)
                 {
-                    var weaponType = (BaseItem)weapon.m_nBaseItem;
+                    // For one handed if needed.
+                }
 
-                    if (Item.OneHandedMeleeItemTypes.Contains(weaponType) ||
-                        Item.ThrowingWeaponBaseItemTypes.Contains(weaponType))
-                    {
-                        var doublehandDMGBonus = Combat.GetDoublehandDMGBonusNative(attacker);
-                        Log.Write(LogGroup.Attack, $"DAMAGE: Applying doublehand damage bonus. (+{doublehandDMGBonus})");
-                        dmgValues[CombatDamageType.Physical] += doublehandDMGBonus;
-                    }
+                var weaponType = (BaseItem)weapon.m_nBaseItem;
+
+                if (weaponType == BaseItem.GreatAxe)
+                {
+                    var powerfulGripDMGBonus = Combat.GetPowerfulGripDMGBonusNative(attacker);
+                    Log.Write(LogGroup.Attack, $"DAMAGE: Applying Powerful Grip damage bonus. (+{powerfulGripDMGBonus})");
+                    dmgValues[CombatDamageType.Physical] += powerfulGripDMGBonus;
                 }
 
                 if (Item.StaffBaseItemTypes.Contains((BaseItem)weapon.m_nBaseItem))
@@ -451,14 +454,18 @@ namespace EOM.Game.Server.Native
         private static bool HasImprovedMultiplier(CNWSCreature attacker, CNWSItem weapon)
         {
             if (weapon == null) return false;
-            if (attacker.m_pStats.HasFeat((ushort)FeatType.IncreaseMultiplier) == 0) return false;
 
             var baseItemType = (BaseItem)weapon.m_nBaseItem;
-
-            if (Item.SaberstaffBaseItemTypes.Contains(baseItemType)) return true;
-            if (Item.TwinBladeBaseItemTypes.Contains(baseItemType)) return true;
-            if (Item.PolearmBaseItemTypes.Contains(baseItemType)) return true;
-            if (Item.HeavyVibrobladeBaseItemTypes.Contains(baseItemType)) return true;
+            if (baseItemType == BaseItem.GreatAxe)
+            {
+                if (attacker.m_pStats.HasFeat((ushort)FeatType.MightyCriticalAxes) == 1)
+                    return true;
+            }
+            else if (baseItemType == BaseItem.Longsword)
+            {
+                if (attacker.m_pStats.HasFeat((ushort)FeatType.ImprovedCriticalGunblade) == 1)
+                    return true;
+            }
 
             return false;
         }

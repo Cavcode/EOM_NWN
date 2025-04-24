@@ -157,6 +157,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition.ViewModel
                 case 0:
                     SelectedJob = "Warrior";
                     SelectedJobRank = dbPlayer.WarriorRank.ToString();
+                    IsWarriorSelected = true;
                     Console.WriteLine(SelectedJobRank);
                     break;
                 case 1:

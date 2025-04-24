@@ -134,7 +134,7 @@ namespace EOM.Game.Server.Core
                 {
                     foreach (var action in _conditionalScripts[script])
                     {
-                        ProfilerPlugin.PushPerfScope(OBJECT_SELF, action.Name);
+                        ProfilerPlugin.PushPerfScope(GetScriptName(), action.Name);
                         var actionResult = action.Action.Invoke();
                         ProfilerPlugin.PopPerfScope();
 
@@ -153,7 +153,7 @@ namespace EOM.Game.Server.Core
                     {
                         try
                         {
-                            ProfilerPlugin.PushPerfScope(OBJECT_SELF, action.Name);
+                            ProfilerPlugin.PushPerfScope(GetScriptName(), action.Name);
                             action.Action();
                             ProfilerPlugin.PopPerfScope();
                         }

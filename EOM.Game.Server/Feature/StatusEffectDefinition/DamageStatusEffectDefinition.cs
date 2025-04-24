@@ -33,7 +33,7 @@ namespace EOM.Game.Server.Feature.StatusEffectDefinition
                         level = 1;
 
                     var perception = GetAbilityModifier(AbilityType.Perception, source);
-                    var damage = EffectDamage(d2() + perception * 2 * level);
+                    var damage = EffectDamage(d2() + perception * 5 * level);
                     ApplyEffectToObject(DurationType.Instant, damage, target);
 
                     var location = GetLocation(target);

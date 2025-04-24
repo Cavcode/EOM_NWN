@@ -177,6 +177,8 @@ namespace EOM.Game.Server.Service.PerkService
         JobSummoner = 56,
         [PerkCategory("Weapon - Axes", true)]
         WeaponAxes = 57,
+        [PerkCategory("Weapon - Gunblades", true)]
+        WeaponGunblades = 58,
     }
 
     public class PerkCategoryAttribute : Attribute

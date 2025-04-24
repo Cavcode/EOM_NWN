@@ -11,6 +11,10 @@ namespace EOM.Game.Server.Service.AbilityService
         Cleave = 1,
         [RecastGroup("Charge", "Charge", true)]
         Charge = 2,
+        [RecastGroup("Overhead", "Overhead", true)]
+        Overhead = 3,
+        [RecastGroup("Mighty Swings", "MightySwings", true)]
+        MightySwings = 4,
     }
 
     public class RecastGroupAttribute: Attribute

@@ -18,7 +18,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition
             _builder.CreateWindow(GuiWindowType.Jobs)
                 .SetIsResizable(true)
                 .SetIsCollapsible(true)
-                .SetInitialGeometry(0, 0, 545f, 600f)
+                .SetInitialGeometry(0, 0, 100f, 600f)
                 .SetTitle("Jobs")
                 .DefinePartialView(JobsViewModel.JobWarriorPartial, BuildWarrior)
                 .AddColumn(column =>
@@ -34,10 +34,7 @@ namespace EOM.Game.Server.Feature.GuiDefinition
                                     .BindIsToggled(model => model.JobSelected)
                                     .BindOnClicked(model => model.OnSelectJob());
                             });
-                        }).SetRowCount(5).SetHeight(220.0f).SetWidth(824.0f);
-                        row.AddSpacer();
-
-
+                        }).SetRowCount(5);
                     });
 
                     column.AddRow(row =>
@@ -119,86 +116,259 @@ namespace EOM.Game.Server.Feature.GuiDefinition
         {
             partial.AddColumn(col =>
             {
-                col.AddRow(row =>
+                col.AddRow(rowBef1 =>
                 {
-                    row.BindIsVisible(model => model.IsWarriorSelected);
-
-                    //.BindSelectedIndex(model => model.SelectedItemTypeIndex);
-                    //.BindOnClicked(model => model.OnClickOutfits());
+                    rowBef1.AddLabel()
+                        .SetText("Tier 1")
+                        .SetVerticalAlign(NuiVerticalAlign.Top)
+                        .SetHorizontalAlign(NuiHorizontalAlign.Center)
+                        .SetHeight(25.0f);
                 });
+
                 col.AddRow(row =>
                 {
                     row.BindIsVisible(model => model.IsWarriorSelected);
+                    row.AddSpacer();
 
-
-                    row.AddOptions()
-                        .AddOption("Big Papa Axe Slam")
-                        .AddOption("Melee Nuke")
-                        .AddOption("Ur mom")
-                        .AddOption("Power up")
-                        .AddOption("+1 Deez Nuts")
-                        .SetWidth(5.0f)
+                    row.AddButtonImage()
                         .SetIsEnabled(true)
-                        .SetIsEncouraged(true);
-                    //.BindSelectedIndex(model => model.SelectedItemTypeIndex);
-                    //.BindOnClicked(model => model.OnClickOutfits());
+                        .SetImageResref("gui_xp2_logo")
+                        .SetHeight(50.0f)
+                        .SetWidth(50.0f)
+                        .SetTooltip("yoyoyo");
+
+                    row.AddSpacer();
+
+                    row.AddButtonImage()
+                        .SetIsEnabled(true)
+                        .SetImageResref("gui_xp2_logo")
+                        .SetHeight(50.0f)
+                        .SetWidth(50.0f)
+                        .SetTooltip("yoyoyo");
+
+                    row.AddSpacer();
+
+                    row.AddButtonImage()
+                        .SetIsEnabled(true)
+                        .SetImageResref("gui_xp2_logo")
+                        .SetHeight(50.0f)
+                        .SetWidth(50.0f)
+                        .SetTooltip("yoyoyo");
+
+                    row.AddSpacer();
+
+                    row.AddButtonImage()
+                        .SetIsEnabled(true)
+                        .SetImageResref("gui_xp2_logo")
+                        .SetHeight(50.0f)
+                        .SetWidth(50.0f)
+                        .SetTooltip("yoyoyo");
+
+                    row.AddSpacer();
+
                 });
+
+                col.AddRow(rowBef2 =>
+                {
+                    rowBef2.AddLabel()
+                        .SetText("Tier 2")
+                        .SetVerticalAlign(NuiVerticalAlign.Top)
+                        .SetHorizontalAlign(NuiHorizontalAlign.Center)
+                        .SetHeight(25.0f);
+                });
+
                 col.AddRow(row =>
                 {
                     row.BindIsVisible(model => model.IsWarriorSelected);
+                    row.AddSpacer();
 
+                    row.AddButtonImage()
+                        .SetIsEnabled(true)
+                        .SetImageResref("gui_xp2_logo")
+                        .SetHeight(50.0f)
+                        .SetWidth(50.0f)
+                        .SetTooltip("yoyoyo");
 
-                    row.AddOptions()
-                        .AddOption("Big Papa Axe Slam")
-                        .AddOption("Melee Nuke")
-                        .AddOption("Ur mom")
-                        .AddOption("Power up")
-                        .AddOption("+2 Deez Nuts")
-                        .SetWidth(5.0f)
-                        .SetIsEnabled(false)
-                        .SetDisabledTooltip("Need more points bruh");
-                    //.BindSelectedIndex(model => model.SelectedItemTypeIndex);
-                    //.BindOnClicked(model => model.OnClickOutfits());
+                    row.AddSpacer();
+
+                    row.AddButtonImage()
+                        .SetIsEnabled(true)
+                        .SetImageResref("gui_xp2_logo")
+                        .SetHeight(50.0f)
+                        .SetWidth(50.0f)
+                        .SetTooltip("yoyoyo");
+
+                    row.AddSpacer();
+
+                    row.AddButtonImage()
+                        .SetIsEnabled(true)
+                        .SetImageResref("gui_xp2_logo")
+                        .SetHeight(50.0f)
+                        .SetWidth(50.0f)
+                        .SetTooltip("yoyoyo");
+
+                    row.AddSpacer();
+
+                    row.AddButtonImage()
+                        .SetIsEnabled(true)
+                        .SetImageResref("gui_xp2_logo")
+                        .SetHeight(50.0f)
+                        .SetWidth(50.0f)
+                        .SetTooltip("yoyoyo");
+
+                    row.AddSpacer();
                 });
+                col.AddRow(rowBef2 =>
+                {
+                    rowBef2.AddLabel()
+                        .SetText("Tier 3")
+                        .SetVerticalAlign(NuiVerticalAlign.Top)
+                        .SetHorizontalAlign(NuiHorizontalAlign.Center)
+                        .SetHeight(25.0f);
+                });
+
                 col.AddRow(row =>
                 {
                     row.BindIsVisible(model => model.IsWarriorSelected);
+                    row.AddSpacer();
 
+                    row.AddButtonImage()
+                        .SetIsEnabled(true)
+                        .SetImageResref("gui_xp2_logo")
+                        .SetHeight(50.0f)
+                        .SetWidth(50.0f)
+                        .SetTooltip("yoyoyo");
 
-                    row.AddOptions()
-                        .AddOption("Big Papa Axe Slam")
-                        .AddOption("Melee Nuke")
-                        .AddOption("Ur mom")
-                        .AddOption("Power up")
-                        .AddOption("+4 Deez Nuts")
-                        .SetWidth(5.0f)
-                        .SetIsEnabled(false)
-                        .SetDisabledTooltip("Need more points bruh"); 
-                    //.BindSelectedIndex(model => model.SelectedItemTypeIndex);
-                    //.BindOnClicked(model => model.OnClickOutfits());
+                    row.AddSpacer();
+
+                    row.AddButtonImage()
+                        .SetIsEnabled(true)
+                        .SetImageResref("gui_xp2_logo")
+                        .SetHeight(50.0f)
+                        .SetWidth(50.0f)
+                        .SetTooltip("yoyoyo");
+
+                    row.AddSpacer();
+
+                    row.AddButtonImage()
+                        .SetIsEnabled(true)
+                        .SetImageResref("gui_xp2_logo")
+                        .SetHeight(50.0f)
+                        .SetWidth(50.0f)
+                        .SetTooltip("yoyoyo");
+
+                    row.AddSpacer();
+
+                    row.AddButtonImage()
+                        .SetIsEnabled(true)
+                        .SetImageResref("gui_xp2_logo")
+                        .SetHeight(50.0f)
+                        .SetWidth(50.0f)
+                        .SetTooltip("yoyoyo");
+
+                    row.AddSpacer();
                 });
+                col.AddRow(rowBef2 =>
+                {
+                    rowBef2.AddLabel()
+                        .SetText("Tier 4")
+                        .SetVerticalAlign(NuiVerticalAlign.Top)
+                        .SetHorizontalAlign(NuiHorizontalAlign.Center)
+                        .SetHeight(25.0f);
+                });
+
                 col.AddRow(row =>
                 {
                     row.BindIsVisible(model => model.IsWarriorSelected);
+                    row.AddSpacer();
 
+                    row.AddButtonImage()
+                        .SetIsEnabled(true)
+                        .SetImageResref("gui_xp2_logo")
+                        .SetHeight(50.0f)
+                        .SetWidth(50.0f)
+                        .SetTooltip("yoyoyo");
 
-                    row.AddOptions()
-                        .AddOption("Daf suks")
-                        .AddOption("Hey yo")
-                        .AddOption("Ur f")
-                        .AddOption("Pizza time")
-                        .AddOption("+6 Deez Nuts")
-                        .SetWidth(5.0f)
-                        .SetIsEnabled(false)
-                        .SetDisabledTooltip("Need more points bruh"); 
-                    //.BindSelectedIndex(model => model.SelectedItemTypeIndex);
-                    //.BindOnClicked(model => model.OnClickOutfits());
+                    row.AddSpacer();
+
+                    row.AddButtonImage()
+                        .SetIsEnabled(true)
+                        .SetImageResref("gui_xp2_logo")
+                        .SetHeight(50.0f)
+                        .SetWidth(50.0f)
+                        .SetTooltip("yoyoyo");
+
+                    row.AddSpacer();
+
+                    row.AddButtonImage()
+                        .SetIsEnabled(true)
+                        .SetImageResref("gui_xp2_logo")
+                        .SetHeight(50.0f)
+                        .SetWidth(50.0f)
+                        .SetTooltip("yoyoyo");
+
+                    row.AddSpacer();
+
+                    row.AddButtonImage()
+                        .SetIsEnabled(true)
+                        .SetImageResref("gui_xp2_logo")
+                        .SetHeight(50.0f)
+                        .SetWidth(50.0f)
+                        .SetTooltip("yoyoyo");
+
+                    row.AddSpacer();
                 });
+                col.AddRow(rowBef2 =>
+                {
+                    rowBef2.AddLabel()
+                        .SetText("Tier 5")
+                        .SetVerticalAlign(NuiVerticalAlign.Top)
+                        .SetHorizontalAlign(NuiHorizontalAlign.Center)
+                        .SetHeight(25.0f);
+                });
+
                 col.AddRow(row =>
                 {
-                    row.AddPartialView(JobsViewModel.JobWarriorPartial);
+                    row.BindIsVisible(model => model.IsWarriorSelected);
+                    row.AddSpacer();
+
+                    row.AddButtonImage()
+                        .SetIsEnabled(true)
+                        .SetImageResref("gui_xp2_logo")
+                        .SetHeight(50.0f)
+                        .SetWidth(50.0f)
+                        .SetTooltip("yoyoyo");
+
+                    row.AddSpacer();
+
+                    row.AddButtonImage()
+                        .SetIsEnabled(true)
+                        .SetImageResref("gui_xp2_logo")
+                        .SetHeight(50.0f)
+                        .SetWidth(50.0f)
+                        .SetTooltip("yoyoyo");
+
+                    row.AddSpacer();
+
+                    row.AddButtonImage()
+                        .SetIsEnabled(true)
+                        .SetImageResref("gui_xp2_logo")
+                        .SetHeight(50.0f)
+                        .SetWidth(50.0f)
+                        .SetTooltip("yoyoyo");
+
+                    row.AddSpacer();
+
+                    row.AddButtonImage()
+                        .SetIsEnabled(true)
+                        .SetImageResref("gui_xp2_logo")
+                        .SetHeight(50.0f)
+                        .SetWidth(50.0f)
+                        .SetTooltip("yoyoyo");
+
+                    row.AddSpacer();
                 });
-            });
+        });
         }
     }
 }

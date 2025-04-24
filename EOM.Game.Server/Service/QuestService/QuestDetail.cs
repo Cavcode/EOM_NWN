@@ -259,8 +259,8 @@ namespace EOM.Game.Server.Service.QuestService
                 Tag = QuestId,
                 State = playerQuest.CurrentState,
                 Priority = 1,
-                IsQuestCompleted = false,
-                IsQuestDisplayed = true,
+                IsQuestCompleted = 0,
+                IsQuestDisplayed = 1,
                 Updated = 0,
                 CalendarDay = GetCalendarDay(),
                 TimeOfDay = GetTimeHour()
@@ -335,8 +335,8 @@ namespace EOM.Game.Server.Service.QuestService
                     Tag = QuestId,
                     State = playerQuest.CurrentState,
                     Priority = 1,
-                    IsQuestCompleted = false,
-                    IsQuestDisplayed = true,
+                    IsQuestCompleted = 0,
+                    IsQuestDisplayed = 1,
                     Updated = 0,
                     CalendarDay = GetCalendarDay(),
                     TimeOfDay = GetTimeHour()

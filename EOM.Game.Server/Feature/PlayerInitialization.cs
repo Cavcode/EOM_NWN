@@ -150,7 +150,7 @@ namespace EOM.Game.Server.Feature
             var numberOfFeats = CreaturePlugin.GetFeatCount(player);
             for (var currentFeat = numberOfFeats; currentFeat >= 0; currentFeat--)
             {
-                CreaturePlugin.RemoveFeat(player, CreaturePlugin.GetFeatByIndex(player, currentFeat - 1));
+                CreaturePlugin.RemoveFeat(player, (FeatType)CreaturePlugin.GetFeatByIndex(player, currentFeat - 1));
             }
         }
 

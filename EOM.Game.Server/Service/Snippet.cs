@@ -83,14 +83,14 @@ namespace EOM.Game.Server.Service
             foreach (var condition in _appearsWhenCommands)
             {
                 var notConditionEnabled = false;
-
+                  
                 // Check for "not" condition first.
-                if (UtilPlugin.GetScriptParamIsSet("!" + condition.Key))
+                if (Convert.ToBoolean(UtilPlugin.GetScriptParamIsSet("!" + condition.Key)))
                 {
                     notConditionEnabled = true;
                 }
                 // If we can't find either condition, exit.
-                else if (!UtilPlugin.GetScriptParamIsSet(condition.Key)) continue;
+                else if (!Convert.ToBoolean(UtilPlugin.GetScriptParamIsSet(condition.Key))) continue;
 
                 var conditionKey = notConditionEnabled ? "!" + condition.Key : condition.Key;
                 var param = GetScriptParam(conditionKey);
@@ -119,7 +119,7 @@ namespace EOM.Game.Server.Service
         {
             foreach (var action in _actionsTakenCommands)
             {
-                if (!UtilPlugin.GetScriptParamIsSet(action.Key)) continue;
+                if (!Convert.ToBoolean(UtilPlugin.GetScriptParamIsSet(action.Key))) continue;
 
                 var param = GetScriptParam(action.Key);
                 var args = param.Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList();

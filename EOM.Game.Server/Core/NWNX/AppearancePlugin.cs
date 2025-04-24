@@ -2,69 +2,87 @@ using EOM.Game.Server.Core.NWNX.Enum;
 
 namespace EOM.Game.Server.Core.NWNX
 {
-    public static class AppearancePlugin
+
+    public class AppearancePlugin
     {
-        private const string PLUGIN_NAME = "NWNX_Appearance";
+        /// @addtogroup appearance Appearance
+        /// Allows the appearance and some other things of creatures to be overridden per player.
+        /// @{
+        /// @file nwnx_appearance.nss
+        public const string NWNX_Appearance = "NWNX_Appearance";
 
-        // Override oCreature's nType to nValue for oPlayer
-        // - oCreature can be a PC
-        //
-        // nType = NWNX_APPEARANCE_TYPE_APPEARANCE
-        // nValue = APPEARANCE_TYPE_* or -1 to remove
-        //
-        // nType = NWNX_APPEARANCE_TYPE_GENDER
-        // nValue = GENDER_* or -1 to remove
-        //
-        // nType = NWNX_APPEARANCE_TYPE_HITPOINTS
-        // nValue = 0-GetMaxHitPoints(oCreature) or -1 to remove
-        // NOTE: This is visual only. Does not change the Examine Window health status
-        //
-        // nType = NWNX_APPEARANCE_TYPE_HAIR_COLOR
-        // nType = NWNX_APPEARANCE_TYPE_SKIN_COLOR
-        // nValue = 0-175 or -1 to remove
-        //
-        // nType = NWNX_APPEARANCE_TYPE_PHENOTYPE
-        // nValue = PHENOTYPE_* or -1 to remove
-        //
-        // nType = NWNX_APPEARANCE_TYPE_HEAD_TYPE
-        // nValue = 0-? or -1 to remove
-        //
-        // nType = NWNX_APPEARANCE_TYPE_SOUNDSET
-        // nValue = See soundset.2da or -1 to remove
-        //
-        // nType = NWNX_APPEARANCE_TYPE_TAIL_TYPE
-        // nValue = CREATURE_WING_TYPE_* or see wingmodel.2da, -1 to remove
-        //
-        // nType = NWNX_APPEARANCE_TYPE_WING_TYPE
-        // nValue = CREATURE_TAIL_TYPE_* or see tailmodel.2da, -1 to remove
-        //
-        // nType = NWNX_APPEARANCE_TYPE_FOOTSTEP_SOUND
-        // nValue = 0-17 or see footstepsounds.2da, -1 to remove
-        //
-        // nType = NWNX_APPEARANCE_TYPE_PORTRAIT
-        // nValue = See portraits.2da, -1 to remove
-        // NOTE: Does not change the Examine Window portrait
-        public static void SetOverride(uint player, uint creature, OverrideType type, int value)
+        ///&lt; @private
+        /// @name Appearance Types
+        /// @anchor appearance_types
+        ///
+        /// The various types of changes that can be made to how a PC is perceived.
+        /// @{
+        public const int NWNX_APPEARANCE_TYPE_APPEARANCE = 0;
+
+        ///&lt; APPEARANCE_TYPE_* or -1 to remove
+        public const int NWNX_APPEARANCE_TYPE_GENDER = 1;
+
+        ///&lt; GENDER_* or -1 to remove
+        /// 0-GetMaxHitPoints(oCreature) or -1 to remove
+        /// @note This is visual only. Does not change the Examine Window health status.
+        public const int NWNX_APPEARANCE_TYPE_HITPOINTS = 2;
+        public const int NWNX_APPEARANCE_TYPE_HAIR_COLOR = 3;
+
+        ///&lt; 0-175 or -1 to remove
+        public const int NWNX_APPEARANCE_TYPE_SKIN_COLOR = 4;
+
+        ///&lt; 0-175 or -1 to remove
+        public const int NWNX_APPEARANCE_TYPE_PHENOTYPE = 5;
+
+        ///&lt; PHENOTYPE_* or -1 to remove
+        public const int NWNX_APPEARANCE_TYPE_HEAD_TYPE = 6;
+
+        ///&lt; 0-? or -1 to remove
+        public const int NWNX_APPEARANCE_TYPE_SOUNDSET = 7;
+
+        ///&lt; See soundset.2da or -1 to remove
+        public const int NWNX_APPEARANCE_TYPE_TAIL_TYPE = 8;
+
+        ///&lt; CREATURE_TAIL_TYPE_* or see tailmodel.2da, -1 to remove
+        public const int NWNX_APPEARANCE_TYPE_WING_TYPE = 9;
+
+        ///&lt; CREATURE_WING_TYPE_* or see wingmodel.2da, -1 to remove
+        public const int NWNX_APPEARANCE_TYPE_FOOTSTEP_SOUND = 10;
+
+        ///&lt; 0-17 or see footstepsounds.2da, -1 to remove
+        /// See portraits.2da, -1 to remove
+        /// @note Does not change the Examine Window portrait.
+        public const int NWNX_APPEARANCE_TYPE_PORTRAIT = 11;
+
+        ///@}
+        /// Override a creature&apos;s appearance type for a player.
+        /// <param name="oPlayer">The player who will see/hear things differently.</param>
+        /// <param name="oCreature">The target creature whose appearance type to alter for oPlayer. Can be a PC.</param>
+        /// <param name="nType">The @ref appearance_types &quot;Appearance Type&quot; to set or -1 to fully remove override.</param>
+        /// <param name="nValue">The new value for the appearance type.</param>
+        public static void SetOverride(uint oPlayer, uint oCreature, int nType, int nValue)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetOverride");
-            NWNCore.NativeFunctions.nwnxPushInt(value);
-            NWNCore.NativeFunctions.nwnxPushInt((int)type);
-            NWNCore.NativeFunctions.nwnxPushObject(creature);
-            NWNCore.NativeFunctions.nwnxPushObject(player);
-            NWNCore.NativeFunctions.nwnxCallFunction();
+            NWNXPushInt(nValue);
+            NWNXPushInt(nType);
+            NWNXPushObject(oCreature);
+            NWNXPushObject(oPlayer);
+            NWNXCall(NWNX_Appearance, "SetOverride");
         }
 
-        // Get oCreature's nValue of nType for oPlayer
-        // - oCreature can be a PC
-        // Returns -1 when not set
-        public static int GetOverride(uint player, uint creature, OverrideType type)
+        /// Get a creature&apos;s appearance type for a player.
+        /// <param name="oPlayer">The player who see/hear things differently.</param>
+        /// <param name="oCreature">The target creature whose appearance type is altered for oPlayer. Can be a PC.</param>
+        /// <param name="nType">The @ref appearance_types &quot;Appearance Type&quot; to get.</param>
+        /// <returns>The value for the appearance type or -1 when not set.</returns>
+        public static int GetOverride(uint oPlayer, uint oCreature, int nType)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "GetOverride");
-            NWNCore.NativeFunctions.nwnxPushInt((int)type);
-            NWNCore.NativeFunctions.nwnxPushObject(creature);
-            NWNCore.NativeFunctions.nwnxPushObject(player);
-            NWNCore.NativeFunctions.nwnxCallFunction();
-            return NWNCore.NativeFunctions.nwnxPopInt();
+            NWNXPushInt(nType);
+            NWNXPushObject(oCreature);
+            NWNXPushObject(oPlayer);
+            NWNXCall(NWNX_Appearance, "GetOverride");
+            return NWNXPopInt();
         }
+
+        // @}
     }
 }

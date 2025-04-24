@@ -7,6 +7,8 @@ namespace EOM.Game.Server.Core.NWScript.Enum.Item
     {
         Invalid = -1,
         ShortSword = 0,
+        [Item("Gunblade",
+            PhenoType.Custom1)]
         Longsword = 1,
         BattleAxe = 2,
         BastardSword = 3,

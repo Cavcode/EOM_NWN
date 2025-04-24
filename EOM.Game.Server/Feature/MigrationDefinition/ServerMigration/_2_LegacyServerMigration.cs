@@ -8,7 +8,7 @@ using EOM.Game.Server.Service.MigrationService;
 
 namespace EOM.Game.Server.Feature.MigrationDefinition.ServerMigration
 {
-    public class _2_LegacyServerMigration: LegacyMigrationBase, IServerMigration
+    public class _2_LegacyServerMigration:  IServerMigration
     {
         public int Version => 2;
         public void Migrate()
@@ -37,11 +37,11 @@ namespace EOM.Game.Server.Feature.MigrationDefinition.ServerMigration
 
                 ObjectPlugin.AcquireItem(tempStorage, deserialized);
 
-                WipeItemProperties(deserialized);
+                //WipeItemProperties(deserialized);
                 Item.MarkLegacyItem(deserialized);
-                WipeDescription(deserialized);
-                WipeVariables(deserialized);
-                CleanItemName(deserialized);
+               // WipeDescription(deserialized);
+                //WipeVariables(deserialized);
+                //CleanItemName(deserialized);
 
                 item.Data = ObjectPlugin.Serialize(deserialized);
                 DB.Set(item);

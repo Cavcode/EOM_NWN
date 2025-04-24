@@ -5,201 +5,259 @@ using EOM.Game.Server.Core.NWScript.Enum.Item;
 
 namespace EOM.Game.Server.Core.NWNX
 {
-    public static class WeaponPlugin
+
+    public class WeaponPlugin
     {
-        private const string PLUGIN_NAME = "NWNX_Weapon";
+        /// @addtogroup weapon Weapon
+        /// Functions exposing additional weapon properties.
+        /// @{
+        /// @file nwnx_weapon.nss
+        public const string NWNX_Weapon = "NWNX_Weapon";
 
-        // Options constants to be used with NWNX_Weapon_SetOption function
-        private const int GreaterFOcusABBonus = 0; // Greater Focus AB bonus
-        private const int GreaterSpecialDamageBonus = 1; // Greater Spec. DAM bonus
+        ///&lt; @private
+        /// @name Weapons Options
+        /// @anchor wpn_opts
+        ///
+        /// Options constants to be used with NWNX_Weapon_SetOption function.
+        /// @{
+        public const int NWNX_WEAPON_OPT_GRTFOCUS_AB_BONUS = 0;
 
+        ///&lt; Greater Focus Attack Bonus
+        public const int NWNX_WEAPON_OPT_GRTSPEC_DAM_BONUS = 1;
+
+        ///&lt; Greater Specialization Damage Bonus
+        ///@}
         // Get Event Data Constants
-        private const int GetData_DC = 0; // Get Devastating Critical Data
+        public const int NWNX_WEAPON_GETDATA_DC = 0;
 
+        ///&lt; Get Devastating Critical Data
         // Set Event Data Constants
-        private const int DC_Bypass = 0; // Set Devastating Critical Bypass
+        public const int NWNX_WEAPON_SETDATA_DC_BYPASS = 0;
 
-        public static void SetWeaponFocusFeat(BaseItem baseItem, FeatType feat)
+        ///&lt; Set Devastating Critical Bypass
+        /// Devastating critical event data
+        /// Set nFeat as weapon focus feat for a base item.
+        /// <param name="nBaseItem">The base item id.</param>
+        /// <param name="nFeat">The feat to set.</param>
+        public static void SetWeaponFocusFeat(BaseItem nBaseItem, FeatType nFeat)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetWeaponFocusFeat");
-            NWNCore.NativeFunctions.nwnxPushInt((int)feat);
-            NWNCore.NativeFunctions.nwnxPushInt((int)baseItem);
-            NWNCore.NativeFunctions.nwnxCallFunction();
+            NWNXPushInt((int)nFeat);
+            NWNXPushInt((int)nBaseItem);
+            NWNXCall(NWNX_Weapon, "SetWeaponFocusFeat");
         }
 
-        public static void SetEpicWeaponFocusFeat(BaseItem baseItem, FeatType feat)
+        /// Set required creature size for a weapon base item to be finessable.
+        /// <param name="nBaseItem">The base item id.</param>
+        /// <param name="nSize">The creature size minimum to consider this weapon finessable.</param>
+        public static void SetWeaponFinesseSize(BaseItem nBaseItem, int nSize)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetEpicWeaponFocusFeat");
-            NWNCore.NativeFunctions.nwnxPushInt((int)feat);
-            NWNCore.NativeFunctions.nwnxPushInt((int)baseItem);
-            NWNCore.NativeFunctions.nwnxCallFunction();
+            NWNXPushInt(nSize);
+            NWNXPushInt((int)nBaseItem);
+            NWNXCall(NWNX_Weapon, "SetWeaponFinesseSize");
         }
 
-        public static void SetGreaterWeaponFocusFeat(BaseItem baseItem, FeatType feat)
+        /// Get required creature size for a weapon base item to be finessable.
+        /// <param name="nBaseItem">The base item id.</param>
+        public static int GetWeaponFinesseSize(BaseItem nBaseItem)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetGreaterWeaponFocusFeat");
-            NWNCore.NativeFunctions.nwnxPushInt((int)feat);
-            NWNCore.NativeFunctions.nwnxPushInt((int)baseItem);
-            NWNCore.NativeFunctions.nwnxCallFunction();
+            NWNXPushInt((int)nBaseItem);
+            NWNXCall(NWNX_Weapon, "GetWeaponFinesseSize");
+            return NWNXPopInt();
         }
 
-        public static void SetWeaponFinesseSize(BaseItem baseItem, CreatureSize nCreatureSize)
+        /// Set weapon base item to be considered as unarmed for weapon finesse feat.
+        /// <param name="nBaseItem">The base item id.</param>
+        public static void SetWeaponUnarmed(BaseItem nBaseItem)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetWeaponFinesseSize");
-            NWNCore.NativeFunctions.nwnxPushInt((int)nCreatureSize);
-            NWNCore.NativeFunctions.nwnxPushInt((int)baseItem);
-            NWNCore.NativeFunctions.nwnxCallFunction();
+            NWNXPushInt((int)nBaseItem);
+            NWNXCall(NWNX_Weapon, "SetWeaponUnarmed");
         }
 
-        public static void SetWeaponUnarmed(BaseItem baseItem)
+        /// Set a feat as weapon improved critical for a base item.
+        /// <param name="nBaseItem">The base item id.</param>
+        /// <param name="nFeat">The feat to set.</param>
+        public static void SetWeaponImprovedCriticalFeat(BaseItem nBaseItem, FeatType nFeat)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetWeaponUnarmed");
-            NWNCore.NativeFunctions.nwnxPushInt((int)baseItem);
-            NWNCore.NativeFunctions.nwnxCallFunction();
+            NWNXPushInt((int)nFeat);
+            NWNXPushInt((int)nBaseItem);
+            NWNXCall(NWNX_Weapon, "SetWeaponImprovedCriticalFeat");
         }
 
-        public static void SetWeaponIsMonkWeapon(BaseItem baseItem)
+        /// Set a feat as weapon specialization for a base item.
+        /// <param name="nBaseItem">The base item id.</param>
+        /// <param name="nFeat">The feat to set.</param>
+        public static void SetWeaponSpecializationFeat(BaseItem nBaseItem, FeatType nFeat)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetWeaponIsMonkWeapon");
-            NWNCore.NativeFunctions.nwnxPushInt((int)baseItem);
-            NWNCore.NativeFunctions.nwnxCallFunction();
+            NWNXPushInt((int)nFeat);
+            NWNXPushInt((int)nBaseItem);
+            NWNXCall(NWNX_Weapon, "SetWeaponSpecializationFeat");
         }
 
-        public static void SetWeaponImprovedCriticalFeat(BaseItem baseItem, FeatType feat)
+        /// Set a feat as epic weapon focus for a base item.
+        /// <param name="nBaseItem">The base item id.</param>
+        /// <param name="nFeat">The feat to set.</param>
+        public static void SetEpicWeaponFocusFeat(BaseItem nBaseItem, FeatType nFeat)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetWeaponImprovedCriticalFeat");
-            NWNCore.NativeFunctions.nwnxPushInt((int)feat);
-            NWNCore.NativeFunctions.nwnxPushInt((int)baseItem);
-            NWNCore.NativeFunctions.nwnxCallFunction();
+            NWNXPushInt((int)nFeat);
+            NWNXPushInt((int)nBaseItem);
+            NWNXCall(NWNX_Weapon, "SetEpicWeaponFocusFeat");
         }
 
-        public static void SetWeaponSpecializationFeat(BaseItem baseItem, FeatType feat)
+        /// Set a feat as epic weapon specialization for a base item.
+        /// <param name="nBaseItem">The base item id.</param>
+        /// <param name="nFeat">The feat to set.</param>
+        public static void SetEpicWeaponSpecializationFeat(BaseItem nBaseItem, FeatType nFeat)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetWeaponSpecializationFeat");
-            NWNCore.NativeFunctions.nwnxPushInt((int)feat);
-            NWNCore.NativeFunctions.nwnxPushInt((int)baseItem);
-            NWNCore.NativeFunctions.nwnxCallFunction();
+            NWNXPushInt((int)nFeat);
+            NWNXPushInt((int)nBaseItem);
+            NWNXCall(NWNX_Weapon, "SetEpicWeaponSpecializationFeat");
         }
 
-        public static void SetGreaterWeaponSpecializationFeat(BaseItem baseItem, FeatType feat)
+        /// Set a feat as epic weapon overwhelming critical for a base item.
+        /// <param name="nBaseItem">The base item id.</param>
+        /// <param name="nFeat">The feat to set.</param>
+        public static void SetEpicWeaponOverwhelmingCriticalFeat(BaseItem nBaseItem, FeatType nFeat)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetGreaterWeaponSpecializationFeat");
-            NWNCore.NativeFunctions.nwnxPushInt((int)feat);
-            NWNCore.NativeFunctions.nwnxPushInt((int)baseItem);
-            NWNCore.NativeFunctions.nwnxCallFunction();
+            NWNXPushInt((int)nFeat);
+            NWNXPushInt((int)nBaseItem);
+            NWNXCall(NWNX_Weapon, "SetEpicWeaponOverwhelmingCriticalFeat");
         }
 
-        public static void SetEpicWeaponSpecializationFeat(BaseItem baseItem, FeatType feat)
+        /// Set a feat as epic weapon devastating critical for a base item.
+        /// <param name="nBaseItem">The base item id.</param>
+        /// <param name="nFeat">The feat to set.</param>
+        public static void SetEpicWeaponDevastatingCriticalFeat(BaseItem nBaseItem, FeatType nFeat)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetEpicWeaponSpecializationFeat");
-            NWNCore.NativeFunctions.nwnxPushInt((int)feat);
-            NWNCore.NativeFunctions.nwnxPushInt((int)baseItem);
-            NWNCore.NativeFunctions.nwnxCallFunction();
+            NWNXPushInt((int)nFeat);
+            NWNXPushInt((int)nBaseItem);
+            NWNXCall(NWNX_Weapon, "SetEpicWeaponDevastatingCriticalFeat");
         }
 
-        public static void SetEpicWeaponOverwhelmingCriticalFeat(BaseItem baseItem, FeatType feat)
+        /// Set a feat as weapon of choice for a base item.
+        /// <param name="nBaseItem">The base item id.</param>
+        /// <param name="nFeat">The feat to set.</param>
+        public static void SetWeaponOfChoiceFeat(BaseItem nBaseItem, FeatType nFeat)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetEpicWeaponOverwhelmingCriticalFeat");
-            NWNCore.NativeFunctions.nwnxPushInt((int)feat);
-            NWNCore.NativeFunctions.nwnxPushInt((int)baseItem);
-            NWNCore.NativeFunctions.nwnxCallFunction();
+            NWNXPushInt((int)nFeat);
+            NWNXPushInt((int)nBaseItem);
+            NWNXCall(NWNX_Weapon, "SetWeaponOfChoiceFeat");
         }
 
-        public static void SetEpicWeaponDevastatingCriticalFeat(BaseItem baseItem, FeatType feat)
+        /// Set a feat as greater weapon specialization for a base item.
+        /// <param name="nBaseItem">The base item id.</param>
+        /// <param name="nFeat">The feat to set.</param>
+        public static void SetGreaterWeaponSpecializationFeat(BaseItem nBaseItem, FeatType nFeat)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetEpicWeaponDevastatingCriticalFeat");
-            NWNCore.NativeFunctions.nwnxPushInt((int)feat);
-            NWNCore.NativeFunctions.nwnxPushInt((int)baseItem);
-            NWNCore.NativeFunctions.nwnxCallFunction();
+            NWNXPushInt((int)nFeat);
+            NWNXPushInt((int)nBaseItem);
+            NWNXCall(NWNX_Weapon, "SetGreaterWeaponSpecializationFeat");
         }
 
-        public static void SetWeaponOfChoiceFeat(BaseItem baseItem, FeatType feat)
+        /// Set a feat as greater weapon focus for a base item.
+        /// <param name="nBaseItem">The base item id.</param>
+        /// <param name="nFeat">The feat to set.</param>
+        public static void SetGreaterWeaponFocusFeat(BaseItem nBaseItem, FeatType nFeat)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetWeaponOfChoiceFeat");
-            NWNCore.NativeFunctions.nwnxPushInt((int)feat);
-            NWNCore.NativeFunctions.nwnxPushInt((int)baseItem);
-            NWNCore.NativeFunctions.nwnxCallFunction();
+            NWNXPushInt((int)nFeat);
+            NWNXPushInt((int)nBaseItem);
+            NWNXCall(NWNX_Weapon, "SetGreaterWeaponFocusFeat");
         }
 
+        /// Set base item as monk weapon.
+        /// <param name="nBaseItem">The base item id.</param>
+        /// @deprecated Use baseitems.2da. This will be removed in future NWNX releases.
+        public static void SetWeaponIsMonkWeapon(BaseItem nBaseItem)
+        {
+            WriteTimestampedLogEntry("NWNX_Weapon_SetWeaponIsMonkWeapon() is deprecated. Please use baseitems.2da instead.");
+            NWNXPushInt((int)nBaseItem);
+            NWNXCall(NWNX_Weapon, "SetWeaponIsMonkWeapon");
+        }
+
+        /// Set plugin options.
+        /// <param name="nOption">The option to change from @ref wpn_opts &quot;Weapon Options&quot;.</param>
+        /// <param name="nVal">The new value of the option.</param>
         public static void SetOption(int nOption, int nVal)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetOption");
-            NWNCore.NativeFunctions.nwnxPushInt(nVal);
-            NWNCore.NativeFunctions.nwnxPushInt(nOption);
-            NWNCore.NativeFunctions.nwnxCallFunction();
+            NWNXPushInt(nVal);
+            NWNXPushInt(nOption);
+            NWNXCall(NWNX_Weapon, "SetOption");
         }
 
+        /// Set Devastating Critical Event Script.
+        /// <param name="sScript">The script to call when a Devastating Critical occurs.</param>
         public static void SetDevastatingCriticalEventScript(string sScript)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetDevastatingCriticalEventScript");
-            NWNCore.NativeFunctions.nwnxPushString(sScript);
-            NWNCore.NativeFunctions.nwnxCallFunction();
+            NWNXPushString(sScript);
+            NWNXCall(NWNX_Weapon, "SetDevastatingCriticalEventScript");
         }
 
-        public static void BypassDevastatingCritical()
+        /// Get Devastating Critical Event Data.
+        /// @note This is only for use with the Devastating Critical Event Script.
+        /// <returns>An NWNX_Weapon_DevastatingCriticalEvent_Data struct.</returns>
+        public static DevastatingCriticalEvent_Data GetDevastatingCriticalEventData()
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetEventData");
-            NWNCore.NativeFunctions.nwnxPushInt(1);
-            NWNCore.NativeFunctions.nwnxPushInt(DC_Bypass);
-            NWNCore.NativeFunctions.nwnxCallFunction();
-        }
-
-        public static DevastatingCriticalData GetDevastatingCriticalEventData()
-        {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "GetEventData");
-            var data = new DevastatingCriticalData();
-            NWNCore.NativeFunctions.nwnxPushInt(GetData_DC);
-            NWNCore.NativeFunctions.nwnxCallFunction();
-            data.Weapon = NWNCore.NativeFunctions.nwnxPopObject();
-            data.Target = NWNCore.NativeFunctions.nwnxPopObject();
-            data.Damage = NWNCore.NativeFunctions.nwnxPopInt();
+            DevastatingCriticalEvent_Data data = default;
+            NWNXPushInt(NWNX_WEAPON_GETDATA_DC);
+            NWNXCall(NWNX_Weapon, "GetEventData");
+            data.oWeapon = NWNXPopObject();
+            data.oTarget = NWNXPopObject();
+            data.nDamage = NWNXPopInt();
             return data;
         }
 
-
-        /// @brief Sets weapon to gain .5 strength bonus.
-        /// @param oWeapon Should be a melee weapon.
-        /// @param nEnable TRUE for bonus. FALSE to turn off bonus.
-        /// @param bPersist whether the two hand state should persist to the gff file.
-        public static void SetOneHalfStrength(uint oWeapon, bool nEnable, bool bPersist = false)
+        /// Bypass Devastating Critical.
+        /// @note This is only for use with the Devastating Critical Event Script.
+        public static void BypassDevastatingCritical()
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetOneHalfStrength");
-
-            NWNCore.NativeFunctions.nwnxPushInt(bPersist ? 1 : 0);
-            NWNCore.NativeFunctions.nwnxPushInt(nEnable ? 1 : 0);
-            NWNCore.NativeFunctions.nwnxPushObject(oWeapon);
-
-            NWNCore.NativeFunctions.nwnxCallFunction();
+            NWNXPushInt(1);
+            NWNXPushInt(NWNX_WEAPON_SETDATA_DC_BYPASS);
+            NWNXCall(NWNX_Weapon, "SetEventData");
         }
 
-        /// @brief Gets if the weapon is set to gain addition .5 strength bonus
-        /// @param oWeapon the weapon
-        /// @return FALSE/0 if weapon is not receiving the bonus. TRUE/1 if it does.
+        /// Sets weapon to gain .5 strength bonus.
+        /// <param name="oWeapon">Should be a melee weapon.</param>
+        /// <param name="nEnable">TRUE for bonus. FALSE to turn off bonus.</param>
+        /// <param name="bPersist">whether the two hand state should persist to the gff file.</param>
+        public static void SetOneHalfStrength(uint oWeapon, int nEnable, int bPersist = 0)
+        {
+            NWNXPushInt(bPersist);
+            NWNXPushInt(nEnable);
+            NWNXPushObject(oWeapon);
+            NWNXCall(NWNX_Weapon, "SetOneHalfStrength");
+        }
+
+        /// Gets if the weapon is set to gain addition .5 strength bonus
+        /// <param name="oWeapon">the weapon</param>
+        /// <returns>FALSE/0 if weapon is not receiving the bonus. TRUE/1 if it does.</returns>
         public static int GetOneHalfStrength(uint oWeapon)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "GetOneHalfStrength");
-            NWNCore.NativeFunctions.nwnxPushObject(oWeapon);
-            NWNCore.NativeFunctions.nwnxCallFunction();
-
-            return NWNCore.NativeFunctions.nwnxPopInt();
+            NWNXPushObject(oWeapon);
+            NWNXCall(NWNX_Weapon, "GetOneHalfStrength");
+            return NWNXPopInt();
         }
 
-        /// @brief Override the max attack distance of ranged weapons.
-        /// @param nBaseItem The baseitem id.
-        /// @param fMax The maximum attack distance. Default is 40.0f.
-        /// @param fMaxPassive The maximum passive attack distance. Default is 20.0f. Seems to be used by the engine to determine a new nearby target when needed.
-        /// @param fPreferred The preferred attack distance. See the PrefAttackDist column in baseitems.2da, default seems to be 30.0f for ranged weapons.
+        /// Override the max attack distance of ranged weapons.
+        /// <param name="nBaseItem">The baseitem id.</param>
+        /// <param name="fMax">The maximum attack distance. Default is 40.0f.</param>
+        /// <param name="fMaxPassive">The maximum passive attack distance. Default is 20.0f. Seems to be used by the engine to determine a new nearby target when needed.</param>
+        /// <param name="fPreferred">The preferred attack distance. See the PrefAttackDist column in baseitems.2da, default seems to be 30.0f for ranged weapons.</param>
         /// @note fMaxPassive should probably be lower than fMax, half of fMax seems to be a good start. fPreferred should be at least ~0.5f lower than fMax.
-        public static void SetMaxRangedAttackDistanceOverride(BaseItem nBaseItem, float fMax, float fMaxPassive, float fPreferred)
+        public static void SetMaxRangedAttackDistanceOverride(int nBaseItem, float fMax, float fMaxPassive, float fPreferred)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetMaxRangedAttackDistanceOverride");
-
-            NWNCore.NativeFunctions.nwnxPushFloat(fPreferred);
-            NWNCore.NativeFunctions.nwnxPushFloat(fMaxPassive);
-            NWNCore.NativeFunctions.nwnxPushFloat(fMax);
-            NWNCore.NativeFunctions.nwnxPushInt((int)nBaseItem);
-
-            NWNCore.NativeFunctions.nwnxCallFunction();
+            NWNXPushFloat(fPreferred);
+            NWNXPushFloat(fMaxPassive);
+            NWNXPushFloat(fMax);
+            NWNXPushInt(nBaseItem);
+            NWNXCall(NWNX_Weapon, "SetMaxRangedAttackDistanceOverride");
         }
+
+        // @}
+    }
+
+    public struct DevastatingCriticalEvent_Data
+    {
+        public uint oWeapon;
+        public uint oTarget;
+        public int nDamage;
     }
 }

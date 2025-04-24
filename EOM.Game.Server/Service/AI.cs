@@ -5,6 +5,7 @@ using EOM.Game.Server.Core;
 using EOM.Game.Server.Core.NWScript.Enum;
 using EOM.Game.Server.Core.NWScript.Enum.VisualEffect;
 using EOM.Game.Server.Entity;
+using EOM.Game.Server.Feature;
 using EOM.Game.Server.Feature.AIBossDefinition.Bosses;
 using EOM.Game.Server.Feature.AIDefinition;
 using EOM.Game.Server.Service.AIService;
@@ -107,6 +108,7 @@ namespace EOM.Game.Server.Service
         public static void CreatureDamaged()
         {
             //Enmity.AttackHighestEnmityTarget(OBJECT_SELF);
+            AttackEffect.PlayEffect(OBJECT_SELF);
             RefreshHealthbar(OBJECT_SELF);
         }
 

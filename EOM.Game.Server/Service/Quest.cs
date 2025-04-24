@@ -127,12 +127,12 @@ namespace EOM.Game.Server.Service
                         Tag = questId,
                         State = playerQuest.CurrentState,
                         Priority = 1,
-                        IsQuestCompleted = false,
-                        IsQuestDisplayed = true,
+                        IsQuestCompleted = 0,
+                        IsQuestDisplayed = 1,
                         Updated = 0,
                         CalendarDay = GetCalendarDay(),
                         TimeOfDay = GetTimeHour()
-                    }, true);
+                    }, 1);
                 }
             });
         }

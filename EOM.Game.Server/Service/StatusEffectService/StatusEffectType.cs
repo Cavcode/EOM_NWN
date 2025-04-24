@@ -79,5 +79,11 @@
         ForceBody2 = 74,
         ForceMind1 = 75,
         ForceMind2 = 76,
+        Ember1 = 77,
+        Ember2 = 78,
+        Ember3 = 79,
+        Ember4 = 80,
+        Ember5 = 81,
+        Trigger = 82
     }
 }

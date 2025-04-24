@@ -3,122 +3,231 @@ using EOM.Game.Server.Core.NWScript.Enum;
 
 namespace EOM.Game.Server.Core.NWNX
 {
-    public static class SkillRanksPlugin
+
+    public class SkillranksPlugin
     {
-        private const string PLUGIN_NAME = "NWNX_SkillRanks";
+        /// @addtogroup skillranks SkillRanks
+        /// Enhances and allows for manipulation of skill rank calculations including the ability to build custom
+        /// skill related feats as well as modifying stock feats.
+        /// @{
+        /// @file nwnx_skillranks.nss
+        public const string NWNX_SkillRanks = "NWNX_SkillRanks";
 
-        public static int GetSkillFeatCountForSkill(FeatType feat)
+        ///&lt; @private
+        /// @name SkillRanks Key Abilities
+        /// @anchor skr_key_abilities
+        ///
+        /// The abilities as bits
+        /// @{
+        public const int NWNX_SKILLRANKS_KEY_ABILITY_STRENGTH = 1;
+
+        ///&lt; Strength
+        public const int NWNX_SKILLRANKS_KEY_ABILITY_DEXTERITY = 2;
+
+        ///&lt; Dexterity
+        public const int NWNX_SKILLRANKS_KEY_ABILITY_CONSTITUTION = 4;
+
+        ///&lt; Constitution
+        public const int NWNX_SKILLRANKS_KEY_ABILITY_INTELLIGENCE = 8;
+
+        ///&lt; Intelligence
+        public const int NWNX_SKILLRANKS_KEY_ABILITY_WISDOM = 16;
+
+        ///&lt; Wisdom
+        public const int NWNX_SKILLRANKS_KEY_ABILITY_CHARISMA = 32;
+
+        ///&lt; Charisma
+        ///@}
+        /// @name SkillRanks Key Ability Calculation Method
+        /// @anchor skr_key_ability_calc_bits
+        ///
+        /// Constants used to calculate the ability modifier for a skill.
+        /// @{
+        /// @warning Use only one of these calculations in your mask! If you use more than one the first will be used.
+        public const int NWNX_SKILLRANKS_KEY_ABILITY_CALC_MIN = 64;
+
+        ///&lt; Use the minimum value of the provided ability scores.
+        public const int NWNX_SKILLRANKS_KEY_ABILITY_CALC_MAX = 128;
+
+        ///&lt; Use the maximum value of the provided ability scores.
+        public const int NWNX_SKILLRANKS_KEY_ABILITY_CALC_AVERAGE = 256;
+
+        ///&lt; Use the average value of the provided ability scores.
+        public const int NWNX_SKILLRANKS_KEY_ABILITY_CALC_SUM = 512;
+
+        ///&lt; Use the sum of the provided ability scores.
+        ///@}
+        /// A feat that manipulates skill ranks.
+        /// <param name="iSkill">The skill to check the feat count.</param>
+        /// <returns>The count of feats for a specific skill.</returns>
+        public static int GetSkillFeatCountForSkill(int iSkill)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "GetSkillFeatCountForSkill");
-            NWNCore.NativeFunctions.nwnxPushInt((int)feat);
-            NWNCore.NativeFunctions.nwnxCallFunction();
-            return NWNCore.NativeFunctions.nwnxPopInt();
+            NWNXPushInt(iSkill);
+            NWNXCall(NWNX_SkillRanks, "GetSkillFeatCountForSkill");
+            return NWNXPopInt();
         }
 
-        public static SkillFeat GetSkillFeatForSkillByIndex(FeatType feat, NWNSkillType skill)
+        /// Returns a skill feat.
+        /// <param name="iSkill">The skill.</param>
+        /// <param name="iFeat">The feat.</param>
+        /// <returns>A constructed NWNX_SkillRanks_SkillFeat.</returns>
+        public static SkillFeat GetSkillFeat(int iSkill, int iFeat)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "GetSkillFeatForSkillByIndex");
-            NWNCore.NativeFunctions.nwnxPushInt((int)feat);
-            NWNCore.NativeFunctions.nwnxPushInt((int)skill);
-            NWNCore.NativeFunctions.nwnxCallFunction();
-            return new SkillFeat
+            NWNXPushInt(iFeat);
+            NWNXPushInt(iSkill);
+            NWNXCall(NWNX_SkillRanks, "GetSkillFeat");
+            SkillFeat skillFeat = default;
+            skillFeat.iSkill = iSkill;
+            skillFeat.iFeat = iFeat;
+            skillFeat.iModifier = NWNXPopInt();
+            skillFeat.iFocusFeat = NWNXPopInt();
+            skillFeat.sClasses = NWNXPopString();
+            skillFeat.fClassLevelMod = NWNXPopFloat();
+            skillFeat.iAreaFlagsRequired = NWNXPopInt();
+            skillFeat.iAreaFlagsForbidden = NWNXPopInt();
+            skillFeat.iDayOrNight = NWNXPopInt();
+            skillFeat.bBypassArmorCheckPenalty = NWNXPopInt();
+            skillFeat.iKeyAbilityMask = NWNXPopInt();
+            return skillFeat;
+        }
+
+        /// Returns a skill feat by index.
+        /// @remark Generally used in a loop with NWNX_SkillRanks_GetSkillFeatCountForSkill().
+        /// <param name="iSkill">The skill.</param>
+        /// <param name="iIndex">The index in the list of feats for the skill.</param>
+        /// <returns>A constructed NWNX_SkillRanks_SkillFeat.</returns>
+        public static SkillFeat GetSkillFeatForSkillByIndex(int iSkill, int iIndex)
+        {
+            NWNXPushInt(iIndex);
+            NWNXPushInt(iSkill);
+            NWNXCall(NWNX_SkillRanks, "GetSkillFeatForSkillByIndex");
+            SkillFeat skillFeat = default;
+            skillFeat.iSkill = iSkill;
+            skillFeat.iFeat = NWNXPopInt();
+            skillFeat.iModifier = NWNXPopInt();
+            skillFeat.iFocusFeat = NWNXPopInt();
+            skillFeat.sClasses = NWNXPopString();
+            skillFeat.fClassLevelMod = NWNXPopFloat();
+            skillFeat.iAreaFlagsRequired = NWNXPopInt();
+            skillFeat.iAreaFlagsForbidden = NWNXPopInt();
+            skillFeat.iDayOrNight = NWNXPopInt();
+            skillFeat.bBypassArmorCheckPenalty = NWNXPopInt();
+            skillFeat.iKeyAbilityMask = NWNXPopInt();
+            return skillFeat;
+        }
+
+        /// Modifies or creates a skill feat.
+        /// <param name="skillFeat">The defined NWNX_SkillRanks_SkillFeat.</param>
+        /// <param name="createIfNonExistent">TRUE to create if the feat does not exist.</param>
+        public static void SetSkillFeat(SkillFeat skillFeat, int createIfNonExistent = 0)
+        {
+            NWNXPushInt(createIfNonExistent);
+            NWNXPushInt(skillFeat.iKeyAbilityMask);
+            NWNXPushInt(skillFeat.bBypassArmorCheckPenalty);
+            NWNXPushInt(skillFeat.iDayOrNight);
+            NWNXPushInt(skillFeat.iAreaFlagsForbidden);
+            NWNXPushInt(skillFeat.iAreaFlagsRequired);
+            NWNXPushFloat(skillFeat.fClassLevelMod);
+            NWNXPushString(GetStringRight(skillFeat.sClasses, GetStringLength(skillFeat.sClasses) - FindSubString(skillFeat.sClasses, "1")));
+            NWNXPushInt(skillFeat.iFocusFeat);
+            NWNXPushInt(skillFeat.iModifier);
+            NWNXPushInt(skillFeat.iFeat);
+            NWNXPushInt(skillFeat.iSkill);
+            NWNXCall(NWNX_SkillRanks, "SetSkillFeat");
+        }
+
+        /// Add classes to a skill feat instead of working with the NWNX_SkillRanks_SkillFeat::sClasses string.
+        ///
+        /// Manipulating the sClasses string in the NWNX_SkillRanks_SkillFeat struct can be difficult. This
+        /// function allows the builder to enter one class at a time.
+        /// <param name="skillFeat">The NWNX_SkillRanks_SkillFeat for which the sClasses field will be modifier.</param>
+        /// <param name="iClass">The class to add to the Skill Feat.</param>
+        /// <returns>The updated NWNX_SkillRanks_SkillFeat.</returns>
+        public static SkillFeat AddSkillFeatClass(SkillFeat skillFeat, int iClass)
+        {
+            if (GetStringLength(skillFeat.sClasses) < 255)
             {
-                skill = (int)skill,
-                feat = NWNCore.NativeFunctions.nwnxPopInt(),
-                modifier = NWNCore.NativeFunctions.nwnxPopInt(),
-                focusFeat = NWNCore.NativeFunctions.nwnxPopInt(),
-                classes = NWNCore.NativeFunctions.nwnxPopString(),
-                classLevelMod = NWNCore.NativeFunctions.nwnxPopFloat(),
-                areaFlagsRequired = NWNCore.NativeFunctions.nwnxPopInt(),
-                areaFlagsForbidden = NWNCore.NativeFunctions.nwnxPopInt(),
-                dayOrNight = NWNCore.NativeFunctions.nwnxPopInt(),
-                bypassArmorCheckPenalty = NWNCore.NativeFunctions.nwnxPopInt(),
-                keyAbilityMask = NWNCore.NativeFunctions.nwnxPopInt()
-            };
+                int i;
+                string sPad = "";
+                for (i = 0; i < 255 - GetStringLength(skillFeat.sClasses); i++)
+                {
+                    sPad = sPad + "0";
+                }
+                skillFeat.sClasses = sPad + skillFeat.sClasses;
+            }
+            skillFeat.sClasses = GetStringLeft(skillFeat.sClasses, 254 - iClass) + "1" + GetStringRight(skillFeat.sClasses, iClass);
+            return skillFeat;
         }
 
-        public static SkillFeat GetSkillFeat(FeatType feat, NWNSkillType skill)
+        /// Change the modifier value for Skill Focus and Epic Skill Focus feats.
+        ///
+        /// The stock modifier on Skill Focus and Epic Skill Focus are 3 and 10 respectively, these can be
+        /// changed with this function.
+        /// <param name="iModifier">The new value for the feat modifier.</param>
+        /// <param name="iEpic">Set to TRUE to change the value for Epic Skill Focus.</param>
+        public static void SetSkillFeatFocusModifier(int iModifier, int epicFocus = 0)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "GetSkillFeat");
-            NWNCore.NativeFunctions.nwnxPushInt((int)feat);
-            NWNCore.NativeFunctions.nwnxPushInt((int)skill);
-            NWNCore.NativeFunctions.nwnxCallFunction();
-            return new SkillFeat
-            {
-                skill = (int)skill,
-                feat = (int)feat,
-                modifier = NWNCore.NativeFunctions.nwnxPopInt(),
-                focusFeat = NWNCore.NativeFunctions.nwnxPopInt(),
-                classes = NWNCore.NativeFunctions.nwnxPopString(),
-                classLevelMod = NWNCore.NativeFunctions.nwnxPopFloat(),
-                areaFlagsRequired = NWNCore.NativeFunctions.nwnxPopInt(),
-                areaFlagsForbidden = NWNCore.NativeFunctions.nwnxPopInt(),
-                dayOrNight = NWNCore.NativeFunctions.nwnxPopInt(),
-                bypassArmorCheckPenalty = NWNCore.NativeFunctions.nwnxPopInt(),
-                keyAbilityMask = NWNCore.NativeFunctions.nwnxPopInt()
-            };
+            NWNXPushInt(epicFocus);
+            NWNXPushInt(iModifier);
+            NWNXCall(NWNX_SkillRanks, "SetSkillFeatFocusModifier");
         }
 
-        public static void SetSkillFeat(SkillFeat skillFeat, bool createIfNonExistent = false)
-        {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetSkillFeat");
-            NWNCore.NativeFunctions.nwnxPushInt(createIfNonExistent ? 1 : 0);
-            NWNCore.NativeFunctions.nwnxPushInt(skillFeat.keyAbilityMask);
-            NWNCore.NativeFunctions.nwnxPushInt(skillFeat.bypassArmorCheckPenalty);
-            NWNCore.NativeFunctions.nwnxPushInt(skillFeat.dayOrNight);
-            NWNCore.NativeFunctions.nwnxPushInt(skillFeat.areaFlagsForbidden);
-            NWNCore.NativeFunctions.nwnxPushInt(skillFeat.areaFlagsRequired);
-            NWNCore.NativeFunctions.nwnxPushFloat(skillFeat.classLevelMod);
-            // We only need to send the string from the point of the first set bit
-            NWNCore.NativeFunctions.nwnxPushString(
-                skillFeat.classes!.Substring(skillFeat.classes!.Length - skillFeat.classes!.IndexOf("1"),
-                    skillFeat.classes.Length));
-            NWNCore.NativeFunctions.nwnxPushInt(skillFeat.focusFeat);
-            NWNCore.NativeFunctions.nwnxPushInt(skillFeat.modifier);
-            NWNCore.NativeFunctions.nwnxPushInt(skillFeat.feat);
-            NWNCore.NativeFunctions.nwnxPushInt(skillFeat.skill);
-            NWNCore.NativeFunctions.nwnxCallFunction();
-        }
-
-        public static void SetSkillFeatFocusModifier(int modifier, bool epicFocus = false)
-        {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetSkillFeatFocusModifier");
-            NWNCore.NativeFunctions.nwnxPushInt(epicFocus ? 1 : 0);
-            NWNCore.NativeFunctions.nwnxPushInt(modifier);
-            NWNCore.NativeFunctions.nwnxCallFunction();
-        }
-
+        /// Gets the current penalty to Dexterity based skills when blind.
+        /// <returns>The penalty to Dexterity when blind.</returns>
         public static int GetBlindnessPenalty()
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "GetBlindnessPenalty");
-            NWNCore.NativeFunctions.nwnxCallFunction();
-            return NWNCore.NativeFunctions.nwnxPopInt();
+            NWNXCall(NWNX_SkillRanks, "GetBlindnessPenalty");
+            return NWNXPopInt();
         }
 
-        public static void SetBlindnessPenalty(int modifier)
+        /// Set the value the Dexterity based skills get decreased due to blindness.
+        /// @remark Default is 4.
+        /// <param name="iModifier">The penalty to Dexterity when blind.</param>
+        public static void SetBlindnessPenalty(int iModifier)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetBlindnessPenalty");
-            NWNCore.NativeFunctions.nwnxPushInt(modifier);
-            NWNCore.NativeFunctions.nwnxCallFunction();
+            NWNXPushInt(iModifier);
+            NWNXCall(NWNX_SkillRanks, "SetBlindnessPenalty");
         }
 
-
-        public static int GetAreaModifier(uint area, NWNSkillType skill)
+        /// Get a skill modifier for an area.
+        /// <param name="oArea">The area.</param>
+        /// <param name="iSkill">The skill to check.</param>
+        /// <returns>The modifier to that skill in the area.</returns>
+        public static int GetAreaModifier(uint oArea, int iSkill)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "GetAreaModifier");
-            NWNCore.NativeFunctions.nwnxPushInt((int)skill);
-            NWNCore.NativeFunctions.nwnxPushObject(area);
-            NWNCore.NativeFunctions.nwnxCallFunction();
-            return NWNCore.NativeFunctions.nwnxPopInt();
+            NWNXPushInt(iSkill);
+            NWNXPushObject(oArea);
+            NWNXCall(NWNX_SkillRanks, "GetAreaModifier");
+            return NWNXPopInt();
         }
 
-        public static void SetAreaModifier(uint area, NWNSkillType skill, int modifier)
+        /// Sets a skill modifier for the area.
+        /// <param name="oArea">The area.</param>
+        /// <param name="iSkill">The skill to change.</param>
+        /// <param name="iModifier">The modifier to the skill in the area.</param>
+        public static void SetAreaModifier(uint oArea, int iSkill, int iModifier)
         {
-            NWNCore.NativeFunctions.nwnxSetFunction(PLUGIN_NAME, "SetAreaModifier");
-            NWNCore.NativeFunctions.nwnxPushInt(modifier);
-            NWNCore.NativeFunctions.nwnxPushInt((int)skill);
-            NWNCore.NativeFunctions.nwnxPushObject(area);
-            NWNCore.NativeFunctions.nwnxCallFunction();
+            NWNXPushInt(iModifier);
+            NWNXPushInt(iSkill);
+            NWNXPushObject(oArea);
+            NWNXCall(NWNX_SkillRanks, "SetAreaModifier");
         }
+
+        // @}
+    }
+
+    public struct SkillFeat
+    {
+        public int iSkill;
+        public int iFeat;
+        public int iModifier;
+        public int iFocusFeat;
+        public string sClasses;
+        public float fClassLevelMod;
+        public int iAreaFlagsRequired;
+        public int iAreaFlagsForbidden;
+        public int iDayOrNight;
+        public int bBypassArmorCheckPenalty;
+        public int iKeyAbilityMask;
     }
 }

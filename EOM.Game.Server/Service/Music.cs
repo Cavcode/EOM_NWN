@@ -77,8 +77,8 @@ namespace EOM.Game.Server.Service
             var area = OBJECT_SELF;
             var battleThemeId = dbPlayer.Settings.BattleThemeId ?? MusicBackgroundGetBattleTrack(area);
 
-            PlayerPlugin.MusicBackgroundChangeTimeToggle(player, MusicBackgroundGetDayTrack(area), false);
-            PlayerPlugin.MusicBackgroundChangeTimeToggle(player, MusicBackgroundGetNightTrack(area), true);
+            PlayerPlugin.MusicBackgroundChangeDay(player, MusicBackgroundGetDayTrack(area));
+            PlayerPlugin.MusicBackgroundChangeNight(player, MusicBackgroundGetNightTrack(area));
             PlayerPlugin.MusicBattleChange(player, battleThemeId);
         }
 

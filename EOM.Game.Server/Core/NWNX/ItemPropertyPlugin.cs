@@ -3,83 +3,86 @@ using EOM.Game.Server.Core.NWNX.Enum;
 
 namespace EOM.Game.Server.Core.NWNX
 {
-    public static class ItemPropertyPlugin
+
+    public class ItempropPlugin
     {
-        private const string PLUGIN_NAME = "NWNX_ItemProperty";
+        /// @addtogroup itemproperty ItemProperty
+        /// Utility functions to manipulate the builtin itemproperty type.
+        /// @{
+        /// @file nwnx_itemprop.nss
+        public const string NWNX_ItemProperty = "NWNX_ItemProperty";
 
-        // Convert native itemproperty type to unpacked structure
-        public static ItemPropertyUnpacked UnpackIP(Core.ItemProperty ip)
+        ///&lt; @private
+        /// An unpacked itemproperty.
+        /// Convert native itemproperty type to unpacked structure.
+        /// <param name="ip">The itemproperty to convert.</param>
+        /// <returns>A constructed NWNX_IPUnpacked.</returns>
+        public static ItemPropertyUnpacked UnpackIP(System.IntPtr ip)
         {
-            const string func = "UnpackIP";
-
-            NWNXCore.NWNX_PushArgumentItemProperty(ip);
-            NWNXCore.NWNX_CallFunction(PLUGIN_NAME, func);
-
-            return new ItemPropertyUnpacked
-            {
-                Id = NWNXCore.NWNX_GetReturnValueString(),
-                Property = NWNXCore.NWNX_GetReturnValueInt(),
-                SubType = NWNXCore.NWNX_GetReturnValueInt(),
-                CostTable = NWNXCore.NWNX_GetReturnValueInt(),
-                CostTableValue = NWNXCore.NWNX_GetReturnValueInt(),
-                Param1 = NWNXCore.NWNX_GetReturnValueInt(),
-                Param1Value = NWNXCore.NWNX_GetReturnValueInt(),
-                UsesPerDay = NWNXCore.NWNX_GetReturnValueInt(),
-                ChanceToAppear = NWNXCore.NWNX_GetReturnValueInt(),
-                IsUseable = Convert.ToBoolean(NWNXCore.NWNX_GetReturnValueInt()),
-                SpellId = NWNXCore.NWNX_GetReturnValueInt(),
-                Creator = NWNXCore.NWNX_GetReturnValueObject(),
-                Tag = NWNXCore.NWNX_GetReturnValueString()
-            };
+            NWNXPushItemProperty(ip);
+            NWNXCall(NWNX_ItemProperty, "UnpackIP");
+            ItemPropertyUnpacked n = default;
+            n.Id = NWNXPopString();
+            n.Property = NWNXPopInt();
+            n.SubType = NWNXPopInt();
+            n.CostTable = NWNXPopInt();
+            n.CostTableValue = NWNXPopInt();
+            n.Param1 = NWNXPopInt();
+            n.Param1Value = NWNXPopInt();
+            n.UsesPerDay = NWNXPopInt();
+            n.ChanceToAppear = NWNXPopInt();
+            n.IsUseable = Convert.ToBoolean(NWNXPopInt());
+            n.SpellId = NWNXPopInt();
+            n.Creator = NWNXPopObject();
+            n.Tag = NWNXPopString();
+            return n;
         }
 
-        // Convert unpacked itemproperty structure to native type.
-        public static Core.ItemProperty PackIP(ItemPropertyUnpacked itemProperty)
+        /// Convert unpacked itemproperty structure to native type.
+        /// <param name="ip">The NWNX_IPUnpacked structure to convert.</param>
+        /// <returns>The itemproperty.</returns>
+        public static System.IntPtr PackIP(ItemPropertyUnpacked n)
         {
-            const string sFunc = "PackIP";
-
-            NWNXCore.NWNX_PushArgumentString(itemProperty.Tag);
-            NWNXCore.NWNX_PushArgumentObject(itemProperty.Creator);
-            NWNXCore.NWNX_PushArgumentInt(itemProperty.SpellId);
-            NWNXCore.NWNX_PushArgumentInt(itemProperty.IsUseable ? 1 : 0);
-            NWNXCore.NWNX_PushArgumentInt(itemProperty.ChanceToAppear);
-            NWNXCore.NWNX_PushArgumentInt(itemProperty.UsesPerDay);
-            NWNXCore.NWNX_PushArgumentInt(itemProperty.Param1Value);
-            NWNXCore.NWNX_PushArgumentInt(itemProperty.Param1);
-            NWNXCore.NWNX_PushArgumentInt(itemProperty.CostTableValue);
-            NWNXCore.NWNX_PushArgumentInt(itemProperty.CostTable);
-            NWNXCore.NWNX_PushArgumentInt(itemProperty.SubType);
-            NWNXCore.NWNX_PushArgumentInt(itemProperty.Property);
-
-            NWNXCore.NWNX_CallFunction(PLUGIN_NAME, sFunc);
-            return NWNXCore.NWNX_GetReturnValueItemProperty();
+            NWNXPushString(n.Tag);
+            NWNXPushObject(n.Creator);
+            NWNXPushInt(n.SpellId);
+            NWNXPushInt(Convert.ToInt32(n.IsUseable));
+            NWNXPushInt(n.ChanceToAppear);
+            NWNXPushInt(n.UsesPerDay);
+            NWNXPushInt(n.Param1Value);
+            NWNXPushInt(n.Param1);
+            NWNXPushInt(n.CostTableValue);
+            NWNXPushInt(n.CostTable);
+            NWNXPushInt(n.SubType);
+            NWNXPushInt(n.Property);
+            NWNXCall(NWNX_ItemProperty, "PackIP");
+            return NWNXPopItemProperty();
         }
 
-        /// @brief Gets the active item property at the index
-        /// @param oItem - the item with the property
-        /// @param nIndex - the index such as returned by some Item Events
-        /// @return A constructed NWNX_IPUnpacked, except for creator, and spell id.
+        /// Gets the active item property at the index
+        /// <param name="oItem">- the item with the property</param>
+        /// <param name="nIndex">- the index such as returned by some Item Events</param>
+        /// <returns>A constructed NWNX_IPUnpacked, except for creator, and spell id.</returns>
         public static ItemPropertyUnpacked GetActiveProperty(uint oItem, int nIndex)
         {
-            const string sFunc = "GetActiveProperty";
-
-            NWNXCore.NWNX_PushArgumentInt(nIndex);
-            NWNXCore.NWNX_PushArgumentObject(oItem);
-            NWNXCore.NWNX_CallFunction(PLUGIN_NAME, sFunc);
-
-            return new ItemPropertyUnpacked
-            {
-                Property = NWNXCore.NWNX_GetReturnValueInt(),
-                SubType = NWNXCore.NWNX_GetReturnValueInt(),
-                CostTable = NWNXCore.NWNX_GetReturnValueInt(),
-                CostTableValue = NWNXCore.NWNX_GetReturnValueInt(),
-                Param1 = NWNXCore.NWNX_GetReturnValueInt(),
-                Param1Value = NWNXCore.NWNX_GetReturnValueInt(),
-                UsesPerDay = NWNXCore.NWNX_GetReturnValueInt(),
-                ChanceToAppear = NWNXCore.NWNX_GetReturnValueInt(),
-                IsUseable = Convert.ToBoolean(NWNXCore.NWNX_GetReturnValueInt()),
-                Tag = NWNXCore.NWNX_GetReturnValueString()
-            };
+            NWNXPushInt(nIndex);
+            NWNXPushObject(oItem);
+            NWNXCall(NWNX_ItemProperty, "GetActiveProperty");
+            ItemPropertyUnpacked n = default;
+            n.Property = NWNXPopInt();
+            n.SubType = NWNXPopInt();
+            n.CostTable = NWNXPopInt();
+            n.CostTableValue = NWNXPopInt();
+            n.Param1 = NWNXPopInt();
+            n.Param1Value = NWNXPopInt();
+            n.UsesPerDay = NWNXPopInt();
+            n.ChanceToAppear = NWNXPopInt();
+            n.IsUseable = Convert.ToBoolean(NWNXPopInt());
+            n.Tag = NWNXPopString();
+            return n;
         }
+
+        // @}
     }
+
 }

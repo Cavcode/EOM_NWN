@@ -23,6 +23,102 @@ namespace EOM.Game.Server.Service
         /// </summary>
         private static readonly Dictionary<uint, HashSet<uint>> _playerToCreatureTracker = new();
 
+        // Clears the combat point cache information for an NPC and all player associated.
+        public static void CleanUpCombatPointsBoss(uint npc)
+        {
+
+            if (_creatureCombatPointTracker.ContainsKey(npc))
+            {
+                // Remove references from the player-to-npc cache.
+                foreach (var playerId in _creatureCombatPointTracker[npc].Keys)
+                {
+                    RemovePlayerToNPCReferenceFromCache(playerId, npc);
+                }
+
+                _creatureCombatPointTracker.Remove(npc);
+            }
+        }
+        public static void DistributeSkillXPBoss(uint npc)
+        {
+            var combatPoints = _creatureCombatPointTracker.ContainsKey(npc) ? _creatureCombatPointTracker[npc] : null;
+            if (combatPoints == null) return;
+
+            var npcStats = Stat.GetNPCStats(npc);
+            var npcLevel = npcStats.Level;
+
+            foreach (var (player, cpList) in combatPoints)
+            {
+                if (!GetIsObjectValid(player) ||
+                    !GetIsPC(player) ||
+                    GetIsDM(player) ||
+                    GetDistanceBetween(player, npc) > 40.0f ||
+                    GetArea(player) != GetArea(npc))
+                    continue;
+
+                var playerId = GetObjectUUID(player);
+                var dbPlayer = DB.Get<Player>(playerId);
+
+                // Filter the skills list down to just those with combat points (CP)
+                var skillsWithCP = dbPlayer
+                    .Skills
+                    .Where(x => cpList.ContainsKey(x.Key))
+                    .ToDictionary(x => x.Key, y => y.Value);
+
+                var areaBonus = GetLocalInt(GetArea(npc), "AREA_XP_BONUS_PERCENTAGE") * 0.01f;
+
+                foreach (CombatPointCategoryType cpCategory in Enum.GetValues(typeof(CombatPointCategoryType)))
+                {
+                    var validSkills = skillsWithCP
+                        .Where(x => Skill.GetSkillDetails(x.Key).CombatPointCategory == cpCategory)
+                        .ToDictionary(x => x.Key, y => y.Value);
+
+                    // Base amount of XP is determined by the player's highest-leveled skill rank in each XP category versus the creature's level.
+                    if (cpCategory != CombatPointCategoryType.Exempt)
+                    {
+                        var validCPs = cpList
+                            .Where(x => Skill.GetSkillDetails(x.Key).CombatPointCategory == cpCategory)
+                            .ToList();
+                        if (!validCPs.Any()) continue;
+                        if (!validSkills.Any()) continue;
+
+                        var highestRank = validSkills
+                            .OrderByDescending(o => o.Value.Rank)
+                            .Select(s => s.Value.Rank)
+                            .First();
+
+                        var xpDelta = npcLevel - highestRank;
+                        var baseXP = Skill.GetDeltaXP(xpDelta);
+                        var totalCatCP = (float)validCPs
+                            .Sum(s => s.Value);
+
+                        // Each skill used during combat receives a percentage of the baseXP amount depending on the number of combat points earned.
+                        // The percentage is based on XP category, see CombatPointCategory
+
+                        foreach (var (skillType, cp) in validCPs)
+                        {
+                            var adjXP = baseXP * (cp / totalCatCP);
+                            adjXP += adjXP * areaBonus;
+                            Skill.GiveSkillXP(player, skillType, (int)adjXP);
+                        }
+                    }
+                    else
+                    {
+                        if (!validSkills.Any()) continue;
+
+                        foreach (var (skillType, ps) in validSkills)
+                        {
+                            float adjXP = Skill.GetDeltaXP(npcLevel - ps.Rank);
+                            adjXP += adjXP * areaBonus;
+                            Skill.GiveSkillXP(player, skillType, (int)adjXP);
+                        }
+                    }
+                }
+
+                EventsPlugin.PushEventData("NPC", ObjectToString(npc));
+                EventsPlugin.SignalEvent("EOM_COMBAT_POINT_DISTRIBUTED", player);
+            }
+        }
+
         /// <summary>
         /// Adds a combat point to a given NPC creature for a given player and skill type.
         /// </summary>
@@ -72,7 +168,7 @@ namespace EOM.Game.Server.Service
 
             // When a creature is killed, XP is calculated based on the combat points earned by each player.
             // This XP is distributed into skills which received the highest usage during the battle.
-            static void DistributeSkillXP()
+             static void DistributeSkillXP()
             {
                 var npc = OBJECT_SELF;
 

@@ -480,20 +480,12 @@ namespace EOM.Game.Server.Service
         /// </summary>
         /// <param name="attacker">The attacker to check</param>
         /// <returns>The DMG value or 0 if requirements are not met.</returns>
-        public static int GetDoublehandDMGBonusNative(CNWSCreature attacker)
+        public static int GetPowerfulGripDMGBonusNative(CNWSCreature attacker)
         {
             var dmg = 0;
 
-            if (attacker.m_pStats.HasFeat((ushort)FeatType.Doublehand5) == 1)
-                dmg = 19;
-            else if (attacker.m_pStats.HasFeat((ushort)FeatType.Doublehand4) == 1)
-                dmg = 14;
-            else if (attacker.m_pStats.HasFeat((ushort)FeatType.Doublehand3) == 1)
-                dmg = 10;
-            else if (attacker.m_pStats.HasFeat((ushort)FeatType.Doublehand2) == 1)
-                dmg = 6;
-            else if (attacker.m_pStats.HasFeat((ushort)FeatType.Doublehand1) == 1)
-                dmg = 2;
+            if (attacker.m_pStats.HasFeat((ushort)FeatType.PowerfulGrip) == 1)
+                dmg = 20;
 
             return dmg;
         }
