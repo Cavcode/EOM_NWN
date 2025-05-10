@@ -1,0 +1,583 @@
+#MAXMODEL ASCII
+# model: vdr_movquick
+filedependancy vdr_movquick.max
+newmodel vdr_movquick
+setsupermodel vdr_movquick NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vdr_movquick
+node dummy vdr_movquick
+  parent NULL
+endnode
+node dummy Dummy01
+  parent vdr_movquick
+  position 0 0 0.581702
+  orientation 0 -1 0 -3.14159
+endnode
+node emitter OmenEmitter03
+  parent Dummy01
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_ring02
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -1.18775 0.00397119 -1.39093
+  orientation 0 -0.7071068 0.7071068 -3.14159
+  colorStart 0.6 0.4 0.2
+  colorEnd 0.6 0.4 0.2
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.2
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 60
+  lifeExp 0.6
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter01
+  parent Dummy01
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_ring02
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.0039713 1.18775 -0.403313
+  orientation 0.5773503 0.5773503 -0.5773503 -2.0944
+  colorStart 0.6 0.4 0.2
+  colorEnd 0.6 0.4 0.2
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.2
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 50
+  lifeExp 0.6
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node dummy Dummy02
+  parent vdr_movquick
+  position 0 0 0.248778
+  orientation 0 0 1 -3.14159
+endnode
+node emitter OmenEmitter02
+  parent Dummy02
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_ring02
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 1.19308 -0.00397119 1.05619
+  orientation 0 -0.7071068 -0.7071068 -3.14159
+  colorStart 0.6 0.4 0.2
+  colorEnd 0.6 0.4 0.2
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.2
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 60
+  lifeExp 0.6
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter04
+  parent Dummy02
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_ring02
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.00397112 1.19308 1.45859
+  orientation -0.5773503 0.5773503 0.5773503 -2.0944
+  colorStart 0.6 0.4 0.2
+  colorEnd 0.6 0.4 0.2
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.2
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 50
+  lifeExp 0.6
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter05
+  parent Dummy02
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_StarBnW
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.00397108 0.755363 1.28301
+  orientation -0.5773503 0.5773503 0.5773503 -2.0944
+  colorStart 0.6 0.4 0.2
+  colorEnd 0.6 0.4 0.2
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.2
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 20
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 12
+  xsize 100
+  ysize 150
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter06
+  parent Dummy02
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_StarBnW
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.00397101 -0.664397 1.28301
+  orientation -0.5773503 0.5773503 0.5773503 -2.0944
+  colorStart 0.6 0.4 0.2
+  colorEnd 0.6 0.4 0.2
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.2
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 20
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 12
+  xsize 100
+  ysize 150
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom vdr_movquick
+
+#MAXANIM ASCII
+newanim impact vdr_movquick
+  length 1.7
+  transtime 0.25
+  animroot vdr_movquick
+  node dummy vdr_movquick
+    parent NULL
+  endnode
+  node dummy Dummy01
+    parent vdr_movquick
+    orientationkey 5
+         0.0000000   -0.0000000   -1.0000000   -0.0000000   -3.1415901
+         0.4333330    0.7071068   -0.7071068   -0.0000000   -3.1415901
+         0.8666670    1.0000000   -0.0000000   -0.0000000   -3.1415901
+         1.3000000    0.7071068    0.7071068   -0.0000000   -3.1415901
+         1.7000000   -0.0000000    1.0000000   -0.0000000   -3.1415901
+  endnode
+  node emitter OmenEmitter03
+    parent Dummy01
+    birthratekey 3
+         0.0000000   60.0000000
+         1.6666700   60.0000000
+         1.7000000   60.0000000
+  endnode
+  node emitter OmenEmitter01
+    parent Dummy01
+    birthratekey 3
+         0.0000000   50.0000000
+         1.6666700   50.0000000
+         1.7000000   50.0000000
+  endnode
+  node dummy Dummy02
+    parent vdr_movquick
+    orientationkey 5
+         0.0000000   -0.0000000   -0.0000000    1.0000000   -3.1415901
+         0.4333330   -0.0000000   -0.0000000    1.0000000   -4.7123899
+         0.8666670    0.0000000    0.0000000    0.0000000    0.0000000
+         1.3000000   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+         1.7000000   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+  endnode
+  node emitter OmenEmitter02
+    parent Dummy02
+    birthratekey 3
+         0.0000000   60.0000000
+         1.6666700   60.0000000
+         1.7000000   60.0000000
+  endnode
+  node emitter OmenEmitter04
+    parent Dummy02
+    birthratekey 3
+         0.0000000   50.0000000
+         1.6666700   50.0000000
+         1.7000000   50.0000000
+  endnode
+  node emitter OmenEmitter05
+    parent Dummy02
+    birthratekey 3
+         0.0000000   20.0000000
+         1.6666700   20.0000000
+         1.7000000   20.0000000
+  endnode
+  node emitter OmenEmitter06
+    parent Dummy02
+    birthratekey 3
+         0.0000000   20.0000000
+         1.6666700   20.0000000
+         1.7000000   20.0000000
+  endnode
+doneanim impact vdr_movquick
+
+#MAXANIM ASCII
+newanim duration vdr_movquick
+  length 1.7
+  transtime 0.25
+  animroot vdr_movquick
+  node dummy vdr_movquick
+    parent NULL
+  endnode
+  node dummy Dummy01
+    parent vdr_movquick
+    orientationkey 5
+         0.0000000   -0.0000000   -1.0000000   -0.0000000   -3.1415901
+         0.4333330    0.7071068   -0.7071068   -0.0000000   -3.1415901
+         0.8666670    1.0000000   -0.0000000   -0.0000000   -3.1415901
+         1.3000000    0.7071068    0.7071068   -0.0000000   -3.1415901
+         1.7000000   -0.0000000    1.0000000   -0.0000000   -3.1415901
+  endnode
+  node emitter OmenEmitter03
+    parent Dummy01
+    birthratekey 3
+         0.0000000   60.0000000
+         1.6666700   60.0000000
+         1.7000000   60.0000000
+  endnode
+  node emitter OmenEmitter01
+    parent Dummy01
+    birthratekey 3
+         0.0000000   50.0000000
+         1.6666700   50.0000000
+         1.7000000   50.0000000
+  endnode
+  node dummy Dummy02
+    parent vdr_movquick
+    orientationkey 5
+         0.0000000   -0.0000000   -0.0000000    1.0000000   -3.1415901
+         0.4333330   -0.0000000   -0.0000000    1.0000000   -4.7123899
+         0.8666670    0.0000000    0.0000000    0.0000000    0.0000000
+         1.3000000   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+         1.7000000   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+  endnode
+  node emitter OmenEmitter02
+    parent Dummy02
+    birthratekey 3
+         0.0000000   60.0000000
+         1.6666700   60.0000000
+         1.7000000   60.0000000
+  endnode
+  node emitter OmenEmitter04
+    parent Dummy02
+    birthratekey 3
+         0.0000000   50.0000000
+         1.6666700   50.0000000
+         1.7000000   50.0000000
+  endnode
+  node emitter OmenEmitter05
+    parent Dummy02
+    birthratekey 3
+         0.0000000   20.0000000
+         1.6666700   20.0000000
+         1.7000000   20.0000000
+  endnode
+  node emitter OmenEmitter06
+    parent Dummy02
+    birthratekey 3
+         0.0000000   20.0000000
+         1.6666700   20.0000000
+         1.7000000   20.0000000
+  endnode
+doneanim duration vdr_movquick
+
+#MAXANIM ASCII
+newanim cessation vdr_movquick
+  length 0.933333
+  transtime 0.25
+  animroot vdr_movquick
+  node dummy vdr_movquick
+    parent NULL
+  endnode
+  node dummy Dummy01
+    parent vdr_movquick
+    orientationkey 2
+         0.0000000   -0.0000000    1.0000000   -0.0000000   -3.1415901
+         0.9333330   -0.7071068    0.7071068   -0.0000000   -3.1415901
+  endnode
+  node emitter OmenEmitter03
+    parent Dummy01
+    birthratekey 2
+         0.0000000   60.0000000
+         0.2666670    0.0000000
+  endnode
+  node emitter OmenEmitter01
+    parent Dummy01
+    birthratekey 2
+         0.0000000   50.0000000
+         0.2666670    0.0000000
+  endnode
+  node dummy Dummy02
+    parent vdr_movquick
+    orientationkey 2
+         0.0000000   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+         0.9333330   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+  endnode
+  node emitter OmenEmitter02
+    parent Dummy02
+    birthratekey 2
+         0.0000000   60.0000000
+         0.2666670    0.0000000
+  endnode
+  node emitter OmenEmitter04
+    parent Dummy02
+    birthratekey 2
+         0.0000000   50.0000000
+         0.2666670    0.0000000
+  endnode
+  node emitter OmenEmitter05
+    parent Dummy02
+    birthratekey 2
+         0.0000000   20.0000000
+         0.2666670    0.0000000
+  endnode
+  node emitter OmenEmitter06
+    parent Dummy02
+    birthratekey 2
+         0.0000000   20.0000000
+         0.2666670    0.0000000
+  endnode
+doneanim cessation vdr_movquick
+
+donemodel vdr_movquick

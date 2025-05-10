@@ -1,0 +1,304 @@
+# Exported from NWmax 0.8 b60 at 6/27/2011 8:01:15 PM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: vfx_fired
+#local file: Unknown
+filedependancy Unknown
+newmodel vfx_fired
+setsupermodel vfx_fired NULL
+classification Effect
+#NWmax GEOM  ASCII
+beginmodelgeom vfx_fired
+node dummy vfx_fired
+  parent NULL
+endnode
+node emitter OmenEmitter022
+  parent vfx_fired
+  position 0.0 0.431362 0.544191
+  orientation 1.0 0.0 0.0 -6.24839
+  wirecolor 1.0 1.0 1.0 
+  update_sel 1
+  update Fountain
+  render_sel 7
+  render Motion_Blur
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 0
+  spawnType 0
+  xSize 400.0
+  ySize 400.0
+  inherit 0
+  inherit_local 1
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 6.37991e-005
+  opacity 0.5
+  colorStart 1.0 0.00784314 0.00784314 
+  colorEnd 1.0 0.541176 0.0509804 
+  alphaStart 0.0
+  alphaEnd 1.0
+  sizeStart 0.2
+  sizeEnd 0.15
+  sizeStart_y 0.0
+  sizeEnd_y 5.0
+  birthrate 200
+  lifeExp 0.5
+  mass 0.0
+  spread 0.0
+  particleRot 0.0
+  velocity 50.0
+  randvel 1.0
+  bounce_co 0.0
+  blurlength 10.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  Splat 0
+  affectedByWind false
+  texture fxpa_flare
+  twosidedtex 0
+  xgrid 1
+  ygrid 1
+  fps 0
+  framestart 0
+  frameend 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 3.0
+  Drag 0.4
+endnode
+node light AuroraLight01
+  parent vfx_fired
+  position 0.00116925 0.0549327 0.835827
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 1.0 1.0 1.0 
+  radius 5.0
+  multiplier 1.0
+  color 0.941177 0.376471 0.0 
+  ambientonly 1
+  nDynamicType 0
+  affectDynamic 1
+  shadow 0
+  lightpriority 3
+  fadingLight 1
+endnode
+node emitter Splat
+  parent vfx_fired
+  position 0.0 -0.152803 17.3228
+  orientation 1.0 0.0 0.0 -3.1068
+  wirecolor 1.0 1.0 1.0 
+  update_sel 1
+  update Fountain
+  render_sel 4
+  render Billboard_to_World_Z
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 0
+  spawnType 0
+  xSize 0.0
+  ySize 0.0
+  inherit 0
+  inherit_local 1
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 0.0 0.0 
+  colorEnd 1.0 0.564706 0.0 
+  alphaStart 1.0
+  alphaEnd 0.0
+  sizeStart 0.0
+  sizeEnd 0.0
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 0
+  lifeExp 1.0
+  mass 0.0
+  spread 0.0
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 10.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  Splat 0
+  affectedByWind false
+  texture fxpa_flare02
+  twosidedtex 0
+  xgrid 1
+  ygrid 1
+  fps 0
+  framestart 0
+  frameend 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  Drag 0.0
+endnode
+node emitter sparks
+  parent vfx_fired
+  position 0.000282946 -0.162666 17.5009
+  orientation 1.0 0.0 0.0 -3.1068
+  wirecolor 1.0 1.0 1.0 
+  update_sel 1
+  update Fountain
+  render_sel 1
+  render Normal
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 0
+  spawnType 0
+  xSize 260.0
+  ySize 260.0
+  inherit 0
+  inherit_local 1
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 1.0 1.0 
+  colorEnd 1.0 0.682353 0.0 
+  alphaStart 0.8
+  alphaEnd 0.0
+  sizeStart 2.0
+  sizeEnd 0.5
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 0
+  lifeExp 1.0
+  mass 0.0
+  spread 0.872665
+  particleRot 0.0
+  velocity 3.0
+  randvel 1.0
+  bounce_co 0.0
+  blurlength 10.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  Splat 0
+  affectedByWind false
+  texture fxpa_flare
+  twosidedtex 0
+  xgrid 1
+  ygrid 1
+  fps 0
+  framestart 0
+  frameend 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  Drag 0.0
+endnode
+node emitter WIND_Dummy
+  parent vfx_fired
+  position -0.00249214 -0.146612 17.1327
+  orientation 1.0 0.0 0.0 -3.1068
+  wirecolor 1.0 1.0 1.0 
+  update_sel 3
+  update Explosion
+  render_sel 1
+  render Normal
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 0
+  spawnType 0
+  xSize 0.0
+  ySize 0.0
+  inherit 0
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 1.0 1.0 
+  colorEnd 1.0 1.0 1.0 
+  alphaStart 0.0
+  alphaEnd 0.0
+  sizeStart 0.0
+  sizeEnd 0.0
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 1
+  lifeExp 0.0
+  mass 0.0
+  spread 0.0
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 10.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  Splat 0
+  affectedByWind false
+  texture NULL
+  twosidedtex 0
+  xgrid 0
+  ygrid 0
+  fps 0
+  framestart 0
+  frameend 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 8.0
+  blastLength 1.3
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  Drag 0.0
+endnode
+endmodelgeom vfx_fired
+donemodel vfx_fired

@@ -1,0 +1,68 @@
+# Exported from NeverBlender 2.8.39 - Monday, 2022-10-24
+filedependancy unknown
+newmodel CTL_BTN_PB_LVLUP
+setsupermodel CTL_BTN_PB_LVLUP null
+classification UNKNOWN
+setanimationscale 1.0
+beginmodelgeom CTL_BTN_PB_LVLUP
+node dummy CTL_BTN_PB_LVLUP
+  parent null
+endnode
+node trimesh backgroundPlane01
+  parent CTL_BTN_PB_LVLUP
+  position  0.00000  0.00000  0.00000
+  orientation  0.00000  1.00000  0.00000  0.00000
+  wirecolor 1.00 1.00 1.00
+  ambient 1.00 1.00 1.00
+  diffuse 1.00 1.00 1.00
+  specular 0.00 0.00 0.00
+  selfillumcolor 0.00 0.00 0.00
+  bitmap PNL_PARTY_BAR
+  shininess 26
+  render 1
+  shadow 1
+  tilefade 0
+  verts 4
+    -0.02000  1.04000 -0.50000
+    -0.02000 -0.02000 -0.50000
+     0.67000  1.04000 -0.50000
+     0.67000 -0.02000 -0.50000
+  tverts 4
+     0.0938  0.9922  0
+     0.0938  0.5781  0
+     0.6328  0.9922  0
+     0.6328  0.5781  0
+  faces 2
+    0 1 2 1  0 1 2 0
+    3 2 1 1  3 2 1 0
+endnode
+node trimesh Portrait
+  parent CTL_BTN_PB_LVLUP
+  position  0.00000  0.00000  0.00000
+  orientation  0.00000  1.00000  0.00000  0.00000
+  wirecolor 1.00 1.00 1.00
+  ambient 1.00 1.00 1.00
+  diffuse 1.00 1.00 1.00
+  specular 0.00 0.00 0.00
+  selfillumcolor 0.00 0.00 0.00
+  bitmap po_levelup2
+  shininess 1
+  render 1
+  shadow 0
+  tilefade 0
+  verts 4
+     0.00586  0.76441  0.00000
+     0.22882  0.76441  0.00000
+     0.00586  0.98737  0.00000
+     0.22882  0.98737  0.00000
+  tverts 4
+     1.0000  0.0000  0
+     0.0000  1.0000  0
+     0.0000  0.0000  0
+     1.0000  1.0000  0
+  faces 2
+    1 2 0 1  0 1 2 0
+    1 3 2 2  0 3 1 0
+endnode
+endmodelgeom CTL_BTN_PB_LVLUP
+donemodel CTL_BTN_PB_LVLUP

@@ -1,0 +1,93 @@
+# Exported from NWmax v6.11.28 at 7/24/2021 12:41:48 AM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: plc_sp_eye
+#local file: C:\Users\Fnord\Documents\3dsMax\autoback\elevator.max
+filedependancy elevator.max
+newmodel plc_sp_eye
+setsupermodel plc_sp_eye NULL
+classification Character
+setanimationscale 1.0
+#NWmax GEOM  ASCII
+beginmodelgeom plc_sp_eye
+node dummy plc_sp_eye
+  parent NULL
+endnode
+node dummy sp_eye_ground
+  parent plc_sp_eye
+  position 0.0 0.0 0.2
+  orientation 0.0 0.0 0.0 0.0
+  wirecolor 0.8 0.8 0.8 
+endnode
+node dummy sp_eye_hand
+  parent plc_sp_eye
+  position 0.0 0.0 0.2
+  orientation 0.0 0.0 0.0 0.0
+  wirecolor 0.8 0.8 0.8 
+endnode
+node dummy sp_eye_impact
+  parent plc_sp_eye
+  position 0.0 0.0 0.2
+  orientation 0.0 0.0 0.0 0.0
+  wirecolor 0.8 0.8 0.8 
+endnode
+node dummy sp_eye_head_hit
+  parent plc_sp_eye
+  position 0.0 0.0 0.2
+  orientation 0.0 0.0 0.0 0.0
+  wirecolor 0.8 0.8 0.8 
+endnode
+node trimesh Plane001
+  parent plc_sp_eye
+  position 0.0432363 -0.0792058 0.001
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.54902 0.345098 0.882353 
+  tilefade 0
+  scale 1.0
+  render 1
+  Shadow 0
+  beaming 0
+  inheritcolor 0
+  rotatetexture 0
+  alpha 1.0
+  transparencyhint 0
+  selfillumcolor 0.0 0.0 0.0 
+  ambient 1.0 1.0 1.0 
+  Diffuse 1.0 1.0 1.0 
+  Specular 0.0 0.0 0.0 
+  shininess 15
+  center -4.32361 7.92059 0.2 
+  bitmap plc_sp_eye
+  verts 9
+    -7.54 -7.42 0.0
+    0.0 -7.42 0.0
+    7.46 -7.42 0.0
+    -7.54 0.0 0.0
+    0.0 0.0 0.0
+    7.46 0.0 0.0
+    -7.54 7.58 0.0
+    0.0 7.58 0.0
+    7.46 7.58 0.0
+  faces 8
+    3 0 4  1  3 0 4  1
+    1 4 0  1  1 4 0  1
+    4 1 5  1  4 1 5  1
+    2 5 1  1  2 5 1  1
+    6 3 7  1  6 3 7  1
+    4 7 3  1  4 7 3  1
+    7 4 8  1  7 4 8  1
+    5 8 4  1  5 8 4  1
+  tverts 9
+    0.0148512 0.0148515 0
+    0.502797 0.0148514 0
+    0.985149 0.0148513 0
+    0.0148513 0.494877 0
+    0.502797 0.494876 0
+    0.985149 0.494876 0
+    0.0148514 0.985149 0
+    0.502797 0.985149 0
+    0.985149 0.985149 0
+endnode
+endmodelgeom plc_sp_eye
+donemodel plc_sp_eye

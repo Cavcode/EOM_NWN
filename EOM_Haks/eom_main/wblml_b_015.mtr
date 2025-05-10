@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 wblml_b_015 
+texture1 wblml_b_015_n 
+texture2 null 
+texture3 null 
+texture4 null 

@@ -1,0 +1,259 @@
+#Model converted by mdl2ascii
+#For updates/comments check out http://nwn-j3d.sf.net
+filedependancy Unknown
+newmodel vdr_ioundarkblue
+setsupermodel vdr_ioundarkblue NULL
+classification Character
+setanimationscale 1.000000
+#MAXGEOM  ASCII
+beginmodelgeom vdr_ioundarkblue
+node dummy vdr_ioundarkblue
+  parent NULL
+endnode
+node emitter OmenEmitter04
+  parent vdr_ioundarkblue
+  position 0.000000 0.500000 0.098002
+  orientation 0.000000 0.000000 0.000000 0.000000
+    colorStart 0.000000 0.000000 1.000000 
+    colorEnd 0.000000 0.000000 0.000000
+    alphaStart 1.000000
+    alphaEnd 1.000000
+    sizeStart 0.300000
+    sizeEnd 0.150000
+    sizeStart_y 0.000000
+    sizeEnd_y 0.000000
+    frameStart 0
+    frameEnd 3
+    birthrate 1
+    spawnType 0
+    lifeExp 0.100000
+    mass 0.000000
+    spread 3.283190
+    particleRot 0.000000
+    velocity 0.000000
+    randvel 0.200000
+    fps 12
+    random 0
+    inherit 0
+    inherit_local 1
+    inherit_part 0
+    inheritvel 0
+    xsize 0.000000
+    ysize 0.000000
+    bounce 0
+    bounce_co 0.000000
+    loop 0
+    update Fountain
+    render Normal
+    Blend Lighten
+    deadspace 0.000000
+    blurlength 10.000000
+    lightningDelay 0.0
+    lightningRadius 0.000000
+    lightningScale 0.000000
+    blastRadius 0.000000
+    blastLength 0.000000
+    twosidedtex 0
+    p2p 0
+    p2p_sel 1
+    p2p_type Bezier
+    p2p_bezier2 0.000000
+    p2p_bezier3 0.000000
+    combinetime 0.000000
+    drag 0.000000
+    grav 0.000000
+    threshold 0.000000
+    texture fxpa_StarBnW
+    xgrid 2
+    ygrid 2
+    affectedByWind 0
+    m_isTinted 0
+    Splat 0
+endnode
+node emitter OmenEmitter05
+  parent vdr_ioundarkblue
+  position 0.000000 0.500000 0.095002
+  orientation 0.000000 0.000000 0.000000 0.000000
+    colorStart 0.000000 0.000000 1.000000 
+    colorEnd 0.000000 0.000000 0.000000
+    alphaStart 1.000000
+    alphaEnd 1.000000
+    sizeStart 0.050000
+    sizeEnd 0.050000
+    sizeStart_y 0.000000
+    sizeEnd_y 0.000000
+    frameStart 0
+    frameEnd 3
+    birthrate 10
+    spawnType 0
+    lifeExp 2.000000
+    mass 0.100000
+    spread 9.283190
+    particleRot 1.000000
+    velocity 0.000000
+    randvel 0.200000
+    fps 8
+    random 1
+    inherit 0
+    inherit_local 1
+    inherit_part 0
+    inheritvel 0
+    xsize 0.000000
+    ysize 0.000000
+    bounce 0
+    bounce_co 0.000000
+    loop 0
+    update Fountain
+    render Normal
+    Blend Lighten
+    deadspace 0.000000
+    blurlength 10.000000
+    lightningDelay 0.0
+    lightningRadius 0.000000
+    lightningScale 0.000000
+    blastRadius 0.000000
+    blastLength 0.000000
+    twosidedtex 0
+    p2p 0
+    p2p_sel 1
+    p2p_type Bezier
+    p2p_bezier2 0.000000
+    p2p_bezier3 0.000000
+    combinetime 0.000000
+    drag 0.000000
+    grav 0.000000
+    threshold 0.000000
+    texture fxpa_StarBnW
+    xgrid 2
+    ygrid 2
+    affectedByWind 0
+    m_isTinted 0
+    Splat 0
+endnode
+endmodelgeom vdr_ioundarkblue
+
+
+newanim duration vdr_ioundarkblue
+length 1.000000
+transtime 0.250000
+animroot vdr_ioundarkblue
+node dummy vdr_ioundarkblue
+  parent NULL
+endnode
+node emitter OmenEmitter04
+  parent vdr_ioundarkblue
+  positionkey
+    0.000000  0.000000 -0.500000 0.098002
+    0.033333  0.000000 -0.500000 0.098002
+    0.066458  0.104402 -0.487661 0.098002
+    0.099792  0.200674 -0.452454 0.098002
+    0.133333  0.286259 -0.397091 0.098002
+    0.166458  0.358599 -0.324286 0.098002
+    0.200000  0.415136 -0.236752 0.098002
+    0.233333  0.453314 -0.137202 0.098002
+    0.266458  0.470574 -0.028349 0.098002
+    0.299792  0.464718 0.083769 0.098002
+    0.333125  0.436680 0.188309 0.098002
+    0.366667  0.389003 0.282191 0.098002
+    0.399792  0.324244 0.362700 0.098002
+    0.433333  0.244962 0.427123 0.098002
+    0.466667  0.153714 0.472747 0.098002
+    0.499792  0.053057 0.496859 0.098002
+    0.533125  -0.053057 0.496859 0.098002
+    0.566458  -0.153714 0.472747 0.098002
+    0.600000  -0.244962 0.427123 0.098002
+    0.633125  -0.324244 0.362700 0.098002
+    0.666458  -0.389003 0.282191 0.098002
+    0.700000  -0.436680 0.188309 0.098002
+    0.733125  -0.464718 0.083769 0.098002
+    0.766458  -0.470574 -0.028349 0.098002
+    0.800000  -0.453314 -0.137202 0.098002
+    0.833333  -0.415136 -0.236752 0.098002
+    0.866458  -0.358599 -0.324286 0.098002
+    0.900000  -0.286259 -0.397091 0.098002
+    0.933333  -0.200674 -0.452454 0.098002
+    0.966458  -0.104402 -0.487661 0.098002
+    1.000000  0.000000 -0.500000 0.098002
+  endlist
+  birthratekey
+    0.000000  50.000000
+    0.033333  50.000000
+    1.000000  52.000000
+  endlist
+endnode
+node emitter OmenEmitter05
+  parent vdr_ioundarkblue
+  positionkey
+    0.000000  0.000000 -0.500000 0.095002
+    0.033333  0.000000 -0.500000 0.095002
+    0.066458  0.104402 -0.487661 0.095002
+    0.099792  0.200674 -0.452454 0.095002
+    0.133333  0.286259 -0.397091 0.095002
+    0.166458  0.358599 -0.324286 0.095002
+    0.200000  0.415136 -0.236752 0.095002
+    0.233333  0.453314 -0.137202 0.095002
+    0.266458  0.470574 -0.028349 0.095002
+    0.299792  0.464718 0.083769 0.095002
+    0.333125  0.436680 0.188309 0.095002
+    0.366667  0.389003 0.282191 0.095002
+    0.399792  0.324244 0.362700 0.095002
+    0.433333  0.244962 0.427123 0.095002
+    0.466667  0.153714 0.472747 0.095002
+    0.499792  0.053057 0.496859 0.095002
+    0.533125  -0.053057 0.496859 0.095002
+    0.566458  -0.153714 0.472747 0.095002
+    0.600000  -0.244962 0.427123 0.095002
+    0.633125  -0.324244 0.362700 0.095002
+    0.666458  -0.389003 0.282191 0.095002
+    0.700000  -0.436680 0.188309 0.095002
+    0.733125  -0.464718 0.083769 0.095002
+    0.766458  -0.470574 -0.028349 0.095002
+    0.800000  -0.453314 -0.137202 0.095002
+    0.833333  -0.415136 -0.236752 0.095002
+    0.866458  -0.358599 -0.324286 0.095002
+    0.900000  -0.286259 -0.397091 0.095002
+    0.933333  -0.200674 -0.452454 0.095002
+    0.966458  -0.104402 -0.487661 0.095002
+    1.000000  0.000000 -0.500000 0.095002
+  endlist
+  birthratekey
+    0.000000  50.000000
+    0.033333  50.000000
+    0.966667  51.000000
+    1.000000  51.000000
+  endlist
+endnode
+doneanim duration vdr_ioundarkblue
+
+
+newanim cessation vdr_ioundarkblue
+length 0.300000
+transtime 0.250000
+animroot vdr_ioundarkblue
+node dummy vdr_ioundarkblue
+  parent NULL
+endnode
+node emitter OmenEmitter04
+  parent vdr_ioundarkblue
+  positionkey
+    0.000000  0.000000 0.500000 0.098002
+  endlist
+  birthratekey
+    0.000000  52.000000
+    0.033333  0.000000
+  endlist
+endnode
+node emitter OmenEmitter05
+  parent vdr_ioundarkblue
+  positionkey
+    0.000000  0.000000 0.500000 0.098002
+  endlist
+  birthratekey
+    0.000000  51.000000
+    0.033333  0.000000
+  endlist
+endnode
+doneanim cessation vdr_ioundarkblue
+donemodel vdr_ioundarkblue
+
+

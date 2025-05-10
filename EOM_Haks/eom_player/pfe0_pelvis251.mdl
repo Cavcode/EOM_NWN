@@ -1,0 +1,10 @@
+newmodel pfe0_pelvis251
+setsupermodel pfe0_pelvis251 null
+classification CHARACTER
+setanimationscale 1.0
+beginmodelgeom pfe0_pelvis251
+node dummy pfe0_pelvis251
+  parent null
+endnode
+endmodelgeom pfe0_pelvis251
+donemodel pfe0_pelvis251

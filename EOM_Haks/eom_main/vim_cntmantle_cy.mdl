@@ -1,0 +1,2185 @@
+#MAXMODEL ASCII
+# model: vim_cntmantle_cy
+filedependancy vim_cntmantle_cy.max
+newmodel vim_cntmantle_cy
+setsupermodel vim_cntmantle_cy NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vim_cntmantle_cy
+node dummy vim_cntmantle_cy
+  parent NULL
+endnode
+node trimesh Object11
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.2919810   -0.1950960    0.2750000
+       0.2919810    0.1950960   -0.2750000
+       0.2919810    0.1950960    0.2750000
+      -0.2919810   -0.1950960   -0.2750000
+  tverts 4
+       0.3110830    0.5952530  0
+       0.3893830    0.5022550  0
+       0.3893830    0.5952530  0
+       0.3110830    0.5022550  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -1.1052 1.07805 1.58422
+  orientation 0 0 -1 -0.1309
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object23
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3198230   -0.1534270    0.2703950
+       0.3198230    0.1534270   -0.2703950
+       0.2641390    0.2367650    0.2703950
+      -0.2641390   -0.2367650   -0.2703950
+  tverts 4
+       0.3122420    0.3966840  0
+       0.4032850    0.3052430  0
+       0.3905430    0.3966840  0
+       0.3249840    0.3052430  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -1.06615 1.03351 0.414461
+  orientation 0 0 -1 -0.1309
+  alpha -0.111111
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object03
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3198230    0.1534270    0.2703950
+       0.3198230   -0.1534270   -0.2703950
+       0.2641390   -0.2367650    0.2703950
+      -0.2641390    0.2367650   -0.2703950
+  tverts 4
+       0.6463040    0.6947570  0
+       0.7301920    0.6033160  0
+       0.7165250    0.6947570  0
+       0.6599710    0.6033160  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 1.0812 1.04502 2.17729
+  orientation 0 0 1 -0.191986
+  alpha -0.111111
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object04
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3541920    0.0193567    0.2703950
+       0.3541920   -0.0193565   -0.2703950
+       0.3346380   -0.1176600    0.2703950
+      -0.3346380    0.1176600   -0.2703950
+  tverts 4
+       0.5268550    0.6947570  0
+       0.6456080    0.6033160  0
+       0.6408660    0.6947570  0
+       0.5315980    0.6033160  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 0.395885 1.41553 2.17729
+  orientation 0 0 0 0
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object05
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3346380   -0.1176600    0.2703950
+       0.3346380    0.1176600   -0.2703950
+       0.3541920    0.0193565    0.2703950
+      -0.3541920   -0.0193565   -0.2703950
+  tverts 4
+       0.4058480    0.6947570  0
+       0.5151160    0.6033160  0
+       0.5198580    0.6947570  0
+       0.4011050    0.6033160  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -0.351943 1.41553 2.17729
+  orientation -1 0 -1.89249e-06 -0.00793114
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object06
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.2641390   -0.2367640    0.2703950
+       0.2641390    0.2367640   -0.2703950
+       0.3198230    0.1534270    0.2703950
+      -0.3198230   -0.1534270   -0.2703950
+  tverts 4
+       0.3240960    0.6947570  0
+       0.3896540    0.6033160  0
+       0.4023960    0.6947570  0
+       0.3113540    0.6033160  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -1.07075 1.03877 2.17729
+  orientation 0 0 -1 -0.1309
+  alpha -0.111111
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object14
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.2919810    0.1950960    0.2750000
+       0.2919810   -0.1950960   -0.2750000
+       0.2919810   -0.1950960    0.2750000
+      -0.2919810    0.1950960   -0.2750000
+  tverts 4
+       0.6602270    0.4973690  0
+       0.7304470    0.4043700  0
+       0.7304470    0.4973690  0
+       0.6602270    0.4043700  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 1.11787 1.08155 1.00532
+  orientation 0 0 1 -0.191986
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object15
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3444150    0.0685085    0.2750000
+       0.3444150   -0.0685085   -0.2750000
+       0.3444150   -0.0685083    0.2750000
+      -0.3444150    0.0685083   -0.2750000
+  tverts 4
+       0.5316990    0.4973690  0
+       0.6457090    0.4043700  0
+       0.6457090    0.4973690  0
+       0.5316990    0.4043700  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 0.406079 1.46678 1.00532
+  orientation 0 0 0 0
+  alpha 1.01818
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object09
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.2919810    0.1950950    0.2750000
+       0.2919810   -0.1950960   -0.2750000
+       0.2919810   -0.1950960    0.2750000
+      -0.2919810    0.1950960   -0.2750000
+  tverts 4
+       0.6602620    0.5952530  0
+       0.7304830    0.5022550  0
+       0.7304830    0.5952530  0
+       0.6602620    0.5022550  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 1.11798 1.08213 1.58422
+  orientation 0 0 1 -0.191986
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object10
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3444150   -0.0685085    0.2750000
+       0.3444150    0.0685085   -0.2750000
+       0.3444150    0.0685085    0.2750000
+      -0.3444150   -0.0685085   -0.2750000
+  tverts 4
+       0.4010040    0.5952530  0
+       0.5150150    0.5022550  0
+       0.5150150    0.5952530  0
+       0.4010040    0.5022550  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -0.362135 1.46678 1.58422
+  orientation 0 0 0 0
+  alpha 1.02273
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object22
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3541920   -0.0193565    0.2703950
+       0.3541920    0.0193567   -0.2703950
+       0.3346380    0.1176600    0.2703950
+      -0.3346380   -0.1176600   -0.2703950
+  tverts 4
+       0.4014360    0.3966840  0
+       0.5201890    0.3052430  0
+       0.5154460    0.3966840  0
+       0.4061790    0.3052430  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -0.350579 1.40868 0.414461
+  orientation 1 0 -1.57718e-06 -0.00922061
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object17
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.2919810   -0.1950960    0.2750000
+       0.2919810    0.1950950   -0.2750000
+       0.2919810    0.1950960    0.2750000
+      -0.2919810   -0.1950960   -0.2750000
+  tverts 4
+       0.3110830    0.4973690  0
+       0.3893830    0.4043700  0
+       0.3893830    0.4973690  0
+       0.3110830    0.4043700  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -1.1052 1.07805 1.00532
+  orientation 0 0 -1 -0.1309
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object01
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3444150    0.0685085    0.2750000
+       0.3444150   -0.0685085   -0.2750000
+       0.3444150   -0.0685083    0.2750000
+      -0.3444150    0.0685083   -0.2750000
+  tverts 4
+       0.5316990    0.5952530  0
+       0.6457090    0.5022550  0
+       0.6457090    0.5952530  0
+       0.5316990    0.5022550  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 0.406079 1.46678 1.58422
+  orientation 0.8210648 0.101576 -0.5617249 -0.0644631
+  alpha 1.03409
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object20
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.2641390    0.2367650    0.2703950
+       0.2641390   -0.2367640   -0.2703950
+       0.3198230   -0.1534270    0.2703950
+      -0.3198230    0.1534270   -0.2703950
+  tverts 4
+       0.6590180    0.3966840  0
+       0.7155720    0.3052430  0
+       0.7292390    0.3966840  0
+       0.6453510    0.3052430  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 1.07628 1.04006 0.414461
+  orientation 0 0 1 -0.191986
+  alpha -0.111111
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object16
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3444150   -0.0685085    0.2750000
+       0.3444150    0.0685085   -0.2750000
+       0.3444150    0.0685085    0.2750000
+      -0.3444150   -0.0685085   -0.2750000
+  tverts 4
+       0.4010040    0.4973690  0
+       0.5150150    0.4043700  0
+       0.5150150    0.4973690  0
+       0.4010040    0.4043700  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -0.362135 1.46678 1.00532
+  orientation 0 0 0 0
+  alpha 1.03623
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object21
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3346380    0.1176600    0.2703950
+       0.3346380   -0.1176600   -0.2703950
+       0.3541920   -0.0193565    0.2703950
+      -0.3541920    0.0193564   -0.2703950
+  tverts 4
+       0.5312670    0.3966840  0
+       0.6405350    0.3052430  0
+       0.6452770    0.3966840  0
+       0.5265250    0.3052430  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 0.394522 1.40868 0.414461
+  orientation 1 0 3.83339e-06 -0.0037957
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object43
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3541920    0.0193567    0.2703950
+       0.3541920   -0.0193565   -0.2703950
+       0.3346380   -0.1176600    0.2703950
+      -0.3346380    0.1176600   -0.2703950
+  tverts 4
+       0.5268550    0.6947570  0
+       0.6456080    0.6033160  0
+       0.6408660    0.6947570  0
+       0.5315980    0.6033160  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -1.44776 0.37722 2.17729
+  orientation 0 0 -1 -1.5708
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object44
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3346380   -0.1176600    0.2703950
+       0.3346380    0.1176600   -0.2703950
+       0.3541920    0.0193565    0.2703950
+      -0.3541920   -0.0193565   -0.2703950
+  tverts 4
+       0.4058480    0.6947570  0
+       0.5151160    0.6033160  0
+       0.5198580    0.6947570  0
+       0.4011050    0.6033160  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -1.44776 -0.370608 2.17729
+  orientation -0.003965531 -0.003965531 -0.9999843 -1.57081
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object47
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3444150    0.0685085    0.2750000
+       0.3444150   -0.0685085   -0.2750000
+       0.3444150   -0.0685083    0.2750000
+      -0.3444150    0.0685083   -0.2750000
+  tverts 4
+       0.5316990    0.4973690  0
+       0.6457090    0.4043700  0
+       0.6457090    0.4973690  0
+       0.5316990    0.4043700  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -1.49901 0.387413 1.00532
+  orientation 0 0 -1 -1.5708
+  alpha 1.01818
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object49
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3444150   -0.0685085    0.2750000
+       0.3444150    0.0685085   -0.2750000
+       0.3444150    0.0685085    0.2750000
+      -0.3444150   -0.0685085   -0.2750000
+  tverts 4
+       0.4010040    0.5952530  0
+       0.5150150    0.5022550  0
+       0.5150150    0.5952530  0
+       0.4010040    0.5022550  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -1.49901 -0.380801 1.58422
+  orientation 0 0 -1 -1.5708
+  alpha 1.02273
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object50
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3541920   -0.0193565    0.2703950
+       0.3541920    0.0193567   -0.2703950
+       0.3346380    0.1176600    0.2703950
+      -0.3346380   -0.1176600   -0.2703950
+  tverts 4
+       0.4014360    0.3966840  0
+       0.5201890    0.3052430  0
+       0.5154460    0.3966840  0
+       0.4061790    0.3052430  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -1.44091 -0.369245 0.414461
+  orientation 0.004610239 0.004610239 -0.9999787 -1.57082
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object52
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3444150    0.0685085    0.2750000
+       0.3444150   -0.0685085   -0.2750000
+       0.3444150   -0.0685083    0.2750000
+      -0.3444150    0.0685083   -0.2750000
+  tverts 4
+       0.5316990    0.5952530  0
+       0.6457090    0.5022550  0
+       0.6457090    0.5952530  0
+       0.5316990    0.5022550  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -1.49901 0.387413 1.58422
+  orientation 0.02277 0.02919921 -0.9993142 -1.6077
+  alpha 1.03409
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object54
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3444150   -0.0685085    0.2750000
+       0.3444150    0.0685085   -0.2750000
+       0.3444150    0.0685085    0.2750000
+      -0.3444150   -0.0685085   -0.2750000
+  tverts 4
+       0.4010040    0.4973690  0
+       0.5150150    0.4043700  0
+       0.5150150    0.4973690  0
+       0.4010040    0.4043700  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -1.49901 -0.380801 1.00532
+  orientation 0 0 -1 -1.5708
+  alpha 1.03623
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object55
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3346380    0.1176600    0.2703950
+       0.3346380   -0.1176600   -0.2703950
+       0.3541920   -0.0193565    0.2703950
+      -0.3541920    0.0193564   -0.2703950
+  tverts 4
+       0.5312670    0.3966840  0
+       0.6405350    0.3052430  0
+       0.6452770    0.3966840  0
+       0.5265250    0.3052430  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -1.44091 0.375856 0.414461
+  orientation 0.001897851 0.001897851 -0.9999964 -1.5708
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object56
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3346380   -0.1176600    0.2703950
+       0.3346380    0.1176600   -0.2703950
+       0.3541920    0.0193565    0.2703950
+      -0.3541920   -0.0193565   -0.2703950
+  tverts 4
+       0.4058480    0.6947570  0
+       0.5151160    0.6033160  0
+       0.5198580    0.6947570  0
+       0.4011050    0.6033160  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 1.44224 0.363589 2.17729
+  orientation 0.003965531 -0.003965531 -0.9999843 -4.71237
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object57
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3444150    0.0685085    0.2750000
+       0.3444150   -0.0685085   -0.2750000
+       0.3444150   -0.0685083    0.2750000
+      -0.3444150    0.0685083   -0.2750000
+  tverts 4
+       0.5316990    0.4973690  0
+       0.6457090    0.4043700  0
+       0.6457090    0.4973690  0
+       0.5316990    0.4043700  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 1.49348 -0.394432 1.00532
+  orientation 0 0 -1 -4.71239
+  alpha 1.01818
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object58
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3444150   -0.0685085    0.2750000
+       0.3444150    0.0685085   -0.2750000
+       0.3444150    0.0685085    0.2750000
+      -0.3444150   -0.0685085   -0.2750000
+  tverts 4
+       0.4010040    0.5952530  0
+       0.5150150    0.5022550  0
+       0.5150150    0.5952530  0
+       0.4010040    0.5022550  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 1.49348 0.373782 1.58422
+  orientation 0 0 -1 -4.71239
+  alpha 1.02273
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object59
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3541920   -0.0193565    0.2703950
+       0.3541920    0.0193567   -0.2703950
+       0.3346380    0.1176600    0.2703950
+      -0.3346380   -0.1176600   -0.2703950
+  tverts 4
+       0.4014360    0.3966840  0
+       0.5201890    0.3052430  0
+       0.5154460    0.3966840  0
+       0.4061790    0.3052430  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 1.43538 0.362225 0.414461
+  orientation -0.004610239 0.004610239 -0.9999787 -4.71237
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object60
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3444150    0.0685085    0.2750000
+       0.3444150   -0.0685085   -0.2750000
+       0.3444150   -0.0685083    0.2750000
+      -0.3444150    0.0685083   -0.2750000
+  tverts 4
+       0.5316990    0.5952530  0
+       0.6457090    0.5022550  0
+       0.6457090    0.5952530  0
+       0.5316990    0.5022550  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 1.49348 -0.394432 1.58422
+  orientation -0.03027489 0.0236088 -0.9992628 -4.74787
+  alpha 1.03409
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object61
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3444150   -0.0685085    0.2750000
+       0.3444150    0.0685085   -0.2750000
+       0.3444150    0.0685085    0.2750000
+      -0.3444150   -0.0685085   -0.2750000
+  tverts 4
+       0.4010040    0.4973690  0
+       0.5150150    0.4043700  0
+       0.5150150    0.4973690  0
+       0.4010040    0.4043700  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 1.49348 0.373782 1.00532
+  orientation 0 0 -1 -4.71239
+  alpha 1.03623
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object62
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3346380    0.1176600    0.2703950
+       0.3346380   -0.1176600   -0.2703950
+       0.3541920   -0.0193565    0.2703950
+      -0.3541920    0.0193564   -0.2703950
+  tverts 4
+       0.5312670    0.3966840  0
+       0.6405350    0.3052430  0
+       0.6452770    0.3966840  0
+       0.5265250    0.3052430  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 1.43538 -0.382876 0.414461
+  orientation -0.001897851 0.001897851 -0.9999964 -4.71239
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object63
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3541920    0.0193567    0.2703950
+       0.3541920   -0.0193565   -0.2703950
+       0.3346380   -0.1176600    0.2703950
+      -0.3346380    0.1176600   -0.2703950
+  tverts 4
+       0.5268550    0.6947570  0
+       0.6456080    0.6033160  0
+       0.6408660    0.6947570  0
+       0.5315980    0.6033160  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 1.44224 -0.384239 2.17729
+  orientation 0 0 -1 -4.71239
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object64
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3346380    0.1176600    0.2703950
+       0.3346380   -0.1176600   -0.2703950
+       0.3541920   -0.0193565    0.2703950
+      -0.3541920    0.0193564   -0.2703950
+  tverts 4
+       0.5312670    0.3966840  0
+       0.6405350    0.3052430  0
+       0.6452770    0.3966840  0
+       0.5265250    0.3052430  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -0.386634 -1.40749 0.414461
+  orientation 0 0.00189785 -0.9999982 -3.14159
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object65
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3444150    0.0685085    0.2750000
+       0.3444150   -0.0685085   -0.2750000
+       0.3444150   -0.0685083    0.2750000
+      -0.3444150    0.0685083   -0.2750000
+  tverts 4
+       0.5316990    0.5952530  0
+       0.6457090    0.5022550  0
+       0.6457090    0.5952530  0
+       0.5316990    0.5022550  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -0.398191 -1.46559 1.58422
+  orientation -0.003273941 0.02646401 -0.9996444 -3.1778
+  alpha 1.03409
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object66
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3541920   -0.0193565    0.2703950
+       0.3541920    0.0193567   -0.2703950
+       0.3346380    0.1176600    0.2703950
+      -0.3346380   -0.1176600   -0.2703950
+  tverts 4
+       0.4014360    0.3966840  0
+       0.5201890    0.3052430  0
+       0.5154460    0.3966840  0
+       0.4061790    0.3052430  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 0.358467 -1.40749 0.414461
+  orientation 0 0.004610292 -0.9999893 -3.14159
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object67
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3541920    0.0193567    0.2703950
+       0.3541920   -0.0193565   -0.2703950
+       0.3346380   -0.1176600    0.2703950
+      -0.3346380    0.1176600   -0.2703950
+  tverts 4
+       0.5268550    0.6947570  0
+       0.6456080    0.6033160  0
+       0.6408660    0.6947570  0
+       0.5315980    0.6033160  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -0.387998 -1.41435 2.17729
+  orientation 0 0 -1 -3.14159
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object68
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3346380   -0.1176600    0.2703950
+       0.3346380    0.1176600   -0.2703950
+       0.3541920    0.0193565    0.2703950
+      -0.3541920   -0.0193565   -0.2703950
+  tverts 4
+       0.4058480    0.6947570  0
+       0.5151160    0.6033160  0
+       0.5198580    0.6947570  0
+       0.4011050    0.6033160  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 0.35983 -1.41435 2.17729
+  orientation 0 -0.00396556 -0.9999921 -3.14159
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object69
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3444150   -0.0685085    0.2750000
+       0.3444150    0.0685085   -0.2750000
+       0.3444150    0.0685085    0.2750000
+      -0.3444150   -0.0685085   -0.2750000
+  tverts 4
+       0.4010040    0.5952530  0
+       0.5150150    0.5022550  0
+       0.5150150    0.5952530  0
+       0.4010040    0.5022550  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 0.370023 -1.46559 1.58422
+  orientation 0 0 -1 -3.14159
+  alpha 1.02273
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object70
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3444150    0.0685085    0.2750000
+       0.3444150   -0.0685085   -0.2750000
+       0.3444150   -0.0685083    0.2750000
+      -0.3444150    0.0685083   -0.2750000
+  tverts 4
+       0.5316990    0.4973690  0
+       0.6457090    0.4043700  0
+       0.6457090    0.4973690  0
+       0.5316990    0.4043700  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -0.398191 -1.46559 1.00532
+  orientation 0 0 -1 -3.14159
+  alpha 1.01818
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object71
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3444150   -0.0685085    0.2750000
+       0.3444150    0.0685085   -0.2750000
+       0.3444150    0.0685085    0.2750000
+      -0.3444150   -0.0685085   -0.2750000
+  tverts 4
+       0.4010040    0.4973690  0
+       0.5150150    0.4043700  0
+       0.5150150    0.4973690  0
+       0.4010040    0.4043700  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 0.370023 -1.46559 1.00532
+  orientation 0 0 -1 -3.14159
+  alpha 1.03623
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object72
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.2641390   -0.2367640    0.2703950
+       0.2641390    0.2367640   -0.2703950
+       0.3198230    0.1534270    0.2703950
+      -0.3198230   -0.1534270   -0.2703950
+  tverts 4
+       0.3240960    0.6947570  0
+       0.3896540    0.6033160  0
+       0.4023960    0.6947570  0
+       0.3113540    0.6033160  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 1.07864 -1.03758 2.17729
+  orientation 0 0 -1 -3.27249
+  alpha -0.111111
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object73
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3198230    0.1534270    0.2703950
+       0.3198230   -0.1534270   -0.2703950
+       0.2641390   -0.2367650    0.2703950
+      -0.2641390    0.2367650   -0.2703950
+  tverts 4
+       0.6463040    0.6947570  0
+       0.7301920    0.6033160  0
+       0.7165250    0.6947570  0
+       0.6599710    0.6033160  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -1.07331 -1.04384 2.17729
+  orientation 0 0 -1 -2.94961
+  alpha -0.111111
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object74
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.2919810   -0.1950960    0.2750000
+       0.2919810    0.1950950   -0.2750000
+       0.2919810    0.1950960    0.2750000
+      -0.2919810   -0.1950960   -0.2750000
+  tverts 4
+       0.3110830    0.4973690  0
+       0.3893830    0.4043700  0
+       0.3893830    0.4973690  0
+       0.3110830    0.4043700  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 1.11309 -1.07686 1.00532
+  orientation 0 0 -1 -3.27249
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object75
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.3198230   -0.1534270    0.2703950
+       0.3198230    0.1534270   -0.2703950
+       0.2641390    0.2367650    0.2703950
+      -0.2641390   -0.2367650   -0.2703950
+  tverts 4
+       0.3122420    0.3966840  0
+       0.4032850    0.3052430  0
+       0.3905430    0.3966840  0
+       0.3249840    0.3052430  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 1.07403 -1.03232 0.414461
+  orientation 0 0 -1 -3.27249
+  alpha -0.111111
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object76
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.2641390    0.2367650    0.2703950
+       0.2641390   -0.2367640   -0.2703950
+       0.3198230   -0.1534270    0.2703950
+      -0.3198230    0.1534270   -0.2703950
+  tverts 4
+       0.6590180    0.3966840  0
+       0.7155720    0.3052430  0
+       0.7292390    0.3966840  0
+       0.6453510    0.3052430  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -1.06839 -1.03887 0.414461
+  orientation 0 0 -1 -2.94961
+  alpha -0.111111
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object77
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.2919810    0.1950950    0.2750000
+       0.2919810   -0.1950960   -0.2750000
+       0.2919810   -0.1950960    0.2750000
+      -0.2919810    0.1950960   -0.2750000
+  tverts 4
+       0.6602620    0.5952530  0
+       0.7304830    0.5022550  0
+       0.7304830    0.5952530  0
+       0.6602620    0.5022550  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -1.11009 -1.08094 1.58422
+  orientation 0 0 -1 -2.94961
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object78
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.2919810    0.1950960    0.2750000
+       0.2919810   -0.1950960   -0.2750000
+       0.2919810   -0.1950960    0.2750000
+      -0.2919810    0.1950960   -0.2750000
+  tverts 4
+       0.6602270    0.4973690  0
+       0.7304470    0.4043700  0
+       0.7304470    0.4973690  0
+       0.6602270    0.4043700  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position -1.10998 -1.08036 1.00532
+  orientation 0 0 -1 -2.94961
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+node trimesh Object79
+  parent vim_cntmantle_cy
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap fxpa_flare02_cya
+  verts 4
+      -0.2919810   -0.1950960    0.2750000
+       0.2919810    0.1950960   -0.2750000
+       0.2919810    0.1950960    0.2750000
+      -0.2919810   -0.1950960   -0.2750000
+  tverts 4
+       0.3110830    0.5952530  0
+       0.3893830    0.5022550  0
+       0.3893830    0.5952530  0
+       0.3110830    0.5022550  0
+  faces 4
+    0 1 2  1  0 1 2   3
+    3 1 0  1  3 1 0   3
+    1 0 2  2  1 0 2   3
+    1 3 0  2  1 3 0   3
+  position 1.11309 -1.07686 1.58422
+  orientation 0 0 -1 -3.27249
+  alpha 0.296875
+  scale 1
+  selfillumcolor 0 1 1
+endnode
+endmodelgeom vim_cntmantle_cy
+
+#MAXANIM ASCII
+newanim impact vim_cntmantle_cy
+  length 0.833333
+  transtime 0.25
+  animroot vim_cntmantle_cy
+  node dummy vim_cntmantle_cy
+    parent NULL
+  endnode
+  node trimesh Object11
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 4
+         0.0027083   -0.0000000   -0.0000000   -1.0000000   -0.1309000
+         0.0850000   -0.0000000   -0.0000000   -1.0000000   -0.1309000
+         0.3714580   -0.6091818   -0.1547129   -0.7777928   -0.6312190
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -0.1309000
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object23
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 3
+         0.0708333   -0.0000000   -0.0000000   -1.0000000   -0.1309000
+         0.2000000    0.6759950   -0.0088493   -0.7368530   -0.3885820
+         0.8000000    0.0028786   -0.0000377   -0.9999959   -0.1311250
+    alphakey 4
+         0.1333330    0.0000000
+         0.2666670    1.0000000
+         0.5333330    1.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object03
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 4
+         0.0022917   -0.0000000   -0.0000000    1.0000000   -0.1919860
+         0.0839583   -0.0000000   -0.0000000    1.0000000   -0.1919860
+         0.2550000   -0.4437782   -0.0096833    0.8960844   -0.4754370
+         0.8000000   -0.0000000   -0.0000000    1.0000000   -0.1919860
+    alphakey 4
+         0.1333330    0.0000000
+         0.2666670    1.0000000
+         0.5333330    1.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object04
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    positionkey 1
+         0.8002080    0.3958850    1.4155300    2.1772900
+    orientationkey 4
+         0.0458333    0.0000000    0.0000000    0.0000000    0.0000000
+         0.2335420   -1.0000000   -0.0000000   -0.0000000   -0.4450590
+         0.6335420    0.0000000    0.0000000    0.0000000    0.0000000
+         0.8000000    0.0000000    0.0000000    0.0000000    0.0000000
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object05
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 2
+         0.2985420   -1.0000000   -0.0000000   -0.0000000   -0.4450590
+         0.8000000    0.0000000    0.0000000    0.0000000    0.0000000
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object06
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 3
+         0.1064580   -0.0000000   -0.0000000   -1.0000000   -0.1309000
+         0.2218750   -0.5908611    0.0077348   -0.8067362   -0.3556590
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -0.1309000
+    alphakey 4
+         0.1333330    0.0000000
+         0.2666670    1.0000000
+         0.5333330    1.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object14
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    positionkey 2
+         0.6708330    1.1178700    1.0821400    1.0053200
+         0.8000000    1.1178700    1.0815200    1.0053200
+    orientationkey 4
+         0.0670833   -0.0000000   -0.0000000    1.0000000   -0.1919860
+         0.3102080    0.4789178   -0.1373280    0.8670518   -0.6387810
+         0.6708330   -0.0000000   -0.0000000    1.0000000   -0.1919860
+         0.8000000   -0.0000000   -0.0000000    1.0000000   -0.1919860
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object15
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 5
+         0.0000000    0.0000000    0.0000000    0.0000000    0.0000000
+         0.2000000   -0.4912437   -0.0910466   -0.8662506   -0.4215550
+         0.5000000    0.4429041   -0.0117357   -0.8964922   -0.1927080
+         0.7333330    0.0000000    0.0000000    0.0000000    0.0000000
+         0.8000000    0.0000000    0.0000000    0.0000000    0.0000000
+    alphakey 3
+         0.2000000    1.0000000
+         0.7000000    0.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object09
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 3
+         0.0783333   -0.0000000   -0.0000000    1.0000000   -0.1919860
+         0.3685420   -0.5625142    0.1612981    0.8109012   -0.6797799
+         0.8000000   -0.0000000   -0.0000000    1.0000000   -0.1919860
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object10
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 6
+         0.0000000    0.0000000    0.0000000    0.0000000    0.0000000
+         0.1666670    0.8195691   -0.1264550    0.5588521   -0.4832230
+         0.2333330    0.4426880   -0.0820473    0.8929141   -0.4093210
+         0.5666670   -0.3397300   -0.0369248    0.9397979   -0.1300700
+         0.7000000    0.0000000    0.0000000    0.0000000    0.0000000
+         0.8000000    0.0000000    0.0000000    0.0000000    0.0000000
+    alphakey 3
+         0.2333330    1.0000000
+         0.7000000    0.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object22
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 2
+         0.1943750    1.0000000   -0.0000000   -0.0000000   -0.4188790
+         0.8000000    0.0000000    0.0000000    0.0000000    0.0000000
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object17
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 3
+         0.0783333   -0.0000000   -0.0000000   -1.0000000   -0.1309000
+         0.3685420    0.5244541    0.1331940   -0.8409562   -0.5865790
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -0.1309000
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object01
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 3
+         0.1333330    0.8210648    0.1015760   -0.5617249   -0.3223160
+         0.3000000    0.4426880    0.0820473   -0.8929141   -0.4093210
+         0.8000000    0.0000000    0.0000000    0.0000000    0.0000000
+    alphakey 3
+         0.3000000    1.0000000
+         0.7000000    0.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object20
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 3
+         0.1133330   -0.0000000   -0.0000000    1.0000000   -0.1919860
+         0.2335420    0.5271101    0.0115016    0.8497192   -0.5003370
+         0.8000000   -0.0000000   -0.0000000    1.0000000   -0.1919860
+    alphakey 4
+         0.1333330    0.0000000
+         0.2666670    1.0000000
+         0.5333330    1.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object16
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 3
+         0.0000000    0.0000000    0.0000000    0.0000000    0.0000000
+         0.3333330   -0.4912437    0.0910466    0.8662506   -0.4215550
+         0.8000000    0.0000000    0.0000000    0.0000000    0.0000000
+    alphakey 3
+         0.3333330    1.0000000
+         0.7333330    0.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object21
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 4
+         0.1795830    1.0000000   -0.0000000   -0.0000000   -0.1166200
+         0.2616670    1.0000000   -0.0000000   -0.0000000   -0.3403390
+         0.6450000   -1.0000000   -0.0000000   -0.0000000   -0.1596980
+         0.8000000    0.0000000    0.0000000    0.0000000    0.0000000
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object43
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    positionkey 1
+         0.8002080   -1.4477600    0.3772200    2.1772900
+    orientationkey 4
+         0.0458333   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+         0.2335420   -0.2155111   -0.2155111   -0.9524232   -1.6195199
+         0.6335420   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object44
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 2
+         0.2985420   -0.2155111   -0.2155111   -0.9524232   -1.6195199
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object47
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 5
+         0.0000000   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+         0.2000000   -0.0716558   -0.1042600   -0.9919654   -1.9448400
+         0.5000000    0.0403759    0.0382914   -0.9984506   -1.7451900
+         0.7333330   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+    alphakey 3
+         0.2000000    1.0000000
+         0.7000000    0.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object49
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 6
+         0.0000000   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+         0.1666670    0.2563430    0.1878120   -0.9481640   -1.3486800
+         0.2333330    0.1319710    0.0907013   -0.9870952   -1.2164299
+         0.5666670   -0.0209947   -0.0261150   -0.9994385   -1.4490900
+         0.7000000   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+    alphakey 3
+         0.2333330    1.0000000
+         0.7000000    0.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object50
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 2
+         0.1943750    0.2035590    0.2035590   -0.9576678   -1.6140399
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object52
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 3
+         0.1333330    0.1055860    0.1354000   -0.9851490   -1.7676200
+         0.3000000    0.0627633    0.0913212   -0.9938416   -1.9430799
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+    alphakey 3
+         0.3000000    1.0000000
+         0.7000000    0.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object54
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 3
+         0.0000000   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+         0.3333330   -0.1503611   -0.1033400   -0.9832153   -1.2201300
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+    alphakey 3
+         0.3333330    1.0000000
+         0.7333330    0.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object55
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 4
+         0.1795830    0.0581781    0.0581781   -0.9966096   -1.5741900
+         0.2616670    0.1669721    0.1669721   -0.9717205   -1.5994800
+         0.6450000   -0.0795115   -0.0795115   -0.9936578   -1.5771600
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object56
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 2
+         0.2985420    0.2155110   -0.2155110   -0.9524232   -4.6636600
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object57
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 5
+         0.0000000   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+         0.2000000    0.1503611   -0.1033400   -0.9832153   -5.0630598
+         0.5000000   -0.0455275    0.0480059   -0.9978089   -4.8830900
+         0.7333330   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+    alphakey 3
+         0.2000000    1.0000000
+         0.7000000    0.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object58
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 6
+         0.0000000   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+         0.1666670   -0.1455050    0.1985989   -0.9692197   -4.4087100
+         0.2333330   -0.0627633    0.0913212   -0.9938416   -4.3401098
+         0.5666670    0.0231054   -0.0185752   -0.9995605   -4.5896902
+         0.7000000   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+    alphakey 3
+         0.2333330    1.0000000
+         0.7000000    0.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object59
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 2
+         0.1943750   -0.2035589    0.2035589   -0.9576677   -4.6691499
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object60
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 3
+         0.1333330   -0.1615640    0.1259890   -0.9787869   -4.8733902
+         0.3000000   -0.1319710    0.0907013   -0.9870952   -5.0667500
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+    alphakey 3
+         0.3000000    1.0000000
+         0.7000000    0.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object61
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 3
+         0.0000000   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+         0.3333330    0.0716558   -0.1042600   -0.9919654   -4.3383498
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+    alphakey 3
+         0.3333330    1.0000000
+         0.7333330    0.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object62
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 4
+         0.1795830   -0.0581781    0.0581781   -0.9966096   -4.7089901
+         0.2616670   -0.1669721    0.1669721   -0.9717205   -4.6837101
+         0.6450000    0.0795115   -0.0795115   -0.9936578   -4.7060299
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object63
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    positionkey 1
+         0.8002080    1.4422400   -0.3842390    2.1772900
+    orientationkey 4
+         0.0458333   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+         0.2335420    0.2155110   -0.2155110   -0.9524232   -4.6636600
+         0.6335420   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object64
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 4
+         0.1795830   -0.0000000    0.0582768   -0.9983005   -3.1415901
+         0.2616670   -0.0000000    0.1693490   -0.9855561   -3.1415901
+         0.6450000   -0.0000000   -0.0797640   -0.9968138   -3.1415901
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object65
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 3
+         0.1333330   -0.0163657    0.1322870   -0.9910764   -3.3221099
+         0.3000000   -0.0169564    0.0914885   -0.9956617   -3.5065601
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+    alphakey 3
+         0.3000000    1.0000000
+         0.7000000    0.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object66
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 2
+         0.1943750   -0.0000000    0.2079119   -0.9781476   -3.1415901
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object67
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    positionkey 1
+         0.8002080   -0.3879980   -1.4143500    2.1772900
+    orientationkey 4
+         0.0458333   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+         0.2335420   -0.0000000   -0.2206971   -0.9753424   -3.1415901
+         0.6335420   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object68
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 2
+         0.2985420   -0.0000000   -0.2206971   -0.9753424   -3.1415901
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object69
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 6
+         0.0000000   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+         0.1666670    0.0305308    0.1978730   -0.9797521   -2.8733599
+         0.2333330    0.0169564    0.0914885   -0.9956618   -2.7766299
+         0.5666670    0.0024042   -0.0221201   -0.9997524   -3.0193601
+         0.7000000   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+    alphakey 3
+         0.2333330    1.0000000
+         0.7000000    0.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object70
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 5
+         0.0000000   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+         0.2000000    0.0193696   -0.1045090   -0.9943353   -3.5060799
+         0.5000000    0.0011333    0.0427690   -0.9990844   -3.3143001
+         0.7333330   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+    alphakey 3
+         0.2000000    1.0000000
+         0.7000000    0.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object71
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 3
+         0.0000000   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+         0.3333330   -0.0193696   -0.1045090   -0.9943353   -2.7771001
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+    alphakey 3
+         0.3333330    1.0000000
+         0.7333330    0.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object72
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 3
+         0.1064580   -0.0000000   -0.0000000   -1.0000000   -3.2724900
+         0.2218750   -0.0013824   -0.1056000   -0.9944077   -3.4279799
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -3.2724900
+    alphakey 4
+         0.1333330    0.0000000
+         0.2666670    1.0000000
+         0.5333330    1.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object73
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 4
+         0.0022917   -0.0000000   -0.0000000   -1.0000000   -2.9496100
+         0.0839583   -0.0000000   -0.0000000   -1.0000000   -2.9496100
+         0.2550000    0.0023328   -0.1069110   -0.9942659   -2.7163701
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -2.9496100
+    alphakey 4
+         0.1333330    0.0000000
+         0.2666670    1.0000000
+         0.5333330    1.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object74
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 3
+         0.0783333   -0.0000000   -0.0000000   -1.0000000   -3.2724900
+         0.3685420   -0.0396980    0.1563110   -0.9869098   -3.6327600
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -3.2724900
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object75
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 3
+         0.0708333   -0.0000000   -0.0000000   -1.0000000   -3.2724900
+         0.2000000    0.0017261    0.1318560   -0.9912674   -3.4270899
+         0.8000000    0.0000025    0.0001890   -1.0000000   -3.2727201
+    alphakey 4
+         0.1333330    0.0000000
+         0.2666670    1.0000000
+         0.5333330    1.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object76
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 3
+         0.1133330   -0.0000000   -0.0000000   -1.0000000   -2.9496100
+         0.2335420   -0.0029126    0.1334820   -0.9910470   -2.7177000
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -2.9496100
+    alphakey 4
+         0.1333330    0.0000000
+         0.2666670    1.0000000
+         0.5333330    1.0000000
+         0.8000000    0.0000000
+  endnode
+  node trimesh Object77
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 3
+         0.0783333   -0.0000000   -0.0000000   -1.0000000   -2.9496100
+         0.3685420   -0.0558539   -0.1947860   -0.9792541   -2.5941000
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -2.9496100
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object78
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    positionkey 2
+         0.6708330   -1.1099800   -1.0797700    1.0053200
+         0.8000000   -1.1099800   -1.0803900    1.0053200
+    orientationkey 4
+         0.0670833   -0.0000000   -0.0000000   -1.0000000   -2.9496100
+         0.3102080    0.0448118    0.1562770   -0.9866962   -2.5901401
+         0.6708330   -0.0000000   -0.0000000   -1.0000000   -2.9496100
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -2.9496100
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+  node trimesh Object79
+    parent vim_cntmantle_cy
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    orientationkey 4
+         0.0027083   -0.0000000   -0.0000000   -1.0000000   -3.2724900
+         0.0850000   -0.0000000   -0.0000000   -1.0000000   -3.2724900
+         0.3714580    0.0494859   -0.1948509   -0.9795837   -3.6292601
+         0.8000000   -0.0000000   -0.0000000   -1.0000000   -3.2724900
+    alphakey 3
+         0.1000000    1.0000000
+         0.5000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+doneanim impact vim_cntmantle_cy
+
+donemodel vim_cntmantle_cy

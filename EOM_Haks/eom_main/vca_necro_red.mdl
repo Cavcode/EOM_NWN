@@ -1,0 +1,1070 @@
+# Exported from NWmax 0.8 b60 at 2/3/2013 3:54:31 PM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: vca_necro_red_red
+#local file: C:\gmax\Scenes\Visual Effects\Infinity Casting FX\necromancy05.gmax
+filedependancy necromancy05.gmax
+newmodel vca_necro_red
+setsupermodel vca_necro_red NULL
+classification Effect
+#NWmax GEOM  ASCII
+beginmodelgeom vca_necro_red
+node dummy vca_necro_red
+  parent NULL
+endnode
+node light AuroraDLight01
+  parent vca_necro_red
+  position 0.0 0.0 0.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.101961 0.694118 0.580392 
+  radius 2.0
+  multiplier 5.0
+  color 0.501961 1.0 0.501961 
+  ambientonly 1
+  nDynamicType 1
+  affectDynamic 1
+  shadow 1
+  lightpriority 5
+  fadingLight 1
+endnode
+node dummy Rotator01
+  parent vca_necro_red
+  position 0.0 0.0 0.0
+  orientation -1.0 0.0 0.0 -6.28319
+  wirecolor 0.239216 0.52549 0.0235294 
+endnode
+node emitter AuroraEmitter08
+  parent Rotator01
+  position -0.433013 0.0 0.25
+  orientation -0.186157 0.694747 -0.694746 -2.77349
+  wirecolor 0.839216 0.898039 0.65098 
+  update_sel 1
+  update Fountain
+  render_sel 7
+  render Motion_Blur
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 25.0
+  ySize 50.0
+  inherit 1
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.5
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 1.0 1.0 
+  colorEnd 1.0 0.0 0.0 
+  alphaStart 1.0
+  alphaEnd 0.5
+  sizeStart 0.05
+  sizeEnd 0.05
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 40
+  lifeExp 0.75
+  mass 0.0
+  spread 6.28319
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 1.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_souls01
+  twosidedtex 0
+  xgrid 4
+  ygrid 4
+  fps 0
+  framestart 0
+  frameend 15
+  random 1
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node emitter AuroraEmitter09
+  parent Rotator01
+  position -0.25 0.0 0.433013
+  orientation -0.377964 0.654654 -0.654654 -2.41886
+  wirecolor 0.839216 0.898039 0.65098 
+  update_sel 1
+  update Fountain
+  render_sel 7
+  render Motion_Blur
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 25.0
+  ySize 50.0
+  inherit 1
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.5
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 1.0 1.0 
+  colorEnd 1.0 0.0 0.0 
+  alphaStart 1.0
+  alphaEnd 0.5
+  sizeStart 0.05
+  sizeEnd 0.05
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 40
+  lifeExp 0.75
+  mass 0.0
+  spread 6.28319
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 1.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_souls01
+  twosidedtex 0
+  xgrid 4
+  ygrid 4
+  fps 0
+  framestart 0
+  frameend 15
+  random 1
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node emitter AuroraEmitter10
+  parent Rotator01
+  position 0.0 0.0 0.5
+  orientation 0.57735 -0.57735 0.57735 -4.18879
+  wirecolor 0.839216 0.898039 0.65098 
+  update_sel 1
+  update Fountain
+  render_sel 7
+  render Motion_Blur
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 25.0
+  ySize 50.0
+  inherit 1
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.5
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 1.0 1.0 
+  colorEnd 1.0 0.0 0.0 
+  alphaStart 1.0
+  alphaEnd 0.5
+  sizeStart 0.05
+  sizeEnd 0.05
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 40
+  lifeExp 0.75
+  mass 0.0
+  spread 6.28319
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 1.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_souls01
+  twosidedtex 0
+  xgrid 4
+  ygrid 4
+  fps 0
+  framestart 0
+  frameend 15
+  random 1
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node emitter AuroraEmitter12
+  parent Rotator01
+  position 0.433013 0.0 0.25
+  orientation 0.935113 -0.250563 0.250563 -4.64535
+  wirecolor 0.839216 0.898039 0.65098 
+  update_sel 1
+  update Fountain
+  render_sel 7
+  render Motion_Blur
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 25.0
+  ySize 50.0
+  inherit 1
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.5
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 1.0 1.0 
+  colorEnd 1.0 0.0 0.0 
+  alphaStart 1.0
+  alphaEnd 0.5
+  sizeStart 0.05
+  sizeEnd 0.05
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 40
+  lifeExp 0.75
+  mass 0.0
+  spread 6.28319
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 1.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_souls01
+  twosidedtex 0
+  xgrid 4
+  ygrid 4
+  fps 0
+  framestart 0
+  frameend 15
+  random 1
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node emitter AuroraEmitter11	
+  parent Rotator01
+  position 0.25 0.0 0.433013
+  orientation 0.774597 -0.447214 0.447214 -4.45971
+  wirecolor 0.839216 0.898039 0.65098 
+  update_sel 1
+  update Fountain
+  render_sel 7
+  render Motion_Blur
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 25.0
+  ySize 50.0
+  inherit 1
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.5
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 1.0 1.0 
+  colorEnd 1.0 0.0 0.0 
+  alphaStart 1.0
+  alphaEnd 0.5
+  sizeStart 0.05
+  sizeEnd 0.05
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 40
+  lifeExp 0.75
+  mass 0.0
+  spread 6.28319
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 1.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_souls01
+  twosidedtex 0
+  xgrid 4
+  ygrid 4
+  fps 0
+  framestart 0
+  frameend 15
+  random 1
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node emitter AuroraEmitter01
+  parent Rotator01
+  position 0.5 0.0 0.0
+  orientation 1.0 0.0 0.0 -4.71239
+  wirecolor 0.839216 0.898039 0.65098 
+  update_sel 1
+  update Fountain
+  render_sel 7
+  render Motion_Blur
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 25.0
+  ySize 50.0
+  inherit 1
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.5
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 1.0 1.0 
+  colorEnd 1.0 0.0 0.0 
+  alphaStart 1.0
+  alphaEnd 0.5
+  sizeStart 0.05
+  sizeEnd 0.05
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 40
+  lifeExp 0.75
+  mass 0.0
+  spread 6.28319
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 1.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_souls01
+  twosidedtex 0
+  xgrid 4
+  ygrid 4
+  fps 0
+  framestart 0
+  frameend 15
+  random 1
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node emitter AuroraEmitter02
+  parent Rotator01
+  position 0.433013 0.0 -0.25
+  orientation 0.935113 0.250563 -0.250563 -4.64535
+  wirecolor 0.839216 0.898039 0.65098 
+  update_sel 1
+  update Fountain
+  render_sel 7
+  render Motion_Blur
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 25.0
+  ySize 50.0
+  inherit 1
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.5
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 1.0 1.0 
+  colorEnd 1.0 0.0 0.0 
+  alphaStart 1.0
+  alphaEnd 0.5
+  sizeStart 0.05
+  sizeEnd 0.05
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 40
+  lifeExp 0.75
+  mass 0.0
+  spread 6.28319
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 1.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_souls01
+  twosidedtex 0
+  xgrid 4
+  ygrid 4
+  fps 0
+  framestart 0
+  frameend 15
+  random 1
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node emitter AuroraEmitter03
+  parent Rotator01
+  position 0.25 0.0 -0.433013
+  orientation 0.774597 0.447214 -0.447214 -4.45971
+  wirecolor 0.839216 0.898039 0.65098 
+  update_sel 1
+  update Fountain
+  render_sel 7
+  render Motion_Blur
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 25.0
+  ySize 50.0
+  inherit 1
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.5
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 1.0 1.0 
+  colorEnd 1.0 0.0 0.0 
+  alphaStart 1.0
+  alphaEnd 0.5
+  sizeStart 0.05
+  sizeEnd 0.05
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 40
+  lifeExp 0.75
+  mass 0.0
+  spread 6.28319
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 1.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_souls01
+  twosidedtex 0
+  xgrid 4
+  ygrid 4
+  fps 0
+  framestart 0
+  frameend 15
+  random 1
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node emitter AuroraEmitter04
+  parent Rotator01
+  position -0.5 0.0 0.0
+  orientation 0.0 0.707107 -0.707107 -3.14159
+  wirecolor 0.839216 0.898039 0.65098 
+  update_sel 1
+  update Fountain
+  render_sel 7
+  render Motion_Blur
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 25.0
+  ySize 50.0
+  inherit 1
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.5
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 1.0 1.0 
+  colorEnd 1.0 0.0 0.0 
+  alphaStart 1.0
+  alphaEnd 0.5
+  sizeStart 0.05
+  sizeEnd 0.05
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 40
+  lifeExp 0.75
+  mass 0.0
+  spread 6.28319
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 1.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_souls01
+  twosidedtex 0
+  xgrid 4
+  ygrid 4
+  fps 0
+  framestart 0
+  frameend 15
+  random 1
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node emitter AuroraEmitter05
+  parent Rotator01
+  position 0.0 0.0 -0.5
+  orientation 0.57735 0.57735 -0.57735 -4.18879
+  wirecolor 0.839216 0.898039 0.65098 
+  update_sel 1
+  update Fountain
+  render_sel 7
+  render Motion_Blur
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 25.0
+  ySize 50.0
+  inherit 1
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.5
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 1.0 1.0 
+  colorEnd 1.0 0.0 0.0 
+  alphaStart 1.0
+  alphaEnd 0.5
+  sizeStart 0.05
+  sizeEnd 0.05
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 40
+  lifeExp 0.75
+  mass 0.0
+  spread 6.28319
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 1.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_souls01
+  twosidedtex 0
+  xgrid 4
+  ygrid 4
+  fps 0
+  framestart 0
+  frameend 15
+  random 1
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node emitter AuroraEmitter06
+  parent Rotator01
+  position -0.433013 0.0 -0.25
+  orientation 0.186157 0.694747 -0.694747 -3.50969
+  wirecolor 0.839216 0.898039 0.65098 
+  update_sel 1
+  update Fountain
+  render_sel 7
+  render Motion_Blur
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 25.0
+  ySize 50.0
+  inherit 1
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.5
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 1.0 1.0 
+  colorEnd 1.0 0.0 0.0 
+  alphaStart 1.0
+  alphaEnd 0.5
+  sizeStart 0.05
+  sizeEnd 0.05
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 40
+  lifeExp 0.75
+  mass 0.0
+  spread 6.28319
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 1.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_souls01
+  twosidedtex 0
+  xgrid 4
+  ygrid 4
+  fps 0
+  framestart 0
+  frameend 15
+  random 1
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node emitter AuroraEmitter07
+  parent Rotator01
+  position -0.25 0.0 -0.433013
+  orientation 0.377964 0.654654 -0.654654 -3.86433
+  wirecolor 0.839216 0.898039 0.65098 
+  update_sel 1
+  update Fountain
+  render_sel 7
+  render Motion_Blur
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 25.0
+  ySize 50.0
+  inherit 1
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.5
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 1.0 1.0 
+  colorEnd 1.0 0.0 0.0 
+  alphaStart 1.0
+  alphaEnd 0.5
+  sizeStart 0.05
+  sizeEnd 0.05
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 40
+  lifeExp 0.75
+  mass 0.0
+  spread 6.28319
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 1.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_souls01
+  twosidedtex 0
+  xgrid 4
+  ygrid 4
+  fps 0
+  framestart 0
+  frameend 15
+  random 1
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+endmodelgeom vca_necro_red
+#NWmax ANIM ASCII
+newanim default vca_necro_red
+  length 4.66667
+  transtime 0.25
+  animroot vca_necro_red
+    node dummy vca_necro_red
+        parent NULL
+    endnode
+    node light AuroraDLight01
+        parent vca_necro_red
+    endnode
+    node dummy Rotator01
+        parent vca_necro_red
+        orientationkey
+            0.0 0.0 0.0 0.0 -6.28319
+            0.8 0.0 1.0 0.0 -4.71239
+            1.6 0.0 1.0 0.0 -3.14159
+            2.4 0.0 1.0 0.0 -1.5708
+            3.2 0.0 0.0 0.0 0.0
+            4.0 0.0 -1.0 0.0 -1.5708
+            4.66667 0.0 -1.0 0.0 -1.5708
+        endlist
+    endnode
+    node emitter AuroraEmitter08
+        parent Rotator01
+        birthratekey
+            0.0 40 
+            2.4 40 
+            3.2 0 
+            4.0 0 
+            4.66667 0 
+        endlist
+        velocitykey
+            0.0 0.0 
+            2.26667 0.0 
+            2.33333 0.5 
+            4.0 0.0 
+        endlist
+    endnode
+    node emitter AuroraEmitter09
+        parent Rotator01
+        birthratekey
+            0.0 40 
+            2.4 40 
+            3.2 0 
+            4.0 0 
+            4.66667 0 
+        endlist
+        velocitykey
+            0.0 0.0 
+            2.26667 0.0 
+            2.33333 0.5 
+            4.0 0.0 
+        endlist
+    endnode
+    node emitter AuroraEmitter10
+        parent Rotator01
+        birthratekey
+            0.0 40 
+            2.4 40 
+            3.2 0 
+            4.0 0 
+            4.66667 0 
+        endlist
+        velocitykey
+            0.0 0.0 
+            2.26667 0.0 
+            2.33333 0.5 
+            4.0 0.0 
+        endlist
+    endnode
+    node emitter AuroraEmitter12
+        parent Rotator01
+        birthratekey
+            0.0 40 
+            2.4 40 
+            3.2 0 
+            4.0 0 
+            4.66667 0 
+        endlist
+        velocitykey
+            0.0 0.0 
+            2.26667 0.0 
+            2.33333 0.5 
+            4.0 0.0 
+        endlist
+    endnode
+    node emitter AuroraEmitter11	
+        parent Rotator01
+        birthratekey
+            0.0 40 
+            2.4 40 
+            3.2 0 
+            4.0 0 
+            4.66667 0 
+        endlist
+        velocitykey
+            0.0 0.0 
+            2.26667 0.0 
+            2.33333 0.5 
+            4.0 0.0 
+        endlist
+    endnode
+    node emitter AuroraEmitter01
+        parent Rotator01
+        birthratekey
+            0.0 40 
+            2.4 40 
+            3.2 0 
+            4.0 0 
+            4.66667 0 
+        endlist
+        velocitykey
+            0.0 0.0 
+            2.26667 0.0 
+            2.33333 0.5 
+            4.0 0.0 
+        endlist
+    endnode
+    node emitter AuroraEmitter02
+        parent Rotator01
+        birthratekey
+            0.0 40 
+            2.4 40 
+            3.2 0 
+            4.0 0 
+            4.66667 0 
+        endlist
+        velocitykey
+            0.0 0.0 
+            2.26667 0.0 
+            2.33333 0.5 
+            4.0 0.0 
+        endlist
+    endnode
+    node emitter AuroraEmitter03
+        parent Rotator01
+        birthratekey
+            0.0 40 
+            2.4 40 
+            3.2 0 
+            4.0 0 
+            4.66667 0 
+        endlist
+        velocitykey
+            0.0 0.0 
+            2.26667 0.0 
+            2.33333 0.5 
+            4.0 0.0 
+        endlist
+    endnode
+    node emitter AuroraEmitter04
+        parent Rotator01
+        birthratekey
+            0.0 40 
+            2.4 40 
+            3.2 0 
+            4.0 0 
+            4.66667 0 
+        endlist
+        velocitykey
+            0.0 0.0 
+            2.26667 0.0 
+            2.33333 0.5 
+            4.0 0.0 
+        endlist
+    endnode
+    node emitter AuroraEmitter05
+        parent Rotator01
+        birthratekey
+            0.0 40 
+            2.4 40 
+            3.2 0 
+            4.0 0 
+            4.66667 0 
+        endlist
+        velocitykey
+            0.0 0.0 
+            2.26667 0.0 
+            2.33333 0.5 
+            4.0 0.0 
+        endlist
+    endnode
+    node emitter AuroraEmitter06
+        parent Rotator01
+        birthratekey
+            0.0 40 
+            2.4 40 
+            3.2 0 
+            4.0 0 
+            4.66667 0 
+        endlist
+        velocitykey
+            0.0 0.0 
+            2.26667 0.0 
+            2.33333 0.5 
+            4.0 0.0 
+        endlist
+    endnode
+    node emitter AuroraEmitter07
+        parent Rotator01
+        birthratekey
+            0.0 40 
+            2.4 40 
+            3.2 0 
+            4.0 0 
+            4.66667 0 
+        endlist
+        velocitykey
+            0.0 0.0 
+            2.26667 0.0 
+            2.33333 0.5 
+            4.0 0.0 
+        endlist
+    endnode
+doneanim default vca_necro_red
+donemodel vca_necro_red

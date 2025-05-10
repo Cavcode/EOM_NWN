@@ -1,0 +1,229 @@
+#MAXMODEL ASCII
+# model: vff_blastfrost
+filedependancy vff_blastfrost.max
+newmodel vff_blastfrost
+setsupermodel vff_blastfrost NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vff_blastfrost
+node dummy vff_blastfrost
+  parent NULL
+endnode
+node emitter UPcloud
+  parent vff_blastfrost
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 1
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_Smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 0.0579344
+  orientation 0 0 0 0
+  colorStart 0.8 1 1
+  colorEnd 0.8 1 1
+  alphaStart 1
+  alphaEnd 0
+  sizeStart 0.2
+  sizeEnd 2
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 60
+  lifeExp 1
+  mass 0.6
+  spread 0.523599
+  particleRot 2
+  velocity 4
+  randvel 0.6
+  fps 15
+  xsize 20
+  ysize 30
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter UPcloud01
+  parent vff_blastfrost
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 2
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_Smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 0.0579344
+  orientation 0 0 -1 -0.785398
+  colorStart 0.8 1 1
+  colorEnd 0.8 1 1
+  alphaStart 0.5
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 2
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 60
+  lifeExp 1
+  mass 0.7
+  spread 0.523599
+  particleRot -2
+  velocity 4
+  randvel 0.3
+  fps 15
+  xsize 30
+  ysize 20
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter UPcloud02
+  parent vff_blastfrost
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 1
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 1
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_Smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 0.0579344
+  orientation 0 0 -1 -0.785398
+  colorStart 0.8 1 1
+  colorEnd 0.8 1 1
+  alphaStart 0.5
+  alphaEnd 0
+  sizeStart 0.5
+  sizeEnd 0.5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 60
+  lifeExp 1
+  mass 0.3
+  spread 0.523599
+  particleRot -2
+  velocity 1.8
+  randvel 0.5
+  fps 15
+  xsize 40
+  ysize 40
+  bounce_co 0.2
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom vff_blastfrost
+
+#MAXANIM ASCII
+newanim impact vff_blastfrost
+  length 2.96667
+  transtime 0.25
+  animroot vff_blastfrost
+  node dummy vff_blastfrost
+    parent NULL
+  endnode
+  node emitter UPcloud
+    parent vff_blastfrost
+    birthratekey 4
+         0.0000000   60.0000000
+         0.3000000   60.0000000
+         0.3333330   60.0000000
+         0.3666670    0.0000000
+  endnode
+  node emitter UPcloud01
+    parent vff_blastfrost
+    birthratekey 4
+         0.0000000   60.0000000
+         0.3000000   60.0000000
+         0.3333330   60.0000000
+         0.3666670    0.0000000
+  endnode
+  node emitter UPcloud02
+    parent vff_blastfrost
+    birthratekey 4
+         0.0000000   60.0000000
+         0.6000000   60.0000000
+         0.6333330   60.0000000
+         0.6666670    0.0000000
+  endnode
+doneanim impact vff_blastfrost
+
+donemodel vff_blastfrost

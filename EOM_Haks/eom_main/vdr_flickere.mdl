@@ -1,0 +1,261 @@
+#MAXMODEL ASCII
+# model: vdr_flickere
+filedependancy vdr_flickere.max
+newmodel vdr_flickere
+setsupermodel vdr_flickere NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vdr_flickere
+node dummy vdr_flickere
+  parent NULL
+endnode
+node emitter fairyDust_l
+  parent vdr_flickere
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_blueflicker
+  xgrid 3
+  ygrid 3
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.000521637 0.00116203 1.69579
+  orientation 0 0 0 0
+  colorStart 0.188235 0.717647 0.117647
+  colorEnd 0.678431 0.886275 0.65098
+  alphaStart 0.3
+  alphaEnd 0.9
+  sizeStart 0.1
+  sizeEnd 0.15
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 8
+  birthrate 30
+  lifeExp 1.0
+  mass 0.04
+  spread 0.5
+  particleRot 1
+  velocity 0.1
+  randvel 0.09
+  fps 30
+  xsize 16
+  ysize 16
+  bounce_co 0
+  blurlength 20
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter mana
+  parent vdr_flickere
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_mdraw
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.000521637 0.00116203 1.69579
+  orientation 0 0 0 0
+  colorStart 0.588235 0.598235 0.598235
+  colorEnd 0.288235 0.328235 0.328235
+  alphaStart 0.5
+  alphaEnd 0.7
+  sizeStart 1.15
+  sizeEnd 0.45
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 8
+  birthrate 10
+  lifeExp 1.0
+  mass 0.01
+  spread 0.5
+  particleRot 3
+  velocity 0.0
+  randvel 0.025
+  fps 30
+  xsize 16
+  ysize 16
+  bounce_co 0
+  blurlength 20
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter fairyDust_r
+  parent vdr_flickere
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_Sparks
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.00325326 -0.00289599 1.69579
+  orientation 0 0 0 0
+  colorStart 0.188235 0.717647 0.117647
+  colorEnd 0.678431 0.886275 0.65098
+  alphaStart 0.3
+  alphaEnd 0.9
+  sizeStart 0.055
+  sizeEnd 0.09
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 70
+  lifeExp 1.1
+  mass 0.04
+  spread 2.1
+  particleRot 1
+  velocity 0.65
+  randvel 0.09
+  fps 30
+  xsize 16
+  ysize 16
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom vdr_flickere
+
+#MAXANIM ASCII
+newanim duration vdr_flickere
+  length 8.63333
+  transtime 0
+  animroot vdr_flickere
+  node dummy vdr_flickere
+    parent NULL
+  endnode
+  node emitter fairyDust_l
+    parent vdr_flickere
+    birthratekey 2
+         0.00000  50.0000000
+         8.63333  50.0000000
+  endnode
+  node emitter fairyDust_r
+    parent vdr_flickere
+    birthratekey 2
+         0.00000  50.0000000
+         8.63333  50.0000000
+  endnode
+doneanim duration vdr_flickere
+
+#MAXANIM ASCII
+newanim cessation vdr_flickere
+  length 0.0333333
+  transtime 0
+  animroot vdr_flickere
+  node dummy vdr_flickere
+    parent NULL
+  endnode
+  node emitter fairyDust_l
+    parent vdr_flickere
+    birthratekey 2
+         0.0000000    10.0000000
+         0.0333333    0.0000000
+  endnode
+  node emitter fairyDust_r
+    parent vdr_flickere
+    birthratekey 2
+         0.0000000    10.0000000
+         0.0333333    0.0000000
+  endnode
+doneanim cessation vdr_flickere
+
+#MAXANIM ASCII
+newanim impact vdr_flickere
+  length 8.63333
+  transtime 0
+  animroot vdr_flickere
+  node dummy vdr_flickere
+    parent NULL
+  endnode
+  node emitter fairyDust_l
+    parent vdr_flickere
+    birthratekey 2
+         0.00000  150.0000000
+         8.63333  50.0000000
+  endnode
+  node emitter fairyDust_r
+    parent vdr_flickere
+    birthratekey 2
+         0.00000  150.0000000
+         8.63333  50.0000000
+  endnode
+doneanim impact vdr_flickere
+
+donemodel vdr_flickere

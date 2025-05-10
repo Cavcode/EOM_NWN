@@ -1,0 +1,209 @@
+#Exported from 3ds max by MDL Plug-in Suite 1.0b
+#http://www.bricksbuilder.com/nwn/utils/
+#MAXMODEL ASCII
+# model: vdr_d1_winds
+filedependancy Unknown
+newmodel vdr_d1_winds
+setsupermodel vdr_d1_winds NULL
+classification Character
+setanimationscale 1.0
+#MAXGEOM  ASCII
+beginmodelgeom vdr_d1_winds
+node dummy vdr_d1_winds
+  parent NULL
+endnode
+node emitter Willowisp
+  parent vdr_d1_winds
+  position 0 0 0
+  orientation 1 0 0 -1.56207
+  wirecolor 0.695313 0.695313 0.695313
+    colorStart 0.407843 0.737255 0.968628
+    colorEnd 0 0 0
+    alphaStart 0
+    alphaEnd 1
+    sizeStart 0.3
+    sizeEnd 0.9
+    sizeStart_y 0
+    sizeEnd_y 0
+    frameStart 0
+    frameEnd 15
+    birthrate 30
+    spawnType 0
+    lifeExp 2
+    mass 0
+    spread 6.28319
+    particleRot 0.2
+    velocity 0.1
+    randvel 0.2
+    fps 16
+    random 0
+    inherit 0
+    inherit_local 0
+    inherit_part 0
+    inheritvel 0
+    xsize 40
+    ysize 40
+    bounce 0
+    bounce_co 0
+    loop 0
+    update Fountain
+    render Normal
+    Blend Lighten
+    update_sel 1
+    render_sel 1
+    blend_sel 3
+    deadspace 0
+    opacity 0
+    blurlength 10
+    lightningDelay 0
+    lightningRadius 0
+    lightningScale 0
+    blastRadius 0
+    blastLength 0
+    twosidedtex 0
+    p2p 0
+    p2p_sel 1
+    p2p_type Bezier
+    p2p_bezier2 0
+    p2p_bezier3 0
+    combinetime 0
+    drag 0
+    grav 0
+    threshold 0
+    texture fxpa_Smoke01a
+    xgrid 4
+    ygrid 4
+    affectedByWind 0
+    m_isTinted 0
+    renderorder 0
+    Splat 0
+endnode
+node emitter burst
+  parent Willowisp
+  position 0.00436897 -0.566925 0.0843611
+  orientation -1 0 0 -1.56207
+  wirecolor 0.894531 0.894531 0.894531
+    colorStart 1 1 1
+    colorEnd 1 1 1
+    alphaStart 0
+    alphaEnd 0
+    sizeStart 0
+    sizeEnd 0
+    sizeStart_y 0
+    sizeEnd_y 0
+    frameStart 0
+    frameEnd 0
+    birthrate 50
+    spawnType 0
+    lifeExp 0
+    mass 0
+    spread 6.28319
+    particleRot 0
+    velocity 5
+    randvel 0
+    fps 0
+    random 0
+    inherit 0
+    inherit_local 0
+    inherit_part 0
+    inheritvel 0
+    xsize 0
+    ysize 0
+    bounce 0
+    bounce_co 0.1
+    loop 0
+    update Explosion
+    render Normal
+    Blend Lighten
+    update_sel 2
+    render_sel 1
+    blend_sel 3
+    deadspace 0
+    opacity 0.5
+    blurlength 10
+    lightningDelay 0
+    lightningRadius 0
+    lightningScale 0
+    blastRadius 3
+    blastLength 0.3
+    twosidedtex 0
+    p2p 0
+    p2p_sel 1
+    p2p_type Bezier
+    p2p_bezier2 0
+    p2p_bezier3 0
+    combinetime 0
+    drag 0
+    grav 0
+    threshold 0
+    texture NULL
+    xgrid 1
+    ygrid 1
+    affectedByWind 0
+    m_isTinted 0
+    renderorder 0
+    Splat 0
+endnode
+endmodelgeom vdr_d1_winds
+
+#MAXANIM ASCII
+newanim duration vdr_d1_winds
+  length 1.96667
+  transtime 0.5
+  animroot vdr_d1_winds
+  event 0.0 detonate
+  event 0.3 detonate
+  event 0.6 detonate
+  event 0.9 detonate
+  event 1.2 detonate
+  event 1.5 detonate
+  event 1.8 detonate
+node dummy vdr_d1_winds
+  parent NULL
+endnode
+node emitter Willowisp
+  parent vdr_d1_winds
+    positionkey
+      0  -1.63889 0 0
+      0.0333333  -1.61775 -0.143602 0
+      0.0677083  -1.59844 -0.363029 0
+      0.135625  -1.48304 -0.697789 0
+      0.203333  -1.30158 -0.995386 0
+      0.27125  -1.06294 -1.24693 0
+      0.338958  -0.776019 -1.44352 0
+      0.406875  -0.449717 -1.57627 0
+      0.474583  -0.0929213 -1.63629 0
+      0.5425  0.274575 -1.61593 0
+      0.610208  0.617235 -1.51843 0
+      0.678125  0.924957 -1.35265 0
+      0.745833  1.18885 -1.12747 0
+      0.81375  1.40001 -0.851789 0
+      0.881458  1.54956 -0.534498 0
+      0.949375  1.62859 -0.184492 0
+      1.01708  1.62859 0.184492 0
+      1.085  1.54956 0.534498 0
+      1.15271  1.40001 0.851789 0
+      1.22063  1.18885 1.12747 0
+      1.28833  0.924957 1.35265 0
+      1.35625  0.617235 1.51843 0
+      1.42396  0.274575 1.61593 0
+      1.49188  -0.0929211 1.63629 0
+      1.55958  -0.449717 1.57627 0
+      1.6275  -0.77602 1.44352 0
+      1.69521  -1.06294 1.24693 0
+      1.76313  -1.30158 0.995386 0
+      1.83083  -1.48304 0.697789 0
+      1.89875  -1.59844 0.363029 0
+      1.96667  -1.63889 0 0
+    endlist
+    orientationkey
+      0  -1 0 0 1.56207
+      0.966667  -0.00307198 -0.704011 0.710182 3.1354
+      1.96667  -0.999923 0.00872643 -0.00880279 1.56215
+    endlist
+endnode
+node emitter burst
+  parent Willowisp
+endnode
+doneanim duration vdr_d1_winds
+donemodel vdr_d1_winds

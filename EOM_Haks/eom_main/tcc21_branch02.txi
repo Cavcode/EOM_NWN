@@ -1,0 +1,4 @@
+downsamplemax 0
+downsamplemin 0
+alphamean 0.5
+blending punchthrough

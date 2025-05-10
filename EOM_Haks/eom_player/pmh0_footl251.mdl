@@ -1,0 +1,10 @@
+newmodel pmh0_footl251
+setsupermodel pmh0_footl251 null
+classification CHARACTER
+setanimationscale 1.0
+beginmodelgeom pmh0_footl251
+node dummy pmh0_footl251
+  parent null
+endnode
+endmodelgeom pmh0_footl251
+donemodel pmh0_footl251

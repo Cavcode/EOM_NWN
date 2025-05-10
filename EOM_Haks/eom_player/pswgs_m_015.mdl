@@ -1,0 +1,90 @@
+# Exported from NWmax v6.11.28 at 4/1/2022 5:30:01 PM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: pswgs_m_015
+#local file: Unknown
+filedependancy Unknown
+newmodel pswgs_m_015
+setsupermodel pswgs_m_015 NULL
+classification Character
+setanimationscale 1.0
+#NWmax GEOM  ASCII
+beginmodelgeom pswgs_m_015
+node dummy pswgs_m_015
+  parent NULL
+endnode
+node trimesh pswgs_m_011
+  parent pswgs_m_015
+  position 0.00492987 -0.0154021 0.0176859
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 1.0 1.0 1.0 
+  tilefade 0
+  scale 1.0
+  render 0
+  Shadow 1
+  beaming 0
+  inheritcolor 0
+  rotatetexture 0
+  alpha 1.0
+  transparencyhint 0
+  selfillumcolor 0.0 0.0 0.0 
+  ambient 1.0 1.0 1.0 
+  Diffuse 1.0 1.0 1.0 
+  Specular 0.0 0.0 0.0 
+  shininess 1
+  center 3.57628e-07 10.6661 0.814969 
+  bitmap pswgs_011
+  verts 8
+    0.0206967 0.0817455 0.171361
+    -0.0206968 0.0817455 0.171361
+    0.0206968 0.0817455 -0.152987
+    0.0206967 0.131576 0.171361
+    -0.0206968 0.131576 0.171361
+    0.0206968 0.131576 -0.155061
+    -0.0206967 0.131576 -0.155061
+    -0.0206967 0.0817455 -0.152987
+  faces 14
+    0 1 2  1  0 1 2  1
+    3 4 5  1  3 4 5  1
+    6 5 4  1  6 5 4  1
+    2 5 0  2  11 12 13  1
+    7 6 2  4  18 15 19  1
+    6 4 5  1  1 20 0  1
+    7 2 1  1  20 2 1  1
+    0 3 1  4  21 14 22  1
+    3 5 4  1  2 0 20  1
+    1 6 7  2  13 12 11  1
+    3 0 5  2  24 13 12  1
+    4 1 3  4  15 22 14  1
+    5 2 6  4  14 19 15  1
+    4 6 1  2  24 12 13  1
+  tverts 25
+    0.154667 -0.865773 0
+    0.154667 -0.994089 0
+    0.002312 -0.865773 0
+    0.150531 -0.882119 0
+    0.150531 -0.977678 0
+    0.005639 -0.882119 0
+    0.005639 -0.977678 0
+    0.840995 -0.162948 0
+    0.868463 -0.116576 0
+    0.868463 -0.985014 0
+    0.840995 -0.946312 0
+    0.93122 -0.940148 0
+    0.868463 -0.953032 0
+    0.93122 -0.162948 0
+    0.868528 -0.00833702 0
+    0.868528 -0.108954 0
+    0.840995 -0.00833702 0
+    0.840994 -0.00833702 0
+    0.931455 -0.108954 0
+    0.931455 -0.00833702 0
+    0.002312 -0.994089 0
+    0.931454 -0.00833702 0
+    0.931454 -0.108954 0
+    0.840995 -0.108954 0
+    0.868463 -0.149311 0
+endnode
+endmodelgeom pswgs_m_015
+donemodel pswgs_m_015

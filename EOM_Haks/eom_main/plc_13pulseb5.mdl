@@ -1,0 +1,53 @@
+# Exported from NWmax v6.11.28 at 9/7/2022 2:43:11 AM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: plc_13pulseb5
+#local file: C:\Users\Fnord\Documents\3dsMax\scenes\new13plac.max
+filedependancy new13plac.max
+newmodel plc_13pulseb5
+setsupermodel plc_13pulseb5 null
+classification Character
+setanimationscale 0.7
+#NWmax GEOM  ASCII
+beginmodelgeom plc_13pulseb5
+node dummy plc_13pulseb5
+  parent NULL
+endnode
+node trimesh Object012
+  parent plc_13pulseb5
+  position 0.0 0.0 0.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.8 0.8 0.8 
+  tilefade 0
+  scale 1.0
+  render 1
+  Shadow 0
+  beaming 0
+  inheritcolor 0
+  rotatetexture 0
+  alpha 1.0
+  transparencyhint 0
+  selfillumcolor 0.0 0.0 0.0 
+  ambient 1.0 1.0 1.0 
+  Diffuse 1.0 1.0 1.0 
+  Specular 0.0 0.0 0.0 
+  shininess 0
+  center -0.000610352 0.0 1263.02 
+  bitmap plc_13pulsebg1
+  verts 4
+    17.5855 -0.206152 -0.144561
+    -17.5855 0.206152 -0.144561
+    -17.5855 0.206152 25.4049
+    17.5855 -0.206152 25.4049
+  faces 2
+    0 1 2  1  0 1 2  1
+    0 2 3  1  0 2 3  1
+  tverts 4
+    0.49707 1.50195 0
+    0.0029335 1.50195 0
+    0.0029335 1.84814 0
+    0.49707 1.84814 0
+endnode
+endmodelgeom plc_13pulseb5
+donemodel plc_13pulseb5

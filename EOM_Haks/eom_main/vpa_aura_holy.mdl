@@ -1,0 +1,670 @@
+#MAXMODEL ASCII
+# model: vpa_aura_holy
+filedependancy vpa_aura_holy.max
+newmodel vpa_aura_holy
+setsupermodel vpa_aura_holy NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vpa_aura_holy
+node dummy vpa_aura_holy
+  parent NULL
+endnode
+node dummy Dummy01
+  parent vpa_aura_holy
+  position 0 0 0.581702
+  orientation 0 -1 0 -3.14159
+endnode
+node dummy Dummy_rot
+  parent vpa_aura_holy
+  position 0 0 -0.483087
+  orientation 0 0 0 0
+endnode
+node emitter FlareEmitter01
+  parent Dummy_rot
+  p2p 1
+  p2p_sel 0
+  affectedByWind 0
+  m_isTinted 0
+  bounce 1
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Normal
+  blend Lighten
+  texture fxpa_flare
+  xgrid 0
+  ygrid 0
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 1.4376
+  orientation 0 0 0 0
+  colorStart 0.843137 0.713726 0
+  colorEnd 0.843137 0.576471 0
+  alphaStart 1
+  alphaEnd 0
+  sizeStart 0.2
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 100
+  lifeExp 1.6
+  mass 0
+  spread 4.53786
+  particleRot 0
+  velocity 6.5
+  randvel 1
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0.3
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 1
+  grav 0
+  threshold 0
+endnode
+node reference AuraRef01
+  parent FlareEmitter01
+  refModel fx_ref
+  reattachable 0
+  position 0 0 -0.0431074
+  orientation 0 0 0 0
+endnode
+node emitter OmenEmitter03
+  parent Dummy01
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -4 -1.62423e-07 0.296152
+  orientation 0 -0.7071068 0.7071068 -3.14159
+  colorStart 0.843137 0.713726 0
+  colorEnd 0.843137 0.576471 0
+  alphaStart 0.7
+  alphaEnd 0.7
+  sizeStart 0.2
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 50
+  lifeExp 0.6
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter01
+  parent Dummy01
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -1.75309e-07 4 0.292932
+  orientation 0.5773503 0.5773503 -0.5773503 -2.0944
+  colorStart 0.843137 0.713726 0
+  colorEnd 0.843137 0.576471 0
+  alphaStart 0.7
+  alphaEnd 0.7
+  sizeStart 0.2
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 50
+  lifeExp 0.6
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node dummy Dummy02
+  parent vpa_aura_holy
+  position 0 0 0.248778
+  orientation 0 0 1 -3.14159
+endnode
+node emitter OmenEmitter02
+  parent Dummy02
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 4 -1.8388e-07 0.0402324
+  orientation 0 -0.7071068 -0.7071068 -3.14159
+  colorStart 0.843137 0.713726 0
+  colorEnd 0.843137 0.576471 0
+  alphaStart 0.7
+  alphaEnd 0.7
+  sizeStart 0.2
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 50
+  lifeExp 0.6
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter04
+  parent Dummy02
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 1.74415e-07 4 0.0363523
+  orientation -0.5773503 0.5773503 0.5773503 -2.0944
+  colorStart 0.843137 0.713726 0
+  colorEnd 0.843137 0.576471 0
+  alphaStart 0.7
+  alphaEnd 0.7
+  sizeStart 0.2
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 50
+  lifeExp 0.6
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter AuraEmitter04
+  parent vpa_aura_holy
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Billboard_to_World_Z
+  blend Lighten
+  texture fxpa_16056
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 0.1335550
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 1
+  lifeExp -1
+  mass 0
+  spread 0
+  particleRot 1.5
+  velocity 0
+  randvel 0
+  fps 6
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom vpa_aura_holy
+
+#MAXANIM ASCII
+newanim impact vpa_aura_holy
+  length 1.7
+  transtime 0.25
+  animroot vpa_aura_holy
+  node dummy vpa_aura_holy
+    parent NULL
+  endnode
+  node dummy Dummy_rot
+    parent vpa_aura_holy
+    orientationkey 1
+         0.3000000    0.0000000    0.0000000    0.0000000    0.0000000
+  endnode
+  node emitter FlareEmitter01
+    parent Dummy_rot
+  endnode
+  node dummy AuraRef01
+    parent FlareEmitter01
+  endnode
+  node dummy Dummy01
+    parent vpa_aura_holy
+    orientationkey 5
+         0.0000000   -0.0000000   -1.0000000   -0.0000000   -3.1415901
+         0.4333330    0.7071068   -0.7071068   -0.0000000   -3.1415901
+         0.8666670    1.0000000   -0.0000000   -0.0000000   -3.1415901
+         1.3000000    0.7071068    0.7071068   -0.0000000   -3.1415901
+         1.7000000   -0.0000000    1.0000000   -0.0000000   -3.1415901
+  endnode
+  node emitter OmenEmitter03
+    parent Dummy01
+    birthratekey 3
+         0.0000000   50.0000000
+         1.6666700   50.0000000
+         1.7000000   50.0000000
+  endnode
+  node emitter OmenEmitter01
+    parent Dummy01
+    birthratekey 3
+         0.0000000   50.0000000
+         1.6666700   50.0000000
+         1.7000000   50.0000000
+  endnode
+  node dummy Dummy02
+    parent vpa_aura_holy
+    orientationkey 5
+         0.0000000   -0.0000000   -0.0000000    1.0000000   -3.1415901
+         0.4333330   -0.0000000   -0.0000000    1.0000000   -4.7123899
+         0.8666670    0.0000000    0.0000000    0.0000000    0.0000000
+         1.3000000   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+         1.7000000   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+  endnode
+  node emitter OmenEmitter02
+    parent Dummy02
+    birthratekey 3
+         0.0000000   50.0000000
+         1.6666700   50.0000000
+         1.7000000   50.0000000
+  endnode
+  node emitter OmenEmitter04
+    parent Dummy02
+    birthratekey 3
+         0.0000000   50.0000000
+         1.6666700   50.0000000
+         1.7000000   50.0000000
+  endnode
+  node emitter AuraEmitter04
+    parent vpa_aura_holy
+    alphaStartkey 1
+         0.3000000    1.0000000
+    alphaEndkey 1
+         0.3000000    1.0000000
+    sizeStartkey 4
+         0.0000000    0.0000000
+         0.1666670   10.0000000
+         0.2000000   10.0000000
+         0.3000000   10.0000000
+    sizeEndkey 4
+         0.0000000   10.0000000
+         0.1666670   10.0000000
+         0.2000000   10.0000000
+         0.3000000   10.0000000
+  endnode
+doneanim impact vpa_aura_holy
+
+#MAXANIM ASCII
+newanim duration vpa_aura_holy
+  length 1.7
+  transtime 0.25
+  animroot vpa_aura_holy
+  node dummy vpa_aura_holy
+    parent NULL
+  endnode
+  node dummy Dummy_rot
+    parent vpa_aura_holy
+    orientationkey 5
+         0.0000000    0.0000000    0.0000000    0.0000000    0.0000000
+         0.2666670   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+         0.5000000   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+         0.7666670   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+         1.0000000    0.0000000    0.0000000    0.0000000    0.0000000
+  endnode
+  node emitter FlareEmitter01
+    parent Dummy_rot
+  endnode
+  node dummy AuraRef01
+    parent FlareEmitter01
+  endnode
+  node dummy Dummy01
+    parent vpa_aura_holy
+    orientationkey 5
+         0.0000000   -0.0000000   -1.0000000   -0.0000000   -3.1415901
+         0.4333330    0.7071068   -0.7071068   -0.0000000   -3.1415901
+         0.8666670    1.0000000   -0.0000000   -0.0000000   -3.1415901
+         1.3000000    0.7071068    0.7071068   -0.0000000   -3.1415901
+         1.7000000   -0.0000000    1.0000000   -0.0000000   -3.1415901
+  endnode
+  node emitter OmenEmitter03
+    parent Dummy01
+    birthratekey 3
+         0.0000000   50.0000000
+         1.6666700   50.0000000
+         1.7000000   50.0000000
+  endnode
+  node emitter OmenEmitter01
+    parent Dummy01
+    birthratekey 3
+         0.0000000   50.0000000
+         1.6666700   50.0000000
+         1.7000000   50.0000000
+  endnode
+  node dummy Dummy02
+    parent vpa_aura_holy
+    orientationkey 5
+         0.0000000   -0.0000000   -0.0000000    1.0000000   -3.1415901
+         0.4333330   -0.0000000   -0.0000000    1.0000000   -4.7123899
+         0.8666670    0.0000000    0.0000000    0.0000000    0.0000000
+         1.3000000   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+         1.7000000   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+  endnode
+  node emitter OmenEmitter02
+    parent Dummy02
+    birthratekey 3
+         0.0000000   50.0000000
+         1.6666700   50.0000000
+         1.7000000   50.0000000
+  endnode
+  node emitter OmenEmitter04
+    parent Dummy02
+    birthratekey 3
+         0.0000000   50.0000000
+         1.6666700   50.0000000
+         1.7000000   50.0000000
+  endnode
+  node emitter AuraEmitter04
+    parent vpa_aura_holy
+    alphaStartkey 5
+         0.0000000    1.0000000
+         0.0333333    1.0000000
+         0.4333330    0.7000000
+         0.9666670    1.0000000
+         1.0000000    1.0000000
+    alphaEndkey 5
+         0.0000000    1.0000000
+         0.0333333    1.0000000
+         0.4333330    0.7000000
+         0.9666670    1.0000000
+         1.0000000    1.0000000
+    sizeStartkey 4
+         0.0000000   10.0000000
+         0.0333333   10.0000000
+         0.9666670   10.0000000
+         1.0000000   10.0000000
+    sizeEndkey 4
+         0.0000000   10.0000000
+         0.0333333   10.0000000
+         0.9666670   10.0000000
+         1.0000000   10.0000000
+  endnode
+doneanim duration vpa_aura_holy
+
+#MAXANIM ASCII
+newanim cessation vpa_aura_holy
+  length 0.933333
+  transtime 0.25
+  animroot vpa_aura_holy
+  node dummy vpa_aura_holy
+    parent NULL
+  endnode
+  node dummy Dummy_rot
+    parent vpa_aura_holy
+    orientationkey 10
+         0.0000000    0.0000000    0.0000000    0.0000000    0.0000000
+         0.2333330   -0.0000000   -0.0000000    1.0000000   -4.7123899
+         0.4666670   -0.0000000   -0.0000000    1.0000000   -3.1415901
+         0.7000000   -0.0000000   -0.0000000    1.0000000   -1.5707999
+         0.9333330    0.0000000    0.0000000    0.0000000    0.0000000
+         1.1666700   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+         1.3666700   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+         1.5666699   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+         1.7666700    0.0000000    0.0000000    0.0000000    0.0000000
+         2.0000000   -0.0000000   -0.0000000    1.0000000   -4.7123899
+  endnode
+  node emitter FlareEmitter01
+    parent Dummy_rot
+    gravkey 5
+         0.1666670    0.0000000
+         0.2000000    0.0000000
+         0.2666670    0.0000000
+         0.3000000    5.0000000
+         0.3333330   10.0000000
+  endnode
+  node dummy AuraRef01
+    parent FlareEmitter01
+  endnode
+  node dummy Dummy01
+    parent vpa_aura_holy
+    orientationkey 2
+         0.0000000   -0.0000000    1.0000000   -0.0000000   -3.1415901
+         0.9333330   -0.7071068    0.7071068   -0.0000000   -3.1415901
+  endnode
+  node emitter OmenEmitter03
+    parent Dummy01
+    birthratekey 2
+         0.0000000   50.0000000
+         0.2666670  -50.0000000
+  endnode
+  node emitter OmenEmitter01
+    parent Dummy01
+    birthratekey 2
+         0.0000000   50.0000000
+         0.2666670  -50.0000000
+  endnode
+  node dummy Dummy02
+    parent vpa_aura_holy
+    orientationkey 2
+         0.0000000   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+         0.9333330   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+  endnode
+  node emitter OmenEmitter02
+    parent Dummy02
+    birthratekey 2
+         0.0000000   50.0000000
+         0.2666670  -50.0000000
+  endnode
+  node emitter OmenEmitter04
+    parent Dummy02
+    birthratekey 2
+         0.0000000   50.0000000
+         0.2666670  -50.0000000
+  endnode
+  node emitter AuraEmitter04
+    parent vpa_aura_holy
+    alphaStartkey 2
+         0.0000000    1.0000000
+         0.2000000    1.0000000
+    alphaEndkey 2
+         0.0000000    1.0000000
+         0.2000000    1.0000000
+    sizeStartkey 5
+         0.0000000   10.0000000
+         0.2000000   10.0000000
+         0.2333330   10.0000000
+         0.5333330    0.0000000
+         0.6666670    0.0000000
+    sizeEndkey 5
+         0.0000000   10.0000000
+         0.2000000   10.0000000
+         0.2333330   10.0000000
+         0.5333330    0.0000000
+         0.6666670    0.0000000
+  endnode
+doneanim cessation vpa_aura_holy
+
+donemodel vpa_aura_holy

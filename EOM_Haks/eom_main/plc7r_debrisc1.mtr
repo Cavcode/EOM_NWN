@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 plc7r_debrisc1 
+texture1 plc7r_debrisc1_n 
+texture2 plc7r_debrisc1_s 
+texture3 plc7r_debrisc1_r 
+texture4 null 

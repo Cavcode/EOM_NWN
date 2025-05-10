@@ -1,0 +1,400 @@
+# Exported from NWmax 0.5-beta at 3/17/2004 12:52:17 PM
+# mdl file
+#
+#NWmaxMODEL ASCII
+# model: vdr_iounscarletblue
+filedependancy Unknown
+newmodel vdr_iounscarletblue
+setsupermodel vdr_iounscarletblue NULL
+classification Character
+setanimationscale 1.0
+#NWmaxGEOM  ASCII
+beginmodelgeom vdr_iounscarletblue
+node dummy vdr_iounscarletblue
+  parent NULL
+endnode
+node emitter OmenEmitter04
+  parent vdr_iounscarletblue
+  position 0.0 0.5 0.098002
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 1.0 1.0 1.0 
+     update_sel 1
+     update Fountain
+     render_sel 1
+     render Normal
+     blend_sel 2
+     Blend Lighten
+     spawnType 0
+     iconSize 100.0
+     xSize 0.0
+     ySize 0.0
+     inherit 0
+     inherit_local 1
+     inheritvel 0
+     inherit_part 0
+     renderorder 0
+     threshold 0.0
+     combinetime 0.0
+     deadspace 0.0
+     colorStart 1.00 0.00 0.00 
+     colorEnd 0.0 0.0 0.0 
+     alphaStart 1.0
+     alphaEnd 1.0
+     sizeStart 0.3
+     sizeEnd 0.15
+     sizeStart_y 0.0
+     sizeEnd_y 0.0
+     birthrate 1.0
+     lifeExp 0.1
+     mass 0.0
+     spread 3.28319
+     particleRot 0.0
+     velocity 0.0
+     randvel 0.2
+     bounce_co 0.0
+     blurlength 10.0
+     loop 0
+     bounce 0
+     m_isTinted 0
+     Splat 0
+     affectedbyWind false
+     texture fxpa_StarBnW
+     twosidedtext 0
+     xgrid 2
+     ygrid 2
+     fps 12
+     frameStart 0
+     frameEnd 3
+     random 0
+     #chunk undefined
+     lightningDelay 0.0
+     lightningRadius 0.0
+     lightningSubDivkey 0
+     lightningScale 0.0
+     blastRadius 0.0
+     blastLength 0.0
+     opacity 0.0
+     p2p 0
+     p2p_type Bezier
+     p2p_sel 1
+     p2p_bezier2 0.0
+     p2p_bezier3 0.0
+     grav 0.0
+     drag 0.0
+     Cone_Angle_Manipulator SubAnim:Cone_Angle_Manipulator
+endnode
+node emitter OmenEmitter05
+  parent vdr_iounscarletblue
+  position 0.0 0.5 0.095002
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 1.0 1.0 1.0 
+     update_sel 1
+     update Fountain
+     render_sel 1
+     render Normal
+     blend_sel 2
+     Blend Lighten
+     spawnType 0
+     iconSize 100.0
+     xSize 0.0
+     ySize 0.0
+     inherit 0
+     inherit_local 1
+     inheritvel 0
+     inherit_part 0
+     renderorder 0
+     threshold 0.0
+     combinetime 0.0
+     deadspace 0.0
+     colorStart 0.00 0.00 1.00 
+     colorEnd 0.0 0.0 0.0 
+     alphaStart 1.0
+     alphaEnd 1.0
+     sizeStart 0.05
+     sizeEnd 0.05
+     sizeStart_y 0.0
+     sizeEnd_y 0.0
+     birthrate 10.0
+     lifeExp 2.0
+     mass 0.1
+     spread 9.28319
+     particleRot 1.0
+     velocity 0.0
+     randvel 0.2
+     bounce_co 0.0
+     blurlength 10.0
+     loop 0
+     bounce 0
+     m_isTinted 0
+     Splat 0
+     affectedbyWind false
+     texture fxpa_StarBnW
+     twosidedtext 0
+     xgrid 2
+     ygrid 2
+     fps 8
+     frameStart 0
+     frameEnd 3
+     random 1
+     #chunk undefined
+     lightningDelay 0.0
+     lightningRadius 0.0
+     lightningSubDivkey 0
+     lightningScale 0.0
+     blastRadius 0.0
+     blastLength 0.0
+     opacity 0.0
+     p2p 0
+     p2p_type Bezier
+     p2p_sel 1
+     p2p_bezier2 0.0
+     p2p_bezier3 0.0
+     grav 0.0
+     drag 0.0
+     Cone_Angle_Manipulator SubAnim:Cone_Angle_Manipulator
+endnode
+node emitter OmenEmitter06
+  parent vdr_iounscarletblue
+  position 0.0 0.5 0.095002
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 1.0 1.0 1.0 
+     update_sel 1
+     update Fountain
+     render_sel 1
+     render Normal
+     blend_sel 2
+     Blend Lighten
+     spawnType 0
+     iconSize 100.0
+     xSize 0.0
+     ySize 0.0
+     inherit 0
+     inherit_local 1
+     inheritvel 0
+     inherit_part 0
+     renderorder 0
+     threshold 0.0
+     combinetime 0.0
+     deadspace 0.0
+     colorStart 1.00 0.00 0.00 
+     colorEnd 0.0 0.0 0.0 
+     alphaStart 1.0
+     alphaEnd 1.0
+     sizeStart 0.05
+     sizeEnd 0.05
+     sizeStart_y 0.0
+     sizeEnd_y 0.0
+     birthrate 10.0
+     lifeExp 2.0
+     mass 0.1
+     spread 9.28319
+     particleRot 1.0
+     velocity 0.0
+     randvel 0.2
+     bounce_co 0.0
+     blurlength 10.0
+     loop 0
+     bounce 0
+     m_isTinted 0
+     Splat 0
+     affectedbyWind false
+     texture fxpa_StarBnW
+     twosidedtext 0
+     xgrid 2
+     ygrid 2
+     fps 8
+     frameStart 0
+     frameEnd 3
+     random 1
+     #chunk undefined
+     lightningDelay 0.0
+     lightningRadius 0.0
+     lightningSubDivkey 0
+     lightningScale 0.0
+     blastRadius 0.0
+     blastLength 0.0
+     opacity 0.0
+     p2p 0
+     p2p_type Bezier
+     p2p_sel 1
+     p2p_bezier2 0.0
+     p2p_bezier3 0.0
+     grav 0.0
+     drag 0.0
+     Cone_Angle_Manipulator SubAnim:Cone_Angle_Manipulator
+endnode
+endmodelgeom vdr_iounscarletblue
+#NWmaxANIM ASCII
+newanim duration vdr_iounscarletblue
+    length 1.0
+    transtime 0.25
+    animroot vdr_iounscarletblue
+    node dummy vdr_iounscarletblue
+        parent NULL
+    endnode
+    node emitter OmenEmitter04
+        parent vdr_iounscarletblue
+        positionkey
+            0.0 0.0 -0.5 0.098002
+            0.0333333 0.0 -0.5 0.098002
+            0.0666667 0.104402 -0.487661 0.098002
+            0.1 0.200674 -0.452454 0.098002
+            0.133333 0.286259 -0.397091 0.098002
+            0.166667 0.358599 -0.324286 0.098002
+            0.2 0.415136 -0.236752 0.098002
+            0.233333 0.453314 -0.137202 0.098002
+            0.266667 0.470574 -0.028349 0.098002
+            0.3 0.464718 0.083769 0.098002
+            0.333333 0.43668 0.188309 0.098002
+            0.366667 0.389003 0.282191 0.098002
+            0.4 0.324244 0.3627 0.098002
+            0.433333 0.244962 0.427123 0.098002
+            0.466667 0.153714 0.472747 0.098002
+            0.5 0.053057 0.496859 0.098002
+            0.533333 -0.053057 0.496859 0.098002
+            0.566667 -0.153714 0.472747 0.098002
+            0.6 -0.244962 0.427123 0.098002
+            0.633333 -0.324244 0.3627 0.098002
+            0.666667 -0.389003 0.282191 0.098002
+            0.7 -0.43668 0.188309 0.098002
+            0.733333 -0.464718 0.083769 0.098002
+            0.766667 -0.470574 -0.028349 0.098002
+            0.8 -0.453314 -0.137202 0.098002
+            0.833333 -0.415136 -0.236752 0.098002
+            0.866667 -0.358599 -0.324286 0.098002
+            0.9 -0.286259 -0.397091 0.098002
+            0.933333 -0.200674 -0.452454 0.098002
+            0.966667 -0.104402 -0.487661 0.098002
+            1.0 0.0 -0.5 0.098002
+        endlist
+        birthratekey
+            0.0 50.0 
+            0.0333333 50.0 
+            1.0 52.0 
+        endlist
+    endnode
+    node emitter OmenEmitter05
+        parent vdr_iounscarletblue
+        positionkey
+            0.0 0.0 -0.5 0.095002
+            0.0333333 0.0 -0.5 0.095002
+            0.0666667 0.104402 -0.487661 0.095002
+            0.1 0.200674 -0.452454 0.095002
+            0.133333 0.286259 -0.397091 0.095002
+            0.166667 0.358599 -0.324286 0.095002
+            0.2 0.415136 -0.236752 0.095002
+            0.233333 0.453314 -0.137202 0.095002
+            0.266667 0.470574 -0.028349 0.095002
+            0.3 0.464718 0.083769 0.095002
+            0.333333 0.43668 0.188309 0.095002
+            0.366667 0.389003 0.282191 0.095002
+            0.4 0.324244 0.3627 0.095002
+            0.433333 0.244962 0.427123 0.095002
+            0.466667 0.153714 0.472747 0.095002
+            0.5 0.053057 0.496859 0.095002
+            0.533333 -0.053057 0.496859 0.095002
+            0.566667 -0.153714 0.472747 0.095002
+            0.6 -0.244962 0.427123 0.095002
+            0.633333 -0.324244 0.3627 0.095002
+            0.666667 -0.389003 0.282191 0.095002
+            0.7 -0.43668 0.188309 0.095002
+            0.733333 -0.464718 0.083769 0.095002
+            0.766667 -0.470574 -0.028349 0.095002
+            0.8 -0.453314 -0.137202 0.095002
+            0.833333 -0.415136 -0.236752 0.095002
+            0.866667 -0.358599 -0.324286 0.095002
+            0.9 -0.286259 -0.397091 0.095002
+            0.933333 -0.200674 -0.452454 0.095002
+            0.966667 -0.104402 -0.487661 0.095002
+            1.0 0.0 -0.5 0.095002
+        endlist
+        birthratekey
+            0.0 50.0 
+            0.0333333 50.0 
+            0.966667 51.0 
+            1.0 51.0 
+        endlist
+    endnode
+    node emitter OmenEmitter06
+        parent vdr_iounscarletblue
+        positionkey
+            0.0 0.0 -0.5 0.095002
+            0.0333333 0.0 -0.5 0.095002
+            0.0666667 0.104402 -0.487661 0.095002
+            0.1 0.200674 -0.452454 0.095002
+            0.133333 0.286259 -0.397091 0.095002
+            0.166667 0.358599 -0.324286 0.095002
+            0.2 0.415136 -0.236752 0.095002
+            0.233333 0.453314 -0.137202 0.095002
+            0.266667 0.470574 -0.028349 0.095002
+            0.3 0.464718 0.083769 0.095002
+            0.333333 0.43668 0.188309 0.095002
+            0.366667 0.389003 0.282191 0.095002
+            0.4 0.324244 0.3627 0.095002
+            0.433333 0.244962 0.427123 0.095002
+            0.466667 0.153714 0.472747 0.095002
+            0.5 0.053057 0.496859 0.095002
+            0.533333 -0.053057 0.496859 0.095002
+            0.566667 -0.153714 0.472747 0.095002
+            0.6 -0.244962 0.427123 0.095002
+            0.633333 -0.324244 0.3627 0.095002
+            0.666667 -0.389003 0.282191 0.095002
+            0.7 -0.43668 0.188309 0.095002
+            0.733333 -0.464718 0.083769 0.095002
+            0.766667 -0.470574 -0.028349 0.095002
+            0.8 -0.453314 -0.137202 0.095002
+            0.833333 -0.415136 -0.236752 0.095002
+            0.866667 -0.358599 -0.324286 0.095002
+            0.9 -0.286259 -0.397091 0.095002
+            0.933333 -0.200674 -0.452454 0.095002
+            0.966667 -0.104402 -0.487661 0.095002
+            1.0 0.0 -0.5 0.095002
+        endlist
+        birthratekey
+            0.0 50.0 
+            0.0333333 50.0 
+            0.966667 51.0 
+            1.0 51.0 
+        endlist
+    endnode
+doneanim duration vdr_iounscarletblue
+#NWmaxANIM ASCII
+newanim cessation vdr_iounscarletblue
+    length 0.3
+    transtime 0.25
+    animroot vdr_iounscarletblue
+    node dummy vdr_iounscarletblue
+        parent NULL
+    endnode
+    node emitter OmenEmitter04
+        parent vdr_iounscarletblue
+        positionkey
+            0.0 0.0 0.5 0.098002
+        endlist
+        birthratekey
+            0.0 52.0 
+            0.0333333 0.0 
+        endlist
+    endnode
+    node emitter OmenEmitter05
+        parent vdr_iounscarletblue
+        positionkey
+            0.0 0.0 0.5 0.098002
+        endlist
+        birthratekey
+            0.0 51.0 
+            0.0333333 0.0 
+        endlist
+    endnode
+    node emitter OmenEmitter06
+        parent vdr_iounscarletblue
+        positionkey
+            0.0 0.0 0.5 0.098002
+        endlist
+        birthratekey
+            0.0 51.0 
+            0.0333333 0.0 
+        endlist
+    endnode
+doneanim cessation vdr_iounscarletblue
+donemodel vdr_iounscarletblue

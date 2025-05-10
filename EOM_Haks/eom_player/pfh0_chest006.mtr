@@ -1,0 +1,10 @@
+renderhint NormalAndSpecMapped
+/* shaders */
+customshaderVS vslit_sm_nm
+customshaderFS fs_plt_hair
+
+
+// Textures
+
+texture1 pfh0_chest006_n
+texture2 pfh0_chest006_s

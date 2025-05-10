@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 pmh0_legl019 
+texture1 pmh0_legl019_n 
+texture2 pmh0_legl019_s 
+texture3 null 
+texture4 null 

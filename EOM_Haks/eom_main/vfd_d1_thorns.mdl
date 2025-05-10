@@ -1,0 +1,910 @@
+#Exported from 3ds max by MDL Plug-in Suite 1.0b
+#http://www.bricksbuilder.com/nwn/utils/
+#MAXMODEL ASCII
+# model: vfd_d1_thorns
+filedependancy Unknown
+newmodel vfd_d1_thorns
+setsupermodel vfd_d1_thorns NULL
+classification Character
+setanimationscale 1.0
+#MAXGEOM  ASCII
+beginmodelgeom vfd_d1_thorns
+node dummy vfd_d1_thorns
+  parent NULL
+endnode
+node trimesh Cone01
+  parent vfd_d1_thorns
+  position -0.00945456 0.0121977 -0.54421
+  orientation 0 0 0 0
+  wirecolor 0.542969 0.542969 0.542969
+  ambient 0 0 0
+  diffuse 0.588 0.588 0.588
+  specular 0.9 0.9 0.9
+  shininess 0
+  bitmap vdu_tex_bark
+  verts 5
+    0 0 0
+    0.105388 0 0
+    -0.0526939 0.0912685 0
+    -0.0526939 -0.0912685 0
+    0 0 0.49925
+  faces 12
+    0 2 1  1  0 2 5  2
+    0 3 2  1  0 3 2  2
+    0 1 3  1  0 1 3  2
+    1 4 4  1  1 4 4  3
+    1 2 4  1  5 2 4  3
+    2 4 4  1  2 4 4  3
+    2 3 4  1  2 3 4  3
+    3 4 4  1  3 4 4  3
+    3 1 4  1  3 1 4  3
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+  tverts 6
+    0.25 0.000499517 0
+    0.75 0.000499517 0
+    0.102416 0.000499517 0
+    0.397584 0.000499517 0
+    0.25 0.999501 0
+    -0.25 0.000499517 0
+endnode
+node trimesh Cone02
+  parent vfd_d1_thorns
+  position -0.00945456 0.0121977 -0.54421
+  orientation 0 0 -1 -3.79609
+  wirecolor 0.601563 0.601563 0.601563
+  ambient 0 0 0
+  diffuse 0.588 0.588 0.588
+  specular 0.9 0.9 0.9
+  shininess 0
+  bitmap vdu_tex_bark
+  verts 5
+    0 0 0
+    0.105388 0 0
+    -0.0526939 0.0912685 0
+    -0.0526939 -0.0912685 0
+    0 0 0.49925
+  faces 12
+    0 2 1  1  0 2 5  2
+    0 3 2  1  0 3 2  2
+    0 1 3  1  0 1 3  2
+    1 4 4  1  1 4 4  3
+    1 2 4  1  5 2 4  3
+    2 4 4  1  2 4 4  3
+    2 3 4  1  2 3 4  3
+    3 4 4  1  3 4 4  3
+    3 1 4  1  3 1 4  3
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+  tverts 6
+    0.25 0.000499517 0
+    0.75 0.000499517 0
+    0.102416 0.000499517 0
+    0.397584 0.000499517 0
+    0.25 0.999501 0
+    -0.25 0.000499517 0
+endnode
+node trimesh Cone03
+  parent vfd_d1_thorns
+  position -0.00945456 0.0121977 -0.54421
+  orientation 0 0 1 -1.49226
+  wirecolor 0.894531 0.894531 0.894531
+  ambient 0 0 0
+  diffuse 0.588 0.588 0.588
+  specular 0.9 0.9 0.9
+  shininess 0
+  bitmap vdu_tex_bark
+  verts 5
+    0 0 0
+    0.105388 0 0
+    -0.0526939 0.0912685 0
+    -0.0526939 -0.0912685 0
+    0 0 0.49925
+  faces 12
+    0 2 1  1  0 2 5  2
+    0 3 2  1  0 3 2  2
+    0 1 3  1  0 1 3  2
+    1 4 4  1  1 4 4  3
+    1 2 4  1  5 2 4  3
+    2 4 4  1  2 4 4  3
+    2 3 4  1  2 3 4  3
+    3 4 4  1  3 4 4  3
+    3 1 4  1  3 1 4  3
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+  tverts 6
+    0.25 0.000499517 0
+    0.75 0.000499517 0
+    0.102416 0.000499517 0
+    0.397584 0.000499517 0
+    0.25 0.999501 0
+    -0.25 0.000499517 0
+endnode
+node trimesh Cone04
+  parent vfd_d1_thorns
+  position -0.00945456 0.0121977 -0.54421
+  orientation 0 0 -1 -2.2253
+  wirecolor 0.34375 0.34375 0.34375
+  ambient 0 0 0
+  diffuse 0.588 0.588 0.588
+  specular 0.9 0.9 0.9
+  shininess 0
+  bitmap vdu_tex_bark
+  verts 5
+    0 0 0
+    0.105388 0 0
+    -0.0526939 0.0912685 0
+    -0.0526939 -0.0912685 0
+    0 0 0.49925
+  faces 12
+    0 2 1  1  0 2 5  2
+    0 3 2  1  0 3 2  2
+    0 1 3  1  0 1 3  2
+    1 4 4  1  1 4 4  3
+    1 2 4  1  5 2 4  3
+    2 4 4  1  2 4 4  3
+    2 3 4  1  2 3 4  3
+    3 4 4  1  3 4 4  3
+    3 1 4  1  3 1 4  3
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+  tverts 6
+    0.25 0.000499517 0
+    0.75 0.000499517 0
+    0.102416 0.000499517 0
+    0.397584 0.000499517 0
+    0.25 0.999501 0
+    -0.25 0.000499517 0
+endnode
+node trimesh Cone05
+  parent vfd_d1_thorns
+  position -0.00945456 0.0121977 -0.631515
+  orientation 0 0 1 -1.81514
+  wirecolor 0.695313 0.695313 0.695313
+  ambient 0 0 0
+  diffuse 0.588 0.588 0.588
+  specular 0.9 0.9 0.9
+  shininess 0
+  bitmap vdu_tex_bark
+  verts 5
+    0 0 0
+    0.105388 0 0
+    -0.0526939 0.0912685 0
+    -0.0526939 -0.0912685 0
+    0 0 0.49925
+  faces 12
+    0 2 1  1  0 2 5  2
+    0 3 2  1  0 3 2  2
+    0 1 3  1  0 1 3  2
+    1 4 4  1  1 4 4  3
+    1 2 4  1  5 2 4  3
+    2 4 4  1  2 4 4  3
+    2 3 4  1  2 3 4  3
+    3 4 4  1  3 4 4  3
+    3 1 4  1  3 1 4  3
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+  tverts 6
+    0.25 0.000499517 0
+    0.75 0.000499517 0
+    0.102416 0.000499517 0
+    0.397584 0.000499517 0
+    0.25 0.999501 0
+    -0.25 0.000499517 0
+endnode
+node trimesh Cone06
+  parent vfd_d1_thorns
+  position -0.00945456 0.0121977 -0.631515
+  orientation 0 0 1 -0.322886
+  wirecolor 0.105469 0.105469 0.105469
+  ambient 0 0 0
+  diffuse 0.588 0.588 0.588
+  specular 0.9 0.9 0.9
+  shininess 0
+  bitmap vdu_tex_bark
+  verts 5
+    0 0 0
+    0.105388 0 0
+    -0.0526939 0.0912685 0
+    -0.0526939 -0.0912685 0
+    0 0 0.49925
+  faces 12
+    0 2 1  1  0 2 5  2
+    0 3 2  1  0 3 2  2
+    0 1 3  1  0 1 3  2
+    1 4 4  1  1 4 4  3
+    1 2 4  1  5 2 4  3
+    2 4 4  1  2 4 4  3
+    2 3 4  1  2 3 4  3
+    3 4 4  1  3 4 4  3
+    3 1 4  1  3 1 4  3
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+  tverts 6
+    0.25 0.000499517 0
+    0.75 0.000499517 0
+    0.102416 0.000499517 0
+    0.397584 0.000499517 0
+    0.25 0.999501 0
+    -0.25 0.000499517 0
+endnode
+node trimesh Cone07
+  parent vfd_d1_thorns
+  position -0.00945456 0.0121977 -0.631515
+  orientation 0 0 -1 -1.90241
+  wirecolor 0.554688 0.554688 0.554688
+  ambient 0 0 0
+  diffuse 0.588 0.588 0.588
+  specular 0.9 0.9 0.9
+  shininess 0
+  bitmap vdu_tex_bark
+  verts 5
+    0 0 0
+    0.105388 0 0
+    -0.0526939 0.0912685 0
+    -0.0526939 -0.0912685 0
+    0 0 0.49925
+  faces 12
+    0 2 1  1  0 2 5  2
+    0 3 2  1  0 3 2  2
+    0 1 3  1  0 1 3  2
+    1 4 4  1  1 4 4  3
+    1 2 4  1  5 2 4  3
+    2 4 4  1  2 4 4  3
+    2 3 4  1  2 3 4  3
+    3 4 4  1  3 4 4  3
+    3 1 4  1  3 1 4  3
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+  tverts 6
+    0.25 0.000499517 0
+    0.75 0.000499517 0
+    0.102416 0.000499517 0
+    0.397584 0.000499517 0
+    0.25 0.999501 0
+    -0.25 0.000499517 0
+endnode
+node trimesh Cone08
+  parent vfd_d1_thorns
+  position -0.00945456 0.0121977 -0.631515
+  orientation 0 0 -1 -3.47321
+  wirecolor 0.601563 0.601563 0.601563
+  ambient 0 0 0
+  diffuse 0.588 0.588 0.588
+  specular 0.9 0.9 0.9
+  shininess 0
+  bitmap vdu_tex_bark
+  verts 5
+    0 0 0
+    0.105388 0 0
+    -0.0526939 0.0912685 0
+    -0.0526939 -0.0912685 0
+    0 0 0.49925
+  faces 12
+    0 2 1  1  0 2 5  2
+    0 3 2  1  0 3 2  2
+    0 1 3  1  0 1 3  2
+    1 4 4  1  1 4 4  3
+    1 2 4  1  5 2 4  3
+    2 4 4  1  2 4 4  3
+    2 3 4  1  2 3 4  3
+    3 4 4  1  3 4 4  3
+    3 1 4  1  3 1 4  3
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+  tverts 6
+    0.25 0.000499517 0
+    0.75 0.000499517 0
+    0.102416 0.000499517 0
+    0.397584 0.000499517 0
+    0.25 0.999501 0
+    -0.25 0.000499517 0
+endnode
+node trimesh Cone09
+  parent vfd_d1_thorns
+  position -0.00945456 0.0121977 -0.631515
+  orientation 0 0 1 -0.427606
+  wirecolor 0.601563 0.601563 0.601563
+  ambient 0 0 0
+  diffuse 0.588 0.588 0.588
+  specular 0.9 0.9 0.9
+  shininess 0
+  bitmap vdu_tex_bark
+  verts 5
+    0 0 0
+    0.105388 0 0
+    -0.0526939 0.0912685 0
+    -0.0526939 -0.0912685 0
+    0 0 0.49925
+  faces 12
+    0 2 1  1  0 2 5  2
+    0 3 2  1  0 3 2  2
+    0 1 3  1  0 1 3  2
+    1 4 4  1  1 4 4  3
+    1 2 4  1  5 2 4  3
+    2 4 4  1  2 4 4  3
+    2 3 4  1  2 3 4  3
+    3 4 4  1  3 4 4  3
+    3 1 4  1  3 1 4  3
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+  tverts 6
+    0.25 0.000499517 0
+    0.75 0.000499517 0
+    0.102416 0.000499517 0
+    0.397584 0.000499517 0
+    0.25 0.999501 0
+    -0.25 0.000499517 0
+endnode
+node trimesh Cone10
+  parent vfd_d1_thorns
+  position -0.00945456 0.0121977 -0.631515
+  orientation 0 0 -1 -1.79769
+  wirecolor 0.339844 0.339844 0.339844
+  ambient 0 0 0
+  diffuse 0.588 0.588 0.588
+  specular 0.9 0.9 0.9
+  shininess 0
+  bitmap vdu_tex_bark
+  verts 5
+    0 0 0
+    0.105388 0 0
+    -0.0526939 0.0912685 0
+    -0.0526939 -0.0912685 0
+    0 0 0.49925
+  faces 12
+    0 2 1  1  0 2 5  2
+    0 3 2  1  0 3 2  2
+    0 1 3  1  0 1 3  2
+    1 4 4  1  1 4 4  3
+    1 2 4  1  5 2 4  3
+    2 4 4  1  2 4 4  3
+    2 3 4  1  2 3 4  3
+    3 4 4  1  3 4 4  3
+    3 1 4  1  3 1 4  3
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+  tverts 6
+    0.25 0.000499517 0
+    0.75 0.000499517 0
+    0.102416 0.000499517 0
+    0.397584 0.000499517 0
+    0.25 0.999501 0
+    -0.25 0.000499517 0
+endnode
+node trimesh Cone11
+  parent vfd_d1_thorns
+  position -0.00945456 0.0121977 -0.631515
+  orientation 0 0 -1 -3.36848
+  wirecolor 0.34375 0.34375 0.34375
+  ambient 0 0 0
+  diffuse 0.588 0.588 0.588
+  specular 0.9 0.9 0.9
+  shininess 0
+  bitmap vdu_tex_bark
+  verts 5
+    0 0 0
+    0.105388 0 0
+    -0.0526939 0.0912685 0
+    -0.0526939 -0.0912685 0
+    0 0 0.49925
+  faces 12
+    0 2 1  1  0 2 5  2
+    0 3 2  1  0 3 2  2
+    0 1 3  1  0 1 3  2
+    1 4 4  1  1 4 4  3
+    1 2 4  1  5 2 4  3
+    2 4 4  1  2 4 4  3
+    2 3 4  1  2 3 4  3
+    3 4 4  1  3 4 4  3
+    3 1 4  1  3 1 4  3
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+  tverts 6
+    0.25 0.000499517 0
+    0.75 0.000499517 0
+    0.102416 0.000499517 0
+    0.397584 0.000499517 0
+    0.25 0.999501 0
+    -0.25 0.000499517 0
+endnode
+node trimesh Cone12
+  parent vfd_d1_thorns
+  position -0.00945456 0.0121977 -0.631515
+  orientation 0 0 1 -1.91986
+  wirecolor 0.839844 0.839844 0.839844
+  ambient 0 0 0
+  diffuse 0.588 0.588 0.588
+  specular 0.9 0.9 0.9
+  shininess 0
+  bitmap vdu_tex_bark
+  verts 5
+    0 0 0
+    0.105388 0 0
+    -0.0526939 0.0912685 0
+    -0.0526939 -0.0912685 0
+    0 0 0.49925
+  faces 12
+    0 2 1  1  0 2 5  2
+    0 3 2  1  0 3 2  2
+    0 1 3  1  0 1 3  2
+    1 4 4  1  1 4 4  3
+    1 2 4  1  5 2 4  3
+    2 4 4  1  2 4 4  3
+    2 3 4  1  2 3 4  3
+    3 4 4  1  3 4 4  3
+    3 1 4  1  3 1 4  3
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+    4 4 4  1  4 4 4  1
+  tverts 6
+    0.25 0.000499517 0
+    0.75 0.000499517 0
+    0.102416 0.000499517 0
+    0.397584 0.000499517 0
+    0.25 0.999501 0
+    -0.25 0.000499517 0
+endnode
+endmodelgeom vfd_d1_thorns
+
+#MAXANIM ASCII
+newanim duration vfd_d1_thorns
+  length 0
+  transtime 0.25
+  animroot vfd_d1_thorns
+node dummy vfd_d1_thorns
+  parent NULL
+endnode
+node trimesh Cone01
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.0914197
+    endlist
+    orientationkey
+      0  1 0 0 1.56207
+    endlist
+endnode
+node trimesh Cone02
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.0914197
+    endlist
+    orientationkey
+      0  0.00921558 0.703985 0.710155 3.123
+    endlist
+endnode
+node trimesh Cone03
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.0914197
+    endlist
+    orientationkey
+      0  -0.572305 0.577321 0.582381 4.18875
+    endlist
+endnode
+node trimesh Cone04
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.0914197
+    endlist
+    orientationkey
+      0  0.565588 0.580593 0.585681 2.10464
+    endlist
+endnode
+node trimesh Cone05
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.211476
+    endlist
+    orientationkey
+      0  0.819049 -0.40391 -0.407451 1.76053
+    endlist
+endnode
+node trimesh Cone06
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.211476
+    endlist
+    orientationkey
+      0  0.898313 0.309314 0.312025 1.66915
+    endlist
+endnode
+node trimesh Cone07
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.211476
+    endlist
+    orientationkey
+      0  0.315118 0.668147 0.674003 2.52604
+    endlist
+endnode
+node trimesh Cone08
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.211476
+    endlist
+    orientationkey
+      0  -0.226136 0.685778 0.691789 3.59015
+    endlist
+endnode
+node trimesh Cone09
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.211476
+    endlist
+    orientationkey
+      0  0.959827 0.225557 0.166903 1.29587
+    endlist
+endnode
+node trimesh Cone10
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.211476
+    endlist
+    orientationkey
+      0  -0.646621 -0.5605 -0.517417 3.49828
+    endlist
+endnode
+node trimesh Cone11
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.211476
+    endlist
+    orientationkey
+      0  -0.464343 0.532271 0.707865 3.66292
+    endlist
+endnode
+node trimesh Cone12
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.211476
+    endlist
+    orientationkey
+      0  -0.907853 -0.0059163 0.419247 3.73257
+    endlist
+endnode
+doneanim duration vfd_d1_thorns
+
+#MAXANIM ASCII
+newanim cessation vfd_d1_thorns
+  length 0.266667
+  transtime 0.25
+  animroot vfd_d1_thorns
+node dummy vfd_d1_thorns
+  parent NULL
+endnode
+node trimesh Cone01
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.0914197
+      0.166667  -0.00945456 0.00015677 -0.162538
+      0.266667  -0.00945456 0.0121977 -0.54421
+    endlist
+    orientationkey
+      0  1 0 0 1.56207
+      0.166667  1 0 0 1.01229
+      0.266667  0 0 0 0
+    endlist
+endnode
+node trimesh Cone02
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.0914197
+      0.166667  -0.00945456 0.00015677 -0.162538
+      0.266667  -0.00945456 0.0121977 -0.54421
+    endlist
+    orientationkey
+      0  0.00921557 0.703985 0.710155 3.123
+      0.166667  -0.0296392 0.484597 0.874235 3.24844
+      0.266667  0 0 1 3.7961
+    endlist
+endnode
+node trimesh Cone03
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.0914197
+      0.166667  -0.00945456 0.00015677 -0.162538
+      0.266667  -0.00945456 0.0121977 -0.54421
+    endlist
+    orientationkey
+      0  -0.572305 0.577321 0.582381 4.18875
+      0.166667  0.439333 -0.435516 -0.785692 1.80119
+      0.266667  0 0 -1 1.49226
+    endlist
+endnode
+node trimesh Cone04
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.0914197
+      0.166667  -0.00945456 0.00015677 -0.162538
+      0.266667  -0.00945456 0.0121977 -0.54421
+    endlist
+    orientationkey
+      0  0.565588 0.580593 0.585681 2.10464
+      0.166667  0.430103 0.437676 0.789589 1.82182
+      0.266667  0 0 1 2.2253
+    endlist
+endnode
+node trimesh Cone05
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.211476
+      0.166667  -0.00945456 0.00015677 -0.403115
+      0.266667  -0.00945456 0.0121977 -0.631515
+    endlist
+    orientationkey
+      0  0.819049 -0.40391 -0.407451 1.76053
+      0.166667  0.681527 -0.35478 -0.640041 1.36564
+      0.266667  0 0 -1 1.81514
+    endlist
+endnode
+node trimesh Cone06
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.211476
+      0.166667  -0.00945456 0.00015677 -0.403115
+      0.266667  -0.00945456 0.0121977 -0.631515
+    endlist
+    orientationkey
+      0  0.898313 0.309314 0.312025 1.66915
+      0.166667  0.84209 0.261476 0.471715 1.16431
+      0.266667  0 0 -1 0.322886
+    endlist
+endnode
+node trimesh Cone07
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.211476
+      0.166667  -0.00945456 0.00015677 -0.403115
+      0.266667  -0.00945456 0.0121977 -0.631515
+    endlist
+    orientationkey
+      0  0.315118 0.668147 0.674003 2.52604
+      0.166667  0.242256 0.470368 0.848567 2.31755
+      0.266667  0 0 1 1.90241
+    endlist
+endnode
+node trimesh Cone08
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.211476
+      0.166667  -0.00945456 0.00015677 -0.403115
+      0.266667  -0.00945456 0.0121977 -0.631515
+    endlist
+    orientationkey
+      0  -0.226136 0.685778 0.691789 3.59015
+      0.166667  -0.180656 0.476833 0.860229 3.77171
+      0.266667  0 0 1 3.47321
+    endlist
+endnode
+node trimesh Cone09
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.211476
+      0.166667  -0.00945456 0.00015677 -0.403115
+      0.266667  -0.00945456 0.0121977 -0.631515
+    endlist
+    orientationkey
+      0  0.959827 0.225557 0.166903 1.29587
+      0.166667  0.955624 0.142819 0.257652 1.05124
+      0.266667  0 0 -1 0.427606
+    endlist
+endnode
+node trimesh Cone10
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.211476
+      0.166667  -0.00945456 0.00015677 -0.403115
+      0.266667  -0.00945456 0.0121977 -0.631515
+    endlist
+    orientationkey
+      0  -0.646621 -0.5605 -0.517417 3.49828
+      0.166667  0.332228 0.457272 0.824941 2.06171
+      0.266667  0 0 1 1.79769
+    endlist
+endnode
+node trimesh Cone11
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.211476
+      0.166667  -0.00945456 0.00015677 -0.403115
+      0.266667  -0.00945456 0.0121977 -0.631515
+    endlist
+    orientationkey
+      0  -0.464343 0.532271 0.707865 3.66292
+      0.166667  -0.102507 0.482256 0.870012 3.50732
+      0.266667  0 0 1 3.36849
+    endlist
+endnode
+node trimesh Cone12
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 -0.0476131 -0.211476
+      0.166667  -0.00945456 0.00015677 -0.403115
+      0.266667  -0.00945456 0.0121977 -0.631515
+    endlist
+    orientationkey
+      0  -0.907853 -0.00591631 0.419247 3.73257
+      0.166667  0.551537 -0.404404 -0.729564 1.57581
+      0.266667  0 0 -1 1.91986
+    endlist
+endnode
+doneanim cessation vfd_d1_thorns
+
+#MAXANIM ASCII
+newanim impact vfd_d1_thorns
+  length 0.966667
+  transtime 0.25
+  animroot vfd_d1_thorns
+node dummy vfd_d1_thorns
+  parent NULL
+endnode
+node trimesh Cone01
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 0.0121977 -0.54421
+      0.466667  -0.00945456 0.00015677 -0.162538
+      0.966667  -0.00945456 -0.0476131 -0.0914197
+    endlist
+    orientationkey
+      0  0 0 0 0
+      0.466667  1 0 0 1.01229
+      0.966667  1 0 0 1.56207
+    endlist
+endnode
+node trimesh Cone02
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 0.0121977 -0.54421
+      0.466667  -0.00945456 0.00015677 -0.162538
+      0.966667  -0.00945456 -0.0476131 -0.0914197
+    endlist
+    orientationkey
+      0  0 0 1 3.7961
+      0.466667  -0.0296392 0.484597 0.874235 3.24844
+      0.966667  0.0092156 0.703985 0.710155 3.123
+    endlist
+endnode
+node trimesh Cone03
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 0.0121977 -0.54421
+      0.466667  -0.00945456 0.00015677 -0.162538
+      0.966667  -0.00945456 -0.0476131 -0.0914197
+    endlist
+    orientationkey
+      0  0 0 -1 1.49226
+      0.466667  0.439333 -0.435516 -0.785692 1.80119
+      0.966667  -0.572305 0.577321 0.582381 4.18875
+    endlist
+endnode
+node trimesh Cone04
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 0.0121977 -0.54421
+      0.466667  -0.00945456 0.00015677 -0.162538
+      0.966667  -0.00945456 -0.0476131 -0.0914197
+    endlist
+    orientationkey
+      0  0 0 1 2.2253
+      0.466667  0.430103 0.437676 0.789589 1.82182
+      0.966667  0.565588 0.580593 0.585681 2.10464
+    endlist
+endnode
+node trimesh Cone05
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 0.0121977 -0.631515
+      0.466667  -0.00945456 0.00015677 -0.403115
+      0.966667  -0.00945456 -0.0476131 -0.211476
+    endlist
+    orientationkey
+      0  0 0 -1 1.81514
+      0.466667  0.681527 -0.35478 -0.640041 1.36564
+      0.966667  0.819049 -0.40391 -0.407451 1.76053
+    endlist
+endnode
+node trimesh Cone06
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 0.0121977 -0.631515
+      0.466667  -0.00945456 0.00015677 -0.403115
+      0.966667  -0.00945456 -0.0476131 -0.211476
+    endlist
+    orientationkey
+      0  0 0 -1 0.322886
+      0.466667  0.84209 0.261476 0.471715 1.16431
+      0.966667  0.898313 0.309314 0.312025 1.66915
+    endlist
+endnode
+node trimesh Cone07
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 0.0121977 -0.631515
+      0.466667  -0.00945456 0.00015677 -0.403115
+      0.966667  -0.00945456 -0.0476131 -0.211476
+    endlist
+    orientationkey
+      0  0 0 1 1.90241
+      0.466667  0.242256 0.470368 0.848567 2.31755
+      0.966667  0.315118 0.668147 0.674003 2.52604
+    endlist
+endnode
+node trimesh Cone08
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 0.0121977 -0.631515
+      0.466667  -0.00945456 0.00015677 -0.403115
+      0.966667  -0.00945456 -0.0476131 -0.211476
+    endlist
+    orientationkey
+      0  0 0 1 3.47321
+      0.466667  -0.180656 0.476833 0.860229 3.77171
+      0.966667  -0.226136 0.685778 0.691789 3.59015
+    endlist
+endnode
+node trimesh Cone09
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 0.0121977 -0.631515
+      0.466667  -0.00945456 0.00015677 -0.403115
+      0.966667  -0.00945456 -0.0476131 -0.211476
+    endlist
+    orientationkey
+      0  0 0 -1 0.427606
+      0.466667  0.955624 0.142819 0.257652 1.05124
+      0.966667  0.959827 0.225557 0.166903 1.29587
+    endlist
+endnode
+node trimesh Cone10
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 0.0121977 -0.631515
+      0.466667  -0.00945456 0.00015677 -0.403115
+      0.966667  -0.00945456 -0.0476131 -0.211476
+    endlist
+    orientationkey
+      0  0 0 1 1.79769
+      0.466667  0.332228 0.457272 0.824941 2.06171
+      0.966667  -0.646621 -0.5605 -0.517417 3.49828
+    endlist
+endnode
+node trimesh Cone11
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 0.0121977 -0.631515
+      0.466667  -0.00945456 0.00015677 -0.403115
+      0.966667  -0.00945456 -0.0476131 -0.211476
+    endlist
+    orientationkey
+      0  0 0 1 3.36849
+      0.466667  -0.102507 0.482256 0.870012 3.50732
+      0.966667  -0.464343 0.532271 0.707865 3.66292
+    endlist
+endnode
+node trimesh Cone12
+  parent vfd_d1_thorns
+    positionkey
+      0  -0.00945456 0.0121977 -0.631515
+      0.466667  -0.00945456 0.00015677 -0.403115
+      0.966667  -0.00945456 -0.0476131 -0.211476
+    endlist
+    orientationkey
+      0  0 0 -1 1.91986
+      0.466667  0.551537 -0.404404 -0.729564 1.57581
+      0.966667  -0.907853 -0.00591639 0.419247 3.73256
+    endlist
+endnode
+doneanim impact vfd_d1_thorns
+donemodel vfd_d1_thorns

@@ -1,0 +1,11 @@
+customshaderVS vslit_sm_nm
+customshaderFS fslit_aniso_nm
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 c_lobo_fur 
+texture1 c_lobo_fur_n 
+texture2 spec_none
+texture3 c_lobo_fur_a 
+texture4 null 

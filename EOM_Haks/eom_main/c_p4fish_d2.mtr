@@ -1,0 +1,11 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 c_p4fish_d2
+texture1 null 
+texture2 null 
+texture3 null 
+texture4 null 
+
+twosided 1

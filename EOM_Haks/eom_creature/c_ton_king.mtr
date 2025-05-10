@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 c_ton_king 
+texture1 c_ton_king_n 
+texture2 c_ton_king_s 
+texture3 null 
+texture4 null 

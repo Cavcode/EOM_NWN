@@ -1,0 +1,364 @@
+#MAXMODEL ASCII
+# model: vff_explflar
+filedependancy vff_explflar.max
+newmodel vff_explflar
+setsupermodel vff_explflar NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vff_explflar
+node dummy vff_explflar
+  parent NULL
+endnode
+node emitter Ring
+  parent vff_explflar
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Billboard_to_World_Z
+  blend Lighten
+  texture fxpa_ballplas
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 11
+  blastLength 0.8
+  position -0.000507622 0.00081668 0.0593585
+  orientation 0 0 0 0
+  xsize 0
+  ysize 0
+  threshold 0
+  combinetime 0
+  colorStart 0.82353 0.039216 0.184314
+  colorEnd 0.82353 0.039216 0.184314
+  alphaStart 0.9
+  alphaEnd 0.01
+  sizeStart 0.5
+  sizeEnd 17
+  sizeStart_y 0
+  sizeEnd_y 0
+  birthrate 0
+  lifeExp 0.4
+  mass 0
+  spread 0
+  particleRot 5
+  velocity 0
+  randvel 0
+  bounce_co 0
+  blurlength 10
+  fps 12
+  frameStart 0
+  frameEnd 0
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  grav 0
+  drag 0
+endnode
+node emitter Chunkssml
+  parent vff_explflar
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 1
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Normal
+  blend Normal
+  texture NULL
+  chunkName Fx_Rockchunksml
+  xgrid 0
+  ygrid 0
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.000507622 0.00081788 0.0191669
+  orientation 0 0 0 0
+  xsize 0
+  ysize 0
+  threshold 0
+  combinetime 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.04
+  sizeEnd 0.04
+  sizeStart_y 0
+  sizeEnd_y 0
+  birthrate 0
+  lifeExp 5
+  mass 1
+  spread 2.79253
+  particleRot 5
+  velocity 8
+  randvel 3
+  bounce_co 0.4
+  blurlength 10
+  fps 0
+  frameStart 0
+  frameEnd 0
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  grav 0
+  drag 0
+endnode
+node emitter Flame01
+  parent vff_explflar
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Motion_Blur
+  blend Lighten
+  texture fxpa_ballforb
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0.00365542
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 0.768827
+  orientation 1 0 0 -6.27446
+  xsize 0
+  ysize 0
+  threshold 0
+  combinetime 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 0.2
+  alphaEnd 0.0
+  sizeStart 1
+  sizeEnd 4
+  sizeStart_y 3
+  sizeEnd_y 10
+  birthrate 0
+  lifeExp 0.2
+  mass 0
+  spread 3.14159
+  particleRot 0
+  velocity 15
+  randvel 0
+  bounce_co 0
+  blurlength 10
+  fps 0
+  frameStart 0
+  frameEnd 0
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  grav 0
+  drag 0
+endnode
+node emitter MainExplode02
+  parent vff_explflar
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Normal
+  blend Additive
+  texture fxpa_starflre
+  xgrid 5
+  ygrid 20
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.00 0.000 1.3386
+  orientation 0 0 0 0
+  xsize 50
+  ysize 50
+  threshold 0
+  combinetime 0
+  colorStart 0.9 0.1 0.1
+  colorEnd 0.8 0.2 0.15
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 2
+  sizeEnd 4
+  sizeStart_y 0
+  sizeEnd_y 0
+  birthrate 1
+  lifeExp 2.5
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  bounce_co 0
+  blurlength 10
+  fps 24
+  frameStart 7
+  frameEnd 99
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  grav 0
+  drag 0
+endnode
+node light AuroraLight01
+  parent vff_explflar
+  ambientonly 0
+  shadow 1
+  isdynamic 0
+  affectdynamic 1
+  lightpriority 2
+  fadingLight 0
+  flareradius 0
+  position 0 0 1.7
+  orientation -0.5773503 0.5773503 0.5773503 -2.0944
+  radius 8
+  multiplier 1
+  color 1 0.752942 0
+endnode
+endmodelgeom vff_explflar
+
+#MAXANIM ASCII
+newanim impact vff_explflar
+  length 4.96667
+  transtime 0.25
+  animroot vff_explflar
+  event 2.0333333 detonate  
+  event 2.1 detonate  
+  event 2.6 detonate  
+  event 3 detonate
+  event 3.0333333 detonate
+  event 3.0333333 detonate
+  event 3.133333 detonate
+  node dummy vff_explflar
+    parent NULL
+  endnode
+  node emitter Ring
+    parent vff_explflar
+    birthratekey 2
+         0.0000000    1.0000000
+         4.9666700    1.0000000
+  endnode
+  node emitter Chunkssml
+    parent vff_explflar
+    birthratekey 2
+         0.0000000    4.0000000
+         4.9666700    4.0000000
+  endnode
+  node emitter Flame01
+    parent vff_explflar
+    birthratekey 2
+         0.0000000    3.0000000
+         4.9666700    3.0000000
+  endnode
+  node emitter MainExplode02
+    parent vff_explflar
+    positionkey 4
+         0.0000000   -0.0091840    0.0008642    1.3386000
+         0.2000000   -0.0091840    0.0008642    1.7880700
+         2.7333300   -0.0091840    0.0008642    1.6227601
+         4.9666700   -0.0091840    0.0008642    1.3427800
+    alphaStartkey 3
+         0.0000000    1.0
+         4.7666700    1.0		 
+         4.9666700    0.0		
+    alphaEndkey 3
+         0.0000000    1.0
+         4.7666700    1.0		 
+         4.9666700    0.0			 
+  endnode
+  node light AuroraLight01
+    parent vff_explflar
+    colorkey 38
+         0.0000000    1.0000000    0.3529420    0.0000000
+         0.0333333    1.0000000    0.3529420    0.0000000
+         0.1666670    1.0000000    0.3529420    0.0000000
+         0.2666670    1.0000000    0.7529420    1.0000000
+         0.4000000    1.0000000    0.3529420    0.0000000
+         0.5333330    1.0000000    1.0000000    1.0000000
+         0.6333330    1.0000000    0.8705890    0.2823530
+         0.7333330    1.0000000    0.3529420    0.0000000
+         0.7666670    0.9686280    0.1229420    0.0000000
+         1.0000000    0.0000000    0.0000000    0.0000000
+         1.0333333    1.0000000    0.3529420    0.0000000
+         1.1666670    1.0000000    0.3529420    0.0000000
+         1.2666670    1.0000000    0.7529420    1.0000000
+         1.4000000    1.0000000    0.3529420    0.0000000
+         1.5333330    1.0000000    1.0000000    1.0000000
+         1.6333330    1.0000000    0.8705890    0.2823530
+         1.7333330    1.0000000    0.3529420    0.0000000
+         1.7666670    0.9686280    0.1229420    0.0000000
+         2.0000000    0.0000000    0.0000000    0.0000000	
+         2.0333333    1.0000000    0.3529420    0.0000000
+         2.1666670    1.0000000    0.3529420    0.0000000
+         2.2666670    1.0000000    0.7529420    1.0000000
+         2.4000000    1.0000000    0.3529420    0.0000000
+         2.5333330    1.0000000    1.0000000    1.0000000
+         2.6333330    1.0000000    0.8705890    0.2823530
+         2.7333330    1.0000000    0.3529420    0.0000000
+         2.7666670    0.9686280    0.1229420    0.0000000
+         3.0000000    0.0000000    0.0000000    0.0000000	
+         3.0333333    1.0000000    0.3529420    0.0000000
+         3.1666670    1.0000000    0.3529420    0.0000000
+         3.2666670    1.0000000    0.7529420    1.0000000
+         3.4000000    1.0000000    0.3529420    0.0000000
+         3.5333330    1.0000000    1.0000000    1.0000000
+         3.6333330    1.0000000    0.8705890    0.2823530
+         3.7333330    1.0000000    0.3529420    0.0000000
+         3.7666670    0.9686280    0.1229420    0.0000000
+         4.0000000    0.0000000    0.0000000    0.0000000		 
+         4.9666700    0.0000000    0.0000000    0.0000000
+  endnode
+doneanim impact vff_explflar
+
+donemodel vff_explflar

@@ -1,0 +1,27 @@
+blending default
+envmaptexture evmap_takenf
+proceduretype water
+channelscale 4
+1
+1
+1
+1
+	
+channeltranslate 4
+0
+0
+0
+0
+
+distort 1
+arturowidth 5
+arturoheight 5
+distortionamplitude 3.1
+speed 6
+
+defaultheight 16
+defaultwidth 16
+
+downsamplemax 0
+downsamplemin 0
+

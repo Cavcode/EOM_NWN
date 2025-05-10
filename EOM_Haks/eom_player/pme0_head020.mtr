@@ -1,0 +1,10 @@
+// Shaders
+customshaderVS vslit_sm_nm
+customshaderFS fs_plt_hair
+
+renderhint NormalTangents
+texture1 pme0_head020_n
+texture2 pme0_head020_s
+
+transparency 1
+twosided 1

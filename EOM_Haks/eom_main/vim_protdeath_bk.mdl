@@ -1,0 +1,240 @@
+#MAXMODEL ASCII
+# model: vim_protdeath_bk
+filedependancy vim_protdeath_bk.max
+newmodel vim_protdeath_bk
+setsupermodel vim_protdeath_bk NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vim_protdeath_bk
+node dummy vim_protdeath_bk
+  parent NULL
+endnode
+node dummy Dummy01
+  parent vim_protdeath_bk
+  position 0 0 0
+  orientation 0 0 1 -0.1309
+endnode
+node emitter OmenEmitter01
+  parent Dummy01
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Aligned_to_Particle_Dir
+  blend Normal
+  texture fxpa_flarea
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0.20944
+  twosidedtex 1
+  blastRadius 0
+  blastLength 0
+  position -1.37626 -0.0247294 -0.0410335
+  orientation 1 0 0 -1.5708
+  colorStart 0.505882 0.505882 0.505882 
+  colorEnd 0 0 0
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 1
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 2
+  frameStart 0
+  frameEnd 0
+  birthrate 150
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.5
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 200
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter02
+  parent Dummy01
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Aligned_to_Particle_Dir
+  blend Normal
+  texture fxpa_flarea
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0.20944
+  twosidedtex 1
+  blastRadius 0
+  blastLength 0
+  position 1.30633 -0.0247295 -0.0410335
+  orientation 1 0 0 -1.5708
+  colorStart 0.505882 0.505882 0.505882 
+  colorEnd 0 0 0
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 1
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 2
+  frameStart 0
+  frameEnd 0
+  birthrate 150
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.5
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 200
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter WIND_Dummy
+  parent vim_protdeath_bk
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Normal
+  blend Lighten
+  texture NULL
+  xgrid 0
+  ygrid 0
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 8
+  blastLength 1.3
+  position -0.00249214 0.000424422 0.390378
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 0
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp 0
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom vim_protdeath_bk
+
+#MAXANIM ASCII
+newanim impact vim_protdeath_bk
+  length 1.96667
+  transtime 0.25
+  animroot vim_protdeath_bk
+  event 0 detonate
+  event 0.0666667 detonate
+  node dummy vim_protdeath_bk
+    parent NULL
+  endnode
+  node dummy Dummy01
+    parent vim_protdeath_bk
+    orientationkey 5
+         0.0000000   -0.0000000   -0.0000000    1.0000000   -0.1309000
+         0.3333330   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+         0.6666670   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+         0.9666670   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+         1.3000000    0.0000000    0.0000000    0.0000000    0.0000000
+  endnode
+  node emitter OmenEmitter01
+    parent Dummy01
+    birthratekey 4
+         0.0000000  150.0000000
+         0.9666670  150.0000000
+         1.2333300    5.0000000
+         1.3000000    0.0000000
+  endnode
+  node emitter OmenEmitter02
+    parent Dummy01
+    birthratekey 4
+         0.0000000  150.0000000
+         0.9666670  150.0000000
+         1.2333300    5.0000000
+         1.3000000    0.0000000
+  endnode
+  node emitter WIND_Dummy
+    parent vim_protdeath_bk
+  endnode
+doneanim impact vim_protdeath_bk
+
+donemodel vim_protdeath_bk

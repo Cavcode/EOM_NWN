@@ -1,0 +1,10 @@
+newmodel pma0_bicepr251
+setsupermodel pma0_bicepr251 null
+classification CHARACTER
+setanimationscale 1.0
+beginmodelgeom pma0_bicepr251
+node dummy pma0_bicepr251
+  parent null
+endnode
+endmodelgeom pma0_bicepr251
+donemodel pma0_bicepr251

@@ -1,0 +1,10 @@
+newmodel pmh0_shinl251
+setsupermodel pmh0_shinl251 null
+classification CHARACTER
+setanimationscale 1.0
+beginmodelgeom pmh0_shinl251
+node dummy pmh0_shinl251
+  parent null
+endnode
+endmodelgeom pmh0_shinl251
+donemodel pmh0_shinl21

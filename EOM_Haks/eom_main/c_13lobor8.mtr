@@ -1,0 +1,10 @@
+ 
+renderhint NormalTangents
+ 
+// Textures 
+texture0 c_13lobor8
+texture1 c_13lobor1_n
+texture2 c_13lobor1_s
+texture3 null
+texture4 null
+texture5 null

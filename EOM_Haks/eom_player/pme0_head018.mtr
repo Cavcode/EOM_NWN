@@ -1,0 +1,5 @@
+renderhint NormalAndSpecMapped
+texture1 pme0_head018_n
+texture2 pme0_head018_s
+
+twosided 1

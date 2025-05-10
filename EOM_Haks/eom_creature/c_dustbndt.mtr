@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 c_dustbndt 
+texture1 c_dustbndt_n 
+texture2 c_dustbndt_s 
+texture3 c_dustbndt_a 
+texture4 null 

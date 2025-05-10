@@ -1,0 +1,12 @@
+
+/* shaders */
+customshaderVS vslit_sm_nm
+customshaderFS fs_plt_hair
+
+// Textures
+renderhint NormalAndSpecMapped
+texture1 pmh0_chest203_n
+texture2 pmh0_chest203_s
+
+twosided 1
+transparency 1

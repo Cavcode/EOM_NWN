@@ -1,0 +1,74 @@
+# Exported from NWmax 0.8 b60 at 11/5/2021 7:49:29 PM
+# wok file
+#
+#NWmax WALKMESH  ASCII
+beginwalkmeshgeom TCC21_J12_01
+node aabb WM_basic159
+  parent TCC21_J12_01
+  position 0.0 0.0 0.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.878431 0.341176 0.560784 
+  render 0
+  shadow 0
+  multimaterial 21
+    Dirt
+    Obscuring
+    Grass
+    Stone
+    Wood
+    Water
+    Nonwalk
+    Transparent
+    Carpet
+    Metal
+    Puddles
+    Swamp
+    Mud
+    Leaves
+    Lava
+    BottomlessPit
+    DeepWater
+    Door
+    Snow
+    Sand
+    BareBones
+  ambient 0.0 0.0 0.0 
+  diffuse 0.6 0.34 0.16 
+  specular 0.0 0.0 0.0 
+  shininess 10.0
+  bitmap Dirt
+  verts 6
+    -5.0 -5.0 0.0
+    5.0 -5.0 3.0
+    -5.0 5.0 0.0
+    5.0 5.0 0.0
+    -5.0 -5.0 3.0
+    5.0 5.0 3.0
+  faces 2
+    2 0 3  1  6 4 7  1
+    1 5 4  1  5 11 10  1
+  tverts 12
+    0.0 0.0 0
+    1.0 0.0 0
+    0.0 0.0 0
+    1.0 0.0 0
+    0.0 0.0 0
+    1.0 0.0 0
+    0.0 1.0 0
+    1.0 1.0 0
+    0.0 0.0 0
+    1.0 0.0 0
+    0.0 0.0 0
+    1.0 1.0 0
+  normals 6
+    0.0 0.0 1.0
+    0.0 0.0 1.0
+    0.0 0.0 1.0
+    0.0 0.0 1.0
+    0.0 0.0 1.0
+    0.0 0.0 1.0
+    aabb         -5.0 -5.0 0.0 5.0 5.0 3.0 -1
+        -5.0 -5.0 0.0 5.0 5.0 0.0 0
+        -5.0 -5.0 3.0 5.0 5.0 3.0 1
+endnode
+endwalkmeshgeom TCC21_J12_01

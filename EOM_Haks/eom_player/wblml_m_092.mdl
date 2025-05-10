@@ -1,0 +1,83 @@
+# Exported from NWmax v6.11.28 at 11/11/2021 5:06:21 PM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: wblml_m_092
+#local file: Unknown
+filedependancy Unknown
+newmodel wblml_m_092
+setsupermodel wblml_m_092 NULL
+classification Character
+setanimationscale 1.0
+#NWmax GEOM  ASCII
+beginmodelgeom wblml_m_092
+node dummy wblml_m_092
+  parent NULL
+endnode
+node trimesh Object002
+  parent wblml_m_092
+  position 0.0 0.864929 0.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.8 0.8 0.8 
+  tilefade 0
+  scale 1.0
+  render 1
+  Shadow 0
+  beaming 0
+  inheritcolor 0
+  rotatetexture 0
+  alpha 1.0
+  transparencyhint 0
+  selfillumcolor 0.0 0.0 0.0 
+  ambient 1.0 1.0 1.0 
+  Diffuse 1.0 1.0 1.0 
+  Specular 0.0 0.0 0.0 
+  shininess 1
+  center -0.000416338 -78.7037 2.44379e-05 
+  bitmap wblml_092
+  verts 12
+    -0.0162318 -0.603721 0.0
+    -0.0162317 -0.970353 4.54993e-07
+    -0.0081279 -0.970353 -0.0146576
+    -0.00812797 -0.603722 -0.014658
+    0.00811955 -0.603722 -0.014658
+    0.00811963 -0.970353 -0.0146576
+    0.0162234 -0.603721 0.0
+    0.0162234 -0.970353 4.54743e-07
+    0.00811963 -0.970353 0.0146585
+    0.00811955 -0.603722 0.0146581
+    -0.00812796 -0.603722 0.0146581
+    -0.00812788 -0.970353 0.0146585
+  faces 12
+    2 1 0  1  2 1 0  1
+    0 3 2  1  0 3 2  1
+    2 3 4  1  2 3 4  1
+    4 5 2  1  4 5 2  1
+    5 4 6  1  5 4 6  1
+    6 7 5  1  6 7 5  1
+    8 7 6  1  10 9 8  1
+    6 9 8  1  8 11 10  1
+    8 9 10  1  10 11 12  1
+    10 11 8  1  12 13 10  1
+    11 10 0  1  13 12 14  1
+    0 1 11  1  14 15 13  1
+  tverts 16
+    0.00581924 0.989228 0
+    0.00581924 0.0107724 0
+    0.0330185 0.0107732 0
+    0.0330184 0.989228 0
+    0.0579884 0.989227 0
+    0.0579884 0.0107732 0
+    0.0805156 0.989228 0
+    0.0805156 0.0107723 0
+    0.0805156 0.989228 0
+    0.0805156 0.0107723 0
+    0.0579884 0.0107732 0
+    0.0579884 0.989227 0
+    0.0330185 0.989228 0
+    0.0330185 0.0107732 0
+    0.00581924 0.989228 0
+    0.00581924 0.0107724 0
+endnode
+endmodelgeom wblml_m_092
+donemodel wblml_m_092

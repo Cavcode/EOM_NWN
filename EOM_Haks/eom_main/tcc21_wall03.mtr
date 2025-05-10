@@ -1,0 +1,6 @@
+ renderhint NormalAndSpecMapped
+ texture0 tcc21_wall03_d
+ texture1 tcc21_wall01_n
+ texture2 tcc21_wall01_s
+ texture3 tcc21_wall01_r
+ texture4 tcc21_wall01_h

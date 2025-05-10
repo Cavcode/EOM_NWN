@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 plc_tgate_b
+texture1 plc_tgate_b_n 
+texture2 spec_med
+texture3 null 
+texture4 null 

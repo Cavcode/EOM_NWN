@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 wblcl_b_145 
+texture1 wblcl_b_145_n 
+texture2 null 
+texture3 null 
+texture4 null 

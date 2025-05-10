@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 hfx_sugrlf 
+texture1 hfx_sugrlf_n 
+texture2 hfx_sugrlf_s 
+texture3 null 
+texture4 null 

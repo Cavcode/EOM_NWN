@@ -1,0 +1,412 @@
+#MAXMODEL ASCII
+# model: fx_roxfall
+filedependancy fx_roxfall.max
+newmodel fx_roxfall
+setsupermodel fx_roxfall NULL
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom fx_roxfall
+node dummy fx_roxfall
+  parent NULL
+endnode
+node emitter OmenEmitter33
+  parent fx_roxfall
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 1
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_roxfall
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 2.5 -2.5 -2.18557e-07
+  orientation 0 -1 0 -3.14159
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.25
+  sizeEnd 0.25
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 0
+  lifeExp 2.5
+  mass 0.7
+  spread 0.1
+  particleRot 0
+  velocity 1.5
+  randvel 2.5
+  fps 0
+  xsize 1000
+  ysize 1000
+  bounce_co 0.6
+  blurlength 0.02
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter34
+  parent fx_roxfall
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 1
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_roxfall
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 2.5 2.5 -2.18557e-07
+  orientation 0 -1 0 -3.14159
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.25
+  sizeEnd 0.25
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 0
+  lifeExp 2.5
+  mass 0.7
+  spread 0.1
+  particleRot 0
+  velocity 1.5
+  randvel 2.5
+  fps 0
+  xsize 1000
+  ysize 1000
+  bounce_co 0.6
+  blurlength 0.02
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter35
+  parent fx_roxfall
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 1
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_roxfall
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -2.5 -2.5 2.18557e-07
+  orientation 0 -1 0 -3.14159
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.25
+  sizeEnd 0.25
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 0
+  lifeExp 2.5
+  mass 0.7
+  spread 0.1
+  particleRot 0
+  velocity 1.5
+  randvel 2.5
+  fps 0
+  xsize 1000
+  ysize 1000
+  bounce_co 0.6
+  blurlength 0.02
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter36
+  parent fx_roxfall
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 1
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_roxfall
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -2.5 2.5 2.18557e-07
+  orientation 0 -1 0 -3.14159
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.25
+  sizeEnd 0.25
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 0
+  lifeExp 2.5
+  mass 0.7
+  spread 0.1
+  particleRot 0
+  velocity 1.5
+  randvel 2.5
+  fps 0
+  xsize 1000
+  ysize 1000
+  bounce_co 0.6
+  blurlength 0.02
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom fx_roxfall
+
+#MAXANIM ASCII
+newanim snow fx_roxfall
+  length 19.9667
+  transtime 0.25
+  animroot fx_roxfall
+  node dummy fx_roxfall
+    parent NULL
+  endnode
+  node emitter OmenEmitter33
+    parent fx_roxfall
+    birthratekey 13
+         0.0000000    0.0000000
+         0.0333333    0.0000000
+         3.3333299    4.0000000
+         3.4000000    0.0000000
+         6.3333299    4.0000000
+         6.4000000    0.0000000
+         9.3333299    4.0000000
+         9.4000000    0.0000000
+        12.3333299    4.0000000
+        12.4000000    0.0000000
+        15.3333299    4.0000000
+        15.4000000    0.0000000
+        19.9666999    4.0000000
+    velocitykey 19
+         0.0000000    4.0000000
+         0.0333333    3.0000000
+         2.0000000    3.0000000
+         3.3333299    3.2500000
+		 4.0000000    3.0000000
+         4.0333333    2.0000000		
+         6.3333299    5.2500000	
+		 7.0000000    4.0000000
+         7.0333333    3.0000000		
+         9.3333299    4.2500000	
+		10.0000000    4.0000000
+        10.0333333    3.0000000		
+        12.3333299    5.2500000		
+		13.0000000    5.0000000
+        13.0333333    3.0000000		
+        15.3333299    4.2500000	 
+		16.0000000    4.0000000
+        16.0333333    3.0000000		
+        19.9666999    4.2500000	
+  endnode
+  node emitter OmenEmitter34
+    parent fx_roxfall
+    birthratekey 13
+         0.0000000    0.0000000
+         0.0333333    0.0000000
+         3.3333299    4.0000000
+         3.4000000    0.0000000
+         6.3333299    4.0000000
+         6.4000000    0.0000000
+         9.3333299    4.0000000
+         9.4000000    0.0000000
+        12.3333299    4.0000000
+        12.4000000    0.0000000
+        15.3333299    4.0000000
+        15.4000000    0.0000000
+        19.9666999    4.0000000
+    velocitykey 19
+         0.0000000    4.0000000
+         0.0333333    3.0000000
+         2.0000000    3.0000000
+         3.3333299    3.2500000
+		 4.0000000    3.0000000
+         4.0333333    2.0000000		
+         6.3333299    5.2500000	
+		 7.0000000    4.0000000
+         7.0333333    3.0000000		
+         9.3333299    4.2500000	
+		10.0000000    4.0000000
+        10.0333333    3.0000000		
+        12.3333299    5.2500000		
+		13.0000000    5.0000000
+        13.0333333    3.0000000		
+        15.3333299    4.2500000	 
+		16.0000000    4.0000000
+        16.0333333    3.0000000		
+        19.9666999    4.2500000	
+  endnode
+  node emitter OmenEmitter35
+    parent fx_roxfall
+    birthratekey 13
+         0.0000000    0.0000000
+         0.0333333    0.0000000
+         3.3333299    4.0000000
+         3.4000000    0.0000000
+         6.3333299    4.0000000
+         6.4000000    0.0000000
+         9.3333299    4.0000000
+         9.4000000    0.0000000
+        12.3333299    4.0000000
+        12.4000000    0.0000000
+        15.3333299    4.0000000
+        15.4000000    0.0000000
+        19.9666999    4.0000000
+    velocitykey 19
+         0.0000000    4.0000000
+         0.0333333    3.0000000
+         2.0000000    3.0000000
+         3.3333299    3.2500000
+		 4.0000000    3.0000000
+         4.0333333    2.0000000		
+         6.3333299    5.2500000	
+		 7.0000000    4.0000000
+         7.0333333    3.0000000		
+         9.3333299    4.2500000	
+		10.0000000    4.0000000
+        10.0333333    3.0000000		
+        12.3333299    5.2500000		
+		13.0000000    5.0000000
+        13.0333333    3.0000000		
+        15.3333299    4.2500000	 
+		16.0000000    4.0000000
+        16.0333333    3.0000000		
+        19.9666999    4.2500000	
+  endnode
+  node emitter OmenEmitter36
+    parent fx_roxfall
+    birthratekey 13
+         0.0000000    0.0000000
+         0.0333333    0.0000000
+         3.3333299    4.0000000
+         3.4000000    0.0000000
+         6.3333299    4.0000000
+         6.4000000    0.0000000
+         9.3333299    4.0000000
+         9.4000000    0.0000000
+        12.3333299    4.0000000
+        12.4000000    0.0000000
+        15.3333299    4.0000000
+        15.4000000    0.0000000
+        19.9666999    4.0000000
+    velocitykey 19
+         0.0000000    4.0000000
+         0.0333333    3.0000000
+         2.0000000    3.0000000
+         3.3333299    3.2500000
+		 4.0000000    3.0000000
+         4.0333333    2.0000000		
+         6.3333299    5.2500000	
+		 7.0000000    4.0000000
+         7.0333333    3.0000000		
+         9.3333299    4.2500000	
+		10.0000000    4.0000000
+        10.0333333    3.0000000		
+        12.3333299    5.2500000		
+		13.0000000    5.0000000
+        13.0333333    3.0000000		
+        15.3333299    4.2500000	 
+		16.0000000    4.0000000
+        16.0333333    3.0000000		
+        19.9666999    4.2500000	
+  endnode 
+doneanim snow fx_roxfall
+
+donemodel fx_roxfall

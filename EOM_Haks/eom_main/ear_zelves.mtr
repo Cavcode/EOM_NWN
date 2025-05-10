@@ -1,0 +1,10 @@
+ // Shaders
+customshaderVS vslit_sm_nm
+customshaderFS fs_plt_hair
+
+renderhint NormalAndSpecMapped
+
+texture1 ear_zelves_n
+ 
+
+transparency 1

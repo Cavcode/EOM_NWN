@@ -1,0 +1,11 @@
+customshaderVS vslit_sm_nm
+customshaderFS fslit_aniso_nm
+
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 wblcl_m_141 
+texture1 null 
+texture2 spec_none
+texture3 wblcl_m_141_a 
+texture4 null 

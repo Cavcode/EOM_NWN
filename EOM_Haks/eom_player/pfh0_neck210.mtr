@@ -1,0 +1,12 @@
+customshaderVS vslit_sm_nm
+customshaderFS fslit_aniso_nm
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 pfh0_neck210
+texture1 null 
+texture2 null 
+texture3 pfh0_neck210_a 
+
+transparency 1

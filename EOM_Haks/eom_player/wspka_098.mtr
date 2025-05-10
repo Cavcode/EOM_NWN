@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 wspka_098_d 
+texture1 wspka_098_n 
+texture2 wspka_098_s 
+texture3 null 
+texture4 null 

@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 wbwsh_m_029_d 
+texture1 wbwsh_m_029_n 
+texture2 wbwsh_m_029_s 
+texture3 null 
+texture4 null 

@@ -89,6 +89,8 @@ namespace EOM.Game.Server.Core
         [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
         public static void ReturnHook(IntPtr funcPtr) => NWNCore.NativeFunctions.ReturnHook(funcPtr);
 
+
+
         public static IntPtr GetNullTerminatedString(string? value)
         {
             if (value == null)

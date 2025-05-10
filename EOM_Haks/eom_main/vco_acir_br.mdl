@@ -1,0 +1,529 @@
+#MAXMODEL ASCII
+# model: vco_aspc_br
+filedependancy vco_aspc_br.max
+newmodel vco_aspc_br
+setsupermodel vco_aspc_br NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vco_aspc_br
+node dummy vco_aspc_br
+  parent NULL
+endnode
+node emitter OmenEmitter09
+  parent vco_aspc_br
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Normal
+  blend Lighten
+  texture fxpa_StarBnW
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.00233881 0.00244412 6.58507e-05
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.4
+  sizeEnd 0.4
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 1
+  lifeExp -1
+  mass 0
+  spread 0
+  particleRot 1
+  velocity 0
+  randvel 0
+  fps 30
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter05
+  parent vco_aspc_br
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.112655 -0.000264862 -0.00198944
+  orientation 0 0 -1 -0.811578
+  colorStart 0.117647 0 1
+  colorEnd 0.639216 0.592157 1
+  alphaStart 1
+  alphaEnd 0
+  sizeStart 0.1
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 25
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter06
+  parent vco_aspc_br
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.000177758 0.0025776 -0.110537
+  orientation 0 0 -1 -0.811578
+  colorStart 0.117647 0 1
+  colorEnd 0.580392 0.52549 1
+  alphaStart 1
+  alphaEnd 0
+  sizeStart 0.1
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 25
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter03
+  parent vco_aspc_br
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.000177797 -0.00321845 0.110804
+  orientation 0 0 -1 -0.811578
+  colorStart 0.117647 0 1
+  colorEnd 0.4 0 1
+  alphaStart 1
+  alphaEnd 0
+  sizeStart 0.1
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 25
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter01
+  parent vco_aspc_br
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.000177796 -0.00321846 0.110804
+  orientation 0 0 -1 -0.811578
+  colorStart 0.117647 0 1
+  colorEnd 0.117647 0 1
+  alphaStart 1
+  alphaEnd 0
+  sizeStart 0.1
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 25
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Burst
+  parent vco_aspc_br
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Normal
+  blend Lighten
+  texture aspcir_br
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 0
+  orientation 0 0 0 0
+  colorStart 0.117647 0 1
+  colorEnd 0.447059 0 1
+  alphaStart 1
+  alphaEnd 0
+  sizeStart 0.1
+  sizeEnd 0.5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 20
+  lifeExp 0.7
+  mass 0
+  spread 6.28319
+  particleRot 0
+  velocity 1
+  randvel 0.4
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node light AuroraLight01
+  parent vco_aspc_br
+  ambientonly 0
+  shadow 0
+  isdynamic 1
+  affectdynamic 1
+  lightpriority 3
+  fadingLight 1
+  flareradius 0
+  position 0 4.33226e-05 0.00915718
+  orientation -0.8709367 0.3474689 0.3474689 -1.70854
+  radius 4.99997
+  multiplier 1.5
+  color 0 0 0.937255
+endnode
+endmodelgeom vco_aspc_br
+
+#MAXANIM ASCII
+newanim conjure01 vco_aspc_br
+  length 0.966667
+  transtime 0.25
+  animroot vco_aspc_br
+  node dummy vco_aspc_br
+    parent NULL
+  endnode
+  node emitter OmenEmitter09
+    parent vco_aspc_br
+    sizeStartkey 5
+         0.0000000    0.4000000
+         0.1000000    0.4000000
+         0.5333330    1.0000000
+         0.6666670    1.0000000
+         0.9666670    0.4000000
+    sizeEndkey 5
+         0.0000000    0.4000000
+         0.1000000    0.4000000
+         0.5333330    1.0000000
+         0.6666670    1.0000000
+         0.9666670    0.4000000
+    birthratekey 1
+         0.9666670    1.0000000
+    lifeExpkey 1
+         0.9666670   -1.0000000
+  endnode
+  node emitter OmenEmitter05
+    parent vco_aspc_br
+    positionkey 10
+         0.0000000    0.1126550   -0.0002649   -0.0019894
+         0.1072920    0.0865992   -0.0441648    0.0542000
+         0.2147920    0.0218315   -0.0673246    0.0838431
+         0.3220830   -0.0539061   -0.0591106    0.0733296
+         0.4295830   -0.1018300   -0.0240340    0.0284337
+         0.5368750   -0.1018300    0.0235044   -0.0324127
+         0.6443750   -0.0539061    0.0585809   -0.0773086
+         0.7516670    0.0218316    0.0667949   -0.0878220
+         0.8591670    0.0865992    0.0436351   -0.0581788
+         0.9666670    0.1126550   -0.0002649   -0.0019894
+  endnode
+  node emitter OmenEmitter06
+    parent vco_aspc_br
+    positionkey 10
+         0.0000000   -0.0001778    0.0025776   -0.1105370
+         0.1072920    0.0502428   -0.0485077   -0.0858103
+         0.2147920    0.0768425   -0.0767937   -0.0217611
+         0.3220830    0.0674084   -0.0693455    0.0541975
+         0.4295830    0.0271218   -0.0303273    0.1031590
+         0.5368750   -0.0274775    0.0242533    0.1045890
+         0.6443750   -0.0677640    0.0657806    0.0577359
+         0.7516670   -0.0771980    0.0771940   -0.0177288
+         0.8591670   -0.0505983    0.0522988   -0.0831706
+         0.9666670   -0.0001778    0.0025776   -0.1105370
+  endnode
+  node emitter OmenEmitter03
+    parent vco_aspc_br
+    positionkey 10
+         0.0000000   -0.0001778   -0.0032184    0.1108040
+         0.1072920   -0.0714832   -0.0025364    0.0847578
+         0.2147920   -0.1091010   -0.0008410    0.0200123
+         0.3220830   -0.0957591    0.0011416   -0.0556994
+         0.4295830   -0.0387853    0.0023961   -0.1036070
+         0.5368750    0.0384298    0.0023961   -0.1036070
+         0.6443750    0.0954036    0.0011416   -0.0556993
+         0.7516670    0.1087450   -0.0008410    0.0200124
+         0.8591670    0.0711276   -0.0025364    0.0847578
+         0.9666670   -0.0001778   -0.0032184    0.1108040
+  endnode
+  node emitter OmenEmitter01
+    parent vco_aspc_br
+    positionkey 10
+         0.0000000   -0.0001778   -0.0032185    0.1108040
+         0.1072920   -0.0501564   -0.0533776    0.0834264
+         0.2147920   -0.0765230   -0.0785038    0.0179786
+         0.3220830   -0.0671716   -0.0670084   -0.0574840
+         0.4295830   -0.0272381   -0.0251313   -0.1043280
+         0.5368750    0.0268826    0.0299235   -0.1028860
+         0.6443750    0.0668161    0.0692917   -0.0539147
+         0.7516670    0.0761674    0.0768218    0.0220461
+         0.8591670    0.0498008    0.0483048    0.0860891
+         0.9666670   -0.0001778   -0.0032185    0.1108040
+  endnode
+  node emitter Burst
+    parent vco_aspc_br
+  endnode
+  node light AuroraLight01
+    parent vco_aspc_br
+    colorkey 7
+         0.0000000    0.0000000    0.0000000    0.9372550
+         0.1333330    0.0000000    0.0000000    0.5709200
+         0.2666670    0.6366300    0.7750090    1.0000000
+         0.4666670    0.0000000    0.0000000    0.6571940
+         0.6666670    0.0000000    0.0000000    0.9356260
+         0.7666670    0.0000000    0.0000000    0.5787630
+         0.9666670    0.0000000    0.0000000    0.9669980
+    radiuskey 1
+         0.9666670    4.9990001
+  endnode
+doneanim conjure01 vco_aspc_br
+
+#MAXANIM ASCII
+newanim fade vco_aspc_br
+  length 0.633333
+  transtime 0.25
+  animroot vco_aspc_br
+  event 0 detonate
+  node dummy vco_aspc_br
+    parent NULL
+  endnode
+  node emitter OmenEmitter09
+    parent vco_aspc_br
+    birthrate 0
+    lifeExp 0
+  endnode
+  node emitter OmenEmitter05
+    parent vco_aspc_br
+  endnode
+  node emitter OmenEmitter06
+    parent vco_aspc_br
+  endnode
+  node emitter OmenEmitter03
+    parent vco_aspc_br
+  endnode
+  node emitter OmenEmitter01
+    parent vco_aspc_br
+  endnode
+  node emitter Burst
+    parent vco_aspc_br
+  endnode
+  node light AuroraLight01
+    parent vco_aspc_br
+    colorkey 2
+         0.0000000    0.0000000    0.0000000    0.9356260
+         0.5333330    0.0000000    0.0000000    0.0000000
+    radius 4.972
+  endnode
+doneanim fade vco_aspc_br
+
+donemodel vco_aspc_br

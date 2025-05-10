@@ -1,0 +1,44 @@
+customshadervs vs_FaceCam
+customshaderfs fs_Portal70p
+
+##if not using alpha, a simple 24 bit image can be supplied
+##if using alpha, a 32 bit image must be supplied or alpha will not work
+texture0 tx_sphereMask
+
+##control warp speed and direction (use negative value to reverse)
+parameter float PORTAL_SPEED 0.2
+
+##control warp scale (default: 1.0)
+parameter float PORTAL_WARP_SCALE 0.75
+
+##control number of waves (default: 9.0)
+parameter float PORTAL_WAVE_COUNT 4.0
+
+##set the RGB color of the warp field (default: [0,0,1] )
+parameter float PORTAL_WARP_COLOR 0.45 0.0 0.04
+
+##manipulate the color of the waves (default: [1,1,1] )
+parameter float PORTAL_WAVE_COLOR 0.6 0.3 0.3
+
+##modify the speed at which the waves wiggle (default: 1.0)
+parameter float PORTAL_WAVE_WIGGLE_SPEED 1.0
+
+##modify the amount of wiggle along each wave (default: 1.0)
+parameter float PORTAL_WAVE_WIGGLE 1.6
+
+##modify the thickness of the wave (default: 1.0)
+parameter float PORTAL_WARP_THICKNESS 1.5
+
+##modify the warp field wiggle frequency (default: 1.0. Zero produces circles)
+parameter float PORTAL_WARP_WIGGLE 0.7
+
+##modify the rate of fading to black away from the center (default: 1.0)
+##only works on the warp field, not the waves
+parameter float PORTAL_EDGE_FADE 1.0
+
+##add some reflection and water movement
+##grabs the background and mixes it using a ripple effect with base offset
+parameter int DRAW_REFLECTIONS 1
+
+##subtract dark output from alpha
+parameter int FADE_BLENDING 1

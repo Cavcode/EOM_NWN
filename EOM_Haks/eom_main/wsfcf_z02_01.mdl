@@ -1,0 +1,80 @@
+#MAXMODEL ASCII
+# model: wsfcf_Z02_01
+filedependancy wsfcf_Z02_01.max
+newmodel wsfcf_Z02_01
+setsupermodel wsfcf_Z02_01 NULL
+classification TILE
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom wsfcf_Z02_01
+node dummy wsfcf_Z02_01
+  parent NULL
+endnode
+node trimesh Plane688
+  parent wsfcf_Z02_01
+  ambient 0.788235 0.72549 0.72549
+  diffuse 0.788235 0.72549 0.72549
+  specular 0.05 0.05 0.05
+  shininess 26
+  bitmap wsf01_mntn3
+  verts 9
+      -5.0000000    0.0000000    0.0000000
+      -5.0000000   -5.0000000    0.0000000
+       0.0000000    0.0000000    0.0000000
+       0.0000000   -5.0000000    0.0000000
+       5.0000000    0.0000000    0.0000000
+       5.0000000   -5.0000000    0.0000000
+      -5.0000000    5.0000000    0.0000000
+       0.0000000    5.0000000    0.0000000
+       5.0000000    5.0000000    0.0000000
+  tverts 6
+       0.5000000    0.0500000  0
+       0.0004995    0.0500000  0
+       0.5000000    0.0500000  0
+       0.0004995    0.0500000  0
+       0.9995010    0.0500000  0
+       0.9995010    0.0500000  0
+  faces 8
+    0 1 2  1  0 1 2   1
+    3 2 1  1  1 0 3   1
+    2 3 4  1  0 1 2   1
+    5 4 3  1  1 0 3   1
+    6 0 7  1  4 0 5   1
+    2 7 0  1  0 4 2   1
+    7 2 8  1  4 0 5   1
+    4 8 2  1  0 4 2   1
+  position 0 0 -3.4
+  orientation 0 0 0 0
+endnode
+node trimesh Plane687
+  parent wsfcf_Z02_01
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0 0 0
+  shininess 1
+  shadow 0
+  transparencyhint 1
+  rotatetexture 1
+  bitmap wsf01_waterxx
+  verts 4
+      -5.0000000    5.0000000    0.0000000
+      -5.0000000   -5.0000000    0.0000000
+       5.0000000    5.0000000    0.0000000
+       5.0000000   -5.0000000    0.0000000
+  tverts 4
+       6.0000401  -56.0005989  0
+       6.0000401  -59.0005989  0
+       9.0000696  -56.0005989  0
+       9.0000696  -59.0005989  0
+  faces 2
+    0 1 2  1  0 1 2   1
+    3 2 1  1  3 2 1   1
+  position 0 0 -1
+  orientation 0 0 0 0
+  alpha 1
+  scale 1
+  selfillumcolor 0 0 0
+endnode
+endmodelgeom wsfcf_Z02_01
+
+donemodel wsfcf_Z02_01

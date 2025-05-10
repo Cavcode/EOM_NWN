@@ -1,0 +1,89 @@
+# Exported from NWmax v6.11.28 at 2/26/2021 5:49:22 AM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: wswlz_b_028
+#local file: C:\Users\Fnord\Documents\3dsMax\scenes\pmh0_cloak154.max
+filedependancy pmh0_cloak154.max
+newmodel wswlz_b_028
+setsupermodel wswlz_b_028 NULL
+classification Character
+setanimationscale 1.0
+#NWmax GEOM  ASCII
+beginmodelgeom wswlz_b_028
+node dummy wswlz_b_028
+  parent NULL
+endnode
+node trimesh Object003
+  parent wswlz_b_028
+  position 0.00364041 0.0369373 -0.000873547
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.8 0.8 0.8 
+  tilefade 0
+  scale 1.0
+  render 1
+  Shadow 0
+  beaming 0
+  inheritcolor 0
+  rotatetexture 0
+  alpha 1.0
+  transparencyhint 0
+  selfillumcolor 0.0 0.0 0.0 
+  ambient 1.0 1.0 1.0 
+  Diffuse 1.0 1.0 1.0 
+  Specular 0.0 0.0 0.0 
+  shininess 4
+  center 0.0 -5.17718 -1.8888 
+  bitmap iwswlz_028
+  verts 18
+    0.0 -0.12 -0.06
+    0.0 -0.14 -0.02
+    0.0 -0.13 -0.01
+    0.0 0.06 0.02
+    0.0 -0.15 0.02
+    0.01 0.06 0.0
+    0.0 -0.15 -0.02
+    0.0 -0.17 0.0
+    0.0 0.06 -0.02
+    -0.01 0.06 0.0
+    0.0 -0.15 0.02
+    0.0 0.06 0.02
+    0.0 -0.17 0.0
+    0.0 -0.15 -0.02
+    0.0 0.06 -0.02
+    0.0 -0.13 -0.01
+    0.0 -0.14 -0.02
+    0.0 -0.12 -0.06
+  faces 10
+    2 0 1  1  2 0 1  1
+    5 3 4  1  5 3 4  1
+    4 7 5  1  4 7 5  1
+    7 6 5  1  7 6 5  1
+    8 5 6  1  8 5 6  1
+    9 14 13  1  9 14 13  1
+    13 12 9  1  13 12 9  1
+    12 10 9  1  12 10 9  1
+    11 9 10  1  11 9 10  1
+    17 15 16  1  17 15 16  1
+  tverts 18
+    0.479123 0.988137 0
+    0.518155 0.910382 0
+    0.482186 0.889894 0
+    0.870713 0.658179 0
+    0.89516 0.033522 0
+    0.921267 0.658179 0
+    0.975476 0.058295 0
+    0.940604 0.013672 0
+    0.971821 0.658179 0
+    0.921267 0.658179 0
+    0.89516 0.033522 0
+    0.870713 0.658179 0
+    0.940604 0.013672 0
+    0.975476 0.058295 0
+    0.971821 0.658179 0
+    0.482186 0.889894 0
+    0.518155 0.910382 0
+    0.479123 0.988137 0
+endnode
+endmodelgeom wswlz_b_028
+donemodel wswlz_b_028

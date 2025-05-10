@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 c_14beavr 
+texture1 c_14beavr_n 
+texture2 spec_none
+texture3 null 
+texture4 null 

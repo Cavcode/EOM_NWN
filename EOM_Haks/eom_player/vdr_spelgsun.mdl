@@ -1,0 +1,710 @@
+#MAXMODEL ASCII
+# model: vdr_spelgsun
+filedependancy vdr_spelgsun.max
+newmodel vdr_spelgsun
+setsupermodel vdr_spelgsun NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vdr_spelgsun
+node dummy vdr_spelgsun
+  parent NULL
+endnode
+node emitter dom3
+  parent vdr_spelgsun
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Billboard_to_Local_Z
+  blend Lighten
+  texture fxpa_ringwave
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 1
+  blastRadius 0
+  blastLength 0
+  position -0.00289163 -0.00192771 0.7203
+  orientation -1 1.62843e-07 -1.62843e-07 -0.523599
+  colorStart 0.235294 0.454902 0.229412
+  colorEnd 0.235294 0.454902 0.229412
+  alphaStart -0.4
+  alphaEnd -0.4
+  sizeStart 2.5
+  sizeEnd 2.5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot -0.33
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 80
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter dom05
+  parent vdr_spelgsun
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Billboard_to_Local_Z
+  blend Lighten
+  texture fxpa_ringwave
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 1
+  blastRadius 0
+  blastLength 0
+  position -0.00289163 -0.00192771 0.7203
+  orientation 1 0 0 -0.523599
+  colorStart 0.235294 0.454902 0.229412
+  colorEnd 0.235294 0.454902 0.229412
+  alphaStart -0.4
+  alphaEnd -0.4
+  sizeStart 2.5
+  sizeEnd 2.5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 2
+  frameEnd 2
+  birthrate 1
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0.33
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 80
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter dom1
+  parent vdr_spelgsun
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Billboard_to_Local_Z
+  blend Lighten
+  texture fxpa_ringwave
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 1
+  blastRadius 0
+  blastLength 0
+  position 0.00192772 -0.00192775 0.72029
+  orientation -0.250563 0.250563 0.935113 -1.63783
+  colorStart 0.235294 0.454902 0.229412
+  colorEnd 0.235294 0.454902 0.229412
+  alphaStart -0.2
+  alphaEnd -0.2
+  sizeStart 2.5
+  sizeEnd 2.5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 1
+  frameEnd 1
+  birthrate 1
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot -0.33
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 80
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter dom2
+  parent vdr_spelgsun
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Billboard_to_Local_Z
+  blend Lighten
+  texture fxpa_ringwave
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 1
+  blastRadius 0
+  blastLength 0
+  position 0.00192772 -0.00192775 0.71863
+  orientation -0.250563 0.250563 -0.935113 -4.64535
+  colorStart 0.235294 0.454902 0.229412
+  colorEnd 0.235294 0.454902 0.229412
+  alphaStart -0.2
+  alphaEnd -0.2
+  sizeStart 2.5
+  sizeEnd 2.5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 3
+  frameEnd 3
+  birthrate 1
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot -0.33
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 80
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter glows
+  parent vdr_spelgsun
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 1
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_starglo
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 1
+  blastRadius 0
+  blastLength 0
+  position 0 0 0.65
+  orientation 0 0 0 0
+  colorStart 0.05 0.94 0.05
+  colorEnd 0.01 0.64 0.01
+  alphaStart 0.69
+  alphaEnd 0.09
+  sizeStart 2.3
+  sizeEnd 1.6
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1.8
+  lifeExp 3
+  mass 0
+  spread 0.6
+  particleRot 0.72
+  velocity 0
+  randvel 1.1
+  fps 0
+  xsize 5
+  ysize 5
+  bounce_co 0
+  blurlength 70
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter glows2
+  parent vdr_spelgsun
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 1
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_starglo
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 1
+  blastRadius 0
+  blastLength 0
+  position 0 0 0.65
+  orientation 0 0 0 0
+  colorStart 0.05 0.94 0.05
+  colorEnd 0.01 0.64 0.01
+  alphaStart 0.49
+  alphaEnd 0.02
+  sizeStart 2.2
+  sizeEnd 1.5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1.5
+  lifeExp 4
+  mass 0
+  spread 0.6
+  particleRot -0.70
+  velocity 0
+  randvel 1.1
+  fps 0
+  xsize 5
+  ysize 5
+  bounce_co 0
+  blurlength 70
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter dom4
+  parent vdr_spelgsun
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Normal
+  blend Normal
+  texture fxpa_starbal
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 1
+  blastRadius 0
+  blastLength 0
+  position 0 0 0.65
+  orientation 0 0 0 0
+  colorStart 0.05 0.90 0.05
+  colorEnd 0.05 0.90 0.05
+  alphaStart 1.0
+  alphaEnd 1.0
+  sizeStart 0.1
+  sizeEnd 0.1
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp -1
+  mass 0
+  spread 0
+  particleRot -0.42
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 70
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node light AuroraLight01
+  parent dom4
+  ambientonly 0
+  shadow 1
+  isdynamic 1
+  affectdynamic 1
+  lightpriority 1
+  fadingLight 1
+  flareradius 100
+  texturenames 3 
+    FXPA_LENSRING
+    FXPA_LENSRING 
+    fxpa_flare
+  flaresizes 3
+    4
+    7
+    10
+  flarepositions 3
+    0.8
+    0.5
+    0
+  flarecolorshifts 3
+       0.0000000    0.0000000    0.0000000
+       0.0000000    0.0000000    0.0000000
+       0.0000000    0.0000000    0.0000000
+  position 0 0 -0.01
+  orientation 0 0 0 0
+  radius 200
+  multiplier 10
+  color 0 0.8 0
+endnode
+endmodelgeom vdr_spelgsun
+
+#MAXANIM ASCII
+newanim impact vdr_spelgsun
+  length 0.3
+  transtime 0.25
+  animroot vdr_spelgsun
+  node dummy vdr_spelgsun
+    parent NULL
+  endnode
+  node emitter dom3
+    parent vdr_spelgsun
+    alphaStartkey 3
+         0.0000000   -0.2000000
+         0.2666670    0.2000000
+         0.3000000    0.2000000
+    alphaEndkey 3
+         0.0000000   -0.2000000
+         0.2666670    0.2000000
+         0.3000000    0.2000000
+  endnode
+  node emitter dom05
+    parent vdr_spelgsun
+    alphaStartkey 3
+         0.0000000   -0.2000000
+         0.2666670    0.2000000
+         0.3000000    0.2000000
+    alphaEndkey 3
+         0.0000000   -0.2000000
+         0.2666670    0.2000000
+         0.3000000    0.2000000
+  endnode
+  node emitter dom1
+    parent vdr_spelgsun
+    alphaStartkey 3
+         0.0000000   -0.2000000
+         0.2666670    0.2000000
+         0.3000000    0.2000000
+    alphaEndkey 3
+         0.0000000   -0.2000000
+         0.2666670    0.2000000
+         0.3000000    0.2000000
+  endnode
+  node emitter dom2
+    parent vdr_spelgsun
+    alphaStartkey 3
+         0.0000000   -0.2000000
+         0.2666670    0.2000000
+         0.3000000    0.2000000
+    alphaEndkey 3
+         0.0000000   -0.2000000
+         0.2666670    0.2000000
+         0.3000000    0.2000000
+  endnode
+  node emitter dom4
+    parent vdr_spelgsun
+	sizeStartkey 2
+         0.0000000    0.2000000
+         0.3000000    2.0000000		
+	sizeEndkey 2
+         0.0000000    0.2000000
+         0.3000000    2.0000000			 
+    alphaStartkey 3
+         0.0000000    0.0000000
+         0.2666670    0.3000000
+         0.3000000    0.5000000
+    alphaEndkey 3
+         0.0000000    0.0000000
+         0.2666670    0.3000000
+         0.3000000    0.5000000
+  endnode
+doneanim impact vdr_spelgsun
+
+#MAXANIM ASCII
+newanim duration vdr_spelgsun
+  length 1.33333
+  transtime 0.25
+  animroot vdr_spelgsun
+  node dummy vdr_spelgsun
+    parent NULL
+  endnode
+  node emitter dom3
+    parent vdr_spelgsun
+    alphaStartkey 3
+         0.0000000    0.2000000
+         0.7333330    0.4400000
+         1.3333300    0.2000000
+    alphaEndkey 3
+         0.0000000    0.2000000
+         0.7333330    0.4400000
+         1.3333300    0.2000000
+  endnode
+  node emitter dom05
+    parent vdr_spelgsun
+    alphaStartkey 3
+         0.0000000    0.2000000
+         0.7333330    0.4400000
+         1.3333300    0.2000000
+    alphaEndkey 3
+         0.0000000    0.2000000
+         0.7333330    0.4400000
+         1.3333300    0.2000000
+  endnode
+  node emitter dom1
+    parent vdr_spelgsun
+    alphaStartkey 3
+         0.0000000    0.2000000
+         0.7333330    0.4400000
+         1.3333300    0.2000000
+    alphaEndkey 3
+         0.0000000    0.2000000
+         0.7333330    0.4400000
+         1.3333300    0.2000000
+  endnode
+  node emitter dom2
+    parent vdr_spelgsun
+    alphaStartkey 3
+         0.0000000    0.2000000
+         0.7333330    0.4400000
+         1.3333300    0.2000000
+    alphaEndkey 3
+         0.0000000    0.2000000
+         0.7333330    0.4400000
+         1.3333300    0.2000000
+  endnode
+  node emitter dom4
+    parent vdr_spelgsun
+	sizeStartkey 1
+         0.0000000    2.2000000	
+	sizeEndkey 1
+         0.0000000    0.2000000
+    alphaStartkey 3
+         0.0000000    0.5000000
+         0.6666670    0.6000000
+         1.3333300    0.5000000
+    alphaEndkey 3
+         0.0000000    0.5000000
+         0.6666670    0.6000000
+         1.3333300    0.5000000
+  endnode
+doneanim duration vdr_spelgsun
+
+#MAXANIM ASCII
+newanim cessation vdr_spelgsun
+  length 2.63333
+  transtime 0.25
+  animroot vdr_spelgsun
+  node dummy vdr_spelgsun
+    parent NULL
+  endnode
+  node emitter dom3
+    parent vdr_spelgsun
+    alphaStartkey 2
+         0.0000000    0.2000000
+         2.63333   -0.2000000
+    alphaEndkey 2
+         0.0000000    0.2000000
+         2.63333   -0.2000000
+  endnode
+  node emitter dom05
+    parent vdr_spelgsun
+    alphaStartkey 2
+         0.0000000    0.2000000
+         2.63333   -0.2000000
+    alphaEndkey 2
+         0.0000000    0.2000000
+         2.63333   -0.2000000
+  endnode
+  node emitter dom1
+    parent vdr_spelgsun
+    alphaStartkey 2
+         0.0000000    0.2000000
+         2.63333   -0.2000000
+    alphaEndkey 2
+         0.0000000    0.2000000
+         2.63333   -0.2000000
+  endnode
+  node emitter dom2
+    parent vdr_spelgsun
+    alphaStartkey 2
+         0.0000000    0.2000000
+         2.63333   -0.2000000
+    alphaEndkey 2
+         0.0000000    0.2000000
+         2.63333   -0.2000000
+  endnode
+  node emitter dom4
+    parent vdr_spelgsun
+	sizeStartkey 2
+         0.0000000    2.1000000
+         2.63333    0.1000000		
+	sizeEndkey 2
+         0.0000000    2.1000000
+         2.63333    0.1000000			
+    alphaStartkey 3
+         0.0000000    0.5000000
+         0.0333333    0.5000000
+         2.63333   -0.1000000
+    alphaEndkey 3
+         0.0000000    0.5000000
+         0.0333333    0.5000000
+         2.63333   -0.1000000
+  endnode
+  node emitter glows
+    parent vdr_spelgsun
+	sizeStartkey 2
+         0.0000000    2.1000000
+         2.63333    0.1000000		
+	sizeEndkey 2
+         0.0000000    2.1000000
+         2.63333    0.1000000	
+    alphaStartkey 3
+         0.0000000    0.3000000
+         0.0333333    0.3000000
+         2.63333   -0.1000000
+    alphaEndkey 3
+         0.0000000    0.3000000
+         0.0333333    0.3000000
+         2.63333   -0.1000000
+  endnode 
+  node emitter glows2
+    parent vdr_spelgsun
+	sizeStartkey 2
+         0.0000000    2.1000000
+         2.63333    0.1000000		
+	sizeEndkey 2
+         0.0000000    2.1000000
+         2.63333    0.1000000	
+    alphaStartkey 3
+         0.0000000    0.3000000
+         0.0333333    0.3000000
+         2.63333   -0.1000000
+    alphaEndkey 3
+         0.0000000    0.3000000
+         0.0333333    0.3000000
+         2.63333   -0.1000000
+  endnode 
+  node light AuroraLight01
+    parent vdr_spelgsun
+    colorkey 3
+         0.0000000    0.0000000    0.0000000    0.0000000
+         0.4333330    0.7000000    0.7000000    0.7000000
+         2.63333    0.0000000    0.0000000    0.0000000
+  endnode  
+doneanim cessation vdr_spelgsun
+
+donemodel vdr_spelgsun

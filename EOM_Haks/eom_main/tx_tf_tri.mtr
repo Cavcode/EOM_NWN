@@ -1,0 +1,15 @@
+customshadervs vsLitC
+customshaderfs fs_tf_tris
+
+##any texture name will do, as long as it has one. Non-alpha is preferable.
+texture0 fog01
+
+##control speed and direction (use negative value to reverse?)
+parameter float ANIMATION_SPEED 0.20
+
+##control scale of UV mapping
+parameter float TRIANGLES_SCALE 0.5
+
+##control layers amount
+parameter float NUM_LAYERS 4.0
+

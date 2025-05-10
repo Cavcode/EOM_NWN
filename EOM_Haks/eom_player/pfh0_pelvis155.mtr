@@ -1,0 +1,11 @@
+customshadervs vslit_nm
+customshaderfs fslit_mixplt
+  
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+
+texture1 pfh0_pelvis155_n 
+texture2 null 
+texture3 null 
+texture4 null 

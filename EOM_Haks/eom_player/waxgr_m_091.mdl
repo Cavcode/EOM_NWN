@@ -1,0 +1,24 @@
+# Exported from NWmax 0.8 b60 at 4/1/2014 12:03:24 PM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: waxgr_m_091
+#local file: C:\gmax\Scenes\Weapons\Orcish Weapons10.gmax
+filedependancy Orcish Weapons10.gmax
+newmodel waxgr_m_091
+setsupermodel waxgr_m_091 NULL
+classification Character
+setanimationscale 1.0
+#NWmax GEOM  ASCII
+beginmodelgeom waxgr_m_091
+node dummy waxgr_m_091
+  parent NULL
+endnode
+node dummy Box16
+  parent waxgr_m_091
+  position 0.0 0.0 0.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.603922 0.603922 0.898039 
+endnode
+endmodelgeom waxgr_m_091
+donemodel waxgr_m_091

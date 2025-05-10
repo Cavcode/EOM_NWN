@@ -1,0 +1,167 @@
+#MAXMODEL ASCII
+# model: vim_heal02_blu
+filedependancy vim_heal02_blu.max
+newmodel vim_heal02_blu
+setsupermodel vim_heal02_blu NULL
+classification effect
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vim_heal02_blu
+node dummy vim_heal02_blu
+  parent NULL
+  #part-number 0
+endnode
+node emitter Blue
+  parent vim_heal02_blu
+  #part-number 1
+  p2p 0
+  p2p_sel 0
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  splat 0
+  inherit_part 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Aligned_to_World_Z
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0.00365541992
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 -0.00408582995 0.0117129004
+  orientation 0 0 0 0
+  xsize 150
+  ysize 150
+  threshold 0
+  combinetime 0
+  colorStart 0.63529402 0.31764701 0.93333298
+  colorEnd 0.776471019 0.580392003 0.960784018
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.200000003
+  sizeEnd 0.100000001
+  sizeStart_y 0
+  sizeEnd_y 3
+  birthrate 120
+  lifeExp 0.5
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  bounce_co 0
+  blurlength 10
+  fps 0
+  frameStart 0
+  frameEnd 0
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  grav 3
+  drag 0.400000006
+endnode
+node emitter Gold
+  parent vim_heal02_blu
+  #part-number 2
+  p2p 0
+  p2p_sel 0
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  splat 0
+  inherit_part 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Aligned_to_World_Z
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0.00365541992
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 -0.00408582995 0.0117129004
+  orientation 0 0 0 0
+  xsize 70
+  ysize 70
+  threshold 0
+  combinetime 0
+  colorStart 0.843137026 0.713725984 0
+  colorEnd 0.843137026 0.576470971 0
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0
+  sizeEnd 0.100000001
+  sizeStart_y 0
+  sizeEnd_y 3
+  birthrate 100
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  bounce_co 0
+  blurlength 10
+  fps 0
+  frameStart 0
+  frameEnd 0
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  grav 3
+  drag 0.400000006
+endnode
+endmodelgeom vim_heal02_blu
+
+#MAXANIM ASCII
+newanim impact vim_heal02_blu
+  length 1.96667004
+  transtime 0.25
+  animroot vim_heal02_blu
+node dummy vim_heal02_blu
+  parent NULL
+  #part-number 0
+endnode
+node emitter Blue
+  parent vim_heal02_blu
+  #part-number 1
+  birthratekey 4
+    0 120
+    0.93333298 120
+    0.966666996 120
+    1 0
+endnode
+node emitter Gold
+  parent vim_heal02_blu
+  #part-number 2
+  birthratekey 4
+    0 100
+    0.600000024 100
+    0.633333027 100
+    0.666666985 0
+endnode
+doneanim impact vim_heal02_blu
+
+donemodel vim_heal02_blu

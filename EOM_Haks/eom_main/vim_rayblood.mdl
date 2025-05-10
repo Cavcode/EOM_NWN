@@ -1,0 +1,321 @@
+# Exported from NWmax 0.8 b60 at 8/6/2012 9:51:30 AM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: vim_rayblood
+#local file: C:\gmax\Scenes\Beams\All Beams.gmax
+filedependancy All Beams.gmax
+newmodel vim_rayblood
+setsupermodel vim_rayblood NULL
+classification Effect
+#NWmax GEOM  ASCII
+beginmodelgeom vim_rayblood
+node dummy vim_rayblood
+  parent NULL
+endnode
+node emitter HandFlames01
+  parent vim_rayblood
+  position 0.0 0.20574 0.0
+  orientation -1.0 0.0 0.0 -4.71239
+  wirecolor 1.0 1.0 1.0 
+  update_sel 1
+  update Fountain
+  render_sel 7
+  render Motion_Blur
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 0.0
+  ySize 0.0
+  inherit 1
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 0.7 0.0 0.0 
+  colorEnd 0.7 0.0 0.0 
+  alphaStart 0.5
+  alphaEnd 0.0
+  sizeStart 0.1
+  sizeEnd 0.1
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 600
+  lifeExp 0.25
+  mass 0.0
+  spread 2.79253
+  particleRot 0.0
+  velocity 3.0
+  randvel 0.5
+  bounce_co 0.0
+  blurlength 100.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture blood
+  twosidedtex 0
+  xgrid 1
+  ygrid 1
+  fps 0
+  framestart 0
+  frameend 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 5.0
+  grav 50.0
+  drag 0.0
+endnode
+node emitter HandSmoke01
+  parent vim_rayblood
+  position 0.0 0.20574 0.0
+  orientation 1.0 0.0 0.0 -6.28318
+  wirecolor 1.0 1.0 1.0 
+  update_sel 1
+  update Fountain
+  render_sel 7
+  render Motion_Blur
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 0.0
+  ySize 0.0
+  inherit 1
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 0.0 1.0 0.501961
+  colorEnd 0.25098 0.501961 0.752941  
+  alphaStart 0.1
+  alphaEnd 0.6
+  sizeStart 1.0
+  sizeEnd 0.0
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 300
+  lifeExp 0.25
+  mass 0.0
+  spread 2.0944
+  particleRot 0.0
+  velocity 3.0
+  randvel 1.0
+  bounce_co 0.0
+  blurlength 100.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_flarel
+  twosidedtex 0
+  xgrid 1
+  ygrid 1
+  fps 0
+  framestart 0
+  frameend 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 5.0
+  grav 50.0
+  drag 0.0
+endnode 
+node emitter BeamInnerCyan02
+  parent vim_rayblood
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render_sel 7
+  render Motion_Blur
+  blend_sel 3
+  blend Lighten
+  texture fxpa_bloodbem 
+  xgrid 4
+  ygrid 1
+  random 1  
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0.204553 0
+  orientation 0 0 0 0
+  colorStart 1.0 1.0 1.0 
+  colorEnd 1.0 1.0 1.0 
+  alphaStart 0.85
+  alphaEnd 0.85
+  sizeStart 0.25
+  sizeEnd 0.25
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 2
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 25.2
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0.0
+  lightningRadius 0.07
+  lightningScale 0.1
+  p2p 1
+  p2p_type Bezier
+  p2p_sel 1  
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node reference AuroraRef11
+  parent BeamInnerCyan02
+  position 2.12523e-007 0.0 0.0
+  orientation 1.0 0.0 0.0 -3.14159
+  wirecolor 0.6 0.894118 0.6 
+  refModel fx_ref
+  reattachable 1
+  Dummy Dummy
+endnode
+node emitter OmenEmitter03
+  parent vim_rayblood
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Lightning
+  render Linked
+  blend Lighten
+  texture fxpa_white
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0.204553 0
+  orientation 0 0 0 0
+  colorStart 0.909804 0.470588 0
+  colorEnd 0.909804 0.470588 0
+  alphaStart 0.08
+  alphaEnd 0.08
+  sizeStart 0.45
+  sizeEnd 0.45
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 3
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node reference OmenRef03
+  parent OmenEmitter03
+  refModel fx_ref
+  reattachable 1
+  position -0.00129215 5.99712 0
+  orientation 0 0 0 0
+endnode
+endmodelgeom vim_rayblood
+
+#MAXANIM ASCII
+newanim impact vim_rayblood
+  length 0
+  transtime 0
+  animroot vim_rayblood
+  node dummy vim_rayblood
+    parent NULL
+  endnode
+  node emitter HandFlames01
+	parent vim_rayblood
+  endnode
+  node emitter HandSmoke01
+	parent vim_rayblood
+  endnode
+  node emitter BeamInnerCyan02
+	parent vim_rayblood
+  endnode
+  node reference AuroraRef11
+	parent BeamInnerCyan02
+  endnode
+  node emitter OmenEmitter03
+	parent vim_rayblood
+  endnode
+  node reference OmenRef03
+	parent OmenEmitter03  
+  endnode	
+doneanim impact vim_rayblood
+
+donemodel vim_rayblood

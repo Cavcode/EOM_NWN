@@ -1,0 +1,13 @@
+customshaderVS vslit_sm_nm
+customshaderFS fs_plt_hair
+
+renderhint NormalTangents
+ 
+// Textures 
+texture0 wmgst_026
+texture1 wmgst_026_n
+texture2 wmgst_026_s
+texture3 null
+
+transparency 1
+twosided 1

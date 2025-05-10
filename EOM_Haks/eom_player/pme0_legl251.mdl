@@ -1,0 +1,10 @@
+newmodel pme0_legl251
+setsupermodel pme0_legl251 null
+classification CHARACTER
+setanimationscale 1.0
+beginmodelgeom pme0_legl251
+node dummy pme0_legl251
+  parent null
+endnode
+endmodelgeom pme0_legl251
+donemodel pme0_legl251

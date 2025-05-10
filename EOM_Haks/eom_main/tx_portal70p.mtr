@@ -1,0 +1,36 @@
+customshadervs vsLitC
+customshaderfs fs_Portal70p
+
+##any texture name will do, as long as it has one. Non-alpha is preferable.
+texture0 fog01
+
+##control warp speed and direction (use negative value to reverse)
+parameter float PORTAL_SPEED 0.65
+
+##control warp scale (default: 1.0)
+parameter float PORTAL_WARP_SCALE 1.0
+
+##control number of waves (default: 9.0)
+parameter float PORTAL_WAVE_COUNT 9.0
+
+##set the RGB color of the warp field (default: [0,0,1] )
+parameter float PORTAL_WARP_COLOR 0.0 0.0 1.0
+
+##manipulate the color of the waves (default: [1,1,1] )
+parameter float PORTAL_WAVE_COLOR 1.0 1.0 1.0
+
+##modify the speed at which the waves wiggle (default: 1.0)
+parameter float PORTAL_WAVE_WIGGLE_SPEED 1.0
+
+##modify the amount of wiggle along each wave (default: 1.0)
+parameter float PORTAL_WAVE_WIGGLE 1.0
+
+##modify the thickness of the wave (default: 1.0)
+parameter float PORTAL_WARP_THICKNESS 1.0 
+
+##modify the warp field wiggle frequency (default: 1.0. Zero produces circles)
+parameter float PORTAL_WARP_WIGGLE 1.0
+
+##modify the rate of fading to black away from the center (default: 1.0)
+##only works on the warp field, not the waves
+parameter float PORTAL_EDGE_FADE 2.0

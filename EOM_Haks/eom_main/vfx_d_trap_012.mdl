@@ -1,0 +1,560 @@
+#Model converted by mdl2ascii
+#For updates/comments check out http://nwn-j3d.sf.net
+filedependancy Unknown
+newmodel vff_d_trap_012
+setsupermodel vff_d_trap_012 NULL
+classification Character
+setanimationscale 1.000000
+#MAXGEOM  ASCII
+beginmodelgeom vff_d_trap_012
+node dummy vff_d_trap_012
+  parent NULL
+endnode
+node emitter Part1
+  parent vff_d_trap_012
+  position 0.000000 0.000000 0.482724
+  orientation 0.000000 0.000000 0.000000 0.000000
+    colorStart 0.1 0.1 0.1
+    colorEnd 0 0 0
+    alphaStart 0.000000
+    alphaEnd 0.000000
+    sizeStart 3.500000
+    sizeEnd 3.500000
+    sizeStart_y 0.000000
+    sizeEnd_y 0.000000
+    frameStart 2
+    frameEnd 2
+    birthrate 1
+    spawnType 0
+    lifeExp 4.000000
+    mass 0.000000
+    spread 0.000000
+    particleRot -0.050000
+    velocity 0.000000
+    randvel 0.000000
+    fps 0
+    random 0
+    inherit 1
+    inherit_local 0
+    inherit_part 0
+    inheritvel 0
+    xsize 0.000000
+    ysize 0.000000
+    bounce 0
+    bounce_co 0.000000
+    loop 0
+    update Single
+    render Billboard_to_World_Z
+    Blend Lighten
+    deadspace 0.000000
+    blurlength 10.000000
+    lightningDelay 0.0
+    lightningRadius 0.000000
+    lightningScale 0.000000
+    blastRadius 20.000000
+    blastLength 3.000000
+    twosidedtex 0
+    p2p 0
+    p2p_sel 1
+    p2p_type Bezier
+    p2p_bezier2 0.000000
+    p2p_bezier3 0.000000
+    combinetime 0.000000
+    drag 0.000000
+    grav 0.000000
+    threshold 0.000000
+    texture fxpa_Symbl_001
+    xgrid 2
+    ygrid 2
+    affectedByWind 0
+    m_isTinted 0
+    Splat 0
+endnode
+node emitter Implosion
+  parent vff_d_trap_012
+  position 0.000000 0.000000 0.758260
+  orientation 0.000000 0.000000 0.000000 0.000000
+    colorStart 0.1 0.1 0.1
+    colorEnd 0 0 0
+    alphaStart 0.000000
+    alphaEnd 0.000000
+    sizeStart 9.000000
+    sizeEnd 4.000000
+    sizeStart_y 0.000000
+    sizeEnd_y 0.000000
+    frameStart 0
+    frameEnd 3
+    birthrate 30
+    spawnType 0
+    lifeExp 1.000000
+    mass 0.000000
+    spread 0.000000
+    particleRot 1.700000
+    velocity 0.400000
+    randvel 0.000000
+    fps 12
+    random 0
+    inherit 0
+    inherit_local 0
+    inherit_part 0
+    inheritvel 0
+    xsize 90.000000
+    ysize 60.000000
+    bounce 0
+    bounce_co 0.000000
+    loop 0
+    update Fountain
+    render Billboard_to_World_Z
+    Blend Lighten
+    deadspace 0.000000
+    blurlength 10.000000
+    lightningDelay 0.0
+    lightningRadius 0.000000
+    lightningScale 0.000000
+    blastRadius 0.000000
+    blastLength 0.000000
+    twosidedtex 0
+    p2p 0
+    p2p_sel 1
+    p2p_type Bezier
+    p2p_bezier2 0.000000
+    p2p_bezier3 0.000000
+    combinetime 0.000000
+    drag 0.000000
+    grav 0.000000
+    threshold 0.000000
+    texture fxpa_ringwave
+    xgrid 2
+    ygrid 2
+    affectedByWind 0
+    m_isTinted 0
+    Splat 0
+endnode
+node emitter part2
+  parent vff_d_trap_012
+  position 0.000000 0.000000 0.469835
+  orientation 0.000000 0.000000 0.000000 0.000000
+    colorStart 0.1 0.1 0.1
+    colorEnd 0 0 0
+    alphaStart 0.000000
+    alphaEnd 0.000000
+    sizeStart 7.500000
+    sizeEnd 7.500000
+    sizeStart_y 0.000000
+    sizeEnd_y 0.000000
+    frameStart 1
+    frameEnd 1
+    birthrate 1
+    spawnType 0
+    lifeExp 4.000000
+    mass 0.000000
+    spread 0.000000
+    particleRot -0.200000
+    velocity 0.000000
+    randvel 0.000000
+    fps 0
+    random 0
+    inherit 1
+    inherit_local 0
+    inherit_part 0
+    inheritvel 0
+    xsize 0.000000
+    ysize 0.000000
+    bounce 0
+    bounce_co 0.000000
+    loop 0
+    update Single
+    render Billboard_to_World_Z
+    Blend Lighten
+    deadspace 0.000000
+    blurlength 10.000000
+    lightningDelay 0.0
+    lightningRadius 0.000000
+    lightningScale 0.000000
+    blastRadius 20.000000
+    blastLength 3.000000
+    twosidedtex 0
+    p2p 0
+    p2p_sel 1
+    p2p_type Bezier
+    p2p_bezier2 0.000000
+    p2p_bezier3 0.000000
+    combinetime 0.000000
+    drag 0.000000
+    grav 0.000000
+    threshold 0.000000
+    texture fxpa_Symbl_001
+    xgrid 2
+    ygrid 2
+    affectedByWind 0
+    m_isTinted 0
+    Splat 0
+endnode
+node emitter part03
+  parent vff_d_trap_012
+  position 0.000000 0.000000 0.436470
+  orientation 0.000000 0.000000 0.000000 0.000000
+    colorStart 0.000000 0.000000 0.000000
+    colorEnd 0.000000 0.000000 0.000000
+    alphaStart 0.000000
+    alphaEnd 0.000000
+    sizeStart 13.000000
+    sizeEnd 13.000000
+    sizeStart_y 0.000000
+    sizeEnd_y 0.000000
+    frameStart 1
+    frameEnd 1
+    birthrate 1
+    spawnType 0
+    lifeExp 4.000000
+    mass 0.000000
+    spread 0.000000
+    particleRot -0.200000
+    velocity 0.000000
+    randvel 0.000000
+    fps 0
+    random 0
+    inherit 1
+    inherit_local 0
+    inherit_part 0
+    inheritvel 0
+    xsize 0.000000
+    ysize 0.000000
+    bounce 0
+    bounce_co 0.000000
+    loop 0
+    update Single
+    render Billboard_to_World_Z
+    Blend Normal
+    deadspace 0.000000
+    blurlength 10.000000
+    lightningDelay 0.0
+    lightningRadius 0.000000
+    lightningScale 0.000000
+    blastRadius 20.000000
+    blastLength 3.000000
+    twosidedtex 0
+    p2p 0
+    p2p_sel 1
+    p2p_type Bezier
+    p2p_bezier2 0.000000
+    p2p_bezier3 0.000000
+    combinetime 0.000000
+    drag 0.000000
+    grav 0.000000
+    threshold 0.000000
+    texture fxpa_Dot01
+    xgrid 1
+    ygrid 1
+    affectedByWind 0
+    m_isTinted 0
+    Splat 0
+endnode
+node emitter OmenEmitter01
+  parent vff_d_trap_012
+  position 0.000000 0.000000 0.288622
+  orientation 0.000000 0.000000 0.000000 0.000000
+    colorStart 0.1 0.1 0.1
+    colorEnd 0 0 0
+    alphaStart 1.000000
+    alphaEnd 1.000000
+    sizeStart 0.100000
+    sizeEnd 0.100000
+    sizeStart_y 0.000000
+    sizeEnd_y 0.000000
+    frameStart 0
+    frameEnd 0
+    birthrate 0
+    spawnType 0
+    lifeExp 1.000000
+    mass 0.100000
+    spread 0.174533
+    particleRot 5.000000
+    velocity 0.900000
+    randvel 0.500000
+    fps 0
+    random 0
+    inherit 0
+    inherit_local 0
+    inherit_part 0
+    inheritvel 0
+    xsize 1000.000000
+    ysize 1000.000000
+    bounce 0
+    bounce_co 0.200000
+    loop 0
+    update Fountain
+    render Normal
+    Blend Normal
+    deadspace 0.000000
+    blurlength 10.000000
+    lightningDelay 0.0
+    lightningRadius 0.000000
+    lightningScale 0.000000
+    blastRadius 0.000000
+    blastLength 0.000000
+    twosidedtex 0
+    p2p 1
+    p2p_sel 0
+    p2p_type Gravity
+    p2p_bezier2 0.000000
+    p2p_bezier3 0.000000
+    combinetime 0.000000
+    drag 1.000000
+    grav 2.000000
+    threshold 0.000000
+    texture NULL
+    xgrid 0
+    ygrid 0
+    affectedByWind 0
+    m_isTinted 0
+    Splat 0
+endnode
+node reference REFm
+  parent OmenEmitter01
+  position 0.000000 0.000000 0.627738
+  orientation 0.000000 0.000000 0.000000 0.000000
+  refModel fx_ref
+endnode
+node emitter OmenEmitter02
+  parent vff_d_trap_012
+  position 0.000000 0.000000 1.246100
+  orientation 0.000000 0.000000 0.000000 0.000000
+    colorStart 0.1 0.1 0.1
+    colorEnd 0 0 0
+    alphaStart 1.000000
+    alphaEnd 1.000000
+    sizeStart 2.000000
+    sizeEnd 0.500000
+    sizeStart_y 0.000000
+    sizeEnd_y 0.000000
+    frameStart 0
+    frameEnd 3
+    birthrate 1
+    spawnType 0
+    lifeExp 0.000000
+    mass 0.000000
+    spread 0.000000
+    particleRot 0.000000
+    velocity 0.000000
+    randvel 0.000000
+    fps 30
+    random 1
+    inherit 0
+    inherit_local 0
+    inherit_part 0
+    inheritvel 0
+    xsize 0.000000
+    ysize 0.000000
+    bounce 0
+    bounce_co 0.000000
+    loop 0
+    update Single
+    render Normal
+    Blend Lighten
+    deadspace 0.000000
+    blurlength 10.000000
+    lightningDelay 0.0
+    lightningRadius 0.000000
+    lightningScale 0.000000
+    blastRadius 0.000000
+    blastLength 0.000000
+    twosidedtex 0
+    p2p 0
+    p2p_sel 1
+    p2p_type Bezier
+    p2p_bezier2 0.000000
+    p2p_bezier3 0.000000
+    combinetime 0.000000
+    drag 0.000000
+    grav 0.000000
+    threshold 0.000000
+    texture fxpa_StarBnW
+    xgrid 2
+    ygrid 2
+    affectedByWind 0
+    m_isTinted 0
+    Splat 0
+endnode
+node light AuroraLight01
+  parent vff_d_trap_012
+  position 0.000000 0.000000 1.700000
+  orientation 0.577350 -0.577350 -0.577350 -4.188790
+#this is fake data - real one has to be determined
+color 1.0 1.0 1.0
+radius 10.0
+ambientonly 1
+isDynamic 0
+affectDynamic 1
+lightpriority 2
+shadow 0
+endnode
+endmodelgeom vff_d_trap_012
+
+
+newanim impact vff_d_trap_012
+length 4.300000
+transtime 0.000000
+animroot vff_d_trap_012
+node dummy vff_d_trap_012
+  parent NULL
+endnode
+node emitter Part1
+  parent vff_d_trap_012
+  alphaEndkey
+    0.000000  0.000000
+    0.466667  0.200000
+    0.500000  0.200000
+    2.933330  0.200000
+    2.966670  0.200000
+    3.466670  0.000000
+  endlist
+  alphaStartkey
+    0.000000  0.000000
+    0.466667  0.200000
+    0.500000  0.200000
+    2.933330  0.200000
+    2.966670  0.200000
+    3.466670  0.000000
+  endlist
+endnode
+node emitter Implosion
+  parent vff_d_trap_012
+  alphaEndkey
+    3.300000  0.000000
+    3.333330  0.000000
+    3.966670  0.500000
+  endlist
+  alphaStartkey
+    0.000000  0.000000
+    0.433333  1.000000
+    0.466667  1.000000
+  endlist
+  sizeEndkey
+    0.000000  4.000000
+    2.800000  4.000000
+    2.833330  4.000000
+    3.300000  4.000000
+    3.700000  0.000000
+  endlist
+  birthratekey
+    2.800000  30.000000
+    2.833330  30.000000
+    3.700000  0.000000
+  endlist
+  lifeExpkey
+    2.800000  1.000000
+    2.833330  1.000000
+    3.300000  0.800000
+    3.700000  0.500000
+  endlist
+endnode
+node emitter part2
+  parent vff_d_trap_012
+  alphaEndkey
+    0.000000  0.000000
+    0.433333  0.150000
+    0.466667  0.150000
+    2.900000  0.150000
+    2.933330  0.150000
+    3.366670  0.000000
+  endlist
+  alphaStartkey
+    0.000000  0.000000
+    0.433333  0.150000
+    0.466667  0.150000
+    2.900000  0.150000
+    2.933330  0.150000
+    3.366670  0.000000
+  endlist
+endnode
+node emitter part03
+  parent vff_d_trap_012
+  alphaEndkey
+    0.000000  0.000000
+    0.333333  1.000000
+    0.366667  1.000000
+    3.733330  1.000000
+    3.766670  1.000000
+    4.300000  0.000000
+  endlist
+  alphaStartkey
+    0.000000  0.000000
+    0.333333  1.000000
+    0.366667  1.000000
+    3.733330  1.000000
+    3.766670  1.000000
+    4.300000  0.000000
+  endlist
+endnode
+node emitter OmenEmitter01
+  parent vff_d_trap_012
+  orientationkey
+    0.000000  0.000000 0.000000 0.000000 0.000000
+    0.200000  0.000000 0.000000 -1.000000 -1.570800
+    0.666667  0.000000 0.000000 -1.000000 -3.141590
+    1.033330  0.000000 0.000000 -1.000000 -4.712390
+    1.366670  0.000000 0.000000 0.000000 0.000000
+    1.700000  0.000000 0.000000 1.000000 -4.712390
+    2.000000  0.000000 0.000000 1.000000 -3.141590
+    2.300000  0.000000 0.000000 1.000000 -1.570800
+    2.600000  0.000000 0.000000 0.000000 0.000000
+    2.866670  0.000000 0.000000 -1.000000 -1.570800
+    3.133330  0.000000 0.000000 -1.000000 -3.141590
+    3.633330  0.000000 0.000000 0.000000 0.000000
+    3.833330  0.000000 0.000000 -1.000000 -4.712390
+  endlist
+  birthratekey
+    0.000000  0.000000
+    0.200000  0.000000
+    0.233333  15.000000
+    0.266667  15.000000
+    2.866670  17.000000
+    2.900000  17.000000
+    3.833330  0.000000
+  endlist
+endnode
+node dummy REFm
+  parent OmenEmitter01
+endnode
+node emitter OmenEmitter02
+  parent vff_d_trap_012
+  positionkey
+    0.000000  0.000000 0.000000 1.246100
+    3.666670  0.000000 0.000000 1.246500
+    3.900000  0.000000 0.000000 1.819410
+    4.300000  0.000000 0.000000 1.245230
+  endlist
+  sizeStartkey
+    0.000000  2.000000
+    0.033333  2.000000
+    3.666670  2.000000
+    3.700000  2.000000
+    3.900000  8.000000
+    4.300000  0.000000
+  endlist
+  sizeEndkey
+    0.000000  0.500000
+    0.033333  0.500000
+    3.666670  0.500000
+    3.700000  0.500000
+    3.900000  5.000000
+    4.300000  0.000000
+  endlist
+endnode
+node light AuroraLight01
+  parent vff_d_trap_012
+  colorkey
+    0.000000  0.921570 0.721569 0.113726
+    0.033333  0.921570 0.721569 0.113726
+    0.566667  0.952942 0.905883 0.388235
+    1.200000  0.921570 0.721569 0.113726
+    1.800000  0.976471 0.843137 0.113726
+    2.433330  0.921570 0.721569 0.113726
+    2.700000  0.984315 0.839216 0.396079
+    2.933330  0.921570 0.721569 0.113726
+    3.966670  0.000001 0.000000 0.000000
+  endlist
+endnode
+doneanim impact vff_d_trap_012
+donemodel vff_d_trap_012

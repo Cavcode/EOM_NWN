@@ -1,0 +1,221 @@
+# Exported from NWmax 0.7 at 6/8/2004 11:12:31 PM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: smp_holysmite
+filedependancy Unknown
+newmodel smp_holysmite
+setsupermodel smp_holysmite NULL
+classification Effect
+#NWmax GEOM  ASCII
+beginmodelgeom smp_holysmite
+node dummy smp_holysmite
+  parent NULL
+endnode
+node light AuroraLight01
+  parent smp_holysmite
+  position 0.0 -1.3162e-007 2.95668
+  orientation -1.0 0.0 0.0 -1.5708
+  wirecolor 0.109804 0.109804 0.694118 
+  radius 5.0
+  multiplier 1.0
+  color 0.415686 0.717647 0.929412 
+  ambientonly 1
+  nDynamicType 1
+  affectDynamic 1
+  shadow 1
+  lightpriority 1
+  fadingLight 0
+endnode
+node emitter Holy_Beam
+  parent smp_holysmite
+  position 0.0 0.0 10.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.603922 0.603922 0.894118 
+  update_sel 1
+  update Fountain
+  render_sel 7
+  render Motion_Blur
+  blend_sel 3
+  Blend Lighten
+  spawnType 0
+  xSize 50.0
+  ySize 50.0
+  inherit 0
+  inherit_local 1
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.3
+  colorStart 0.207843 1.0 1.0 
+  colorEnd 0.145098 0.827451 1.0 
+  alphaStart 0.9
+  alphaEnd 0.9
+  sizeStart 0.1
+  sizeEnd 0.1
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 200
+  lifeExp 3.0
+  mass 4.0
+  spread 0.0
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 50.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_strk_b
+  twosidedtex 0
+  xgrid 1
+  ygrid 1
+  fps 1
+  frameStart 0
+  frameEnd 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Gravity
+  p2p_sel 2
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 4.0
+  drag 0.0
+endnode
+node emitter AuroraEmitter01
+  parent smp_holysmite
+  position 0.0 0.0 0.0377351
+  orientation 0.0 0.0 1.0 -7.58643e-007
+  wirecolor 0.419608 0.0313726 0.529412 
+  update_sel 3
+  update Explosion
+  render_sel 1
+  render Normal
+  blend_sel 3
+  Blend Lighten
+  spawnType 1
+  xSize 0.0
+  ySize 0.0
+  inherit 0
+  inherit_local 1
+  inheritvel 0
+  inherit_part 0
+  renderorder 2
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 1.0 1.0 
+  colorEnd 0.0 0.827451 0.901961 
+  alphaStart 1.0
+  alphaEnd 0.0
+  sizeStart 0.5
+  sizeEnd 0.5
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 400
+  lifeExp 2.0
+  mass -0.5
+  spread 6.28319
+  particleRot 0.0
+  velocity 10.0
+  randvel 1.0
+  bounce_co 0.8
+  blurlength 10.0
+  loop 0
+  bounce 1
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_flare
+  twosidedtex 0
+  xgrid 1
+  ygrid 1
+  fps 1
+  frameStart 0
+  frameEnd 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 3.0
+  blastLength 2.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+endmodelgeom smp_holysmite
+#NWmax ANIM ASCII
+newanim impact smp_holysmite
+  length 3.66667
+  transtime 0.25
+  animroot smp_holysmite
+  event 1.83333 detonate
+    node dummy smp_holysmite
+        parent NULL
+        positionkey
+            0.0 0.0 0.0 0.0
+            3.66667 0.0 0.0 0.0
+        endlist
+        orientationkey
+            0.0 0.0 0.0 0.0 0.0
+            3.66667 0.0 0.0 0.0 0.0
+        endlist
+    endnode
+    node light AuroraLight01
+        parent smp_holysmite
+        positionkey
+            0.0 0.0 -1.31621e-007 2.95668
+            3.66667 0.0 -1.31621e-007 2.95668
+        endlist
+        orientationkey
+            0.0 -1.0 0.0 0.0 -1.5708
+            3.66667 -1.0 0.0 0.0 -1.5708
+        endlist
+    endnode
+    node emitter Holy_Beam
+        parent smp_holysmite
+        positionkey
+            0.0 0.0 0.0 10.0
+            3.66667 0.0 0.0 10.0
+        endlist
+        orientationkey
+            0.0 -1.0 0.0 0.0 -3.14159
+            3.66667 -1.0 0.0 0.0 -3.14159
+        endlist
+        birthratekey
+            0.0 200 
+            1.0 199 
+            1.26667 0 
+        endlist
+    endnode
+    node emitter AuroraEmitter01
+        parent smp_holysmite
+        positionkey
+            0.0 0.0 0.0 0.0377351
+            3.66667 0.0 0.0 0.0377351
+        endlist
+        orientationkey
+            0.0 -1.0 3.79322e-007 0.0 -3.14159
+            3.66667 -1.0 3.79322e-007 0.0 -3.14159
+        endlist
+    endnode
+doneanim impact smp_holysmite
+donemodel smp_holysmite

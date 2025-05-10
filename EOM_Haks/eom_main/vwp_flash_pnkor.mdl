@@ -1,0 +1,89 @@
+#MAXMODEL ASCII
+# model: VWP_flash_pnkor
+filedependancy VWP_flash_pnkor.max
+newmodel VWP_flash_pnkor
+setsupermodel VWP_flash_pnkor NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom VWP_flash_pnkor
+node dummy VWP_flash_pnkor
+  parent NULL
+endnode
+node emitter spark
+  parent VWP_flash_pnkor
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 1
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Motion_Blur
+  blend Lighten
+  texture spark
+  xgrid 0
+  ygrid 0
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 0
+  orientation 0 0 0 0
+  colorStart 1 1 0.882353
+  colorEnd 0.780392 0.203922 0
+  alphaStart 1
+  alphaEnd 0.02
+  sizeStart 0.02
+  sizeEnd 0.01
+  frameStart 0
+  frameEnd 0
+  birthrate 10
+  lifeExp 3
+  mass 1.5
+  spread 6.28319
+  particleRot 0
+  velocity 3
+  randvel 1
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0.3
+  blurlength 0.0700007
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  detonate
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom VWP_flash_pnkor
+
+#MAXANIM ASCII
+newanim impact VWP_flash_pnkor
+  length 0.966667
+  transtime 0
+  animroot VWP_flash_pnkor
+  node dummy VWP_flash_pnkor
+    parent NULL
+  endnode
+  node emitter spark
+    parent VWP_flash_pnkor
+    detonatekey 1
+  
+  endnode
+doneanim impact VWP_flash_pnkor
+
+donemodel VWP_flash_pnkor

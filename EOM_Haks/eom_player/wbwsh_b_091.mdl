@@ -1,0 +1,24 @@
+# Exported from NWmax 0.8 b60 at 4/1/2014 12:03:13 PM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: wbwsh_b_091
+#local file: C:\gmax\Scenes\Weapons\Orcish Weapons10.gmax
+filedependancy Orcish Weapons10.gmax
+newmodel wbwsh_b_091
+setsupermodel wbwsh_b_091 NULL
+classification Character
+setanimationscale 1.0
+#NWmax GEOM  ASCII
+beginmodelgeom wbwsh_b_091
+node dummy wbwsh_b_091
+  parent NULL
+endnode
+node dummy Box05
+  parent wbwsh_b_091
+  position 0.0 0.0 0.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.6 0.894118 0.6 
+endnode
+endmodelgeom wbwsh_b_091
+donemodel wbwsh_b_091

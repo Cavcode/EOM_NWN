@@ -1,0 +1,90 @@
+#MAXMODEL ASCII
+# model: wspka_t_033
+filedependancy wspka_t_033 NULL.mlk
+newmodel wspka_t_033
+setsupermodel wspka_t_033 NULL
+classification Character
+setanimationscale 0
+
+#MAXGEOM ASCII
+beginmodelgeom wspka_t_033
+node dummy wspka_t_033
+  parent NULL
+endnode
+node dummy rootdummy
+  parent wspka_t_033
+  position 0 0 0
+  orientation 0 0 0 0
+  wirecolor 1 1 1
+endnode
+node trimesh t
+  parent rootdummy
+  position 0 0 0
+  orientation 1 0 0 0
+  wirecolor 1 1 1
+  ambient 0.000000 0.619608 0.917647 1.000000
+  diffuse 0.584314 0.823529 1.000000 1.000000
+  specular 0.000000 0.000000 0.000000 1.000000
+  shininess 0.000000
+    bitmap 
+    verts 10
+     0.001307 0.471365 0.044126 
+     0.001307 0.087518 0.044126 
+     0.000660 0.460011 0.000783 
+     -0.000007 0.087518 -0.043861 
+     0.000175 0.428133 -0.031725 
+     -0.000007 0.384464 -0.043861 
+     -0.000668 0.460011 0.000783 
+     -0.001315 0.087518 0.044126 
+     -0.001315 0.471365 0.044126 
+     -0.000182 0.428133 -0.031725 
+    faces 15
+     0 1 2  1  0 1 2  0
+     2 1 3  1  2 1 3  0
+     3 4 2  1  3 4 2  0
+     4 3 5  1  4 3 5  0
+     6 7 8  1  6 7 8  0
+     3 7 6  1  3 7 6  0
+     6 9 3  1  6 9 3  0
+     5 3 9  1  5 3 9  0
+     7 1 8  1  7 1 8  0
+     8 1 0  1  8 1 0  0
+     0 2 6  1  0 2 6  0
+     6 8 0  1  6 8 0  0
+     2 4 9  1  2 4 9  0
+     9 6 2  1  9 6 2  0
+     4 5 9  1  4 5 9  0
+    tverts 10
+     0.000000 0.000000 0.0 
+     0.000000 0.000000 0.0 
+     0.000000 0.000000 0.0 
+     0.000000 0.000000 0.0 
+     0.000000 0.000000 0.0 
+     0.000000 0.000000 0.0 
+     0.000000 0.000000 0.0 
+     0.000000 0.000000 0.0 
+     0.000000 0.000000 0.0 
+     0.000000 0.000000 0.0 
+endnode
+node dummy impact
+  parent t
+  position 0 0 0
+  orientation 0 0 0 0
+  wirecolor 1 1 1
+endnode
+node dummy handconjure
+  parent wspka_t_033
+  position 0 0 0
+  orientation 0 0 0 0
+  wirecolor 1 1 1
+endnode
+node dummy headconjure
+  parent wspka_t_033
+  position 0 0 0
+  orientation 0 0 0 0
+  wirecolor 1 1 1
+endnode
+endmodelgeom wspka_t_033
+
+donemodel wspka_t_033
+

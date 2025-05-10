@@ -1,0 +1,13 @@
+customshaderVS vslit_sm_nm
+customshaderFS fslit_aniso_nm
+        
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+
+texture1 pmh0_pelvis117_n 
+texture2 null 
+texture3 pmh0_pelvis117_a 
+
+transparency 1
+

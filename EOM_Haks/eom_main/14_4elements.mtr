@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 14_4elements
+texture1 14_4elements_n 
+texture2 14_4elements_s 
+texture3 null 
+texture4 null 

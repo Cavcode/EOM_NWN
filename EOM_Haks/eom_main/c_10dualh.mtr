@@ -1,0 +1,8 @@
+renderhint NormalTangents
+ 
+// Textures 
+texture1 c_10dualh_n
+texture2 c_10dualh_s
+
+transparency 1
+twosided 1

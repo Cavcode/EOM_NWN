@@ -1,0 +1,10 @@
+newmodel pfa0_legr251
+setsupermodel pfa0_legr251 null
+classification CHARACTER
+setanimationscale 1.0
+beginmodelgeom pfa0_legr251
+node dummy pfa0_legr251
+  parent null
+endnode
+endmodelgeom pfa0_legr251
+donemodel pfa0_legr251

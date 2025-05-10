@@ -1,0 +1,126 @@
+#MAXMODEL ASCII
+# model: vpr_aromagic
+filedependancy vpr_aromagic.max
+newmodel vpr_aromagic
+setsupermodel vpr_aromagic NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vpr_aromagic
+node dummy vpr_aromagic
+  parent NULL
+endnode
+node trimesh Box01
+  parent vpr_aromagic
+  ambient 0 0 0
+  diffuse 0 0 0
+  specular 0 0 0
+  shininess 1
+  shadow 0
+  bitmap fxpa_weapontex
+  verts 17
+      -0.0100000   -0.4000000   -0.0100055
+      -0.0043668    0.4000000   -0.0043723
+       0.0043668    0.4000000   -0.0043723
+       0.0100000   -0.4000000   -0.0100055
+      -0.0100000   -0.4000000    0.0099945
+       0.0100000   -0.4000000    0.0099945
+       0.0043668    0.4000000    0.0043613
+      -0.0043668    0.4000000    0.0043613
+       0.0001690   -0.3144000   -0.0083182
+       0.0001690   -0.4044000   -0.0682359
+       0.0001690   -0.4044000   -0.0082359
+      -0.0079314   -0.3144000   -0.0000877
+      -0.0678491   -0.4044000   -0.0000877
+      -0.0078491   -0.4044000   -0.0000877
+       0.0085877   -0.3144000    0.0085983
+       0.0509559   -0.4044000    0.0509665
+       0.0085295   -0.4044000    0.0085401
+  faces 18
+     0  1  2  1          0         0         0   2
+     2  3  0  1          0         0         0   2
+     4  5  6  1          0         0         0   1
+     6  7  4  1          0         0         0   1
+     0  3  5  2          0         0         0   5
+     5  4  0  2          0         0         0   5
+     3  2  6  4          0         0         0   4
+     6  5  3  4          0         0         0   4
+     2  1  7  2          0         0         0   6
+     7  6  2  2          0         0         0   6
+     1  0  4  4          0         0         0   3
+     4  7  1  4          0         0         0   3
+     8  9 10  1          0         0         0   1
+     9  8 10  2          0         0         0   1
+    11 12 13  1          0         0         0   1
+    12 11 13  2          0         0         0   1
+    14 15 16  1          0         0         0   1
+    15 14 16  2          0         0         0   1
+  position 0 0 0
+  orientation 0 1 0 -0.785398
+  alpha 0.8
+  scale 1
+  selfillumcolor 0.0901961 0.0901961 0.0901961
+endnode
+node emitter OmenEmitter01
+  parent Box01
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0.419786 0
+  orientation -0.862856 -0.357407 0.357407 -1.71777
+  colorStart 1 1 0
+  colorEnd 1 1 0
+  alphaStart 1
+  alphaEnd 0.3
+  sizeStart 0.1
+  sizeEnd 0.1
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 150
+  lifeExp 0.7
+  mass 0
+  spread 0.523599
+  particleRot 0
+  velocity 1
+  randvel 0.2
+  fps 0
+  xsize 5
+  ysize 5
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom vpr_aromagic
+
+donemodel vpr_aromagic

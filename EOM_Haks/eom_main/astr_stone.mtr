@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 astr_stone 
+texture1 astr_stone_n 
+texture2 astr_stone_s 
+texture3 null 
+texture4 null 

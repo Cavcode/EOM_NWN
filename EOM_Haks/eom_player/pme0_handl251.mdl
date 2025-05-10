@@ -1,0 +1,10 @@
+newmodel pme0_handl251
+setsupermodel pme0_handl251 null
+classification CHARACTER
+setanimationscale 1.0
+beginmodelgeom pme0_handl251
+node dummy pme0_handl251
+  parent null
+endnode
+endmodelgeom pme0_handl251
+donemodel pme0_handl251

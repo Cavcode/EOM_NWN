@@ -1,0 +1,354 @@
+#MAXMODEL ASCII
+# model: vim_cyan_litng
+filedependancy vim_cyan_litng.max
+newmodel vim_cyan_litng
+setsupermodel vim_cyan_litng NULL
+classification effect
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vim_cyan_litng
+node dummy vim_cyan_litng
+  parent NULL
+  #part-number 0
+endnode
+node emitter lightning
+  parent vim_cyan_litng
+  #part-number 1
+  p2p 1
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  splat 0
+  inherit_part 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Linked
+  blend Lighten
+  texture fxpa_lightning2
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 -8.74409011e-007 20.0041008
+  orientation 0 0 0 0
+  colorStart 0 .8 .8
+  colorEnd 0 .8 .8
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 4
+  sizeEnd 4
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 12
+  lifeExp 0.100000001
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0.100000001
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node reference OmenRef01
+  parent lightning
+  #part-number 2
+  refModel fx_ref
+  reattachable 0
+  position -5.93421021e-007 -2.09283002e-007 -19.3013
+  orientation 0 0 1 -1.57079995
+endnode
+node emitter Grndflare
+  parent vim_cyan_litng
+  #part-number 3
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  splat 0
+  inherit_part 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Billboard_to_World_Z
+  blend Lighten
+  texture fxpa_Dot01
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 0.0268974993
+  orientation 0 0 0 0
+  colorStart 0.2 0.882 .882
+  colorEnd 0.2 0.882 .882
+  alphaStart 0.5
+  alphaEnd 0.5
+  sizeStart 10
+  sizeEnd 10
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp -1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter sparks
+  parent vim_cyan_litng
+  #part-number 4
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  splat 0
+  inherit_part 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.000282946014 0.00365665997 -0.0404045992
+  orientation 0 0 0 0
+  colorStart 0 .8 .8
+  colorEnd 0.2 0.6 .6
+  alphaStart 0.800000012
+  alphaEnd 0
+  sizeStart 0.5
+  sizeEnd 4
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 0
+  lifeExp 0.5
+  mass 0
+  spread 1.57079995
+  particleRot 0
+  velocity 3
+  randvel 0
+  fps 0
+  xsize 60
+  ysize 60
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node light AuroraLight02
+  parent vim_cyan_litng
+  #part-number 5
+  ambientonly 0
+  shadow 1
+  isdynamic 1
+  affectdynamic 1
+  lightpriority 3
+  fadingLight 0
+  flareradius 20
+  texturenames 4
+    fxpa_lensflare
+    fxpa_lensring
+    fxpa_lensring
+    fxpa_lensring
+  flaresizes 4
+    4
+    2
+    6
+    10
+  flarepositions 4
+    1
+    0.5
+    0.699999988
+    1.39999998
+  flarecolorshifts 4
+    0 0 0
+    0 0 0
+    0 0 0
+    0 0 0
+  position -0.0115339998 0.00939506013 1.28456998
+  orientation 0.577350259 -0.577350259 -0.577350259 -4.18878984
+  radius 6
+  multiplier 3
+  color 0 0 0
+endnode
+endmodelgeom vim_cyan_litng
+
+#MAXANIM ASCII
+newanim impact vim_cyan_litng
+  length 1.79999995
+  transtime 0
+  animroot vim_cyan_litng
+node dummy vim_cyan_litng
+  parent NULL
+  #part-number 0
+endnode
+node emitter lightning
+  parent vim_cyan_litng
+  #part-number 1
+  birthratekey 3
+    0 12
+    1.56666994 12
+    1.60000002 0
+endnode
+node dummy OmenRef01
+  parent lightning
+  #part-number 2
+endnode
+node emitter Grndflare
+  parent vim_cyan_litng
+  #part-number 3
+  sizeStartkey 5
+    0 10
+    1.46667004 10
+    1.5 10
+    1.60000002 0
+    1.63332999 0
+  sizeEndkey 5
+    0 10
+    1.46667004 10
+    1.5 10
+    1.60000002 0
+    1.63332999 0
+  birthratekey 5
+    0 1
+    1.46667004 1
+    1.5 1
+    1.60000002 0
+    1.63332999 0
+  lifeExpkey 5
+    0 -1
+    1.46667004 -1
+    1.5 -1
+    1.60000002 0
+    1.63332999 0
+endnode
+node emitter sparks
+  parent vim_cyan_litng
+  #part-number 4
+  birthratekey 4
+    0 0
+    0.0333333015 30
+    1.16666996 30
+    1.20000005 0
+endnode
+node light AuroraLight02
+  parent vim_cyan_litng
+  #part-number 5
+  positionkey 1
+    1.43333006 -0.0115339998 0.00939506013 1.28456998
+  colorkey 44
+    0 0 0 0
+    0.100000001 1 1 1
+    0.133332998 0 0 0
+    0.166666999 1 1 1
+    0.200000003 0 0 0
+    0.233333007 1 1 1
+    0.266667008 1 1 1
+    0.300000012 0 0 0
+    0.333332986 1 1 1
+    0.366667002 1 1 1
+    0.400000006 0 0 0
+    0.433333009 1 1 1
+    0.466666996 0 0 0
+    0.5 1 1 1
+    0.533333004 1 1 1
+    0.56666702 0 0 0
+    0.600000024 1 1 1
+    0.633333027 0 0 0
+    0.666666985 1 1 1
+    0.699999988 0 0 0
+    0.733332992 1 1 1
+    0.766667008 0 0 0
+    0.800000012 1 1 1
+    0.833333015 1 1 1
+    0.866666973 0 0 0
+    0.899999976 1 1 1
+    0.93333298 0 0 0
+    0.966666996 1 1 1
+    1 0 0 0
+    1.03332996 1 1 1
+    1.06666994 0 0 0
+    1.10000002 1 1 1
+    1.13332999 1 1 1
+    1.16666996 0 0 0
+    1.20000005 1 1 1
+    1.23333001 0 0 0
+    1.26666999 1 1 1
+    1.29999995 1 1 1
+    1.33333004 0 0 0
+    1.36667001 1 1 1
+    1.39999998 0 0 0
+    1.43333006 1 1 1
+    1.46667004 0 0 0
+    1.79999995 0 0 0
+endnode
+doneanim impact vim_cyan_litng
+
+donemodel vim_cyan_litng

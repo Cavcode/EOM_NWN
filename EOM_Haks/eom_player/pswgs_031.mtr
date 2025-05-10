@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 pswgs_031 
+texture1 pswgs_031_n 
+texture2 pswgs_031_s 
+texture3 null 
+texture4 null 

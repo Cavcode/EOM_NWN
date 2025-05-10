@@ -1,0 +1,10 @@
+newmodel pfe0_bicepl251
+setsupermodel pfe0_bicepl251 null
+classification CHARACTER
+setanimationscale 1.0
+beginmodelgeom pfe0_bicepl251
+node dummy pfe0_bicepl251
+  parent null
+endnode
+endmodelgeom pfe0_bicepl251
+donemodel pfe0_bicepl251

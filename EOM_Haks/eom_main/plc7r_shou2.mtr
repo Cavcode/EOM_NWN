@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 plc7r_shou2 
+texture1 plc7r_shou2_n 
+texture2 plc7r_shou2_s 
+texture3 plc7r_shou2_r 
+texture4 null 

@@ -1,0 +1,11 @@
+customshaderVS vslit_sm_nm
+customshaderFS fslit_aniso_nm
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 helm_105 
+texture1 null 
+texture2 spec_dim
+texture3 helm_105_a
+texture4 null 

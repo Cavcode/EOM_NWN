@@ -1,0 +1,6 @@
+ renderhint NormalAndSpecMapped
+ texture0 tcc21_cave16_d
+ texture1 tcc21_cave16_n
+ texture2 tcc21_cave16_s
+ texture3 tcc21_cave16_r
+ texture4 tcc21_cave16_h

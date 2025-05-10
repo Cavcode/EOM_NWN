@@ -1,0 +1,225 @@
+#MAXMODEL ASCII
+# model: vff_leafburst
+filedependancy vff_leafburst.max
+newmodel vff_leafburst
+setsupermodel vff_leafburst NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vff_leafburst
+node dummy vff_leafburst
+  parent NULL
+endnode
+node emitter UPcloud
+  parent vff_leafburst
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 1
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_leaf
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 0.0579344
+  orientation 0 0 0 0
+  colorStart 0.411765 0.372549 0.0980392
+  colorEnd 0.356863 0.360784 0.0980392
+  alphaStart 1
+  alphaEnd 0
+  sizeStart 0.2
+  sizeEnd 2
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 60
+  lifeExp 3
+  mass 0.01
+  spread 2.0944
+  particleRot 1
+  velocity 3
+  randvel 1.4
+  fps 15
+  xsize 20
+  ysize 30
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter shater
+  parent vff_leafburst
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 7
+  spawntype 0
+  update Explosion
+  render Normal
+  blend Normal
+  texture fxpa_leaf
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.000824805 0.000494197 0.151529
+  orientation 0 1.34514e-07 1 -1.58716
+  colorStart 1 1 1
+  colorStart 1 1 1
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.7
+  sizeEnd 0.5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 5
+  lifeExp 3
+  mass 0.1
+  spread 5.23599
+  particleRot 1.1
+  velocity 2
+  randvel 1.5
+  fps 2
+  xsize 0
+  ysize 0
+  bounce_co 0.3
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter burst
+  parent vff_leafburst
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 1
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_Smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.00389884 0 0.214821
+  orientation 0 0 0 0
+  colorStart 0.217647 0.305882 0
+  colorEnd 0.300392 0.333333 0.296078
+  alphaStart 0.65
+  alphaEnd 0
+  sizeStart 1
+  sizeEnd 2
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 7
+  lifeExp 1.2
+  mass 0
+  spread 2.0944
+  particleRot 0.1
+  velocity 0.5
+  randvel 0.2
+  fps 16
+  xsize 20
+  ysize 20
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom vff_leafburst
+
+#MAXANIM ASCII
+newanim impact vff_leafburst
+  length 2.96667
+  transtime 0.25
+  animroot vff_leafburst
+  event 0.133333 detonate
+  node dummy vff_leafburst
+    parent NULL
+  endnode
+  node emitter UPcloud
+    parent vff_leafburst
+    birthratekey 4
+         0.0000000   60.0000000
+         0.3000000   60.0000000
+         0.3333330   60.0000000
+         0.3666670    0.0000000
+  endnode
+  node emitter shater
+    parent vff_leafburst
+  endnode
+  node emitter burst
+    parent vff_leafburst
+    birthratekey 4
+         0.0000000    7.0000000
+         0.3333330    7.0000000
+         0.3666670    7.0000000
+         0.4000000  -23.0000000
+  endnode
+doneanim impact vff_leafburst
+
+donemodel vff_leafburst

@@ -1,0 +1,1003 @@
+# Exported from NWmax 0.8 b60 at 2/3/2013 1:22:22 PM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: vca_illus
+#local file: C:\gmax\Scenes\Visual Effects\Infinity Casting FX\illusion05.gmax
+filedependancy illusion05.gmax
+newmodel vca_illus
+setsupermodel vca_illus NULL
+classification Effect
+#NWmax GEOM  ASCII
+beginmodelgeom vca_illus
+node dummy vca_illus
+  parent NULL
+endnode
+node light AuroraDLight01
+  parent vca_illus
+  position 0.0 0.0 0.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.101961 0.694118 0.580392 
+  radius 2.0
+  multiplier 5.0
+  color 1.0 0.501961 1.0 
+  ambientonly 1
+  nDynamicType 1
+  affectDynamic 1
+  shadow 1
+  lightpriority 5
+  fadingLight 1
+endnode
+node emitter Center01
+  parent vca_illus
+  position 0.0 0.0 0.0
+  orientation -1.0 0.0 0.0 -1.5708
+  wirecolor 0.890196 0.596078 0.596078 
+  update_sel 1
+  update Fountain
+  render_sel 1
+  render Normal
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 0.0
+  ySize 0.0
+  inherit 0
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 1.0 1.0 
+  colorEnd 1.0 0.0 1.0 
+  alphaStart 0.25
+  alphaEnd 0.25
+  sizeStart 0.0
+  sizeEnd 1.0
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 10
+  lifeExp 0.75
+  mass 0.0
+  spread 0.0
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 0.1
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_flare
+  twosidedtex 0
+  xgrid 1
+  ygrid 1
+  fps 0
+  framestart 0
+  frameend 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node dummy Rotator01
+  parent vca_illus
+  position 0.0 0.0 0.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.109804 0.584314 0.694118 
+endnode
+node dummy Spray01
+  parent Rotator01
+  position 0.0 0.0 0.5
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.109804 0.584314 0.694118 
+endnode
+node emitter Mist01
+  parent Spray01
+  position 0.0 0.0 0.0
+  orientation -0.970665 -0.240435 0.0 -6.28319
+  wirecolor 0.890196 0.596078 0.596078 
+  update_sel 1
+  update Fountain
+  render_sel 1
+  render Normal
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 0.0
+  ySize 0.0
+  inherit 0
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 0.501961 1.0 
+  colorEnd 0.501961 0.0 1.0 
+  alphaStart 0.1
+  alphaEnd 0.0
+  sizeStart 0.5
+  sizeEnd 0.0
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 80
+  lifeExp 0.75
+  mass 0.0
+  spread 0.261799
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 0.1
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_flare
+  twosidedtex 0
+  xgrid 1
+  ygrid 1
+  fps 0
+  framestart 0
+  frameend 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node dummy Spray02
+  parent Rotator01
+  position 0.0 0.0 -0.5
+  orientation 0.0 -1.0 0.0 -3.14159
+  wirecolor 0.109804 0.584314 0.694118 
+endnode
+node emitter Mist02
+  parent Spray02
+  position 0.0 0.0 0.0
+  orientation 0.970665 0.240435 0.0 -3.50098e-007
+  wirecolor 0.890196 0.596078 0.596078 
+  update_sel 1
+  update Fountain
+  render_sel 1
+  render Normal
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 0.0
+  ySize 0.0
+  inherit 0
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 0.501961 1.0 
+  colorEnd 0.501961 0.0 1.0 
+  alphaStart 0.1
+  alphaEnd 0.0
+  sizeStart 0.5
+  sizeEnd 0.0
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 80
+  lifeExp 0.75
+  mass 0.0
+  spread 0.261799
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 0.1
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_flare
+  twosidedtex 0
+  xgrid 1
+  ygrid 1
+  fps 0
+  framestart 0
+  frameend 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node emitter Proj01
+  parent vca_illus
+  position 0.0 0.0 0.0
+  orientation 0.970665 0.240435 -7.1483e-006 -3.50098e-007
+  wirecolor 0.890196 0.596078 0.596078 
+  update_sel 1
+  update Fountain
+  render_sel 1
+  render Normal
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 0.0
+  ySize 0.0
+  inherit 0
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 0.501961 1.0 
+  colorEnd 0.501961 0.0 1.0 
+  alphaStart 0.4
+  alphaEnd 0.0
+  sizeStart 0.5
+  sizeEnd 0.0
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 0
+  lifeExp 0.75
+  mass 0.0
+  spread 0.0
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 0.1
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_flare
+  twosidedtex 0
+  xgrid 1
+  ygrid 1
+  fps 0
+  framestart 0
+  frameend 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node emitter Proj02
+  parent vca_illus
+  position 0.0 0.0 0.0
+  orientation 7.92312e-007 1.0 1.28001e-007 -0.523599
+  wirecolor 0.890196 0.596078 0.596078 
+  update_sel 1
+  update Fountain
+  render_sel 1
+  render Normal
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 0.0
+  ySize 0.0
+  inherit 0
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 0.501961 1.0 
+  colorEnd 0.501961 0.0 1.0 
+  alphaStart 0.4
+  alphaEnd 0.0
+  sizeStart 0.5
+  sizeEnd 0.0
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 0
+  lifeExp 0.75
+  mass 0.0
+  spread 0.0
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 0.1
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_flare
+  twosidedtex 0
+  xgrid 1
+  ygrid 1
+  fps 0
+  framestart 0
+  frameend 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node emitter Proj03
+  parent vca_illus
+  position 0.0 0.0 0.0
+  orientation 2.46046e-007 1.0 1.7015e-007 -1.0472
+  wirecolor 0.890196 0.596078 0.596078 
+  update_sel 1
+  update Fountain
+  render_sel 1
+  render Normal
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 0.0
+  ySize 0.0
+  inherit 0
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 0.501961 1.0 
+  colorEnd 0.501961 0.0 1.0 
+  alphaStart 0.4
+  alphaEnd 0.0
+  sizeStart 0.5
+  sizeEnd 0.0
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 0
+  lifeExp 0.75
+  mass 0.0
+  spread 0.0
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 0.1
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_flare
+  twosidedtex 0
+  xgrid 1
+  ygrid 1
+  fps 0
+  framestart 0
+  frameend 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node emitter Proj04
+  parent vca_illus
+  position 0.0 0.0 0.0
+  orientation 1.94487e-007 1.0 1.94484e-007 -1.5708
+  wirecolor 0.890196 0.596078 0.596078 
+  update_sel 1
+  update Fountain
+  render_sel 1
+  render Normal
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 0.0
+  ySize 0.0
+  inherit 0
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 0.501961 1.0 
+  colorEnd 0.501961 0.0 1.0 
+  alphaStart 0.4
+  alphaEnd 0.0
+  sizeStart 0.5
+  sizeEnd 0.0
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 0
+  lifeExp 0.75
+  mass 0.0
+  spread 0.0
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 0.1
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_flare
+  twosidedtex 0
+  xgrid 1
+  ygrid 1
+  fps 0
+  framestart 0
+  frameend 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node emitter Proj06
+  parent vca_illus
+  position 0.0 0.0 0.0
+  orientation 1.94484e-007 -1.0 -1.94487e-007 -1.5708
+  wirecolor 0.890196 0.596078 0.596078 
+  update_sel 1
+  update Fountain
+  render_sel 1
+  render Normal
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 0.0
+  ySize 0.0
+  inherit 0
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 0.501961 1.0 
+  colorEnd 0.501961 0.0 1.0 
+  alphaStart 0.4
+  alphaEnd 0.0
+  sizeStart 0.5
+  sizeEnd 0.0
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 0
+  lifeExp 0.75
+  mass 0.0
+  spread 0.0
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 0.1
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_flare
+  twosidedtex 0
+  xgrid 1
+  ygrid 1
+  fps 0
+  framestart 0
+  frameend 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node emitter Proj05
+  parent vca_illus
+  position 0.0 0.0 0.0
+  orientation 0.0 1.0 1.42055e-007 -4.18879
+  wirecolor 0.890196 0.596078 0.596078 
+  update_sel 1
+  update Fountain
+  render_sel 1
+  render Normal
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 0.0
+  ySize 0.0
+  inherit 0
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 0.501961 1.0 
+  colorEnd 0.501961 0.0 1.0 
+  alphaStart 0.4
+  alphaEnd 0.0
+  sizeStart 0.5
+  sizeEnd 0.0
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 0
+  lifeExp 0.75
+  mass 0.0
+  spread 0.0
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 0.1
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_flare
+  twosidedtex 0
+  xgrid 1
+  ygrid 1
+  fps 0
+  framestart 0
+  frameend 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node emitter Proj07
+  parent vca_illus
+  position 0.0 0.0 0.0
+  orientation 0.0 1.0 2.12299e-007 -3.66519
+  wirecolor 0.890196 0.596078 0.596078 
+  update_sel 1
+  update Fountain
+  render_sel 1
+  render Normal
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 0.0
+  ySize 0.0
+  inherit 0
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 0.501961 1.0 
+  colorEnd 0.501961 0.0 1.0 
+  alphaStart 0.4
+  alphaEnd 0.0
+  sizeStart 0.5
+  sizeEnd 0.0
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 0
+  lifeExp 0.75
+  mass 0.0
+  spread 0.0
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 0.1
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_flare
+  twosidedtex 0
+  xgrid 1
+  ygrid 1
+  fps 0
+  framestart 0
+  frameend 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node emitter Proj08
+  parent vca_illus
+  position 0.0 0.0 0.0
+  orientation 0.0 1.0 1.70152e-007 -3.14159
+  wirecolor 0.890196 0.596078 0.596078 
+  update_sel 1
+  update Fountain
+  render_sel 1
+  render Normal
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 0.0
+  ySize 0.0
+  inherit 0
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 0.501961 1.0 
+  colorEnd 0.501961 0.0 1.0 
+  alphaStart 0.4
+  alphaEnd 0.0
+  sizeStart 0.5
+  sizeEnd 0.0
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 0
+  lifeExp 0.75
+  mass 0.0
+  spread 0.0
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 0.1
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_flare
+  twosidedtex 0
+  xgrid 1
+  ygrid 1
+  fps 0
+  framestart 0
+  frameend 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+endmodelgeom vca_illus
+#NWmax ANIM ASCII
+newanim default vca_illus
+  length 4.66667
+  transtime 0.25
+  animroot vca_illus
+    node dummy vca_illus
+        parent NULL
+    endnode
+    node light AuroraDLight01
+        parent vca_illus
+    endnode
+    node emitter Center01
+        parent vca_illus
+        birthratekey
+            0.0 10 
+            3.93333 10 
+            4.0 0 
+            4.66667 0 
+        endlist
+    endnode
+    node dummy Rotator01
+        parent vca_illus
+        orientationkey
+            0.0 0.0 0.0 0.0 0.0
+            0.4 0.0 1.0 0.0 -1.5708
+            0.8 0.0 1.0 0.0 -3.14159
+            1.2 0.0 1.0 0.0 -4.71239
+            1.6 0.0 1.0 0.0 -3.14159
+            2.0 0.0 1.0 0.0 -1.5708
+            2.4 0.0 1.0 0.0 -3.14159
+            4.0 0.0 1.0 0.0 -3.14159
+            4.66667 0.0 1.0 0.0 -3.14159
+        endlist
+    endnode
+    node dummy Spray01
+        parent Rotator01
+        positionkey
+            0.0 0.0 0.0 0.5
+            2.4 0.0 0.0 0.0
+            4.0 0.0 0.0 0.0
+            4.66667 0.0 0.0 0.0
+        endlist
+    endnode
+    node emitter Mist01
+        parent Spray01
+        birthratekey
+            0.0 160 
+            2.33333 160 
+            2.4 0 
+        endlist
+    endnode
+    node dummy Spray02
+        parent Rotator01
+        positionkey
+            0.0 0.0 0.0 -0.5
+            2.4 0.0 0.0 0.0
+            4.0 0.0 0.0 0.0
+            4.66667 0.0 0.0 0.0
+        endlist
+    endnode
+    node emitter Mist02
+        parent Spray02
+        birthratekey
+            0.0 160 
+            2.33333 160 
+            2.4 0 
+        endlist
+    endnode
+    node emitter Proj01
+        parent vca_illus
+        positionkey
+            0.0 0.0 0.0 0.0
+            2.4 0.0 0.0 0.0
+            4.0 0.0 0.0 1.0
+            4.66667 0.0 0.0 1.0
+        endlist
+        birthratekey
+            0.0 0 
+            2.4 0 
+            2.46667 40 
+            3.2 40 
+            4.0 0 
+            4.66667 0 
+        endlist
+    endnode
+    node emitter Proj02
+        parent vca_illus
+        positionkey
+            0.0 0.0 0.0 0.0
+            2.4 0.0 0.0 0.0
+            4.0 -0.5 0.0 0.866025
+            4.66667 -0.5 0.0 0.866025
+        endlist
+        birthratekey
+            0.0 0 
+            2.4 0 
+            2.46667 40 
+            3.2 40 
+            4.0 0 
+            4.66667 0 
+        endlist
+    endnode
+    node emitter Proj03
+        parent vca_illus
+        positionkey
+            0.0 0.0 0.0 0.0
+            2.4 0.0 0.0 0.0
+            4.0 -0.866025 0.0 0.5
+            4.66667 -0.866025 0.0 0.5
+        endlist
+        birthratekey
+            0.0 0 
+            2.4 0 
+            2.46667 40 
+            3.2 40 
+            4.0 0 
+            4.66667 0 
+        endlist
+    endnode
+    node emitter Proj04
+        parent vca_illus
+        positionkey
+            0.0 0.0 0.0 0.0
+            2.4 0.0 0.0 0.0
+            4.0 -1.0 0.0 0.0
+            4.66667 -1.0 0.0 0.0
+        endlist
+        birthratekey
+            0.0 0 
+            2.4 0 
+            2.46667 40 
+            3.2 40 
+            4.0 0 
+            4.66667 0 
+        endlist
+    endnode
+    node emitter Proj06
+        parent vca_illus
+        positionkey
+            0.0 0.0 0.0 0.0
+            2.4 0.0 0.0 0.0
+            4.0 1.0 0.0 0.0
+            4.66667 1.0 0.0 0.0
+        endlist
+        birthratekey
+            0.0 0 
+            2.4 0 
+            2.46667 40 
+            3.2 40 
+            4.0 0 
+            4.66667 0 
+        endlist
+    endnode
+    node emitter Proj05
+        parent vca_illus
+        positionkey
+            0.0 0.0 0.0 0.0
+            2.4 0.0 0.0 0.0
+            4.0 0.866025 0.0 -0.5
+            4.66667 0.866025 0.0 -0.5
+        endlist
+        birthratekey
+            0.0 0 
+            2.4 0 
+            2.46667 40 
+            3.2 40 
+            4.0 0 
+            4.66667 0 
+        endlist
+    endnode
+    node emitter Proj07
+        parent vca_illus
+        positionkey
+            0.0 0.0 0.0 0.0
+            2.4 0.0 0.0 0.0
+            4.0 0.5 0.0 -0.866025
+            4.66667 0.5 0.0 -0.866025
+        endlist
+        birthratekey
+            0.0 0 
+            2.4 0 
+            2.46667 40 
+            3.2 40 
+            4.0 0 
+            4.66667 0 
+        endlist
+    endnode
+    node emitter Proj08
+        parent vca_illus
+        positionkey
+            0.0 0.0 0.0 0.0
+            2.4 0.0 0.0 0.0
+            4.0 0.0 0.0 -1.0
+            4.66667 0.0 0.0 -1.0
+        endlist
+        birthratekey
+            0.0 0 
+            2.4 0 
+            2.46667 40 
+            3.2 40 
+            4.0 0 
+            4.66667 0 
+        endlist
+    endnode
+doneanim default vca_illus
+donemodel vca_illus

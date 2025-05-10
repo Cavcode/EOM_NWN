@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 plc7r_fardebr 
+texture1 plc7r_fardebr_n 
+texture2 plc7r_fardebr_s 
+texture3 plc7r_fardebr_r 
+texture4 null 

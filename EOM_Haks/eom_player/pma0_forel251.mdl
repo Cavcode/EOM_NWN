@@ -1,0 +1,10 @@
+newmodel pma0_forel251
+setsupermodel pma0_forel251 null
+classification CHARACTER
+setanimationscale 1.0
+beginmodelgeom pma0_forel251
+node dummy pma0_forel251
+  parent null
+endnode
+endmodelgeom pma0_forel251
+donemodel pma0_forel251

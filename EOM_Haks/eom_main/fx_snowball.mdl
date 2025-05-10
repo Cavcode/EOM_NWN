@@ -1,0 +1,157 @@
+#MAXMODEL ASCII
+# model: fx_snowball
+filedependancy fx_snowball.max
+newmodel fx_snowball
+setsupermodel fx_snowball NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom fx_snowball
+node dummy fx_snowball
+  parent NULL
+endnode
+node trimesh Rocksml
+  parent fx_snowball
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0 0 0
+  shininess 1
+  bitmap tts01_grass02
+  verts 8
+      -0.0499211   -0.0572989   -0.0403095
+      -0.0744262    0.0505674   -0.0261734
+       0.0037914    0.0287786   -0.0646452
+       0.0661789   -0.0572989   -0.0403095
+      -0.0259335   -0.0236047    0.0280609
+       0.0222020   -0.0380082    0.0296090
+       0.0661789    0.0588011    0.0757905
+      -0.0171415    0.0173428    0.0757905
+  tverts 22
+       0.8253910    0.0004999  0
+       0.9995000    0.9286530  0
+       0.4437640    0.7411670  0
+       0.0004998    0.0004997  0
+       0.3450410    0.2904270  0
+       0.6870440    0.1664900  0
+       0.9995000    0.9995000  0
+       0.9995000    0.9995010  0
+       0.4075080    0.9995010  0
+       0.3450410    0.6599720  0
+       0.1746090    0.1736140  0
+       0.9995000    0.1736140  0
+       0.6870440    0.6709850  0
+       0.0004997    0.1736140  0
+       0.7411670    0.0004995  0
+       0.4437640    0.0004995  0
+       0.9995000    0.2741720  0
+       0.5924920    0.9995010  0
+       0.0004996    0.9995010  0
+       0.0713474    0.2741720  0
+       0.7095730    0.6599720  0
+       0.3572340    0.9995010  0
+  faces 12
+    0 1 2  1   0  1  2   2
+    2 3 0  1   2  3  0   2
+    4 5 6  1   4  5  6   1
+    6 7 4  1   7  8  9   1
+    0 3 5  2  10 11 12   5
+    5 4 0  2  12  9 10   5
+    3 2 6  4  13 14  7   4
+    6 5 3  4   7 12 11   4
+    2 1 7  2  15 16 17   6
+    7 6 2  2  17 18 15   6
+    1 0 4  4  19 11 20   3
+    4 7 1  4  20 21 19   3
+  position 0 -0.00429114 0.00168775
+  orientation 0.8550418 -0.4524989 -0.2532749 -1.15923
+endnode
+node emitter smoke04
+  parent Rocksml
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_Smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0.0126768 -0.0141075
+  orientation -1 0 0 -0.732031
+  colorStart 0.95 0.95 0.95
+  colorEnd 0.95 0.95 0.95
+  alphaStart 0.5
+  alphaEnd 0
+  sizeStart 0.2
+  sizeEnd 0.8
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 16
+  birthrate 20
+  lifeExp 0.5
+  mass -0.03
+  spread 1.39626
+  particleRot -1
+  velocity 0.03
+  randvel 0.1
+  fps 16
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom fx_snowball
+
+#MAXANIM ASCII
+newanim impact fx_snowball
+  length 4.1
+  transtime 0.25
+  animroot fx_snowball
+  node dummy fx_snowball
+    parent NULL
+  endnode
+  node dummy Rocksml
+    parent fx_snowball
+    orientationkey 10
+         0.6000000    0.8533282   -0.4560041   -0.2527671   -1.1521698
+         0.6666670    0.8533282   -0.4560041   -0.2527671   -1.1521698
+         1.0333300   -0.5284458   -0.8344115    0.1565329   -0.6822390
+         1.4666700   -0.9440675   -0.1747419    0.2796459   -2.0756400
+         1.8666700   -0.9574708    0.0530260    0.2836159   -3.4958701
+         2.3000000   -0.8771198    0.4039269    0.2598150   -5.0176902
+         2.7333300    0.6091130    0.7722871   -0.1804270   -5.5506902
+         3.1333301    0.9416957    0.1881490   -0.2789429   -4.2733698
+         3.5666699    0.9555643   -0.0823344   -0.2830511   -2.5993700
+         4.0999999    0.8714210   -0.4171280   -0.2581270   -1.2349800
+  endnode
+  node emitter smoke04
+    parent Rocksml
+  endnode
+doneanim impact fx_snowball
+
+donemodel fx_snowball

@@ -1,0 +1,11 @@
+// Renderhint
+customshaderVS vslit_sm_nm
+customshaderFS fs_plt_hair
+renderhint NormalAndSpecMapped
+
+// Textures
+texture1 pmh0_head016_n
+texture2 pmh0_head016_s
+
+transparency 1
+twosided 1

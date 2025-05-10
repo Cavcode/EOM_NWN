@@ -1,0 +1,251 @@
+# Exported from NWmax 0.6 at 8/31/2004 9:52:45 AM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: lok_d_glitdust
+filedependancy Unknown
+newmodel lok_d_glitdust
+setsupermodel lok_d_glitdust NULL
+classification Effect
+#NWmax GEOM  ASCII
+beginmodelgeom lok_d_glitdust
+node dummy lok_d_glitdust
+  parent NULL
+endnode
+node dummy Dummy01
+  parent lok_d_glitdust
+  position 0.0 0.0 0.0
+  orientation 1.0 0.0 0.0 -3.00989e-007
+  wirecolor 0.0235294 0.52549 0.443137 
+endnode
+node emitter AuroraEmitter01
+  parent Dummy01
+  position 0.0 -3.32845e-007 3.96561
+  orientation 0.0 -1.0 0.0 -3.14159
+  wirecolor 0.694118 0.576471 0.101961 
+  update_sel 1
+  update Fountain
+  render_sel 1
+  render Normal
+  blend_sel 2
+  Blend Lighten
+  spawnType 0
+  iconSize 100.0
+  xSize 1200.0
+  ySize 1200.0
+  inherit 0
+  inherit_local 0
+  inheritvel 0
+  inherit_part 1
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 0.964706 0.0 
+  colorEnd 1.0 1.0 1.0 
+  alphaStart 1.0
+  alphaEnd 0.0
+  sizeStart 0.05
+  sizeEnd 0.05
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 0.0
+  lifeExp 5.0
+  mass 0.05
+  spread 0.523599
+  particleRot 3.0
+  velocity 0.0
+  randvel 0.5
+  bounce_co 0.2
+  blurlength 10.0
+  loop 0
+  bounce 1
+  m_isTinted 0
+  Splat 0
+  affectedByWind false
+  texture fxpa_sparks
+  twosidedtex 0
+  xgrid 4
+  ygrid 4
+  fps 16
+  frameStart 0
+  frameEnd 15
+  random 0
+  chunky 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  Drag 0.0
+endnode
+node emitter AuroraEmitter02
+  parent Dummy01
+  position -2.60487e-007 -8.21157e-007 3.94694
+  orientation 0.988195 -0.153202 -3.5542e-006 -3.14159
+  wirecolor 0.694118 0.576471 0.101961 
+  update_sel 3
+  update Explosion
+  render_sel 1
+  render Normal
+  blend_sel 2
+  Blend Lighten
+  spawnType 0
+  iconSize 100.0
+  xSize 20.0
+  ySize 20.0
+  inherit 0
+  inherit_local 0
+  inheritvel 0
+  inherit_part 1
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 0.964706 0.0 
+  colorEnd 1.0 1.0 1.0 
+  alphaStart 1.0
+  alphaEnd 0.0
+  sizeStart 0.05
+  sizeEnd 0.05
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 400.0
+  lifeExp 8.0
+  mass 0.05
+  spread 6.28319
+  particleRot 3.0
+  velocity 2.0
+  randvel 0.5
+  bounce_co 0.2
+  blurlength 10.0
+  loop 0
+  bounce 1
+  m_isTinted 0
+  Splat 0
+  affectedByWind false
+  texture fxpa_sparks
+  twosidedtex 0
+  xgrid 4
+  ygrid 4
+  fps 16
+  frameStart 0
+  frameEnd 15
+  random 0
+  chunky 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  Drag 0.0
+endnode
+endmodelgeom lok_d_glitdust
+
+#NWmax ANIM ASCII
+newanim impact lok_d_glitdust
+  length 1.0
+  transtime 0.25
+  animroot lok_d_glitdust
+    event 0.0 detonate
+    node dummy lok_d_glitdust
+        parent NULL
+    endnode
+    node dummy Dummy01
+        parent lok_d_glitdust
+        orientationkey
+            0.0 0.0 0.0 1.0 -0.480312
+            0.333333 0.0 0.0 1.0 -1.73367
+            0.666667 0.0 0.0 1.0 -3.13243
+            1.0 0.0 0.0 1.0 -4.49872
+        endlist
+    endnode
+    node emitter AuroraEmitter01
+        parent Dummy01
+        birthratekey
+            0.0 0.0 
+            0.666667 0.0 
+            1.0 200.0 
+        endlist
+    endnode
+    node emitter AuroraEmitter02
+        parent Dummy01
+    endnode
+doneanim impact lok_d_glitdust
+
+
+#NWmax ANIM ASCII
+newanim duration lok_d_glitdust
+  length 1.96667
+  transtime 0.25
+  animroot lok_d_glitdust
+    node dummy lok_d_glitdust
+        parent NULL
+    endnode
+    node dummy Dummy01
+        parent lok_d_glitdust
+        orientationkey
+            0.0 1.0 0.0 0.0 -3.00989e-007
+            0.333333 0.0 0.0 1.0 -0.480312
+            0.666667 0.0 0.0 1.0 -1.73367
+            1.0 0.0 0.0 1.0 -3.13243
+            1.33333 0.0 0.0 1.0 -4.49872
+            1.66667 0.0 0.0 1.0 -5.70511
+            1.96667 0.0 0.0 0.0 -6.28319
+        endlist
+    endnode
+    node emitter AuroraEmitter01
+        parent Dummy01
+        birthratekey
+            0.0 200.0 
+            0.333333 0.0 
+            1.33333 200.0 
+            1.96667 200.0 
+        endlist
+    endnode
+    node emitter AuroraEmitter02
+        parent Dummy01
+    endnode
+doneanim duration lok_d_glitdust
+
+
+#NWmax ANIM ASCII
+newanim cessation lok_d_glitdust
+  length 2.0
+  transtime 0.25
+  animroot lok_d_glitdust
+    node dummy lok_d_glitdust
+        parent NULL
+    endnode
+    node dummy Dummy01
+        parent lok_d_glitdust
+    endnode
+    node emitter AuroraEmitter01
+        parent Dummy01
+        birthratekey
+            0.0 200.0 
+            2.0 0.0 
+        endlist
+    endnode
+    node emitter AuroraEmitter02
+        parent Dummy01
+    endnode
+doneanim cessation lok_d_glitdust
+
+donemodel lok_d_glitdust

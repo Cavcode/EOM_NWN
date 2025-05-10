@@ -1,0 +1,248 @@
+#MAXMODEL ASCII
+# model: vdr_mindhit_r
+filedependancy vdr_mindhit_r.max
+newmodel vdr_mindhit_r
+setsupermodel vdr_mindhit_r NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vdr_mindhit_r
+node dummy vdr_mindhit_r
+  parent NULL
+endnode
+node emitter OmenEmitter04
+  parent vdr_mindhit_r
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_StarBnW
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0.5 0.0980018
+  orientation 0 0 0 0
+  colorStart 1 0.643137 0.533333
+  colorEnd 0 0 0
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.2
+  sizeEnd 0.15
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 50
+  lifeExp 2
+  mass 0
+  spread 6.28319
+  particleRot 0
+  velocity 0
+  randvel 0.2
+  fps 12
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter05
+  parent vdr_mindhit_r
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_StarBnW
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 -0.5 0.0980018
+  orientation 0 0 0 0
+  colorStart 1 0.67451 0.25098
+  colorEnd 0 0 0
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.2
+  sizeEnd 0.15
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 50
+  lifeExp 2
+  mass 0
+  spread 6.28319
+  particleRot 1
+  velocity 0
+  randvel 0.2
+  fps 8
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom vdr_mindhit_r
+
+#MAXANIM ASCII
+newanim duration vdr_mindhit_r
+  length 1
+  transtime 0.25
+  animroot vdr_mindhit_r
+  node dummy vdr_mindhit_r
+    parent NULL
+  endnode
+  node emitter OmenEmitter04
+    parent vdr_mindhit_r
+    positionkey 31
+         0.0000000    0.0000000    0.5000000    0.0980018
+         0.0333333    0.0000000    0.5000000    0.0980018
+         0.0664583    0.1056290    0.4876610    0.0646972
+         0.0997917    0.2030320    0.4524540    0.0339860
+         0.1333330    0.2896220    0.3970910    0.0066842
+         0.1664580    0.3628120    0.3242860   -0.0163926
+         0.2000000    0.4200140    0.2367520   -0.0344282
+         0.2333330    0.4586400    0.1372020   -0.0466068
+         0.2664580    0.4761030    0.0283490   -0.0521128
+         0.2997920    0.4701790   -0.0837686   -0.0502450
+         0.3331250    0.4418110   -0.1883090   -0.0413006
+         0.3666670    0.3935730   -0.2821910   -0.0260914
+         0.3997920    0.3280540   -0.3626990   -0.0054333
+         0.4333330    0.2478410   -0.4271220    0.0198580
+         0.4666670    0.1555200   -0.4727470    0.0489665
+         0.4997920    0.0536808   -0.4968590    0.0810763
+         0.5331250   -0.0536807   -0.4968590    0.1149270
+         0.5664580   -0.1555200   -0.4727470    0.1470370
+         0.6000000   -0.2478410   -0.4271220    0.1761460
+         0.6331250   -0.3280540   -0.3626990    0.2014370
+         0.6664580   -0.3935730   -0.2821910    0.2220950
+         0.7000000   -0.4418110   -0.1883090    0.2373040
+         0.7331250   -0.4701790   -0.0837686    0.2462490
+         0.7664580   -0.4761030    0.0283489    0.2481160
+         0.8000000   -0.4586400    0.1372020    0.2426100
+         0.8333330   -0.4200140    0.2367520    0.2304320
+         0.8664580   -0.3628120    0.3242860    0.2123960
+         0.9000000   -0.2896220    0.3970910    0.1893190
+         0.9333330   -0.2030320    0.4524540    0.1620180
+         0.9664580   -0.1056290    0.4876610    0.1313060
+         1.0000000    0.0000000    0.5000000    0.0980018
+    birthratekey 3
+         0.0000000   50.0000000
+         0.0333333   50.0000000
+         1.0000000   52.0000000
+  endnode
+  node emitter OmenEmitter05
+    parent vdr_mindhit_r
+    positionkey 31
+         0.0000000    0.0000000   -0.5000000    0.0980018
+         0.0333333    0.0000000   -0.5000000    0.0980018
+         0.0664583    0.1044020   -0.4876610    0.1349720
+         0.0997917    0.2006740   -0.4524540    0.1690640
+         0.1333330    0.2862590   -0.3970910    0.1993710
+         0.1664580    0.3585990   -0.3242860    0.2249880
+         0.2000000    0.4151360   -0.2367520    0.2450090
+         0.2333330    0.4533140   -0.1372020    0.2585290
+         0.2664580    0.4705740   -0.0283488    0.2646410
+         0.2997920    0.4647180    0.0837687    0.2625670
+         0.3331250    0.4366800    0.1883090    0.2526380
+         0.3666670    0.3890030    0.2821910    0.2357550
+         0.3997920    0.3242440    0.3627000    0.2128230
+         0.4333330    0.2449620    0.4271230    0.1847470
+         0.4666670    0.1537140    0.4727470    0.1524350
+         0.4997920    0.0530574    0.4968590    0.1167900
+         0.5331250   -0.0530574    0.4968590    0.0792130
+         0.5664580   -0.1537140    0.4727470    0.0435685
+         0.6000000   -0.2449620    0.4271230    0.0112559
+         0.6331250   -0.3242440    0.3627000   -0.0168194
+         0.6664580   -0.3890030    0.2821910   -0.0397515
+         0.7000000   -0.4366800    0.1883090   -0.0566347
+         0.7331250   -0.4647180    0.0837687   -0.0665636
+         0.7664580   -0.4705740   -0.0283488   -0.0686373
+         0.8000000   -0.4533140   -0.1372020   -0.0625252
+         0.8333330   -0.4151360   -0.2367520   -0.0490059
+         0.8664580   -0.3585990   -0.3242860   -0.0289849
+         0.9000000   -0.2862590   -0.3970910   -0.0033678
+         0.9333330   -0.2006740   -0.4524540    0.0269392
+         0.9664580   -0.1044020   -0.4876610    0.0610310
+         1.0000000    0.0000000   -0.5000000    0.0980018
+    birthratekey 4
+         0.0000000   50.0000000
+         0.0333333   50.0000000
+         0.9666670   51.0000000
+         1.0000000   51.0000000
+  endnode
+doneanim duration vdr_mindhit_r
+
+#MAXANIM ASCII
+newanim cessation vdr_mindhit_r
+  length 0.3
+  transtime 0.25
+  animroot vdr_mindhit_r
+  node dummy vdr_mindhit_r
+    parent NULL
+  endnode
+  node emitter OmenEmitter04
+    parent vdr_mindhit_r
+    position 0 0.5 0.0980018
+    birthratekey 2
+         0.0000000   52.0000000
+         0.0333333    0.0000000
+  endnode
+  node emitter OmenEmitter05
+    parent vdr_mindhit_r
+    position 0 -0.5 0.0980018
+    birthratekey 2
+         0.0000000   51.0000000
+         0.0333333    0.0000000
+  endnode
+doneanim cessation vdr_mindhit_r
+
+donemodel vdr_mindhit_r

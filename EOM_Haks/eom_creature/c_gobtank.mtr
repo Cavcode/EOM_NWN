@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 c_gobtank_d 
+texture1 c_gobtank_n 
+texture2 c_gobtank_s 
+texture3 null 
+texture4 null 

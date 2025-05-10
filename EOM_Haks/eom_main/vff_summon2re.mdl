@@ -1,0 +1,738 @@
+#MAXMODEL ASCII
+# model: vff_summon2re
+filedependancy vff_summon2re.max
+newmodel vff_summon2re
+setsupermodel vff_summon2re NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vff_summon2re
+node dummy vff_summon2re
+  parent NULL
+endnode
+node emitter groundsyb
+  parent vff_summon2re
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Billboard_to_Local_Z
+  blend Lighten
+  texture fxpa_Symbl_001
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 0.0438979
+  orientation 0 0 0 0
+  colorStart 1 0 0
+  colorEnd 1 0 0
+  alphaStart 0
+  alphaEnd 0
+  sizeStart 4
+  sizeEnd 4
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter handbal
+  parent vff_summon2re
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 -0.00481933 1.14355
+  orientation 0 0 0 0
+  colorStart 1 0 0
+  colorEnd 1 0 0
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 1
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 100
+  lifeExp 1
+  mass 0
+  spread 6.28319
+  particleRot 0
+  velocity 1
+  randvel 0.5
+  fps 0
+  xsize 250
+  ysize 250
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node dummy dummy
+  parent vff_summon2re
+  position 0 0 -0.26
+  orientation 0 0 0 0
+endnode
+node dummy wiggledummy
+  parent dummy
+  position 0 -0.00648613 1.49275
+  orientation -0.3067151 0.6730252 -0.6730252 -3.7368
+endnode
+node emitter OmenEmitter05
+  parent wiggledummy
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Linked
+  blend Lighten
+  texture Fxpa_white
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.220062 -0.482289 0.792548
+  orientation -0.3067151 0.6730252 -0.6730252 -2.54638
+  colorStart 0.9 0.17 0.25
+  colorEnd 0.9 0.17 0.25
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 0.05
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 5
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node dummy wiggledummy01
+  parent dummy
+  position 0 -0.00648613 1.49275
+  orientation 0.6665298 0.2932799 -0.6853648 -2.65904
+endnode
+node emitter OmenEmitter06
+  parent wiggledummy01
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Linked
+  blend Lighten
+  texture Fxpa_white
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.926164 -0.224098 0.336822
+  orientation 0.5504861 0.590324 -0.590324 -4.14803
+  colorStart 0.9 0.17 0.25
+  colorEnd 0.9 0.17 0.25
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 0.05
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 5
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node dummy dummy01
+  parent vff_summon2re
+  position 0 0 -0.519357
+  orientation -0.07845913 -0.9969174 0 -3.14159
+endnode
+node dummy wiggledummy02
+  parent dummy01
+  position 0 0.00648598 -1.7521
+  orientation -0.8550357 0.3629409 -0.3703889 -1.73047
+endnode
+node emitter OmenEmitter07
+  parent wiggledummy02
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Linked
+  blend Lighten
+  texture Fxpa_white
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.0667774 -0.771009 0.39224
+  orientation -0.8541719 0.371404 0.363936 -1.72407
+  colorStart 0.9 0.17 0.25
+  colorEnd 0.9 0.17 0.25
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 0.05
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 5
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node dummy wiggledummy03
+  parent dummy01
+  position 0 0.00648598 -1.7521
+  orientation -0.5784741 -0.4126221 -0.7036411 -2.94445
+endnode
+node emitter OmenEmitter08
+  parent wiggledummy03
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Linked
+  blend Lighten
+  texture Fxpa_white
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.619547 -0.656236 -0.186405
+  orientation -0.120352 0.8563513 -0.5021732 -1.91475
+  colorStart 0.9 0.17 0.25
+  colorEnd 0.9 0.17 0.25
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 0.05
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 5
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter handbal01
+  parent vff_summon2re
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 1
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Normal
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 -0.00481933 1.14355
+  orientation 0 0 0 0
+  colorStart 1 0 0
+  colorEnd 1 0 0
+  alphaStart 1
+  alphaEnd 0
+  sizeStart 0.4
+  sizeEnd 4
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 0
+  lifeExp 1
+  mass 0
+  spread 6.28319
+  particleRot 0
+  velocity 3
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0.1
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter WIND_Dummy
+  parent vff_summon2re
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Normal
+  blend Lighten
+  texture NULL
+  xgrid 0
+  ygrid 0
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 5
+  blastLength 1.2
+  position -0.00249214 0.000424422 0.390378
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 0
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp 0
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom vff_summon2re
+
+#MAXANIM ASCII
+newanim impact vff_summon2re
+  length 4.63333
+  transtime 0.25
+  animroot vff_summon2re
+  event 0.0666667 detonate
+  event 1.26667 detonate
+  event 1.86667 detonate
+  node dummy vff_summon2re
+    parent NULL
+  endnode
+  node emitter groundsyb
+    parent vff_summon2re
+    alphaStartkey 12
+         0.0000000    0.0000000
+         0.4000000    0.5000000
+         0.6666670    1.0000000
+         0.7000000    1.0000000
+         0.9333330    0.5000000
+         1.2333300    1.0000000
+         1.5666699    0.5000000
+         1.9666700    1.0000000
+         2.4333301    0.5000000
+         2.9333301    1.0000000
+         2.9666700    1.0000000
+         3.6333301    0.0000000
+    alphaEndkey 12
+         0.0000000    0.0000000
+         0.4000000    0.5000000
+         0.6666670    1.0000000
+         0.7000000    1.0000000
+         0.9333330    0.5000000
+         1.2333300    1.0000000
+         1.5666699    0.5000000
+         1.9666700    1.0000000
+         2.4333301    0.5000000
+         2.9333301    1.0000000
+         2.9666700    1.0000000
+         3.6333301    0.0000000
+  endnode
+  node emitter handbal
+    parent vff_summon2re
+    birthratekey 5
+         0.0000000  100.0000000
+         0.0333333  100.0000000
+         2.7333300  100.0000000
+         2.7666700  100.0000000
+         2.8000000    0.0000000
+    xsizekey 2
+         0.0000000  250.0000000
+         1.3000000    0.0000000
+    ysizekey 2
+         0.0000000  250.0000000
+         1.3000000    0.0000000
+  endnode
+  node dummy dummy
+    parent vff_summon2re
+    orientationkey 12
+         0.0000000    0.0000000    0.0000000    0.0000000    0.0000000
+         0.2333330   -0.0000000   -0.0000000    1.0000000   -1.5707999
+         0.5333330   -0.0000000   -0.0000000    1.0000000   -3.1415901
+         0.8333330   -0.0000000   -0.0000000    1.0000000   -4.7123899
+         1.1666700    0.0000000    0.0000000    0.0000000    0.0000000
+         1.5333300   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+         1.9333301   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+         2.3666699   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+         2.8333299    0.0000000    0.0000000    0.0000000    0.0000000
+         3.2000000   -0.0000000   -0.0000000    1.0000000   -1.5707999
+         3.5333300   -0.0000000   -0.0000000    1.0000000   -3.1415901
+         3.8333299   -0.0000000   -0.0000000    1.0000000   -4.7123899
+  endnode
+  node dummy wiggledummy
+    parent dummy
+    orientationkey 9
+         0.0000000   -0.3067151    0.6730252   -0.6730252   -3.7368000
+         0.5000000    0.3540320    0.3796520   -0.8547080   -4.6253700
+         0.9666670    0.8840286   -0.3305249   -0.3305249   -4.5894299
+         1.4000000    0.6999419   -0.6527058    0.2899249   -3.6696899
+         1.8666700    0.3336879   -0.6776829    0.6552849   -2.6071301
+         2.3666699   -0.3540320   -0.3796520    0.8547080   -1.6578100
+         2.8666699   -0.8840286    0.3305249    0.3305249   -1.6937500
+         3.4000001   -0.6999419    0.6527058   -0.2899249   -2.6135001
+         3.8333299   -0.3067151    0.6730252   -0.6730252   -3.7368000
+  endnode
+  node emitter OmenEmitter05
+    parent wiggledummy
+    positionkey 3
+         0.3000000    0.2200620   -0.4822890    0.7925480
+         1.9000000    0.2424650    0.8789240    0.7701440
+         3.1333301   -0.3513360    0.0391635    1.3639400
+    alphaStartkey 4
+         0.0000000    0.0000000
+         0.3000000    1.0000000
+         2.6666701    1.0000000
+         3.3000000    0.0000000
+    alphaEndkey 2
+         2.6666701    1.0000000
+         3.3000000    0.0000000
+  endnode
+  node dummy wiggledummy01
+    parent dummy
+    orientationkey 9
+         0.0000000    0.6665298    0.2932799   -0.6853648   -2.6590400
+         0.5000000    0.4868339   -0.4609179   -0.7419888   -2.8205900
+         0.9666670    0.0324176   -0.9283212   -0.3703631   -3.1674600
+         1.4000000   -0.4417982   -0.8716774    0.2121151   -3.4997101
+         1.8666700   -0.6644959   -0.3347270    0.6681339   -3.6248400
+         2.3666699   -0.4868339    0.4609179    0.7419888   -3.4626000
+         2.8666699   -0.0324176    0.9283212    0.3703631   -3.1157300
+         3.4000001    0.4417982    0.8716775   -0.2121151   -2.7834799
+         3.8333299    0.6665298    0.2932799   -0.6853648   -2.6590400
+  endnode
+  node emitter OmenEmitter06
+    parent wiggledummy01
+    positionkey 2
+         0.3000000    0.9261640   -0.2240980    0.3368220
+         2.3666699   -1.0534500    0.6937300    0.1548160
+    alphaStartkey 4
+         0.0000000    0.0000000
+         0.3000000    1.0000000
+         2.3666699    1.0000000
+         2.9666700    0.0000000
+    alphaEndkey 2
+         2.3666699    1.0000000
+         2.9666700    0.0000000
+  endnode
+  node dummy dummy01
+    parent vff_summon2re
+    orientationkey 12
+         0.0000000   -0.0784591   -0.9969174   -0.0000000   -3.1415901
+         0.2666670    0.6494480   -0.7604060   -0.0000000   -3.1415901
+         0.6000000    0.9969174   -0.0784591   -0.0000000   -3.1415901
+         0.9333330    0.7604060    0.6494480   -0.0000000   -3.1415901
+         1.2666700    0.0784591    0.9969174   -0.0000000   -3.1415901
+         1.6333300   -0.6494480    0.7604060   -0.0000000   -3.1415901
+         2.0333300   -0.9969174    0.0784591   -0.0000000   -3.1415901
+         2.4333301   -0.7604060   -0.6494480   -0.0000000   -3.1415901
+         2.8333299   -0.0784591   -0.9969174   -0.0000000   -3.1415901
+         3.1666701    0.7071068   -0.7071068   -0.0000000   -3.1415901
+         3.5333300    1.0000000   -0.0000000   -0.0000000   -3.1415901
+         3.8666699    0.7071068    0.7071068   -0.0000000   -3.1415901
+  endnode
+  node dummy wiggledummy02
+    parent dummy01
+    orientationkey 9
+         0.0000000   -0.8550357    0.3629409   -0.3703889   -1.7304698
+         0.5000000   -0.6463581    0.3798460   -0.6617690   -3.1573901
+         0.9666670   -0.3501419    0.3470999   -0.8700128   -4.5822401
+         1.4000000    0.7213548   -0.0286711   -0.6919718   -5.5034399
+         1.8666700    0.8675328   -0.3594089    0.3438199   -4.6279001
+         2.3666699    0.6463581   -0.3798461    0.6617690   -3.1257999
+         2.8666699    0.3501419   -0.3470999    0.8700129   -1.7009500
+         3.4000001   -0.7213549    0.0286709    0.6919719   -0.7797490
+         3.8333299   -0.8550357    0.3629409   -0.3703889   -1.7304698
+  endnode
+  node emitter OmenEmitter07
+    parent wiggledummy02
+    positionkey 3
+         0.3000000    0.0667774   -0.7710090    0.3922400
+         1.9000000    1.0324301    0.1888990    0.3897540
+         3.9333301   -0.2454100   -1.0484800   -0.3876540
+    alphaStartkey 4
+         0.0000000    0.0000000
+         0.3000000    1.0000000
+         2.5000000    1.0000000
+         3.0999999    0.0000000
+    alphaEndkey 2
+         2.5000000    1.0000000
+         3.0999999    0.0000000
+  endnode
+  node dummy wiggledummy03
+    parent dummy01
+    orientationkey 9
+         0.0000000   -0.5784741   -0.4126221   -0.7036411   -2.9444499
+         0.5000000   -0.8040691   -0.4285851   -0.4120530   -4.3506098
+         0.9666670   -0.8344740   -0.2041950    0.5118179   -5.3912401
+         1.4000000    0.2158590    0.3227371    0.9215453   -4.7135901
+         1.8666700    0.5647961    0.4102931    0.7160062   -3.4178100
+         2.3666699    0.8040688    0.4285849    0.4120539   -1.9325700
+         2.8666699    0.8344740    0.2041950   -0.5118180   -0.8919449
+         3.4000001   -0.2158581   -0.3227372   -0.9215454   -1.5695900
+         3.8333299   -0.5784741   -0.4126221   -0.7036411   -2.9444499
+  endnode
+  node emitter OmenEmitter08
+    parent wiggledummy03
+    positionkey 3
+         0.3000000    0.6195470   -0.6562360   -0.1864050
+         1.7000000   -0.9230470    0.2195420   -0.6750510
+         3.8333299    0.1882740   -0.9515460    0.5195880
+    alphaStartkey 4
+         0.0000000    0.0000000
+         0.3000000    1.0000000
+         2.1333301    1.0000000
+         2.6333301    0.0000000
+    alphaEndkey 2
+         2.1333301    1.0000000
+         2.6333301    0.0000000
+  endnode
+  node emitter handbal01
+    parent vff_summon2re
+    birthratekey 6
+         0.0000000    0.0000000
+         0.0666667    0.0000000
+         1.2000000    0.0000000
+         1.2666700  100.0000000
+         1.8000000    0.0000000
+         1.8666700  100.0000000
+  endnode
+  node emitter WIND_Dummy
+    parent vff_summon2re
+  endnode
+doneanim impact vff_summon2re
+
+donemodel vff_summon2re

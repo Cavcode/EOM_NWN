@@ -1,0 +1,7 @@
+customshadervs vslit_nm
+customshaderfs fslit_nm  
+renderhint NormalTangents
+ 
+parameter float Metallicness 1.0
+parameter float Specularity 1.0
+parameter float Roughness 0.001

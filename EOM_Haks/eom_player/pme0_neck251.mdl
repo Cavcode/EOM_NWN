@@ -1,0 +1,10 @@
+newmodel pme0_neck251
+setsupermodel pme0_neck251 null
+classification CHARACTER
+setanimationscale 1.0
+beginmodelgeom pme0_neck251
+node dummy pme0_neck251
+  parent null
+endnode
+endmodelgeom pme0_neck251
+donemodel pme0_neck251

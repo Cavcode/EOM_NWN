@@ -1,0 +1,230 @@
+# Exported from NWmax 0.8 b60 at 6/12/2014 8:50:35 PM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: wfoor_067
+#local file: C:\gmax\Scenes\tesseract58.gmax
+filedependancy tesseract58.gmax
+newmodel wfoor_067
+setsupermodel wfoor_067 NULL
+classification Character
+setanimationscale 1.0
+#NWmax GEOM  ASCII
+beginmodelgeom wfoor_067
+node dummy wfoor_067
+  parent NULL
+endnode
+node dummy orbPlaceholder22
+  parent wfoor_067
+  position 0.061991 0.0942285 -0.0994803
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.32549 0.32549 0.490196 
+endnode
+node emitter emit_dot01_lighten23
+  parent orbPlaceholder22
+  position 0.0 0.0 0.0
+  orientation 0.403095 -0.908984 0.106126 -1.21355
+  wirecolor 0.32549 0.32549 0.490196 
+  update_sel 2
+  update Single
+  render_sel 1
+  render Normal
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 1
+  spawnType 0
+  xSize 0.0
+  ySize 0.0
+  inherit 1
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 0.843137 1.0 0.0 
+  colorEnd 0.843137 1.0 0.0 
+  alphaStart 0.25
+  alphaEnd 0.25
+  sizeStart 0.5
+  sizeEnd 0.5
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 1
+  lifeExp -1.0
+  mass 0.0
+  spread 0.0
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 10.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  splat 0
+  affectedByWind false
+  texture fxpa_dot01
+  twosidedtex 0
+  xgrid 1
+  ygrid 1
+  fps 0
+  framestart 0
+  frameend 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  drag 0.0
+endnode
+node trimesh Cuboctahedron
+  parent orbPlaceholder22
+  position 0.0 0.0 0.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.843137 1.0 0.0 
+  tilefade 0
+  scale 1.0
+  render 1
+  Shadow 1
+  beaming 0
+  inheritcolor 0
+  rotatetexture 0
+  alpha 0.5
+  transparencyhint 0
+  selfillumcolor 0.843137 1.0 0.0 
+  center 9.53674e-007 4.76837e-007 0.0 
+  ambient 1.0 1.0 1.0 
+  diffuse 1.0 1.0 1.0 
+  specular 0.0 0.0 0.0 
+  shininess 0.0
+  bitmap tx_mdgems02
+  verts 12
+    0.0 0.1 0.1
+    -0.1 0.1 0.0
+    -0.1 -0.1 0.0
+    0.1 -0.1 0.0
+    -0.1 0.0 -0.1
+    -0.1 0.0 0.1
+    0.0 -0.1 0.1
+    0.1 0.0 0.1
+    0.1 0.1 0.0
+    0.0 0.1 -0.1
+    0.0 -0.1 -0.1
+    0.1 0.0 -0.1
+  faces 20
+    0 1 5  0  0 1 5  2
+    5 2 6  0  5 2 6  2
+    6 3 7  0  6 3 7  2
+    7 8 0  0  7 8 0  2
+    4 1 9  0  4 1 9  2
+    10 2 4  0  10 2 4  2
+    11 3 10  0  11 3 10  2
+    9 8 11  0  9 8 11  2
+    0 5 6  0  0 5 6  2
+    0 6 7  0  0 6 7  2
+    0 8 9  0  0 8 9  2
+    0 9 1  0  0 9 1  2
+    1 4 2  0  1 4 2  2
+    1 2 5  0  1 2 5  2
+    2 10 3  0  2 10 3  2
+    2 3 6  0  2 3 6  2
+    3 11 8  0  3 11 8  2
+    3 8 7  0  3 8 7  2
+    4 9 11  0  4 9 11  2
+    4 11 10  0  4 11 10  2
+  tverts 12
+    0.615942 0.629072 0
+    0.559334 0.629072 0
+    0.559334 0.515855 0
+    0.672551 0.515855 0
+    0.559334 0.572464 0
+    0.559334 0.572464 0
+    0.615942 0.515855 0
+    0.672551 0.572464 0
+    0.672551 0.629072 0
+    0.615942 0.629072 0
+    0.615942 0.515855 0
+    0.672551 0.572464 0
+endnode
+node trimesh Cuboctahedron01
+  parent orbPlaceholder22
+  position 0.0 0.0 0.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.32549 0.32549 0.490196 
+  tilefade 0
+  scale 1.0
+  render 1
+  Shadow 0
+  beaming 0
+  inheritcolor 0
+  rotatetexture 0
+  alpha 0.5
+  transparencyhint 0
+  selfillumcolor 0.0 0.0 0.0 
+  center 9.53674e-007 4.76837e-007 0.0 
+  ambient 1.0 1.0 1.0 
+  diffuse 1.0 1.0 1.0 
+  specular 0.0 0.0 0.0 
+  shininess 0.0
+  bitmap tx_mdgems02
+  verts 12
+    0.0 0.1 0.1
+    -0.1 0.1 0.0
+    -0.1 -0.1 0.0
+    0.1 -0.1 0.0
+    -0.1 0.0 -0.1
+    -0.1 0.0 0.1
+    0.0 -0.1 0.1
+    0.1 0.0 0.1
+    0.1 0.1 0.0
+    0.0 0.1 -0.1
+    0.0 -0.1 -0.1
+    0.1 0.0 -0.1
+  faces 20
+    1 0 5  0  1 0 5  2
+    2 5 6  0  2 5 6  2
+    3 6 7  0  3 6 7  2
+    8 7 0  0  8 7 0  2
+    1 4 9  0  1 4 9  2
+    2 10 4  0  2 10 4  2
+    3 11 10  0  3 11 10  2
+    8 9 11  0  8 9 11  2
+    5 0 6  0  5 0 6  2
+    6 0 7  0  6 0 7  2
+    8 0 9  0  8 0 9  2
+    9 0 1  0  9 0 1  2
+    4 1 2  0  4 1 2  2
+    2 1 5  0  2 1 5  2
+    10 2 3  0  10 2 3  2
+    3 2 6  0  3 2 6  2
+    11 3 8  0  11 3 8  2
+    8 3 7  0  8 3 7  2
+    9 4 11  0  9 4 11  2
+    11 4 10  0  11 4 10  2
+  tverts 12
+    0.615942 0.629072 0
+    0.559334 0.629072 0
+    0.559334 0.515855 0
+    0.672551 0.515855 0
+    0.559334 0.572464 0
+    0.559334 0.572464 0
+    0.615942 0.515855 0
+    0.672551 0.572464 0
+    0.672551 0.629072 0
+    0.615942 0.629072 0
+    0.615942 0.515855 0
+    0.672551 0.572464 0
+endnode
+endmodelgeom wfoor_067
+donemodel wfoor_067

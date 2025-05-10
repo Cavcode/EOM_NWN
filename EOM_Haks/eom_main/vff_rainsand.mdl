@@ -1,0 +1,2722 @@
+#MAXMODEL ASCII
+# model: vff_rainsand
+filedependancy vff_rainsand.max
+newmodel vff_rainsand
+setsupermodel vff_rainsand NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vff_rainsand
+node dummy vff_rainsand
+  parent NULL
+endnode
+node dummy Dummy01
+  parent vff_rainsand
+  position 0 0 0
+  orientation 0 0 0 0
+endnode
+node emitter Ring48
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.00795512 11.7189 0.500761
+  orientation 0 0 -1 -1.22173
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.2
+  randvel 0.2
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring47
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.00795512 11.7189 0.0515032
+  orientation 0 0 -1 -1.22173
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 8
+  sizeEnd 1
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.1
+  randvel 0
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring31
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -11.2489 -0.0229231 0.0515032
+  orientation 0 0 -1 -1.22173
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 8
+  sizeEnd 1
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.1
+  randvel 0
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring32
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -11.2489 -0.0229231 0.500761
+  orientation 0 0 -1 -1.22173
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.2
+  randvel 0.2
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring33
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.0320925 -11.6234 0.0515032
+  orientation 0 0 -1 -1.22173
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 8
+  sizeEnd 1
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.1
+  randvel 0
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring34
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.0320925 -11.6234 0.500761
+  orientation 0 0 -1 -1.22173
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.2
+  randvel 0.2
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring37
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -10.8415 4.86569 0.0515032
+  orientation 0 0 -1 -1.22173
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 8
+  sizeEnd 2
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.1
+  randvel 0
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring38
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -10.8415 4.86569 0.500761
+  orientation 0 0 -1 -1.22173
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.2
+  randvel 0.2
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring39
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -4.84271 -10.9225 0.500761
+  orientation 0 0 -1 -1.22173
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.2
+  randvel 0.2
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring40
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -4.84271 -10.9225 0.0515032
+  orientation 0 0 -1 -1.22173
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 8
+  sizeEnd 2
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.1
+  randvel 0
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring41
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -10.8222 -5.19198 0.500761
+  orientation 0 0 -1 -1.22173
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.2
+  randvel 0.2
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring42
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -10.8222 -5.19198 0.0515032
+  orientation 0 0 -1 -1.22173
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 8
+  sizeEnd 2
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.1
+  randvel 0
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring43
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -8.87687 -8.8047 0.500761
+  orientation 0 0 -1 -1.22173
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.2
+  randvel 0.2
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring44
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -8.87687 -8.8047 0.0515032
+  orientation 0 0 -1 -1.22173
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 8
+  sizeEnd 1
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.1
+  randvel 0
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter04
+  parent Ring44
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Aligned_to_World_Z
+  blend Normal
+  texture fxpa_bstrka
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 2.12942 -0.210885 23.8583
+  orientation -0.5373001 0.8433911 0 -3.14159
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 0.2
+  sizeEnd 0.5
+  sizeStart_y 6
+  sizeEnd_y 6
+  frameStart 0
+  frameEnd 0
+  birthrate 100
+  lifeExp 0.5
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 60
+  randvel 0
+  fps 0
+  xsize 1000
+  ysize 500
+  bounce_co 0
+  blurlength 0.7
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring45
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -4.49246 10.5901 0.500761
+  orientation 0 0 -1 -1.22173
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.2
+  randvel 0.2
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring46
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -4.49246 10.5901 0.0515032
+  orientation 0 0 -1 -1.22173
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 8
+  sizeEnd 2
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.1
+  randvel 0
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring21
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 11.2315 0.0433722 0.0515032
+  orientation 0 0 1 -1.91986
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 8
+  sizeEnd 1
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.1
+  randvel 0
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring22
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 11.2315 0.0433722 0.500761
+  orientation 0 0 1 -1.91986
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.2
+  randvel 0.2
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring17
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 8.56361 -8.48299 0.0515032
+  orientation 0 0 1 -1.91986
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 8
+  sizeEnd 1
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.1
+  randvel 0
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring18
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 8.56361 -8.48299 0.500761
+  orientation 0 0 1 -1.91986
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.2
+  randvel 0.2
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter01
+  parent Ring18
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Aligned_to_World_Z
+  blend Normal
+  texture fxpa_bstrka
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.684429 -1.14441 23.409
+  orientation -0.21644 -0.9762959 0 -3.14159
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 0.2
+  sizeEnd 0.5
+  sizeStart_y 6
+  sizeEnd_y 6
+  frameStart 0
+  frameEnd 0
+  birthrate 100
+  lifeExp 0.5
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 60
+  randvel 0
+  fps 0
+  xsize 1000
+  ysize 500
+  bounce_co 0
+  blurlength 0.7
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring19
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 11.1787 -5.21535 0.0515032
+  orientation 0 0 1 -1.91986
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 8
+  sizeEnd 2
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.1
+  randvel 0
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring20
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 11.1787 -5.21535 0.500761
+  orientation 0 0 1 -1.91986
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.2
+  randvel 0.2
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring27
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 4.82537 10.9429 0.500761
+  orientation 0 0 1 -1.91986
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.2
+  randvel 0.2
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring28
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 4.82537 10.9429 0.0515032
+  orientation 0 0 1 -1.91986
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 8
+  sizeEnd 2
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.1
+  randvel 0
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring23
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 10.9901 5.79943 0.500761
+  orientation 0 0 1 -1.91986
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.2
+  randvel 0.2
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring24
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 10.9901 5.79943 0.0515032
+  orientation 0 0 1 -1.91986
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 8
+  sizeEnd 2
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.1
+  randvel 0
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring25
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 9.05733 8.83715 0.500761
+  orientation 0 0 1 -1.91986
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.2
+  randvel 0.2
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring26
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 9.05733 8.83715 0.0515032
+  orientation 0 0 1 -1.91986
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 8
+  sizeEnd 1
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.1
+  randvel 0
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter02
+  parent Ring26
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Aligned_to_World_Z
+  blend Normal
+  texture fxpa_bstrka
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 1.03341 -1.07859 23.8583
+  orientation -0.21644 -0.9762959 0 -3.14159
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 0.2
+  sizeEnd 0.5
+  sizeStart_y 6
+  sizeEnd_y 6
+  frameStart 0
+  frameEnd 0
+  birthrate 100
+  lifeExp 0.5
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 60
+  randvel 0
+  fps 0
+  xsize 500
+  ysize 1000
+  bounce_co 0
+  blurlength 0.7
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring16
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 4.47512 -10.5696 0.500761
+  orientation 0 0 1 -1.91986
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.2
+  randvel 0.2
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring15
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 4.47512 -10.5696 0.0515032
+  orientation 0 0 1 -1.91986
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 8
+  sizeEnd 2
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.1
+  randvel 0
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring36
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -8.77186 8.6873 0.500761
+  orientation 0 0 -1 -1.22173
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.2
+  randvel 0.2
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring35
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -8.77186 8.6873 0.0515032
+  orientation 0 0 -1 -1.22173
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 8
+  sizeEnd 1
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.1
+  randvel 0
+  fps 12
+  xsize 300
+  ysize 300
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter03
+  parent Ring35
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Aligned_to_World_Z
+  blend Normal
+  texture fxpa_bstrka
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.581646 -1.17253 23.8583
+  orientation -0.9762959 0.21644 0 -3.14159
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 0.2
+  sizeEnd 0.5
+  sizeStart_y 6
+  sizeEnd_y 6
+  frameStart 0
+  frameEnd 0
+  birthrate 100
+  lifeExp 0.5
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 60
+  randvel 0
+  fps 0
+  xsize 1000
+  ysize 500
+  bounce_co 0
+  blurlength 0.7
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter WIND_Dummy
+  parent vff_rainsand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Normal
+  blend Normal
+  texture NULL
+  xgrid 0
+  ygrid 0
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 20
+  blastLength 1.2
+  position -0.00249214 0.000424422 0.390378
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 0
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp 0
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node light AuroraLight01
+  parent vff_rainsand
+  ambientonly 0
+  shadow 0
+  isdynamic 1
+  affectdynamic 1
+  lightpriority 2
+  fadingLight 1
+  flareradius 0
+  position 0 0 1.89631
+  orientation -0.5773503 0.5773503 0.5773503 -2.0944
+  radius 13
+  multiplier 3
+  color 0.93 0.79 0.69
+endnode
+endmodelgeom vff_rainsand
+
+#MAXANIM ASCII
+newanim impact vff_rainsand
+  length 4.3
+  transtime 0.25
+  animroot vff_rainsand
+  event 0 detonate
+  event 0.466667 detonate
+  event 0.966667 detonate
+  event 1.46667 detonate
+  event 1.96667 detonate
+  node dummy vff_rainsand
+    parent NULL
+  endnode
+  node dummy Dummy01
+    parent vff_rainsand
+    orientationkey 12
+         0.0000000    0.0000000    0.0000000    0.0000000    0.0000000
+         0.2333330   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+         0.4333330   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+         0.6333330   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+         0.8333330   -0.0000000   -0.0000000   -1.0000000   -6.2744598
+         1.0666699   -0.0000000   -0.0000000    1.0000000   -4.7211199
+         1.3000000   -0.0000000   -0.0000000    1.0000000   -3.1415901
+         1.5000000   -0.0000000   -0.0000000    1.0000000   -1.5707999
+         1.7000000    0.0000000    0.0000000    0.0000000    0.0000000
+         1.9000000   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+         2.0999999   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+         2.3000000   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+  endnode
+  node emitter Ring48
+    parent vff_rainsand
+    positionkey 3
+         0.0000000   -0.0079551   11.7188997    0.5007610
+         1.4666700   -0.1880670    3.9595799    0.5007610
+         2.9666700   -0.0079551   11.7188997    0.5007610
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700   15.0000000
+         2.9666700   16.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring47
+    parent vff_rainsand
+    positionkey 3
+         0.0000000   -0.0079551   11.7188997    0.0515032
+         1.4666700   -0.1880670    3.9595799    0.0515032
+         2.9666700   -0.0079551   11.7188997    0.0515032
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700    9.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring31
+    parent vff_rainsand
+    positionkey 3
+         0.0000000  -11.2489004   -0.0229231    0.0515032
+         1.4666700   -4.0842099   -0.0959003    0.0515032
+         2.9666700  -11.2489004   -0.0229231    0.0515032
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700    9.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring32
+    parent vff_rainsand
+    positionkey 3
+         0.0000000  -11.2489004   -0.0229231    0.5007610
+         1.4666700   -4.0842099   -0.0959003    0.5007610
+         2.9666700  -11.2489004   -0.0229231    0.5007610
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700   15.0000000
+         2.9666700   15.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring33
+    parent vff_rainsand
+    positionkey 3
+         0.0000000   -0.0320925  -11.6233997    0.0515032
+         1.4666700    0.0525363   -3.7087901    0.0515032
+         2.9666700   -0.0320925  -11.6233997    0.0515032
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700    9.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring34
+    parent vff_rainsand
+    positionkey 3
+         0.0000000   -0.0320925  -11.6233997    0.5007610
+         1.4666700    0.0525363   -3.7087901    0.5007610
+         2.9666700   -0.0320925  -11.6233997    0.5007610
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700   15.0000000
+         2.9666700   15.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring37
+    parent vff_rainsand
+    positionkey 3
+         0.0000000  -10.8415003    4.8656902    0.0515032
+         1.4666700   -3.4648700    1.1420400    0.0515032
+         2.9666700  -10.8415003    4.8656902    0.0515032
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700    9.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring38
+    parent vff_rainsand
+    positionkey 3
+         0.0000000  -10.8415003    4.8656902    0.5007610
+         1.4666700   -3.4648700    1.1420400    0.5007610
+         2.9666700  -10.8415003    4.8656902    0.5007610
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700   16.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring39
+    parent vff_rainsand
+    positionkey 3
+         0.0000000   -4.8427100  -10.9224997    0.5007610
+         1.4666700   -1.4534100   -3.7504900    0.5007610
+         2.9666700   -4.8427100  -10.9224997    0.5007610
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700   16.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring40
+    parent vff_rainsand
+    positionkey 3
+         0.0000000   -4.8427100  -10.9224997    0.0515032
+         1.4666700   -1.4534100   -3.7504900    0.0515032
+         2.9666700   -4.8427100  -10.9224997    0.0515032
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700    9.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring41
+    parent vff_rainsand
+    positionkey 3
+         0.0000000  -10.8221998   -5.1919799    0.5007610
+         1.4666700   -3.7460301   -1.6753900    0.5007610
+         2.9666700  -10.8221998   -5.1919799    0.5007610
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700   16.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring42
+    parent vff_rainsand
+    positionkey 3
+         0.0000000  -10.8221998   -5.1919799    0.0515032
+         1.4666700   -3.7460301   -1.6753900    0.0515032
+         2.9666700  -10.8221998   -5.1919799    0.0515032
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700    9.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring43
+    parent vff_rainsand
+    positionkey 3
+         0.0000000   -8.8768702   -8.8046999    0.5007610
+         1.4666700   -2.6315200   -3.1051700    0.5007610
+         2.9666700   -8.8768702   -8.8046999    0.5007610
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700   15.0000000
+         2.9666700   15.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring44
+    parent vff_rainsand
+    positionkey 3
+         0.0000000   -8.8768702   -8.8046999    0.0515032
+         1.4666700   -2.6315200   -3.1051700    0.0515032
+         2.9666700   -8.8768702   -8.8046999    0.0515032
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700    9.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter OmenEmitter04
+    parent Ring44
+    birthratekey 5
+         0.0000000  100.0000000
+         0.0333333  100.0000000
+         2.5333300  100.0000000
+         2.5666699  100.0000000
+         2.8333299    0.0000000
+  endnode
+  node emitter Ring45
+    parent vff_rainsand
+    positionkey 3
+         0.0000000   -4.4924598   10.5901003    0.5007610
+         1.4666700   -1.5654500    3.0334401    0.5007610
+         2.9666700   -4.4924598   10.5901003    0.5007610
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700   16.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring46
+    parent vff_rainsand
+    positionkey 3
+         0.0000000   -4.4924598   10.5901003    0.0515032
+         1.4666700   -1.5654500    3.0334401    0.0515032
+         2.9666700   -4.4924598   10.5901003    0.0515032
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700    9.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring21
+    parent vff_rainsand
+    positionkey 3
+         0.0000000   11.2314997    0.0433722    0.0515032
+         1.4666700    4.3174601    0.2938150    0.0515032
+         2.9666700   11.2314997    0.0433722    0.0515032
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700    9.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring22
+    parent vff_rainsand
+    positionkey 3
+         0.0000000   11.2314997    0.0433722    0.5007610
+         1.4666700    4.3174601    0.2938150    0.5007610
+         2.9666700   11.2314997    0.0433722    0.5007610
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700   15.0000000
+         2.9666700   16.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring17
+    parent vff_rainsand
+    positionkey 3
+         0.0000000    8.5636101   -8.4829903    0.0515032
+         1.4666700    2.9029200   -2.2514100    0.0515032
+         2.9666700    8.5636101   -8.4829903    0.0515032
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700    9.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring18
+    parent vff_rainsand
+    positionkey 3
+         0.0000000    8.5636101   -8.4829903    0.5007610
+         1.4666700    2.9029200   -2.2514100    0.5007610
+         2.9666700    8.5636101   -8.4829903    0.5007610
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700   15.0000000
+         2.9666700   15.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter OmenEmitter01
+    parent Ring18
+    birthratekey 5
+         0.0000000  100.0000000
+         0.0333333  100.0000000
+         2.4666700  100.0000000
+         2.5000000  100.0000000
+         2.8333299    0.0000000
+  endnode
+  node emitter Ring19
+    parent vff_rainsand
+    positionkey 3
+         0.0000000   11.1787004   -5.2153502    0.0515032
+         1.4666700    3.6358099   -0.7612960    0.0515032
+         2.9666700   11.1787004   -5.2153502    0.0515032
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700    9.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring20
+    parent vff_rainsand
+    positionkey 3
+         0.0000000   11.1787004   -5.2153502    0.5007610
+         1.4666700    3.6358099   -0.7612960    0.5007610
+         2.9666700   11.1787004   -5.2153502    0.5007610
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700   16.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring27
+    parent vff_rainsand
+    positionkey 3
+         0.0000000    4.8253698   10.9428997    0.5007610
+         1.4666700    0.8228850    3.2719901    0.5007610
+         2.9666700    4.8253698   10.9428997    0.5007610
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700   16.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring28
+    parent vff_rainsand
+    positionkey 3
+         0.0000000    4.8253698   10.9428997    0.0515032
+         1.4666700    0.8228850    3.2719901    0.0515032
+         2.9666700    4.8253698   10.9428997    0.0515032
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700    9.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring23
+    parent vff_rainsand
+    positionkey 3
+         0.0000000   10.9900999    5.7994299    0.5007610
+         1.4666700    3.3080399    1.4532800    0.5007610
+         2.9666700   10.9900999    5.7994299    0.5007610
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700   17.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring24
+    parent vff_rainsand
+    positionkey 3
+         0.0000000   10.9900999    5.7994299    0.0515032
+         1.4666700    3.3080399    1.4532800    0.0515032
+         2.9666700   10.9900999    5.7994299    0.0515032
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700    9.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring25
+    parent vff_rainsand
+    positionkey 3
+         0.0000000    9.0573301    8.8371496    0.5007610
+         1.4666700    2.2528701    2.7004199    0.5007610
+         2.9666700    9.0573301    8.8371496    0.5007610
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700   15.0000000
+         2.9666700   16.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring26
+    parent vff_rainsand
+    positionkey 3
+         0.0000000    9.0573301    8.8371496    0.0515032
+         1.4666700    2.2528701    2.7004199    0.0515032
+         2.9666700    9.0573301    8.8371496    0.0515032
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700    9.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter OmenEmitter02
+    parent Ring26
+    birthratekey 5
+         0.0000000  100.0000000
+         0.0333333  100.0000000
+         2.5333300  100.0000000
+         2.5666699  100.0000000
+         2.8333299    0.0000000
+  endnode
+  node emitter Ring16
+    parent vff_rainsand
+    positionkey 3
+         0.0000000    4.4751201  -10.5696001    0.5007610
+         1.4666700    1.7769500   -3.3443100    0.5007610
+         2.9666700    4.4751201  -10.5696001    0.5007610
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700   17.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring15
+    parent vff_rainsand
+    positionkey 3
+         0.0000000    4.4751201  -10.5696001    0.0515032
+         1.4666700    1.7769500   -3.3443100    0.0515032
+         2.9666700    4.4751201  -10.5696001    0.0515032
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700    9.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring36
+    parent vff_rainsand
+    positionkey 3
+         0.0000000   -8.7718601    8.6872997    0.5007610
+         1.4666700   -3.1269300    2.6047900    0.5007610
+         2.9666700   -8.7718601    8.6872997    0.5007610
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700   15.0000000
+         2.9666700   16.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter Ring35
+    parent vff_rainsand
+    positionkey 3
+         0.0000000   -8.7718601    8.6872997    0.0515032
+         1.4666700   -3.1269300    2.6047900    0.0515032
+         2.9666700   -8.7718601    8.6872997    0.0515032
+    birthratekey 4
+         0.0000000    9.0000000
+         1.4666700    9.0000000
+         2.9666700    9.0000000
+         3.0000000    0.0000000
+  endnode
+  node emitter OmenEmitter03
+    parent Ring35
+    birthratekey 5
+         0.0000000  100.0000000
+         0.0333333  100.0000000
+         2.5666699  100.0000000
+         2.5999999  100.0000000
+         2.8333299    0.0000000
+  endnode
+  node emitter WIND_Dummy
+    parent vff_rainsand
+  endnode
+  node light AuroraLight01
+    parent vff_rainsand
+    colorkey 9
+         0.0000000    0.9215690    0.7215690    0.1137260
+         0.0333333    0.9215690    0.7215690    0.1137260
+         0.3666670    0.9529410    0.9058830    0.3882350
+         0.8000000    0.9215690    0.7215690    0.1137260
+         1.2333300    0.9764710    0.8431370    0.1137260
+         1.7666700    0.9215690    0.7215690    0.1137260
+         2.2000000    0.9843140    0.8392160    0.3960780
+         2.6666701    0.9215690    0.7215690    0.1137260
+         3.1666701    0.0000003    0.0000000    0.0000000
+  endnode
+doneanim impact vff_rainsand
+
+donemodel vff_rainsand

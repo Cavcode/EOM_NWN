@@ -1,0 +1,371 @@
+#MAXMODEL ASCII
+# model: vco_lgsprbale01
+filedependancy vco_lgsprbale01.max
+newmodel vco_lgsprbale01
+setsupermodel vco_lgsprbale01 NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vco_lgsprbale01
+node dummy vco_lgsprbale01
+  parent NULL
+endnode
+node emitter Ribon
+  parent vco_lgsprbale01
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Linked
+  blend Lighten
+  texture Fxpa_Script01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 1.89597 -0.007655 0
+  orientation -1 0 0 -1.26536
+  colorStart 0.2 0 0.4
+  colorEnd 0 0 0
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.1
+  sizeEnd 0.2
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 3
+  lifeExp 2
+  mass -0.5
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 1
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter sparks
+  parent Ribon
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 1
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_Flare1
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.00248154 0.0374685 -0.000808043
+  orientation 1 0 0 -1.26536
+  colorStart 0.2 0 0.4
+  colorEnd 0.4 0 0.8
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.4
+  sizeEnd 0.2
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 5
+  lifeExp 2
+  mass 0.5
+  spread 1.0472
+  particleRot 1
+  velocity 2.5
+  randvel 1
+  fps 16
+  xsize 30
+  ysize 5
+  bounce_co 0.7
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ribon01
+  parent vco_lgsprbale01
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Linked
+  blend Lighten
+  texture Fxpa_Script01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -1.90492 -0.00765502 0
+  orientation 0 -0.5913097 -0.8064446 -3.14159
+  colorStart 0.2 0 0.4
+  colorEnd 0 0 0
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.1
+  sizeEnd 0.2
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 3
+  lifeExp 2
+  mass -0.5
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 1
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node light AuroraLight01
+  parent vco_lgsprbale01
+  ambientonly 0
+  shadow 0
+  isdynamic 1
+  affectdynamic 1
+  lightpriority 3
+  fadingLight 1
+  flareradius 0
+  position 0 4.32792e-005 1.00183
+  orientation -0.8709367 0.3474689 0.3474689 -1.70854
+  radius 4.99997
+  multiplier 1.5
+  color 0.2 0 0.4
+endnode
+endmodelgeom vco_lgsprbale01
+
+#MAXANIM ASCII
+newanim conjure01 vco_lgsprbale01
+  length 0.966667
+  transtime 0.25
+  animroot vco_lgsprbale01
+  node dummy vco_lgsprbale01
+    parent NULL
+  endnode
+  node emitter Ribon
+    parent vco_lgsprbale01
+    positionkey 29
+         0.0000000    1.8959700   -0.0076550    0.0000000
+         0.0343750    1.8457400    0.4276990    0.0000000
+         0.0689583    1.7026900    0.8275030    0.0000000
+         0.1035420    1.4782600    1.1803000    0.0000000
+         0.1379170    1.1839300    1.4746400    0.0000000
+         0.1725000    0.8311290    1.6990600    0.0000000
+         0.2070830    0.4313260    1.8421100    0.0000000
+         0.2416670   -0.0040283    1.8923399    0.0000000
+         0.2760420   -0.4393830    1.8421100    0.0000000
+         0.3106250   -0.8391860    1.6990600    0.0000000
+         0.3452080   -1.1919800    1.4746400    0.0000000
+         0.3795830   -1.4863200    1.1803000    0.0000000
+         0.4141670   -1.7107400    0.8275020    0.0000000
+         0.4487500   -1.8538001    0.4276990    0.0000000
+         0.4833330   -1.9040300   -0.0076552    0.0000000
+         0.5177080   -1.8538001   -0.4430090    0.0000000
+         0.5522920   -1.7107400   -0.8428130    0.0000000
+         0.5868750   -1.4863200   -1.1956100    0.0000000
+         0.6212500   -1.1919800   -1.4899499    0.0000000
+         0.6558330   -0.8391860   -1.7143700    0.0000000
+         0.6904170   -0.4393820   -1.8574300    0.0000000
+         0.7250000   -0.0040280   -1.9076600    0.0000000
+         0.7593750    0.4313260   -1.8574300    0.0000000
+         0.7939580    0.8311300   -1.7143700    0.0000000
+         0.8285420    1.1839300   -1.4899499    0.0000000
+         0.8629170    1.4782600   -1.1956100    0.0000000
+         0.8975000    1.7026900   -0.8428130    0.0000000
+         0.9320830    1.8457400   -0.4430090    0.0000000
+         0.9666670    1.8959700   -0.0076550    0.0000000
+    alphaStartkey 2
+         0.0000000    1.0000000
+         0.9666670    1.0000000
+    alphaEndkey 2
+         0.0000000    1.0000000
+         0.9666670    1.0000000
+    birthratekey 2
+         0.0000000    3.0000000
+         0.9666670    3.0000000
+  endnode
+  node emitter sparks
+    parent Ribon
+  endnode
+  node emitter Ribon01
+    parent vco_lgsprbale01
+    positionkey 29
+         0.0000000   -1.9049200   -0.0076550    0.0000000
+         0.0343750   -1.8546900   -0.4430090    0.0000000
+         0.0689583   -1.7116300   -0.8428130    0.0000000
+         0.1035420   -1.4872100   -1.1956100    0.0000000
+         0.1379170   -1.1928700   -1.4899499    0.0000000
+         0.1725000   -0.8400750   -1.7143700    0.0000000
+         0.2070830   -0.4402710   -1.8574200    0.0000000
+         0.2416670   -0.0049171   -1.9076500    0.0000000
+         0.2760420    0.4304370   -1.8574200    0.0000000
+         0.3106250    0.8302400   -1.7143700    0.0000000
+         0.3452080    1.1830400   -1.4899499    0.0000000
+         0.3795830    1.4773800   -1.1956100    0.0000000
+         0.4141670    1.7018000   -0.8428120    0.0000000
+         0.4487500    1.8448499   -0.4430090    0.0000000
+         0.4833330    1.8950800   -0.0076545    0.0000000
+         0.5177080    1.8448499    0.4277000    0.0000000
+         0.5522920    1.7018000    0.8275030    0.0000000
+         0.5868750    1.4773800    1.1803000    0.0000000
+         0.6212500    1.1830400    1.4746400    0.0000000
+         0.6558330    0.8302400    1.6990600    0.0000000
+         0.6904170    0.4304360    1.8421201    0.0000000
+         0.7250000   -0.0049178    1.8923500    0.0000000
+         0.7593750   -0.4402720    1.8421201    0.0000000
+         0.7939580   -0.8400750    1.6990600    0.0000000
+         0.8285420   -1.1928700    1.4746400    0.0000000
+         0.8629170   -1.4872100    1.1803000    0.0000000
+         0.8975000   -1.7116300    0.8275030    0.0000000
+         0.9320830   -1.8546900    0.4276990    0.0000000
+         0.9666670   -1.9049200   -0.0076550    0.0000000
+    alphaStartkey 2
+         0.0000000    1.0000000
+         0.9666670    1.0000000
+    alphaEndkey 2
+         0.0000000    1.0000000
+         0.9666670    1.0000000
+    birthratekey 2
+         0.0000000    3.0000000
+         0.9666670    3.0000000
+  endnode
+  node light AuroraLight01
+    parent vco_lgsprbale01
+    colorkey 4
+         0.0000000    0.9098040    0.4705880    0.0000000
+         0.0333333    0.9098040    0.4705880    0.0000000
+         0.4666670    0.9372550    0.7098040    0.0980392
+         0.9666670    0.9098040    0.4705880    0.0000000
+    radiuskey 1
+         0.9666670    4.9990001
+  endnode
+doneanim conjure01 vco_lgsprbale01
+
+#MAXANIM ASCII
+newanim fade vco_lgsprbale01
+  length 1.66667
+  transtime 0.25
+  animroot vco_lgsprbale01
+  node dummy vco_lgsprbale01
+    parent NULL
+  endnode
+  node emitter Ribon
+    parent vco_lgsprbale01
+    position 1.89597 -0.007655 0
+    alphaStartkey 3
+         0.0000000    1.0000000
+         0.0333333    1.0000000
+         0.6666670    0.0000000
+    alphaEndkey 3
+         0.0000000    1.0000000
+         0.0333333    1.0000000
+         0.6666670    0.0000000
+    birthratekey 2
+         0.0000000    3.0000000
+         0.0333333    0.0000000
+  endnode
+  node emitter sparks
+    parent Ribon
+  endnode
+  node emitter Ribon01
+    parent vco_lgsprbale01
+    position -1.90492 -0.00765502 0
+    alphaStartkey 3
+         0.0000000    1.0000000
+         0.0333333    1.0000000
+         0.6666670    0.0000000
+    alphaEndkey 3
+         0.0000000    1.0000000
+         0.0333333    1.0000000
+         0.6666670    0.0000000
+    birthratekey 2
+         0.0000000    3.0000000
+         0.0333333    0.0000000
+  endnode
+  node light AuroraLight01
+    parent vco_lgsprbale01
+    colorkey 3
+         0.0000000    0.9098040    0.4705880    0.0000000
+         0.0333333    0.9098040    0.4705880    0.0000000
+         0.6000000    0.0000002    0.0000001    0.0000000
+    radiuskey 3
+         0.0000000    4.9990001
+         0.0333333    4.9720001
+         0.6000000    0.0000000
+  endnode
+doneanim fade vco_lgsprbale01
+
+donemodel vco_lgsprbale01

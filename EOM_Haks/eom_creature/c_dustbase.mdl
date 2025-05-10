@@ -1,0 +1,42 @@
+# Exported from NWmax v6.11.28 at 6/25/2021 10:45:37 PM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: c_dustbase
+#local file: C:\Users\Fnord\Documents\3dsMax\scenes\dust soldier.max
+filedependancy dust soldier.max
+newmodel c_dustbase
+setsupermodel c_dustbase null
+classification Character
+setanimationscale 1.0
+#NWmax GEOM  ASCII
+beginmodelgeom c_dustbase
+node dummy c_dustbase
+  parent NULL
+endnode
+node dummy headconjure
+  parent c_dustbase
+  position 0.0 0.157358 2.47937
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.341176 0.882353 0.341176 
+endnode
+node dummy handconjure
+  parent c_dustbase
+  position 0.0 0.810277 1.0056
+  orientation -0.876018 -0.482279 -0.000318329 -0.000187242
+  wirecolor 0.529412 0.431373 0.0313726 
+endnode
+node dummy wings
+  parent c_dustbase
+  position 0.0 0.0 0.0
+  orientation -0.683053 0.709959 -0.171454 -1.73776e-07
+  wirecolor 0.341176 0.882353 0.341176 
+endnode
+node dummy tail
+  parent c_dustbase
+  position 0.0 0.0 0.0
+  orientation 0.557983 -0.829852 0.0 -1.26441e-07
+  wirecolor 0.0235294 0.529412 0.0235294 
+endnode
+endmodelgeom c_dustbase
+donemodel c_dustbase

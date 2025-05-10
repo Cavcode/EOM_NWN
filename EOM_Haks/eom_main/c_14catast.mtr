@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 c_14catast 
+texture1 c_14catast_n 
+texture2 c_14catast_s 
+texture3 null 
+texture4 null 

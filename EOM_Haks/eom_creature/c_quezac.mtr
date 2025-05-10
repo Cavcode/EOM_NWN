@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 c_quezac 
+texture1 c_quezac_n 
+texture2 c_quezac_s 
+texture3 null 
+texture4 null 

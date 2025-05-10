@@ -1,0 +1,325 @@
+#MAXMODEL ASCII
+# model: vAR_conegreen
+filedependancy vAR_conegreen.max
+newmodel vAR_conegreen
+setsupermodel vAR_conegreen NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vAR_conegreen
+node dummy vAR_conegreen
+  parent NULL
+endnode
+node emitter OmenEmitter03
+  parent vAR_conegreen
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_Smoke01a
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.000457306 0.0902111 -0.00372559
+  orientation -0.5773503 -0.5773503 -0.5773503 -4.18879
+  colorStart 0.262745 1 0.262745
+  colorEnd 0 0 0
+  alphaStart 0.5
+  alphaEnd 1
+  sizeStart 0.6
+  sizeEnd 6
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 40
+  lifeExp 0.7
+  mass 0
+  spread 0.698132
+  particleRot 0
+  velocity 16
+  randvel 0
+  fps 16
+  xsize 10
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter01
+  parent vAR_conegreen
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_Smoke01a
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.00210232 0.260008 -0.00372559
+  orientation -0.6227857 -0.4735778 -0.6227857 -4.02617
+  colorStart 0.235294 1 0.235294
+  colorEnd 0 0 0
+  alphaStart 0.6
+  alphaEnd 1
+  sizeStart 0.6
+  sizeEnd 6
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 45
+  lifeExp 0.7
+  mass 0
+  spread 0.698132
+  particleRot -5
+  velocity 16
+  randvel 0
+  fps 16
+  xsize 10
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter02
+  parent vAR_conegreen
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_Smoke01a
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.00181018 0.260008 -0.00372559
+  orientation -0.5199878 -0.6776618 -0.5199878 -4.33274
+  colorStart 0.145098 1 0.145098
+  colorEnd 0 0 0
+  alphaStart 0.6
+  alphaEnd 1
+  sizeStart 0.6
+  sizeEnd 6
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 45
+  lifeExp 0.7
+  mass 0
+  spread 0.698132
+  particleRot 5
+  velocity 16
+  randvel 0
+  fps 16
+  xsize 10
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node light AuroraLight02
+  parent vAR_conegreen
+  ambientonly 1
+  shadow 0
+  isdynamic 0
+  affectdynamic 1
+  lightpriority 3
+  fadingLight 1
+  flareradius 0
+  position -0.000731277 1.68478 0
+  orientation 0 0 0 0
+  radius 2
+  multiplier 1
+  color 0.419608 0.945098 0.419608
+endnode
+endmodelgeom vAR_conegreen
+
+#MAXANIM ASCII
+newanim cast01 vAR_conegreen
+  length 1.96667
+  transtime 0.25
+  animroot vAR_conegreen
+  node dummy vAR_conegreen
+    parent NULL
+  endnode
+  node emitter OmenEmitter03
+    parent vAR_conegreen
+    birthratekey 3
+         0.0000000   40.0000000
+         1.3000000   40.0000000
+         1.3333300  -10.0000000
+  endnode
+  node emitter OmenEmitter01
+    parent vAR_conegreen
+    birthratekey 3
+         0.0000000   45.0000000
+         1.3000000   45.0000000
+         1.3333300   -5.0000000
+  endnode
+  node emitter OmenEmitter02
+    parent vAR_conegreen
+    birthratekey 3
+         0.0000000   45.0000000
+         1.3000000   45.0000000
+         1.3333300   -5.0000000
+  endnode
+  node light AuroraLight02
+    parent vAR_conegreen
+    positionkey 26
+         0.0000000   -0.0007313    1.7157600    0.0000000
+         0.1333330    0.2243320    2.9487200    0.0000000
+         0.1666670   -0.6158900    4.5274301    0.0000000
+         0.3333330    0.5420360    3.2887700    0.0000000
+         0.4000000    0.5685270    5.4680400    0.0000000
+         0.4666670   -0.1207560    4.4736600    0.0000000
+         0.5333330   -0.3679260    2.6296000    0.0000000
+         0.6000000    0.1287420    3.1321299    0.0000000
+         0.6666670    0.0736567    5.7799401    0.0000000
+         0.7333330   -0.3942040    4.9495802    0.0000000
+         0.8000000    0.5704920    4.2048502    0.0000000
+         0.8666670   -0.5041780    3.8207200    0.0000000
+         0.9333330   -0.4200870    5.9980402    0.0000000
+         1.0000000    1.0676900    6.0202198    0.0000000
+         1.0666699   -0.2834620    4.7760701    0.0000000
+         1.1333300    0.6534360    4.6375799    0.0000000
+         1.1666700   -0.9169260    5.9310198    0.0000000
+         1.2333300   -0.3363400    2.7602899    0.0000000
+         1.3000000    0.2153060    4.1156902    0.0000000
+         1.3666700   -0.8860270    5.9891200    0.0000000
+         1.4666700   -0.2229350    6.7270398    0.0000000
+         1.5666699    0.4935990    6.0308399    0.0000000
+         1.6333300   -0.3331380    7.1815200    0.0000000
+         1.7000000    0.8791540    7.2819300    0.0000000
+         1.7666700   -0.3339030    6.7213302    0.0000000
+         1.8333300   -0.0300083    7.5116100    0.0000000
+    colorkey 27
+         0.0000000    0.4196080    0.7058820    0.9254910
+         0.0666667    0.4588240    0.8705880    1.0000000
+         0.1000000    0.4196080    0.7058820    0.9254910
+         0.1333330    0.4392160    0.7882360    1.0000000
+         0.1666670    0.4588240    0.8705880    1.0000000
+         0.2000000    0.4196080    0.7058820    0.9254910
+         0.2666670    0.4588240    0.8705880    1.0000000
+         0.3666670    0.4196080    0.7058820    0.9254910
+         0.4333330    0.4588240    0.8705880    1.0000000
+         0.4666670    0.4196080    0.7058820    0.9254910
+         0.5333330    0.4196080    0.7058820    0.9254910
+         0.6000000    0.4588240    0.8705880    1.0000000
+         0.6333330    0.4196080    0.7058820    0.9254910
+         0.7000000    0.4588240    0.8705880    1.0000000
+         0.7333330    0.4196080    0.7058820    0.9254910
+         0.8000000    0.4588240    0.8705880    1.0000000
+         0.9000000    0.4196080    0.7058820    0.9254910
+         0.9666670    0.4588240    0.8705880    1.0000000
+         1.0000000    0.4196080    0.7058820    0.9254910
+         1.0666699    0.4196080    0.7058820    0.9254910
+         1.1333300    0.4196080    0.7058820    0.9254910
+         1.2000000    0.4588240    0.8705880    1.0000000
+         1.2333300    0.4196080    0.7058820    0.9254910
+         1.3000000    0.4666670    0.8666670    1.0000000
+         1.3333300    0.3803920    0.6862750    0.9215690
+         1.4000000    0.4588240    0.8705880    1.0000000
+         1.8333300    0.0000000    0.0000000    0.0000001
+    radiuskey 25
+         0.0000000    3.0000000
+         0.0666667   -1.0000000
+         0.1000000    2.0000000
+         0.1666670    1.0000000
+         0.2000000    2.0000000
+         0.2666670    0.0000000
+         0.3666670    2.0000000
+         0.4333330   -3.8000000
+         0.4666670    2.0000000
+         0.5333330    3.0000000
+         0.6000000   -1.0000000
+         0.6333330    2.0000000
+         0.7000000    1.0000000
+         0.7333330    2.0000000
+         0.8000000    0.0000000
+         0.9000000    2.0000000
+         0.9666670   -3.8000000
+         1.0000000    2.0000000
+         1.0666699    2.0000000
+         1.1333300    3.0000000
+         1.2000000   -1.0000000
+         1.2333300    2.0000000
+         1.3000000    1.0000000
+         1.3333300    2.0000000
+         1.4000000    0.0000000
+  endnode
+doneanim cast01 vAR_conegreen
+
+donemodel vAR_conegreen

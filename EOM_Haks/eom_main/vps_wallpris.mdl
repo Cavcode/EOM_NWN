@@ -1,0 +1,249 @@
+#MAXMODEL ASCII
+# model: vps_wallpris
+filedependancy vps_wallpris.max
+newmodel vps_wallpris
+setsupermodel vps_wallpris NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vps_wallpris
+node dummy vps_wallpris
+  parent NULL
+endnode
+node emitter Ring09
+  parent vps_wallpris
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Lighten
+  texture fxpa_Smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.00303075 0 0.0515032
+  orientation 0 0 1 -1.5708
+  colorStart 0.82353 0.329412 0
+  colorEnd 0.764706 0.305882 0
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 8
+  sizeEnd 2
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 3
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.1
+  randvel 0
+  fps 12
+  xsize 100
+  ysize 100
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring10
+  parent vps_wallpris
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_Smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.00303075 0 0.500761
+  orientation 0 0 1 -1.5708
+  colorStart 0.921569 0.478431 0
+  colorEnd 0.909804 0.470588 0
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 4
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.2
+  randvel 0.2
+  fps 12
+  xsize 100
+  ysize 100
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom vps_wallpris
+
+#MAXANIM ASCII
+newanim impact vps_wallpris
+  length 0.3
+  transtime 0
+  animroot vps_wallpris
+  node dummy vps_wallpris
+    parent NULL
+  endnode
+  node emitter Ring09
+    parent vps_wallpris
+    birthratekey 2
+         0.0000000    3.0000000
+         0.3000000    3.0000000
+  endnode
+  node emitter Ring10
+    parent vps_wallpris
+    birthratekey 2
+         0.0000000    4.0000000
+         0.3000000    4.0000000
+  endnode
+doneanim impact vps_wallpris
+
+#MAXANIM ASCII
+newanim duration vps_wallpris
+  length 2
+  transtime 0
+  animroot vps_wallpris
+  node dummy vps_wallpris
+    parent NULL
+  endnode
+  node emitter Ring09
+    parent vps_wallpris
+    birthratekey 2
+         0.0000000    3.0000000
+         2.0000000    3.0000000
+	endlist
+	colorStartkey
+		0.0 0.564706 0.505882 0.996079 
+		0.166667 0.505882 1.0 0.960784 
+		0.333333 0.505882 1.0 0.505882 
+		0.5 0.937255 1.0 0.505882 
+		0.666667 1.0 0.505882 0.505882 
+		0.833333 1.0 0.505882 0.937255 
+		1.0 0.588235 0.505882 1.0 
+		1.16667 0.505882 1.0 0.984314 
+		1.33333 0.588235 1.0 0.505882 
+		1.5 1.0 0.937255 0.505882 
+		1.66667 1.0 0.356863 0.356863 
+		1.83333 0.356863 0.403922 1.0 
+		1.96667 0.643137 1.0 0.356863 
+	endlist
+  endnode
+  node emitter Ring10
+    parent vps_wallpris
+    birthratekey 2
+         0.0000000    4.0000000
+         2.0000000    4.0000000
+	endlist
+	colorStartkey
+		0.0 1.0 0.0823529 0.92549 
+		0.166667 0.505882 1.0 0.92549 
+		0.333333 1.0 0.0 0.0 
+		0.5 0.0 1.0 0.211765 
+		0.666667 0.964706 0.0 1.0 
+		0.833333 1.0 0.635294 0.0 
+		1.0 0.505882 1.0 0.960784 
+		1.16667 0.564706 0.505882 1.0 
+		1.33333 1.0 0.505882 0.505882 
+		1.5 0.988235 1.0 0.0 
+		1.66667 0.635294 1.0 0.0 
+		1.83333 0.0 0.0470588 1.0 
+		1.96667 0.0 0.964706 1.0 
+	endlist
+  endnode
+doneanim duration vps_wallpris
+
+#MAXANIM ASCII
+newanim cessation vps_wallpris
+  length 0.666667
+  transtime 0
+  animroot vps_wallpris
+  node dummy vps_wallpris
+    parent NULL
+  endnode
+  node emitter Ring09
+    parent vps_wallpris
+    birthratekey 2
+         0.0000000    3.0000000
+         0.1666670    0.0000000
+	endlist
+	colorStartkey
+		0.0 0.564706 0.505882 0.996079 
+		0.166667 0.505882 1.0 0.960784 
+		0.333333 0.505882 1.0 0.505882 
+		0.5 0.937255 1.0 0.505882 
+		0.666667 1.0 0.505882 0.505882 
+	endlist
+  endnode
+  node emitter Ring10
+    parent vps_wallpris
+    birthratekey 2
+         0.0000000    4.0000000
+         0.1666670    0.0000000
+	endlist
+	colorStartkey
+		0.0 1.0 0.0823529 0.92549 
+		0.166667 0.505882 1.0 0.92549 
+		0.333333 1.0 0.0 0.0 
+		0.5 0.0 1.0 0.211765 
+		0.666667 0.964706 0.0 1.0 
+	endlist
+  endnode
+doneanim cessation vps_wallpris
+
+donemodel vps_wallpris

@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 hat_mogcap_d 
+texture1 hat_mogcap_n 
+texture2 hat_mogcap_s 
+texture3 null 
+texture4 null 

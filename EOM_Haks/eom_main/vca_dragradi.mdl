@@ -1,0 +1,1813 @@
+#MAXMODEL ASCII
+# model: vca_dragelec
+filedependancy vca_dragelec.max
+newmodel vca_dragelec
+setsupermodel vca_dragelec NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vca_dragelec
+node dummy vca_dragelec
+  parent NULL
+endnode
+node emitter FireBreath02
+  parent vca_dragelec
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Motion_Blur
+  blend Lighten
+  texture fxpa_13water
+  xgrid 8
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.000405725 -0.565031 0.923015
+  orientation 1 0 0 -2.53945
+  colorStart 0.407843 0.407843 0.407843
+  colorEnd 0.505882 0.505882 0.505882
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.3
+  sizeEnd 2
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 31
+  birthrate 40
+  lifeExp 0.5
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 20
+  randvel 1
+  fps 1
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 1
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FireBreath26
+  parent vca_dragelec
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 1
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_13water
+  xgrid 8
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.0699942 1.40591 -1.60366
+  orientation 0 0 -1 -2.74889
+  colorStart 0.156863 0.156863 0.156863
+  colorEnd 0.309804 0.309804 0.309804
+  alphaStart 0.5
+  alphaEnd 0
+  sizeStart 1
+  sizeEnd 4
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 31
+  birthrate 0
+  lifeExp 1
+  mass 0
+  spread 0.0548311
+  particleRot -1.5
+  velocity 0
+  randvel 0.5
+  fps 1
+  xsize 300
+  ysize 300
+  bounce_co 0.2
+  blurlength 0.55
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FireBreath29
+  parent vca_dragelec
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_13water
+  xgrid 8
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.132061 1.40124 -1.6618
+  orientation 0 0 -1 -3.45575
+  colorStart 0.172549 0.172549 0.172549
+  colorEnd 0.309804 0.309804 0.309804
+  alphaStart 0.5
+  alphaEnd 0
+  sizeStart 1
+  sizeEnd 4.3
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 31
+  birthrate 0
+  lifeExp 1
+  mass 0
+  spread 0.0548311
+  particleRot 1.4
+  velocity 0
+  randvel 0.5
+  fps 2
+  xsize 300
+  ysize 301
+  bounce_co 0.2
+  blurlength 0.55
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FireBreath30
+  parent vca_dragelec
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 4
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_13water
+  xgrid 8
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.110204 3.90341 -1.6618
+  orientation 0 0 0 0
+  colorStart 0.196078 0.196078 0.196078
+  colorEnd 0.329412 0.329412 0.329412
+  alphaStart 0.5
+  alphaEnd 0
+  sizeStart 1
+  sizeEnd 4
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 21
+  birthrate 0
+  lifeExp 1
+  mass 0
+  spread 0.0548311
+  particleRot 1.5
+  velocity 0
+  randvel 0.5
+  fps 2
+  xsize 300
+  ysize 300
+  bounce_co 0.2
+  blurlength 0.55
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FireBreath31
+  parent vca_dragelec
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 5
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_13water
+  xgrid 8
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.0618969 3.84213 -1.60366
+  orientation 0 0 0 0
+  colorStart 0.196078 0.196078 0.196078
+  colorEnd 0.368627 0.368627 0.368627
+  alphaStart 0.5
+  alphaEnd 0
+  sizeStart 1
+  sizeEnd 4.3
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 31
+  birthrate 0
+  lifeExp 1
+  mass 0
+  spread 0.0548311
+  particleRot -1.4
+  velocity 0
+  randvel 0.5
+  fps 16
+  xsize 300
+  ysize 300
+  bounce_co 0.2
+  blurlength 0.55
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FireBreath32
+  parent vca_dragelec
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 3
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_13water
+  xgrid 8
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -1.47241 2.38277 -1.60366
+  orientation 0 0 -1 -1.28282
+  colorStart 0.294118 0.294118 0.294118
+  colorEnd 0.329412 0.329412 0.329412
+  alphaStart 0.5
+  alphaEnd 0
+  sizeStart 1
+  sizeEnd 4
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 31
+  birthrate 0
+  lifeExp 1
+  mass 0
+  spread 0.0548311
+  particleRot -1.5
+  velocity 0
+  randvel 0.5
+  fps 16
+  xsize 300
+  ysize 300
+  bounce_co 0.2
+  blurlength 0.55
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FireBreath33
+  parent vca_dragelec
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 2
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_13water
+  xgrid 8
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -1.19419 2.83298 -1.6618
+  orientation 0 -1.20609e-07 -1 -0.785398
+  colorStart 0.215686 0.215686 0.215686
+  colorEnd 0.368627 0.368627 0.368627
+  alphaStart 0.5
+  alphaEnd 0
+  sizeStart 1
+  sizeEnd 4.3
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 31
+  birthrate 0
+  lifeExp 1
+  mass 0
+  spread 0.0548311
+  particleRot 1.5
+  velocity 0
+  randvel 0.5
+  fps 16
+  xsize 300
+  ysize 300
+  bounce_co 0.2
+  blurlength 0.55
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FireBreath34
+  parent vca_dragelec
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 2
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_13water
+  xgrid 8
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 1.41162 2.39657 -1.60366
+  orientation 0 0 1 -1.36136
+  colorStart 0.172549 0.172549 0.172549
+  colorEnd 0.34902 0.34902 0.34902
+  alphaStart 0.5
+  alphaEnd 0
+  sizeStart 1
+  sizeEnd 4
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 31
+  birthrate 0
+  lifeExp 1
+  mass 0
+  spread 0.0548311
+  particleRot -1.5
+  velocity 0
+  randvel 0.5
+  fps 16
+  xsize 300
+  ysize 300
+  bounce_co 0.2
+  blurlength 0.55
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FireBreath35
+  parent vca_dragelec
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 3
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 8
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 1.24198 2.91765 -1.6618
+  orientation 1.19817e-07 0 1 -0.785398
+  colorStart 0.192157 0.192157 0.192157
+  colorEnd 0.329412 0.329412 0.329412
+  alphaStart 0.5
+  alphaEnd 0
+  sizeStart 1
+  sizeEnd 4.4
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 1
+  mass 0
+  spread 0.0548311
+  particleRot 1.5
+  velocity 0
+  randvel 0.5
+  fps 16
+  xsize 300
+  ysize 300
+  bounce_co 0.2
+  blurlength 0.55
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node light FireLight
+  parent vca_dragelec
+  ambientonly 0
+  shadow 1
+  isdynamic 1
+  affectdynamic 1
+  lightpriority 2
+  fadingLight 1
+  flareradius 0
+  position 0.0276352 2.95737 0.0316232
+  orientation 0 0 0 0
+  radius 0
+  multiplier 10
+  color 0.368627 0.368627 0.368627
+endnode
+node emitter Ring35
+  parent vca_dragelec
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.000401324 3.1581 -2.8655
+  orientation 0 0 -1 -0.750492
+  colorStart 0.34902 0.34902 0.34902
+  colorEnd 0.309804 0.309804 0.309804
+  alphaStart 0.5
+  alphaEnd 0
+  sizeStart 12
+  sizeEnd 8
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 9
+  lifeExp 1.5
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.1
+  randvel 0
+  fps 12
+  xsize 600
+  ysize 600
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Ring48
+  parent Ring35
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 2
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.315177 -0.334618 0.656603
+  orientation 0 0 1 -0.750492
+  colorStart 0.0196078 0.0196078 0.0196078
+  colorEnd 0.329412 0.329412 0.329412
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 2
+  sizeEnd 6
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 24
+  birthrate 0
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot -0.2
+  velocity 0.5
+  randvel 0.2
+  fps 25
+  xsize 200
+  ysize 200
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter06
+  parent vca_dragelec
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Lightning
+  render Linked
+  blend Lighten
+  texture Fxpa_Lbolt2L
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.0307708 3.63468 -1.55246
+  orientation 0 -1 0 -3.14159
+  colorStart 0.458824 0.67451 1
+  colorEnd 0.458824 0.67451 1
+  alphaStart 1
+  alphaEnd 0.2
+  sizeStart 0
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 9
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 400
+  ysize 400
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0.15
+  lightningScale 0.1
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node reference OmenRef06
+  parent OmenEmitter06
+  refModel fx_ref
+  reattachable 1
+  position 0 0 1.57447
+  orientation 0 0 0 0
+endnode
+node emitter OmenEmitter07
+  parent vca_dragelec
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Lightning
+  render Linked
+  blend Lighten
+  texture Fxpa_Lbolt2L
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 2.28497 3.07062 -1.55246
+  orientation 0 -1 0 -3.14159
+  colorStart 0.458824 0.67451 1
+  colorEnd 0.458824 0.67451 1
+  alphaStart 1
+  alphaEnd 0.2
+  sizeStart 0
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 9
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 400
+  ysize 400
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0.0500001
+  lightningRadius 0.15
+  lightningScale 0.1
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node reference OmenRef07
+  parent OmenEmitter07
+  refModel fx_ref
+  reattachable 1
+  position 0 0 1.57447
+  orientation 0 0 0 0
+endnode
+node emitter OmenEmitter08
+  parent vca_dragelec
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Lightning
+  render Linked
+  blend Lighten
+  texture Fxpa_Lbolt2L
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -2.50021 2.4644 -1.55246
+  orientation 0 -1 0 -3.14159
+  colorStart 0.458824 0.67451 1
+  colorEnd 0.458824 0.67451 1
+  alphaStart 1
+  alphaEnd 0.2
+  sizeStart 0
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 9
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 400
+  ysize 400
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0.01
+  lightningRadius 0.15
+  lightningScale 0.1
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node reference OmenRef08
+  parent OmenEmitter08
+  refModel fx_ref
+  reattachable 1
+  position 0.000257645 -0.000629549 1.57447
+  orientation 0 0 0 0
+endnode
+node emitter OmenEmitter09
+  parent vca_dragelec
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Lightning
+  render Linked
+  blend Lighten
+  texture Fxpa_Lbolt2L
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -1.10604 0.87771 -1.55246
+  orientation 0 -1 0 -3.14159
+  colorStart 0.458824 0.67451 1
+  colorEnd 0.458824 0.67451 1
+  alphaStart 1
+  alphaEnd 0.2
+  sizeStart 0
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 9
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 400
+  ysize 400
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0.05
+  lightningRadius 0.15
+  lightningScale 0.1
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node reference OmenRef09
+  parent OmenEmitter09
+  refModel fx_ref
+  reattachable 1
+  position 0 0 1.57447
+  orientation 0 0 0 0
+endnode
+node emitter OmenEmitter11
+  parent vca_dragelec
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Lightning
+  render Linked
+  blend Lighten
+  texture Fxpa_Lbolt2L
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 1.52932 4.9709 -1.55246
+  orientation 0 -1 0 -3.14159
+  colorStart 0.458824 0.67451 1
+  colorEnd 0.458824 0.67451 1
+  alphaStart 1
+  alphaEnd 0.2
+  sizeStart 0
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 9
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 400
+  ysize 400
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0.0500001
+  lightningRadius 0.15
+  lightningScale 0.1
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node reference OmenRef10
+  parent OmenEmitter11
+  refModel fx_ref
+  reattachable 1
+  position 0 0 1.57447
+  orientation 0 0 0 0
+endnode
+node emitter OmenEmitter12
+  parent vca_dragelec
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Lightning
+  render Linked
+  blend Lighten
+  texture Fxpa_Lbolt2L
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.939487 4.89039 -1.55246
+  orientation 0 -1 0 -3.14159
+  colorStart 0.458824 0.67451 1
+  colorEnd 0.458824 0.67451 1
+  alphaStart 1
+  alphaEnd 0.2
+  sizeStart 0
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 9
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 400
+  ysize 400
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0.01
+  lightningRadius 0.15
+  lightningScale 0.1
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node reference OmenRef11
+  parent OmenEmitter12
+  refModel fx_ref
+  reattachable 1
+  position 0 0 1.57447
+  orientation 0 0 0 0
+endnode
+node emitter OmenEmitter13
+  parent vca_dragelec
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Lightning
+  render Linked
+  blend Lighten
+  texture Fxpa_Lbolt2L
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 1.6609 1.16094 -3.11204
+  orientation 0 0 1 -3.14159
+  colorStart 0.458824 0.67451 1
+  colorEnd 0.458824 0.67451 1
+  alphaStart 1
+  alphaEnd 0.2
+  sizeStart 0
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 9
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 400
+  ysize 400
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0.03
+  lightningRadius 0.15
+  lightningScale 0.1
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node reference OmenRef12
+  parent OmenEmitter13
+  refModel fx_ref
+  reattachable 1
+  position 0 0 1.57447
+  orientation 0 0 0 0
+endnode
+node emitter OmenEmitter14
+  parent vca_dragelec
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Lightning
+  render Linked
+  blend Lighten
+  texture Fxpa_Lbolt2L
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.429364 2.55896 -3.11204
+  orientation 0 0 1 -3.14159
+  colorStart 0.458824 0.67451 1
+  colorEnd 0.458824 0.67451 1
+  alphaStart 1
+  alphaEnd 0.2
+  sizeStart 0
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 9
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 400
+  ysize 400
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0.03
+  lightningRadius 0.15
+  lightningScale 0.1
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node reference OmenRef13
+  parent OmenEmitter14
+  refModel fx_ref
+  reattachable 1
+  position 0 0 1.57447
+  orientation 0 0 0 0
+endnode
+node emitter OmenEmitter15
+  parent vca_dragelec
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Lightning
+  render Linked
+  blend Lighten
+  texture Fxpa_Lbolt2L
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -1.61706 3.62476 -3.11204
+  orientation 0 0 1 -3.14159
+  colorStart 0.458824 0.67451 1
+  colorEnd 0.458824 0.67451 1
+  alphaStart 1
+  alphaEnd 0.2
+  sizeStart 0
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 9
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 400
+  ysize 400
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0.03
+  lightningRadius 0.15
+  lightningScale 0.1
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node reference OmenRef14
+  parent OmenEmitter15
+  refModel fx_ref
+  reattachable 1
+  position 0 0 1.57447
+  orientation 0 0 0 0
+endnode
+node emitter OmenEmitter16
+  parent vca_dragelec
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Lightning
+  render Linked
+  blend Lighten
+  texture Fxpa_Lbolt2L
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 1.2486 4.44135 -3.11204
+  orientation 0 0 1 -3.14159
+  colorStart 0.458824 0.67451 1
+  colorEnd 0.458824 0.67451 1
+  alphaStart 1
+  alphaEnd 0.2
+  sizeStart 0
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 9
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 400
+  ysize 400
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0.03
+  lightningRadius 0.15
+  lightningScale 0.1
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node reference OmenRef15
+  parent OmenEmitter16
+  refModel fx_ref
+  reattachable 1
+  position 0 0 1.57447
+  orientation 0 0 0 0
+endnode
+node emitter OmenEmitter17
+  parent vca_dragelec
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Lightning
+  render Linked
+  blend Lighten
+  texture Fxpa_Lbolt2L
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.636231 0.5114 -3.11204
+  orientation 0 0 1 -3.14159
+  colorStart 0.458824 0.67451 1
+  colorEnd 0.458824 0.67451 1
+  alphaStart 1
+  alphaEnd 0.2
+  sizeStart 0
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 9
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 400
+  ysize 400
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0.03
+  lightningRadius 0.15
+  lightningScale 0.1
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node reference OmenRef16
+  parent OmenEmitter17
+  refModel fx_ref
+  reattachable 1
+  position 0 0 1.57447
+  orientation 0 0 0 0
+endnode
+endmodelgeom vca_dragelec
+
+#MAXANIM ASCII
+newanim cast01 vca_dragelec
+  length 4.96667
+  transtime 0.25
+  animroot vca_dragelec
+  node dummy vca_dragelec
+    parent NULL
+  endnode
+  node emitter FireBreath02
+    parent vca_dragelec
+    birthratekey 3
+         0.0000000   40.0000000
+         0.9333330   40.0000000
+         0.9666670    0.0000000
+  endnode
+  node emitter FireBreath26
+    parent vca_dragelec
+    positionkey 3
+         0.0000000   -0.0699942    1.4059100   -1.0036600
+         0.3666670   -0.0724031    1.0768600   -1.0036600
+         2.4000001   -1.2944400   -1.8733900   -1.0036600
+    birthratekey 6
+         0.0000000    0.0000000
+         0.2000000    0.0000000
+         0.2333330   40.0000000
+         0.3666670   30.0000000
+         1.8333300   30.0000000
+         1.8666700    0.0000000
+    xsizekey 3
+         0.3666670  300.0000000
+         1.4666700  300.0000000
+         1.9666700  350.0000000
+    ysizekey 3
+         0.0000000  300.0000000
+         0.3666670  300.0000000
+         1.9666700  100.0000000
+  endnode
+  node emitter FireBreath29
+    parent vca_dragelec
+    positionkey 3
+         0.0000000    0.1320610    1.4012400   -1.0618000
+         0.3666670    0.1320610    1.0780100   -1.0618000
+         2.4000001    1.1188600   -1.9590300   -1.0618000
+    birthratekey 5
+         0.0000000    0.0000000
+         0.2000000    0.0000000
+         0.2333330   40.0000000
+         1.8333300   40.0000000
+         1.8666700    0.0000000
+    xsizekey 3
+         0.3666670  300.0000000
+         1.3333300  300.0000000
+         1.8666700  350.0000000
+    ysizekey 2
+         0.3666670  300.0000000
+         1.8333300  100.0000000
+  endnode
+  node emitter FireBreath30
+    parent vca_dragelec
+    positionkey 3
+         0.0000000   -0.1102040    3.9034100   -1.0618000
+         0.3666670   -0.1102040    4.1447001   -1.0618000
+         2.5666699   -0.1102040    8.3563204   -1.0618000
+    birthratekey 5
+         0.0000000    0.0000000
+         0.3333330    0.0000000
+         0.3666670   40.0000000
+         1.9333301   40.0000000
+         1.9666700    0.0000000
+    ysizekey 3
+         0.0000000  300.0000000
+         1.1333300  300.0000000
+         1.8666700  100.0000000
+  endnode
+  node emitter FireBreath31
+    parent vca_dragelec
+    positionkey 3
+         0.0000000    0.0618969    3.8421299   -1.0036600
+         0.3666670    0.0618969    4.0834198   -1.0036600
+         2.5666699    0.0618970    8.2950401   -1.0036600
+    birthratekey 5
+         0.0000000    0.0000000
+         0.3333330    0.0000000
+         0.3666670   30.0000000
+         1.9333301   30.0000000
+         1.9666700    0.0000000
+    ysizekey 3
+         0.0000000  300.0000000
+         1.1333300  300.0000000
+         1.8666700  100.0000000
+  endnode
+  node emitter FireBreath32
+    parent vca_dragelec
+    positionkey 3
+         0.0000000   -1.4724100    2.3827701   -1.0036600
+         0.3666670   -1.6430200    2.5533800   -1.0036600
+         2.5666699   -5.9561801    3.1508300   -1.0036600
+    orientationkey 3
+         0.0000000   -0.0000000   -0.0000000   -1.0000000   -1.2828200
+         1.1333300   -0.0000000   -0.0000000   -1.0000000   -1.2566400
+         2.5666699   -0.0000000   -0.0000000   -1.0000000   -1.7540600
+    birthratekey 5
+         0.0000000    0.0000000
+         0.3000000    0.0000000
+         0.3333330   40.0000000
+         1.8666700   40.0000000
+         1.9000000    0.0000000
+    xsizekey 3
+         0.0000000  300.0000000
+         1.1333300  300.0000000
+         1.8666700  350.0000000
+    ysizekey 3
+         0.0000000  300.0000000
+         1.1333300  300.0000000
+         1.8666700  100.0000000
+  endnode
+  node emitter FireBreath33
+    parent vca_dragelec
+    positionkey 3
+         0.0000000   -1.1941900    2.8329799   -1.0618000
+         0.3666670   -1.3648000    3.0035901   -1.0618000
+         2.5666699   -4.5197701    6.1585598   -1.0618000
+    birthratekey 6
+         0.0000000    0.0000000
+         0.3000000    0.0000000
+         0.3333330   30.0000000
+         0.3666670   30.0000000
+         1.8666700   30.0000000
+         1.9000000    0.0000000
+    xsizekey 3
+         0.0000000  300.0000000
+         1.1333300  300.0000000
+         1.8666700  350.0000000
+    ysizekey 3
+         0.0000000  300.0000000
+         1.1333300  300.0000000
+         1.8666700  100.0000000
+  endnode
+  node emitter FireBreath34
+    parent vca_dragelec
+    positionkey 2
+         0.0000000    1.4116200    2.3965700   -1.0036600
+         2.5666699    5.9602299    2.9714601   -1.0036600
+    orientationkey 3
+         0.0000000   -0.0000000   -0.0000000    1.0000000   -1.3613600
+         1.1333300   -0.0000000   -0.0000000    1.0000000   -1.3875400
+         2.5666699   -0.0000000   -0.0000000    1.0000000   -1.7278800
+    birthratekey 5
+         0.0000000    0.0000000
+         0.3000000    0.0000000
+         0.3333330   40.0000000
+         1.8666700   40.0000000
+         1.9000000    0.0000000
+    xsizekey 3
+         0.0000000  300.0000000
+         1.1333300  300.0000000
+         1.8666700  350.0000000
+    ysizekey 3
+         0.0000000  300.0000000
+         1.1333300  300.0000000
+         1.8666700  100.0000000
+  endnode
+  node emitter FireBreath35
+    parent vca_dragelec
+    positionkey 3
+         0.0000000    1.2419800    2.9176500   -1.0618000
+         0.3666670    1.4126000    3.0882699   -1.0618000
+         2.5666699    4.5675602    6.2432299   -1.0618000
+    birthratekey 5
+         0.0000000    0.0000000
+         0.3000000    0.0000000
+         0.3333330   30.0000000
+         1.8666700   30.0000000
+         1.9000000    0.0000000
+    xsizekey 3
+         0.0000000  300.0000000
+         1.1333300  300.0000000
+         1.8666700  350.0000000
+    ysizekey 3
+         0.0000000  300.0000000
+         1.1333300  300.0000000
+         1.8666700  100.0000000
+  endnode
+  node light FireLight
+    parent vca_dragelec
+    colorkey 49
+         0.0000000    0.3686270    0.3686270    0.3686270
+         0.1000000    0.3686270    0.3686270    0.3686270
+         0.1666670    0.4392150    0.7450980    1.0000000
+         0.2000000    0.3058820    0.2588240    0.2117650
+         0.2666670    0.4392150    0.7450980    1.0000000
+         0.3333330    0.3058820    0.2588240    0.2117650
+         0.3666670    0.4392150    0.7450980    1.0000000
+         0.4333330    0.3058820    0.2588240    0.2117650
+         0.4666670    0.4392150    0.7450980    1.0000000
+         0.5333330    0.3058820    0.2588240    0.2117650
+         0.5666670    0.4392150    0.7450980    1.0000000
+         0.6333330    0.3058820    0.2588240    0.2117650
+         0.7000000    0.4392150    0.7450980    1.0000000
+         0.7666670    0.3058820    0.2588240    0.2117650
+         0.8000000    0.4392150    0.7450980    1.0000000
+         0.8666670    0.3058820    0.2588240    0.2117650
+         0.9333330    0.3058820    0.2588240    0.2117650
+         1.0000000    0.4392150    0.7450980    1.0000000
+         1.0666699    0.4392150    0.7450980    1.0000000
+         1.1333300    0.3058820    0.2588240    0.2117650
+         1.2000000    0.3058820    0.2588240    0.2117650
+         1.2666700    0.4392150    0.7450980    1.0000000
+         1.3333300    0.3058820    0.2588240    0.2117650
+         1.3666700    0.3058820    0.2588240    0.2117650
+         1.4000000    0.4392150    0.7450980    1.0000000
+         1.4666700    0.4392150    0.7450980    1.0000000
+         1.5666699    0.3058820    0.2588240    0.2117650
+         1.6333300    0.4392150    0.7450980    1.0000000
+         1.7333300    0.3058820    0.2588240    0.2117650
+         1.8000000    0.4392150    0.7450980    1.0000000
+         1.9000000    0.3058820    0.2588240    0.2117650
+         1.9666700    0.3058820    0.2588240    0.2117650
+         2.0333300    0.4392150    0.7450980    1.0000000
+         2.1333301    0.3058820    0.2588240    0.2117650
+         2.2000000    0.4392150    0.7450980    1.0000000
+         2.2333300    0.3058820    0.2588240    0.2117650
+         2.3000000    0.4392150    0.7450980    1.0000000
+         2.3666699    0.3058820    0.2588240    0.2117650
+         2.4333301    0.4392150    0.7450980    1.0000000
+         2.5000000    0.3058820    0.2588240    0.2117650
+         2.5666699    0.4392150    0.7450980    1.0000000
+         2.6333301    0.3058820    0.2588240    0.2117650
+         2.7666700    0.3058820    0.2588240    0.2117650
+         2.8333299    0.3058820    0.2588240    0.2117650
+         2.9000001    0.4392150    0.7450980    1.0000000
+         2.9666700    0.3058820    0.2588240    0.2117650
+         3.0333300    0.4392150    0.7450980    1.0000000
+         3.0666699    0.3058820    0.2588240    0.2117650
+         3.1666701    0.3058820    0.2588240    0.2117650
+    radiuskey 8
+         0.0000000    0.0000000
+         0.1000000    0.0000000
+         0.2000000    0.0000000
+         0.6333330   10.0000000
+         0.6666670   10.0000000
+         2.6666701   10.0000000
+         2.7000000   10.0000000
+         3.1333301    0.0000000
+  endnode
+  node emitter Ring35
+    parent vca_dragelec
+    birthratekey 4
+         0.0000000    9.0000000
+         0.5666670   15.0000000
+         2.2666700   20.0000000
+         2.3000000    0.0000000
+  endnode
+  node emitter Ring48
+    parent Ring35
+    birthratekey 6
+         0.0000000    0.0000000
+         0.0333333    0.0000000
+         0.0666667    9.0000000
+         0.6000000   15.0000000
+         1.4666700   16.0000000
+         1.5000000    0.0000000
+  endnode
+  node emitter OmenEmitter06
+    parent vca_dragelec
+    sizeEndkey 4
+         0.0000000    0.0000000
+         0.2333330    0.1200000
+         2.0999999    0.1200000
+         2.1333301    0.0000000
+  endnode
+  node dummy OmenRef06
+    parent OmenEmitter06
+  endnode
+  node emitter OmenEmitter07
+    parent vca_dragelec
+    sizeEndkey 4
+         0.0000000    0.0000000
+         0.2333330    0.1200000
+         2.0999999    0.1200000
+         2.1333301    0.0000000
+  endnode
+  node dummy OmenRef07
+    parent OmenEmitter07
+  endnode
+  node emitter OmenEmitter08
+    parent vca_dragelec
+    sizeEndkey 4
+         0.0000000    0.0000000
+         0.2333330    0.1200000
+         2.0999999    0.1200000
+         2.1333301    0.0000000
+  endnode
+  node dummy OmenRef08
+    parent OmenEmitter08
+  endnode
+  node emitter OmenEmitter09
+    parent vca_dragelec
+    sizeEndkey 4
+         0.0000000    0.0000000
+         0.2333330    0.1200000
+         2.0999999    0.1200000
+         2.1333301    0.0000000
+  endnode
+  node dummy OmenRef09
+    parent OmenEmitter09
+  endnode
+  node emitter OmenEmitter11
+    parent vca_dragelec
+    sizeEndkey 4
+         0.0000000    0.0000000
+         0.2333330    0.1200000
+         2.0999999    0.1200000
+         2.1333301    0.0000000
+  endnode
+  node dummy OmenRef10
+    parent OmenEmitter11
+  endnode
+  node emitter OmenEmitter12
+    parent vca_dragelec
+    sizeEndkey 4
+         0.0000000    0.0000000
+         0.2333330    0.1200000
+         2.0999999    0.1200000
+         2.1333301    0.0000000
+  endnode
+  node dummy OmenRef11
+    parent OmenEmitter12
+  endnode
+  node emitter OmenEmitter13
+    parent vca_dragelec
+    sizeEndkey 4
+         0.0000000    0.0000000
+         0.2333330    0.1200000
+         2.0999999    0.1200000
+         2.1333301    0.0000000
+  endnode
+  node dummy OmenRef12
+    parent OmenEmitter13
+  endnode
+  node emitter OmenEmitter14
+    parent vca_dragelec
+    sizeEndkey 4
+         0.0000000    0.0000000
+         0.2333330    0.1200000
+         2.0999999    0.1200000
+         2.1333301    0.0000000
+  endnode
+  node dummy OmenRef13
+    parent OmenEmitter14
+  endnode
+  node emitter OmenEmitter15
+    parent vca_dragelec
+    sizeEndkey 4
+         0.0000000    0.0000000
+         0.2333330    0.1200000
+         2.0999999    0.1200000
+         2.1333301    0.0000000
+  endnode
+  node dummy OmenRef14
+    parent OmenEmitter15
+  endnode
+  node emitter OmenEmitter16
+    parent vca_dragelec
+    sizeEndkey 4
+         0.0000000    0.0000000
+         0.2333330    0.1200000
+         2.0999999    0.1200000
+         2.1333301    0.0000000
+  endnode
+  node dummy OmenRef15
+    parent OmenEmitter16
+  endnode
+  node emitter OmenEmitter17
+    parent vca_dragelec
+    sizeEndkey 4
+         0.0000000    0.0000000
+         0.2333330    0.1200000
+         2.0999999    0.1200000
+         2.1333301    0.0000000
+  endnode
+  node dummy OmenRef16
+    parent OmenEmitter17
+  endnode
+doneanim cast01 vca_dragelec
+
+donemodel vca_dragelec

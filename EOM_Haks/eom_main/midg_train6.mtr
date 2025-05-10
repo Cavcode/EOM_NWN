@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 midg_train6 
+texture1 midg_train6_n 
+texture2 midg_train6_s 
+texture3 midg_train6_r 
+texture4 null 

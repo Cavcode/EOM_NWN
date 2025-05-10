@@ -1,0 +1,154 @@
+# Exported from NWmax 0.8 b60 at 09/12/2009 17:47:58
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: WWhip_fxpurp
+#local file: Unknown
+filedependancy Unknown
+newmodel WWhip_fxpurp
+setsupermodel WWhip_fxpurp NULL
+classification Character
+setanimationscale 1.0
+#NWmax GEOM  ASCII
+beginmodelgeom WWhip_fxpurp
+node dummy WWhip_fxpurp
+  parent NULL
+endnode
+node emitter g_WSwGs_V_Fire01
+  parent WWhip_fxpurp
+  position 0.0 -0.024562 -0.0001544
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 1.0 1.0 1.0 
+  update_sel 1
+  update Fountain
+  render_sel 1
+  render Normal
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 0
+  spawnType 0
+  xSize 20.0
+  ySize 32.0
+  inherit 1
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorstart 0.19 0.05 0.43
+  colorend 0.19 0.05 0.43 
+  alphaStart 0.4
+  alphaEnd 0.0
+  sizeStart 0.0
+  sizeEnd 0.75
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 10
+  lifeExp 2.0
+  Mass 0.0
+  spread 0.174533
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 10.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  Splat 0
+  affectedByWind false
+  texture fxpra_fire01l
+  twosidedtex 0
+  xgrid 2
+  ygrid 2
+  fps 16
+  framestart 0
+  frameend 3
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  Drag 0.0
+endnode
+node emitter g_WSwGs_V_Fire
+  parent WWhip_fxpurp
+  position 0.0 -0.0194754 -0.000154405
+  orientation 0.0 -1.0 0.0 -1.5708
+  wirecolor 1.0 1.0 1.0 
+  update_sel 1
+  update Fountain
+  render_sel 1
+  render Normal
+  blend_sel 3
+  Blend Lighten
+  spawntype_sel 0
+  spawnType 0
+  xSize 20.0
+  ySize 32.0
+  inherit 1
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorstart 0.19 0.05 0.43
+  colorend 0.19 0.05 0.43 
+  alphaStart 0.4
+  alphaEnd 0.0
+  sizeStart 0.0
+  sizeEnd 0.75
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 10
+  lifeExp 2.0
+  Mass 0.0
+  spread 0.174533
+  particleRot 0.0
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 10.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  Splat 0
+  affectedByWind false
+  texture fxpra_fire01l
+  twosidedtex 0
+  xgrid 2
+  ygrid 2
+  fps 16
+  framestart 0
+  frameend 3
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  Drag 0.0
+endnode
+endmodelgeom WWhip_fxpurp
+donemodel WWhip_fxpurp

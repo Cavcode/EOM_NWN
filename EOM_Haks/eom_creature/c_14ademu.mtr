@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 c_14ademu
+texture1 c_14admn_n 
+texture2 c_14admn_s 
+texture3 null 
+texture4 null 

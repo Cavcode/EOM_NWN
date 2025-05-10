@@ -1,0 +1,10 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 c_la_wreck2 
+texture1 null 
+texture2 null 
+texture3 null
+texture4 null 
+texture5 c_la_wreck2_i 

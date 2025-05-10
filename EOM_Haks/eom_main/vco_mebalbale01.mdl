@@ -1,0 +1,796 @@
+#MAXMODEL ASCII
+# model: vco_mebalfire01
+filedependancy vco_mebalbale01.max
+newmodel vco_mebalbale01
+setsupermodel vco_mebalbale01 NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vco_mebalbale01
+node dummy vco_mebalbale01
+  parent NULL
+endnode
+node light AuroraLight01
+  parent vco_mebalbale01
+  ambientonly 0
+  shadow 0
+  isdynamic 1
+  affectdynamic 1
+  lightpriority 3
+  fadingLight 1
+  flareradius 0
+  position -0.00142784 0.168746 -0.128523
+  orientation -1 0 0 -1.5708
+  radius 5
+  multiplier 1.6
+  color 0.2 0 0.4
+endnode
+node dummy Dummy01
+  parent vco_mebalbale01
+  position 0 0 0
+  orientation 0 0 1 -0.785398
+endnode
+node emitter OmenEmitter06
+  parent Dummy01
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.00304222 -1.34366 -0.189062
+  orientation 0 0 -1 -1.5708
+  colorStart 0.15 0 0.35
+  colorEnd 0.2 0 0.4
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.2
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 25
+  lifeExp 0.3
+  mass 0
+  spread 6.28319
+  particleRot 0
+  velocity 0.2
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter07
+  parent Dummy01
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.00298622 -0.397053 -1.16084
+  orientation 0 0 -1 -1.5708
+  colorStart 0.15 0 0.35
+  colorEnd 0.2 0 0.4
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.2
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 25
+  lifeExp 0.3
+  mass 0
+  spread 6.28319
+  particleRot 0
+  velocity 0.2
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter02
+  parent Dummy01
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.0225163 -0.371551 0.786963
+  orientation 0 0 -1 -1.5708
+  colorStart 0.15 0 0.35
+  colorEnd 0.2 0 0.4
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.2
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 25
+  lifeExp 0.3
+  mass 0
+  spread 6.28319
+  particleRot 0
+  velocity 0.2
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter04
+  parent Dummy01
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.028489 -0.37155 -1.16084
+  orientation 0 0 -1 -1.5708
+  colorStart 0.15 0 0.35
+  colorEnd 0.2 0 0.4
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.2
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 25
+  lifeExp 0.3
+  mass 0
+  spread 6.28319
+  particleRot 0
+  velocity 0.2
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter05
+  parent Dummy01
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.697622 0.3113 -0.168749
+  orientation 0 0 -1 -1.5708
+  colorStart 0.15 0 0.35
+  colorEnd 0.2 0 0.4
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.2
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 25
+  lifeExp 0.3
+  mass 0
+  spread 6.28319
+  particleRot 0
+  velocity 0.2
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter01
+  parent Dummy01
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.00304161 0.604809 -0.189062
+  orientation 0 0 -1 -1.5708
+  colorStart 0.15 0 0.35
+  colorEnd 0.2 0 0.4
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.2
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 25
+  lifeExp 0.3
+  mass 0
+  spread 6.28319
+  particleRot 0
+  velocity 0.2
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter03
+  parent Dummy01
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.00304176 0.604809 -0.189062
+  orientation 0 0 -1 -1.5708
+  colorStart 0.15 0 0.35
+  colorEnd 0.2 0 0.4
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.2
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 25
+  lifeExp 0.3
+  mass 0
+  spread 6.28319
+  particleRot 0
+  velocity 0.2
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom vco_mebalbale01
+
+#MAXANIM ASCII
+newanim conjure01 vco_mebalbale01
+  length 0.966667
+  transtime 0.25
+  animroot vco_mebalbale01
+  node dummy vco_mebalbale01
+    parent NULL
+  endnode
+  node light AuroraLight01
+    parent vco_mebalbale01
+    colorkey 3
+         0.0000000    0.9098040    0.4705880    0.0000000
+         0.3333330    1.0000000    1.0000000    0.0945717
+         0.9666670    0.9098040    0.4705880    0.0000000
+  endnode
+  node dummy Dummy01
+    parent vco_mebalbale01
+    orientationkey 5
+         0.0000000   -0.0000000   -0.0000000    1.0000000   -0.7853980
+         0.3666670   -0.0000000   -0.0000000   -1.0000000   -0.4450590
+         0.4000000   -0.0000000   -0.0000000   -1.0000000   -0.4799660
+         0.4333330   -0.0000000   -0.0000000   -1.0000000   -0.4450590
+         0.9666670   -0.0000000   -0.0000000    1.0000000   -0.7853980
+  endnode
+  node emitter OmenEmitter06
+    parent Dummy01
+    positionkey 15
+         0.0000000   -0.0030422   -1.3436600   -0.1890620
+         0.0689583   -0.4312740   -1.2445500   -0.1890620
+         0.1379170   -0.7630960   -0.9785570   -0.1890620
+         0.2070830   -0.9515210   -0.5926570   -0.1890620
+         0.2760420   -0.9515210   -0.1461960   -0.1890620
+         0.3452080   -0.7630950    0.2397040   -0.1890620
+         0.4141670   -0.4312730    0.5057010   -0.1890620
+         0.4833330   -0.0030415    0.6048080   -0.1890620
+         0.5522920    0.4251900    0.5057010   -0.1890620
+         0.6212500    0.7570120    0.2397030   -0.1890620
+         0.6904170    0.9454380   -0.1461970   -0.1890620
+         0.7593750    0.9454370   -0.5926570   -0.1890620
+         0.8285420    0.7570110   -0.9785580   -0.1890620
+         0.8975000    0.4251900   -1.2445500   -0.1890620
+         0.9666670   -0.0030422   -1.3436600   -0.1890620
+    sizeStartkey 1
+         0.9666670    0.2000000
+  endnode
+  node emitter OmenEmitter07
+    parent Dummy01
+    positionkey 15
+         0.0000000   -0.0029862   -0.3970530   -1.1608400
+         0.0689583    0.4252450   -0.3944590   -1.0617700
+         0.1379170    0.7570670   -0.3874960   -0.7958600
+         0.2070830    0.9454930   -0.3773940   -0.4100920
+         0.2760420    0.9454930   -0.3657070    0.0362153
+         0.3452080    0.7570670   -0.3556050    0.4219830
+         0.4141670    0.4252450   -0.3486420    0.6878890
+         0.4833330   -0.0029865   -0.3460480    0.7869630
+         0.5522920   -0.4312180   -0.3486420    0.6878890
+         0.6212500   -0.7630400   -0.3556050    0.4219830
+         0.6904170   -0.9514660   -0.3657070    0.0362147
+         0.7593750   -0.9514660   -0.3773940   -0.4100930
+         0.8285420   -0.7630400   -0.3874960   -0.7958610
+         0.8975000   -0.4312180   -0.3944590   -1.0617700
+         0.9666670   -0.0029862   -0.3970530   -1.1608400
+    sizeStartkey 2
+         0.0000000    0.2000000
+         0.9666670    0.2000000
+  endnode
+  node emitter OmenEmitter02
+    parent Dummy01
+    positionkey 15
+         0.0000000    0.0225163   -0.3715510    0.7869630
+         0.0689583   -0.2827800   -0.6743560    0.6958160
+         0.1379170   -0.5242960   -0.9089900    0.4360510
+         0.2070830   -0.6675890   -1.0422300    0.0537711
+         0.2760420   -0.6792760   -1.0422300   -0.3925360
+         0.3452080   -0.5561860   -0.9089900   -0.7817920
+         0.4141670   -0.3285960   -0.6743560   -1.0538400
+         0.4833330   -0.0284887   -0.3715500   -1.1608400
+         0.5522920    0.2768070   -0.0687449   -1.0696900
+         0.6212500    0.5183240    0.1658890   -0.8099290
+         0.6904170    0.6616170    0.2991260   -0.4276480
+         0.7593750    0.6733040    0.2991260    0.0186589
+         0.8285420    0.5502140    0.1658880    0.4079150
+         0.8975000    0.3226240   -0.0687452    0.6799630
+         0.9666670    0.0225163   -0.3715510    0.7869630
+    sizeStartkey 1
+         0.9666670    0.2000000
+  endnode
+  node emitter OmenEmitter04
+    parent Dummy01
+    positionkey 15
+         0.0000000   -0.0284890   -0.3715500   -1.1608400
+         0.0689583   -0.0258946    0.0566811   -1.0617700
+         0.1379170   -0.0189315    0.3885030   -0.7958600
+         0.2070830   -0.0088297    0.5769290   -0.4100920
+         0.2760420    0.0028574    0.5769290    0.0362154
+         0.3452080    0.0129591    0.3885030    0.4219830
+         0.4141670    0.0199221    0.0566806    0.6878890
+         0.4833330    0.0225164   -0.3715510    0.7869630
+         0.5522920    0.0199220   -0.7997830    0.6878890
+         0.6212500    0.0129589   -1.1316000    0.4219830
+         0.6904170    0.0028571   -1.3200300    0.0362145
+         0.7593750   -0.0088299   -1.3200300   -0.4100930
+         0.8285420   -0.0189317   -1.1316000   -0.7958610
+         0.8975000   -0.0258947   -0.7997820   -1.0617700
+         0.9666670   -0.0284890   -0.3715500   -1.1608400
+    sizeStartkey 1
+         0.9666670    0.2000000
+  endnode
+  node emitter OmenEmitter05
+    parent Dummy01
+    positionkey 15
+         0.0000000   -0.6976220    0.3113000   -0.1687490
+         0.0689583   -0.6157480    0.2418340    0.2574860
+         0.1379170   -0.4174040    0.0553944    0.5842280
+         0.2070830   -0.1373220   -0.2150870    0.7653840
+         0.2760420    0.1810070   -0.5280150    0.7570480
+         0.3452080    0.4512230   -0.7984960    0.5614810
+         0.4141670    0.6321950   -0.9849360    0.2248070
+         0.4833330    0.6916490   -1.0544000   -0.2051290
+         0.5522920    0.6097750   -0.9849360   -0.6313630
+         0.6212500    0.4114310   -0.7984960   -0.9581050
+         0.6904170    0.1313500   -0.5280140   -1.1392601
+         0.7593750   -0.1869790   -0.2150860   -1.1309299
+         0.8285420   -0.4571960    0.0553948   -0.9353590
+         0.8975000   -0.6381680    0.2418350   -0.5986840
+         0.9666670   -0.6976220    0.3113000   -0.1687490
+    sizeStartkey 1
+         0.9666670    0.2000000
+  endnode
+  node emitter OmenEmitter01
+    parent Dummy01
+    positionkey 15
+         0.0000000   -0.0030416    0.6048090   -0.1890620
+         0.0689583    0.2997640    0.5057010   -0.4918670
+         0.1379170    0.5343970    0.2397040   -0.7265010
+         0.2070830    0.6676340   -0.1461970   -0.8597380
+         0.2760420    0.6676340   -0.5926570   -0.8597380
+         0.3452080    0.5343970   -0.9785580   -0.7265010
+         0.4141670    0.2997630   -1.2445500   -0.4918670
+         0.4833330   -0.0030421   -1.3436600   -0.1890620
+         0.5522920   -0.3058480   -1.2445500    0.1137440
+         0.6212500   -0.5404810   -0.9785570    0.3483780
+         0.6904170   -0.6737180   -0.5926570    0.4816150
+         0.7593750   -0.6737180   -0.1461960    0.4816150
+         0.8285420   -0.5404810    0.2397040    0.3483770
+         0.8975000   -0.3058470    0.5057010    0.1137440
+         0.9666670   -0.0030416    0.6048090   -0.1890620
+    sizeStartkey 1
+         0.9666670    0.2000000
+  endnode
+  node emitter OmenEmitter03
+    parent Dummy01
+    positionkey 15
+         0.0000000   -0.0030418    0.6048090   -0.1890620
+         0.0689583    0.2606040    0.5057010    0.1483890
+         0.1379170    0.4648940    0.2397040    0.4098690
+         0.2070830    0.5809000   -0.1461970    0.5583500
+         0.2760420    0.5809000   -0.5926570    0.5583500
+         0.3452080    0.4648940   -0.9785580    0.4098690
+         0.4141670    0.2606040   -1.2445500    0.1483890
+         0.4833330   -0.0030420   -1.3436600   -0.1890620
+         0.5522920   -0.2666880   -1.2445500   -0.5265130
+         0.6212500   -0.4709780   -0.9785570   -0.7879930
+         0.6904170   -0.5869840   -0.5926570   -0.9364740
+         0.7593750   -0.5869840   -0.1461960   -0.9364740
+         0.8285420   -0.4709770    0.2397040   -0.7879920
+         0.8975000   -0.2666880    0.5057010   -0.5265130
+         0.9666670   -0.0030418    0.6048090   -0.1890620
+    sizeStartkey 1
+         0.9666670    0.2000000
+  endnode
+doneanim conjure01 vco_mebalbale01
+
+#MAXANIM ASCII
+newanim fade vco_mebalbale01
+  length 1.13333
+  transtime 0.25
+  animroot vco_mebalbale01
+  node dummy vco_mebalbale01
+    parent NULL
+  endnode
+  node light AuroraLight01
+    parent vco_mebalbale01
+    colorkey 2
+         0.0000000    0.9098040    0.4705880    0.0000000
+         0.6333330    0.0000001    0.0000000    0.0000000
+  endnode
+  node dummy Dummy01
+    parent vco_mebalbale01
+  endnode
+  node emitter OmenEmitter06
+    parent Dummy01
+    positionkey 14
+         0.0356249   -0.4312740   -1.2445500   -0.1890620
+         0.1045830   -0.7630960   -0.9785570   -0.1890620
+         0.1737500   -0.9515210   -0.5926570   -0.1890620
+         0.2427080   -0.9515210   -0.1461960   -0.1890620
+         0.3118750   -0.7630950    0.2397040   -0.1890620
+         0.3808330   -0.4312730    0.5057010   -0.1890620
+         0.4500000   -0.0030415    0.6048080   -0.1890620
+         0.5189580    0.4251900    0.5057010   -0.1890620
+         0.5879170    0.7570120    0.2397030   -0.1890620
+         0.6570830    0.9454380   -0.1461970   -0.1890620
+         0.7260420    0.9454370   -0.5926570   -0.1890620
+         0.7952080    0.7570110   -0.9785580   -0.1890620
+         0.8641670    0.4251900   -1.2445500   -0.1890620
+         0.9333330   -0.0030422   -1.3436600   -0.1890620
+    sizeStartkey 2
+         0.0333333    0.2000000
+         0.9333330    0.0000000
+  endnode
+  node emitter OmenEmitter07
+    parent Dummy01
+    positionkey 14
+         0.0356249    0.4252450   -0.3944590   -1.0617700
+         0.1045830    0.7570670   -0.3874960   -0.7958600
+         0.1737500    0.9454930   -0.3773940   -0.4100920
+         0.2427080    0.9454930   -0.3657070    0.0362153
+         0.3118750    0.7570670   -0.3556050    0.4219830
+         0.3808330    0.4252450   -0.3486420    0.6878890
+         0.4500000   -0.0029865   -0.3460480    0.7869630
+         0.5189580   -0.4312180   -0.3486420    0.6878890
+         0.5879170   -0.7630400   -0.3556050    0.4219830
+         0.6570830   -0.9514660   -0.3657070    0.0362147
+         0.7260420   -0.9514660   -0.3773940   -0.4100930
+         0.7952080   -0.7630400   -0.3874960   -0.7958610
+         0.8641670   -0.4312180   -0.3944590   -1.0617700
+         0.9333330   -0.0029862   -0.3970530   -1.1608400
+    sizeStartkey 2
+         0.0333333    0.2000000
+         0.9333330    0.0000000
+  endnode
+  node emitter OmenEmitter02
+    parent Dummy01
+    positionkey 14
+         0.0356249   -0.2827800   -0.6743560    0.6958160
+         0.1045830   -0.5242960   -0.9089900    0.4360510
+         0.1737500   -0.6675890   -1.0422300    0.0537711
+         0.2427080   -0.6792760   -1.0422300   -0.3925360
+         0.3118750   -0.5561860   -0.9089900   -0.7817920
+         0.3808330   -0.3285960   -0.6743560   -1.0538400
+         0.4500000   -0.0284887   -0.3715500   -1.1608400
+         0.5189580    0.2768070   -0.0687449   -1.0696900
+         0.5879170    0.5183240    0.1658890   -0.8099290
+         0.6570830    0.6616170    0.2991260   -0.4276480
+         0.7260420    0.6733040    0.2991260    0.0186589
+         0.7952080    0.5502140    0.1658880    0.4079150
+         0.8641670    0.3226240   -0.0687452    0.6799630
+         0.9333330    0.0225163   -0.3715510    0.7869630
+    sizeStartkey 2
+         0.0333333    0.2000000
+         0.9333330    0.0000000
+  endnode
+  node emitter OmenEmitter04
+    parent Dummy01
+    positionkey 15
+         0.0333333   -0.0284890   -0.3715500   -1.1608400
+         0.1022920   -0.0258946    0.0566811   -1.0617700
+         0.1712500   -0.0189315    0.3885030   -0.7958600
+         0.2404170   -0.0088297    0.5769290   -0.4100920
+         0.3093750    0.0028574    0.5769290    0.0362154
+         0.3785420    0.0129591    0.3885030    0.4219830
+         0.4475000    0.0199221    0.0566806    0.6878890
+         0.5166670    0.0225164   -0.3715510    0.7869630
+         0.5856250    0.0199220   -0.7997830    0.6878890
+         0.6545830    0.0129589   -1.1316000    0.4219830
+         0.7237500    0.0028571   -1.3200300    0.0362145
+         0.7927080   -0.0088299   -1.3200300   -0.4100930
+         0.8618750   -0.0189317   -1.1316000   -0.7958610
+         0.9308330   -0.0258947   -0.7997820   -1.0617700
+         1.0000000   -0.0284890   -0.3715500   -1.1608400
+    sizeStartkey 2
+         0.0333333    0.2000000
+         1.0000000    0.0000000
+  endnode
+  node emitter OmenEmitter05
+    parent Dummy01
+    positionkey 14
+         0.0356249   -0.6157480    0.2418340    0.2574860
+         0.1045830   -0.4174040    0.0553944    0.5842280
+         0.1737500   -0.1373220   -0.2150870    0.7653840
+         0.2427080    0.1810070   -0.5280150    0.7570480
+         0.3118750    0.4512230   -0.7984960    0.5614810
+         0.3808330    0.6321950   -0.9849360    0.2248070
+         0.4500000    0.6916490   -1.0544000   -0.2051290
+         0.5189580    0.6097750   -0.9849360   -0.6313630
+         0.5879170    0.4114310   -0.7984960   -0.9581050
+         0.6570830    0.1313500   -0.5280140   -1.1392601
+         0.7260420   -0.1869790   -0.2150860   -1.1309299
+         0.7952080   -0.4571960    0.0553948   -0.9353590
+         0.8641670   -0.6381680    0.2418350   -0.5986840
+         0.9333330   -0.6976220    0.3113000   -0.1687490
+    sizeStartkey 2
+         0.0333333    0.2000000
+         0.9333330    0.0000000
+  endnode
+  node emitter OmenEmitter01
+    parent Dummy01
+    positionkey 14
+         0.0356249    0.2997640    0.5057010   -0.4918670
+         0.1045830    0.5343970    0.2397040   -0.7265010
+         0.1737500    0.6676340   -0.1461970   -0.8597380
+         0.2427080    0.6676340   -0.5926570   -0.8597380
+         0.3118750    0.5343970   -0.9785580   -0.7265010
+         0.3808330    0.2997630   -1.2445500   -0.4918670
+         0.4500000   -0.0030421   -1.3436600   -0.1890620
+         0.5189580   -0.3058480   -1.2445500    0.1137440
+         0.5879170   -0.5404810   -0.9785570    0.3483780
+         0.6570830   -0.6737180   -0.5926570    0.4816150
+         0.7260420   -0.6737180   -0.1461960    0.4816150
+         0.7952080   -0.5404810    0.2397040    0.3483770
+         0.8641670   -0.3058470    0.5057010    0.1137440
+         0.9333330   -0.0030416    0.6048090   -0.1890620
+    sizeStartkey 2
+         0.0333333    0.2000000
+         0.9333330    0.0000000
+  endnode
+  node emitter OmenEmitter03
+    parent Dummy01
+    positionkey 14
+         0.0356249    0.2606040    0.5057010    0.1483890
+         0.1045830    0.4648940    0.2397040    0.4098690
+         0.1737500    0.5809000   -0.1461970    0.5583500
+         0.2427080    0.5809000   -0.5926570    0.5583500
+         0.3118750    0.4648940   -0.9785580    0.4098690
+         0.3808330    0.2606040   -1.2445500    0.1483890
+         0.4500000   -0.0030420   -1.3436600   -0.1890620
+         0.5189580   -0.2666880   -1.2445500   -0.5265130
+         0.5879170   -0.4709780   -0.9785570   -0.7879930
+         0.6570830   -0.5869840   -0.5926570   -0.9364740
+         0.7260420   -0.5869840   -0.1461960   -0.9364740
+         0.7952080   -0.4709770    0.2397040   -0.7879920
+         0.8641670   -0.2666880    0.5057010   -0.5265130
+         0.9333330   -0.0030418    0.6048090   -0.1890620
+    sizeStartkey 2
+         0.0333333    0.2000000
+         0.9333330    0.0000000
+  endnode
+doneanim fade vco_mebalbale01
+
+donemodel vco_mebalbale01

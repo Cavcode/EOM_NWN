@@ -1,0 +1,134 @@
+//*************************************
+//           REQUIRED HEADER
+//*************************************
+#define SHADER_TYPE 2
+
+#define LIGHTING 0
+#define FOG 1
+#define KEYHOLING 0
+
+#define NORMAL_MAP 0
+#define SPECULAR_MAP 0
+#define ROUGHNESS_MAP 0
+#define HEIGHT_MAP 0
+#define SELF_ILLUMINATION_MAP 0
+#define ENVIRONMENT_MAP 0
+
+#include "inc_standard"
+uniform int worldtimerTimeOfDay;
+
+
+
+
+//*************************************
+//           WARP CONTROL
+//*************************************
+//control warp speed and direction (use negative value to reverse)
+#define PORTAL_SPEED 1.0
+
+//control warp scale (default: 1.0)
+#define PORTAL_WARP_SCALE 1.0
+
+//control number of waves (default: 9.0)
+#define PORTAL_WAVE_COUNT 9.0
+
+//set the RGB color of the warp field (default: [0,0,1] )
+#define PORTAL_WARP_COLOR vec3(0.0, 0.0, 1.0)
+
+//manipulate the color of the waves (default: [1,1,1] )
+#define PORTAL_WAVE_COLOR vec3(1.0, 1.0, 1.0)
+
+//modify the speed at which the waves wiggle (default: 1.0)
+#define PORTAL_WAVE_WIGGLE_SPEED 2.0
+
+//modify the amount of wiggle along each wave (default: 1.0)
+#define PORTAL_WAVE_WIGGLE 2.0
+
+//modify the thickness of the wave (default: 1.0)
+#define PORTAL_WARP_THICKNESS 1.0 
+
+//modify the warp field wiggle frequency (default: 1.0. Zero produces circles)
+#define PORTAL_WARP_WIGGLE 1.0
+
+//modify the rate of fading to black away from the center (default: 1.0)
+//only works on the warp field, not the waves
+#define PORTAL_EDGE_FADE 2.0
+
+
+//*************************************
+//           MAIN DRAWING
+//*************************************
+void main(){
+	//set up base fragment
+    SetupStandardShaderInputs();
+		
+	//get the uv map from the mesh
+	vec2 uv = vTexCoords.xy - vec2(0.5);
+	uv.y = abs(uv.y);
+	uv *= 1.0/PORTAL_WARP_SCALE;
+	
+	//get the timer value
+	float t = PORTAL_SPEED * PI * worldtimerTimeOfDay/1000.0;
+	    
+	//build warp
+    vec3 c1; 
+    float s;
+    
+	//get angle and ray length from uv coordinates
+	float a = PORTAL_WARP_WIGGLE * atan(uv.x, uv.y);
+	float l = length(uv);
+	
+	//waves
+	float d = l + 0.1;
+	d += 0.3 * pow(d, 2.5) * sin(a * 18.0);
+	d = pow(d, 0.005);
+	d *= 5999.0;
+
+	//rings
+	d = 0.5 + 0.5 * sin(d - 2.0 * 8.0 * t);
+
+	//thicker at center
+	float b = pow(d, 1.0/PORTAL_WARP_THICKNESS);
+
+	//fade at sides
+	b *= 1.0 - l * PORTAL_EDGE_FADE;
+
+	//thin stripes at sides
+	s = 1.0 + 1.0 * l * sin(a * 300.0);
+	b *= s;
+	
+	//set warp color
+	c1 = b * PORTAL_WARP_COLOR;
+    
+	
+	
+	//build waves
+	vec3 c2;
+	
+	float y = uv.y * PORTAL_WARP_SCALE;
+	float x = uv.x * PORTAL_WAVE_COUNT * PORTAL_WARP_SCALE / 5.0;
+	
+	//skew
+	x -= sin(y * 6.0)/9.0;
+
+	//perspective
+	x /= pow(y + sign(y), 6.0);
+
+	//waves
+	a = pow(abs(y) + 0.03, 0.1) * 32.0;
+	x += 0.03 * sin(PORTAL_WAVE_WIGGLE * a - PORTAL_WAVE_WIGGLE_SPEED * t);
+
+	//stripes
+	x = sin(x * 30.0);
+
+	//color - cycle pink and cyan
+	b = pow(abs(x), 20.0);    
+	float p = sin(t / 2.0) * 0.5 + 0.5;
+	c2 = b * vec3(p, (1.0 - p), 0.9) * PORTAL_WAVE_COLOR;	
+	
+	//apply inverse stripes
+	c2 /= s;
+
+	//finalize
+	gl_FragColor = vec4(c1 + c2 * 0.5, 1.0);
+}

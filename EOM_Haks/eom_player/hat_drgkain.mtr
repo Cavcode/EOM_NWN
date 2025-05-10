@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 hat_drgkain_d 
+texture1 hat_drgkain_n 
+texture2 hat_drgkain_s 
+texture3 null 
+texture4 null 

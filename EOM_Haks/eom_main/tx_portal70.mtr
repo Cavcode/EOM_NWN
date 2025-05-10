@@ -1,0 +1,6 @@
+customshadervs vsLitC
+customshaderfs fs_Portal70
+
+##any texture name will do, as long as it has one. Non-alpha is preferable.
+texture0 fog01
+

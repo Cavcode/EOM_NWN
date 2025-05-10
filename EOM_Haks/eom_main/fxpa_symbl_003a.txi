@@ -1,0 +1,4 @@
+decal 1
+blending additive
+downsamplemax 0
+downsamplemin 0

@@ -35,13 +35,13 @@ namespace EOM.Game.Server.Feature
 
             // Module has changed since last run.
             // Run procedures dependent on the module file changing.
-            if (UtilPlugin.GetModuleMtime() != serverConfig.LastModuleMTime)
+            if (UtilPlugin.GetModuleMTime() != serverConfig.LastModuleMTime)
             {
                 Console.WriteLine("Module has changed since last boot. Running module changed event.");
 
                 // DB record must be updated before the event fires, as some
                 // events use the server configuration record.
-                serverConfig.LastModuleMTime = UtilPlugin.GetModuleMtime();
+                serverConfig.LastModuleMTime = UtilPlugin.GetModuleMTime();
                 DB.Set(serverConfig);
 
                 ExecuteScript("mod_content_chg", GetModule());
@@ -144,7 +144,7 @@ namespace EOM.Game.Server.Feature
             ChatPlugin.RegisterChatScript("on_nwnx_chat");
 
             // Damage Plugin Events start here.
-            DamagePlugin.SetDamageEventScript("on_nwnx_dmg", OBJECT_INVALID);
+            //DamagePlugin.SetDamageEventScript("on_nwnx_dmg", OBJECT_INVALID);
 
             // Events Plugin Events start here.
 

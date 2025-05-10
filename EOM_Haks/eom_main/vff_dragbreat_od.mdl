@@ -1,0 +1,935 @@
+#MAXMODEL ASCII
+# model: vff_dragbreat_od
+filedependancy vff_dragbreat_od.max
+newmodel vff_dragbreat_od
+setsupermodel vff_dragbreat_od NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vff_dragbreat_od
+node dummy vff_dragbreat_od
+  parent NULL
+endnode
+node light FireLight
+  parent vff_dragbreat_od
+  ambientonly 0
+  shadow 1
+  isdynamic 1
+  affectdynamic 1
+  lightpriority 2
+  fadingLight 1
+  flareradius 0
+  position 0.0276351 0.108847 1.22135
+  orientation 0 0 0 0
+  radius 0
+  multiplier 10
+  color 0.423 0 0.929413
+endnode
+node emitter Ring35
+  parent vff_dragbreat_od
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Lighten
+  texture fxpa_Smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.000401458 4.89869e-05 0.0139549
+  orientation 0 0 -1 -0.785398
+  colorStart 0.423 0 0.94902
+  colorEnd 0 0 0
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 10
+  sizeEnd 6
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 1.5
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0.1
+  randvel 0
+  fps 0
+  xsize 680
+  ysize 680
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FireBreath33
+  parent vff_dragbreat_od
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 2
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_smoke01a
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -1.71945 0.509724 0.332493
+  orientation 0 -1.24718e-07 -1 -0.785398
+  colorStart 0.423 0 1
+  colorEnd 0.423 0 1
+  alphaStart 0.5
+  alphaEnd 0
+  sizeStart 1
+  sizeEnd 4
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 1
+  mass 0
+  spread 0.0548311
+  particleRot 1.5
+  velocity 0
+  randvel 0.5
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0.2
+  blurlength 0.55
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FireBreath32
+  parent vff_dragbreat_od
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 3
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_smoke01a
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -1.99767 0.059511 0.390639
+  orientation 0 0 -1 -1.28282
+  colorStart 0.423 0 1
+  colorEnd 0.423 0 1
+  alphaStart 0.5
+  alphaEnd 0
+  sizeStart 1
+  sizeEnd 4
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 1
+  mass 0
+  spread 0.0548311
+  particleRot -1.5
+  velocity 0
+  randvel 0.5
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0.2
+  blurlength 0.55
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FireBreath29
+  parent vff_dragbreat_od
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_smoke01a
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.132061 -0.484325 0.332493
+  orientation 0 0 -1 -3.45575
+  colorStart 0.423 0 1
+  colorEnd 0.423 0 1
+  alphaStart 0.5
+  alphaEnd 0
+  sizeStart 1
+  sizeEnd 3
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 1
+  mass 0
+  spread 0.0548311
+  particleRot 1.4
+  velocity 0
+  randvel 0.5
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0.2
+  blurlength 0.55
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FireBreath26
+  parent vff_dragbreat_od
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 1
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_smoke01a
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.0724033 -0.485474 0.390639
+  orientation 0 0 -1 -2.74889
+  colorStart 0.423 0 1
+  colorEnd 0.423 0 1
+  alphaStart 0.5
+  alphaEnd 0
+  sizeStart 1
+  sizeEnd 3
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 1
+  mass 0
+  spread 0.0548311
+  particleRot -1.5
+  velocity 0
+  randvel 0.5
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0.2
+  blurlength 0.55
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FireBreath34
+  parent vff_dragbreat_od
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 2
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_smoke01a
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 1.93689 0.0733153 0.390639
+  orientation 0 0 1 -1.36136
+  colorStart 0.423 0 1
+  colorEnd 0.423 0 1
+  alphaStart 0.5
+  alphaEnd 0
+  sizeStart 1
+  sizeEnd 4
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 1
+  mass 0
+  spread 0.0548311
+  particleRot -1.5
+  velocity 0
+  randvel 0.5
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0.2
+  blurlength 0.55
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FireBreath35
+  parent vff_dragbreat_od
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 3
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_smoke01a
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 1.76725 0.594399 0.332493
+  orientation 0 0 1 -0.785398
+  colorStart 0.423 0 0.980392
+  colorEnd 0.423 0 0.980392
+  alphaStart 0.5
+  alphaEnd 0
+  sizeStart 1
+  sizeEnd 4
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 1
+  mass 0
+  spread 0.0548311
+  particleRot 1.5
+  velocity 0
+  randvel 0.5
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0.2
+  blurlength 0.55
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FireBreath31
+  parent vff_dragbreat_od
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 5
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_smoke01a
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.439298 1.73645 0.390639
+  orientation 0 0 0 0
+  colorStart 0.423 0 1
+  colorEnd 0.423 0 1
+  alphaStart 0.5
+  alphaEnd 0
+  sizeStart 1
+  sizeEnd 4
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 1
+  mass 0
+  spread 0.0548311
+  particleRot -1.4
+  velocity 0
+  randvel 0.5
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0.2
+  blurlength 0.55
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FireBreath30
+  parent vff_dragbreat_od
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 4
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_smoke01a
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.604771 1.72714 0.332493
+  orientation 0 0 0 0
+  colorStart 0.423 0 1
+  colorEnd 0.423 0 1
+  alphaStart 0.5
+  alphaEnd 0
+  sizeStart 1
+  sizeEnd 4
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 1
+  mass 0
+  spread 0.0548311
+  particleRot 1.5
+  velocity 0
+  randvel 0.5
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0.2
+  blurlength 0.55
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FireBreath36
+  parent vff_dragbreat_od
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 5
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_smoke01a
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.000866698 -0.273445 0.503346
+  orientation 0 -1.20745e-07 -1 -0.785398
+  colorStart 0.423 0 1
+  colorEnd 0 0 0
+  alphaStart 0.5
+  alphaEnd 1
+  sizeStart 0
+  sizeEnd 6
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 1
+  mass 0
+  spread 0.0548311
+  particleRot -1.4
+  velocity 0
+  randvel 0.5
+  fps 0
+  xsize 300
+  ysize 300
+  bounce_co 0.2
+  blurlength 0.55
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom vff_dragbreat_od
+
+#MAXANIM ASCII
+newanim impact vff_dragbreat_od
+  length 4.96667
+  transtime 0.25
+  animroot vff_dragbreat_od
+  node dummy vff_dragbreat_od
+    parent NULL
+  endnode
+  node light FireLight
+    parent vff_dragbreat_od
+    colorkey 49
+         0.1000000    0.423        0            0.9294130
+         0.2000000    0.423        0            0.9294130
+         0.2666670    1.0000000    1.0000000    1.0000000
+         0.3000000    0.423        0            0.8666680  
+         0.3666670    1.0000000    1.0000000    1.0000000
+         0.4333330    0.423        0            0.8666680  
+         0.4666670    1.0000000    1.0000000    1.0000000
+         0.5333330    0.423        0            0.8666680  
+         0.5666670    1.0000000    1.0000000    1.0000000
+         0.6333330    0.423        0            0.8666680  
+         0.6666670    1.0000000    1.0000000    1.0000000
+         0.7333330    0.423        0            0.8666680  
+         0.8000000    1.0000000    1.0000000    1.0000000
+         0.8666670    0.423        0            0.8666680  
+         0.9000000    1.0000000    1.0000000    1.0000000
+         0.9666670    0.423        0            0.8666680  
+         1.0333300    0.423        0            0.8666680  
+         1.1000000    1.0000000    1.0000000    1.0000000
+         1.1666700    1.0000000    1.0000000    1.0000000
+         1.2333300    0.423        0            0.8666680  
+         1.3000000    0.423        0            0.8666680  
+         1.3666700    1.0000000    1.0000000    1.0000000
+         1.4333301    0.423        0            0.8666680  
+         1.4666700    0.423        0            0.8666680  
+         1.5000000    1.0000000    1.0000000    1.0000000
+         1.5666699    1.0000000    1.0000000    1.0000000
+         1.6666700    0.423        0            0.8666680  
+         1.7333300    1.0000000    1.0000000    1.0000000
+         1.8333300    0.423        0            0.8666680  
+         1.9000000    1.0000000    1.0000000    1.0000000
+         2.0000000    0.423        0            0.8666680  
+         2.0666699    0.423        0            0.8666680  
+         2.1333301    1.0000000    1.0000000    1.0000000
+         2.2333300    0.423        0            0.8666680  
+         2.3000000    1.0000000    1.0000000    1.0000000
+         2.3333299    0.423        0            0.8666680  
+         2.4000001    1.0000000    1.0000000    1.0000000
+         2.4666700    0.423        0            0.8666680  
+         2.5333300    1.0000000    1.0000000    1.0000000
+         2.5999999    0.423        0            0.8666680  
+         2.6666701    1.0000000    1.0000000    1.0000000
+         2.7333300    0.423        0            0.8666680  
+         2.8666699    0.423        0            0.8666680  
+         2.9333301    0.423        0            0.8666680  
+         3.0000000    1.0000000    1.0000000    1.0000000
+         3.0666699    0.423        0            0.8666680  
+         3.1333301    1.0000000    1.0000000    1.0000000
+         3.1666701    0.423        0            0.8666680  
+         3.2666700    0.423        0            0.8666680  
+    radiuskey 8
+         0.1000000    0.0000000
+         0.2000000    0.0000000
+         0.3000000    0.0000000
+         0.7333330   10.0000000
+         0.7666670   10.0000000
+         2.7666700   10.0000000
+         2.8000000   10.0000000
+         3.2333300    0.0000000
+  endnode
+  node emitter Ring35
+    parent vff_dragbreat_od
+    birthratekey 6
+         0.0000000    0.0000000
+         0.0666667    0.0000000
+         0.1000000    9.0000000
+         0.6666670   15.0000000
+         2.3666699   24.0000000
+         2.4000001    0.0000000
+  endnode
+  node emitter FireBreath33
+    parent vff_dragbreat_od
+    positionkey 3
+         0.1000000   -1.1941900   -0.0155403    0.3324930
+         0.4666670   -1.3648000    0.1550740    0.3324930
+         2.5666699   -4.5767899    3.3670599    0.3324930
+    birthratekey 5
+         0.1000000    0.0000000
+         0.4000000    0.0000000
+         0.4333330   40.0000000
+         1.9666700   50.0000000
+         2.0000000    0.0000000
+    xsizekey 5
+         0.0000000    0.0000000
+         0.0666667    0.0000000
+         0.1000000  300.0000000
+         1.2333300  300.0000000
+         1.9666700  350.0000000
+    ysizekey 5
+         0.0000000    0.0000000
+         0.0666667    0.0000000
+         0.1000000  300.0000000
+         1.2333300  300.0000000
+         1.9666700  100.0000000
+  endnode
+  node emitter FireBreath32
+    parent vff_dragbreat_od
+    positionkey 4
+         0.0666667   -1.9976701    0.0595110    0.3906390
+         0.1000000   -1.4724100   -0.4657530    0.3906390
+         0.4666670   -1.6430200   -0.2951390    0.3906390
+         2.4000001   -6.0354800    0.2876090    0.3906390
+    orientationkey 4
+         0.0666667   -0.0000000   -0.0000000   -1.0000000   -1.2828200
+         0.1000000   -0.0000000   -0.0000000   -1.0000000   -1.2828200
+         1.2333300   -0.0000000   -0.0000000   -1.0000000   -1.2566400
+         2.4000001   -0.0000000   -0.0000000   -1.0000000   -1.7540600
+    birthratekey 6
+         0.0666667    0.0000000
+         0.1000000    0.0000000
+         0.4000000    0.0000000
+         0.4333330   40.0000000
+         1.9666700   40.0000000
+         2.0000000    0.0000000
+    xsizekey 4
+         0.0666667    0.0000000
+         0.1000000  300.0000000
+         1.2333300  300.0000000
+         1.9666700  350.0000000
+    ysizekey 4
+         0.0666667    0.0000000
+         0.1000000  300.0000000
+         1.2333300  300.0000000
+         1.9666700  100.0000000
+  endnode
+  node emitter FireBreath29
+    parent vff_dragbreat_od
+    positionkey 5
+         0.0000000    0.1320610   -0.4843250    0.3324930
+         0.0666667    0.1320610   -0.4843250    0.3324930
+         0.1000000    0.1320610   -0.7275040    0.3324930
+         0.4666670    0.1320610   -1.0507300    0.3324930
+         2.4000001    1.2176000   -4.3916798    0.3324930
+    birthratekey 7
+         0.0000000    0.0000000
+         0.0666667    0.0000000
+         0.1000000    0.0000000
+         0.3000000    0.0000000
+         0.3333330   40.0000000
+         1.9333301   40.0000000
+         1.9666700    0.0000000
+    xsizekey 5
+         0.0000000    0.0000000
+         0.0666667    0.0000000
+         0.4666670  300.0000000
+         1.4333301  300.0000000
+         1.9666700  350.0000000
+    ysizekey 4
+         0.0000000    0.0000000
+         0.0666667    0.0000000
+         0.4666670  300.0000000
+         1.9333301  100.0000000
+  endnode
+  node emitter FireBreath26
+    parent vff_dragbreat_od
+    positionkey 5
+         0.0000000   -0.0724033   -0.4854740    0.3906390
+         0.0666667   -0.0724033   -0.4854740    0.3906390
+         0.1000000   -0.0699944   -0.7228380    0.3906390
+         0.4666670   -0.0724033   -1.0518800    0.3906390
+         2.5666699   -1.4167300   -4.2973599    0.3906390
+    birthratekey 7
+         0.0000000    0.0000000
+         0.0666667    0.0000000
+         0.1000000    0.0000000
+         0.3000000    0.0000000
+         0.3333330   40.0000000
+         1.9333301   40.0000000
+         1.9666700    0.0000000
+    xsizekey 5
+         0.0000000    0.0000000
+         0.0666667    0.0000000
+         0.4666670  300.0000000
+         1.5666699  300.0000000
+         2.0666699  350.0000000
+    ysizekey 5
+         0.0000000    0.0000000
+         0.0666667    0.0000000
+         0.1000000  300.0000000
+         0.4666670  300.0000000
+         2.0666699  100.0000000
+  endnode
+  node emitter FireBreath34
+    parent vff_dragbreat_od
+    positionkey 4
+         0.0000000    1.9368900    0.0733153    0.3906390
+         0.0666667    1.9368900    0.0733153    0.3906390
+         0.1000000    1.4116200   -0.4519490    0.3906390
+         2.5666699    6.0398898    0.1103230    0.3906390
+    orientationkey 5
+         0.0000000   -0.0000000   -0.0000000    1.0000000   -1.3613600
+         0.0666667   -0.0000000   -0.0000000    1.0000000   -1.3613600
+         0.1000000   -0.0000000   -0.0000000    1.0000000   -1.3613600
+         1.2333300   -0.0000000   -0.0000000    1.0000000   -1.3875400
+         2.5666699   -0.0000000   -0.0000000    1.0000000   -1.7278800
+    birthratekey 7
+         0.0000000    0.0000000
+         0.0666667    0.0000000
+         0.1000000    0.0000000
+         0.4000000    0.0000000
+         0.4333330   40.0000000
+         1.9666700   50.0000000
+         2.0000000    0.0000000
+    xsizekey 5
+         0.0000000    0.0000000
+         0.0666667    0.0000000
+         0.1000000  300.0000000
+         1.2333300  300.0000000
+         1.9666700  350.0000000
+    ysizekey 5
+         0.0000000    0.0000000
+         0.0666667    0.0000000
+         0.1000000  300.0000000
+         1.2333300  300.0000000
+         1.9666700  100.0000000
+  endnode
+  node emitter FireBreath35
+    parent vff_dragbreat_od
+    positionkey 4
+         0.0666667    1.7672499    0.5943990    0.3324930
+         0.1000000    1.2419800    0.0691347    0.3324930
+         0.4666670    1.4126000    0.2397490    0.3324930
+         2.4000001    4.6245899    3.4517400    0.3324920
+    birthratekey 6
+         0.0666667    0.0000000
+         0.1000000    0.0000000
+         0.4000000    0.0000000
+         0.4333330   40.0000000
+         1.9666700   40.0000000
+         2.0000000    0.0000000
+    xsizekey 4
+         0.0666667    0.0000000
+         0.1000000  300.0000000
+         1.2333300  300.0000000
+         1.9666700  350.0000000
+    ysizekey 4
+         0.0666667    0.0000000
+         0.1000000  300.0000000
+         1.2333300  300.0000000
+         1.9666700  100.0000000
+  endnode
+  node emitter FireBreath31
+    parent vff_dragbreat_od
+    positionkey 3
+         0.1000000    0.4392980    0.9936110    0.3906390
+         0.4666670    0.4392980    1.2349000    0.3906390
+         2.4000001    0.4392980    5.5271702    0.3906390
+    birthratekey 5
+         0.1000000    0.0000000
+         0.4333330    0.0000000
+         0.4666670   40.0000000
+         2.0333300   50.0000000
+         2.0666699    0.0000000
+    xsizekey 2
+         0.0000000    0.0000000
+         0.0666667    0.0000000
+    ysizekey 5
+         0.0000000    0.0000000
+         0.0666667    0.0000000
+         0.1000000  300.0000000
+         1.2333300  300.0000000
+         1.9666700  100.0000000
+  endnode
+  node emitter FireBreath30
+    parent vff_dragbreat_od
+    positionkey 3
+         0.1000000   -0.6047710    0.9843060    0.3324930
+         0.4666670   -0.6047710    1.2255900    0.3324930
+         2.5666699   -0.6047710    5.5178699    0.3324930
+    birthratekey 5
+         0.1000000    0.0000000
+         0.4333330    0.0000000
+         0.4666670   40.0000000
+         2.0333300   40.0000000
+         2.0666699    0.0000000
+    xsizekey 2
+         0.0000000    0.0000000
+         0.1000000    0.0000000
+    ysizekey 4
+         0.0000000    0.0000000
+         0.1000000    0.0000000
+         1.2333300  300.0000000
+         1.9666700  100.0000000
+  endnode
+  node emitter FireBreath36
+    parent vff_dragbreat_od
+    birthratekey 5
+         0.1000000    0.0000000
+         0.7000000    0.0000000
+         0.7333330   40.0000000
+         1.8666700   50.0000000
+         1.9000000    0.0000000
+  endnode
+doneanim impact vff_dragbreat_od
+
+donemodel vff_dragbreat_od

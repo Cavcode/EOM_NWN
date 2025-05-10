@@ -1,0 +1,77 @@
+filedependancy abjuration11.gmax
+newmodel da_mail1
+setsupermodel da_mail1 NULL
+classification Effect
+setanimationscale 1
+#NWmax GEOM  ASCII
+beginmodelgeom da_mail1
+node dummy da_mail1
+  parent NULL
+endnode
+node emitter mail1
+  parent da_mail1
+  xsize 0
+  ysize 0  
+  position 0.00 0.00 1.0
+  orientation 0.0 0.0 0.0 0.0
+  wirecolor 0.0 0.0 0.0
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 1
+  spawntype 0
+  update Single
+  render billboard_to_local_x
+  blend lighten
+  texture prota_mail1
+  xgrid 1
+  ygrid 1
+  loop 1
+  deadspace 3
+  twosidedtex 1
+  blastRadius 0
+  blastLength 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alpha 1.0
+  alphaStart 1.0
+  alphaEnd 1
+  sizeStart 0.6
+  sizeEnd 0.6
+  sizeStart_x 1
+  sizeEnd_x 1
+  sizeStart_y 1
+  sizeEnd_y 1
+  frameStart 0
+  frameEnd 0
+  fps 20
+  birthrate 1
+  lifeExp 4
+  mass 0
+  spread 0.10000
+  particleRot 0
+  velocity 0
+  randvel 0.0
+  bounce_co 0
+  blurlength 55
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom da_mail1
+
+donemodel da_mail1

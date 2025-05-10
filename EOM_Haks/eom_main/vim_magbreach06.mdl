@@ -1,0 +1,551 @@
+#MAXMODEL ASCII
+# model: vim_magbreach06
+filedependancy vim_magbreach06.max
+newmodel vim_magbreach06
+setsupermodel vim_magbreach06 NULL
+classification effect
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vim_magbreach06
+node dummy vim_magbreach06
+  parent NULL
+  #part-number 0
+endnode
+node emitter OmenEmitter02
+  parent vim_magbreach06
+  #part-number 1
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  splat 0
+  inherit_part 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Aligned_to_Particle_Dir
+  blend Lighten
+  texture fxpa_dot01
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0.209439993
+  twosidedtex 1
+  blastRadius 0
+  blastLength 0
+  position 0.978515029 0 -1.09897006
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 0.882353008 0.623529017
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.100000001
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 20
+  lifeExp 0.100000001
+  mass 0
+  spread 6.28318977
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter03
+  parent vim_magbreach06
+  #part-number 2
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  splat 0
+  inherit_part 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Aligned_to_Particle_Dir
+  blend Lighten
+  texture fxpa_dot01
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0.209439993
+  twosidedtex 1
+  blastRadius 0
+  blastLength 0
+  position 0.978515029 -0.442627013 -1.09897006
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 0.886274993 0.541176021
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.100000001
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 20
+  lifeExp 0.100000001
+  mass 0
+  spread 6.28318977
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Smoke
+  parent vim_magbreach06
+  #part-number 3
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  splat 0
+  inherit_part 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_smoke01a
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 -0.570526004
+  orientation 0 0 -1 -0.00872664992
+  colorStart 1 0.811765015 0.611765027
+  colorEnd 0 0 0
+  alphaStart 0
+  alphaEnd 1
+  sizeStart 4
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 40
+  lifeExp 1
+  mass 0
+  spread 0.698131979
+  particleRot 0
+  velocity 1
+  randvel 2
+  fps 16
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter04
+  parent vim_magbreach06
+  #part-number 4
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  splat 0
+  inherit_part 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Aligned_to_Particle_Dir
+  blend Lighten
+  texture fxpa_dot01
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0.209439993
+  twosidedtex 1
+  blastRadius 0
+  blastLength 0
+  position -0.318495989 -0.59058398 -0.289130002
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 0.843137026 0.643136978
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.100000001
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 20
+  lifeExp 0.100000001
+  mass 0
+  spread 6.28318977
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter WIND_Dummy
+  parent vim_magbreach06
+  #part-number 5
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  splat 0
+  inherit_part 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Normal
+  blend Lighten
+  texture NULL
+  xgrid 0
+  ygrid 0
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 5
+  blastLength 1.20000005
+  position 0 0 -0.511581004
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 0
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp 0
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node light AuroraLight01
+  parent vim_magbreach06
+  #part-number 6
+  ambientonly 0
+  shadow 0
+  isdynamic 1
+  affectdynamic 1
+  lightpriority 2
+  fadingLight 0
+  flareradius 0
+  position 0 0 0.664234996
+  orientation -0.577350259 0.577350259 0.577350259 -2.09439993
+  radius 4.5
+  multiplier 3
+  color 1.78814005e-007 2.38419005e-007 0
+endnode
+endmodelgeom vim_magbreach06
+
+#MAXANIM ASCII
+newanim impact vim_magbreach06
+  length 2.63333011
+  transtime 0.25
+  animroot vim_magbreach06
+  event 0.166666999 detonate
+  event 0.166666999 detonate
+  event 0.166666999 detonate
+  event 0.366667002 detonate
+  event 0.366667002 detonate
+  event 0.366667002 detonate
+  event 0.600000024 detonate
+  event 0.600000024 detonate
+  event 0.600000024 detonate
+  event 0.633333027 detonate
+  event 0.866666973 detonate
+  event 0.866666973 detonate
+  event 0.866666973 detonate
+  event 1 detonate
+  event 1.20000005 detonate
+  event 1.20000005 detonate
+  event 1.20000005 detonate
+  event 1.29999995 detonate
+  event 1.5 detonate
+  event 1.5 detonate
+  event 1.5 detonate
+  event 1.76666999 detonate
+  event 1.89999998 detonate
+  event 1.89999998 detonate
+  event 1.89999998 detonate
+  event 2.0999999 detonate
+  event 2.0999999 detonate
+  event 2.0999999 detonate
+node dummy vim_magbreach06
+  parent NULL
+  #part-number 0
+endnode
+node emitter OmenEmitter02
+  parent vim_magbreach06
+  #part-number 1
+  positionkey 38
+    0.100000001 0.978515029 0 -1.09897006
+    0.133332998 0.619818985 -0.0024095499 -1.09897006
+    0.233333007 0.485480994 -0.361083001 -0.421575993
+    0.236667007 0.481002986 -0.373037994 -0.959396005
+    0.333332986 0.172078997 0.189502999 -0.299764007
+    0.340207994 0.150107995 -0.576141 -0.82052201
+    0.443749994 -0.228269994 -0.533798993 -0.682380974
+    0.533333004 -0.459322006 -0.308221012 0.0522238016
+    0.547291994 -0.495323986 -0.273072988 -0.545015991
+    0.56666702 0.464742988 -0.205266997 -0.800010026
+    0.600000024 -0.520452976 -0.0886121988 -0.0192534998
+    0.650833011 -0.544687986 0.0892871022 -0.408473015
+    0.699999988 0.0260952003 -0.384357005 -0.344051987
+    0.754374981 -0.364656001 0.398947001 -0.272805989
+    0.766667008 -0.32595101 0.414501995 0.394091994
+    0.857707977 -0.0392737016 0.529713988 -0.138074994
+    0.866666973 -0.0107396003 0.521511018 -0.580531001
+    0.899999976 0.0954340026 -0.594074011 -0.377472997
+    0.961250007 0.290527999 0.434899986 -0.00435265014
+    1.06479001 0.48793301 0.163442999 0.128279001
+    1.16666996 0.593001008 -0.159224004 -0.836492002
+    1.16832995 0.476981014 -0.164502993 0.259719998
+    1.20000005 -0.302188993 0.306708008 0.299519002
+    1.27188003 0.271528989 -0.410638005 0.389851004
+    1.37541997 -0.0344927981 -0.476835996 0.518522978
+    1.46667004 -0.277572006 -0.359650999 0.924324989
+    1.47874999 -0.309760004 -0.344134003 0.645545006
+    1.53332996 0.391934007 0.165866002 0.711504996
+    1.58229005 -0.441899002 -0.0769535974 0.77066803
+    1.68583 -0.383305997 0.207634002 0.893544018
+    1.76666999 0.310532987 -0.433784008 0.987316012
+    1.78937995 -0.167804003 0.391131997 1.01365995
+    1.86667001 0.0376832001 0.399955988 0.901534021
+    1.89292002 0.107470997 0.402952999 1.13015997
+    1.99645996 0.325666994 0.247316003 1.24131
+    2 0.328204006 0.238774002 1.04024005
+    2.03332996 -0.51405102 -0.359791011 1.14008999
+    2.0999999 -0.377820998 -0.00240968005 1.14479005
+  colorStartkey 7
+    0.100000001 1 1 1
+    0.133332998 1 1 1
+    0.366667002 0 0 0
+    0.600000024 1 1 1
+    0.866666973 0 0 0
+    1.5 1 1 1
+    2.0999999 0 0 0
+endnode
+node emitter OmenEmitter03
+  parent vim_magbreach06
+  #part-number 2
+  positionkey 49
+    0.100000001 0.978515029 -0.442627013 -1.09897006
+    0.133332998 -0.169441998 0.212918997 1.33054996
+    0.236667007 -0.739683986 -0.0990343019 1.19097996
+    0.333332986 -0.521851003 -0.49090901 0.180255994
+    0.340207994 -0.506358027 -0.51877898 1.05209994
+    0.443749994 -0.078544803 -0.699887991 0.913960993
+    0.466666996 0.228929996 0.357868999 0.883557975
+    0.547291994 0.354965001 -0.583334982 0.77659601
+    0.56666702 -0.626124024 -0.209592998 0.751046002
+    0.600000024 0.438683003 -0.220492005 0.707087994
+    0.650833011 0.61540103 -0.237112001 0.640052974
+    0.666666985 0.614223003 -0.173268005 1.34370995
+    0.699999988 -0.0914670974 0.467332989 1.02471995
+    0.733332992 0.144630998 -0.626857996 0.705743015
+    0.754374981 0.607698023 0.180396006 0.504386008
+    0.800000012 -0.00259628007 -0.534545004 0.444898009
+    0.857707977 0.354357988 0.492417991 0.369655013
+    0.866666973 0.380421013 -0.357032001 0.35808599
+    0.93333298 -0.343102992 0.178911 0.271986991
+    0.961250007 -0.0221548006 0.578643024 0.235932007
+    0.966666996 0.114436001 -0.591605008 0.228993997
+    1 -0.413592994 -0.373243004 0.186296001
+    1.06479001 -0.357654989 0.421204001 0.103301004
+    1.06666994 -0.40842101 -0.45748201 0.0895785987
+    1.13332999 -0.0124043999 0.431459993 -0.398328006
+    1.16666996 -0.515172005 0.109507002 -0.642282009
+    1.16832995 -0.517749012 0.104408003 -0.0281403009
+    1.20000005 0.503565013 0.189561993 -0.0679387972
+    1.26666999 -0.0377262011 0.368835986 -0.151724994
+    1.27188003 -0.451525003 -0.228366002 -0.158271
+    1.29999995 -0.131448001 0.370050013 -0.193222001
+    1.37541997 -0.206017002 -0.439262003 -0.286942989
+    1.39999998 -0.132814005 0.384119004 -0.426683009
+    1.46667004 0.481577992 0.0208620001 -0.805638015
+    1.47874999 0.101683997 -0.453031987 -0.413964987
+    1.5 -0.176719993 0.381170005 -0.439644009
+    1.53332996 -0.478556991 -0.453574002 -0.479925007
+    1.58229005 0.339527994 -0.283001989 -0.539088011
+    1.68583 0.417158008 -0.0173777007 -0.661965013
+    1.70000005 0.164614007 -0.570037007 -0.678399026
+    1.76666999 -0.292501986 0.316291988 -0.755737007
+    1.78937995 0.319821 0.224908993 -0.782079995
+    1.86667001 0.160956994 -0.552986026 -0.753381014
+    1.89292002 0.107003003 0.347270995 -0.898580015
+    1.93333006 -0.0973912999 -0.538990021 -0.941968024
+    1.99645996 -0.120429002 0.313843995 -1.00972998
+    2 -0.472456008 -0.229132995 -1.01310003
+    2.06666994 -0.0557320006 0.461923987 -1.07650995
+    2.0999999 -0.901102006 -0.537400007 -0.476444989
+  colorStartkey 7
+    0.100000001 1 1 1
+    0.133332998 0 0 0
+    0.366667002 1 1 1
+    0.600000024 0 0 0
+    0.866666973 1 1 1
+    1.5 0 0 0
+    1.89999998 1 1 1
+endnode
+node emitter Smoke
+  parent vim_magbreach06
+  #part-number 3
+  orientationkey 9
+    0 0 0 -1 -0.00872664992
+    0.300000012 0 0 -1 -1.57951999
+    0.633333027 0 0 -1 -3.15032005
+    0.966666996 0 0 -1 -4.72111988
+    1.29999995 0 0 -1 -6.09119987
+    1.63332999 0 0 1 -4.7298398
+    1.96667004 0 0 1 -3.15904999
+    2.29999995 0 0 1 -1.58824992
+    2.63333011 0 0 1 -0.0174534004
+  birthratekey 6
+    0 40
+    0.133332998 40
+    0.166666999 20
+    1.63332999 20
+    1.66666996 20
+    1.70000005 0
+  velocitykey 3
+    0 1
+    0.133332998 1.5
+    0.166666999 1
+endnode
+node emitter OmenEmitter04
+  parent vim_magbreach06
+  #part-number 4
+  positionkey 15
+    0.100000001 -0.318495989 -0.59058398 -0.289130002
+    0.133332998 0.0233341996 -0.608690023 0.841345012
+    0.333332986 0.30320099 -0.419281989 -0.114216998
+    0.366667002 0.250560999 -0.292438 0.961072981
+    0.56666702 -0.0652771965 0.468629986 0.91990298
+    0.600000024 -0.0652771965 0.345569998 -0.144639
+    0.833333015 -0.0652773008 -0.515846014 0.0418291017
+    0.866666973 -0.569176972 -0.346917987 -0.163528994
+    1.16666996 -0.0652771965 0.130965993 1.63442004
+    1.20000005 -0.0599268004 -0.364044994 1.81139004
+    1.46667004 -0.0171227995 0.368265986 0.638082981
+    1.5 -0.0171227995 -0.230425999 0.859829009
+    1.76666999 0.351244003 0.185633004 0.810889006
+    1.89999998 -0.269522995 -0.530286014 0.810889006
+    2.0999999 0.392517 0.218131006 0.848874986
+endnode
+node emitter WIND_Dummy
+  parent vim_magbreach06
+  #part-number 5
+endnode
+node light AuroraLight01
+  parent vim_magbreach06
+  #part-number 6
+  colorkey 8
+    0 1.78814005e-007 2.38419005e-007 0
+    0.100000001 1 0.850980997 0.145098001
+    0.433333009 1 0.850980997 0.145098001
+    1.13332999 0.92156899 0.788236022 0.168626994
+    1.53332996 0.92156899 0.666666985 0.113724999
+    2 1 0.784313977 0.176469997
+    2.46667004 0.92156899 0.666666985 0.113725998
+    2.63333011 2.68220987e-007 2.38419005e-007 0
+endnode
+doneanim impact vim_magbreach06
+
+donemodel vim_magbreach06

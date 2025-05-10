@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 wmgrd_061_d 
+texture1 wmgrd_061_n 
+texture2 wmgrd_061_s 
+texture3 null 
+texture4 null 

@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 c_la_roktbot 
+texture1 c_la_roktbot_n 
+texture2 null 
+texture3 null 
+texture4 null 

@@ -1,0 +1,18 @@
+customshaderVS vslit_nm  
+#customshaderFS fslit_nm
+customshaderFS fsFlowmap
+
+renderhint NormalAndSpecMapped
+
+texture0 c_ooze_b01
+texture1 c_slime_n
+texture4 c_slime_h
+texture6 c_slime_f
+
+parameter float Metallicness 0.5
+parameter float Specularity 0.8
+parameter float Roughness 0.95
+
+##override the flow speed of the shader here
+parameter float fSlideSpeed 0.5
+ 

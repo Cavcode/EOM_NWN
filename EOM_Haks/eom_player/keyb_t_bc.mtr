@@ -1,0 +1,5 @@
+renderhint NormalAndSpecMapped
+
+texture0 KEYB_t_BC
+texture1 KEYB_t_Nor
+texture2 KEYB_t_Met

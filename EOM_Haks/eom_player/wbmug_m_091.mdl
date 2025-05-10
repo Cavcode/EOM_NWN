@@ -1,0 +1,24 @@
+# Exported from NWmax 0.8 b60 at 4/4/2014 10:40:45 AM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: wbmug_m_091
+#local file: C:\gmax\Scenes\Weapons\Drinks03.gmax
+filedependancy Drinks03.gmax
+newmodel wbmug_m_091
+setsupermodel wbmug_m_091 NULL
+classification Character
+setanimationscale 1.0
+#NWmax GEOM  ASCII
+beginmodelgeom wbmug_m_091
+node dummy wbmug_m_091
+  parent NULL
+endnode
+node dummy Box02
+  parent wbmug_m_091
+  position 0.0 0.0 0.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.345098 0.560784 0.882353 
+endnode
+endmodelgeom wbmug_m_091
+donemodel wbmug_m_091

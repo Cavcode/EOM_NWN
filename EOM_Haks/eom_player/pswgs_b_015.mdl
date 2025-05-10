@@ -1,0 +1,83 @@
+# Exported from NWmax v6.11.28 at 4/1/2022 5:30:04 PM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: pswgs_b_015
+#local file: Unknown
+filedependancy Unknown
+newmodel pswgs_b_015
+setsupermodel pswgs_b_015 NULL
+classification Character
+setanimationscale 1.0
+#NWmax GEOM  ASCII
+beginmodelgeom pswgs_b_015
+node dummy pswgs_b_015
+  parent NULL
+endnode
+node trimesh pswgs_b_011
+  parent pswgs_b_015
+  position 0.00492987 -0.0154021 0.0176859
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 1.0 1.0 1.0 
+  tilefade 0
+  scale 1.0
+  render 0
+  Shadow 1
+  beaming 0
+  inheritcolor 0
+  rotatetexture 0
+  alpha 1.0
+  transparencyhint 0
+  selfillumcolor 0.0 0.0 0.0 
+  ambient 1.0 1.0 1.0 
+  Diffuse 1.0 1.0 1.0 
+  Specular 0.0 0.0 0.0 
+  shininess 1
+  center 5.06639e-06 -4.61261 0.7377 
+  bitmap pswgs_011
+  verts 12
+    0.0183626 -0.201892 -0.00320479
+    0.0183625 -0.201892 0.0179588
+    0.0 -0.201892 -0.0138385
+    -0.0183625 0.10964 -0.00320479
+    0.0 0.10964 -0.0138385
+    0.0183625 0.10964 -0.00320479
+    -0.0183625 -0.201892 0.0179588
+    -0.0183625 -0.201892 -0.00320479
+    -0.0183625 0.10964 0.0179588
+    0.0 -0.201892 0.0285925
+    0.0183625 0.10964 0.0179588
+    0.0 0.10964 0.0285925
+  faces 16
+    0 1 2  1  0 1 2  1
+    2 3 4  2  3 4 5  1
+    0 4 5  2  6 5 4  1
+    6 7 2  1  1 0 2  1
+    7 8 3  2  6 7 4  1
+    9 10 11  2  8 7 9  1
+    9 6 2  1  10 1 2  1
+    6 11 8  2  11 9 7  1
+    1 5 10  2  11 4 7  1
+    1 9 2  1  1 10 2  1
+    0 5 1  2  6 4 11  1
+    1 10 9  2  11 7 8  1
+    9 11 6  2  8 9 11  1
+    6 8 7  2  11 7 6  1
+    7 3 2  2  6 4 3  1
+    4 0 2  4  5 6 3  1
+  tverts 12
+    0.016788 -0.557674 0
+    0.043757 -0.557674 0
+    0.003304 -0.663604 0
+    0.935573 -0.00833702 0
+    0.955332 -0.98953 0
+    0.935573 -0.98953 0
+    0.955332 -0.00833702 0
+    0.978032 -0.98953 0
+    0.99773 -0.00833702 0
+    0.99773 -0.98953 0
+    0.057242 -0.663604 0
+    0.978032 -0.00833702 0
+endnode
+endmodelgeom pswgs_b_015
+donemodel pswgs_b_015

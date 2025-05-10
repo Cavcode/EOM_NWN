@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 wswss_118 
+texture1 wswss_118_n 
+texture2 spec_med
+texture3 null 
+texture4 null 

@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 hfx_hat_rdm 
+texture1 hfx_hat_rdm_n 
+texture2 null 
+texture3 null 
+texture4 null 

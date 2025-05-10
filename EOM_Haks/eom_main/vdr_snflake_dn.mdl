@@ -1,0 +1,1052 @@
+#MAXMODEL ASCII
+# model: vdr_snflake_dn
+filedependancy vdr_snflake_dn.max
+newmodel vdr_snflake_dn
+setsupermodel vdr_snflake_dn NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vdr_snflake_dn
+node dummy vdr_snflake_dn
+  parent NULL
+endnode
+node emitter OmenEmitter01
+  parent vdr_snflake_dn
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Billboard_to_World_Z
+  blend Lighten
+  texture fxpa_snflake_dn
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.123169 -0.175207 0.431557
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 0
+  alphaEnd 0
+  sizeStart 7
+  sizeEnd 7
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp -1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter07
+  parent vdr_snflake_dn
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Billboard_to_World_Z
+  blend Lighten
+  texture fxpa_snflake_dn
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 3.8323 -0.0513179 0.368855
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 0
+  alphaEnd 0
+  sizeStart 5
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp -1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter08
+  parent vdr_snflake_dn
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Billboard_to_World_Z
+  blend Lighten
+  texture fxpa_snflake_dn
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -1.07682 -3.98552 0.368855
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 0
+  alphaEnd 0
+  sizeStart 4
+  sizeEnd 4
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp -1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter09
+  parent vdr_snflake_dn
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Billboard_to_World_Z
+  blend Lighten
+  texture fxpa_snflake_dn
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -4.01984 1.5817 0.368224
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 0
+  alphaEnd 0
+  sizeStart 5
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp -1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter10
+  parent vdr_snflake_dn
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Billboard_to_World_Z
+  blend Lighten
+  texture fxpa_snflake_dn
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.894548 4.20262 0.428907
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 0
+  alphaEnd 0
+  sizeStart 5
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp -1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter11
+  parent vdr_snflake_dn
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Billboard_to_World_Z
+  blend Lighten
+  texture fxpa_snflake_dn
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 3.96496 2.8991 0.428907
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 0
+  alphaEnd 0
+  sizeStart 3
+  sizeEnd 3
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp -1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter12
+  parent vdr_snflake_dn
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Billboard_to_World_Z
+  blend Lighten
+  texture fxpa_snflake_dn
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 3.11004 -3.12288 0.428907
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 0
+  alphaEnd 0
+  sizeStart 3.5
+  sizeEnd 3.5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp -1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter13
+  parent vdr_snflake_dn
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Billboard_to_World_Z
+  blend Lighten
+  texture fxpa_snflake_dn
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -5.55795 -0.983506 0.428907
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 0
+  alphaEnd 0
+  sizeStart 3.5
+  sizeEnd 3.5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp -1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter14
+  parent vdr_snflake_dn
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Billboard_to_World_Z
+  blend Lighten
+  texture fxpa_snflake_dn
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -4.33322 -3.80207 0.428907
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 0
+  alphaEnd 0
+  sizeStart 5
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp -1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter15
+  parent vdr_snflake_dn
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Billboard_to_World_Z
+  blend Lighten
+  texture fxpa_snflake_dn
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 1.39306 -4.91677 0.428907
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 0
+  alphaEnd 0
+  sizeStart 5
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp -1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter16
+  parent vdr_snflake_dn
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Billboard_to_World_Z
+  blend Lighten
+  texture fxpa_snflake_dn
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -2.69894 4.42663 0.428907
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 0
+  alphaEnd 0
+  sizeStart 5
+  sizeEnd 5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp -1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom vdr_snflake_dn
+
+#MAXANIM ASCII
+newanim impact vdr_snflake_dn
+  length 1.96667
+  transtime 0
+  animroot vdr_snflake_dn
+  node dummy vdr_snflake_dn
+    parent NULL
+  endnode
+  node emitter OmenEmitter01
+    parent vdr_snflake_dn
+    alphaStartkey 3
+         0.0000000    0.0000000
+         1.2333300    1.0000000
+         1.9666700    1.0000000
+    alphaEndkey 3
+         0.0000000    0.0000000
+         1.2333300    1.0000000
+         1.9666700    1.0000000
+  endnode
+  node emitter OmenEmitter07
+    parent vdr_snflake_dn
+    alphaStartkey 3
+         0.0000000    0.0000000
+         1.4000000    1.0000000
+         1.9666700    1.0000000
+    alphaEndkey 3
+         0.0000000    0.0000000
+         1.4000000    1.0000000
+         1.9666700    1.0000000
+  endnode
+  node emitter OmenEmitter08
+    parent vdr_snflake_dn
+    alphaStartkey 4
+         0.0000000    0.0000000
+         0.2666670    0.0000000
+         1.4333301    1.0000000
+         1.9666700    1.0000000
+    alphaEndkey 4
+         0.0000000    0.0000000
+         0.2666670    0.0000000
+         1.4333301    1.0000000
+         1.9666700    1.0000000
+  endnode
+  node emitter OmenEmitter09
+    parent vdr_snflake_dn
+    alphaStartkey 3
+         0.0000000    0.0000000
+         1.2000000    1.0000000
+         1.9666700    1.0000000
+    alphaEndkey 3
+         0.0000000    0.0000000
+         1.2000000    1.0000000
+         1.9666700    1.0000000
+  endnode
+  node emitter OmenEmitter10
+    parent vdr_snflake_dn
+    alphaStartkey 4
+         0.0000000    0.0000000
+         0.3333330    0.0000000
+         1.8333300    1.0000000
+         1.9666700    1.0000000
+    alphaEndkey 4
+         0.0000000    0.0000000
+         0.3333330    0.0000000
+         1.8333300    1.0000000
+         1.9666700    1.0000000
+  endnode
+  node emitter OmenEmitter11
+    parent vdr_snflake_dn
+    alphaStartkey 4
+         0.0000000    0.0000000
+         0.1666670    0.0000000
+         1.1666700    1.0000000
+         1.9666700    1.0000000
+    alphaEndkey 4
+         0.0000000    0.0000000
+         0.1666670    0.0000000
+         1.1666700    1.0000000
+         1.9666700    1.0000000
+  endnode
+  node emitter OmenEmitter12
+    parent vdr_snflake_dn
+    alphaStartkey 4
+         0.0000000    0.0000000
+         0.6000000    0.0000000
+         1.8666700    1.0000000
+         1.9666700    1.0000000
+    alphaEndkey 4
+         0.0000000    0.0000000
+         0.6000000    0.0000000
+         1.8666700    1.0000000
+         1.9666700    1.0000000
+  endnode
+  node emitter OmenEmitter13
+    parent vdr_snflake_dn
+    alphaStartkey 4
+         0.0000000    0.0000000
+         0.3666670    0.0000000
+         1.4666700    1.0000000
+         1.9666700    1.0000000
+    alphaEndkey 4
+         0.0000000    0.0000000
+         0.3666670    0.0000000
+         1.4666700    1.0000000
+         1.9666700    1.0000000
+  endnode
+  node emitter OmenEmitter14
+    parent vdr_snflake_dn
+    alphaStartkey 4
+         0.0000000    0.0000000
+         0.8000000    0.0000000
+         1.6333300    1.0000000
+         1.9666700    1.0000000
+    alphaEndkey 4
+         0.0000000    0.0000000
+         0.8000000    0.0000000
+         1.6333300    1.0000000
+         1.9666700    1.0000000
+  endnode
+  node emitter OmenEmitter15
+    parent vdr_snflake_dn
+    alphaStartkey 3
+         0.0000000    0.0000000
+         1.1333300    1.0000000
+         1.9666700    1.0000000
+    alphaEndkey 3
+         0.0000000    0.0000000
+         1.1333300    1.0000000
+         1.9666700    1.0000000
+  endnode
+  node emitter OmenEmitter16
+    parent vdr_snflake_dn
+    alphaStartkey 4
+         0.0000000    0.0000000
+         0.5000000    0.0000000
+         1.6000000    1.0000000
+         1.9666700    1.0000000
+    alphaEndkey 4
+         0.0000000    0.0000000
+         0.5000000    0.0000000
+         1.6000000    1.0000000
+         1.9666700    1.0000000
+  endnode
+doneanim impact vdr_snflake_dn
+
+#MAXANIM ASCII
+newanim duration vdr_snflake_dn
+  length 0.333333
+  transtime 0
+  animroot vdr_snflake_dn
+  node dummy vdr_snflake_dn
+    parent NULL
+  endnode
+  node emitter OmenEmitter01
+    parent vdr_snflake_dn
+    alphaStartkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+    alphaEndkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+  endnode
+  node emitter OmenEmitter07
+    parent vdr_snflake_dn
+    alphaStartkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+    alphaEndkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+  endnode
+  node emitter OmenEmitter08
+    parent vdr_snflake_dn
+    alphaStartkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+    alphaEndkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+  endnode
+  node emitter OmenEmitter09
+    parent vdr_snflake_dn
+    alphaStartkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+    alphaEndkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+  endnode
+  node emitter OmenEmitter10
+    parent vdr_snflake_dn
+    alphaStartkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+    alphaEndkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+  endnode
+  node emitter OmenEmitter11
+    parent vdr_snflake_dn
+    alphaStartkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+    alphaEndkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+  endnode
+  node emitter OmenEmitter12
+    parent vdr_snflake_dn
+    alphaStartkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+    alphaEndkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+  endnode
+  node emitter OmenEmitter13
+    parent vdr_snflake_dn
+    alphaStartkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+    alphaEndkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+  endnode
+  node emitter OmenEmitter14
+    parent vdr_snflake_dn
+    alphaStartkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+    alphaEndkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+  endnode
+  node emitter OmenEmitter15
+    parent vdr_snflake_dn
+    alphaStartkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+    alphaEndkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+  endnode
+  node emitter OmenEmitter16
+    parent vdr_snflake_dn
+    alphaStartkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+    alphaEndkey 2
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+  endnode
+doneanim duration vdr_snflake_dn
+
+#MAXANIM ASCII
+newanim cessation vdr_snflake_dn
+  length 1.66667
+  transtime 0
+  animroot vdr_snflake_dn
+  node dummy vdr_snflake_dn
+    parent NULL
+  endnode
+  node emitter OmenEmitter01
+    parent vdr_snflake_dn
+    alphaStartkey 3
+         0.0000000    1.0000000
+         1.0000000    1.0000000
+         1.6666700    0.0000000
+    alphaEndkey 3
+         0.0000000    1.0000000
+         1.0000000    1.0000000
+         1.6666700    0.0000000
+  endnode
+  node emitter OmenEmitter07
+    parent vdr_snflake_dn
+    alphaStartkey 3
+         0.0000000    1.0000000
+         0.2333330    1.0000000
+         1.0666699    0.0000000
+    alphaEndkey 3
+         0.0000000    1.0000000
+         0.2333330    1.0000000
+         1.0666699    0.0000000
+  endnode
+  node emitter OmenEmitter08
+    parent vdr_snflake_dn
+    alphaStartkey 3
+         0.0000000    1.0000000
+         0.2333330    1.0000000
+         1.4666700    0.0000000
+    alphaEndkey 3
+         0.0000000    1.0000000
+         0.2333330    1.0000000
+         1.4666700    0.0000000
+  endnode
+  node emitter OmenEmitter09
+    parent vdr_snflake_dn
+    alphaStartkey 2
+         0.0000000    1.0000000
+         1.0000000    0.0000000
+    alphaEndkey 2
+         0.0000000    1.0000000
+         1.0000000    0.0000000
+  endnode
+  node emitter OmenEmitter10
+    parent vdr_snflake_dn
+    alphaStartkey 3
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+         1.1333300    0.0000000
+    alphaEndkey 3
+         0.0000000    1.0000000
+         0.3333330    1.0000000
+         1.1333300    0.0000000
+  endnode
+  node emitter OmenEmitter11
+    parent vdr_snflake_dn
+    alphaStartkey 2
+         0.0000000    1.0000000
+         0.8000000    0.0000000
+    alphaEndkey 2
+         0.0000000    1.0000000
+         0.8000000    0.0000000
+  endnode
+  node emitter OmenEmitter12
+    parent vdr_snflake_dn
+    alphaStartkey 2
+         0.0000000    1.0000000
+         0.8000000    0.0000000
+    alphaEndkey 2
+         0.0000000    1.0000000
+         0.8000000    0.0000000
+  endnode
+  node emitter OmenEmitter13
+    parent vdr_snflake_dn
+    alphaStartkey 3
+         0.0000000    1.0000000
+         0.5333330    1.0000000
+         1.4000000    0.0000000
+    alphaEndkey 3
+         0.0000000    1.0000000
+         0.5333330    1.0000000
+         1.4000000    0.0000000
+  endnode
+  node emitter OmenEmitter14
+    parent vdr_snflake_dn
+    alphaStartkey 3
+         0.0000000    1.0000000
+         0.2666670    1.0000000
+         1.0000000    0.0000000
+    alphaEndkey 3
+         0.0000000    1.0000000
+         0.2666670    1.0000000
+         1.0000000    0.0000000
+  endnode
+  node emitter OmenEmitter15
+    parent vdr_snflake_dn
+    alphaStartkey 3
+         0.0000000    1.0000000
+         0.4333330    1.0000000
+         1.4666700    0.0000000
+    alphaEndkey 3
+         0.0000000    1.0000000
+         0.4333330    1.0000000
+         1.4666700    0.0000000
+  endnode
+  node emitter OmenEmitter16
+    parent vdr_snflake_dn
+    alphaStartkey 2
+         0.0000000    1.0000000
+         0.7333330    0.0000000
+    alphaEndkey 2
+         0.0000000    1.0000000
+         0.7333330    0.0000000
+  endnode
+doneanim cessation vdr_snflake_dn
+
+donemodel vdr_snflake_dn

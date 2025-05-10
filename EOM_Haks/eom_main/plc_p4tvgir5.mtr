@@ -1,0 +1,11 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 plc_p4tvgir5
+texture1 null 
+texture2 null 
+texture3 null 
+texture4 null 
+
+twosided 1

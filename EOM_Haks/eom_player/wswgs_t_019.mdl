@@ -1,0 +1,24 @@
+# Exported from NWmax 0.8 b60 at 4/22/2014 11:29:21 AM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: wswgs_t_019
+#local file: C:\gmax\Scenes\Weapons\chaoseater sword01.gmax
+filedependancy chaoseater sword01.gmax
+newmodel wswgs_t_019
+setsupermodel wswgs_t_019 NULL
+classification Character
+setanimationscale 1.0
+#NWmax GEOM  ASCII
+beginmodelgeom wswgs_t_019
+node dummy wswgs_t_019
+  parent NULL
+endnode
+node dummy Plane02
+  parent wswgs_t_019
+  position 0.0 0.0 0.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.109804 0.109804 0.694118 
+endnode
+endmodelgeom wswgs_t_019
+donemodel wswgs_t_019

@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+
+texture1 hfx_jester1_n 
+texture2 hfx_jester1_s 
+texture3 null 
+texture4 null 

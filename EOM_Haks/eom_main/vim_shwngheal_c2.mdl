@@ -1,0 +1,680 @@
+#MAXMODEL ASCII
+# model: vim_shwngheal_c2
+filedependancy vim_shwngheal_c2.max
+newmodel vim_shwngheal_c2
+setsupermodel vim_shwngheal_c2 NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vim_shwngheal_c2
+node dummy vim_shwngheal_c2
+  parent NULL
+endnode
+node emitter vCA_self002
+  parent vim_shwngheal_c2
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Normal
+  blend Normal
+  texture fxpa_Smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 0.499925
+  orientation 0 0 0 0
+  colorStart 0 0 0
+  colorEnd 0 0 0
+  alphaStart 1
+  alphaEnd 0
+  sizeStart 0.2
+  sizeEnd 1
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 5
+  lifeExp 1
+  mass 0
+  spread 2.0944
+  particleRot 1
+  velocity 0.5
+  randvel 0.3
+  fps 15
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter09
+  parent vim_shwngheal_c2
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Normal
+  blend Lighten
+  texture fxpa_StarBnW
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.00233881 0.0020133 0.507158
+  orientation 0 0 0 0
+  colorStart 0.317647 0.635294 0.933333
+  colorEnd 0.317647 0.635294 0.933333
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 1
+  lifeExp -1
+  mass 0
+  spread 0
+  particleRot 1
+  velocity 0
+  randvel 0
+  fps 30
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter11
+  parent vim_shwngheal_c2
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_StarBnWa
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.000355979 0.000117448 -0.202807
+  orientation 0 0 -1 -0.785398
+  colorStart 0 0 0
+  colorEnd 0 0 0
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.6
+  sizeEnd 0.1
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 2
+  birthrate 10
+  lifeExp 0.2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 15
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter12
+  parent vim_shwngheal_c2
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_StarBnWa
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.000355979 0.000117448 -0.202807
+  orientation 0 0 -1 -0.785398
+  colorStart 0 0 0
+  colorEnd 0 0 0
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.6
+  sizeEnd 0.1
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 2
+  birthrate 10
+  lifeExp 0.2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 15
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter10
+  parent vim_shwngheal_c2
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_StarBnW
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -7.86529e-05 0.000117448 -0.202807
+  orientation 0 0 1 -0.785398
+  colorStart 0.317647 0.635294 0.933333
+  colorEnd 0.317647 0.635294 0.933333
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.6
+  sizeEnd 0.1
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 2
+  birthrate 10
+  lifeExp 0.2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 15
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter01
+  parent vim_shwngheal_c2
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 1
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_StarBnW
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -7.86529e-05 0.000117448 -0.202807
+  orientation 0 0 1 -0.785398
+  colorStart 0.317647 0.635294 0.933333
+  colorEnd 0.317647 0.635294 0.933333
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.6
+  sizeEnd 0.1
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 2
+  birthrate 10
+  lifeExp 0.2
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 15
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom vim_shwngheal_c2
+
+#MAXANIM ASCII
+newanim impact vim_shwngheal_c2
+  length 0.966667
+  transtime 0.25
+  animroot vim_shwngheal_c2
+  event 0.6 detonate
+  node dummy vim_shwngheal_c2
+    parent NULL
+  endnode
+  node emitter vCA_self002
+    parent vim_shwngheal_c2
+  endnode
+  node emitter OmenEmitter09
+    parent vim_shwngheal_c2
+    sizeStartkey 3
+         0.0000000    0.0000000
+         0.5666670    0.0000000
+         0.6000000    2.0000000
+    sizeEndkey 3
+         0.0000000    0.0000000
+         0.5666670    0.0000000
+         0.6000000    2.0000000
+    birthratekey 3
+         0.0000000    1.0000000
+         0.9333330    1.0000000
+         0.9666670    0.0000000
+  endnode
+  node emitter OmenEmitter11
+    parent vim_shwngheal_c2
+    positionkey 10
+         0.0000000    0.0003560    0.0001174   -0.2028070
+         0.3000000    0.0003560    0.0001174   -0.2028070
+         0.3333330   -0.1193840    0.1198580   -0.1882030
+         0.3666670   -0.2536970    0.2541710   -0.1255580
+         0.4000000   -0.3375600    0.3380330   -0.0132975
+         0.4333330   -0.3721180    0.3725920    0.1380880
+         0.5000000   -0.3532010    0.3536740    0.2956760
+         0.5333330   -0.2692350    0.2697090    0.4106320
+         0.5666670   -0.1343630    0.1348370    0.4841140
+         0.6000000    0.0003560    0.0001174    0.5057610
+    colorStartkey 1
+         0.4333330    0.8431370    0.7137260    0.0000000
+    colorEndkey 1
+         0.4333330    0.8431370    0.7137260    0.0000000
+    alphaStartkey 1
+         0.4333330    1.0000000
+    alphaEndkey 1
+         0.4333330    1.0000000
+    sizeStartkey 1
+         0.4333330    0.6000000
+    sizeEndkey 1
+         0.4333330    0.1000000
+    frameStartkey 1
+         0.4333330    0.0000000
+    frameEndkey 1
+         0.4333330    2.0000000
+    birthratekey 4
+         0.0000000   10.0000000
+         0.4333330   10.0000000
+         0.9333330   10.0000000
+         0.9666670    0.0000000
+    lifeExpkey 1
+         0.4333330    0.2000000
+    masskey 1
+         0.4333330    0.0000000
+    spreadkey 1
+         0.4333330    0.0000000
+    velocitykey 1
+         0.4333330    0.0000000
+    randvelkey 1
+         0.4333330    0.0000000
+    fpskey 1
+         0.4333330   15.0000000
+    xsizekey 1
+         0.4333330    0.0000000
+    ysizekey 1
+         0.4333330    0.0000000
+    bounce_cokey 1
+         0.4333330    0.0000000
+    lightningDelaykey 1
+         0.4333330    0.0000000
+    lightningRadiuskey 1
+         0.4333330    0.0000000
+    lightningScalekey 1
+         0.4333330    0.0000000
+    p2p_bezier2key 1
+         0.4333330    0.0000000
+    p2p_bezier3key 1
+         0.4333330    0.0000000
+    combinetimekey 1
+         0.4333330    0.0000000
+    dragkey 1
+         0.4333330    0.0000000
+    gravkey 1
+         0.4333330    0.0000000
+  endnode
+  node emitter OmenEmitter12
+    parent vim_shwngheal_c2
+    positionkey 10
+         0.0000000    0.0003560    0.0001174   -0.2028070
+         0.3000000    0.0003560    0.0001174   -0.2028070
+         0.3333330    0.1241730   -0.1236990   -0.1882030
+         0.3666670    0.2479900   -0.2475160   -0.1255580
+         0.4000000    0.3378370   -0.3373640   -0.0132975
+         0.4333330    0.3733540   -0.3728810    0.1380880
+         0.5000000    0.3536930   -0.3532200    0.2956760
+         0.5333330    0.2663640   -0.2658910    0.4106320
+         0.5666670    0.1334460   -0.1329730    0.4841140
+         0.6000000    0.0003560    0.0001174    0.5057610
+    colorStartkey 1
+         0.4333330    0.8431370    0.7137260    0.0000000
+    colorEndkey 1
+         0.4333330    0.8431370    0.7137260    0.0000000
+    alphaStartkey 1
+         0.4333330    1.0000000
+    alphaEndkey 1
+         0.4333330    1.0000000
+    sizeStartkey 1
+         0.4333330    0.6000000
+    sizeEndkey 1
+         0.4333330    0.1000000
+    frameStartkey 1
+         0.4333330    0.0000000
+    frameEndkey 1
+         0.4333330    2.0000000
+    birthratekey 4
+         0.0000000   10.0000000
+         0.4333330   10.0000000
+         0.9333330   10.0000000
+         0.9666670    0.0000000
+    lifeExpkey 1
+         0.4333330    0.2000000
+    masskey 1
+         0.4333330    0.0000000
+    spreadkey 1
+         0.4333330    0.0000000
+    velocitykey 1
+         0.4333330    0.0000000
+    randvelkey 1
+         0.4333330    0.0000000
+    fpskey 1
+         0.4333330   15.0000000
+    xsizekey 1
+         0.4333330    0.0000000
+    ysizekey 1
+         0.4333330    0.0000000
+    bounce_cokey 1
+         0.4333330    0.0000000
+    lightningDelaykey 1
+         0.4333330    0.0000000
+    lightningRadiuskey 1
+         0.4333330    0.0000000
+    lightningScalekey 1
+         0.4333330    0.0000000
+    p2p_bezier2key 1
+         0.4333330    0.0000000
+    p2p_bezier3key 1
+         0.4333330    0.0000000
+    combinetimekey 1
+         0.4333330    0.0000000
+    dragkey 1
+         0.4333330    0.0000000
+    gravkey 1
+         0.4333330    0.0000000
+  endnode
+  node emitter OmenEmitter10
+    parent vim_shwngheal_c2
+    positionkey 10
+         0.0000000   -0.0000787    0.0001174   -0.2028070
+         0.3000000   -0.0000787    0.0001174   -0.2028070
+         0.3333330    0.1196620    0.1198580   -0.1882030
+         0.3666670    0.2539740    0.2541710   -0.1255580
+         0.4000000    0.3378370    0.3380330   -0.0132975
+         0.4333330    0.3723960    0.3725920    0.1380880
+         0.5000000    0.3534780    0.3536740    0.2956760
+         0.5333330    0.2695130    0.2697090    0.4106320
+         0.5666670    0.1346410    0.1348370    0.4841140
+         0.6000000   -0.0000787    0.0001174    0.5057610
+    colorStartkey 1
+         0.4333330    0.3176470    0.6352940    0.9333330
+    colorEndkey 1
+         0.4333330    0.3176470    0.6352940    0.9333330
+    alphaStartkey 1
+         0.4333330    1.0000000
+    alphaEndkey 1
+         0.4333330    1.0000000
+    sizeStartkey 1
+         0.4333330    0.6000000
+    sizeEndkey 1
+         0.4333330    0.1000000
+    frameStartkey 1
+         0.4333330    0.0000000
+    frameEndkey 1
+         0.4333330    2.0000000
+    birthratekey 4
+         0.0000000   10.0000000
+         0.4333330   10.0000000
+         0.9333330   10.0000000
+         0.9666670    0.0000000
+    lifeExpkey 1
+         0.4333330    0.2000000
+    masskey 1
+         0.4333330    0.0000000
+    spreadkey 1
+         0.4333330    0.0000000
+    velocitykey 1
+         0.4333330    0.0000000
+    randvelkey 1
+         0.4333330    0.0000000
+    fpskey 1
+         0.4333330   15.0000000
+    xsizekey 1
+         0.4333330    0.0000000
+    ysizekey 1
+         0.4333330    0.0000000
+    bounce_cokey 1
+         0.4333330    0.0000000
+    lightningDelaykey 1
+         0.4333330    0.0000000
+    lightningRadiuskey 1
+         0.4333330    0.0000000
+    lightningScalekey 1
+         0.4333330    0.0000000
+    p2p_bezier2key 1
+         0.4333330    0.0000000
+    p2p_bezier3key 1
+         0.4333330    0.0000000
+    combinetimekey 1
+         0.4333330    0.0000000
+    dragkey 1
+         0.4333330    0.0000000
+    gravkey 1
+         0.4333330    0.0000000
+  endnode
+  node emitter OmenEmitter01
+    parent vim_shwngheal_c2
+    positionkey 10
+         0.0000000   -0.0000787    0.0001174   -0.2028070
+         0.3000000   -0.0000787    0.0001174   -0.2028070
+         0.3333330   -0.1238950   -0.1236990   -0.1882030
+         0.3666670   -0.2477120   -0.2475160   -0.1255580
+         0.4000000   -0.3375600   -0.3373640   -0.0132975
+         0.4333330   -0.3730770   -0.3728810    0.1380880
+         0.5000000   -0.3534160   -0.3532200    0.2956760
+         0.5333330   -0.2660870   -0.2658910    0.4106320
+         0.5666670   -0.1331690   -0.1329720    0.4841140
+         0.6000000   -0.0000787    0.0001174    0.5057610
+    colorStartkey 1
+         0.4333330    0.3176470    0.6352940    0.9333330
+    colorEndkey 1
+         0.4333330    0.3176470    0.6352940    0.9333330
+    alphaStartkey 1
+         0.4333330    1.0000000
+    alphaEndkey 1
+         0.4333330    1.0000000
+    sizeStartkey 1
+         0.4333330    0.6000000
+    sizeEndkey 1
+         0.4333330    0.1000000
+    frameStartkey 1
+         0.4333330    0.0000000
+    frameEndkey 1
+         0.4333330    2.0000000
+    birthratekey 4
+         0.0000000   10.0000000
+         0.4333330   10.0000000
+         0.9333330   10.0000000
+         0.9666670    0.0000000
+    lifeExpkey 1
+         0.4333330    0.2000000
+    masskey 1
+         0.4333330    0.0000000
+    spreadkey 1
+         0.4333330    0.0000000
+    velocitykey 1
+         0.4333330    0.0000000
+    randvelkey 1
+         0.4333330    0.0000000
+    fpskey 1
+         0.4333330   15.0000000
+    xsizekey 1
+         0.4333330    0.0000000
+    ysizekey 1
+         0.4333330    0.0000000
+    bounce_cokey 1
+         0.4333330    0.0000000
+    lightningDelaykey 1
+         0.4333330    0.0000000
+    lightningRadiuskey 1
+         0.4333330    0.0000000
+    lightningScalekey 1
+         0.4333330    0.0000000
+    p2p_bezier2key 1
+         0.4333330    0.0000000
+    p2p_bezier3key 1
+         0.4333330    0.0000000
+    combinetimekey 1
+         0.4333330    0.0000000
+    dragkey 1
+         0.4333330    0.0000000
+    gravkey 1
+         0.4333330    0.0000000
+  endnode
+doneanim impact vim_shwngheal_c2
+
+donemodel vim_shwngheal_c2

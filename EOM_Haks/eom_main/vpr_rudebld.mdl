@@ -1,0 +1,239 @@
+# Exported from NWmax v6.11.28 at 10/23/2020 7:15:30 AM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: vpr_rudebld
+#local file: Unknown
+filedependancy Unknown
+newmodel vpr_rudebld
+setsupermodel vpr_rudebld NULL
+classification Effect
+#NWmax GEOM  ASCII
+beginmodelgeom vpr_rudebld
+node dummy vpr_rudebld
+  parent NULL
+endnode
+node emitter star
+  parent vpr_rudebld
+  position 0.0 0.0 0.0
+  orientation 0.0 -1.0 0.0 -1.5708
+  wirecolor 1.0 1.0 1.0 
+  update_sel 1
+  update Fountain
+  render_sel 1
+  render Normal
+  blend_sel 3
+  Blend Lighten
+  spawnType 0
+  xSize 0.0
+  ySize 0.0
+  inherit 1
+  inherit_local 1
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.7
+  colorStart 0.533333004 0.40 0.644
+  colorEnd 0.452941 0.152941 0.552941
+  alphaStart 1.0
+  alphaEnd 0.5
+  sizeStart 1.6
+  sizeEnd 1.6
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 10
+  lifeExp 3.15
+  mass 0.0
+  spread 0.0
+  particleRot 30.15
+  velocity 0.0
+  randvel 0.0
+  bounce_co 0.0
+  blurlength 30.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  Splat 0
+  affectedByWind false
+  texture fxpa_nblade
+  twosidedtex 1
+  xgrid 1
+  ygrid 1
+  fps 0
+  frameStart 0
+  frameEnd 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  Drag 0.0
+endnode
+node emitter spark
+  parent star
+  position 0.0 -0.000247645 -0.000135355
+  orientation 0.0 1.0 0.0 -1.5708
+  wirecolor 1.0 1.0 1.0 
+  update_sel 1
+  update Fountain
+  render_sel 1
+  render Normal
+  blend_sel 3
+  Blend Lighten
+  spawnType 1
+  xSize 0.0
+  ySize 0.0
+  inherit 0
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 0.5 0.4 0.6 
+  colorEnd 0.5 0.4 0.6 
+  alphaStart 0.6
+  alphaEnd 0.0
+  sizeStart 0.5
+  sizeEnd 0.0
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 3
+  lifeExp 1.0
+  mass 0.0
+  spread 3.49066
+  particleRot 0.9
+  velocity 1.0
+  randvel 0.7
+  bounce_co 0.0
+  blurlength 10.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  Splat 0
+  affectedByWind false
+  texture fxpa_blueflicker
+  twosidedtex 0
+  xgrid 3
+  ygrid 3
+  fps 10
+  frameStart 0
+  frameEnd 9
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  Drag 0.0
+endnode
+node emitter spark01
+  parent star
+  position 0.0 -0.000247645 -0.000135355
+  orientation 0.0 1.0 0.0 -1.5708
+  wirecolor 1.0 1.0 1.0 
+  update_sel 1
+  update Fountain
+  render_sel 1
+  render Normal
+  blend_sel 3
+  Blend Lighten
+  spawnType 1
+  xSize 0.0
+  ySize 0.0
+  inherit 1
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 0
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 0.5 0.4 0.6 
+  colorEnd 0.5 0.4 0.6  
+  alphaStart 0.7
+  alphaEnd 0.0
+  sizeStart 0.4
+  sizeEnd 0.0
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 3
+  lifeExp 1.0
+  mass 0.0
+  spread 6.28319
+  particleRot 0.5
+  velocity 0.7
+  randvel 0.3
+  bounce_co 0.0
+  blurlength 10.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  Splat 0
+  affectedByWind false
+  texture fxpa_flare
+  twosidedtex 0
+  xgrid 1
+  ygrid 1
+  fps 0
+  frameStart 0
+  frameEnd 0
+  random 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  Drag 0.0
+endnode
+node dummy star_XYdimension
+  parent star
+  position 0.0 0.0 0.0
+  orientation 0.989949 0.0 0.141421 -6.28319
+  wirecolor 1.0 1.0 0.0 
+endnode
+node light AuroraLight02
+  parent vpr_rudebld
+  position -0.000731277 0.0812304 0.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 1.0 1.0 1.0 
+  radius 7.0
+  multiplier 1.0
+  color 0.554902 0.194118 0.629412 
+  ambientonly 2
+  nDynamicType 0
+  affectDynamic 1
+  shadow 0
+  lightpriority 3
+  fadingLight 0
+endnode
+endmodelgeom vpr_rudebld
+donemodel vpr_rudebld

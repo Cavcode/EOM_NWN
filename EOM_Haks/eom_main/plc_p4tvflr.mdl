@@ -1,0 +1,53 @@
+# Exported from NWmax v6.11.28 at 6/24/2023 12:38:08 AM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: plc_p4tvflr
+#local file: Unknown
+filedependancy Unknown
+newmodel plc_p4tvflr
+setsupermodel plc_p4tvflr NULL
+classification Tile
+#NWmax GEOM  ASCII
+beginmodelgeom plc_p4tvflr
+node dummy plc_p4tvflr
+  parent NULL
+endnode
+#Tile trimesh node
+node trimesh Plane687
+  parent plc_p4tvflr
+  position 0.0 0.0 1.0
+  orientation  0.0 0.0 0.0  0.0
+  wirecolor 1.0 1.0 1.0 
+  tilefade 0
+  scale 1.0
+  render 1
+  Shadow 1
+  beaming 0
+  inheritcolor 0
+  rotatetexture 0
+  alpha 1.0
+  transparencyhint 0
+  selfillumcolor 0.0 0.0 0.0 
+  ambient 1.0 1.0 1.0 
+  Diffuse 1.0 1.0 1.0 
+  Specular 0.0 0.0 0.0 
+  shininess 1
+  center 0.0 0.0 0.0 
+  bitmap plc_p4tvflr
+  verts 4
+    -5.0 5.0 0.0
+    -5.0 -5.0 0.0
+    5.0 5.0 0.0
+    5.0 -5.0 0.0
+  faces 2
+    0 1 2  1  0 1 2  1
+    3 2 1  1  3 2 1  1
+  tverts 4
+    0.0 2.0 0
+    0.0 0.0 0
+    2.0 2.0 0
+    2.0 0.0 0
+endnode
+endmodelgeom plc_p4tvflr
+donemodel plc_p4tvflr

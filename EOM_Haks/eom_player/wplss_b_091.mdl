@@ -1,0 +1,24 @@
+# Exported from NWmax 0.8 b60 at 4/16/2014 3:00:59 PM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: wplss_b_091
+#local file: C:\gmax\Scenes\Weapons\frost spear07.gmax
+filedependancy frost spear07.gmax
+newmodel wplss_b_091
+setsupermodel wplss_b_091 NULL
+classification Character
+setanimationscale 1.0
+#NWmax GEOM  ASCII
+beginmodelgeom wplss_b_091
+node dummy wplss_b_091
+  parent NULL
+endnode
+node dummy staff02
+  parent wplss_b_091
+  position -0.00640224 -0.00484634 0.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.239216 0.52549 0.0235294 
+endnode
+endmodelgeom wplss_b_091
+donemodel wplss_b_091

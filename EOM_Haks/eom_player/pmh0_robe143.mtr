@@ -1,0 +1,13 @@
+customshaderVS vslit_sm_nm
+customshaderFS fslit_aniso_nm
+          
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+
+texture1 null 
+texture2 spec_dim
+texture3 pmh0_robe143_a
+
+transparency 1
+

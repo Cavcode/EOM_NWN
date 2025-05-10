@@ -1,0 +1,15 @@
+customshadervs vsLitC
+customshaderfs fs_starrysky
+
+## any texture name will do, as long as it has one. Non-alpha is preferable.
+texture0 fog01
+
+## control speed and direction (use negative value to reverse?)
+parameter float ANIMATION_SPEED 1.0
+
+## modifies the number of stars that are visible
+parameter float STARS_THRESHOLD 3.0
+
+## modifies the overall strength of the stars
+parameter float STARS_EXPOSURE 100.0
+

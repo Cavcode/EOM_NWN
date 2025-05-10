@@ -1,0 +1,24 @@
+# Exported from NWmax 0.8 b60 at 4/1/2014 12:03:25 PM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: wdbma_m_091
+#local file: C:\gmax\Scenes\Weapons\Orcish Weapons10.gmax
+filedependancy Orcish Weapons10.gmax
+newmodel wdbma_m_091
+setsupermodel wdbma_m_091 NULL
+classification Character
+setanimationscale 1.0
+#NWmax GEOM  ASCII
+beginmodelgeom wdbma_m_091
+node dummy wdbma_m_091
+  parent NULL
+endnode
+node dummy Box14
+  parent wdbma_m_091
+  position 0.0 0.0 0.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.898039 0.603922 0.843137 
+endnode
+endmodelgeom wdbma_m_091
+donemodel wdbma_m_091

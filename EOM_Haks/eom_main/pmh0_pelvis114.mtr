@@ -1,0 +1,9 @@
+// Renderhint
+renderhint NormalAndSpecMapped
+/* shaders */
+customshaderVS vslit_sm_nm
+customshaderFS fs_plt_hair
+// Textures
+
+texture1 pmh0_pelvis114_n
+texture2 pmh0_pelvis114_s

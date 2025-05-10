@@ -75,25 +75,6 @@ namespace EOM.Game.Server.Core
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         public delegate IntPtr StackPopGameDefinedStructureDelegate(int type);
 
-        [SuppressUnmanagedCodeSecurity]
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void FreeEffectDelegate(IntPtr ptr);
-
-        [SuppressUnmanagedCodeSecurity]
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void FreeEventDelegate(IntPtr ptr);
-
-        [SuppressUnmanagedCodeSecurity]
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void FreeLocationDelegate(IntPtr ptr);
-
-        [SuppressUnmanagedCodeSecurity]
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void FreeTalentDelegate(IntPtr ptr);
-
-        [SuppressUnmanagedCodeSecurity]
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void FreeItemPropertyDelegate(IntPtr ptr);
 
         [SuppressUnmanagedCodeSecurity]
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
@@ -253,8 +234,7 @@ namespace EOM.Game.Server.Core
             public readonly ReturnHookDelegate ReturnHook;
             public readonly StackPushRawStringDelegate StackPushRawString;
             public readonly StackPopRawStringDelegate StackPopRawString;
-            public readonly NWNXPushRawStringDelegate nwnxPushRawString;
-            public readonly NWNXPopRawStringDelegate nwnxPopRawString;
+
         }
     }
 }

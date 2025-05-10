@@ -1,0 +1,23 @@
+# Exported from NWmax 0.8 b60 at 3/28/2014 12:18:41 PM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: wxblma_m_091
+#local file: C:\gmax\Scenes\Weapons\Maul04.gmax
+filedependancy Maul04.gmax
+newmodel wxblma_m_091
+setsupermodel wxblma_m_091 NULL
+classification Item
+#NWmax GEOM  ASCII
+beginmodelgeom wxblma_m_091
+node dummy wxblma_m_091
+  parent NULL
+endnode
+node dummy Dummy02
+  parent wxblma_m_091
+  position 0.0 0.0 0.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.0313726 0.0313726 0.533333 
+endnode
+endmodelgeom wxblma_m_091
+donemodel wxblma_m_091

@@ -1,0 +1,597 @@
+#MAXMODEL ASCII
+# model: vdr_timewrp
+filedependancy vdr_timewrp.max
+newmodel vdr_timewrp
+setsupermodel vdr_timewrp NULL
+classification effect
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vdr_timewrp
+node dummy vdr_timewrp
+  parent NULL
+  #part-number 0
+  position 0 0 0 
+endnode
+node emitter Part1
+  parent vdr_timewrp
+  #part-number 1
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  splat 0
+  inherit_part 0
+  renderorder 4
+  spawntype 0
+  update Single
+  render Billboard_to_Local_Z
+  blend Lighten
+  texture fxpa_timecirc
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 20
+  blastLength 3
+  position 0 0 0.682724011
+  orientation 0 0 0 0
+  colorStart 1.0 1.0 1.0
+  colorEnd 0.1 0.413725984 0.843137026
+  alphaStart 0
+  alphaEnd 0
+  sizeStart 1.5
+  sizeEnd 1.5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot -2.6500000007
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Implosion
+  parent vdr_timewrp
+  #part-number 2
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  splat 0
+  inherit_part 0
+  renderorder 6
+  spawntype 0
+  update Fountain
+  render Billboard_to_Local_Z
+  blend Lighten
+  texture fxpa_timecirc
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 0
+  orientation 0 0 0 0
+  colorStart 0.4506 0.4506 0.55097
+  colorEnd 0 0 0
+  alphaStart 0
+  alphaEnd 0
+  sizeStart 3
+  sizeEnd 0.1
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 30
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 1.70000005
+  velocity 0.400000006
+  randvel 0
+  fps 12
+  xsize 90
+  ysize 60
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter part2
+  parent vdr_timewrp
+  #part-number 3
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  splat 0
+  inherit_part 0
+  renderorder 3
+  spawntype 0
+  update Fountain
+  render Billboard_to_Local_Z
+  blend Lighten
+  texture fxpa_timecirc
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 20
+  blastLength 3
+  position 0 0 0
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 0
+  alphaEnd 0
+  sizeStart 0.1
+  sizeEnd 2.5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 1
+  frameEnd 1
+  birthrate 1
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot -30.400000003
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter02
+  parent vdr_timewrp
+  #part-number 5
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  splat 0
+  inherit_part 0
+  renderorder 6
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_StarBnW
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 0
+  orientation 0 0 0 0
+  colorStart 0.884523 0.894523 1
+  colorEnd 0.884523 0.894523 1
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 2
+  sizeEnd 0.5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 1
+  lifeExp 1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 30
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FuryEmitter
+  parent vdr_timewrp
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 1
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_phod02w
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 0.5
+  orientation 0.3765649 0.2958359 0.8778838 -0.284523
+  colorStart 0.7 0.7 1
+  colorEnd 0 0 1
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 2
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 0
+  lifeExp 2
+  mass 0
+  spread 0
+  particleRot 110
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom vdr_timewrp
+
+#MAXANIM ASCII
+newanim impact vdr_timewrp
+  length 4.30000019
+  transtime 0
+  animroot vdr_timewrp
+node dummy vdr_timewrp
+  parent NULL
+  #part-number 0
+endnode
+node emitter Part1
+  parent vdr_timewrp
+  #part-number 1
+  alphaStartkey 2
+    0 0
+    3.46667004 0.200000003
+  alphaEndkey 2
+    0 0
+    3.46667004 0.200000003
+endnode
+node emitter Implosion
+  parent vdr_timewrp
+  #part-number 2
+  alphaStartkey 3
+    3.29999995 0
+    3.33332992 0
+    3.96667004 0
+  alphaEndkey 3
+    0 0
+    0.433333009 1
+    0.466666996 1
+  sizeEndkey 5
+    0 4
+    2.79999995 4
+    2.83332992 4
+    3.29999995 4
+    3.70000005 4
+  birthratekey 3
+    2.79999995 15
+    2.83332992 15
+    3.70000005 15
+  lifeExpkey 4
+    2.79999995 1
+    2.83332992 1
+    3.29999995 1
+    3.70000005 1
+endnode
+node emitter part2
+  parent vdr_timewrp
+  #part-number 3
+  alphaStartkey 6
+    0 0
+    0.433333009 0.150000006
+    0.466666996 0.150000006
+    2.9000001 0.150000006
+    2.93333006 0.150000006
+    3.36666989 0.150000006
+  alphaEndkey 6
+    0 0
+    0.433333009 0.150000006
+    0.466666996 0.150000006
+    2.9000001 0.150000006
+    2.93333006 0.150000006
+    3.36666989 0.150000006
+endnode
+node emitter OmenEmitter02
+  parent vdr_timewrp
+  #part-number 5
+  positionkey 4
+    0 0 0 0.24609995
+    3.66667008 0 0 0.34650002
+    3.9000001 0 0 0.81940997
+    4.30000019 0 0 0.34522996
+  sizeStartkey 6
+    0 2
+    0.0333333015 2
+    3.66667008 2
+    3.70000005 2
+    3.9000001 2
+    4.30000019 2
+  sizeEndkey 2
+    0 0.15
+    4.30000019 0.15
+endnode
+node emitter FuryEmitter
+  parent vdr_timewrp
+  birthratekey 3
+    0 0
+	0.75 10
+    3.46667004 10
+endnode
+doneanim impact vdr_timewrp
+
+#MAXANIM ASCII
+newanim duration vdr_timewrp
+  length 4.30000019
+  transtime 0.25
+  animroot vdr_timewrp
+node dummy vdr_timewrp
+  parent NULL
+  #part-number 0
+endnode
+node emitter Part1
+  parent vdr_timewrp
+  #part-number 1
+  alphaStartkey 2
+    0 0.200000003
+    3.46667004 0.200000003
+  alphaEndkey 2
+    0 0.200000003
+    3.46667004 0.200000003
+endnode
+node emitter Implosion
+  parent vdr_timewrp
+  #part-number 2
+  alphaStartkey 3
+    3.29999995 0
+    3.33332992 0
+    3.96667004 0
+  alphaEndkey 3
+    0 1
+    0.433333009 1
+    0.466666996 1
+  sizeEndkey 5
+    0 4
+    2.79999995 4
+    2.83332992 4
+    3.29999995 4
+    3.70000005 4
+  birthratekey 3
+    2.79999995 15
+    2.83332992 15
+    3.70000005 15
+  lifeExpkey 4
+    2.79999995 1
+    2.83332992 1
+    3.29999995 1
+    3.70000005 1
+endnode
+node emitter part2
+  parent vdr_timewrp
+  #part-number 3
+  alphaStartkey 6
+    0 0.150000006
+    0.433333009 0.150000006
+    0.466666996 0.150000006
+    2.9000001 0.150000006
+    2.93333006 0.150000006
+    3.36666989 0.150000006
+  alphaEndkey 6
+    0 0.150000006
+    0.433333009 0.150000006
+    0.466666996 0.150000006
+    2.9000001 0.150000006
+    2.93333006 0.150000006
+    3.36666989 0.150000006
+endnode
+node emitter OmenEmitter02
+  parent vdr_timewrp
+  #part-number 5
+  positionkey 4
+    0 0 0 0.24609995
+    3.66667008 0 0 0.34650002
+    3.9000001 0 0 0.81940997
+    4.30000019 0 0 0.34522996
+  sizeStartkey 6
+    0 2
+    0.0333333015 2
+    3.66667008 2
+    3.70000005 2
+    3.9000001 2
+    4.30000019 2
+  sizeEndkey 2
+    0 0.15
+    4.30000019 0.15
+endnode
+node emitter FuryEmitter
+  parent vdr_timewrp
+  birthratekey 3
+    0 10
+	0.75 10
+    3.46667004 10
+endnode
+doneanim duration vdr_timewrp
+
+#MAXANIM ASCII
+newanim cessation vdr_timewrp
+  length 4.30000019
+  transtime 0.25
+  animroot vdr_timewrp
+node dummy vdr_timewrp
+  parent NULL
+  #part-number 0
+endnode
+node emitter Part1
+  parent vdr_timewrp
+  #part-number 1
+  alphaStartkey 2
+    0 0.200000003
+    3.46667004 0
+  alphaEndkey 2
+    0 0.200000003
+    3.46667004 0
+endnode
+node emitter Implosion
+  parent vdr_timewrp
+  #part-number 2
+  alphaStartkey 3
+    3.29999995 0
+    3.33332992 0
+    3.96667004 0
+  alphaEndkey 3
+    0 1
+    0.433333009 1
+    0.466666996 1
+  sizeEndkey 5
+    0 4
+    2.79999995 4
+    2.83332992 4
+    3.29999995 4
+    3.70000005 0
+  birthratekey 3
+    2.79999995 15
+    2.83332992 15
+    3.70000005 0
+  lifeExpkey 4
+    2.79999995 1
+    2.83332992 1
+    3.29999995 0.800000012
+    3.70000005 0.5
+endnode
+node emitter part2
+  parent vdr_timewrp
+  #part-number 3
+  alphaStartkey 6
+    0 0.150000006
+    0.433333009 0.150000006
+    0.466666996 0.150000006
+    2.9000001 0.150000006
+    2.93333006 0.150000006
+    3.36666989 0
+  alphaEndkey 6
+    0 0.150000006
+    0.433333009 0.150000006
+    0.466666996 0.150000006
+    2.9000001 0.150000006
+    2.93333006 0.150000006
+    3.36666989 0
+endnode
+node emitter OmenEmitter02
+  parent vdr_timewrp
+  #part-number 5
+  positionkey 4
+    0 0 0 0.24609995
+    3.66667008 0 0 0.34650002
+    3.9000001 0 0 0.81940997
+    4.30000019 0 0 0.34522996
+  sizeStartkey 6
+    0 2
+    0.0333333015 2
+    3.66667008 2
+    3.70000005 2
+    3.9000001 8
+    4.30000019 0
+  sizeEndkey 2
+    0 0.25
+    4.30000019 0.0
+endnode
+node emitter FuryEmitter
+  parent vdr_timewrp
+  birthratekey 3
+    0 10
+	3.04 10
+    3.46667004 0
+endnode
+doneanim cessation vdr_timewrp
+
+donemodel vdr_timewrp

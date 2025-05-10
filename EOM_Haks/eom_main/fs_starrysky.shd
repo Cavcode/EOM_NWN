@@ -1,0 +1,119 @@
+//*************************************
+//           REQUIRED HEADER
+//*************************************
+
+
+#define SHADER_TYPE 2
+
+#define LIGHTING 0
+#define FOG 1
+#define KEYHOLING 0
+
+#define NORMAL_MAP 0
+#define SPECULAR_MAP 0
+#define ROUGHNESS_MAP 0
+#define HEIGHT_MAP 0
+#define SELF_ILLUMINATION_MAP 0
+#define ENVIRONMENT_MAP 0
+
+
+#include "inc_standard"
+
+
+uniform int worldtimerTimeOfDay;
+
+// modifies the number of stars that are visible
+#define STARS_THRESHOLD 8.0 
+
+// modifies the overall strength of the stars
+#define STARS_EXPOSURE 200.0 
+
+//speed of animating
+#define ANIMATION_SPEED 1.0
+
+
+
+
+// Stars computation:
+//float STARS_THRESHOLD = 8.0f; // modifies the number of stars that are visible
+//float STARS_EXPOSURE = 200.0f; // modifies the overall strength of the stars
+
+vec3 hash( vec3 p ) // replace this by something better
+{
+	p = vec3( dot(p,vec3(127.1,311.7, 74.7)),
+			  dot(p,vec3(269.5,183.3,246.1)),
+			  dot(p,vec3(113.5,271.9,124.6)));
+
+	return -1.0 + 2.0*fract(sin(p)*43758.5453123);
+}	
+
+// 3D Gradient noise from: https://www.shadertoy.com/view/Xsl3Dl
+float add_noise( in vec3 p )
+{
+    vec3 i = floor( p );
+    vec3 f = fract( p );
+	
+	vec3 u = f*f*(3.0-2.0*f);
+
+    return mix( mix( mix( dot( hash( i + vec3(0.0,0.0,0.0) ), f - vec3(0.0,0.0,0.0) ), 
+                          dot( hash( i + vec3(1.0,0.0,0.0) ), f - vec3(1.0,0.0,0.0) ), u.x),
+                     mix( dot( hash( i + vec3(0.0,1.0,0.0) ), f - vec3(0.0,1.0,0.0) ), 
+                          dot( hash( i + vec3(1.0,1.0,0.0) ), f - vec3(1.0,1.0,0.0) ), u.x), u.y),
+                mix( mix( dot( hash( i + vec3(0.0,0.0,1.0) ), f - vec3(0.0,0.0,1.0) ), 
+                          dot( hash( i + vec3(1.0,0.0,1.0) ), f - vec3(1.0,0.0,1.0) ), u.x),
+                     mix( dot( hash( i + vec3(0.0,1.0,1.0) ), f - vec3(0.0,1.0,1.0) ), 
+                          dot( hash( i + vec3(1.0,1.0,1.0) ), f - vec3(1.0,1.0,1.0) ), u.x), u.y), u.z );
+}
+
+// from Unity's black body Shader Graph node
+vec3 Unity_Blackbody_float(float Temperature)
+{
+    vec3 color = vec3(255.0, 255.0, 255.0);
+    color.x = 56100000. * pow(Temperature,(-3.0 / 2.0)) + 148.0;
+    color.y = 100.04 * log(Temperature) - 623.6;
+    if (Temperature > 6500.0) color.y = 35200000.0 * pow(Temperature,(-3.0 / 2.0)) + 184.0;
+    color.z = 194.18 * log(Temperature) - 1448.6;
+    color = clamp(color, 0.0, 255.0)/255.0;
+    if (Temperature < 1000.0) color *= Temperature/1000.0;
+    return color;
+}
+
+void main(){
+	//set up base fragment
+    SetupStandardShaderInputs();
+	
+	//get texture info
+	//FragmentColor = vec4(vec3(0.0), 1.0);
+
+   // FragmentColor = VertexColor * texture2D(texUnit0,vVertexTexCoords.xy); 	
+	//FragmentColor = texture2D(texUnit0,vVertexTexCoords.xy); 
+	
+	
+	//set up base fragment
+   // SetupStandardShaderInputs();	
+		
+	//get the uv map from the mesh
+	//vec2 uv = vTexCoords.xy;
+	//vec2 uv = vVertexTexCoords.xy;
+	vec2 uv = vTexCoords.xy;
+	
+	
+	//vec2 uv = fragCoord/iResolution.xy;
+	//vec3 stars_direction = normalize(vec3(uv * 2.0 - 1.0, 1.0)); // could be view vector for example
+	//vec3 stars_direction = normalize(vec3(uv, 1.0)); // could be view vector for example
+	vec3 stars_direction = vec3(uv, 1.0);
+	
+	float stars = pow(clamp(add_noise(stars_direction * 200.0), 0.0, 1.0), STARS_THRESHOLD) * STARS_EXPOSURE;
+	float fTime = ANIMATION_SPEED * PI * worldtimerTimeOfDay/2000.0;
+	stars *= mix(0.4, 1.4, add_noise(stars_direction * 100.0f + vec3(fTime))); // time based flickering
+	
+    // star color by randomized temperature
+    float stars_temperature = add_noise(stars_direction * 150.0) * 0.5 + 0.5;
+    vec3 stars_color = Unity_Blackbody_float(mix(1500.0, 65000.0, pow(stars_temperature,4.0)));	
+	
+	
+    // Output to screen
+    gl_FragColor = vec4(stars_color * stars,1.0);	
+
+	
+}

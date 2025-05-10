@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 c_13gawar1 
+texture1 c_13gawar1_n 
+texture2 c_13gawar1_s 
+texture3 null 
+texture4 null 

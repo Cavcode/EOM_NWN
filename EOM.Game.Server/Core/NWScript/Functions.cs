@@ -4460,20 +4460,6 @@ namespace EOM.Game.Server.Core.NWScript
             VM.Call(1118);
         }
 
-        ///  Stops the given audio stream.<br/>
-        ///  * fFadeTime is in seconds to gradually fade out the audio instead of stopping directly.<br/>
-        ///  * Only one type of fading can be active at once, for example:<br/>
-        ///    If you call StartAudioStream() with fFadeInTime = 10.0f, any other audio stream functions with a fade time &amp;gt;0.0f will have no effect<br/>
-        ///    until StartAudioStream() is done fading.<br/>
-        ///  * Will do nothing if the stream is currently not in use.
-        public static void StopAudioStream(uint oPlayer, int nStreamIdentifier, float fFadeTime = 0.0f)
-        {
-            VM.StackPush(fFadeTime);
-            VM.StackPush(nStreamIdentifier);
-            VM.StackPush(oPlayer);
-            VM.Call(1119);
-        }
-
         ///  Un/pauses the given audio stream.<br/>
         ///  * fFadeTime is in seconds to gradually fade the audio out/in instead of pausing/resuming directly.<br/>
         ///  * Only one type of fading can be active at once, for example:<br/>
@@ -4487,37 +4473,6 @@ namespace EOM.Game.Server.Core.NWScript
             VM.StackPush(nStreamIdentifier);
             VM.StackPush(oPlayer);
             VM.Call(1120);
-        }
-
-        ///  Change volume of audio stream.<br/>
-        ///  * Volume is from 0.0 to 1.0.<br/>
-        ///  * fFadeTime is in seconds to gradually change the volume.<br/>
-        ///  * Only one type of fading can be active at once, for example:<br/>
-        ///    If you call StartAudioStream() with fFadeInTime = 10.0f, any other audio stream functions with a fade time &amp;gt;0.0f will have no effect<br/>
-        ///    until StartAudioStream() is done fading.<br/>
-        ///  * Subsequent calls to this function with fFadeTime &amp;gt;0.0f while already fading the volume<br/>
-        ///    will start the new fade with the previous&amp;apos; fade&amp;apos;s progress as starting point.<br/>
-        ///  * Will do nothing if the stream is currently not in use.
-        public static void SetAudioStreamVolume(uint oPlayer, int nStreamIdentifier, float fVolume = 1.0f, float fFadeTime = 0.0f)
-        {
-            VM.StackPush(fFadeTime);
-            VM.StackPush(fVolume);
-            VM.StackPush(nStreamIdentifier);
-            VM.StackPush(oPlayer);
-            VM.Call(1121);
-        }
-
-        ///  Seek the audio stream to the given offset.<br/>
-        ///  * When seeking at or beyond the end of a stream, the seek offset will wrap around, even if the file is configured not to loop.<br/>
-        ///  * Will do nothing if the stream is currently not in use.<br/>
-        ///  * Will do nothing if the stream is in ended state (reached end of file and looping is off). In this<br/>
-        ///    case, you need to restart the stream.
-        public static void SeekAudioStream(uint oPlayer, int nStreamIdentifier, float fSeconds)
-        {
-            VM.StackPush(fSeconds);
-            VM.StackPush(nStreamIdentifier);
-            VM.StackPush(oPlayer);
-            VM.Call(1122);
         }
 
     
@@ -4573,37 +4528,6 @@ namespace EOM.Game.Server.Core.NWScript
             VM.Call(1132);
         }
 
- 
-        ///  Sets a grass override for nMaterialId in oArea.<br/>
-        ///  * You can have multiple grass types per area by using different materials.<br/>
-        ///  * You can add grass to areas that normally do not have grass, for example by calling this on the<br/>
-        ///    wood surface material(5) for an inn area.<br/>
-        /// <br/>
-        ///    - nMaterialId: a surface material, see surfacemat.2da. 3 is the default grass material.<br/>
-        ///    - sTexture: the grass texture, cannot be empty.<br/>
-        ///    - fDensity: the density of the grass.<br/>
-        ///    - fHeight: the height of the grass.<br/>
-        ///    - vAmbientColor: the ambient color of the grass, xyz as RGB clamped to 0.0-1.0f per value.<br/>
-        ///    - vDiffuseColor: the diffuse color of the grass, xyz as RGB clamped to 0.0-1.0f per value.
-        public static void SetAreaGrassOverride(uint oArea, int nMaterialId, string sTexture, float fDensity, float fHeight, System.Numerics.Vector3 vAmbientColor, System.Numerics.Vector3 vDiffuseColor)
-        {
-            VM.StackPush(vDiffuseColor);
-            VM.StackPush(vAmbientColor);
-            VM.StackPush(fHeight);
-            VM.StackPush(fDensity);
-            VM.StackPush(sTexture);
-            VM.StackPush(nMaterialId);
-            VM.StackPush(oArea);
-            VM.Call(1139);
-        }
-
-        ///  Remove a grass override from oArea for nMaterialId.
-        public static void RemoveAreaGrassOverride(uint oArea, int nMaterialId)
-        {
-            VM.StackPush(nMaterialId);
-            VM.StackPush(oArea);
-            VM.Call(1140);
-        }
 
         ///  Set to TRUE to disable the default grass of oArea.
         public static void SetAreaDefaultGrassDisabled(uint oArea, int bDisabled)
@@ -4613,15 +4537,6 @@ namespace EOM.Game.Server.Core.NWScript
             VM.Call(1141);
         }
 
-        ///  Gets the NoRest area flag.<br/>
-        ///  Returns TRUE if resting is not allowed in the area.<br/>
-        ///  Passing in OBJECT_INVALID to parameter oArea will result in operating on the area of the caller.
-        public static int GetAreaNoRestFlag(uint oArea = OBJECT_INVALID)
-        {
-            VM.StackPush(oArea);
-            VM.Call(1142);
-            return VM.StackPopInt();
-        }
 
         ///  Sets the NoRest flag on an area.<br/>
         ///  Passing in OBJECT_INVALID to parameter oArea will result in operating on the area of the caller.

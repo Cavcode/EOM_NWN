@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 c_demonwal 
+texture1 c_demonwal_n 
+texture2 c_demonwal_s 
+texture3 null 
+texture4 null 

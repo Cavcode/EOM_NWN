@@ -1,0 +1,243 @@
+#MAXMODEL ASCII
+# model: vdr_freemove_red
+filedependancy vdr_freemove_red.max
+newmodel vdr_freemove_red
+setsupermodel vdr_freemove_red NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vdr_freemove_red
+node dummy vdr_freemove_red
+  parent NULL
+endnode
+node emitter OmenEmitter01
+  parent vdr_freemove_red
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 1
+  spawntype 0
+  update Single
+  render Billboard_to_Local_Z
+  blend Lighten
+  texture fxpa_flare
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 0.05
+  orientation 0 0 0 0
+  colorStart 0.992157 0 0.117647
+  colorEnd 0.992157 0 0.117647
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp -1
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node trimesh Cylinder01
+  parent vdr_freemove_red
+  ambient 0 0 0
+  diffuse 1 0 0.164706 1
+  specular 0 0 0
+  shininess 1
+  shadow 0
+  transparencyhint 1
+  bitmap fxpa_spots
+  verts 19
+       0.0000000    0.0000000    0.0237866
+       0.6718050    0.0000000    0.0237866
+       0.6312900    0.2297710    0.0237866
+       0.5146320    0.4318280    0.0237866
+       0.3359020    0.5818000    0.0237866
+       0.1166580    0.6615990    0.0237866
+      -0.1166580    0.6615990    0.0237866
+      -0.3359020    0.5818000    0.0237866
+      -0.5146320    0.4318280    0.0237866
+      -0.6312900    0.2297710    0.0237866
+      -0.6718050    0.0000000    0.0237866
+      -0.6312900   -0.2297710    0.0237866
+      -0.5146320   -0.4318280    0.0237866
+      -0.3359020   -0.5818000    0.0237866
+      -0.1166580   -0.6615990    0.0237866
+       0.1166580   -0.6615990    0.0237866
+       0.3359030   -0.5818000    0.0237866
+       0.5146320   -0.4318280    0.0237866
+       0.6312900   -0.2297710    0.0237866
+  tverts 3
+       1.0000000    1.0000000  0
+       0.0000000    0.0000000  0
+       1.0000000    0.0000000  0
+  faces 18
+     0  1  2  1  0 1 2   1
+     0  2  3  1  0 1 2   1
+     0  3  4  1  0 1 2   1
+     0  4  5  1  0 1 2   1
+     0  5  6  1  0 1 2   1
+     0  6  7  1  0 1 2   1
+     0  7  8  1  0 1 2   1
+     0  8  9  1  0 1 2   1
+     0  9 10  1  0 1 2   1
+     0 10 11  1  0 1 2   1
+     0 11 12  1  0 1 2   1
+     0 12 13  1  0 1 2   1
+     0 13 14  1  0 1 2   1
+     0 14 15  1  0 1 2   1
+     0 15 16  1  0 1 2   1
+     0 16 17  1  0 1 2   1
+     0 17 18  1  0 1 2   1
+     0 18  1  1  0 1 2   1
+  position 0 0 0.0136667
+  orientation 0 0 1 -1.56207
+  alpha 0
+  scale 1
+  selfillumcolor 0.0705882 1 0
+endnode
+endmodelgeom vdr_freemove_red
+
+#MAXANIM ASCII
+newanim impact vdr_freemove_red
+  length 0.466667
+  transtime 0.25
+  animroot vdr_freemove_red
+  node dummy vdr_freemove_red
+    parent NULL
+  endnode
+  node trimesh Cylinder01
+    parent vdr_freemove_red
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    alphakey 2
+         0.0000000    0.0000000
+         0.4666670    0.8000000
+  endnode
+  node emitter OmenEmitter01
+    parent vdr_freemove_red
+    alphaStartkey 1
+         0.4666670    1.0000000
+    alphaEndkey 1
+         0.4666670    1.0000000
+    sizeStartkey 3
+         0.0000000    0.0000000
+         0.0333333    0.0000000
+         0.4666670    1.8000000
+    sizeEndkey 3
+         0.0000000    0.0000000
+         0.0333333    0.0000000
+         0.4666670    1.8000000
+  endnode
+doneanim impact vdr_freemove_red
+
+#MAXANIM ASCII
+newanim duration vdr_freemove_red
+  length 0.833333
+  transtime 0.25
+  animroot vdr_freemove_red
+  node dummy vdr_freemove_red
+    parent NULL
+  endnode
+  node trimesh Cylinder01
+    parent vdr_freemove_red
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    alphakey 3
+         0.0000000    0.8000000
+         0.4333330    0.5000000
+         0.8333330    0.8000000
+  endnode
+  node emitter OmenEmitter01
+    parent vdr_freemove_red
+    alphaStartkey 4
+         0.0000000    1.0000000
+         0.0333333    1.0000000
+         0.4000000    0.8000000
+         0.8000000    1.0000000
+    alphaEndkey 4
+         0.0000000    1.0000000
+         0.0333333    1.0000000
+         0.4000000    0.8000000
+         0.8000000    1.0000000
+    sizeStartkey 4
+         0.0000000    1.8000000
+         0.0333333    1.8000000
+         0.8000000    1.8000000
+         0.8333330    1.8000000
+    sizeEndkey 4
+         0.0000000    1.8000000
+         0.0333333    1.8000000
+         0.8000000    1.8000000
+         0.8333330    1.8000000
+  endnode
+doneanim duration vdr_freemove_red
+
+#MAXANIM ASCII
+newanim cessation vdr_freemove_red
+  length 0.666667
+  transtime 0.25
+  animroot vdr_freemove_red
+  node dummy vdr_freemove_red
+    parent NULL
+  endnode
+  node trimesh Cylinder01
+    parent vdr_freemove_red
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    alphakey 2
+         0.0000000    0.8000000
+         0.6666670    0.0000000
+  endnode
+  node emitter OmenEmitter01
+    parent vdr_freemove_red
+    sizeStartkey 3
+         0.0000000    1.8000000
+         0.6333330    0.0000000
+         0.6666670    0.0000000
+    sizeEndkey 3
+         0.0000000    1.8000000
+         0.6333330    0.0000000
+         0.6666670    0.0000000
+  endnode
+doneanim cessation vdr_freemove_red
+
+donemodel vdr_freemove_red

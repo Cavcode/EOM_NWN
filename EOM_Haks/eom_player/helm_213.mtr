@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 helm_213 
+texture1 helm_213_n 
+texture2 helm_213_s 
+texture3 null 
+texture4 null 

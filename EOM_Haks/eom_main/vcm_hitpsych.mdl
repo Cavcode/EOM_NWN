@@ -1,0 +1,273 @@
+#MAXMODEL ASCII
+# model: vcm_hitpsych
+filedependancy vcm_hitpsych.max
+newmodel vcm_hitpsych
+setsupermodel vcm_hitpsych NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vcm_hitpsych
+node dummy vcm_hitpsych
+  parent NULL
+endnode
+node emitter spark
+  parent vcm_hitpsych
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 1
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Motion_Blur
+  blend Lighten
+  texture fxpa_dot01
+  xgrid 0
+  ygrid 0
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0.0990509 0.4
+  orientation 0 0 0 0
+  colorStart 0.999 0.578431 0.999
+  colorEnd 0.999 0.578431 0.999
+  alphaStart 0.8
+  alphaEnd 0.02
+  sizeStart 0.03
+  sizeEnd 0.01
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 10
+  lifeExp 2
+  mass 1.5
+  spread 6.28319
+  particleRot 0
+  velocity 3
+  randvel 1
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0.6
+  blurlength 0.0700007
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter sparks
+  parent vcm_hitpsych
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 1
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Motion_Blur
+  blend Lighten
+  texture fxpa_lightning2
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0.20944
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0.00443132 0.40302643
+  orientation -1 0 0 -3.14159
+  colorStart 1 1 1
+  colorEnd 0.933333 0.260784 0.260784
+  alphaStart 0.6
+  alphaEnd 1
+  sizeStart 0.3
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 13
+  lifeExp 0.2
+  mass 0
+  spread 6.28319
+  particleRot 0
+  velocity 2.5
+  randvel 2
+  fps 30
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 0.68
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter sparks2
+  parent vcm_hitpsych
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 1
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Motion_Blur
+  blend Lighten
+  texture fxpa_lightning2
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0.20944
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0.00443132 0.40302643
+  orientation -1 0 0 -3.14159
+  colorStart 1 1 1
+  colorEnd 0.260784 0.933333 0.260784
+  alphaStart 0.6
+  alphaEnd 1
+  sizeStart 0.3
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 13
+  lifeExp 0.2
+  mass 0
+  spread 6.28319
+  particleRot 0
+  velocity 2.5
+  randvel 2
+  fps 30
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 0.68
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter sparks3
+  parent vcm_hitpsych
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 1
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Motion_Blur
+  blend Lighten
+  texture fxpa_lightning2
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0.20944
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0.00443132 0.40302643
+  orientation -1 0 0 -3.14159
+  colorStart 1 1 1
+  colorEnd 0.260784 0.260784 0.933333
+  alphaStart 0.6
+  alphaEnd 1
+  sizeStart 0.3
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 13
+  lifeExp 0.2
+  mass 0
+  spread 6.28319
+  particleRot 0
+  velocity 2.5
+  randvel 2
+  fps 30
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 0.68
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom vcm_hitpsych
+
+#MAXANIM ASCII
+newanim impact vcm_hitpsych
+  length 0.633333
+  transtime 0.25
+  animroot vcm_hitpsych
+  event 0 detonate
+  event 0 detonate
+  node dummy vcm_hitpsych
+    parent NULL
+  endnode
+  node emitter spark
+    parent vcm_hitpsych
+  endnode
+  node emitter sparks
+    parent vcm_hitpsych
+  endnode
+doneanim impact vcm_hitpsych
+
+donemodel vcm_hitpsych

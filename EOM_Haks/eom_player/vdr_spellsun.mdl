@@ -1,0 +1,308 @@
+#MAXMODEL ASCII
+# model: vdr_spellsun
+filedependancy vdr_spellsun.max
+newmodel vdr_spellsun
+setsupermodel vdr_spellsun NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vdr_spellsun
+node dummy vdr_spellsun
+  parent NULL
+endnode
+node emitter glows
+  parent vdr_spellsun
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 1
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_starglo
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 1
+  blastRadius 0
+  blastLength 0
+  position 0 0 0.65
+  orientation 0 0 0 0
+  colorStart 0.94 0.44 0.25
+  colorEnd 0.91 0.48 0.21
+  alphaStart 0.69
+  alphaEnd 0.09
+  sizeStart 2.3
+  sizeEnd 1.6
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1.8
+  lifeExp 3
+  mass 0
+  spread 0.6
+  particleRot 0.72
+  velocity 0
+  randvel 1.1
+  fps 0
+  xsize 5
+  ysize 5
+  bounce_co 0
+  blurlength 70
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter glows2
+  parent vdr_spellsun
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 1
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_starglo
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 1
+  blastRadius 0
+  blastLength 0
+  position 0 0 0.65
+  orientation 0 0 0 0
+  colorStart 0.94 0.44 0.25
+  colorEnd 0.91 0.48 0.21
+  alphaStart 0.49
+  alphaEnd 0.02
+  sizeStart 2.2
+  sizeEnd 1.5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1.5
+  lifeExp 4
+  mass 0
+  spread 0.6
+  particleRot -0.70
+  velocity 0
+  randvel 1.1
+  fps 0
+  xsize 5
+  ysize 5
+  bounce_co 0
+  blurlength 70
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter dom4
+  parent vdr_spellsun
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Single
+  render Normal
+  blend Normal
+  texture fxpa_starbal
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 1
+  blastRadius 0
+  blastLength 0
+  position 0 0 0.65
+  orientation 0 0 0 0
+  colorStart 1.1 0.58 0.2
+  colorEnd 1.1 0.58 0.2
+  alphaStart 1.0
+  alphaEnd 1.0
+  sizeStart 0.1
+  sizeEnd 0.1
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp -1
+  mass 0
+  spread 0
+  particleRot -0.42
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 70
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom vdr_spellsun
+
+#MAXANIM ASCII
+newanim impact vdr_spellsun
+  length 0.3
+  transtime 0.25
+  animroot vdr_spellsun
+  node dummy vdr_spellsun
+    parent NULL
+  endnode
+  node emitter dom4
+    parent vdr_spellsun
+	sizeStartkey 2
+         0.0000000    0.2000000
+         0.3000000    2.0000000		
+	sizeEndkey 2
+         0.0000000    0.2000000
+         0.3000000    2.0000000			 
+    alphaStartkey 3
+         0.0000000    0.0000000
+         0.2666670    0.3000000
+         0.3000000    0.3000000
+    alphaEndkey 3
+         0.0000000    0.0000000
+         0.2666670    0.3000000
+         0.3000000    0.3000000
+  endnode
+doneanim impact vdr_spellsun
+
+#MAXANIM ASCII
+newanim duration vdr_spellsun
+  length 1.33333
+  transtime 0.25
+  animroot vdr_spellsun
+  node dummy vdr_spellsun
+    parent NULL
+  endnode
+  node emitter dom4
+    parent vdr_spellsun
+	sizeStartkey 1
+         0.0000000    2.2000000	
+	sizeEndkey 1
+         0.0000000    0.2000000
+    alphaStartkey 3
+         0.0000000    0.8000000
+         0.6666670    0.9000000
+         1.3333300    0.8000000
+    alphaEndkey 3
+         0.0000000    0.8000000
+         0.6666670    0.9000000
+         1.3333300    0.8000000
+  endnode
+doneanim duration vdr_spellsun
+
+#MAXANIM ASCII
+newanim cessation vdr_spellsun
+  length 1
+  transtime 0.25
+  animroot vdr_spellsun
+  node dummy vdr_spellsun
+    parent NULL
+  endnode
+  node emitter dom4
+    parent vdr_spellsun
+	sizeStartkey 2
+         0.0000000    2.1000000
+         0.3000000    0.1000000		
+	sizeEndkey 2
+         0.0000000    2.1000000
+         0.3000000    0.1000000			
+    alphaStartkey 3
+         0.0000000    0.3000000
+         0.0333333    0.3000000
+         0.6666670   -0.1000000
+    alphaEndkey 3
+         0.0000000    0.3000000
+         0.0333333    0.3000000
+         0.6666670   -0.1000000
+  endnode
+  node emitter glows
+    parent vdr_spellsun
+	sizeStartkey 2
+         0.0000000    2.1000000
+         0.3000000    0.1000000		
+	sizeEndkey 2
+         0.0000000    2.1000000
+         0.3000000    0.1000000	
+    alphaStartkey 3
+         0.0000000    0.3000000
+         0.0333333    0.3000000
+         0.6666670   -0.1000000
+    alphaEndkey 3
+         0.0000000    0.3000000
+         0.0333333    0.3000000
+         0.6666670   -0.1000000
+  endnode 
+  node emitter glows2
+    parent vdr_spellsun
+	sizeStartkey 2
+         0.0000000    2.1000000
+         0.3000000    0.1000000		
+	sizeEndkey 2
+         0.0000000    2.1000000
+         0.3000000    0.1000000	
+    alphaStartkey 3
+         0.0000000    0.3000000
+         0.0333333    0.3000000
+         0.6666670   -0.1000000
+    alphaEndkey 3
+         0.0000000    0.3000000
+         0.0333333    0.3000000
+         0.6666670   -0.1000000
+  endnode  
+doneanim cessation vdr_spellsun
+
+donemodel vdr_spellsun

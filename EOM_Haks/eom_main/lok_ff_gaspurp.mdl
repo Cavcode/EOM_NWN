@@ -1,0 +1,261 @@
+# Exported from NWmax 0.6 at 8/31/2004 10:32:23 AM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: lok_ff_gaspurp
+filedependancy Unknown
+newmodel lok_ff_gaspurp
+setsupermodel lok_ff_gaspurp NULL
+classification Effect
+#NWmax GEOM  ASCII
+beginmodelgeom lok_ff_gaspurp
+node dummy lok_ff_gaspurp
+  parent NULL
+endnode
+node emitter UPcloud
+  parent lok_ff_gaspurp
+  position 0.0 0.0 0.0579344
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 1.0 1.0 1.0 
+  update_sel 1
+  update Fountain
+  render_sel 1
+  render Normal
+  blend_sel 1
+  Blend Normal
+  spawnType 0
+  iconSize 100.0
+  xSize 20.0
+  ySize 30.0
+  inherit 0
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 1
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 0.0 0.988235 
+  colorEnd 0.690196 0.0 0.666667 
+  alphaStart 1.0
+  alphaEnd 0.0
+  sizeStart 0.2
+  sizeEnd 2.0
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 60.0
+  lifeExp 1.0
+  mass 0.3
+  spread 0.523599
+  particleRot 2.0
+  velocity 3.0
+  randvel 0.6
+  bounce_co 0.0
+  blurlength 10.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  Splat 0
+  affectedByWind false
+  texture fxpa_Smoke01
+  twosidedtex 0
+  xgrid 4
+  ygrid 4
+  fps 15
+  frameStart 0
+  frameEnd 15
+  random 0
+  chunky 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  Drag 0.0
+endnode
+node emitter UPcloud01
+  parent lok_ff_gaspurp
+  position 0.0 0.0 0.0579344
+  orientation 0.0 0.0 -1.0 -0.785398
+  wirecolor 1.0 1.0 1.0 
+  update_sel 1
+  update Fountain
+  render_sel 1
+  render Normal
+  blend_sel 1
+  Blend Normal
+  spawnType 0
+  iconSize 100.0
+  xSize 30.0
+  ySize 20.0
+  inherit 0
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 2
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 0.0 0.988235 
+  colorEnd 0.682353 0.0 0.627451 
+  alphaStart 0.5
+  alphaEnd 0.0
+  sizeStart 0.0
+  sizeEnd 2.0
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 60.0
+  lifeExp 1.0
+  mass 0.3
+  spread 0.523599
+  particleRot -2.0
+  velocity 3.0
+  randvel 0.3
+  bounce_co 0.0
+  blurlength 10.0
+  loop 0
+  bounce 0
+  m_isTinted 0
+  Splat 0
+  affectedByWind false
+  texture fxpa_Smoke01
+  twosidedtex 0
+  xgrid 4
+  ygrid 4
+  fps 15
+  frameStart 0
+  frameEnd 15
+  random 0
+  chunky 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  Drag 0.0
+endnode
+node emitter UPcloud02
+  parent lok_ff_gaspurp
+  position 0.0 0.0 0.0579344
+  orientation 0.0 0.0 -1.0 -0.785398
+  wirecolor 1.0 1.0 1.0 
+  update_sel 1
+  update Fountain
+  render_sel 1
+  render Normal
+  blend_sel 1
+  Blend Normal
+  spawnType 0
+  iconSize 100.0
+  xSize 40.0
+  ySize 40.0
+  inherit 0
+  inherit_local 0
+  inheritvel 0
+  inherit_part 0
+  renderorder 1
+  threshold 0.0
+  combinetime 0.0
+  deadspace 0.0
+  opacity 0.5
+  colorStart 1.0 0.0 0.847059 
+  colorEnd 0.670588 0.0 0.615686 
+  alphaStart 0.5
+  alphaEnd 0.0
+  sizeStart 0.5
+  sizeEnd 0.5
+  sizeStart_y 0.0
+  sizeEnd_y 0.0
+  birthrate 60.0
+  lifeExp 1.0
+  mass 0.3
+  spread 0.523599
+  particleRot -2.0
+  velocity 1.8
+  randvel 0.5
+  bounce_co 0.2
+  blurlength 10.0
+  loop 0
+  bounce 1
+  m_isTinted 0
+  Splat 0
+  affectedByWind false
+  texture fxpa_Smoke01
+  twosidedtex 0
+  xgrid 4
+  ygrid 4
+  fps 15
+  frameStart 0
+  frameEnd 15
+  random 0
+  chunky 0
+  lightningDelay 0.0
+  lightningRadius 0.0
+  lightningSubDiv 0
+  lightningScale 0.0
+  blastRadius 0.0
+  blastLength 0.0
+  p2p 0
+  p2p_type Bezier
+  p2p_sel 1
+  p2p_bezier2 0.0
+  p2p_bezier3 0.0
+  grav 0.0
+  Drag 0.0
+endnode
+endmodelgeom lok_ff_gaspurp
+
+#NWmax ANIM ASCII
+newanim impact lok_ff_gaspurp
+  length 2.96667
+  transtime 0.25
+  animroot lok_ff_gaspurp
+    node dummy lok_ff_gaspurp
+        parent NULL
+    endnode
+    node emitter UPcloud
+        parent lok_ff_gaspurp
+        birthratekey
+            0.0 60.0 
+            0.3 60.0 
+            0.333333 60.0 
+            0.366667 0.0 
+        endlist
+    endnode
+    node emitter UPcloud01
+        parent lok_ff_gaspurp
+        birthratekey
+            0.0 60.0 
+            0.3 60.0 
+            0.333333 60.0 
+            0.366667 0.0 
+        endlist
+    endnode
+    node emitter UPcloud02
+        parent lok_ff_gaspurp
+        birthratekey
+            0.0 60.0 
+            0.6 60.0 
+            0.633333 60.0 
+            0.666667 0.0 
+        endlist
+    endnode
+doneanim impact lok_ff_gaspurp
+
+donemodel lok_ff_gaspurp

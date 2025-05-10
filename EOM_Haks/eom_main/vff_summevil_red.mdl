@@ -1,0 +1,2210 @@
+#MAXMODEL ASCII
+# model: vff_summevil_red
+filedependancy vff_summevil_red.max
+newmodel vff_summevil_red
+setsupermodel vff_summevil_red NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vff_summevil_red
+node dummy vff_summevil_red
+  parent NULL
+endnode
+node trimesh shard
+  parent vff_summevil_red
+  ambient 0.218298 0.118953 0.0640517
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap c_ruby
+  verts 39
+       0.3774380   -0.6279610    0.5462410
+       0.2028470    0.1630930    0.7822300
+      -0.0000175   -0.0323300    0.5144870
+       0.0270611   -0.5821150    0.6856540
+       0.2949190   -1.1359400    0.7397050
+       0.6521500   -1.4725900    0.4849050
+       0.7069270    0.1097360    0.3653830
+       0.5031420    0.8252450    0.8908630
+       0.1651290    0.9798690    0.8496290
+      -0.0903975    1.0948700    0.5533510
+      -0.3048120   -0.1269750    0.5108070
+       0.3257070   -2.5085399    0.2807190
+       0.3504350    1.0350400    0.7695030
+       0.1299950    2.4672301    1.1576400
+      -0.5995360    2.4874799    0.5330400
+       1.7118400   -3.2467999    0.5107190
+       1.0814300   -0.4301570   -0.1571110
+       0.6274380    1.1101300    0.3054580
+       0.5364750    2.6782100    0.7178000
+       0.1265440    2.6264501   -0.4147060
+      -0.6639580    2.4693601    0.0463555
+       1.2988400   -3.9994800    0.2152690
+       1.0458500   -1.9668500   -0.0956580
+       1.2722501    2.4708800    0.1003680
+      -0.6761360    2.3701799   -0.5316460
+      -0.8565910    0.5631670   -0.1476810
+       0.0515355   -1.9957300    0.0446502
+       1.2845900   -3.4103100   -0.4466380
+       1.8110200   -3.3995099   -0.1585140
+       1.2250500    2.2896199   -0.7417270
+      -0.0719553    2.4056301   -1.2563699
+      -0.2930510    0.8372740   -0.5263230
+       1.1479300   -0.9571390   -0.4447200
+       0.5265200    1.3181601   -0.9347490
+       0.0895003    0.6695600   -0.4766160
+      -0.2269640    0.1794870   -0.4263890
+      -0.1326980   -0.6200360   -0.4488630
+       0.3225570    0.2974130   -0.5841500
+       0.2706790   -0.6926190   -0.5527440
+  tverts 87
+       0.9150770    1.0105300  0
+       0.7664780    1.2654099  0
+       0.5938140    1.2024500  0
+       0.6168610    1.0253000  0
+       0.8448430    0.8468500  0
+       1.1488900    0.7383790  0
+       1.1955100    1.2482200  0
+       1.0105300    1.5454700  0
+       1.2482200    1.3798300  0
+       1.4787700    1.8610801  0
+       1.0220701    1.4787700  0
+       0.7345860    1.7615900  0
+       0.4714110    1.8233200  0
+       0.4343570    1.5519800  0
+       0.7975530    1.5163900  0
+       0.5168890    1.5656400  0
+       0.3343940    1.1719500  0
+       0.8710470    0.4045830  0
+       0.8920950    1.5463700  0
+       0.7343750    1.5285900  0
+       0.7044720    2.0078299  0
+       0.0835463    2.0143600  0
+      -0.0143584    1.5333800  0
+       2.0508201    0.1667080  0
+       1.5142601    1.0742600  0
+       0.7383790    1.4892900  0
+       1.0742600    0.9013230  0
+       1.5705600    1.3249500  0
+       2.0758100    1.7025800  0
+       1.0504400    2.0758100  0
+       1.5463700    1.7499400  0
+       2.0078299    2.1054001  0
+       1.2955300    2.1054001  0
+       1.2984700    0.6654110  0
+       1.9712800    1.0876600  0
+       1.9164500    1.5333800  0
+      -0.0085190    1.0876600  0
+       0.8280490    1.5130200  0
+       1.6993099   -0.0758139  0
+      -0.0508221    0.1667080  0
+       0.5160160    0.5791230  0
+       0.4857390    1.0742600  0
+       2.0090101    1.1371300  0
+       1.6766800    2.0090101  0
+       1.1278600    1.5705600  0
+      -0.0758138    1.7025800  0
+      -0.0591379    0.6654110  0
+      -0.0078350    2.1054001  0
+       1.9816500    0.5583160  0
+       0.0234349    0.5583160  0
+       0.6056770    0.9099590  0
+       1.4301800    1.0861000  0
+       1.5954200    1.3023000  0
+       1.8859800    0.6361680  0
+       2.0758100    1.2423600  0
+       0.3006880   -0.0758139  0
+       0.3128190    0.1140240  0
+      -0.1352410    0.1175040  0
+      -0.0758139    1.2423600  0
+       0.1175040    0.9000380  0
+       0.1667080    1.5129400  0
+       0.5791230    0.9576030  0
+       1.9506100    0.3659190  0
+       0.3233190    1.1371300  0
+       0.3634940    0.3659190  0
+       0.9495610    1.7025800  0
+       1.4674100   -0.1054010  0
+       0.0120153   -0.1054010  0
+       0.5173560    0.5631910  0
+       1.9816500    1.9765700  0
+       1.6556000    1.4826400  0
+       2.1352401    1.3943200  0
+       0.9044630    0.6379240  0
+       0.3634940    1.9506100  0
+       0.9580350    1.6375901  0
+       1.4674100    1.9879800  0
+       1.3299900    1.4286000  0
+       1.5993500    1.2707000  0
+       1.5191100    1.0130800  0
+       0.9869190    0.6341300  0
+       0.4291360    0.9044630  0
+       1.1316299    1.3086900  0
+       1.3086900    0.5102310  0
+       1.1757900    0.9896940  0
+       1.3623101    0.5698180  0
+       0.9896940    0.5389940  0
+       0.1140240    0.6361680  0
+  faces 74
+     0  1  2  1   0  1  2   2
+     0  2  3  2   0  2  3   2
+     0  3  4  4   0  3  4   2
+     0  4  5  4   0  4  5   2
+     0  5  6  1   0  5  6   2
+     0  6  7  8   7  8  9   2
+     0  7  1  8   0 10  1   2
+     1  8  9  2  11 12 13   2
+     1  9  2  1  11 13 14   2
+     2  9 10  1   2 15 16   2
+     2 10  3  4   2 16  3   2
+     3 10 11  1   3 16 17   2
+     3 11  4  1   3 17  4   2
+     4 11  5  1   4 17  5   2
+     7 12  1  8  10 18  1   2
+     1 12  8  4   1 18 19   2
+     8 13 14  4  19 20 21   2
+     8 14  9  2  12 22 13   2
+     9 14 10  1  15 21 16   2
+     5 15 16  1   5 23 24   2
+     5 16  6  1  25 26  8   2
+     6 17  7  2   8 27  9   2
+     7 17 18  2   9 27 28   2
+     7 18 12  8  10 29 18   2
+    12 18 13  8  30 28 31   2
+    12 13  8  4  18 20 19   2
+    13 19 20  4  32 33 34   2
+    13 20 14  4  32 34 35   2
+    14 20 10  1  22 36 37   2
+     5 11 21  2   5 17 38   2
+     5 21 15  1   5 38 23   2
+    15 22 16  1  39 40 41   2
+     6 16 23  1   8 26 42   2
+     6 23 17  1   6 43 44   2
+    17 23 18  8  44 43 29   2
+    18 19 13  8  45 46 47   2
+    19 24 20  4  33 48 34   2
+    20 24 25  1  36 49 50   2
+    20 25 10  1  36 50 37   2
+    10 25 26  1  37 50 51   2
+    10 26 11  1  37 51 52   2
+    11 27 21  2  52 53 54   2
+    21 27 28  2  55 56 57   2
+    21 28 15  4  58 59 60   2
+    15 28 22  1  60 59 61   2
+    16 29 23  1  26 62 42   2
+    23 29 18  8  63 64 65   2
+    18 29 19  8  65 64 33   2
+    19 30 24  1  33 66 48   2
+    24 30 31  1  49 67 68   2
+    24 31 25  2  69 70 71   2
+    11 26 27  1  52 51 53   2
+    28 27 22  1  57 56 40   2
+    16 22 32  1  26 61 72   2
+    29 16 33  1  73 41 74   2
+    29 33 30  8  73 74 75   2
+    29 30 19  8  64 66 33   2
+    30 34 31  1  75 76 70   2
+    31 35 25  4  70 77 71   2
+    25 35 36  4  71 77 78   2
+    25 36 26  1  50 79 51   2
+    32 22 37  1  80 40 81   2
+    32 37 16  1  72 82 26   2
+    16 37 33  1  41 81 74   2
+    33 37 34  1  74 81 76   2
+    33 34 30  1  74 76 75   2
+    38 31 34  1  83 70 76   2
+    38 35 31  8  83 77 70   2
+    38 36 35  4  83 78 77   2
+    38 26 36  1  83 84 78   2
+    38 27 26  1  83 56 84   2
+    38 22 27  1  85 61 86   2
+    38 37 22  1  83 81 40   2
+    38 34 37  1  83 76 81   2
+  position 0.0500495 -5.18296 -4.7595
+  orientation 0.5422991 0.523299 -0.6573202 -2.21744
+  alpha 1.0602
+  scale 1
+  selfillumcolor 0.0470588 0.0470588 0.0470588
+endnode
+node trimesh shard01
+  parent vff_summevil_red
+  ambient 0.218298 0.118953 0.0640517
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap c_ruby
+  verts 39
+       0.1750740   -0.8227630    0.5257950
+       0.0140086    0.1735380    0.5989870
+      -0.0931334   -0.0226567    0.3979880
+      -0.1986740   -0.2903740    0.5426710
+      -0.3608750   -1.1785100    0.3662380
+       0.3080690   -1.3317300    0.2583680
+       0.5663650    0.1098750    0.2588910
+       0.1817710    0.7930270    0.1730720
+      -0.0434026    1.0165499    0.7273750
+      -0.4076140    0.8239420    0.3537530
+      -0.5989650    0.5036600    0.6032570
+      -0.2027290   -3.4586101   -0.3151750
+       0.2293140    1.0367200    0.7045450
+       0.3132410    2.5636101    0.6875520
+      -0.1580510    1.6084900    0.7155340
+       0.2245790   -3.0244801   -0.2530800
+       0.7221950   -0.4829840   -0.2263620
+       0.7507360    1.1394300    0.5388290
+       0.9121090    2.5765100    0.4635430
+       0.1955400    2.5026400   -0.1208030
+      -0.4875350    2.6348200    0.5690790
+      -0.0636907   -3.5640700   -0.2718070
+       0.2741890   -1.5336400   -0.1517060
+       1.1158700    1.5728500   -0.0091733
+      -1.0573500    2.4210601   -0.2583280
+      -0.7987890    0.5445300   -0.1868260
+      -0.4279710   -1.0976300   -0.3213930
+      -0.0269450   -3.5660801   -0.8553300
+       0.1471370   -3.3506000   -0.4786610
+       1.2901200    2.2780900   -0.9503080
+      -0.6725070    2.0414000   -1.3109400
+      -0.6178370    0.7878530   -0.5750370
+       0.4719900   -0.5179320   -0.5722230
+       0.4224660    2.0622900   -1.4542800
+      -0.0096235    0.6321270   -0.5265980
+      -0.4598880    0.1795700   -0.4666810
+      -0.4373430   -0.3589540   -0.5792960
+       0.3373580    0.2788770   -0.6440810
+      -0.0085956   -0.4896340   -0.6067300
+  tverts 87
+       1.1150700    1.8143899  0
+       0.7940530    1.8814200  0
+       0.8572690    1.6973400  0
+       1.0499500    0.8849280  0
+       0.8216700    1.1427300  0
+       0.7318420    1.0564700  0
+       0.5937870    0.7703030  0
+       1.1631500    0.7209320  0
+       0.8849280    1.8143899  0
+       0.7209320    1.5694700  0
+       1.1854300    1.5699500  0
+       1.3829900    1.1854300  0
+       1.0556500    1.4055500  0
+       1.4055500    1.4913599  0
+       1.2059500    1.8814200  0
+       0.9128620    1.2059500  0
+       0.8639980    1.4775800  0
+       0.5540070    1.4155101  0
+       0.5844850    1.6568300  0
+       0.3911420    1.3123200  0
+       0.7283900    0.0356284  0
+       1.2681600    1.0564700  0
+       1.2716100    0.0356284  0
+       1.4062099    0.7703030  0
+       1.4840699    1.9780900  0
+       1.0961200    1.4840699  0
+       1.1675500    1.9760600  0
+       0.7664170    1.6683000  0
+       1.4155101    1.6568300  0
+       1.6683000    1.9881600  0
+       1.3123200    1.8853300  0
+       0.1755090    1.1010799  0
+       0.9944080    1.1255500  0
+       1.5399100    1.5171700  0
+       1.6772600    1.9802099  0
+       1.9802099    1.7573800  0
+       0.8324520    1.9625300  0
+       0.9326310    1.2222199  0
+       1.5140200    1.8540300  0
+       0.4859840    1.9990000  0
+       0.8467290    0.0016474  0
+       1.0920800    0.1755090  0
+       0.9079160    0.1755090  0
+       0.8656910    0.6558760  0
+       0.4843800    0.9944080  0
+       1.6568201    1.3244500  0
+       1.5171700    1.8263299  0
+       0.3227380    1.7573800  0
+       1.9990000    1.0962700  0
+       0.0009992    1.8540300  0
+       0.0698742    1.0962700  0
+       0.6745150    1.1617600  0
+       0.6876840    1.8853300  0
+       1.2036400    1.0385200  0
+       1.9643700    1.0442100  0
+       1.9990000    0.5495260  0
+       1.9983500    1.0839300  0
+       0.0016474    1.0839300  0
+       0.0009992    0.5495260  0
+       0.0704291    0.8944880  0
+       0.6558760    1.1939200  0
+       1.8840600    0.4625440  0
+       0.0009998    0.4625440  0
+       0.9326310    1.9564101  0
+       1.6714500    1.8077900  0
+       1.9990000    1.9301300  0
+       0.1922060    0.1322660  0
+       0.5961140    0.8062240  0
+       0.9831470    0.8088010  0
+       0.0009998    1.8840600  0
+       0.7394880    1.8145300  0
+       0.7394880    0.0009989  0
+       1.6714500    0.1322660  0
+       1.1072500    1.3537101  0
+       1.6249200    1.4038900  0
+       0.7921090    0.9054600  0
+       1.7789299    1.3254800  0
+       1.4904900    1.2078900  0
+       1.4713000    1.0343699  0
+       0.9656280    0.8023240  0
+       0.6973370    0.9831470  0
+       0.8119260    1.2398900  0
+       1.2398900    0.7429930  0
+       1.1063800    0.9922660  0
+       1.4633200    0.7963630  0
+       1.1220000    0.0009992  0
+       0.9922660    0.7771990  0
+  faces 74
+     0  1  2  1   0  1  2   2
+     0  2  3  2   3  4  5   2
+     0  3  4  4   3  5  6   2
+     0  4  5  4   3  6  7   2
+     0  5  6  1   8  9 10   2
+     0  6  7  8   3 11 12   2
+     0  7  1  8   8 13 14   2
+     1  8  9  2  15 16 17   2
+     1  9  2  1   1 18  2   2
+     2  9 10  1   4 17 19   2
+     2 10  3  4   4 19  5   2
+     3 10 11  1   5 19 20   2
+     3 11  4  1  21 22 23   2
+     4 11  5  1   6 20  7   2
+     7 12  1  8  13 24 14   2
+     1 12  8  4  15 25 16   2
+     8 13 14  4  16 26 27   2
+     8 14  9  2  16 27 17   2
+     9 14 10  1  28 29 30   2
+     5 15 16  1   9 31 32   2
+     5 16  6  1   9 32 10   2
+     6 17  7  2  11 33 12   2
+     7 17 18  2  12 33 34   2
+     7 18 12  8  13 35 24   2
+    12 18 13  8  25 34 26   2
+    12 13  8  4  25 26 16   2
+    13 19 20  4  36 37 38   2
+    13 20 14  4  26 39 27   2
+    14 20 10  1  27 39 19   2
+     5 11 21  2   7 20 40   2
+     5 21 15  1   7 40 41   2
+    15 22 16  1  42 43 44   2
+     6 16 23  1  10 32 45   2
+     6 23 17  1  10 45 46   2
+    17 23 18  8  46 45 35   2
+    18 19 13  8  47 37 36   2
+    19 24 20  4  37 48 38   2
+    20 24 25  1  49 50 51   2
+    20 25 10  1  49 51 52   2
+    10 25 26  1  52 51 53   2
+    10 26 11  1  52 53 54   2
+    11 27 21  2  54 55 56   2
+    21 27 28  2  57 58 59   2
+    21 28 15  4  57 59 31   2
+    15 28 22  1  31 59 60   2
+    16 29 23  1  32 61 45   2
+    23 29 18  8  45 61 35   2
+    18 29 19  8  47 62 37   2
+    19 30 24  1  63 64 65   2
+    24 30 31  1  50 66 67   2
+    24 31 25  2  50 67 51   2
+    11 26 27  1  54 53 55   2
+    28 27 22  1  59 58 60   2
+    16 22 32  1  32 60 68   2
+    29 16 33  1  69 44 70   2
+    29 33 30  8  62 71 72   2
+    29 30 19  8  62 72 37   2
+    30 34 31  1  64 73 74   2
+    31 35 25  4  67 75 51   2
+    25 35 36  4  76 77 78   2
+    25 36 26  1  51 79 53   2
+    32 22 37  1  80 43 81   2
+    32 37 16  1  68 82 32   2
+    16 37 33  1  44 81 70   2
+    33 37 34  1  70 81 73   2
+    33 34 30  1  70 73 64   2
+    38 31 34  1  83 74 73   2
+    38 35 31  8  83 77 74   2
+    38 36 35  4  83 78 77   2
+    38 26 36  1  83 84 78   2
+    38 27 26  1  83 85 84   2
+    38 22 27  1  86 60 58   2
+    38 37 22  1  83 81 43   2
+    38 34 37  1  83 73 81   2
+  position 3.98332 2.15608 -4.02959
+  orientation 0.6978899 -0.4332339 0.5703139 -1.65053
+  alpha 1.0602
+  scale 1
+  selfillumcolor 0.0666667 0.0666667 0.0666667
+endnode
+node trimesh shard02
+  parent vff_summevil_red
+  ambient 0.218298 0.118953 0.0640517
+  diffuse 1 1 1
+  specular 0.05 0.05 0.05
+  shininess 26
+  shadow 0
+  bitmap c_ruby
+  verts 39
+      -0.0047493   -0.8660130    0.5730680
+      -0.0004715    0.3077530    0.9576290
+      -0.0897492    0.0037963    0.4557430
+      -0.2037020   -0.2852610    0.6119590
+      -0.2067510   -0.9045720    0.6701620
+      -0.0248470   -1.3684900    0.4211510
+       0.6223180    0.1468920    0.3055580
+       0.3246090    0.8977010    0.2038340
+       0.0001141    0.9969410    0.3618520
+      -0.2825460    1.1325099    0.4761120
+      -0.3967530   -0.0915343    0.4520360
+      -0.1181510   -2.9402699   -0.0898655
+       0.1631490    1.6261300    0.5363350
+      -0.0657102    3.3672400    0.5611880
+      -0.5070120    2.2002399    0.7455400
+       0.1427190   -3.6062500   -0.2445900
+       0.5830680   -0.4922250   -0.2148920
+       0.7363930    1.1483001    0.2275770
+       1.0246300    3.0480101    0.5174460
+      -0.9339980    3.1098199    0.3398440
+      -0.8266120    1.9885700    0.5592370
+      -0.0350816   -3.0433400   -0.1484060
+       0.3068530   -1.6276200   -0.1377670
+       0.9270390    1.7250900    0.0112847
+      -1.0813900    2.7525799   -0.3571380
+      -0.5834050    0.6036090   -0.2112240
+      -0.1830290   -1.1694400   -0.3565170
+       0.0181673   -2.9945900   -0.3355400
+       0.0881114   -3.1518099   -0.3543450
+       1.0015000    2.5815699   -0.8253180
+      -0.4024710    2.4354999   -1.4672101
+      -0.3849060    0.8797020   -0.5926090
+       0.5204200   -0.5309580   -0.5918040
+       0.5129730    2.3643501   -1.1470200
+       0.0004173    0.7107720   -0.5425420
+      -0.3183400    0.2171480   -0.4919520
+      -0.3344640   -0.2678900   -0.7253210
+       0.2351630    0.3359280   -0.6508560
+       0.0015272   -0.5004030   -0.6290610
+  tverts 86
+       1.2405300    1.7581700  0
+       0.8623330    2.1103599  0
+       0.9602710    1.6507200  0
+       1.0201100    0.7594660  0
+       0.9477660    1.0397300  0
+       0.8507780    0.9465910  0
+       0.8481830    0.7470420  0
+       1.0030100    0.5975620  0
+       1.5538300    1.0858400  0
+       1.3004400    1.3277600  0
+       0.7594660    1.7581700  0
+       1.3277600    1.4200200  0
+       1.1376700    2.1103599  0
+       1.0237499    1.1376700  0
+       1.0242500    1.3597300  0
+       0.7836710    1.4034100  0
+       0.5965860    1.6693799  0
+       0.6864670    1.0090100  0
+       1.0534101    1.7937900  0
+       0.9909880    1.6473300  0
+       1.9088900    1.1510400  0
+       1.2529600    1.8470900  0
+       0.9235920    0.0911149  0
+       1.5624599    1.7245300  0
+       0.4375370    1.7245300  0
+       0.6402690    1.5647399  0
+       0.9682270    2.1234701  0
+       0.5926230    1.7474500  0
+       0.5975620    1.6190400  0
+      -0.1234700    1.0093400  0
+       0.8799050    1.0365400  0
+       1.0858400    1.5131800  0
+       1.6509200    1.4085000  0
+       1.8962500    2.0206101  0
+       1.1630200    1.5624599  0
+       0.2292020    2.0405300  0
+       0.3206010    1.6792400  0
+       0.9942950    0.0579063  0
+       1.1456300   -0.1234700  0
+       0.8543740   -0.1234700  0
+       0.7146750    0.5140660  0
+       0.4795800    0.8799050  0
+       1.5943500    1.2436800  0
+       1.4085000    1.4417599  0
+       2.0206101    1.7072300  0
+       0.1037530    2.0206101  0
+       1.7708000    2.0405300  0
+       1.0317700    2.1234701  0
+      -0.0405254    1.5445800  0
+       0.0745818    0.9062700  0
+       0.3207560    1.7455100  0
+       0.7670050    1.0398999  0
+       1.3383000    0.9068390  0
+       1.9263800    0.9260500  0
+       1.9420900    1.0974300  0
+       1.9770401    0.9088280  0
+       2.1234701    1.0093400  0
+       0.0229559    0.9088280  0
+       0.5140660    1.1071700  0
+       1.8703200    0.4775010  0
+       0.1037530    1.7072300  0
+       0.1234370    0.4775010  0
+       1.7708000    1.5445800  0
+       1.3184000    1.8232501  0
+       1.8962500    1.9254200  0
+       0.1767480   -0.1103610  0
+       0.6780440    0.6906210  0
+       0.9008520    0.0229559  0
+       0.9603830    0.0736153  0
+       0.8674250    0.6913580  0
+       0.1234370    1.8703200  0
+       0.5392390    1.8003300  0
+       0.9754900    1.2675200  0
+       1.3034500    1.3219600  0
+       0.8915270    0.7828050  0
+       1.4724000    1.2330000  0
+       1.2467901    1.1084700  0
+       1.2605200    0.9521880  0
+       1.0478100    0.5690810  0
+       0.5329010    0.8674250  0
+       0.7756910    1.1467500  0
+       1.1467500    0.6372770  0
+       0.9745460    0.8772700  0
+       1.1316299    0.6616970  0
+       0.8772700    0.6572370  0
+       0.0736153    0.9260500  0
+  faces 74
+     0  1  2  1   0  1  2   2
+     0  2  3  2   3  4  5   2
+     0  3  4  4   3  5  6   2
+     0  4  5  4   3  6  7   2
+     0  5  6  1   3  7  8   2
+     0  6  7  8   3  8  9   2
+     0  7  1  8  10 11 12   2
+     1  8  9  2  13 14 15   2
+     1  9  2  1   1 16  2   2
+     2  9 10  1   4 15 17   2
+     2 10  3  4   4 17  5   2
+     3 10 11  1  18 19 20   2
+     3 11  4  1  18 20 21   2
+     4 11  5  1   6 22  7   2
+     7 12  1  8  11 23 12   2
+     1 12  8  4   1 24 25   2
+     8 13 14  4  14 26 27   2
+     8 14  9  2  14 27 15   2
+     9 14 10  1  15 27 17   2
+     5 15 16  1  28 29 30   2
+     5 16  6  1  28 30 31   2
+     6 17  7  2   8 32  9   2
+     7 17 18  2   9 32 33   2
+     7 18 12  8   9 33 34   2
+    12 18 13  8  34 33 26   2
+    12 13  8  4  34 26 14   2
+    13 19 20  4  26 35 36   2
+    13 20 14  4  26 36 27   2
+    14 20 10  1  27 36 17   2
+     5 11 21  2   7 22 37   2
+     5 21 15  1   7 37 38   2
+    15 22 16  1  39 40 41   2
+     6 16 23  1  31 30 42   2
+     6 23 17  1  31 42 43   2
+    17 23 18  8  43 42 44   2
+    18 19 13  8  45 46 47   2
+    19 24 20  4  48 49 50   2
+    20 24 25  1  50 49 51   2
+    20 25 10  1  50 51 19   2
+    10 25 26  1  19 51 52   2
+    10 26 11  1  19 52 20   2
+    11 27 21  2  20 53 54   2
+    21 27 28  2  54 53 55   2
+    21 28 15  4  54 55 56   2
+    15 28 22  1  29 57 58   2
+    16 29 23  1  30 59 42   2
+    23 29 18  8  42 59 44   2
+    18 29 19  8  60 61 62   2
+    19 30 24  1  46 63 64   2
+    24 30 31  1  49 65 66   2
+    24 31 25  2  49 66 51   2
+    11 26 27  1  20 52 53   2
+    28 27 22  1  67 68 40   2
+    16 22 32  1  30 58 69   2
+    29 16 33  1  70 41 71   2
+    29 33 30  8  70 71 63   2
+    29 30 19  8  70 63 46   2
+    30 34 31  1  63 72 73   2
+    31 35 25  4  66 74 51   2
+    25 35 36  4  75 76 77   2
+    25 36 26  1  51 78 52   2
+    32 22 37  1  79 40 80   2
+    32 37 16  1  69 81 30   2
+    16 37 33  1  41 80 71   2
+    33 37 34  1  71 80 72   2
+    33 34 30  1  71 72 63   2
+    38 31 34  1  82 73 72   2
+    38 35 31  8  82 76 73   2
+    38 36 35  4  82 77 76   2
+    38 26 36  1  82 83 77   2
+    38 27 26  1  82 68 83   2
+    38 22 27  1  84 58 85   2
+    38 37 22  1  82 80 40   2
+    38 34 37  1  82 72 80   2
+  position -3.74107 2.74487 -4.13463
+  orientation 0.7645085 0.3755948 -0.5238847 -1.4957
+  alpha 1.0602
+  scale 1
+  selfillumcolor 0.0862745 0.0862745 0.0862745
+endnode
+node emitter FX_LavaSpout
+  parent vff_summevil_red
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 4
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_lava
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.582006 0 0.0880546
+  orientation 0 0 0 0
+  colorStart 0.996079 0.988235 0.745098
+  colorEnd 1 1 1
+  alphaStart 1
+  alphaEnd 0
+  sizeStart 0.2
+  sizeEnd 3.5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 0
+  lifeExp 1.3
+  mass 0.5
+  spread 0.523599
+  particleRot 0.3
+  velocity 4
+  randvel 1.4
+  fps 0
+  xsize 20
+  ysize 20
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FX_LavaBase
+  parent vff_summevil_red
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Lighten
+  texture fxpa_lava
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 0.0879189
+  orientation 0 0 0 0
+  colorStart 0.0980392 0.0980392 0.0980392
+  colorEnd 0.00548075 0.00548075 0.00548075
+  alphaStart 1
+  alphaEnd 0
+  sizeStart 4
+  sizeEnd 4
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 0
+  lifeExp 3
+  mass 0
+  spread 1.0472
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 3
+  xsize 320
+  ysize 320
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter dust03
+  parent vff_summevil_red
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_Smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.042544 -3.39186 0.0140679
+  orientation 0 0 0 0
+  colorStart 0.423529 0.305882 0.211765
+  colorEnd 0.584314 0.498039 0.427451
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0.2
+  sizeEnd 2
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 1.5
+  mass 0
+  spread 3.14159
+  particleRot 0.4
+  velocity 0.2
+  randvel 0.1
+  fps 16
+  xsize 100
+  ysize 100
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter dust04
+  parent vff_summevil_red
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 2
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_Smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.792567 -2.19342 0.0140679
+  orientation 0 0 0 0
+  colorStart 0.423529 0.305882 0.211765
+  colorEnd 0.584314 0.498039 0.427451
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0.2
+  sizeEnd 3
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 1.5
+  mass 0
+  spread 3.14159
+  particleRot 0.4
+  velocity 0.2
+  randvel 0.1
+  fps 16
+  xsize 100
+  ysize 100
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter dust05
+  parent vff_summevil_red
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_Smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.941987 -2.22814 0.0140679
+  orientation 0 0 0 0
+  colorStart 0.423529 0.305882 0.211765
+  colorEnd 0.584314 0.498039 0.427451
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0.2
+  sizeEnd 3
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 1.5
+  mass 0
+  spread 3.14159
+  particleRot 0.4
+  velocity 0.2
+  randvel 0.1
+  fps 16
+  xsize 100
+  ysize 100
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter dust06
+  parent vff_summevil_red
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_Smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -3.60661 2.56123 0.0140683
+  orientation 0 0 0 0
+  colorStart 0.423529 0.305882 0.211765
+  colorEnd 0.584314 0.498039 0.427451
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0.2
+  sizeEnd 3
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 1.5
+  mass 0
+  spread 3.14159
+  particleRot 0.4
+  velocity 0.2
+  randvel 0.1
+  fps 16
+  xsize 100
+  ysize 100
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter dust07
+  parent vff_summevil_red
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_Smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -2.10254 2.52652 0.0140683
+  orientation 0 0 0 0
+  colorStart 0.423529 0.305882 0.211765
+  colorEnd 0.584314 0.498039 0.427451
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0.2
+  sizeEnd 3
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 1.5
+  mass 0
+  spread 3.14159
+  particleRot 0.4
+  velocity 0.2
+  randvel 0.1
+  fps 16
+  xsize 100
+  ysize 100
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter dust08
+  parent vff_summevil_red
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 2
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_Smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -2.85658 1.3628 0.0140683
+  orientation 0 0 0 0
+  colorStart 0.423529 0.305882 0.211765
+  colorEnd 0.584314 0.498039 0.427451
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0.2
+  sizeEnd 2
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 1.5
+  mass 0
+  spread 3.14159
+  particleRot 0.4
+  velocity 0.2
+  randvel 0.1
+  fps 16
+  xsize 100
+  ysize 100
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter dust09
+  parent vff_summevil_red
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_Smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 3.32377 2.79497 0.0140683
+  orientation 0 0 0 0
+  colorStart 0.423529 0.305882 0.211765
+  colorEnd 0.584314 0.498039 0.427451
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0.2
+  sizeEnd 3
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 1.5
+  mass 0
+  spread 3.14159
+  particleRot 0.4
+  velocity 0.2
+  randvel 0.1
+  fps 16
+  xsize 100
+  ysize 100
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter dust10
+  parent vff_summevil_red
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 2
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_Smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 1.81971 2.82969 0.0140683
+  orientation 0 0 0 0
+  colorStart 0.423529 0.305882 0.211765
+  colorEnd 0.584314 0.498039 0.427451
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0.2
+  sizeEnd 3
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 1.5
+  mass 0
+  spread 3.14159
+  particleRot 0.4
+  velocity 0.2
+  randvel 0.1
+  fps 16
+  xsize 100
+  ysize 100
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter dust11
+  parent vff_summevil_red
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 1
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_Smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 2.56973 1.63125 0.0140683
+  orientation 0 0 0 0
+  colorStart 0.423529 0.305882 0.211765
+  colorEnd 0.584314 0.498039 0.427451
+  alphaStart 0.7
+  alphaEnd 0
+  sizeStart 0.2
+  sizeEnd 2
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 1.5
+  mass 0
+  spread 3.14159
+  particleRot 0.4
+  velocity 0.2
+  randvel 0.1
+  fps 16
+  xsize 100
+  ysize 100
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Chunkssml
+  parent vff_summevil_red
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 1
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 1
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture NULL
+  chunkName Fx_Rockchunksml
+  xgrid 0
+  ygrid 0
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -2.43723 1.92875 0.0187109
+  orientation 0 0 1 -0.637045
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.04
+  sizeEnd 0.04
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 0
+  lifeExp 1.5
+  mass 1
+  spread 1.0472
+  particleRot 5
+  velocity 4.5
+  randvel 1
+  fps 0
+  xsize 86
+  ysize 185
+  bounce_co 0.4
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Chunkssml01
+  parent vff_summevil_red
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 1
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 1
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture NULL
+  chunkName Fx_Rockchunksml
+  xgrid 0
+  ygrid 0
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.00652359 -2.17462 0.0187109
+  orientation 0 0 -1 -1.56207
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.04
+  sizeEnd 0.04
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 0
+  lifeExp 1.5
+  mass 1
+  spread 1.0472
+  particleRot 5
+  velocity 4.5
+  randvel 1
+  fps 0
+  xsize 165
+  ysize 185
+  bounce_co 0.4
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Chunkssml02
+  parent vff_summevil_red
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 1
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture NULL
+  chunkName Fx_Rockchunksml
+  xgrid 0
+  ygrid 0
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 2.86361 1.26905 0.0187109
+  orientation 0 0 -1 -1.56207
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.04
+  sizeEnd 0.04
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 0
+  lifeExp 1.5
+  mass 1
+  spread 1.0472
+  particleRot 5
+  velocity 4.5
+  randvel 1
+  fps 0
+  xsize 165
+  ysize 185
+  bounce_co 0.4
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FX_LavaSpout01
+  parent vff_summevil_red
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 4
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_lava
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.14749 -1.48996 0.0880546
+  orientation 0 0 0 0
+  colorStart 0.996079 0.988235 0.745098
+  colorEnd 1 1 1
+  alphaStart 1
+  alphaEnd 0
+  sizeStart 0.2
+  sizeEnd 3.5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 0
+  lifeExp 1.3
+  mass 0.5
+  spread 0.523599
+  particleRot 0.3
+  velocity 4
+  randvel 1.4
+  fps 0
+  xsize 20
+  ysize 20
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FX_LavaSpout02
+  parent vff_summevil_red
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 4
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_lava
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.561549 0.665702 0.0880546
+  orientation 0 0 0 0
+  colorStart 0.996079 0.988235 0.745098
+  colorEnd 1 1 1
+  alphaStart 1
+  alphaEnd 0
+  sizeStart 0.2
+  sizeEnd 3.5
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 0
+  lifeExp 1.3
+  mass 0.5
+  spread 0.523599
+  particleRot 0.3
+  velocity 4
+  randvel 1.4
+  fps 0
+  xsize 20
+  ysize 20
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node light AuroraLight01
+  parent vff_summevil_red
+  ambientonly 0
+  shadow 0
+  isdynamic 1
+  affectdynamic 1
+  lightpriority 2
+  fadingLight 1
+  flareradius 0
+  position 0 0 1.89631
+  orientation -0.5773503 0.5773503 0.5773503 -2.0944
+  radius 8
+  multiplier 3
+  color 0.89499 0.692278 0.0764949
+endnode
+node emitter WIND_Dummy
+  parent vff_summevil_red
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Normal
+  blend Lighten
+  texture NULL
+  xgrid 0
+  ygrid 0
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 8
+  blastLength 1.3
+  position -0.00249214 0.000424422 0.390378
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 0
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp 0
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom vff_summevil_red
+
+#MAXANIM ASCII
+newanim impact vff_summevil_red
+  length 6.63333
+  transtime 0.25
+  animroot vff_summevil_red
+  event 0 detonate
+  event 0.466667 detonate
+  event 0.966667 detonate
+  event 1.46667 detonate
+  event 1.96667 detonate
+  node dummy vff_summevil_red
+    parent NULL
+  endnode
+  node trimesh shard
+    parent vff_summevil_red
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    positionkey 6
+         1.3666700    0.0500495   -5.1829600   -4.7595000
+         1.6666700    0.0500495   -5.1829600   -4.7595000
+         1.8333300    0.0500495   -5.1829600   -4.7595000
+         2.6333301    0.1077950   -2.5250800    1.7916800
+         5.4666700    0.1052990   -2.5254500    1.7917600
+         5.5999999    0.0648068   -3.7259099   -5.4039402
+    orientationkey 13
+         1.3666700    0.5444900    0.5248340   -0.6542780   -2.2219100
+         1.6666700    0.5444900    0.5248340   -0.6542780   -2.2219100
+         1.9666700    0.5511370    0.5294741   -0.6449071   -2.2357099
+         2.0666699    0.5598000    0.5354890   -0.6323571   -2.2542901
+         2.1333301    0.5444900    0.5248340   -0.6542780   -2.2219100
+         2.2000000    0.5598007    0.5354888   -0.6323566   -2.2542901
+         2.2666700    0.5533239    0.5309969   -0.6417749   -2.2403300
+         2.3333299    0.5682390    0.5413080   -0.6197500   -2.2730899
+         2.4000001    0.5533239    0.5309969   -0.6417749   -2.2403300
+         2.4666700    0.5661501    0.5398711   -0.6229071   -2.2683699
+         2.5333300    0.5576558    0.5340038   -0.6354998   -2.2496300
+         2.5999999    0.5511367    0.5294748   -0.6449068   -2.2357099
+         2.6333301    0.5485672    0.5388592   -0.6393002   -2.2666900
+    alphakey 3
+         4.9666700    1.0000000
+         5.4666700    0.0000000
+         6.3000002    0.0000000
+  endnode
+  node trimesh shard01
+    parent vff_summevil_red
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    positionkey 6
+         1.6666700    3.9833200    2.1560800   -4.0295901
+         1.9666700    3.9833200    2.1560800   -4.0295901
+         2.1666701    3.9833200    2.1560800   -4.0295901
+         2.9666700    2.4413900    1.5989900    1.6871600
+         5.4666700    2.4415801    1.5986201    1.6871400
+         5.5999999    4.0947099    2.7832699   -5.2075300
+    orientationkey 9
+         1.6666700    0.7241743   -0.5142752    0.4594482   -1.7643700
+         1.9666700    0.7213471   -0.5035341    0.4755121   -1.7466102
+         2.4333301    0.7133897   -0.5268757    0.4620358   -1.7392800
+         2.5333300    0.7196240   -0.5100570    0.4711510   -1.7457598
+         2.5999999    0.6990579   -0.5258549    0.4845560   -1.6910400
+         2.6666701    0.7074660   -0.5171130    0.4817530   -1.7113200
+         2.7333300    0.7091309   -0.4856469    0.5111560   -1.6969001
+         2.8666699    0.7001867   -0.4911607    0.5181698   -1.6717100
+         2.9666700    0.6888681   -0.4567431    0.5628911   -1.6261901
+    alphakey 3
+         4.9666700    1.0000000
+         5.4666700    0.0000000
+         6.3000002    0.0000000
+  endnode
+  node trimesh shard02
+    parent vff_summevil_red
+    ambient 0.2 0.2 0.2
+    diffuse 0.8 0.8 0.8
+    specular 0 0 0
+    shininess 1
+    positionkey 5
+         0.7666670   -3.7410700    2.7448699   -4.1346302
+         1.0666699   -3.7410700    2.7448699   -4.1346302
+         1.6666700   -2.0244300    1.4036800    2.0171299
+         5.4666700   -2.0048499    1.4287500    2.0171299
+         5.5999999   -4.0310702    3.0118101   -5.2440400
+    orientationkey 2
+         1.0666699    0.7788670    0.4654000   -0.4204390   -1.5849500
+         1.6666700    0.7637917    0.3725258   -0.5271118   -1.4932300
+    alphakey 3
+         4.9666700    1.0000000
+         5.4666700    0.0000000
+         6.3000002    0.0000000
+  endnode
+  node emitter FX_LavaSpout
+    parent vff_summevil_red
+    birthratekey 13
+         2.6666701    0.0000000
+         2.7333300   90.0000000
+         3.1333301   50.0000000
+         3.2666700    0.0000000
+         3.5000000   20.0000000
+         3.5666699   50.0000000
+         3.9000001   50.0000000
+         3.9333301    0.0000000
+         4.1999998    0.0000000
+         4.2333298   30.0000000
+         4.5000000   30.0000000
+         4.9666700    0.0000000
+         5.1666698    0.0000000
+    velocitykey 4
+         2.7333300    4.0000000
+         3.1333301    3.0000000
+         4.9666700    3.0000000
+         5.1666698    3.0000000
+  endnode
+  node emitter FX_LavaBase
+    parent vff_summevil_red
+    colorEndkey 1
+         2.7333300    0.4549020    0.4549020    0.4549020
+    birthratekey 7
+         2.2000000    0.0000000
+         2.7333300   30.0000000
+         3.0000000   30.0000000
+         3.3333299    5.0000000
+         4.1333299   22.0000000
+         5.1333299   32.0000000
+         5.2666702    0.0000000
+  endnode
+  node emitter dust03
+    parent vff_summevil_red
+    positionkey 14
+         0.6000000   -0.0421751   -3.3808300    0.0140679
+         0.7666670   -1.0574100   -3.7161701    0.0140679
+         1.0666699    1.1263300   -3.8246100    0.0140679
+         1.2333300   -0.0633023   -3.2437601    0.0140679
+         1.3333300   -0.1334240   -4.7680402    0.0140678
+         1.5000000   -0.5610990   -4.1542902    0.0140678
+         1.6000000    0.3366910   -3.9998600    0.0140678
+         1.7000000   -0.8514250   -3.0993400    0.0140679
+         1.9333301    0.4588470   -3.5795100    0.0140679
+         2.1333301    0.0762155   -4.0140600    0.0140678
+         2.2666700   -0.6096210   -4.6158400    0.0140678
+         2.4333301    0.6160780   -3.5760601    0.0140679
+         2.6666701   -0.0405408   -3.6794100    0.0140679
+         2.8000000   -0.1943730   -3.9366000    0.0140678
+    birthratekey 5
+         0.0000000    0.0000000
+         0.3000000    0.0000000
+         0.6000000   60.0000000
+         2.8000000   60.0000000
+         2.8333299    0.0000000
+  endnode
+  node emitter dust04
+    parent vff_summevil_red
+    positionkey 16
+         0.6000000   -0.7921980   -2.1823900    0.0140679
+         0.7666670   -1.8074300   -2.5177300    0.0140679
+         1.0666699    0.3763090   -2.6261699    0.0140678
+         1.2333300   -0.8133250   -2.0453200    0.0140679
+         1.3333300   -0.8834460   -3.5696001    0.0140678
+         1.5000000   -1.3111200   -2.9558499    0.0140678
+         1.6000000   -0.4133310   -2.8014200    0.0140678
+         1.7000000   -1.6014500   -1.9009000    0.0140679
+         1.9333301   -0.2911750   -2.3810699    0.0140679
+         2.1333301   -0.6738070   -2.8156199    0.0140678
+         2.2666700   -1.3596400   -3.4173999    0.0140678
+         2.3000000   -1.1133400   -3.5796599    0.0140678
+         2.4333301   -0.1339450   -2.3776200    0.0140679
+         2.6666701   -0.7905630   -2.4809699    0.0140679
+         2.7000000   -0.8285440   -2.6480100    0.0140678
+         2.8000000   -0.9443950   -2.7381599    0.0140678
+    birthratekey 5
+         0.0000000    0.0000000
+         0.3000000    0.0000000
+         0.6000000   60.0000000
+         2.8000000   60.0000000
+         2.8333299    0.0000000
+  endnode
+  node emitter dust05
+    parent vff_summevil_red
+    positionkey 16
+         0.6000000    0.9423560   -2.2171099    0.0140679
+         0.7666670   -0.0728777   -2.5524499    0.0140679
+         1.0666699    2.1108601   -2.6608901    0.0140679
+         1.2333300    0.9212290   -2.0800400    0.0140679
+         1.3333300    0.8511070   -3.6043200    0.0140678
+         1.5000000    0.4234330   -2.9905701    0.0140678
+         1.6000000    1.3212200   -2.8361399    0.0140678
+         1.7000000    0.1331070   -1.9356200    0.0140679
+         1.9333301    1.4433800   -2.4157901    0.0140679
+         2.1333301    1.0607500   -2.8503399    0.0140678
+         2.2666700    0.3749100   -3.4521201    0.0140678
+         2.3000000    1.1573499   -3.2287099    0.0140678
+         2.4333301    1.6006100   -2.4123399    0.0140679
+         2.6666701    0.9439900   -2.5156901    0.0140679
+         2.7000000    1.5578099   -2.5669401    0.0140679
+         2.8000000    0.7901580   -2.7728801    0.0140678
+    birthratekey 5
+         0.0000000    0.0000000
+         0.3000000    0.0000000
+         0.6000000   60.0000000
+         2.8000000   60.0000000
+         2.8333299    0.0000000
+  endnode
+  node emitter dust06
+    parent vff_summevil_red
+    positionkey 23
+         0.2333330   -3.6062701    2.5714300    0.0140683
+         0.4333330   -4.6215000    2.2360899    0.0140683
+         0.7666670   -2.6647301    2.8176100    0.0140683
+         1.0333300   -3.6273899    2.7084999    0.0140683
+         1.1000000   -3.2812700    2.0754199    0.0140683
+         1.3333300   -3.1473200    2.1058099    0.0140683
+         1.4333301   -2.9057000    1.5291899    0.0140682
+         1.5000000   -4.1251898    1.7979600    0.0140682
+         1.5333300   -2.4657800    2.3830900    0.0140683
+         1.6000000   -3.1024301    1.1362700    0.0140682
+         1.6666700   -2.7715299    1.4633800    0.0140682
+         1.7000000   -4.4155102    2.8529100    0.0140683
+         1.7333300   -2.4816799    2.3892701    0.0140683
+         1.8000000   -3.4526100    1.6766500    0.0140682
+         1.9000000   -2.3732300    2.1913400    0.0140682
+         1.9333301   -3.1052401    2.3727400    0.0140683
+         2.0000000   -2.5680499    1.8348700    0.0140682
+         2.1333301   -2.4369800    1.9317600    0.0140682
+         2.2666700   -2.2729700    2.4116800    0.0140683
+         2.3000000   -3.3698900    2.7316799    0.0140683
+         2.4333301   -2.9393799    1.5970900    0.0140682
+         2.6666701   -3.5944200    1.6097800    0.0140682
+         2.8000000   -3.4654901    2.5435700    0.0140683
+    birthratekey 5
+         0.0000000    0.0000000
+         0.2000000    0.0000000
+         0.2333330   60.0000000
+         2.8000000   60.0000000
+         2.8333299    0.0000000
+  endnode
+  node emitter dust07
+    parent vff_summevil_red
+    positionkey 23
+         0.2333330   -2.1022000    2.5367100    0.0140683
+         0.4333330   -3.1174400    2.2013700    0.0140683
+         0.7666670   -1.4727300    1.8191700    0.0140682
+         1.0333300   -2.1233301    2.6737800    0.0140683
+         1.1000000   -2.0121500    2.0793800    0.0140683
+         1.3333300   -1.6432600    2.0710900    0.0140683
+         1.4333301   -1.4016401    1.4944700    0.0140682
+         1.5000000   -2.6211300    1.7632500    0.0140682
+         1.5333300   -0.9617210    2.3483701    0.0140683
+         1.6000000   -1.5983700    1.1015500    0.0140682
+         1.6666700   -1.2674700    1.4286700    0.0140682
+         1.7000000   -2.9114499    2.8181901    0.0140683
+         1.7333300   -0.9776160    2.3545599    0.0140683
+         1.8000000   -1.9485500    1.6419400    0.0140682
+         1.9000000   -0.8691660    2.1566200    0.0140683
+         1.9333301   -1.6011800    2.3380201    0.0140683
+         2.0000000   -1.0639900    1.8001500    0.0140682
+         2.1333301   -0.9329190    1.8970400    0.0140682
+         2.2666700   -0.7689100    2.3769600    0.0140683
+         2.3000000   -1.5995800    2.5814199    0.0140683
+         2.4333301   -1.4353200    1.5623699    0.0140682
+         2.6666701   -2.0903599    1.5750600    0.0140682
+         2.8000000   -1.5392900    2.7402999    0.0140683
+    birthratekey 5
+         0.0000000    0.0000000
+         0.2000000    0.0000000
+         0.2333330   60.0000000
+         2.8000000   60.0000000
+         2.8333299    0.0000000
+  endnode
+  node emitter dust08
+    parent vff_summevil_red
+    positionkey 23
+         0.2333330   -2.8562400    1.3729900    0.0140683
+         0.4333330   -3.8714800    1.0376500    0.0140683
+         0.7666670   -2.8803699    0.9295410    0.0140683
+         1.0333300   -2.8773701    1.5100600    0.0140683
+         1.1000000   -3.1499200    0.3415600    0.0140682
+         1.3333300   -2.3973000    0.9073720    0.0140683
+         1.4333301   -2.1556799    0.3307500    0.0140682
+         1.5000000   -3.3751700    0.5995250    0.0140682
+         1.5333300   -1.7157600    1.1846499    0.0140683
+         1.6000000   -2.3524101   -0.0621695    0.0140682
+         1.6666700   -2.0215099    0.2649450    0.0140682
+         1.7000000   -3.6654899    1.6544700    0.0140683
+         1.7333300   -1.7316600    1.1908400    0.0140683
+         1.8000000   -2.7025900    0.4782150    0.0140682
+         1.9000000   -1.6232001    0.9929040    0.0140683
+         1.9333301   -2.3552201    1.1743000    0.0140683
+         2.0000000   -1.8180300    0.6364300    0.0140682
+         2.1333301   -1.6869600    0.7333240    0.0140682
+         2.2666700   -1.5229501    1.2132400    0.0140683
+         2.3000000   -2.5060101    0.9978240    0.0140683
+         2.4333301   -2.1893599    0.3986490    0.0140682
+         2.6666701   -2.8443999    0.4113370    0.0140682
+         2.8000000   -2.4473901    0.5398330    0.0140682
+    birthratekey 5
+         0.0000000    0.0000000
+         0.2000000    0.0000000
+         0.2333330   60.0000000
+         2.8000000   60.0000000
+         2.8333299    0.0000000
+  endnode
+  node emitter dust09
+    parent vff_summevil_red
+    positionkey 28
+         0.8000000    3.3241401    2.8061600    0.0140683
+         0.9000000    3.5214400    2.0605600    0.0140682
+         0.9666670    3.7717500    2.6208899    0.0140683
+         1.0666699    4.4926500    2.3623800    0.0140683
+         1.3333300    4.3779202    1.7421900    0.0140682
+         1.4333301    4.6935101    2.4981201    0.0140683
+         1.7333300    4.4937000    2.2301099    0.0140683
+         1.8000000    4.4137702    3.5277100    0.0140684
+         1.9000000    4.6227298    1.7984600    0.0140682
+         2.0333300    5.8422799    2.1452100    0.0140683
+         2.1333301    4.1314502    1.1921000    0.0140682
+         2.3333299    3.9653900    1.7824200    0.0140682
+         2.3666699    3.8251700    2.6074700    0.0140683
+         2.4000001    3.6612201    1.7450900    0.0140682
+         2.5000000    3.6895900    1.6720999    0.0140682
+         2.5999999    3.5361700    1.5847100    0.0140682
+         2.6666701    3.4425299    2.1729300    0.0140683
+         2.7000000    3.2665401    1.4802001    0.0140682
+         2.7666700    3.4241400    1.5408300    0.0140682
+         2.8000000    2.7567000    1.5711499    0.0140682
+         2.8333299    3.9207900    1.7929100    0.0140682
+         2.9000001    3.4448600    2.3529899    0.0140683
+         2.9666700    3.3207200    2.2207301    0.0140683
+         3.0333300    3.3175099    1.9136000    0.0140682
+         3.0999999    3.3161600    1.6470000    0.0140682
+         3.2000000    3.3257799    2.5075700    0.0140683
+         3.2333300    3.6651399    1.6811900    0.0140682
+         3.3333299    3.1633601    1.7458301    0.0140682
+    birthratekey 5
+         0.0000000    0.0000000
+         0.7666670    0.0000000
+         0.8000000   60.0000000
+         3.3333299   60.0000000
+         3.3666699    0.0000000
+  endnode
+  node emitter dust10
+    parent vff_summevil_red
+    positionkey 28
+         0.8000000    1.8200800    2.8408799    0.0140683
+         0.9000000    2.0173800    2.0952799    0.0140682
+         0.9666670    2.2676899    2.6556101    0.0140683
+         1.0666699    2.9885900    2.3971000    0.0140683
+         1.3333300    2.8738599    1.7769099    0.0140682
+         1.4333301    3.1894500    2.5328400    0.0140683
+         1.7333300    2.9896400    2.2648301    0.0140683
+         1.8000000    2.9097099    3.5624199    0.0140684
+         1.9000000    3.1186700    1.8331800    0.0140682
+         2.0333300    4.3382101    2.1799300    0.0140682
+         2.1333301    2.6273899    1.2268200    0.0140682
+         2.3333299    2.4613299    1.8171400    0.0140682
+         2.3666699    2.3211000    2.6421900    0.0140683
+         2.4000001    2.1571600    1.7798001    0.0140682
+         2.5000000    2.1855299    1.7068200    0.0140682
+         2.5999999    2.0321100    1.6194299    0.0140682
+         2.6666701    1.9384700    2.2076499    0.0140682
+         2.7000000    1.7624700    1.5149200    0.0140682
+         2.7666700    1.9200799    1.5755500    0.0140682
+         2.8000000    1.2526300    1.6058700    0.0140682
+         2.8333299    1.8805900    1.4419700    0.0140682
+         2.9000001    1.6727300    2.1948800    0.0140682
+         2.9666700    1.8166600    2.2554500    0.0140682
+         3.0333300    1.8134400    1.9483200    0.0140682
+         3.0999999    1.8120900    1.6817200    0.0140682
+         3.2000000    1.8217200    2.5422900    0.0140683
+         3.2333300    1.5092800    1.6001199    0.0140682
+         3.3333299    1.6592900    1.7805500    0.0140682
+    birthratekey 5
+         0.0000000    0.0000000
+         0.7666670    0.0000000
+         0.8000000   60.0000000
+         3.3333299   60.0000000
+         3.3666699    0.0000000
+  endnode
+  node emitter dust11
+    parent vff_summevil_red
+    positionkey 28
+         0.8000000    2.5701001    1.6424400    0.0140683
+         0.9000000    2.7674000    0.8968410    0.0140682
+         0.9666670    3.0177100    1.4571700    0.0140683
+         1.0666699    3.7386100    1.1986600    0.0140683
+         1.3333300    3.6238799    0.5784660    0.0140682
+         1.4333301    3.9394701    1.3344001    0.0140683
+         1.7333300    3.7396600    1.0663900    0.0140683
+         1.8000000    3.6597300    2.3639901    0.0140684
+         1.9000000    3.8686900    0.6347420    0.0140682
+         2.0333300    5.0882401    0.9814940    0.0140683
+         2.1333301    3.3774199    0.0283833    0.0140682
+         2.3333299    3.2113500    0.6187010    0.0140682
+         2.3666699    3.0711300    1.4437500    0.0140683
+         2.4000001    2.9071801    0.5813650    0.0140682
+         2.5000000    2.9355500    0.5083810    0.0140682
+         2.5999999    2.7821300    0.4209920    0.0140682
+         2.6666701    2.6884899    1.0092100    0.0140683
+         2.7000000    2.5125000    0.3164800    0.0140682
+         2.7666700    2.6701000    0.3771130    0.0140682
+         2.8000000    2.0026600    0.4074290    0.0140682
+         2.8333299    2.6294501    0.6137420    0.0140682
+         2.9000001    2.4221699    1.1815400    0.0140683
+         2.9666700    2.5666800    1.0570101    0.0140683
+         3.0333300    2.5634699    0.7498830    0.0140682
+         3.0999999    2.5621200    0.4832770    0.0140682
+         3.2000000    2.5717399    1.3438500    0.0140683
+         3.2333300    2.2588201    0.5044240    0.0140682
+         3.3333299    2.4093201    0.5821090    0.0140682
+    birthratekey 5
+         0.0000000    0.0000000
+         0.7666670    0.0000000
+         0.8000000   60.0000000
+         3.3333299   60.0000000
+         3.3666699    0.0000000
+  endnode
+  node emitter Chunkssml
+    parent vff_summevil_red
+    birthratekey 5
+         0.0000000    0.0000000
+         0.5666670    0.0000000
+         0.6000000   24.0000000
+         2.0333300   12.0000000
+         2.0666699    0.0000000
+  endnode
+  node emitter Chunkssml01
+    parent vff_summevil_red
+    birthratekey 5
+         0.0000000    0.0000000
+         1.5000000    0.0000000
+         1.5333300   25.0000000
+         2.8666699   12.0000000
+         2.9000001    0.0000000
+  endnode
+  node emitter Chunkssml02
+    parent vff_summevil_red
+    birthratekey 5
+         0.0000000    0.0000000
+         1.8000000    0.0000000
+         1.8333300   23.0000000
+         3.3666699   12.0000000
+         3.4000001    0.0000000
+  endnode
+  node emitter FX_LavaSpout01
+    parent vff_summevil_red
+    birthratekey 13
+         2.6666701    0.0000000
+         3.0000000   90.0000000
+         3.1333301   50.0000000
+         3.4333301    0.0000000
+         3.6666701   20.0000000
+         3.7333300   50.0000000
+         3.9000001   50.0000000
+         3.9333301    0.0000000
+         4.1999998    0.0000000
+         4.5333300   30.0000000
+         4.7666702   30.0000000
+         4.9666700    0.0000000
+         5.1666698    0.0000000
+    velocitykey 4
+         3.0000000    4.0000000
+         3.1333301    3.0000000
+         4.9666700    3.0000000
+         5.1666698    3.0000000
+  endnode
+  node emitter FX_LavaSpout02
+    parent vff_summevil_red
+    birthratekey 13
+         2.6666701    0.0000000
+         3.0000000   90.0000000
+         3.1333301   50.0000000
+         3.4333301    0.0000000
+         3.6666701   20.0000000
+         3.7333300   50.0000000
+         3.9000001   50.0000000
+         3.9333301    0.0000000
+         4.1999998    0.0000000
+         4.5333300   30.0000000
+         4.7666702   30.0000000
+         4.9666700    0.0000000
+         5.1666698    0.0000000
+    velocitykey 4
+         3.0000000    4.0000000
+         3.1333301    3.0000000
+         4.9666700    3.0000000
+         5.1666698    3.0000000
+  endnode
+  node light AuroraLight01
+    parent vff_summevil_red
+    colorkey 10
+         2.6333301    0.0000001    0.0000001    0.0000000
+         2.6666701    0.0000001    0.0000001    0.0000000
+         3.0000000    0.9529420    0.9058830    0.3882350
+         3.4333301    0.9215690    0.7215690    0.1137260
+         3.8666699    0.9764710    0.8431380    0.1137260
+         4.4000001    0.9215690    0.7215690    0.1137260
+         4.8333302    0.9843140    0.8392160    0.3960780
+         5.3000002    0.9215690    0.7215690    0.1137260
+         5.4333301    0.7622340    0.5893870    0.0643023
+         5.8000002    0.0000006    0.0000001    0.0000000
+  endnode
+  node emitter WIND_Dummy
+    parent vff_summevil_red
+  endnode
+doneanim impact vff_summevil_red
+
+donemodel vff_summevil_red

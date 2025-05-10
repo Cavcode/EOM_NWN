@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 c_orbyorb6 
+texture1 c_orbyorb_n 
+texture2 c_orbyorb_s 
+texture3 null 
+texture4 null 

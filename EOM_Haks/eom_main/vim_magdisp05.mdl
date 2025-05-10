@@ -1,0 +1,459 @@
+#MAXMODEL ASCII
+# model: vim_magdisp05
+filedependancy vim_magdisp05.max
+newmodel vim_magdisp05
+setsupermodel vim_magdisp05 NULL
+classification effect
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vim_magdisp05
+node dummy vim_magdisp05
+  parent NULL
+  #part-number 0
+endnode
+node emitter OmenEmitter02
+  parent vim_magdisp05
+  #part-number 1
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  splat 0
+  inherit_part 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Aligned_to_Particle_Dir
+  blend Lighten
+  texture fxpa_dot01
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0.209439993
+  twosidedtex 1
+  blastRadius 0
+  blastLength 0
+  position 0.978515029 0 0
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 0.623529017 0.882353008
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.100000001
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 20
+  lifeExp 0.100000001
+  mass 0
+  spread 6.28318977
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter OmenEmitter03
+  parent vim_magdisp05
+  #part-number 2
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  splat 0
+  inherit_part 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Aligned_to_Particle_Dir
+  blend Lighten
+  texture fxpa_dot01
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0.209439993
+  twosidedtex 1
+  blastRadius 0
+  blastLength 0
+  position 0.978515029 -0.442627013 0
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 0.541176021 0.886274993
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 0.100000001
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 20
+  lifeExp 0.100000001
+  mass 0
+  spread 6.28318977
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Smoke
+  parent vim_magdisp05
+  #part-number 3
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  splat 0
+  inherit_part 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_smoke01a
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 1.17697001
+  orientation 0 0 -1 -0.00872664992
+  colorStart 1 0.611765027 0.811765015
+  colorEnd 0 0 0
+  alphaStart 0
+  alphaEnd 0.300000012
+  sizeStart 1
+  sizeEnd 8
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 40
+  lifeExp 1
+  mass 0
+  spread 2.79253006
+  particleRot 0
+  velocity 1
+  randvel 1
+  fps 16
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter WIND_Dummy
+  parent vim_magdisp05
+  #part-number 4
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  splat 0
+  inherit_part 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Normal
+  blend Lighten
+  texture NULL
+  xgrid 0
+  ygrid 0
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 3
+  blastLength 0.5
+  position 0 0 0.184861004
+  orientation 0 0 0 0
+  colorStart 1 1 1
+  colorEnd 1 1 1
+  alphaStart 0
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 1
+  lifeExp 0
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node light AuroraLight01
+  parent vim_magdisp05
+  #part-number 5
+  ambientonly 0
+  shadow 0
+  isdynamic 1
+  affectdynamic 1
+  lightpriority 2
+  fadingLight 0
+  flareradius 0
+  position 0 0 0.664234996
+  orientation -0.577350259 0.577350259 0.577350259 -2.09439993
+  radius 4.5
+  multiplier 3
+  color 1.78814005e-007 0 2.38419005e-007
+endnode
+endmodelgeom vim_magdisp05
+
+#MAXANIM ASCII
+newanim impact vim_magdisp05
+  length 2.63333011
+  transtime 0.25
+  animroot vim_magdisp05
+  event 0.0333333015 detonate
+  event 0.166666999 detonate
+  event 0.166666999 detonate
+  event 0.366667002 detonate
+  event 0.366667002 detonate
+  event 0.600000024 detonate
+  event 0.600000024 detonate
+  event 0.866666973 detonate
+  event 0.866666973 detonate
+  event 1.20000005 detonate
+  event 1.20000005 detonate
+  event 1.5 detonate
+  event 1.5 detonate
+  event 1.89999998 detonate
+  event 1.89999998 detonate
+  event 2.0999999 detonate
+  event 2.0999999 detonate
+node dummy vim_magdisp05
+  parent NULL
+  #part-number 0
+endnode
+node emitter OmenEmitter02
+  parent vim_magdisp05
+  #part-number 1
+  positionkey 38
+    0.100000001 0.978515029 0 0
+    0.133332998 0.619818985 -0.00240959995 0
+    0.233333007 0.485480994 -0.361083001 0.677389979
+    0.236667007 0.481002986 -0.373039007 0.139570996
+    0.333332986 0.172078997 0.189502999 0.799202979
+    0.340207994 0.150107995 -0.576141 0.278445005
+    0.443749994 -0.228269994 -0.533798993 0.416586012
+    0.533333004 -0.459322006 -0.308221012 1.15119004
+    0.547291994 -0.495323986 -0.273072988 0.553951025
+    0.56666702 0.464742988 -0.205266997 0.29895699
+    0.600000024 -0.520452976 -0.0886121988 1.07971001
+    0.650833011 -0.544687986 0.0892869979 0.690494001
+    0.699999988 0.0260952003 -0.384357005 0.754914999
+    0.754374981 -0.364656001 0.398947001 0.826161027
+    0.766667008 -0.32595101 0.414501995 1.49305999
+    0.857707977 -0.0392737016 0.529713988 0.960891008
+    0.866666973 -0.0107396003 0.521511018 0.518435001
+    0.899999976 0.0954340026 -0.594074011 0.721494019
+    0.961250007 0.290527999 0.434899986 1.09460998
+    1.06479001 0.48793301 0.163442999 1.22724998
+    1.16666996 0.593001008 -0.159224004 0.262475014
+    1.16832995 0.476981014 -0.164502993 1.35869002
+    1.20000005 -0.302188993 0.306708008 1.39848995
+    1.27188003 0.271528989 -0.410638005 1.48881996
+    1.37541997 -0.0344927981 -0.476835996 1.61749005
+    1.46667004 -0.277572006 -0.359650999 2.02328992
+    1.47874999 -0.309760004 -0.344134003 1.74451005
+    1.53332996 0.391934007 0.165866002 1.81046999
+    1.58229005 -0.441899002 -0.0769537017 1.86962998
+    1.68583 -0.383305997 0.207634002 1.99250996
+    1.76666999 0.310532987 -0.433784008 2.08628011
+    1.78937995 -0.167804003 0.391131997 2.11262989
+    1.86667001 0.0376832001 0.399955988 2.00049996
+    1.89292002 0.107470997 0.402952999 2.22913003
+    1.99645996 0.325666994 0.247316003 2.34028006
+    2 0.328204006 0.238774002 2.13919997
+    2.03332996 -0.51405102 -0.359791011 2.23904991
+    2.0999999 -0.377820998 -0.00240973011 2.24376011
+  colorStartkey 7
+    0.100000001 1 1 1
+    0.133332998 1 1 1
+    0.366667002 0 0 0
+    0.600000024 1 1 1
+    0.866666973 0 0 0
+    1.5 1 1 1
+    2.0999999 0 0 0
+endnode
+node emitter OmenEmitter03
+  parent vim_magdisp05
+  #part-number 2
+  positionkey 49
+    0.100000001 0.978515029 -0.442627013 0
+    0.133332998 -0.169441998 0.212918997 2.42951012
+    0.236667007 -0.739683986 -0.0990343988 2.28994012
+    0.333332986 -0.521851003 -0.49090901 1.27921999
+    0.340207994 -0.506358027 -0.51877898 2.15107012
+    0.443749994 -0.078544803 -0.699887991 2.01292992
+    0.466666996 0.228929996 0.357868999 1.98253
+    0.547291994 0.354965001 -0.583334982 1.87556005
+    0.56666702 -0.626124024 -0.209593996 1.85001004
+    0.600000024 0.438683003 -0.220492005 1.80604994
+    0.650833011 0.61540103 -0.237112001 1.73901999
+    0.666666985 0.614223003 -0.173268005 2.44267011
+    0.699999988 -0.0914670974 0.467332989 2.12368989
+    0.733332992 0.144630998 -0.626857996 1.80471003
+    0.754374981 0.607698023 0.180396006 1.60335004
+    0.800000012 -0.00259628007 -0.534545004 1.54385996
+    0.857707977 0.354357988 0.492417991 1.46861994
+    0.866666973 0.380421013 -0.357032001 1.45704997
+    0.93333298 -0.343102992 0.178911 1.37094998
+    0.961250007 -0.0221548006 0.578643024 1.33490002
+    0.966666996 0.114436001 -0.591605008 1.32796001
+    1 -0.413592994 -0.373243004 1.28525996
+    1.06479001 -0.357654989 0.421204001 1.20227003
+    1.06666994 -0.40842101 -0.45748201 1.18855
+    1.13332999 -0.0124043999 0.431459993 0.700639009
+    1.16666996 -0.515172005 0.109507002 0.456685007
+    1.16832995 -0.517749012 0.104408003 1.07082999
+    1.20000005 0.503565013 0.189561993 1.03103006
+    1.26666999 -0.0377262011 0.368835986 0.947241008
+    1.27188003 -0.451525003 -0.228366002 0.940696001
+    1.29999995 -0.131448001 0.370050013 0.905745029
+    1.37541997 -0.206017002 -0.439262003 0.812023997
+    1.39999998 -0.132814005 0.384119004 0.672284007
+    1.46667004 0.481577992 0.0208620001 0.293327987
+    1.47874999 0.101683997 -0.453031987 0.685002029
+    1.5 -0.176719993 0.381170005 0.659322977
+    1.53332996 -0.478556991 -0.453574002 0.619041979
+    1.58229005 0.339527994 -0.283001989 0.559879005
+    1.68583 0.417158008 -0.0173777994 0.437002003
+    1.70000005 0.164614007 -0.570037007 0.420567989
+    1.76666999 -0.292501986 0.316291988 0.343230009
+    1.78937995 0.319821 0.224908993 0.316886991
+    1.86667001 0.160956994 -0.552986026 0.345586002
+    1.89292002 0.107003003 0.347270995 0.200387001
+    1.93333006 -0.0973912999 -0.538990021 0.156999007
+    1.99645996 -0.120429002 0.313843995 0.0892336965
+    2 -0.472456008 -0.229132995 0.0858652964
+    2.06666994 -0.0557320006 0.461923987 0.0224609002
+    2.0999999 -0.901102006 -0.537400007 0.622521996
+  colorStartkey 7
+    0.100000001 1 1 1
+    0.133332998 0 0 0
+    0.366667002 1 1 1
+    0.600000024 0 0 0
+    0.866666973 1 1 1
+    1.5 0 0 0
+    1.89999998 1 1 1
+endnode
+node emitter Smoke
+  parent vim_magdisp05
+  #part-number 3
+  orientationkey 9
+    0 0 0 -1 -0.00872664992
+    0.300000012 0 0 -1 -1.57951999
+    0.633333027 0 0 -1 -3.15032005
+    0.966666996 0 0 -1 -4.72111988
+    1.29999995 0 0 -1 -6.09119987
+    1.63332999 0 0 1 -4.7298398
+    1.96667004 0 0 1 -3.15904999
+    2.29999995 0 0 1 -1.58824992
+    2.63333011 0 0 1 -0.0174534004
+  birthratekey 6
+    0 40
+    0.133332998 40
+    0.166666999 20
+    1.63332999 20
+    1.66666996 20
+    1.70000005 0
+  velocitykey 3
+    0 1
+    0.133332998 1.5
+    0.166666999 1
+endnode
+node emitter WIND_Dummy
+  parent vim_magdisp05
+  #part-number 4
+endnode
+node light AuroraLight01
+  parent vim_magdisp05
+  #part-number 5
+  colorkey 8
+    0 1.78814005e-007 0 2.38419005e-007
+    0.100000001 1 0.145098001 0.850980997
+    0.433333009 1 0.145098001 0.850980997
+    1.13332999 0.92156899 0.168626994 0.788236022
+    1.53332996 0.92156899 0.113724999 0.666666985
+    2 1 0.176469997 0.784313977
+    2.46667004 0.92156899 0.113725998 0.666666985
+    2.63333011 2.68220987e-007 0 2.38419005e-007
+endnode
+doneanim impact vim_magdisp05
+
+donemodel vim_magdisp05

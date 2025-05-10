@@ -1,0 +1,494 @@
+#MAXMODEL ASCII
+# model: vim_strksand
+filedependancy vim_strksand.max
+newmodel vim_strksand
+setsupermodel vim_strksand NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vim_strksand
+node dummy vim_strksand
+  parent NULL
+endnode
+node emitter skyStrike
+  parent vim_strksand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Aligned_to_World_Z
+  blend Normal
+  texture fxpa_flstrka
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 -7.15284e-07 17.0387
+  orientation -1 0 0 -3.14159
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 1
+  alphaEnd 1
+  sizeStart 2
+  sizeEnd 3
+  sizeStart_y 4
+  sizeEnd_y 6
+  frameStart 0
+  frameEnd 0
+  birthrate 0
+  lifeExp 0.5
+  mass 0
+  spread 0
+  particleRot 0
+  velocity 35
+  randvel 0
+  fps 0
+  xsize 100
+  ysize 100
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter Splat
+  parent vim_strksand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 1
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Normal
+  texture fxpa_smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 0.200269
+  orientation 0 0 0 0
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0.6
+  alphaEnd 0
+  sizeStart 0
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 1
+  mass 0
+  spread 0.523599
+  particleRot 0
+  velocity 0
+  randvel 0
+  fps 16
+  xsize 100
+  ysize 100
+  bounce_co 0
+  blurlength 1
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter sparks
+  parent vim_strksand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_flarea
+  xgrid 1
+  ygrid 1
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0.000282946 0.00365665 0.0633256
+  orientation 0 0 0 0
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0.6
+  alphaEnd 0
+  sizeStart 1
+  sizeEnd 0.4
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 0
+  lifeExp 1
+  mass 0.1
+  spread 3.14159
+  particleRot 0
+  velocity 6
+  randvel 1
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter FireEmit01
+  parent vim_strksand
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 1
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Normal
+  texture fxpa_Smoke01
+  xgrid 4
+  ygrid 4
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 -8.61044e-05 0.549055
+  orientation 0 0 0 0
+  colorStart 0.93 0.79 0.69
+  colorEnd 0.93 0.79 0.69
+  alphaStart 0.6
+  alphaEnd 0
+  sizeStart 2.14746
+  sizeEnd 0.635072
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 15
+  birthrate 0
+  lifeExp 0.5
+  mass -0.298924
+  spread 1.5708
+  particleRot 0
+  velocity 9.12889
+  randvel 3.5
+  fps 15
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node light AuroraLight01
+  parent vim_strksand
+  ambientonly 0
+  shadow 0
+  isdynamic 1
+  affectdynamic 1
+  lightpriority 2
+  fadingLight 1
+  flareradius 0
+  position 0 0 1.89631
+  orientation -0.5773503 0.5773503 0.5773503 -2.0944
+  radius 8
+  multiplier 3
+  color 0.93 0.79 0.69
+endnode
+endmodelgeom vim_strksand
+
+#MAXANIM ASCII
+newanim impact vim_strksand
+  length 1.96667
+  transtime 0.25
+  animroot vim_strksand
+  event 0.433333 detonate
+  node dummy vim_strksand
+    parent NULL
+  endnode
+  node emitter skyStrike
+    parent vim_strksand
+    birthratekey 4
+         0.0000000    0.0000000
+         0.0333333   80.0000000
+         1.2333300   80.0000000
+         1.2666700    0.0000000
+  endnode
+  node emitter Splat
+    parent vim_strksand
+    sizeStartkey 6
+         0.0000000    0.0000000
+         0.4333330    0.0000000
+         0.4666670    0.0000000
+         0.6666670   13.0000000
+         1.6666700   13.0000000
+         1.8333300    0.0000000
+    sizeEndkey 4
+         0.4666670    0.0000000
+         0.6666670   10.0000000
+         1.6666700   10.0000000
+         1.8333300    0.0000000
+    birthratekey 7
+         0.0000000    0.0000000
+         0.4333330    0.0000000
+         0.4666670    6.0000000
+         1.1333300    4.0000000
+         1.6666700    5.0000000
+         1.8333300    4.0000000
+         1.8666700    0.0000000
+  endnode
+  node emitter sparks
+    parent vim_strksand
+    birthratekey 5
+         0.0000000    0.0000000
+         0.4000000    0.0000000
+         0.4333330  100.0000000
+         1.3333300   50.0000000
+         1.3666700    0.0000000
+  endnode
+  node emitter FireEmit01
+    parent vim_strksand
+    positionkey 5
+         0.0000000    0.0000000   -0.0000861    0.5490550
+         0.2000000    0.0000000   -0.0000861    0.5490550
+         0.4333330    0.0000000   -0.0000861    0.5490550
+         1.0666699    0.0000000   -0.0000861    0.5490550
+         1.5666699    0.0000000   -0.0000861    0.5490550
+    orientationkey 5
+         0.0000000    0.0000000    0.0000000    0.0000000    0.0000000
+         0.2000000    0.0000000    0.0000000    0.0000000    0.0000000
+         0.4333330    0.0000000    0.0000000    0.0000000    0.0000000
+         1.0666699    0.0000000    0.0000000    0.0000000    0.0000000
+         1.5666699    0.0000000    0.0000000    0.0000000    0.0000000
+    colorStartkey 7
+         0.0000000    0.93 0.79 0.69
+         0.2000000    0.93 0.79 0.69
+         0.4000000    0.93 0.79 0.69
+         0.4333330    0.93 0.79 0.69
+         1.0333300    0.93 0.79 0.69
+         1.0666699    0.93 0.79 0.69
+         1.5000000    0.93 0.79 0.69
+    colorEndkey 7
+         0.0000000    0.93 0.79 0.69
+         0.2000000    0.93 0.79 0.69
+         0.4000000    0.93 0.79 0.69
+         0.4333330    0.93 0.79 0.69
+         1.0333300    0.93 0.79 0.69
+         1.0666699    0.93 0.79 0.69
+         1.5000000    0.93 0.79 0.69
+    alphaStartkey 7
+         0.0000000    1.0000000
+         0.2000000    1.0000000
+         0.4000000    1.0000000
+         0.4333330    1.0000000
+         1.0333300    1.0000000
+         1.0666699    1.0000000
+         1.5000000    1.0000000
+    alphaEndkey 7
+         0.0000000    0.0000000
+         0.2000000    0.0000000
+         0.4000000    0.0000000
+         0.4333330    0.0000000
+         1.0333300    0.0000000
+         1.0666699    0.0000000
+         1.5000000    0.0000000
+    sizeStartkey 7
+         0.0000000    2.1474600
+         0.2000000    2.1474600
+         0.4000000    0.7493750
+         0.4333330    8.0000000
+         1.0333300    0.7493750
+         1.0666699    8.0000000
+         1.5000000    0.0000000
+    sizeEndkey 7
+         0.0000000    0.6350720
+         0.2000000    0.6350720
+         0.4000000    0.3597000
+         0.4333330    3.0000000
+         1.0333300    0.3597000
+         1.0666699    3.0000000
+         1.5000000    0.0000000
+    frameStartkey 7
+         0.0000000    0.0000000
+         0.2000000    0.0000000
+         0.4000000    0.0000000
+         0.4333330    0.0000000
+         1.0333300    0.0000000
+         1.0666699    0.0000000
+         1.5000000    0.0000000
+    frameEndkey 7
+         0.0000000   15.0000000
+         0.2000000   15.0000000
+         0.4000000   15.0000000
+         0.4333330   15.0000000
+         1.0333300   15.0000000
+         1.0666699   15.0000000
+         1.5000000   15.0000000
+    birthratekey 7
+         0.0000000    0.2222140
+         0.2000000    0.2222140
+         0.4000000  -60.7778015
+         0.4333330   20.2222004
+         1.0333300  -60.7778015
+         1.0666699   20.2222004
+         1.5000000    0.2222140
+    lifeExpkey 7
+         0.0000000    0.5000000
+         0.2000000    0.5000000
+         0.4000000    0.5000000
+         0.4333330    0.5000000
+         1.0333300    0.5000000
+         1.0666699    0.5000000
+         1.5000000    0.5000000
+    masskey 7
+         0.0000000   -0.2989240
+         0.2000000   -0.2989240
+         0.4000000   -0.2226720
+         0.4333330   -0.2989240
+         1.0333300   -0.2226720
+         1.0666699   -0.2989240
+         1.5000000    0.0000000
+    spreadkey 7
+         0.0000000    1.5707999
+         0.2000000    1.5707999
+         0.4000000    1.5707999
+         0.4333330    1.5707999
+         1.0333300    1.5707999
+         1.0666699    2.0943899
+         1.5000000    1.5707999
+    velocitykey 7
+         0.0000000    9.1288900
+         0.2000000    9.1288900
+         0.4000000    6.9629402
+         0.4333330   15.0001001
+         1.0333300    6.9629402
+         1.0666699   15.0001001
+         1.5000000    0.0000982
+    randvelkey 7
+         0.0000000    3.5000000
+         0.2000000    3.5000000
+         0.4000000    3.5000000
+         0.4333330    3.5000000
+         1.0333300    3.5000000
+         1.0666699    3.5000000
+         1.5000000    3.5000000
+    fpskey 7
+         0.0000000   15.0000000
+         0.2000000   15.0000000
+         0.4000000   15.0000000
+         0.4333330   15.0000000
+         1.0333300   15.0000000
+         1.0666699   15.0000000
+         1.5000000   15.0000000
+    xsizekey 6
+         0.2000000    0.0000000
+         0.4000000    0.0000000
+         0.4333330    0.0000000
+         1.0333300    0.0000000
+         1.0666699    0.0000000
+         1.5000000    0.0000000
+    ysizekey 6
+         0.2000000    0.0000000
+         0.4000000    0.0000000
+         0.4333330    0.0000000
+         1.0333300    0.0000000
+         1.0666699    0.0000000
+         1.5000000    0.0000000
+    bounce_cokey 7
+         0.0000000    0.0000000
+         0.2000000    0.0000000
+         0.4000000    0.0000000
+         0.4333330    0.0000000
+         1.0333300    0.0000000
+         1.0666699    0.0000000
+         1.5000000    0.0000000
+  endnode
+  node light AuroraLight01
+    parent vim_strksand
+    colorkey 9
+         0.0000000    0.9215690    0.4392160    0.1137260
+         0.0333333    0.9215690    0.4392160    0.1137260
+         0.2000000    0.9215690    0.5843140    0.0000000
+         0.4000000    0.9215690    0.4392160    0.1137260
+         0.8000000    0.9764710    0.5607840    0.1137260
+         1.0666699    0.9215690    0.4392160    0.1137260
+         1.3333300    0.9843140    0.5568630    0.3960780
+         1.6666700    0.9215690    0.4392160    0.1137260
+         1.9666700    0.0000002    0.0000000    0.0000000
+  endnode
+  node emitter WIND_Dummy
+    parent vim_strksand
+  endnode
+doneanim impact vim_strksand
+
+donemodel vim_strksand

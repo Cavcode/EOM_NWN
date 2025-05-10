@@ -1,0 +1,24 @@
+# Exported from NWmax 0.8 b60 at 4/14/2014 10:34:40 AM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: wblhw_m_091
+#local file: C:\gmax\Scenes\Weapons\gem hammer03.gmax
+filedependancy gem hammer03.gmax
+newmodel wblhw_m_091
+setsupermodel wblhw_m_091 NULL
+classification Character
+setanimationscale 1.0
+#NWmax GEOM  ASCII
+beginmodelgeom wblhw_m_091
+node dummy wblhw_m_091
+  parent NULL
+endnode
+node dummy staff01
+  parent wblhw_m_091
+  position 0.0 0.186281 0.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.776471 0.878431 0.341176 
+endnode
+endmodelgeom wblhw_m_091
+donemodel wblhw_m_091

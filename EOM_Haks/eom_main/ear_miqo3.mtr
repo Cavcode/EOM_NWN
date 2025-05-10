@@ -1,0 +1,11 @@
+customshaderVS vslit_sm_nm
+customshaderFS fslit_aniso_nm
+  
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+
+texture1 ear_miqo3_n 
+texture2 spec_dim
+texture3 ear_miqo3_a 
+texture4 null 

@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 c_forestdrag 
+texture1 c_forestdrag_n 
+texture2 c_forestdrag_s 
+texture3 null 
+texture4 null 

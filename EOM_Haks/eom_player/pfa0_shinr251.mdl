@@ -1,0 +1,10 @@
+newmodel pfa0_shinr251
+setsupermodel pfa0_shinr251 null
+classification CHARACTER
+setanimationscale 1.0
+beginmodelgeom pfa0_shinr251
+node dummy pfa0_shinr251
+  parent null
+endnode
+endmodelgeom pfa0_shinr251
+donemodel pfa0_shinr21

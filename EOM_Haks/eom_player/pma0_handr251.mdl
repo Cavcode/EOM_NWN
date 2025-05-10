@@ -1,0 +1,10 @@
+newmodel pma0_handr251
+setsupermodel pma0_handr251 null
+classification CHARACTER
+setanimationscale 1.0
+beginmodelgeom pma0_handr251
+node dummy pma0_handr251
+  parent null
+endnode
+endmodelgeom pma0_handr251
+donemodel pma0_handr251

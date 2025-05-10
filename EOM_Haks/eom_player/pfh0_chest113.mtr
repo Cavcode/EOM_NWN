@@ -1,0 +1,13 @@
+// Shaders
+customshadervs vslit_nm
+customshaderfs fslit_mixplt
+
+// Renderhints 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+
+texture1 pfh0_chest113_n 
+texture2 null 
+texture3 null 
+texture4 null 

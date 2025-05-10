@@ -1,0 +1,335 @@
+#MAXMODEL ASCII
+# model: vff_explmord02
+filedependancy vff_explmord02.max
+newmodel vff_explmord02
+setsupermodel vff_explmord02 NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vff_explmord02
+node dummy vff_explmord02
+  parent NULL
+endnode
+node dummy Dummy01
+  parent vff_explmord02
+  position 0 0 0
+  orientation 0 0 0 0
+endnode
+node emitter OmenEmitter02
+  parent Dummy01
+  p2p 1
+  p2p_sel 0
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Normal
+  blend Lighten
+  texture fxpa_StarBnW
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0.20944
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position -0.00476848 0 1.09343
+  orientation 0 1 0 -1.5708
+  colorStart 0.329412 1 0.564706
+  colorEnd 0.745098 1 0.890196
+  alphaStart 1
+  alphaEnd 0
+  sizeStart 4
+  sizeEnd 6
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 50
+  lifeExp 1.5
+  mass 0
+  spread 0
+  particleRot 1
+  velocity 10
+  randvel 1
+  fps 16
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0.01
+  lightningRadius 0.21
+  lightningScale 0.2
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0.5
+  grav 5
+  threshold 0
+endnode
+node reference OmenRef02
+  parent OmenEmitter02
+  refModel fx_ref
+  reattachable 1
+  position -0.00129215 15.0155 0
+  orientation 0 0 0 0
+endnode
+node emitter OmenEmitter03
+  parent Dummy01
+  p2p 1
+  p2p_sel 0
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Lighten
+  texture fxpa_StarBnW
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0.20944
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 1.10302
+  orientation -0.6425947 -0.4173058 -0.6425947 -3.93226
+  colorStart 0.486275 1 0.415686
+  colorEnd 0.678431 1 0.858824
+  alphaStart 1
+  alphaEnd 0
+  sizeStart 4
+  sizeEnd 7
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 40
+  lifeExp 1.5
+  mass 0
+  spread 0
+  particleRot 2
+  velocity 10
+  randvel 1
+  fps 20
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0
+  lightningRadius 0.17
+  lightningScale 0.13
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0.5
+  grav 10
+  threshold 0
+endnode
+node reference OmenRef03
+  parent OmenEmitter03
+  refModel fx_ref
+  reattachable 1
+  position -0.00129215 15.0587 1.41738e-007
+  orientation 0 0 0 0
+endnode
+node emitter OmenEmitter01
+  parent Dummy01
+  p2p 1
+  p2p_sel 0
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Fountain
+  render Billboard_to_World_Z
+  blend Lighten
+  texture fxpa_StarBnW
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0.20944
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0 1.10302
+  orientation -0.6574354 0.3681812 -0.6574354 -2.43603
+  colorStart 0.290196 1 0.196078
+  colorEnd 0.690196 1 0.886275
+  alphaStart 1
+  alphaEnd 0
+  sizeStart 4
+  sizeEnd 9
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 45
+  lifeExp 1.5
+  mass 0
+  spread 0
+  particleRot -1
+  velocity 10
+  randvel 1
+  fps 24
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 10
+  lightningDelay 0.05
+  lightningRadius 0.22
+  lightningScale 0.2
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0.5
+  grav 5
+  threshold 0
+endnode
+node reference OmenRef01
+  parent OmenEmitter01
+  refModel fx_ref
+  reattachable 1
+  position -0.00129215 15.0231 0
+  orientation 0 0 0 0
+endnode
+node light AuroraLight01
+  parent vff_explmord02
+  ambientonly 0
+  shadow 0
+  isdynamic 1
+  affectdynamic 1
+  lightpriority 2
+  fadingLight 1
+  flareradius 0
+  position 0 0 1.7
+  orientation -0.5773503 0.5773503 0.5773503 -2.0944
+  radius 10
+  multiplier 3
+  color 0.113726 0.921569 0.701961
+endnode
+endmodelgeom vff_explmord02
+
+#MAXANIM ASCII
+newanim impact vff_explmord02
+  length 3.96667
+  transtime 0.25
+  animroot vff_explmord02
+  node dummy vff_explmord02
+    parent NULL
+  endnode
+  node dummy Dummy01
+    parent vff_explmord02
+    orientationkey 21
+         0.0000000    0.0000000    0.0000000    0.0000000    0.0000000
+         0.1666670   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+         0.3666670   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+         0.5666670   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+         0.7666670    0.0000000    0.0000000    0.0000000    0.0000000
+         0.9333330   -0.0000000   -0.0000000    1.0000000   -1.5707999
+         1.1333300   -0.0000000   -0.0000000    1.0000000   -3.1415901
+         1.3333300   -0.0000000   -0.0000000    1.0000000   -4.7123899
+         1.5333300    0.0000000    0.0000000    0.0000000    0.0000000
+         1.7333300   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+         1.9333301   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+         2.1333301   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+         2.3333299    0.0000000    0.0000000    0.0000000    0.0000000
+         2.5333300   -0.0000000   -0.0000000    1.0000000   -1.5707999
+         2.7333300   -0.0000000   -0.0000000    1.0000000   -3.1415901
+         2.9333301   -0.0000000   -0.0000000    1.0000000   -4.7123899
+         3.1333301    0.0000000    0.0000000    0.0000000    0.0000000
+         3.3333299   -0.0000000   -0.0000000   -1.0000000   -4.7123899
+         3.5333300   -0.0000000   -0.0000000   -1.0000000   -3.1415901
+         3.7333300   -0.0000000   -0.0000000   -1.0000000   -1.5707999
+         3.9333301    0.0000000    0.0000000    0.0000000    0.0000000
+  endnode
+  node emitter OmenEmitter02
+    parent Dummy01
+    alphaStartkey 5
+         0.0000000    1.0000000
+         2.4666700    1.0000000
+         2.5000000    1.0000000
+         2.5333300    1.0000000
+         3.3333299    0.0000000
+    birthratekey 4
+         0.0000000   50.0000000
+         2.4666700   50.0000000
+         2.5000000   50.0000000
+         2.5333300    0.0000000
+  endnode
+  node dummy OmenRef02
+    parent OmenEmitter02
+  endnode
+  node emitter OmenEmitter03
+    parent Dummy01
+    alphaStartkey 5
+         0.0000000    1.0000000
+         2.4666700    1.0000000
+         2.5000000    1.0000000
+         2.5333300    1.0000000
+         3.3333299    0.0000000
+    birthratekey 4
+         0.0000000   40.0000000
+         2.4666700   40.0000000
+         2.5000000   40.0000000
+         2.5333300    0.0000000
+  endnode
+  node dummy OmenRef03
+    parent OmenEmitter03
+  endnode
+  node emitter OmenEmitter01
+    parent Dummy01
+    alphaStartkey 5
+         0.0000000    1.0000000
+         2.4666700    1.0000000
+         2.5000000    1.0000000
+         2.5333300    1.0000000
+         3.3333299    0.0000000
+    birthratekey 4
+         0.0000000   45.0000000
+         2.4666700   45.0000000
+         2.5000000   45.0000000
+         2.5333300    0.0000000
+  endnode
+  node dummy OmenRef01
+    parent OmenEmitter01
+  endnode
+  node light AuroraLight01
+    parent vff_explmord02
+    colorkey 9
+         0.0000000    0.1137260    0.9215690    0.7019610
+         0.0333333    0.1137250    0.7019610    0.9215690
+         0.5666670    0.1450980    1.0000000    0.8862750
+         0.9000000    0.1137250    0.9215690    0.7019610
+         1.4666700    0.1686270    0.9215690    0.8235300
+         2.0999999    0.1137250    0.9215690    0.7019610
+         2.3666699    0.1764710    1.0000000    0.8196080
+         2.5999999    0.1137260    0.9215690    0.7019610
+         3.3000000    0.0000000    0.0000002    0.0000000
+  endnode
+doneanim impact vff_explmord02
+
+donemodel vff_explmord02

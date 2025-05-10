@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 wdbqs_064 
+texture1 wdbqs_064_n 
+texture2 wdbqs_064_s 
+texture3 null 
+texture4 null 

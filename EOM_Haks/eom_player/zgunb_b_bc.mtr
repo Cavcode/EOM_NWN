@@ -1,0 +1,5 @@
+renderhint NormalAndSpecMapped
+
+texture0 ZGUNB_b_BC
+texture1 ZGUNB_b_Nor
+texture2 ZGUNB_b_Met

@@ -1,0 +1,153 @@
+#MAXMODEL ASCII
+# model: vcm_hitwind
+filedependancy vcm_hitwind.max
+newmodel vcm_hitwind
+setsupermodel vcm_hitwind NULL
+classification EFFECT
+setanimationscale 1
+#MAXGEOM  ASCII
+beginmodelgeom vcm_hitwind
+node dummy vcm_hitwind
+  parent NULL
+endnode
+node emitter spark
+  parent vcm_hitwind
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 1
+  random 0
+  inherit 0
+  inheritvel 0
+  inherit_local 1
+  inherit_part 0
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Motion_Blur
+  blend Lighten
+  texture fxpa_dot01
+  xgrid 0
+  ygrid 0
+  loop 0
+  deadspace 0
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0.0990509 0
+  orientation 0 0 0 0
+  colorStart 0.9 0.9 0.9
+  colorEnd 0.9 0.9 0.9
+  alphaStart 1
+  alphaEnd 0.0
+  sizeStart 0.02
+  sizeEnd 0.01
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 0
+  birthrate 10
+  lifeExp 1
+  mass 0.1
+  spread 6.28319
+  particleRot 0
+  velocity 3
+  randvel 1
+  fps 0
+  xsize 0
+  ysize 0
+  bounce_co 0.8
+  blurlength 0.0700007
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+node emitter sparks
+  parent vcm_hitwind
+  p2p 0
+  p2p_sel 1
+  affectedByWind 0
+  m_isTinted 0
+  bounce 0
+  random 1
+  inherit 0
+  inheritvel 0
+  inherit_local 0
+  inherit_part 1
+  splat 0
+  renderorder 0
+  spawntype 0
+  update Explosion
+  render Motion_Blur
+  blend Lighten
+  texture fxpa_windlash
+  xgrid 2
+  ygrid 2
+  loop 0
+  deadspace 0.20944
+  twosidedtex 0
+  blastRadius 0
+  blastLength 0
+  position 0 0.00443132 0.00302643
+  orientation -1 0 0 -3.14159
+  colorStart 0.5 0.894118 0.994118
+  colorEnd 0.533333 0.894118 0.960784
+  alphaStart 0.3
+  alphaEnd 0.5
+  sizeStart 0.2
+  sizeEnd 0
+  sizeStart_y 0
+  sizeEnd_y 0
+  frameStart 0
+  frameEnd 3
+  birthrate 41
+  lifeExp 0.3
+  mass 0
+  spread 6.28319
+  particleRot 0
+  velocity 2.5
+  randvel 2
+  fps 30
+  xsize 0
+  ysize 0
+  bounce_co 0
+  blurlength 0.68
+  lightningDelay 0
+  lightningRadius 0
+  lightningScale 0
+  p2p_bezier2 0
+  p2p_bezier3 0
+  combinetime 0
+  drag 0
+  grav 0
+  threshold 0
+endnode
+endmodelgeom vcm_hitwind
+
+#MAXANIM ASCII
+newanim impact vcm_hitwind
+  length 0.633333
+  transtime 0.25
+  animroot vcm_hitwind
+  event 0 detonate
+  event 0 detonate
+  node dummy vcm_hitwind
+    parent NULL
+  endnode
+  node emitter spark
+    parent vcm_hitwind
+  endnode
+  node emitter sparks
+    parent vcm_hitwind
+  endnode
+doneanim impact vcm_hitwind
+
+donemodel vcm_hitwind

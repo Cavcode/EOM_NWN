@@ -1,0 +1,8 @@
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+ 
+texture1 pmh0_chest114_n 
+texture2 pmh0_chest114_m
+texture3 pmh0_chest114_r
+texture4 null 

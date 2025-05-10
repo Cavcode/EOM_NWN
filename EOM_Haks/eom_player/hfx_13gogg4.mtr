@@ -1,0 +1,12 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+
+texture1 hfx_13gogg4_n 
+texture2 hfx_13gogg4_s 
+texture3 null 
+texture4 null 
+
+transparency 1
+twosided 1
