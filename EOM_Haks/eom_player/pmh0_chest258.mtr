@@ -1,0 +1,7 @@
+renderhint NormalAndSpecMapped
+ 
+// Textures 
+texture1 pmh0_chest258_n
+texture2 pmh0_chest258_s
+
+twosided 1

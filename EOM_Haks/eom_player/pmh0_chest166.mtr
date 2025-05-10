@@ -1,0 +1,7 @@
+// Renderhint
+renderhint NormalAndSpecMapped
+
+// Textures
+
+texture1 pmh0_chest166_n
+texture2 pmh0_chest166_s

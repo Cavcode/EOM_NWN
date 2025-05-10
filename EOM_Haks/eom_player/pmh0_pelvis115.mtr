@@ -1,0 +1,7 @@
+// Renderhint
+renderhint NormalAndSpecMapped
+
+// Textures
+
+texture1 pmh0_pelvis115_n
+texture2 pmh0_pelvis115_s
