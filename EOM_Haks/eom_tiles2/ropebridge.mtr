@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 ropebridge 
+texture1 ropebridge_n 
+texture2 ropebridge_s 
+texture3 null 
+texture4 null 

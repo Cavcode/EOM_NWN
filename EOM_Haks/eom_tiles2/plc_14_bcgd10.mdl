@@ -1,0 +1,123 @@
+# Exported from NWmax v6.11.28 at 5/30/2021 4:56:55 AM
+# mdl file
+#
+#NWmax MODEL ASCII
+# model: plc_14_bcgd10
+#local file: Unknown
+filedependancy Unknown
+newmodel plc_14_bcgd10
+setsupermodel plc_14_bcgd10 NULL
+classification Character
+setanimationscale 0.4
+#NWmax GEOM  ASCII
+beginmodelgeom plc_14_bcgd10
+node dummy plc_14_bcgd10
+  parent NULL
+endnode
+node trimesh bush3
+  parent plc_14_bcgd10
+  position 0.0 0.0 -1.92134
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.8 0.8 0.8 
+  tilefade 0
+  scale 1.0
+  render 1
+  Shadow 0
+  beaming 0
+  inheritcolor 0
+  rotatetexture 0
+  alpha 1.0
+  transparencyhint 0
+  selfillumcolor 0.0 0.0 0.0 
+  ambient 1.0 1.0 1.0 
+  Diffuse 1.0 1.0 1.0 
+  Specular 0.0 0.0 0.0 
+  shininess 1
+  center undefined
+  bitmap plc_14far2
+  verts 4
+    -10.6346 0.884968 1.41602e-05
+    -10.6346 0.884968 10.6724
+    10.6346 -0.884968 10.6724
+    10.6346 -0.884968 8.78908e-06
+  faces 2
+    0 1 2  1  2 3 1  1
+    3 0 2  1  0 2 1  1
+  tverts 4
+    0.00195313 -0.996094 0
+    0.00195313 -0.00390625 0
+    0.998047 -0.996094 0
+    0.998047 -0.00390625 0
+endnode
+node trimesh bush005
+  parent plc_14_bcgd10
+  position 11.2664 -2.03593 -0.142713
+  orientation 0.0 0.0 -1.0 -0.174533
+  wirecolor 0.8 0.8 0.8 
+  tilefade 0
+  scale 1.0
+  render 1
+  Shadow 0
+  beaming 0
+  inheritcolor 0
+  rotatetexture 0
+  alpha 1.0
+  transparencyhint 0
+  selfillumcolor 0.0 0.0 0.0 
+  ambient 1.0 1.0 1.0 
+  Diffuse 1.0 1.0 1.0 
+  Specular 0.0 0.0 0.0 
+  shininess 1
+  center undefined
+  bitmap plc_14far2
+  verts 4
+    -10.6346 0.884968 1.41602e-05
+    -10.6346 0.884968 10.6724
+    10.6346 -0.884968 10.6724
+    10.6346 -0.884968 8.78908e-06
+  faces 2
+    0 1 2  1  2 3 1  1
+    3 0 2  1  0 2 1  1
+  tverts 4
+    0.00195313 -0.996094 0
+    0.00195313 -0.00390625 0
+    0.998047 -0.996094 0
+    0.998047 -0.00390625 0
+endnode
+node trimesh bush006
+  parent plc_14_bcgd10
+  position -10.1106 -1.53542 -0.142713
+  orientation 0.0 0.0 1.0 -0.0872665
+  wirecolor 0.8 0.8 0.8 
+  tilefade 0
+  scale 1.0
+  render 1
+  Shadow 0
+  beaming 0
+  inheritcolor 0
+  rotatetexture 0
+  alpha 1.0
+  transparencyhint 0
+  selfillumcolor 0.0 0.0 0.0 
+  ambient 1.0 1.0 1.0 
+  Diffuse 1.0 1.0 1.0 
+  Specular 0.0 0.0 0.0 
+  shininess 1
+  center undefined
+  bitmap plc_14far2
+  verts 4
+    -10.6346 0.884968 1.41602e-05
+    -10.6346 0.884968 10.6724
+    10.6346 -0.884968 10.6724
+    10.6346 -0.884968 8.78908e-06
+  faces 2
+    0 1 2  1  2 3 1  1
+    3 0 2  1  0 2 1  1
+  tverts 4
+    0.00195313 -0.996094 0
+    0.00195313 -0.00390625 0
+    0.998047 -0.996094 0
+    0.998047 -0.00390625 0
+endnode
+endmodelgeom plc_14_bcgd10
+donemodel plc_14_bcgd10

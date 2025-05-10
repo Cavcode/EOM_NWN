@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 plc_14itm22 
+texture1 plc_14itm22_n 
+texture2 plc_14itm22_s 
+texture3 null 
+texture4 null 

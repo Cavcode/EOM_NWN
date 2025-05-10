@@ -1,0 +1,76 @@
+# Exported from NWMax Plus v6.11.28 at 9/22/2020 6:17:52 PM
+# mdl file
+#
+#NWMax Plus MODEL  ASCII
+# model: plc_type0_wall6
+filedependancy type0 clock hallway purple.max
+newmodel plc_type0_wall6
+setsupermodel plc_type0_wall6 NULL
+classification Character
+setanimationscale 1.0
+#NWMax Plus GEOM  ASCII
+beginmodelgeom plc_type0_wall6
+node dummy plc_type0_wall6
+  parent NULL
+endnode
+node trimesh wall01_hall
+  parent plc_type0_wall6
+  position -3.35966 -0.00881794 0.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.8 0.8 0.8 
+  tilefade 0
+  scale 1.0
+  render 1
+  Shadow 0
+  beaming 0
+  inheritcolor 0
+  rotatetexture 0
+  alpha 1.0
+  transparencyhint 0
+  selfillumcolor 0.0 0.0 0.0 
+  Diffuse 1.0 1.0 1.0 
+  Specular 0.0 0.0 0.0 
+  center 329.06 0.000200842 329.883 
+  ambient 0.2 0.2 0.2 
+  diffuse 0.588 0.588 0.588 
+  specular 0.2 0.2 0.2 
+  shininess 43.2193
+  bitmap type0_hall05
+  verts 12
+    6.5812 2.00842e-06 3.2577
+    3.2906 1.00421e-06 3.2577
+    3.2906 1.00421e-06 1.00421e-06
+    6.5812 2.00842e-06 2.00842e-06
+    -3.76579e-06 0.0 3.25769
+    -2.76158e-06 0.0 0.0
+    6.5812 2.00842e-06 3.2577
+    3.2906 3.01263e-06 6.59765
+    3.2906 1.00421e-06 3.2577
+    6.5812 4.01685e-06 6.59766
+    -3.76579e-06 0.0 3.25769
+    -2.76158e-06 2.00842e-06 6.59765
+  faces 8
+    2 1 0  1  2 1 0  1
+    3 2 0  1  3 2 0  1
+    1 2 4  1  1 2 4  1
+    2 5 4  1  2 5 4  1
+    8 7 6  1  8 7 6  1
+    6 7 9  1  6 7 9  1
+    7 8 10  1  7 8 10  1
+    7 10 11  1  7 10 11  1
+  tverts 12
+    0.00378009 0.74707 0
+    0.24761 0.74707 0
+    0.24761 0.500261 0
+    0.00378009 0.500261 0
+    0.00378009 0.74707 0
+    0.00378009 0.500261 0
+    0.251591 0.500261 0
+    0.497995 0.741462 0
+    0.497995 0.500261 0
+    0.251591 0.741462 0
+    0.251591 0.500261 0
+    0.251591 0.741462 0
+endnode
+endmodelgeom plc_type0_wall6
+donemodel plc_type0_wall6

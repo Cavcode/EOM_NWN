@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 txvd_DFrame 
+texture1 txvd_DFrame_n 
+texture2 txvd_DFrame_s 
+texture3 null 
+texture4 null 

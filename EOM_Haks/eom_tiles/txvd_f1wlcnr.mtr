@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 txvd_F1WlCnr 
+texture1 txvd_F1WlCnr_n 
+texture2 txvd_F1WlCnr_s 
+texture3 null 
+texture4 null 

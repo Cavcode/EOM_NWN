@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 plc_mkwod 
+texture1 plc_mkwod_n 
+texture2 plc_mkwod_s 
+texture3 null 
+texture4 null 

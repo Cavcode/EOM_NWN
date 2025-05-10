@@ -1,0 +1,24 @@
+# Exported from NWMax Plus v6.11.28 at 9/26/2020 3:20:03 AM
+# wok file
+#
+#NWMax Plus WALKMESH  ASCII
+beginwalkmeshgeom aurt_a01
+node aabb colmesh11
+  parent aurt_a01
+  position 0.0 0.0 0.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 1.0 1.0 1.0 
+  bitmap NULL
+  verts 4
+    -5.0 5.0 0.0
+    -5.0 -5.0 0.0
+    5.0 5.0 0.0
+    5.0 -5.0 0.0
+  faces 2
+    0 1 2  0  0 0 0  4
+    3 2 1  0  0 0 0  4
+    aabb         -5.0 -5.0 0.0 5.0 5.0 0.0 -1
+        -5.0 -5.0 0.0 5.0 5.0 0.0 0
+        -5.0 -5.0 0.0 5.0 5.0 0.0 1
+endnode
+endwalkmeshgeom aurt_a01

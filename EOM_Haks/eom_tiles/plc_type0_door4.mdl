@@ -1,0 +1,287 @@
+# Exported from NWMax Plus v6.11.28 at 9/19/2020 9:13:40 PM
+# mdl file
+#
+#NWMax Plus MODEL  ASCII
+# model: plc_type0_door4
+filedependancy type0 castle2 arcitecture.max
+newmodel plc_type0_door4
+setsupermodel plc_type0_door4 NULL
+classification Character
+setanimationscale 1.0
+#NWMax Plus GEOM  ASCII
+beginmodelgeom plc_type0_door4
+node dummy plc_type0_door4
+  parent NULL
+endnode
+node trimesh door01_castle
+  parent plc_type0_door4
+  position 0.0 0.0 -1.61903
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.8 0.8 0.8 
+  ambient 0.2 0.2 0.2 
+  diffuse 0.588 0.588 0.588 
+  specular 0.2 0.2 0.2 
+  shininess 43.2193
+  bitmap atlas01_castle_d
+  verts 48
+    -4.34658 0.024881 1.99404
+    -1.1836 0.024881 1.58551
+    -4.34658 0.024881 1.58551
+    -1.1836 0.024881 1.99404
+    1.97938 0.024881 1.58551
+    1.97938 0.024881 1.99404
+    5.14236 0.024881 1.58551
+    5.14236 0.024881 1.99404
+    -1.1836 0.0248788 5.30201
+    -4.34658 0.0248766 8.86036
+    -1.1836 0.0248766 8.86036
+    -4.34658 0.0248788 5.30201
+    -1.1836 0.024881 1.99404
+    -4.34658 0.024881 1.99404
+    1.97938 0.0248766 8.86036
+    1.97938 0.0248788 5.30201
+    5.14236 0.0248788 5.30201
+    5.14236 0.0248766 8.86036
+    5.14236 0.024881 1.99404
+    1.97938 0.024881 1.99404
+    -4.34658 0.024881 1.58551
+    -1.1836 0.250048 1.58551
+    -4.34658 0.250048 1.58551
+    -1.1836 0.024881 1.58551
+    1.97938 0.250048 1.58551
+    1.97938 0.024881 1.58551
+    5.14236 0.250048 1.58551
+    5.14236 0.024881 1.58551
+    4.79732 0.250048 1.99404
+    1.63434 0.250048 1.58551
+    4.79732 0.250048 1.58551
+    1.63434 0.250048 1.99404
+    -1.52864 0.250048 1.58551
+    -1.52864 0.250048 1.99404
+    -4.69162 0.250047 1.58551
+    -4.69162 0.250047 1.99404
+    1.63434 0.25005 5.30201
+    4.79732 0.250052 8.86036
+    1.63434 0.250052 8.86036
+    4.79732 0.25005 5.30201
+    1.63434 0.250048 1.99404
+    4.79732 0.250048 1.99404
+    -1.52864 0.250052 8.86036
+    -1.52864 0.25005 5.30201
+    -4.69162 0.250049 5.30201
+    -4.69162 0.250052 8.86036
+    -4.69162 0.250047 1.99404
+    -1.52864 0.250048 1.99404
+  faces 42
+    2 1 0  1  2 1 0  1
+    3 0 1  1  3 0 1  1
+    1 4 3  1  1 4 3  1
+    5 3 4  1  5 3 4  1
+    4 6 5  1  4 6 5  1
+    7 5 6  1  7 5 6  1
+    10 9 8  1  10 9 8  1
+    11 8 9  1  11 8 9  1
+    8 11 12  1  8 11 12  1
+    13 12 11  1  13 12 11  1
+    10 8 14  1  10 8 14  1
+    15 14 8  1  15 14 8  1
+    8 12 15  1  8 12 15  1
+    15 16 14  1  15 16 14  1
+    17 14 16  1  17 14 16  1
+    16 15 18  1  16 15 18  1
+    19 18 15  1  19 18 15  1
+    19 15 12  1  19 15 12  1
+    22 21 20  1  22 21 20  1
+    23 20 21  1  23 20 21  1
+    21 24 23  1  21 24 23  1
+    25 23 24  1  25 23 24  1
+    24 26 25  1  24 26 25  1
+    27 25 26  1  27 25 26  1
+    30 29 28  1  30 29 28  1
+    31 28 29  1  31 28 29  1
+    29 32 31  1  29 32 31  1
+    33 31 32  1  33 31 32  1
+    32 34 33  1  32 34 33  1
+    35 33 34  1  35 33 34  1
+    38 37 36  1  38 37 36  1
+    39 36 37  1  39 36 37  1
+    36 39 40  1  36 39 40  1
+    41 40 39  1  41 40 39  1
+    38 36 42  1  38 36 42  1
+    43 42 36  1  43 42 36  1
+    36 40 43  1  36 40 43  1
+    43 44 42  1  43 44 42  1
+    45 42 44  1  45 42 44  1
+    44 43 46  1  44 43 46  1
+    47 46 43  1  47 46 43  1
+    47 43 40  1  47 43 40  1
+  tverts 48
+    0.372238 0.462413 0
+    0.00563327 0.403585 0
+    0.372238 0.403585 0
+    0.00563327 0.462413 0
+    0.372238 0.403585 0
+    0.372238 0.462413 0
+    0.00563327 0.403585 0
+    0.00563327 0.462413 0
+    0.00450692 0.399077 0
+    0.372653 0.00341848 0
+    0.00450692 0.00341848 0
+    0.372653 0.399077 0
+    0.00450692 0.00341848 0
+    0.372653 0.00341848 0
+    0.372653 0.00341848 0
+    0.372653 0.399077 0
+    0.00450692 0.399077 0
+    0.00450692 0.00341848 0
+    0.00450692 0.00341848 0
+    0.372653 0.00341848 0
+    0.372238 0.403585 0
+    0.00563327 0.493305 0
+    0.372238 0.493305 0
+    0.00563327 0.403585 0
+    0.372238 0.493305 0
+    0.372238 0.403585 0
+    0.00563327 0.493305 0
+    0.00563327 0.403585 0
+    0.372238 0.462413 0
+    0.00563327 0.403585 0
+    0.372238 0.403585 0
+    0.00563327 0.462413 0
+    0.372238 0.403585 0
+    0.372238 0.462413 0
+    0.00563327 0.403585 0
+    0.00563327 0.462413 0
+    0.00450692 0.399077 0
+    0.372653 0.00341848 0
+    0.00450692 0.00341848 0
+    0.372653 0.399077 0
+    0.00450692 0.00341848 0
+    0.372653 0.00341848 0
+    0.372653 0.00341848 0
+    0.372653 0.399077 0
+    0.00450692 0.399077 0
+    0.00450692 0.00341848 0
+    0.00450692 0.00341848 0
+    0.372653 0.00341848 0
+endnode
+endmodelgeom plc_type0_door4
+
+#NWMax Plus ANIM  ASCII
+newanim default
+ plc_type0_door4
+  length 0.0
+  transtime 0.25
+  animroot plc_type0_door4
+    node dummy plc_type0_door4
+        parent NULL
+    endnode
+    node trimesh door01_castle
+        parent plc_type0_door4
+        positionkey
+            0.0 0.0 0.0 -1.61903
+        endlist
+        orientationkey
+            0.0 0.0 0.0 0.0 0.0
+        endlist
+    endnode
+doneanim default
+ plc_type0_door4
+
+
+#NWMax Plus ANIM  ASCII
+newanim close
+ plc_type0_door4
+  length 0.0
+  transtime 0.25
+  animroot plc_type0_door4
+    node dummy plc_type0_door4
+        parent NULL
+    endnode
+    node trimesh door01_castle
+        parent plc_type0_door4
+        positionkey
+            0.0 0.0 0.0 -1.61903
+        endlist
+        orientationkey
+            0.0 0.0 0.0 0.0 0.0
+        endlist
+    endnode
+doneanim close
+ plc_type0_door4
+
+
+#NWMax Plus ANIM  ASCII
+newanim close2open
+ plc_type0_door4
+  length 1.13333
+  transtime 0.25
+  animroot plc_type0_door4
+    node dummy plc_type0_door4
+        parent NULL
+    endnode
+    node trimesh door01_castle
+        parent plc_type0_door4
+        positionkey
+            0.0 0.0 0.0 -1.61903
+            0.0333333 0.0 0.0 -1.61903
+            1.13333 0.0 0.0 4.16443
+        endlist
+        orientationkey
+            0.0 0.0 0.0 0.0 0.0
+            0.0333333 0.0 0.0 0.0 0.0
+            1.13333 0.0 0.0 0.0 0.0
+        endlist
+    endnode
+doneanim close2open
+ plc_type0_door4
+
+
+#NWMax Plus ANIM  ASCII
+newanim open
+ plc_type0_door4
+  length 0.0333333
+  transtime 0.25
+  animroot plc_type0_door4
+    node dummy plc_type0_door4
+        parent NULL
+    endnode
+    node trimesh door01_castle
+        parent plc_type0_door4
+        positionkey
+            0.0 0.0 0.0 4.16443
+            0.0333333 0.0 0.0 4.16443
+        endlist
+        orientationkey
+            0.0 0.0 0.0 0.0 0.0
+            0.0333333 0.0 0.0 0.0 0.0
+        endlist
+    endnode
+doneanim open
+ plc_type0_door4
+
+
+#NWMax Plus ANIM  ASCII
+newanim open2close
+ plc_type0_door4
+  length 0.466667
+  transtime 0.25
+  animroot plc_type0_door4
+    node dummy plc_type0_door4
+        parent NULL
+    endnode
+    node trimesh door01_castle
+        parent plc_type0_door4
+        positionkey
+            0.0 0.0 0.0 4.16443
+            0.466667 0.0 0.0 -1.61903
+        endlist
+        orientationkey
+            0.0 0.0 0.0 0.0 0.0
+            0.466667 0.0 0.0 0.0 0.0
+        endlist
+    endnode
+doneanim open2close
+ plc_type0_door4
+
+donemodel plc_type0_door4

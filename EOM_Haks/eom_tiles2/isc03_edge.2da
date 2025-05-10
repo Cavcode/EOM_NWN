@@ -1,0 +1,8 @@
+2DA V2.0
+
+       Corner1     Edge      Corner2     Height     Model 
+0      grass       ****      ****        0          isc03_za04
+1      grass       ****      grass       0          isc03_za04
+2      grass+      ****      ****        1          isc03_za04
+3      grass       ****      grass+      0          isc03_za12
+4      grass+      ****      grass+      1          isc03_za04

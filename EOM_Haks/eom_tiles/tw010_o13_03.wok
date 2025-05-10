@@ -1,0 +1,43 @@
+# Rewritten by CleanModels 3 Version 3.1.1c Thu Jul 03 00:45:07 2008
+#MAXWALKMESH  ASCII
+beginwalkmeshgeom tw010_o13_03
+node aabb walkmesh
+  parent tw010_o13_03
+  wirecolor 1 1 1
+  ambient 1 1 1
+  diffuse 1 1 1
+  specular 0 0 0
+  shininess 11
+  selfillumcolor 0 0 0
+  orientation 0 0 0 0
+  bitmap NULL
+  position 0 0 0
+  verts 8
+    4.0 5 4.0
+    5 5 4.0
+    4.0 -5 4.0
+    5 -5 4.0
+    -4.0 -5 0
+    -5 -5 0
+    -5 5 0
+    -4.0 5 0
+  faces 6
+    0 2 1 1 0 0 0 4
+    3 1 2 1 0 0 0 4
+    6 5 4 1 0 0 0 4
+    6 4 7 1 0 0 0 4
+    7 4 2 2 0 0 0 4
+    2 0 7 2 0 0 0 4
+  aabb     -5 -5 0 5 5 4.0 -1
+    -5 -5 0 4.0 5 4.0 -1
+    -5 -5 0 4.0 5 4.0 -1
+    -5 -5 0 -4.0 5 0 2
+    -4.0 -5 0 4.0 5 4.0 4
+    -5 -5 0 -4.0 5 0 3
+    -4.0 -5 0 5 5 4.0 -1
+    4.0 -5 4.0 5 5 4.0 1
+    -4.0 -5 0 5 5 4.0 -1
+    -4.0 -5 0 4.0 5 4.0 5
+    4.0 -5 4.0 5 5 4.0 0
+endnode
+endwalkmeshgeom tw010_o13_03

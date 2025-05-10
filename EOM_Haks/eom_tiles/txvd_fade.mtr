@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 txvd_fade 
+texture1 txvd_fade_n 
+texture2 txvd_fade_s 
+texture3 null 
+texture4 null 

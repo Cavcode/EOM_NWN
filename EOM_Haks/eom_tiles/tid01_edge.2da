@@ -1,0 +1,15 @@
+2DA V2.0
+
+ Corner1 Edge Corner2 Height Model
+0 Floor **** Floor 0 cc_gnd
+1 Floor2 **** Floor2 0 cc_gnd
+2 Wall **** Wall 0 cc_gnd
+3 Wall **** **** 0 cc_gnd
+4 Floor **** **** 0 cc_gnd
+5 Floor2 **** **** 0 cc_gnd
+6 Wall **** Floor 0 cc_gnd
+7 Wall **** Floor2 0 cc_gnd
+8 Wall Corridor Wall 0 cc_gnd
+9 Wall Doorway Wall 0 cc_gnd
+10 Wall **** 2x2 0 cc_gnd
+11 Wall MazeMosaic Wall 0 cc_gnd

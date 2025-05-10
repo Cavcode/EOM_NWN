@@ -1,0 +1,89 @@
+# Exported from NWmax v6.11.28 at 5/6/2021 12:35:54 AM
+# pwk file
+#
+#NWmax PWKMESH  ASCII
+node trimesh PWK
+  parent plc_14tree3h_pwk
+  position 0.0 0.0 0.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.8 0.8 0.8 
+  multimaterial 30
+    Dirt
+    Obscuring
+    Grass
+    Stone
+    Wood
+    Water
+    Nonwalk
+    Transparent
+    Carpet
+    Metal
+    Puddles
+    Swamp
+    Mud
+    Leaves
+    Lava
+    BottomlessPit
+    DeepWater
+    Door
+    Snow
+    Sand
+    BareBones
+    StoneBridge
+    Temp1
+    Temp2
+    Temp3
+    Temp4
+    Temp5
+    Temp6
+    Temp7
+    Trigger
+  ambient 0.588 0.588 0.588 
+  diffuse 0.705882 0.0 1.0 
+  specular 0.0 0.0 0.0 
+  shininess 10.0
+  bitmap Nonwalk
+  verts 17
+    4.24417 -0.531018 16.334
+    0.155343 0.50005 30.1728
+    2.63785 -3.14538 16.334
+    -0.297225 -4.12132 16.334
+    0.607905 3.95291 16.334
+    3.25579 2.36693 16.334
+    -3.93349 0.362654 16.334
+    -2.32717 2.97705 16.334
+    -2.94511 -2.5353 16.334
+    2.99813 -4.19974 0.3044
+    4.83756 -1.20597 0.3044
+    -0.362906 -5.31731 0.3044
+    3.70574 2.11254 0.304406
+    0.67358 3.92869 0.304406
+    -2.68745 2.81121 0.304406
+    -4.52689 -0.1826 0.3044
+    -3.39507 -3.50112 0.3044
+  faces 24
+    0 1 2  1  0 0 0  7
+    2 1 3  1  0 0 0  7
+    4 1 5  1  0 0 0  7
+    5 1 0  1  0 0 0  7
+    6 1 7  1  0 0 0  7
+    7 1 4  1  0 0 0  7
+    3 1 8  1  0 0 0  7
+    8 1 6  1  0 0 0  7
+    9 10 0  1  0 0 0  7
+    0 2 9  1  0 0 0  7
+    11 9 2  1  0 0 0  7
+    2 3 11  1  0 0 0  7
+    12 13 4  1  0 0 0  7
+    4 5 12  1  0 0 0  7
+    10 12 5  1  0 0 0  7
+    5 0 10  1  0 0 0  7
+    14 15 6  1  0 0 0  7
+    6 7 14  1  0 0 0  7
+    13 14 7  1  0 0 0  7
+    7 4 13  1  0 0 0  7
+    16 11 3  1  0 0 0  7
+    3 8 16  1  0 0 0  7
+    15 16 8  1  0 0 0  7
+    8 6 15  1  0 0 0  7
+endnode

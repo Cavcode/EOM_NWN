@@ -1,0 +1,27 @@
+# Rewritten by CleanModels 3 Version 3.1.1c Thu Jul 03 00:11:31 2008
+#MAXWALKMESH  ASCII
+beginwalkmeshgeom tw010_u01_04
+node aabb plane02
+  parent tw010_u01_04
+  ambient 0.8 0.8 0.8
+  diffuse 0.6 0.34 0.16
+  specular 0 0 0
+  shininess 11
+  shadow 0
+  transparencyhint 0
+  bitmap NULL
+  orientation 0 0 0 0
+  position 0 0 0
+  verts 4
+    -5 5 1.5
+    -5 -5 1.5
+    5 5 1.5
+    5 -5 1.5
+  faces 2
+    0 1 2 1 0 0 0 4
+    3 2 1 1 0 0 0 4
+  aabb     -5 -5 1.5 5 5 1.5 -1
+    -5 -5 1.5 5 5 1.5 0
+    -5 -5 1.5 5 5 1.5 1
+endnode
+endwalkmeshgeom tw010_u01_04

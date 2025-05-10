@@ -1,0 +1,73 @@
+# Exported from NWMax Plus v6.11.28 at 8/22/2020 3:56:58 AM
+# pwk file
+#
+#NWMax Plus PWKMESH  ASCII
+node trimesh pan_knockcircle_wg
+  parent pan_knockcircle_pwk
+  position 0.0 0.0 0.0
+  orientation 1.0 0.0 0.0 0.0
+  wirecolor 0.878431 0.878431 0.878431 
+  multimaterial 30
+    Dirt
+    Obscuring
+    Grass
+    Stone
+    Wood
+    Water
+    Nonwalk
+    Transparent
+    Carpet
+    Metal
+    Puddles
+    Swamp
+    Mud
+    Leaves
+    Lava
+    BottomlessPit
+    DeepWater
+    Door
+    Snow
+    Sand
+    BareBones
+    StoneBridge
+    Temp1
+    Temp2
+    Temp3
+    Temp4
+    Temp5
+    Temp6
+    Temp7
+    Trigger
+  ambient 0.588 0.588 0.588 
+  diffuse 0.705882 0.0 1.0 
+  specular 0.0 0.0 0.0 
+  shininess 10.0
+  bitmap Nonwalk
+  verts 13
+    -1.09233 0.0 0.977013
+    -0.945989 -0.546167 0.977013
+    -0.546167 -0.945989 0.977013
+    0.0 -1.09233 0.977013
+    0.546167 -0.945989 0.977013
+    0.945989 -0.546167 0.977013
+    1.09233 0.0 0.977013
+    0.945989 0.546167 0.977013
+    0.546167 0.945989 0.977013
+    0.0 1.09233 0.977013
+    -0.546167 0.945989 0.977013
+    -0.945989 0.546167 0.977013
+    0.0 0.0 0.977013
+  faces 12
+    12 0 1  1  0 0 0  7
+    12 1 2  1  0 0 0  7
+    12 2 3  1  0 0 0  7
+    12 3 4  1  0 0 0  7
+    12 4 5  1  0 0 0  7
+    12 5 6  1  0 0 0  7
+    12 6 7  1  0 0 0  7
+    12 7 8  1  0 0 0  7
+    12 8 9  1  0 0 0  7
+    12 9 10  1  0 0 0  7
+    12 10 11  1  0 0 0  7
+    12 11 0  1  0 0 0  7
+endnode

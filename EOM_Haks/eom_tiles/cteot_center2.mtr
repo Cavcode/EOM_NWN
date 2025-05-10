@@ -1,0 +1,9 @@
+ 
+renderhint NormalAndSpecMapped 
+ 
+// Textures 
+texture0 cteot_center2 
+texture1 null 
+texture2 cteot_center2_s 
+texture3 null 
+texture4 null 

@@ -1,0 +1,2 @@
+envmaptexture isc04_refl
+alphamean 0.5
